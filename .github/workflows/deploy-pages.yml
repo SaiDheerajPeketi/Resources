@@ -40,6 +40,8 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /Resources
+          NEXT_PUBLIC_ATLAS_GATE_SALT: ${{ vars.ATLAS_GATE_SALT }}
+          NEXT_PUBLIC_ATLAS_GATE_DIGEST: ${{ secrets.ATLAS_GATE_DIGEST }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

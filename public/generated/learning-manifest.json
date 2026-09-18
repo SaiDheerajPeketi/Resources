@@ -1,0 +1,321 @@
+{
+  "version": "2026.09.18-r12",
+  "diagnostics": [
+    {
+      "id": "universal-baseline",
+      "title": "Universal baseline",
+      "summary": "A short optional scan across DSA, core CS, systems, security, languages, AI/data, and operations.",
+      "questionIds": [
+        "diag-complexity",
+        "diag-hash",
+        "diag-isolation",
+        "diag-vm",
+        "diag-tcp",
+        "diag-tls",
+        "diag-cache",
+        "diag-queue",
+        "diag-java",
+        "diag-python",
+        "diag-ml",
+        "diag-sre"
+      ],
+      "competencyIds": [
+        "dsa",
+        "core-cs",
+        "networking",
+        "security",
+        "system-design",
+        "languages",
+        "ai-data",
+        "devops"
+      ]
+    }
+  ],
+  "rolePaths": [
+    {
+      "id": "frontend",
+      "title": "Frontend Engineer",
+      "technologyIds": [
+        "web-platform",
+        "javascript",
+        "typescript",
+        "react",
+        "nextjs",
+        "playwright"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because Frontend Engineer interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "backend",
+      "title": "Backend Engineer",
+      "technologyIds": [
+        "java",
+        "spring-boot",
+        "postgresql",
+        "redis",
+        "kafka",
+        "docker"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because Backend Engineer interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "full-stack",
+      "title": "Full-Stack Engineer",
+      "technologyIds": [
+        "typescript",
+        "react",
+        "nextjs",
+        "nodejs",
+        "postgresql",
+        "playwright"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because Full-Stack Engineer interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "java",
+      "title": "Java Engineer",
+      "technologyIds": [
+        "java",
+        "spring",
+        "spring-boot",
+        "hibernate",
+        "junit-mockito",
+        "maven"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because Java Engineer interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "python",
+      "title": "Python Engineer",
+      "technologyIds": [
+        "python",
+        "fastapi",
+        "django",
+        "pytest",
+        "postgresql",
+        "docker"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because Python Engineer interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "go",
+      "title": "Go Engineer",
+      "technologyIds": [
+        "go",
+        "go-http",
+        "gin",
+        "postgresql",
+        "kubernetes",
+        "observability"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because Go Engineer interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "android",
+      "title": "Android Engineer",
+      "technologyIds": [
+        "java",
+        "kotlin",
+        "android",
+        "jetpack-compose",
+        "gradle",
+        "sqlite"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because Android Engineer interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "ios",
+      "title": "iOS Engineer",
+      "technologyIds": [
+        "swift",
+        "ios",
+        "swiftui",
+        "sqlite",
+        "git",
+        "cicd"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because iOS Engineer interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "mobile",
+      "title": "Cross-Platform Mobile Engineer",
+      "technologyIds": [
+        "typescript",
+        "react-native",
+        "dart",
+        "flutter",
+        "cicd",
+        "observability"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because Cross-Platform Mobile Engineer interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "qa-sdet",
+      "title": "QA / SDET",
+      "technologyIds": [
+        "java",
+        "typescript",
+        "selenium",
+        "playwright",
+        "cypress",
+        "cicd"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because QA / SDET interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "data-analyst",
+      "title": "Data Analyst",
+      "technologyIds": [
+        "sql",
+        "python",
+        "pandas",
+        "jupyter",
+        "postgresql",
+        "dbt"
+      ],
+      "sheetId": "atlas-75",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because Data Analyst interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "dba",
+      "title": "Database Administrator",
+      "technologyIds": [
+        "dbms",
+        "sql",
+        "postgresql",
+        "mysql",
+        "redis",
+        "linux"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because Database Administrator interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "cloud-architect",
+      "title": "Cloud Architect",
+      "technologyIds": [
+        "aws",
+        "azure",
+        "gcp",
+        "terraform",
+        "kubernetes",
+        "cloud-security"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because Cloud Architect interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "solutions-architect",
+      "title": "Solutions Architect",
+      "technologyIds": [
+        "computer-networks",
+        "dbms",
+        "aws",
+        "kubernetes",
+        "observability",
+        "cloud-security"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because Solutions Architect interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    },
+    {
+      "id": "ai-engineer",
+      "title": "AI Engineer",
+      "technologyIds": [
+        "python",
+        "pytorch",
+        "hugging-face",
+        "langchain",
+        "llamaindex",
+        "kubernetes"
+      ],
+      "sheetId": "atlas-180",
+      "foundationTopicIds": [
+        "foundations/complexity-analysis",
+        "foundations/sql-fundamentals",
+        "foundations/networking-fundamentals"
+      ],
+      "reason": "Selected because AI Engineer interviews combine foundations, implementation fluency, debugging, and production trade-offs."
+    }
+  ]
+}

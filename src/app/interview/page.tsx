@@ -96,6 +96,7 @@ export default function InterviewPage() {
           <nav aria-label={`${archetype.title} practice sets`}>{archetype.practiceSetIds.map((setId) => { const set = practiceSetById.get(setId)!; return <Link key={setId} href={`/practice/?set=${setId}`}>{set.title}<ArrowRight size={14} /></Link>; })}</nav>
         </article>)}
       </div>
+      <Link className="primary-action" href="/companies/">Open named company guides <ArrowRight size={16} /></Link>
     </section>
 
     <section className="career-field" aria-labelledby="career-field-title">

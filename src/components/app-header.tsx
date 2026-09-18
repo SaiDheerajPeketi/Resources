@@ -1,19 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BookOpen, CheckCircle2, Library, Search, Settings2, WifiOff } from "lucide-react";
-import { topics } from "@/data/catalog";
+import { BASE_PATH, withBasePath } from "@/lib/base-path";
+
+type SearchResult = { url: string; title: string; excerpt: string; meta: Record<string, string> };
+type PagefindModule = { init: () => Promise<void>; search: (query: string) => Promise<{ results: Array<{ data: () => Promise<SearchResult> }> }> };
 
 export function AppHeader() {
   const [query, setQuery] = useState("");
   const [online, setOnline] = useState(true);
   const inputRef = useRef<HTMLInputElement>(null);
-  const results = useMemo(() => {
-    const normalized = query.trim().toLowerCase();
-    if (!normalized) return [];
-    return topics.filter((topic) => `${topic.title} ${topic.summary} ${topic.trackId}`.toLowerCase().includes(normalized)).slice(0, 7);
-  }, [query]);
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [searching, setSearching] = useState(false);
 
   useEffect(() => {
     setOnline(navigator.onLine);
@@ -35,6 +35,22 @@ export function AppHeader() {
     };
   }, []);
 
+  useEffect(() => {
+    const normalized = query.trim();
+    if (!normalized) { setResults([]); return; }
+    const timer = window.setTimeout(async () => {
+      setSearching(true);
+      try {
+        const pagefind = await import(/* webpackIgnore: true */ withBasePath("/pagefind/pagefind.js")) as PagefindModule;
+        await pagefind.init();
+        const response = await pagefind.search(normalized);
+        setResults(await Promise.all(response.results.slice(0, 8).map((result) => result.data())));
+      } catch { setResults([]); }
+      finally { setSearching(false); }
+    }, 160);
+    return () => window.clearTimeout(timer);
+  }, [query]);
+
   return (
     <header className="app-header">
       <Link className="wordmark" href="/atlas/" aria-label="Interview Atlas home">
@@ -51,19 +67,10 @@ export function AppHeader() {
           aria-label="Search the interview atlas"
         />
         <kbd>⌘ K</kbd>
-        {results.length > 0 && (
+        {(results.length > 0 || (query && searching)) && (
           <div className="search-results" id="global-search-results" role="region" aria-label="Search results" aria-live="polite">
-            {results.map((topic) => (
-              topic.publicationStatus === "published" ? (
-                <Link key={topic.id} href={`/topics/${topic.slug}/`} onClick={() => setQuery("")}>
-                  <span>{topic.title}</span><small>{topic.trackId} · {topic.level}</small>
-                </Link>
-              ) : (
-                <div className="search-result-planned" key={topic.id} aria-disabled="true">
-                  <span>{topic.title}</span><small>{topic.trackId} · planned</small>
-                </div>
-              )
-            ))}
+            {searching && <div className="search-result-planned"><span>Searching the full library…</span></div>}
+            {results.map((result) => <Link key={result.url} href={BASE_PATH && result.url.startsWith(BASE_PATH) ? result.url.slice(BASE_PATH.length) : result.url} onClick={() => setQuery("")}><span>{result.meta.title || result.title}</span><small dangerouslySetInnerHTML={{ __html: result.excerpt }} /></Link>)}
           </div>
         )}
       </div>
@@ -74,7 +81,7 @@ export function AppHeader() {
         </span>
         <Link href="/library/"><Library size={16} /> Library</Link>
         <Link href="/sheets/">DSA</Link>
-        <Link href="/revision/">Revision</Link>
+        <Link href="/review/">Review</Link>
         <Link className="icon-link" href="/settings/" aria-label="Settings"><Settings2 size={18} /></Link>
       </nav>
     </header>

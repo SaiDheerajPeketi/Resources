@@ -12,6 +12,8 @@ import { fintechLessons } from "../src/data/fintech-lessons";
 import { commands, technologies, technologySources } from "../src/data/technologies";
 import { dsaPatterns, dsaProblems, dsaSheets } from "../src/data/dsa";
 import { coverageCrosswalks } from "../src/data/crosswalks";
+import { companyGuides, companySources } from "../src/data/companies";
+import { diagnostics, diagnosticQuestions, rolePathRecords } from "../src/data/learning";
 
 const errors: string[] = [];
 const technologyIds = new Set(technologies.map((item) => item.id));
@@ -31,6 +33,11 @@ for (const problem of dsaProblems) {
 }
 for (const sheet of dsaSheets) for (const id of sheet.problemIds) if (!problemIds.has(id)) errors.push(`Sheet ${sheet.id} references unknown problem ${id}.`);
 for (const crosswalk of coverageCrosswalks) if (!problemIds.has(crosswalk.atlasProblemId)) errors.push(`Crosswalk ${crosswalk.id} references unknown problem ${crosswalk.atlasProblemId}.`);
+const companySourceIds = new Set(companySources.map((source) => source.id));
+for (const guide of companyGuides) for (const id of guide.sourceIds) if (!companySourceIds.has(id)) errors.push(`Company guide ${guide.id} references unknown source ${id}.`);
+const diagnosticQuestionIds = new Set(diagnosticQuestions.map((question) => question.id));
+for (const diagnostic of diagnostics) for (const id of diagnostic.questionIds) if (!diagnosticQuestionIds.has(id)) errors.push(`Diagnostic ${diagnostic.id} references unknown question ${id}.`);
+for (const role of rolePathRecords) for (const id of role.technologyIds) if (!technologyIds.has(id)) errors.push(`Role path ${role.id} references unknown technology ${id}.`);
 const structural = validateCatalog();
 if (structural.duplicates.length) errors.push(`Duplicate topics: ${structural.duplicates.join(", ")}`);
 if (structural.dangling.length) errors.push(`Dangling edges: ${structural.dangling.join(", ")}`);
@@ -159,16 +166,17 @@ const sourceFiles = (directory: string): string[] => readdirSync(directory, { wi
   if (entry.isDirectory()) return sourceFiles(path);
   return [".tsx", ".mdx"].includes(extname(path)) ? [path] : [];
 });
-const staticRoutes = new Set(["/", "/atlas/", "/library/", "/sheets/", "/practice/", "/revision/", "/interview/", "/settings/", "/~offline/"]);
+const staticRoutes = new Set(["/", "/atlas/", "/library/", "/sheets/", "/practice/", "/revision/", "/review/", "/diagnostic/", "/plan/", "/interview/", "/companies/", "/settings/", "/~offline/"]);
 const trackIds = new Set(topics.map((topic) => topic.trackId));
 const topicSlugs = new Set(topics.map((topic) => topic.slug));
 const isKnownInternalRoute = (route: string) => staticRoutes.has(route)
-  || /^\/generated\/(content-manifest|graph-manifest|search-index|pack-manifest|completeness-report|content-freshness-report)\.json$/.test(route)
+  || /^\/generated\/(content-manifest|graph-manifest|search-index|pack-manifest|technology-manifest|command-manifest|problem-manifest|sheet-manifest|crosswalk-manifest|company-manifest|learning-manifest|coverage-manifest|completeness-report|content-freshness-report)\.json$/.test(route)
   || (/^\/tracks\/[^/]+\/$/.test(route) && trackIds.has(route.split("/")[2] as never))
   || (/^\/topics\/[^/]+\/[^/]+\/$/.test(route) && topicSlugs.has(route.slice(8, -1)))
   || (/^\/technologies\/[^/]+\/$/.test(route) && technologyIds.has(route.split("/")[2]))
   || (/^\/sheets\/[^/]+\/$/.test(route) && dsaSheets.some((sheet) => sheet.id === route.split("/")[2]))
-  || (/^\/problems\/[^/]+\/$/.test(route) && problemIds.has(route.split("/")[2]));
+  || (/^\/problems\/[^/]+\/$/.test(route) && problemIds.has(route.split("/")[2]))
+  || (/^\/companies\/[^/]+\/$/.test(route) && companyGuides.some((guide) => guide.id === route.split("/")[2]));
 for (const file of sourceFiles(sourceRoot)) {
   const source = readFileSync(file, "utf8");
   const links = [

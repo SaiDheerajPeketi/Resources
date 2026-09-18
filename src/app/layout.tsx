@@ -4,6 +4,7 @@ import "@fontsource-variable/jetbrains-mono";
 import "@xyflow/react/dist/style.css";
 import "./globals.css";
 import { AppHeader } from "@/components/app-header";
+import { OwnerGate } from "@/components/owner-gate";
 
 export const metadata: Metadata = {
   applicationName: "Interview Atlas",
@@ -34,8 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <template dangerouslySetInnerHTML={{ __html: directionContract }} />
         <a className="skip-link" href="#main-content">Skip to content</a>
-        <AppHeader />
-        {children}
+        <OwnerGate><AppHeader />{children}</OwnerGate>
       </body>
     </html>
   );

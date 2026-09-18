@@ -14,22 +14,22 @@ Next.js App Router with TypeScript, local MDX content, static export, an install
 
 The primary user is a software professional with roughly one year of experience who has worked across domains, has forgotten or not yet learned portions of the interview syllabus, and is preparing for entry-to-mid-level roles while building enough depth to attempt more demanding interviews.
 
-The role families are AI/ML engineering, data science, software engineering, DevOps/platform/SRE, cybersecurity, fintech engineering, and quant/trading.
+The role families are AI/ML engineering, data science, data analysis, data engineering, software engineering, frontend, backend, full-stack, Java, Python, Go, Android, iOS, cross-platform mobile, QA/SDET, DBA, DevOps/platform/SRE, cloud and solutions architecture, cybersecurity, fintech engineering, and quant/trading.
 
 ## Product Purpose
 
-Interview Atlas is a self-contained technical interview reference and practice system. It turns a sprawling syllabus into a navigable skill graph where a learner can locate a concept, understand it from first principles, study worked examples, practice interview questions, and save material into manual revision lists.
+Interview Atlas is a self-contained technical interview reference and practice system. It turns a sprawling syllabus into a navigable role atlas and Stack Workbench where a learner can locate a concept or technology, understand it from first principles, study worked examples and commands, practice interview questions and DSA progressions, and save material into revision and review workflows.
 
-Success means the learner can move between role maps and shared prerequisites without losing context, use the core curriculum without leaving the app, prepare offline, and quickly switch between deep study and last-minute revision.
+Success means the learner can move between role maps, technologies, shared prerequisites, DSA sheets, role plans, and public company-process guides without losing context; use the core curriculum without leaving the app; prepare offline; and quickly switch between deep study, practice, diagnostics, adaptive review, and last-minute revision.
 
 ## Positioning
 
-The product's distinctive mechanism is a cross-role skill graph: one concept can be traced to its prerequisites, downstream systems, interview questions, revision sheet, and every role that depends on it. The corpus is exhaustive against a versioned coverage manifest rather than presented as an unstructured collection of links.
+The product's distinctive mechanism is a paired navigation model: the cross-role skill graph traces prerequisites and downstream systems, while the Stack Workbench organizes languages, frameworks, databases, mobile, data/AI, testing, build, and operations ecosystems as layered technology stacks. The corpus is exhaustive against versioned coverage manifests rather than presented as an unstructured collection of links.
 
 ## Operating Context
 
-- The product opens directly into the atlas; there is no mandatory onboarding or diagnostic.
-- The primary workflow is browse or search, select a topic, learn, practice, then optionally save it to a named revision list.
+- The product opens directly into the atlas; diagnostics and generated plans are optional and never block access.
+- The primary workflow is browse or search, select a topic, technology, problem, sheet, role, or company guide, learn and practice, then optionally save it to a named revision list or local review queue.
 - C++17-compatible examples are primary for DSA and systems interviews, with C++20/23 callouts. Python is used for AI/data work; SQL, Bash, YAML, Terraform/HCL, and TypeScript appear where their domains require them.
 - The hub targets Indian and global product companies, startups, fintechs, quant firms, and infrastructure companies.
 - AWS, Azure, and GCP receive equal cloud coverage, with explicit OCI terminology and service comparisons.
@@ -38,10 +38,16 @@ The product's distinctive mechanism is a cross-role skill graph: one concept can
 
 - Static, searchable topic library with role, level, interview-style, and status filters.
 - Interactive prerequisite maps with an accessible outline equivalent.
+- Stack Workbench technology discovery with ecosystem index, layered map, and contextual inspector.
+- Complete technology manuals with setup, annotated command cookbooks, runtime guidance, worked examples, debugging, testing, performance, security, questions, flashcards, sources, and printable cheatsheets.
+- Nested Atlas 75, Atlas 180, and Atlas 300 DSA sheets with filters, stable progress, language-switchable artifacts, and attributed topic-only crosswalks to external sheets.
+- Optional diagnostics, prerequisite-aware role plans, and explainable local FSRS-style review. Topic confidence remains explicitly controlled by the learner.
+- Date-stamped public-process company guides and fifteen role-path maps; no proprietary interview dumps.
 - Original lessons, diagrams, examples, questions, solutions, rubrics, flashcards, cheatsheets, and printable revision sheets.
-- Manual revision lists, notes, bookmarks, progress states, attempts, and JSON backup/restore stored locally.
-- Downloadable offline track packs plus an optional full-corpus download.
-- No embedded compiler, automatic spaced-repetition scheduler, certification dumps, pirated material, verbatim proprietary question banks, backend, authentication, or cloud sync.
+- Revision lists, notes, bookmarks, progress states, attempts, diagnostic results, plans, review states, and versioned JSON backup/restore stored locally.
+- Downloadable offline track, ecosystem, technology, DSA-sheet, role, and full-library packs with quota checks and versioned integrity metadata.
+- Optional local owner passphrase gate with session unlock and local cooldown. It is a casual device gate, not authentication or protection for the public GitHub Pages files.
+- No embedded compiler, hosted judge, certification dumps, pirated material, verbatim proprietary question banks, backend, secure authentication, or cloud sync.
 - Regulatory, financial, security, and other time-sensitive content is date-stamped and educational, not professional advice.
 
 ## Brand Commitments

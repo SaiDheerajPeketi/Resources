@@ -1,0 +1,2343 @@
+{
+  "version": "2026.09.18-r12",
+  "guides": [
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "archetype": "global-product",
+      "summary": "A date-stamped preparation map for Amazon, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA and clean implementation",
+        "system and API design",
+        "behavioral evidence and product judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA and clean implementation"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA and clean implementation",
+            "system and API design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "system and API design",
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "amazon-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "archetype": "global-product",
+      "summary": "A date-stamped preparation map for Google, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA and clean implementation",
+        "system and API design",
+        "behavioral evidence and product judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA and clean implementation"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA and clean implementation",
+            "system and API design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "system and API design",
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "google-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "archetype": "global-product",
+      "summary": "A date-stamped preparation map for Microsoft, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA and clean implementation",
+        "system and API design",
+        "behavioral evidence and product judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA and clean implementation"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA and clean implementation",
+            "system and API design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "system and API design",
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "microsoft-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "archetype": "global-product",
+      "summary": "A date-stamped preparation map for Meta, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA and clean implementation",
+        "system and API design",
+        "behavioral evidence and product judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA and clean implementation"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA and clean implementation",
+            "system and API design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "system and API design",
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "meta-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "archetype": "global-product",
+      "summary": "A date-stamped preparation map for Apple, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA and clean implementation",
+        "system and API design",
+        "behavioral evidence and product judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA and clean implementation"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA and clean implementation",
+            "system and API design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "system and API design",
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "apple-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "archetype": "global-product",
+      "summary": "A date-stamped preparation map for Netflix, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA and clean implementation",
+        "system and API design",
+        "behavioral evidence and product judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA and clean implementation"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA and clean implementation",
+            "system and API design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "system and API design",
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "netflix-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "uber",
+      "name": "Uber",
+      "archetype": "global-product",
+      "summary": "A date-stamped preparation map for Uber, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA and clean implementation",
+        "system and API design",
+        "behavioral evidence and product judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA and clean implementation"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA and clean implementation",
+            "system and API design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "system and API design",
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "uber-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "atlassian",
+      "name": "Atlassian",
+      "archetype": "global-product",
+      "summary": "A date-stamped preparation map for Atlassian, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA and clean implementation",
+        "system and API design",
+        "behavioral evidence and product judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA and clean implementation"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA and clean implementation",
+            "system and API design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "system and API design",
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "atlassian-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "salesforce",
+      "name": "Salesforce",
+      "archetype": "global-product",
+      "summary": "A date-stamped preparation map for Salesforce, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA and clean implementation",
+        "system and API design",
+        "behavioral evidence and product judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA and clean implementation"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA and clean implementation",
+            "system and API design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "system and API design",
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "salesforce-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "adobe",
+      "name": "Adobe",
+      "archetype": "global-product",
+      "summary": "A date-stamped preparation map for Adobe, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA and clean implementation",
+        "system and API design",
+        "behavioral evidence and product judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA and clean implementation"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA and clean implementation",
+            "system and API design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "system and API design",
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "behavioral evidence and product judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "adobe-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "oracle",
+      "name": "Oracle",
+      "archetype": "infrastructure",
+      "summary": "A date-stamped preparation map for Oracle, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "systems, concurrency, and performance",
+        "distributed storage and reliability",
+        "debugging from evidence"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "systems, concurrency, and performance"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "systems, concurrency, and performance",
+            "distributed storage and reliability"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "distributed storage and reliability",
+            "debugging from evidence"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "debugging from evidence"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "oracle-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "archetype": "fintech",
+      "summary": "A date-stamped preparation map for Stripe, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "correctness, idempotency, and data invariants",
+        "payments or financial-system design",
+        "security, resilience, and operational judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "correctness, idempotency, and data invariants"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "correctness, idempotency, and data invariants",
+            "payments or financial-system design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "payments or financial-system design",
+            "security, resilience, and operational judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "security, resilience, and operational judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "stripe-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "databricks",
+      "name": "Databricks",
+      "archetype": "infrastructure",
+      "summary": "A date-stamped preparation map for Databricks, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "systems, concurrency, and performance",
+        "distributed storage and reliability",
+        "debugging from evidence"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "systems, concurrency, and performance"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "systems, concurrency, and performance",
+            "distributed storage and reliability"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "distributed storage and reliability",
+            "debugging from evidence"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "debugging from evidence"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "databricks-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "flipkart",
+      "name": "Flipkart",
+      "archetype": "indian-product",
+      "summary": "A date-stamped preparation map for Flipkart, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA speed and edge cases",
+        "CS fundamentals and project depth",
+        "scalable product design"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA speed and edge cases"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA speed and edge cases",
+            "CS fundamentals and project depth"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "CS fundamentals and project depth",
+            "scalable product design"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "scalable product design"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "flipkart-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "razorpay",
+      "name": "Razorpay",
+      "archetype": "fintech",
+      "summary": "A date-stamped preparation map for Razorpay, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "correctness, idempotency, and data invariants",
+        "payments or financial-system design",
+        "security, resilience, and operational judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "correctness, idempotency, and data invariants"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "correctness, idempotency, and data invariants",
+            "payments or financial-system design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "payments or financial-system design",
+            "security, resilience, and operational judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "security, resilience, and operational judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "razorpay-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "phonepe",
+      "name": "PhonePe",
+      "archetype": "fintech",
+      "summary": "A date-stamped preparation map for PhonePe, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "correctness, idempotency, and data invariants",
+        "payments or financial-system design",
+        "security, resilience, and operational judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "correctness, idempotency, and data invariants"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "correctness, idempotency, and data invariants",
+            "payments or financial-system design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "payments or financial-system design",
+            "security, resilience, and operational judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "security, resilience, and operational judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "phonepe-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "paytm",
+      "name": "Paytm",
+      "archetype": "fintech",
+      "summary": "A date-stamped preparation map for Paytm, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "correctness, idempotency, and data invariants",
+        "payments or financial-system design",
+        "security, resilience, and operational judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "correctness, idempotency, and data invariants"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "correctness, idempotency, and data invariants",
+            "payments or financial-system design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "payments or financial-system design",
+            "security, resilience, and operational judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "security, resilience, and operational judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "paytm-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "cred",
+      "name": "CRED",
+      "archetype": "fintech",
+      "summary": "A date-stamped preparation map for CRED, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "correctness, idempotency, and data invariants",
+        "payments or financial-system design",
+        "security, resilience, and operational judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "correctness, idempotency, and data invariants"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "correctness, idempotency, and data invariants",
+            "payments or financial-system design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "payments or financial-system design",
+            "security, resilience, and operational judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "security, resilience, and operational judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "cred-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "groww",
+      "name": "Groww",
+      "archetype": "fintech",
+      "summary": "A date-stamped preparation map for Groww, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "correctness, idempotency, and data invariants",
+        "payments or financial-system design",
+        "security, resilience, and operational judgment"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "correctness, idempotency, and data invariants"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "correctness, idempotency, and data invariants",
+            "payments or financial-system design"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "payments or financial-system design",
+            "security, resilience, and operational judgment"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "security, resilience, and operational judgment"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "groww-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "swiggy",
+      "name": "Swiggy",
+      "archetype": "indian-product",
+      "summary": "A date-stamped preparation map for Swiggy, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA speed and edge cases",
+        "CS fundamentals and project depth",
+        "scalable product design"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA speed and edge cases"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA speed and edge cases",
+            "CS fundamentals and project depth"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "CS fundamentals and project depth",
+            "scalable product design"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "scalable product design"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "swiggy-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "zomato",
+      "name": "Zomato",
+      "archetype": "indian-product",
+      "summary": "A date-stamped preparation map for Zomato, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA speed and edge cases",
+        "CS fundamentals and project depth",
+        "scalable product design"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA speed and edge cases"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA speed and edge cases",
+            "CS fundamentals and project depth"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "CS fundamentals and project depth",
+            "scalable product design"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "scalable product design"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "zomato-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "meesho",
+      "name": "Meesho",
+      "archetype": "indian-product",
+      "summary": "A date-stamped preparation map for Meesho, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "DSA speed and edge cases",
+        "CS fundamentals and project depth",
+        "scalable product design"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "DSA speed and edge cases"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "DSA speed and edge cases",
+            "CS fundamentals and project depth"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "CS fundamentals and project depth",
+            "scalable product design"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "scalable product design"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "meesho-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "tcs",
+      "name": "TCS",
+      "archetype": "services",
+      "summary": "A date-stamped preparation map for TCS, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "language and core-CS foundations",
+        "SQL, projects, and client communication",
+        "role-specific framework readiness"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "language and core-CS foundations"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "language and core-CS foundations",
+            "SQL, projects, and client communication"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "SQL, projects, and client communication",
+            "role-specific framework readiness"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "role-specific framework readiness"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "tcs-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "infosys",
+      "name": "Infosys",
+      "archetype": "services",
+      "summary": "A date-stamped preparation map for Infosys, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "language and core-CS foundations",
+        "SQL, projects, and client communication",
+        "role-specific framework readiness"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "language and core-CS foundations"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "language and core-CS foundations",
+            "SQL, projects, and client communication"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "SQL, projects, and client communication",
+            "role-specific framework readiness"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "role-specific framework readiness"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "infosys-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "wipro",
+      "name": "Wipro",
+      "archetype": "services",
+      "summary": "A date-stamped preparation map for Wipro, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "language and core-CS foundations",
+        "SQL, projects, and client communication",
+        "role-specific framework readiness"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "language and core-CS foundations"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "language and core-CS foundations",
+            "SQL, projects, and client communication"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "SQL, projects, and client communication",
+            "role-specific framework readiness"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "role-specific framework readiness"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "wipro-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "accenture",
+      "name": "Accenture",
+      "archetype": "services",
+      "summary": "A date-stamped preparation map for Accenture, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "language and core-CS foundations",
+        "SQL, projects, and client communication",
+        "role-specific framework readiness"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "language and core-CS foundations"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "language and core-CS foundations",
+            "SQL, projects, and client communication"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "SQL, projects, and client communication",
+            "role-specific framework readiness"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "role-specific framework readiness"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "accenture-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "cognizant",
+      "name": "Cognizant",
+      "archetype": "services",
+      "summary": "A date-stamped preparation map for Cognizant, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "language and core-CS foundations",
+        "SQL, projects, and client communication",
+        "role-specific framework readiness"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "language and core-CS foundations"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "language and core-CS foundations",
+            "SQL, projects, and client communication"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "SQL, projects, and client communication",
+            "role-specific framework readiness"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "role-specific framework readiness"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "cognizant-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "jane-street",
+      "name": "Jane Street",
+      "archetype": "quant",
+      "summary": "A date-stamped preparation map for Jane Street, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "probability, logic, and mathematical fluency",
+        "low-latency or high-performance coding",
+        "markets, rigor, and clear reasoning"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "probability, logic, and mathematical fluency"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "probability, logic, and mathematical fluency",
+            "low-latency or high-performance coding"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "low-latency or high-performance coding",
+            "markets, rigor, and clear reasoning"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "markets, rigor, and clear reasoning"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "jane-street-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "citadel",
+      "name": "Citadel",
+      "archetype": "quant",
+      "summary": "A date-stamped preparation map for Citadel, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "probability, logic, and mathematical fluency",
+        "low-latency or high-performance coding",
+        "markets, rigor, and clear reasoning"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "probability, logic, and mathematical fluency"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "probability, logic, and mathematical fluency",
+            "low-latency or high-performance coding"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "low-latency or high-performance coding",
+            "markets, rigor, and clear reasoning"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "markets, rigor, and clear reasoning"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "citadel-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "tower-research",
+      "name": "Tower Research",
+      "archetype": "quant",
+      "summary": "A date-stamped preparation map for Tower Research, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "probability, logic, and mathematical fluency",
+        "low-latency or high-performance coding",
+        "markets, rigor, and clear reasoning"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "probability, logic, and mathematical fluency"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "probability, logic, and mathematical fluency",
+            "low-latency or high-performance coding"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "low-latency or high-performance coding",
+            "markets, rigor, and clear reasoning"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "markets, rigor, and clear reasoning"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "tower-research-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "graviton",
+      "name": "Graviton",
+      "archetype": "quant",
+      "summary": "A date-stamped preparation map for Graviton, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "probability, logic, and mathematical fluency",
+        "low-latency or high-performance coding",
+        "markets, rigor, and clear reasoning"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "probability, logic, and mathematical fluency"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "probability, logic, and mathematical fluency",
+            "low-latency or high-performance coding"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "low-latency or high-performance coding",
+            "markets, rigor, and clear reasoning"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "markets, rigor, and clear reasoning"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "graviton-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    },
+    {
+      "id": "quadeye",
+      "name": "Quadeye",
+      "archetype": "quant",
+      "summary": "A date-stamped preparation map for Quadeye, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+      "roleFocus": [
+        "probability, logic, and mathematical fluency",
+        "low-latency or high-performance coding",
+        "markets, rigor, and clear reasoning"
+      ],
+      "rounds": [
+        {
+          "title": "Recruiter or role screen",
+          "format": "Role, timing, scope, and process alignment",
+          "focus": [
+            "probability, logic, and mathematical fluency"
+          ],
+          "preparation": [
+            "Confirm the current loop with the recruiter; public formats change.",
+            "Prepare a concise role-fit narrative with evidence."
+          ]
+        },
+        {
+          "title": "Technical foundations",
+          "format": "Live or take-home technical assessment",
+          "focus": [
+            "probability, logic, and mathematical fluency",
+            "low-latency or high-performance coding"
+          ],
+          "preparation": [
+            "Practice timed reasoning and test edge cases aloud.",
+            "State complexity, assumptions, and trade-offs."
+          ]
+        },
+        {
+          "title": "Role depth",
+          "format": "Architecture, domain, or specialist interview",
+          "focus": [
+            "low-latency or high-performance coding",
+            "markets, rigor, and clear reasoning"
+          ],
+          "preparation": [
+            "Use one deep project to show decisions and failure recovery.",
+            "Connect design choices to measurable constraints."
+          ]
+        },
+        {
+          "title": "Behavioral and values",
+          "format": "Evidence-based conversation",
+          "focus": [
+            "markets, rigor, and clear reasoning"
+          ],
+          "preparation": [
+            "Prepare ownership, conflict, failure, ambiguity, and learning stories.",
+            "Separate your contribution from the team's result."
+          ]
+        }
+      ],
+      "sourceIds": [
+        "quadeye-careers"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18",
+      "disclaimer": "Public-process preparation guide only. It contains no proprietary questions, leaks, or guarantee of a current interview format. Confirm the active process with your recruiter."
+    }
+  ],
+  "sources": [
+    {
+      "id": "amazon-careers",
+      "title": "Amazon official careers or interviewing page",
+      "url": "https://www.amazon.jobs/content/en/how-we-hire/interviewing-at-amazon",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "google-careers",
+      "title": "Google official careers or interviewing page",
+      "url": "https://www.google.com/about/careers/applications/interview-tips/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "microsoft-careers",
+      "title": "Microsoft official careers or interviewing page",
+      "url": "https://careers.microsoft.com/v2/global/en/hiring-tips",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "meta-careers",
+      "title": "Meta official careers or interviewing page",
+      "url": "https://www.metacareers.com/careerprograms/pathways/software-engineering",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "apple-careers",
+      "title": "Apple official careers or interviewing page",
+      "url": "https://www.apple.com/careers/us/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "netflix-careers",
+      "title": "Netflix official careers or interviewing page",
+      "url": "https://jobs.netflix.com/culture",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "uber-careers",
+      "title": "Uber official careers or interviewing page",
+      "url": "https://www.uber.com/us/en/careers/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "atlassian-careers",
+      "title": "Atlassian official careers or interviewing page",
+      "url": "https://www.atlassian.com/company/careers/resources/interviewing",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "salesforce-careers",
+      "title": "Salesforce official careers or interviewing page",
+      "url": "https://careers.salesforce.com/en/how-we-hire/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "adobe-careers",
+      "title": "Adobe official careers or interviewing page",
+      "url": "https://careers.adobe.com/us/en/interviewing-at-adobe",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "oracle-careers",
+      "title": "Oracle official careers or interviewing page",
+      "url": "https://www.oracle.com/careers/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "stripe-careers",
+      "title": "Stripe official careers or interviewing page",
+      "url": "https://stripe.com/jobs",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "databricks-careers",
+      "title": "Databricks official careers or interviewing page",
+      "url": "https://www.databricks.com/company/careers",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "flipkart-careers",
+      "title": "Flipkart official careers or interviewing page",
+      "url": "https://www.flipkartcareers.com/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "razorpay-careers",
+      "title": "Razorpay official careers or interviewing page",
+      "url": "https://razorpay.com/jobs/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "phonepe-careers",
+      "title": "PhonePe official careers or interviewing page",
+      "url": "https://www.phonepe.com/careers/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "paytm-careers",
+      "title": "Paytm official careers or interviewing page",
+      "url": "https://paytm.com/careers/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cred-careers",
+      "title": "CRED official careers or interviewing page",
+      "url": "https://careers.cred.club/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "groww-careers",
+      "title": "Groww official careers or interviewing page",
+      "url": "https://groww.in/careers",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "swiggy-careers",
+      "title": "Swiggy official careers or interviewing page",
+      "url": "https://careers.swiggy.com/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "zomato-careers",
+      "title": "Zomato official careers or interviewing page",
+      "url": "https://www.zomato.com/careers",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "meesho-careers",
+      "title": "Meesho official careers or interviewing page",
+      "url": "https://www.meesho.io/jobs",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "tcs-careers",
+      "title": "TCS official careers or interviewing page",
+      "url": "https://www.tcs.com/careers",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "infosys-careers",
+      "title": "Infosys official careers or interviewing page",
+      "url": "https://www.infosys.com/careers/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "wipro-careers",
+      "title": "Wipro official careers or interviewing page",
+      "url": "https://careers.wipro.com/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "accenture-careers",
+      "title": "Accenture official careers or interviewing page",
+      "url": "https://www.accenture.com/us-en/careers",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cognizant-careers",
+      "title": "Cognizant official careers or interviewing page",
+      "url": "https://careers.cognizant.com/global-en/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "jane-street-careers",
+      "title": "Jane Street official careers or interviewing page",
+      "url": "https://www.janestreet.com/join-jane-street/interviewing/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "citadel-careers",
+      "title": "Citadel official careers or interviewing page",
+      "url": "https://www.citadel.com/careers/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "tower-research-careers",
+      "title": "Tower Research official careers or interviewing page",
+      "url": "https://www.tower-research.com/open-positions",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "graviton-careers",
+      "title": "Graviton official careers or interviewing page",
+      "url": "https://www.gravitontrading.com/careers.html",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "quadeye-careers",
+      "title": "Quadeye official careers or interviewing page",
+      "url": "https://www.quadeye.com/careers/",
+      "kind": "official-doc",
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    }
+  ]
+}

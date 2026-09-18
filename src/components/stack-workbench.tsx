@@ -36,7 +36,7 @@ export function StackWorkbench() {
     <section className="workbench-map" aria-labelledby="workbench-map-title">
       <header><div><h2 id="workbench-map-title">{ecosystemLabels[ecosystem]} workbench</h2><p>Runtime and platform at the base; tools and frameworks above. Select a plate to inspect its interview contract.</p></div><span><Layers3 size={16} /> {visible.length} resources</span></header>
       <div className="stack-layers">
-        {["framework", "language", "database", "runtime", "platform", "tool", "mobile", "data-ai", "web-api"].map((kind) => {
+        {["framework", "tool", "data-ai", "mobile", "web-api", "language", "runtime", "database", "platform"].map((kind) => {
           const items = visible.filter((technology) => technology.kind === kind);
           if (!items.length) return null;
           return <section className="stack-layer" key={kind}><h3>{kind.replace("-", " ")}</h3><div>{items.map((technology) => <button key={technology.id} className={selected?.id === technology.id ? "is-selected" : ""} onClick={() => setSelectedId(technology.id)}><Boxes size={17} /><span><strong>{technology.title}</strong><small>{technology.level} · {technology.version.current}</small></span></button>)}</div></section>;

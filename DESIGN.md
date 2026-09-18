@@ -82,7 +82,7 @@ components:
 
 **Creative North Star: "Technical Field Atlas"**
 
-Interview Atlas should feel like a carefully maintained engineering field manual: calm, exact, dense enough to be useful, and quiet enough for long study sessions. Cool paper, dark ink, fine rules, index tabs, and blueprint annotations turn a large curriculum into navigable terrain rather than a generic dashboard.
+Interview Atlas should feel like a carefully maintained engineering field manual: calm, exact, dense enough to be useful, and quiet enough for long study sessions. Cool paper, dark ink, fine rules, index tabs, and blueprint annotations turn a large curriculum into navigable terrain rather than a generic dashboard. Two related instruments share this world: the Role Atlas maps prerequisites, while the Stack Workbench layers ecosystems from runtime through framework to tooling.
 
 The interface is diagram-led but never illustration-led. Meaning lives in semantic text, explicit labels, node-and-edge relationships, and non-color status markers. The world rejects decorative gamification, glass surfaces, gradients, card mosaics, stock imagery, and ornamental charts.
 
@@ -93,6 +93,7 @@ The interface is diagram-led but never illustration-led. Meaning lives in semant
 - Teal and amber behave like restrained editorial annotations.
 - Ruled, mostly flat surfaces with small-radius working controls.
 - Mono typography is metadata, never the reading voice.
+- Stack plates, command ledgers, and problem rows expose relationships without becoming dashboard cards.
 
 ## Colors
 
@@ -134,6 +135,7 @@ The palette is a restrained technical-manual system: one blueprint accent, two a
 - **Headline** (700, fluid 1.55–2.25rem, 1.05): track and topic titles with tight spacing.
 - **Title** (650–700, 1.08–1.25rem): section titles, inspector headings, and navigation anchors.
 - **Body** (400, 1rem, 1.48): explanations and lessons; long reading measures stay near 70ch.
+- **Manual Body** (400, 0.94–1rem, 1.58): technology manuals, command explanations, problem statements, and company notes.
 - **Label** (400, 0.62–0.70rem, spaced uppercase): track codes, levels, times, and status metadata.
 
 **The Mono Is Metadata Rule.** Do not use the mono face for paragraphs, headings, or personality copy.
@@ -142,11 +144,15 @@ The palette is a restrained technical-manual system: one blueprint accent, two a
 
 Desktop atlas pages use a 17% / flexible center / 27% three-pane grid below a 70px sticky command header. The left pane indexes tracks, the center is the working map, and the right inspector explains the current selection. Thin rules establish ownership between regions.
 
-At 1120px the panes tighten. At 900px the application becomes a vertical document: tracks turn into horizontally scrollable index tabs, the interactive graph is replaced by the semantically equivalent topic outline, and the inspector follows it. At 540px the command header stacks and nonessential utility labels yield to icons. Spacing follows a compact 6/8/12/16/24px rhythm, with larger article gaps used only between lesson sections.
+Desktop Stack Workbench pages use an 18% / flexible center / 26% three-pane grid. The ecosystem index stays left, the center arranges technology layers in semantic stack order, and the inspector stays right. Technology manuals use a narrower 235px contents rail beside a readable article measure; DSA sheets use ruled ledgers rather than tiles.
+
+At 1120px atlas panes tighten. At 980px the Workbench inspector drops below the stack while the ecosystem index remains available. At 900px atlas pages become vertical documents: tracks turn into horizontally scrollable index tabs, the interactive graph is replaced by the semantically equivalent topic outline, and the inspector follows it. At 720px Workbench and manual pages become a single semantic document with a two-column ecosystem outline; at 540px the command header stacks and nonessential utility labels yield to icons. Spacing follows a compact 6/8/12/16/24px rhythm, with larger article gaps used only between lesson sections.
 
 Ruled comparisons use the same row-and-column grammar as adjacent manifests so curated guidance and complete inventories remain part of one field manual. When comparison rows collapse on narrow screens, retain the subject plus the decisive fields and repeat a visible inline label inside every surviving non-title cell.
 
 **The Map-and-Inspector Rule.** On wide screens, selection context and explanation remain visible together. On narrow screens, preserve the same information order in a readable outline rather than shrinking the graph.
+
+**The Layered Stack Rule.** Technology layers read from language or runtime foundations through frameworks and operational tooling. Mobile preserves that order as a document instead of imitating a compressed canvas.
 
 ## Elevation & Depth
 
@@ -163,6 +169,8 @@ The system is flat by default. Rules, paper tones, and spatial ownership create 
 ## Shapes
 
 Working controls use gently curved 6–9px corners. Revision sheets use a tighter 4px corner so they read as printable paper. Status tokens and small markers are circular or pill-shaped. Dashed borders mean planned content; solid borders mean available or published content. The folded `YOU ARE HERE` flag is the signature atlas silhouette.
+
+Workbench stack plates use 5px corners and small stepped offsets so depth communicates dependency order, not decoration. Command rows remain square-edged inside their ruled cookbook.
 
 ## Components
 
@@ -209,6 +217,18 @@ Track navigation is an index, not a tab-card collection. Active items gain a Blu
 
 Nodes are bordered paper labels with circular state markers. Planned nodes use a dashed outline, published nodes use teal state marks, and the selected node gets a Blueprint border, traced path, and folded location flag.
 
+### Workbench Stack Plate
+
+A stack plate is a wide ruled technology row with an ecosystem code, kind, version policy, and publication label. The selected plate uses a Blueprint edge and wash; adjacent plates retain paper backgrounds. Small horizontal offsets indicate layers, while DOM and reading order remain foundation-to-tooling.
+
+### Command Cookbook
+
+Commands are displayed in ruled rows with purpose, platform, expected result, safety classification, and an explicit copy control. Shell text uses the mono font; explanations remain in the reading face. Safety always has a written label and may use amber or red only as redundant emphasis.
+
+### DSA Ledger
+
+Sheets and problem inventories use dense ruled rows with stable problem numbers, pattern, difficulty, estimated time, solution-language availability, and a non-color progress label. Filters sit above the ledger and do not detach results from their sheet context.
+
 ## Do's and Don'ts
 
 ### Do:
@@ -220,6 +240,9 @@ Nodes are bordered paper labels with circular state markers. Planned nodes use a
 - **Do** honor reduced-motion preferences for path tracing and panel transitions.
 - **Do** use canonical destination titles for priority links and visible field labels when comparison rows collapse.
 - **Do** separate curated comparisons from complete manifests with an explicit heading and scope statement.
+- **Do** keep Stack Workbench layers in runtime-to-framework-to-tooling reading order and preserve that order on mobile.
+- **Do** give every command a stated purpose, platform, expected result, and safety classification.
+- **Do** use ruled ledgers for large problem, command, company, and technology inventories.
 
 ### Don't:
 
@@ -228,3 +251,5 @@ Nodes are bordered paper labels with circular state markers. Planned nodes use a
 - **Don't** introduce gradients, glassmorphism, stock imagery, or decorative analytics.
 - **Don't** use dense shadows to manufacture hierarchy that rules and layout can express.
 - **Don't** hide planned content or make it look finished.
+- **Don't** place hundreds of technologies into the role graph; use the Stack Workbench and ecosystem index.
+- **Don't** let adaptive recommendations silently override user-controlled confidence or hide their selection reason.

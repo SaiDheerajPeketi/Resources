@@ -9414,5 +9414,453 @@
       "python",
       "go"
     ]
+  },
+  {
+    "id": "amazon",
+    "route": "/companies/amazon/",
+    "kind": "company",
+    "title": "Amazon",
+    "summary": "A date-stamped preparation map for Amazon, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "global-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA and clean implementation",
+      "system and API design",
+      "behavioral evidence and product judgment"
+    ]
+  },
+  {
+    "id": "google",
+    "route": "/companies/google/",
+    "kind": "company",
+    "title": "Google",
+    "summary": "A date-stamped preparation map for Google, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "global-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA and clean implementation",
+      "system and API design",
+      "behavioral evidence and product judgment"
+    ]
+  },
+  {
+    "id": "microsoft",
+    "route": "/companies/microsoft/",
+    "kind": "company",
+    "title": "Microsoft",
+    "summary": "A date-stamped preparation map for Microsoft, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "global-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA and clean implementation",
+      "system and API design",
+      "behavioral evidence and product judgment"
+    ]
+  },
+  {
+    "id": "meta",
+    "route": "/companies/meta/",
+    "kind": "company",
+    "title": "Meta",
+    "summary": "A date-stamped preparation map for Meta, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "global-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA and clean implementation",
+      "system and API design",
+      "behavioral evidence and product judgment"
+    ]
+  },
+  {
+    "id": "apple",
+    "route": "/companies/apple/",
+    "kind": "company",
+    "title": "Apple",
+    "summary": "A date-stamped preparation map for Apple, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "global-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA and clean implementation",
+      "system and API design",
+      "behavioral evidence and product judgment"
+    ]
+  },
+  {
+    "id": "netflix",
+    "route": "/companies/netflix/",
+    "kind": "company",
+    "title": "Netflix",
+    "summary": "A date-stamped preparation map for Netflix, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "global-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA and clean implementation",
+      "system and API design",
+      "behavioral evidence and product judgment"
+    ]
+  },
+  {
+    "id": "uber",
+    "route": "/companies/uber/",
+    "kind": "company",
+    "title": "Uber",
+    "summary": "A date-stamped preparation map for Uber, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "global-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA and clean implementation",
+      "system and API design",
+      "behavioral evidence and product judgment"
+    ]
+  },
+  {
+    "id": "atlassian",
+    "route": "/companies/atlassian/",
+    "kind": "company",
+    "title": "Atlassian",
+    "summary": "A date-stamped preparation map for Atlassian, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "global-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA and clean implementation",
+      "system and API design",
+      "behavioral evidence and product judgment"
+    ]
+  },
+  {
+    "id": "salesforce",
+    "route": "/companies/salesforce/",
+    "kind": "company",
+    "title": "Salesforce",
+    "summary": "A date-stamped preparation map for Salesforce, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "global-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA and clean implementation",
+      "system and API design",
+      "behavioral evidence and product judgment"
+    ]
+  },
+  {
+    "id": "adobe",
+    "route": "/companies/adobe/",
+    "kind": "company",
+    "title": "Adobe",
+    "summary": "A date-stamped preparation map for Adobe, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "global-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA and clean implementation",
+      "system and API design",
+      "behavioral evidence and product judgment"
+    ]
+  },
+  {
+    "id": "oracle",
+    "route": "/companies/oracle/",
+    "kind": "company",
+    "title": "Oracle",
+    "summary": "A date-stamped preparation map for Oracle, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "infrastructure",
+    "publicationStatus": "published",
+    "roleIds": [
+      "systems, concurrency, and performance",
+      "distributed storage and reliability",
+      "debugging from evidence"
+    ]
+  },
+  {
+    "id": "stripe",
+    "route": "/companies/stripe/",
+    "kind": "company",
+    "title": "Stripe",
+    "summary": "A date-stamped preparation map for Stripe, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "fintech",
+    "publicationStatus": "published",
+    "roleIds": [
+      "correctness, idempotency, and data invariants",
+      "payments or financial-system design",
+      "security, resilience, and operational judgment"
+    ]
+  },
+  {
+    "id": "databricks",
+    "route": "/companies/databricks/",
+    "kind": "company",
+    "title": "Databricks",
+    "summary": "A date-stamped preparation map for Databricks, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "infrastructure",
+    "publicationStatus": "published",
+    "roleIds": [
+      "systems, concurrency, and performance",
+      "distributed storage and reliability",
+      "debugging from evidence"
+    ]
+  },
+  {
+    "id": "flipkart",
+    "route": "/companies/flipkart/",
+    "kind": "company",
+    "title": "Flipkart",
+    "summary": "A date-stamped preparation map for Flipkart, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "indian-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA speed and edge cases",
+      "CS fundamentals and project depth",
+      "scalable product design"
+    ]
+  },
+  {
+    "id": "razorpay",
+    "route": "/companies/razorpay/",
+    "kind": "company",
+    "title": "Razorpay",
+    "summary": "A date-stamped preparation map for Razorpay, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "fintech",
+    "publicationStatus": "published",
+    "roleIds": [
+      "correctness, idempotency, and data invariants",
+      "payments or financial-system design",
+      "security, resilience, and operational judgment"
+    ]
+  },
+  {
+    "id": "phonepe",
+    "route": "/companies/phonepe/",
+    "kind": "company",
+    "title": "PhonePe",
+    "summary": "A date-stamped preparation map for PhonePe, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "fintech",
+    "publicationStatus": "published",
+    "roleIds": [
+      "correctness, idempotency, and data invariants",
+      "payments or financial-system design",
+      "security, resilience, and operational judgment"
+    ]
+  },
+  {
+    "id": "paytm",
+    "route": "/companies/paytm/",
+    "kind": "company",
+    "title": "Paytm",
+    "summary": "A date-stamped preparation map for Paytm, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "fintech",
+    "publicationStatus": "published",
+    "roleIds": [
+      "correctness, idempotency, and data invariants",
+      "payments or financial-system design",
+      "security, resilience, and operational judgment"
+    ]
+  },
+  {
+    "id": "cred",
+    "route": "/companies/cred/",
+    "kind": "company",
+    "title": "CRED",
+    "summary": "A date-stamped preparation map for CRED, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "fintech",
+    "publicationStatus": "published",
+    "roleIds": [
+      "correctness, idempotency, and data invariants",
+      "payments or financial-system design",
+      "security, resilience, and operational judgment"
+    ]
+  },
+  {
+    "id": "groww",
+    "route": "/companies/groww/",
+    "kind": "company",
+    "title": "Groww",
+    "summary": "A date-stamped preparation map for Groww, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "fintech",
+    "publicationStatus": "published",
+    "roleIds": [
+      "correctness, idempotency, and data invariants",
+      "payments or financial-system design",
+      "security, resilience, and operational judgment"
+    ]
+  },
+  {
+    "id": "swiggy",
+    "route": "/companies/swiggy/",
+    "kind": "company",
+    "title": "Swiggy",
+    "summary": "A date-stamped preparation map for Swiggy, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "indian-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA speed and edge cases",
+      "CS fundamentals and project depth",
+      "scalable product design"
+    ]
+  },
+  {
+    "id": "zomato",
+    "route": "/companies/zomato/",
+    "kind": "company",
+    "title": "Zomato",
+    "summary": "A date-stamped preparation map for Zomato, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "indian-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA speed and edge cases",
+      "CS fundamentals and project depth",
+      "scalable product design"
+    ]
+  },
+  {
+    "id": "meesho",
+    "route": "/companies/meesho/",
+    "kind": "company",
+    "title": "Meesho",
+    "summary": "A date-stamped preparation map for Meesho, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "indian-product",
+    "publicationStatus": "published",
+    "roleIds": [
+      "DSA speed and edge cases",
+      "CS fundamentals and project depth",
+      "scalable product design"
+    ]
+  },
+  {
+    "id": "tcs",
+    "route": "/companies/tcs/",
+    "kind": "company",
+    "title": "TCS",
+    "summary": "A date-stamped preparation map for TCS, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "services",
+    "publicationStatus": "published",
+    "roleIds": [
+      "language and core-CS foundations",
+      "SQL, projects, and client communication",
+      "role-specific framework readiness"
+    ]
+  },
+  {
+    "id": "infosys",
+    "route": "/companies/infosys/",
+    "kind": "company",
+    "title": "Infosys",
+    "summary": "A date-stamped preparation map for Infosys, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "services",
+    "publicationStatus": "published",
+    "roleIds": [
+      "language and core-CS foundations",
+      "SQL, projects, and client communication",
+      "role-specific framework readiness"
+    ]
+  },
+  {
+    "id": "wipro",
+    "route": "/companies/wipro/",
+    "kind": "company",
+    "title": "Wipro",
+    "summary": "A date-stamped preparation map for Wipro, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "services",
+    "publicationStatus": "published",
+    "roleIds": [
+      "language and core-CS foundations",
+      "SQL, projects, and client communication",
+      "role-specific framework readiness"
+    ]
+  },
+  {
+    "id": "accenture",
+    "route": "/companies/accenture/",
+    "kind": "company",
+    "title": "Accenture",
+    "summary": "A date-stamped preparation map for Accenture, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "services",
+    "publicationStatus": "published",
+    "roleIds": [
+      "language and core-CS foundations",
+      "SQL, projects, and client communication",
+      "role-specific framework readiness"
+    ]
+  },
+  {
+    "id": "cognizant",
+    "route": "/companies/cognizant/",
+    "kind": "company",
+    "title": "Cognizant",
+    "summary": "A date-stamped preparation map for Cognizant, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "services",
+    "publicationStatus": "published",
+    "roleIds": [
+      "language and core-CS foundations",
+      "SQL, projects, and client communication",
+      "role-specific framework readiness"
+    ]
+  },
+  {
+    "id": "jane-street",
+    "route": "/companies/jane-street/",
+    "kind": "company",
+    "title": "Jane Street",
+    "summary": "A date-stamped preparation map for Jane Street, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "quant",
+    "publicationStatus": "published",
+    "roleIds": [
+      "probability, logic, and mathematical fluency",
+      "low-latency or high-performance coding",
+      "markets, rigor, and clear reasoning"
+    ]
+  },
+  {
+    "id": "citadel",
+    "route": "/companies/citadel/",
+    "kind": "company",
+    "title": "Citadel",
+    "summary": "A date-stamped preparation map for Citadel, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "quant",
+    "publicationStatus": "published",
+    "roleIds": [
+      "probability, logic, and mathematical fluency",
+      "low-latency or high-performance coding",
+      "markets, rigor, and clear reasoning"
+    ]
+  },
+  {
+    "id": "tower-research",
+    "route": "/companies/tower-research/",
+    "kind": "company",
+    "title": "Tower Research",
+    "summary": "A date-stamped preparation map for Tower Research, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "quant",
+    "publicationStatus": "published",
+    "roleIds": [
+      "probability, logic, and mathematical fluency",
+      "low-latency or high-performance coding",
+      "markets, rigor, and clear reasoning"
+    ]
+  },
+  {
+    "id": "graviton",
+    "route": "/companies/graviton/",
+    "kind": "company",
+    "title": "Graviton",
+    "summary": "A date-stamped preparation map for Graviton, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "quant",
+    "publicationStatus": "published",
+    "roleIds": [
+      "probability, logic, and mathematical fluency",
+      "low-latency or high-performance coding",
+      "markets, rigor, and clear reasoning"
+    ]
+  },
+  {
+    "id": "quadeye",
+    "route": "/companies/quadeye/",
+    "kind": "company",
+    "title": "Quadeye",
+    "summary": "A date-stamped preparation map for Quadeye, based only on public careers and interview material. Team, level, location, and timing can change the actual loop.",
+    "archetype": "quant",
+    "publicationStatus": "published",
+    "roleIds": [
+      "probability, logic, and mathematical fluency",
+      "low-latency or high-performance coding",
+      "markets, rigor, and clear reasoning"
+    ]
   }
 ]

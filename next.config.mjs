@@ -13,10 +13,10 @@ const withSerwist = withSerwistInit({
   reloadOnOnline: false,
   additionalPrecacheEntries: [
     { url: `${basePath}/~offline/`, revision: "interview-atlas-0.1.0" },
-    { url: `${basePath}/generated/content-manifest.json`, revision: "content-2026.09.18-r7" },
-    { url: `${basePath}/generated/pack-manifest.json`, revision: "packs-2026.09.18-r7" },
-    { url: `${basePath}/generated/completeness-report.json`, revision: "audit-2026.09.18-r7" },
-    { url: `${basePath}/generated/content-freshness-report.json`, revision: "freshness-2026.09.18-r7" }
+    { url: `${basePath}/generated/content-manifest.json`, revision: "content-2026.09.18-r12" },
+    { url: `${basePath}/generated/pack-manifest.json`, revision: "packs-2026.09.18-r12" },
+    { url: `${basePath}/generated/completeness-report.json`, revision: "audit-2026.09.18-r12" },
+    { url: `${basePath}/generated/content-freshness-report.json`, revision: "freshness-2026.09.18-r12" }
   ]
 });
 

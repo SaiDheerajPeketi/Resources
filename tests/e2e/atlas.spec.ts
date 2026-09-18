@@ -110,6 +110,39 @@ test("keyboard search opens a published field note", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Threat Modeling", level: 1 })).toBeVisible();
 });
 
+test("Stack Workbench opens a complete technology manual", async ({ page }) => {
+  await page.goto("/library/");
+  await expect(page.getByRole("heading", { name: "Technology library" })).toBeVisible();
+  await page.getByRole("button", { name: /Java/ }).first().click();
+  await page.getByRole("link", { name: /Open field manual/ }).click();
+  await expect(page.getByRole("heading", { name: "Java", level: 1 })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Command cookbook/ })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Interview questions" })).toBeVisible();
+});
+
+test("Atlas 300 filters and loads a language-specific problem artifact", async ({ page }) => {
+  await page.goto("/sheets/atlas-300/");
+  await expect(page.getByText("300 problems")).toBeVisible();
+  await page.getByLabel("Difficulty").selectOption("hard");
+  await page.getByRole("link", { name: "Edit Distance" }).click();
+  await expect(page.getByRole("heading", { name: "Edit Distance", level: 1 })).toBeVisible();
+  await page.getByRole("button", { name: "Load C++17 artifact" }).click();
+  await expect(page.locator("pre")).toContainText("#include");
+});
+
+test("diagnostic, plan, review, and company guides are reachable", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop", "One local workflow check is sufficient");
+  await page.goto("/diagnostic/");
+  await expect(page.getByRole("heading", { name: "Optional diagnostic" })).toBeVisible();
+  await page.goto("/plan/");
+  await expect(page.getByRole("heading", { name: "Prerequisite-aware study plan" })).toBeVisible();
+  await page.goto("/review/");
+  await expect(page.getByRole("heading", { name: "Adaptive review queue" })).toBeVisible();
+  await page.goto("/companies/amazon/");
+  await expect(page.getByRole("heading", { name: "Amazon", level: 1 })).toBeVisible();
+  await expect(page.getByText(/no proprietary questions/i)).toBeVisible();
+});
+
 test("every track exposes its full manifest and keeps its published slice on-map", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== "desktop", "One graph coverage check is sufficient");
   await page.goto("/atlas/");
@@ -142,9 +175,9 @@ test("a downloaded pack opens while offline", async ({ page, context }, testInfo
   test.skip(testInfo.project.name !== "desktop", "One offline installation check is sufficient");
   await page.goto("/settings/");
   await page.evaluate(() => navigator.serviceWorker.ready);
-  const row = page.locator(".pack-list > div").filter({ hasText: "Cybersecurity" });
+  const row = page.locator(".pack-list > div").filter({ hasText: "Cybersecurity track" });
   await row.getByRole("button", { name: "Download" }).click();
-  await expect(page.getByText("Cybersecurity offline pack is available offline.")).toBeVisible();
+  await expect(page.getByText("Cybersecurity track is available offline.")).toBeVisible();
   await context.setOffline(true);
   await page.goto("/topics/cybersecurity/threat-modeling/");
   await expect(page.getByRole("heading", { name: "Threat Modeling", level: 1 })).toBeVisible();

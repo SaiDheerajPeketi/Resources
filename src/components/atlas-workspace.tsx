@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ReactFlow, Background, Controls, type Edge, type Node, MarkerType } from "@xyflow/react";
-import { BookmarkPlus, BookOpen, Check, Circle, Clock3, Download, ListTree, Play, Route, SearchX } from "lucide-react";
+import { BookmarkPlus, BookOpen, Building2, CalendarRange, Check, Circle, Clock3, Download, ListTree, Play, Route, RotateCcw, SearchX, Stethoscope } from "lucide-react";
 import { edges, publishedTopics, topicById, topicsForTrack, tracks } from "@/data/catalog";
 import { addRevisionItem, setProgress } from "@/lib/db";
 import type { TopicMeta, TrackId } from "@/lib/schema";
@@ -74,6 +74,10 @@ export function AtlasWorkspace({ initialTrack = "foundations" }: { initialTrack?
           <Link href="/practice/"><Play size={18} /> Practice sets</Link>
           <Link href="/revision/"><BookmarkPlus size={18} /> Revision lists</Link>
           <Link href="/interview/"><Route size={18} /> Interview loops</Link>
+          <Link href="/companies/"><Building2 size={18} /> Company guides</Link>
+          <Link href="/diagnostic/"><Stethoscope size={18} /> Diagnostic</Link>
+          <Link href="/plan/"><CalendarRange size={18} /> Study plan</Link>
+          <Link href="/review/"><RotateCcw size={18} /> Review queue</Link>
           <Link href="/settings/"><Download size={18} /> Offline packs</Link>
         </nav>
       </aside>
