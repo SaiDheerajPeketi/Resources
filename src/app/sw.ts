@@ -1,6 +1,7 @@
 import { defaultCache } from "@serwist/next/worker";
 import type { PrecacheEntry, SerwistGlobalConfig } from "serwist";
 import { NetworkFirst, Serwist } from "serwist";
+import { withBasePath } from "@/lib/base-path";
 import { CONTENT_PACK_CACHE } from "@/lib/offline";
 
 declare global {
@@ -25,7 +26,7 @@ const serwist = new Serwist({
     ...defaultCache
   ],
   fallbacks: {
-    entries: [{ url: "/~offline/", matcher: ({ request }) => request.destination === "document" }]
+    entries: [{ url: withBasePath("/~offline/"), matcher: ({ request }) => request.destination === "document" }]
   }
 });
 

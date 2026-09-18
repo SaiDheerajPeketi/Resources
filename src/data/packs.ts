@@ -1,4 +1,5 @@
 import { publishedTopics, tracks } from "@/data/catalog";
+import { withBasePath } from "@/lib/base-path";
 import { CONTENT_PACK_CACHE } from "@/lib/offline";
 import type { TrackId } from "@/lib/schema";
 
@@ -39,9 +40,10 @@ export async function cachePack(trackId: TrackId, onProgress?: (done: number, to
   const cache = await caches.open(CONTENT_PACK_CACHE);
   let done = 0;
   for (const route of pack.routes) {
-    const response = await fetch(route, { cache: "reload" });
+    const cacheRoute = withBasePath(route);
+    const response = await fetch(cacheRoute, { cache: "reload" });
     if (!response.ok) throw new Error(`Could not download ${route} (${response.status}).`);
-    await cache.put(route, response.clone());
+    await cache.put(cacheRoute, response.clone());
     done += 1;
     onProgress?.(done, pack.routes.length);
   }
@@ -53,6 +55,6 @@ export async function removeCachedPack(trackId: TrackId) {
   if (!pack || !("caches" in window)) return false;
   const cache = await caches.open(CONTENT_PACK_CACHE);
   const trackRoutes = pack.routes.filter((route) => route === `/tracks/${trackId}/` || route.startsWith(`/topics/${trackId}/`));
-  const removed = await Promise.all(trackRoutes.map((route) => cache.delete(route)));
+  const removed = await Promise.all(trackRoutes.map((route) => cache.delete(withBasePath(route))));
   return removed.some(Boolean);
 }
