@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SettingsClient } from "@/components/settings-client";
+import { CONTENT_MANIFEST_VERSION, publishedTopics, topics } from "@/data/catalog";
+import { companyArchetypes, mockLoops, practiceSets } from "@/data/practice-sets";
+import { questions } from "@/data/questions";
 export const metadata: Metadata = { title: "Settings and offline packs" };
-export default function SettingsPage() { return <main id="main-content" className="tool-page"><header className="tool-page-title"><h1>Offline and data controls</h1><p>Install track packs, keep backups, and move your study history without an account.</p></header><SettingsClient /></main>; }
+export default function SettingsPage() { return <main id="main-content" className="tool-page"><header className="tool-page-title"><h1>Offline and data controls</h1><p>Install track packs, keep backups, move your study history, and inspect the published corpus without an account.</p></header><SettingsClient /><section className="audit-field" aria-labelledby="audit-field-title"><header><div><h2 id="audit-field-title">Corpus audit</h2><p>Build-time validation blocks publication when graph, question, practice-set, source-freshness, or internal-link checks fail.</p></div><span>{CONTENT_MANIFEST_VERSION}</span></header><dl><div><dt>Published topics</dt><dd>{publishedTopics.length} / {topics.length}</dd></div><div><dt>Original questions</dt><dd>{questions.length}</dd></div><div><dt>Practice sets</dt><dd>{practiceSets.length}</dd></div><div><dt>Company archetypes</dt><dd>{companyArchetypes.length}</dd></div><div><dt>Cross-track mocks</dt><dd>{mockLoops.length}</dd></div></dl><nav aria-label="Download corpus audit reports"><Link href="/generated/completeness-report.json">Completeness report</Link><Link href="/generated/content-freshness-report.json">Freshness report</Link></nav></section></main>; }

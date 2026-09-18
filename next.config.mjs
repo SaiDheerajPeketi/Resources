@@ -11,8 +11,10 @@ const withSerwist = withSerwistInit({
   reloadOnOnline: false,
   additionalPrecacheEntries: [
     { url: "/~offline/", revision: "interview-atlas-0.1.0" },
-    { url: "/generated/content-manifest.json", revision: "content-0.1.0" },
-    { url: "/generated/pack-manifest.json", revision: "packs-0.1.0" }
+    { url: "/generated/content-manifest.json", revision: "content-2026.09.18-r7" },
+    { url: "/generated/pack-manifest.json", revision: "packs-2026.09.18-r7" },
+    { url: "/generated/completeness-report.json", revision: "audit-2026.09.18-r7" },
+    { url: "/generated/content-freshness-report.json", revision: "freshness-2026.09.18-r7" }
   ]
 });
 

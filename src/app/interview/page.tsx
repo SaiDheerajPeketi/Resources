@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   BriefcaseBusiness,
+  Building2,
   Clock3,
   Code2,
   FileText,
@@ -12,8 +13,10 @@ import {
   PhoneCall,
   Scale,
   ShieldCheck,
-  Users
+  Users,
+  Waypoints
 } from "lucide-react";
+import { companyArchetypes, mockLoops, practiceSetById } from "@/data/practice-sets";
 
 export const metadata: Metadata = { title: "Interview loops" };
 
@@ -80,6 +83,21 @@ export default function InterviewPage() {
       </article>)}
     </section>
 
+    <section className="archetype-field" aria-labelledby="archetype-field-title">
+      <header>
+        <div><Building2 size={22} /><h2 id="archetype-field-title">Company archetype packs</h2></div>
+        <p>Use these as emphasis maps, not claims about a specific employer. Always replace the assumed loop with the recruiter&apos;s current process.</p>
+      </header>
+      <div className="archetype-list">
+        {companyArchetypes.map((archetype) => <article key={archetype.id}>
+          <header><h3>{archetype.title}</h3><p>{archetype.context}</p></header>
+          <ul>{archetype.focus.map((item) => <li key={item}>{item}</li>)}</ul>
+          <ol>{archetype.rounds.map((round) => <li key={round.title}><span>{round.timeboxMinutes} min</span><strong>{round.title}</strong><small>{round.signal}</small></li>)}</ol>
+          <nav aria-label={`${archetype.title} practice sets`}>{archetype.practiceSetIds.map((setId) => { const set = practiceSetById.get(setId)!; return <Link key={setId} href={`/practice/?set=${setId}`}>{set.title}<ArrowRight size={14} /></Link>; })}</nav>
+        </article>)}
+      </div>
+    </section>
+
     <section className="career-field" aria-labelledby="career-field-title">
       <header className="career-field-heading">
         <div><MessageSquareText size={22} /><h2 id="career-field-title">Career field guide</h2></div>
@@ -90,6 +108,20 @@ export default function InterviewPage() {
           <header><Icon size={20} aria-hidden="true" /><div><h3>{title}</h3><p>{purpose}</p></div></header>
           <ul>{checklist.map((item) => <li key={item}>{item}</li>)}</ul>
           <div className="career-template"><strong>Working template</strong><p>{template}</p></div>
+        </article>)}
+      </div>
+    </section>
+
+    <section className="simulation-field" aria-labelledby="simulation-field-title">
+      <header>
+        <div><Waypoints size={22} /><h2 id="simulation-field-title">Cross-track simulation loops</h2></div>
+        <p>These circuits deliberately cross role boundaries. Run them without solutions, keep one evidence sheet, and save misses by question or topic.</p>
+      </header>
+      <div className="simulation-list">
+        {mockLoops.map((loop) => <article key={loop.id}>
+          <header><h3>{loop.title}</h3><span><Clock3 size={14} /> {loop.durationMinutes} min</span><p>{loop.summary}</p></header>
+          <ol>{loop.stages.map((stage) => <li key={stage.title}><time>{stage.timeboxMinutes} min</time><div><strong>{stage.title}</strong><small>{stage.evidence}</small></div></li>)}</ol>
+          <Link href={`/practice/?question=${loop.questionIds[0]}`}>Start with the first prompt <ArrowRight size={16} /></Link>
         </article>)}
       </div>
     </section>

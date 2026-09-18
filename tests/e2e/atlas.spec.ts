@@ -74,10 +74,22 @@ test("Fintech and quant pack exposes payment and quantitative depth", async ({ p
 
 test("interview workspace includes career artifacts and a timed mock", async ({ page }) => {
   await page.goto("/interview/");
+  await expect(page.getByRole("heading", { name: "Company archetype packs" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Quant firms" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Career field guide" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Cross-track simulation loops" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Regulated payments launch" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Resume construction" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Seventy-five-minute mock template" })).toBeVisible();
   await expect(page.getByText("65–75")).toBeVisible();
+});
+
+test("practice field opens a curated SQL simulation set", async ({ page }) => {
+  await page.goto("/practice/?set=sql-analysis");
+  await expect(page.getByLabel("Practice set")).toHaveValue("sql-analysis");
+  await expect(page.getByText("115 min loop")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "SQL Fundamentals", level: 1 })).toBeVisible();
+  await expect(page.getByText(/signup week/)).toBeVisible();
 });
 
 test("mobile uses the semantic outline", async ({ page }, testInfo) => {

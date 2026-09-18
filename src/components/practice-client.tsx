@@ -2,24 +2,50 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Check, ChevronLeft, ChevronRight, Clock3, Eye, Lightbulb, X } from "lucide-react";
-import { questions } from "@/data/questions";
+import { practiceSetById, practiceSets } from "@/data/practice-sets";
+import { questionById, questions } from "@/data/questions";
 import { topicById, tracks } from "@/data/catalog";
 import { getDB, setProgress } from "@/lib/db";
 import type { TrackId } from "@/lib/schema";
 
 export function PracticeClient() {
   const [track, setTrack] = useState<TrackId | "all">("all");
+  const [setId, setSetId] = useState<string | "all">("all");
   const [index, setIndex] = useState(0);
   const [response, setResponse] = useState("");
   const [hintCount, setHintCount] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
-  const filtered = useMemo(() => questions.filter((question) => track === "all" || question.trackId === track), [track]);
+  const selectedSet = setId === "all" ? undefined : practiceSetById.get(setId);
+  const filtered = useMemo(() => {
+    if (selectedSet) return selectedSet.questionIds.flatMap((id) => {
+      const question = questionById.get(id);
+      return question ? [question] : [];
+    });
+    return questions.filter((question) => track === "all" || question.trackId === track);
+  }, [selectedSet, track]);
   const question = filtered[index % Math.max(filtered.length, 1)];
 
   useEffect(() => {
-    const requested = new URLSearchParams(window.location.search).get("topic");
+    const params = new URLSearchParams(window.location.search);
+    const requestedSet = params.get("set");
+    if (requestedSet && practiceSetById.has(requestedSet)) {
+      setSetId(requestedSet);
+      setTrack("all");
+      return;
+    }
+    const requestedQuestion = params.get("question");
+    const exactQuestion = requestedQuestion ? questionById.get(requestedQuestion) : undefined;
+    if (exactQuestion) {
+      setSetId("all");
+      setTrack(exactQuestion.trackId);
+      const inTrack = questions.filter((item) => item.trackId === exactQuestion.trackId);
+      setIndex(Math.max(0, inTrack.findIndex((item) => item.id === exactQuestion.id)));
+      return;
+    }
+    const requested = params.get("topic");
     const matching = questions.find((item) => item.topicId === requested);
     if (matching) {
+      setSetId("all");
       setTrack(matching.trackId);
       const inTrack = questions.filter((item) => item.trackId === matching.trackId);
       setIndex(Math.max(0, inTrack.findIndex((item) => item.id === matching.id)));
@@ -41,7 +67,9 @@ export function PracticeClient() {
   const topic = topicById.get(question.topicId)!;
   return <div className="practice-layout">
     <aside className="practice-toolbar">
-      <label>Track<select value={track} onChange={(event) => { setTrack(event.target.value as TrackId | "all"); setIndex(0); }}><option value="all">All tracks</option>{tracks.map((item) => <option key={item.id} value={item.id}>{item.title}</option>)}</select></label>
+      <label>Practice set<select value={setId} onChange={(event) => { setSetId(event.target.value); setTrack("all"); setIndex(0); setResponse(""); setHintCount(0); setShowAnswer(false); }}><option value="all">All questions</option>{practiceSets.map((set) => <option key={set.id} value={set.id}>{set.title}</option>)}</select></label>
+      <label>Track<select value={track} disabled={setId !== "all"} onChange={(event) => { setTrack(event.target.value as TrackId | "all"); setIndex(0); setResponse(""); setHintCount(0); setShowAnswer(false); }}><option value="all">All tracks</option>{tracks.map((item) => <option key={item.id} value={item.id}>{item.title}</option>)}</select></label>
+      {selectedSet && <p className="practice-set-note"><strong>{selectedSet.durationMinutes} min loop</strong>{selectedSet.summary}</p>}
       <div className="practice-position"><strong>{index + 1}</strong><span>of {filtered.length}</span></div>
       <button onClick={() => move(-1)}><ChevronLeft size={17} /> Previous</button>
       <button onClick={() => move(1)}>Next <ChevronRight size={17} /></button>

@@ -298,7 +298,11 @@ button { color: inherit; }
 .practice-layout { display: grid; grid-template-columns: 210px minmax(0, 1fr); border-block: 1px solid var(--rule-strong); }
 .practice-toolbar { padding: 22px 20px 22px 0; border-right: 1px solid var(--rule); }
 .practice-toolbar label { display: grid; gap: 7px; color: var(--muted); font-size: 0.76rem; font-weight: 650; }
+.practice-toolbar label + label { margin-top: 15px; }
 .practice-toolbar select { height: 41px; padding: 0 8px; border: 1px solid var(--rule-strong); border-radius: 6px; background: white; }
+.practice-toolbar select:disabled { background: var(--paper); color: var(--faint); cursor: not-allowed; }
+.practice-set-note { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.78rem; line-height: 1.45; }
+.practice-set-note strong { display: block; margin-bottom: 4px; color: var(--blue-deep); font: 0.65rem/1.3 "JetBrains Mono Variable", monospace; letter-spacing: 0.05em; text-transform: uppercase; }
 .practice-position { display: flex; align-items: baseline; gap: 6px; margin: 27px 0 17px; }
 .practice-position strong { font-size: 2.25rem; line-height: 1; }
 .practice-position span { color: var(--muted); }
@@ -351,6 +355,17 @@ button { color: inherit; }
 .settings-actions button { width: 100%; justify-content: flex-start; margin-top: 8px; }
 .settings-actions .danger-action { margin-top: 25px; border-color: #d4a7ae; color: var(--danger); }
 .settings-message { grid-column: 1 / -1; display: flex; align-items: center; gap: 8px; padding: 10px 12px; background: var(--teal-soft); color: #0c6d68; border-radius: 6px; }
+.audit-field { margin-top: 58px; padding-top: 24px; border-top: 2px solid var(--ink); }
+.audit-field > header { display: flex; justify-content: space-between; gap: 28px; align-items: start; }
+.audit-field h2 { margin: 0; }
+.audit-field header p { max-width: 68ch; margin: 7px 0 0; color: var(--muted); }
+.audit-field header span { flex: none; color: var(--blue-deep); font: 0.68rem/1.5 "JetBrains Mono Variable", monospace; letter-spacing: 0.05em; }
+.audit-field dl { max-width: 760px; margin: 22px 0 0; border-top: 1px solid var(--rule-strong); }
+.audit-field dl div { display: grid; grid-template-columns: 1fr auto; gap: 28px; padding: 11px 0; border-bottom: 1px solid var(--rule); }
+.audit-field dt { color: var(--muted); }
+.audit-field dd { margin: 0; font-variant-numeric: tabular-nums; font-weight: 700; }
+.audit-field nav { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 18px; }
+.audit-field nav a { color: var(--blue-deep); font-weight: 650; text-underline-offset: 3px; }
 
 .loop-list { border-block: 1px solid var(--rule-strong); }
 .loop-list article { display: grid; grid-template-columns: minmax(250px, 0.85fr) minmax(340px, 1.5fr) 210px; gap: 30px; align-items: center; min-height: 125px; border-bottom: 1px solid var(--rule); }
@@ -360,6 +375,35 @@ button { color: inherit; }
 .loop-list header span { grid-column: 2; display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-size: 0.75rem; }
 .loop-list ol { columns: 2; margin: 0; padding-left: 22px; color: #35445f; }
 .loop-list a { display: inline-flex; align-items: center; gap: 7px; color: var(--blue-deep); text-decoration: none; font-weight: 650; }
+.archetype-field, .simulation-field { margin-top: 58px; padding-top: 25px; border-top: 2px solid var(--ink); }
+.archetype-field > header, .simulation-field > header { display: grid; grid-template-columns: minmax(260px, 0.8fr) minmax(360px, 1.2fr); gap: 34px; align-items: end; margin-bottom: 22px; }
+.archetype-field > header > div, .simulation-field > header > div { display: flex; align-items: center; gap: 9px; }
+.archetype-field > header h2, .simulation-field > header h2 { margin: 0; }
+.archetype-field > header p, .simulation-field > header p { max-width: 65ch; margin: 0; color: var(--muted); }
+.archetype-list, .simulation-list { border-top: 1px solid var(--rule-strong); }
+.archetype-list article { display: grid; grid-template-columns: minmax(220px, 0.8fr) minmax(230px, 0.85fr) minmax(330px, 1.3fr) minmax(185px, 0.7fr); gap: clamp(20px, 3vw, 42px); padding: 24px 0; border-bottom: 1px solid var(--rule); }
+.archetype-list h3, .simulation-list h3 { margin: 0; font-size: 1.08rem; }
+.archetype-list header p { margin: 6px 0 0; color: var(--muted); }
+.archetype-list ul { margin: 0; padding-left: 18px; color: var(--muted); }
+.archetype-list ul li + li { margin-top: 6px; }
+.archetype-list ol { margin: 0; padding: 0; list-style: none; }
+.archetype-list ol li { display: grid; grid-template-columns: 52px 1fr; gap: 2px 9px; padding: 0 0 9px; }
+.archetype-list ol span { grid-row: 1 / 3; color: var(--blue-deep); font: 0.64rem/1.4 "JetBrains Mono Variable", monospace; }
+.archetype-list ol strong { font-size: 0.86rem; }
+.archetype-list ol small { color: var(--muted); line-height: 1.35; }
+.archetype-list nav { display: grid; align-content: start; gap: 7px; }
+.archetype-list nav a, .simulation-list > article > a { display: inline-flex; align-items: center; justify-content: space-between; gap: 8px; color: var(--blue-deep); text-decoration: none; font-size: 0.84rem; font-weight: 650; }
+.simulation-list article { display: grid; grid-template-columns: minmax(230px, 0.75fr) minmax(450px, 1.6fr) 200px; gap: clamp(22px, 4vw, 56px); align-items: start; padding: 25px 0; border-bottom: 1px solid var(--rule); }
+.simulation-list article > header { display: grid; gap: 6px; }
+.simulation-list article > header span { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-size: 0.75rem; }
+.simulation-list article > header p { margin: 2px 0 0; color: var(--muted); }
+.simulation-list ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; margin: 0; padding: 0; list-style: none; }
+.simulation-list li { display: grid; grid-template-columns: 54px 1fr; gap: 9px; }
+.simulation-list time { color: var(--blue-deep); font: 0.64rem/1.4 "JetBrains Mono Variable", monospace; }
+.simulation-list li strong, .simulation-list li small { display: block; }
+.simulation-list li strong { font-size: 0.86rem; }
+.simulation-list li small { margin-top: 3px; color: var(--muted); line-height: 1.35; }
+.simulation-list > article > a { margin-top: 2px; }
 .career-field { margin-top: 55px; padding-top: 25px; border-top: 2px solid var(--ink); }
 .career-field h2 { margin: 0; }
 .career-field-heading { display: grid; grid-template-columns: minmax(260px, 0.8fr) minmax(360px, 1.2fr); gap: 34px; align-items: end; }
@@ -438,14 +482,19 @@ button { color: inherit; }
   .manifest-field > header { display: block; padding-bottom: 12px; }
   .manifest-field > header p { margin-top: 5px; }
   .practice-layout { grid-template-columns: 1fr; }
-  .practice-toolbar { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: end; padding: 14px 0; border-right: 0; border-bottom: 1px solid var(--rule); }
+  .practice-toolbar { display: grid; grid-template-columns: minmax(190px, 1fr) minmax(180px, 1fr) auto auto; gap: 8px; align-items: end; padding: 14px 0; border-right: 0; border-bottom: 1px solid var(--rule); }
+  .practice-toolbar label + label { margin-top: 0; }
+  .practice-set-note { grid-column: 1 / -1; margin-top: 3px; }
   .practice-position { display: none; }
   .practice-toolbar button { margin: 0; width: auto; }
   .revision-layout, .settings-grid { grid-template-columns: 1fr; }
   .settings-actions { padding: 25px 0 0; border: 0; border-top: 1px solid var(--rule); }
   .loop-list article { grid-template-columns: 1fr; gap: 14px; padding: 20px 0; }
   .loop-list ol { columns: 1; }
-  .career-field-heading, .mock-field > header { grid-template-columns: 1fr; gap: 10px; align-items: start; }
+  .archetype-field > header, .simulation-field > header, .career-field-heading, .mock-field > header { grid-template-columns: 1fr; gap: 10px; align-items: start; }
+  .archetype-list article { grid-template-columns: 1fr 1fr; gap: 20px 30px; }
+  .archetype-list article > header { grid-column: 1 / -1; }
+  .simulation-list article { grid-template-columns: 1fr; gap: 18px; }
   .career-field-list article { grid-template-columns: 1fr; gap: 17px; }
   .career-field-list ul { columns: 1; }
 }
@@ -474,6 +523,9 @@ button { color: inherit; }
   .mock-close { display: grid; }
   .practice-toolbar { grid-template-columns: 1fr 1fr; }
   .practice-toolbar label { grid-column: 1 / -1; }
+  .archetype-list article { grid-template-columns: 1fr; }
+  .archetype-list article > header { grid-column: auto; }
+  .simulation-list ol { grid-template-columns: 1fr; }
   .question-stage { padding-inline: 0; }
 }
 

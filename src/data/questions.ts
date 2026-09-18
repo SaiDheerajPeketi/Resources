@@ -5,6 +5,7 @@ import { sdeLessons } from "@/data/sde-lessons";
 import { devopsLessons } from "@/data/devops-lessons";
 import { securityLessons } from "@/data/security-lessons";
 import { fintechLessons } from "@/data/fintech-lessons";
+import { simulationQuestions } from "@/data/simulation-questions";
 
 const handcraftedQuestions: Question[] = [
   {
@@ -101,7 +102,8 @@ export const questions: Question[] = QuestionSchema.array().parse([
   ...sdeQuestions,
   ...devopsQuestions,
   ...securityQuestions,
-  ...fintechQuestions
+  ...fintechQuestions,
+  ...simulationQuestions
 ]);
 
 export const questionById = new Map(questions.map((question) => [question.id, question]));

@@ -1,0 +1,36 @@
+{
+  "version": "2026.09.18-r7",
+  "generatedAt": "2026-09-18T06:03:30.787Z",
+  "manifest": {
+    "topics": 146,
+    "published": 146,
+    "graphEdges": 311
+  },
+  "practice": {
+    "questions": 164,
+    "sets": 11,
+    "categories": [
+      "coding",
+      "sql",
+      "ai",
+      "system-design",
+      "fintech-case",
+      "security",
+      "devops",
+      "behavioral",
+      "estimation",
+      "probability",
+      "logic"
+    ],
+    "companyArchetypes": 7,
+    "crossTrackMocks": 4
+  },
+  "audit": {
+    "unpublishedTopics": [],
+    "topicsWithoutQuestions": [],
+    "duplicateQuestionIds": [],
+    "duplicateQuestionPrompts": [],
+    "brokenInternalLinks": [],
+    "staleTopics": []
+  }
+}
