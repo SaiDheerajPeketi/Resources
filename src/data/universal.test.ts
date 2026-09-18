@@ -13,6 +13,7 @@ import { securityLessons } from "@/data/security-lessons";
 import { fintechLessons } from "@/data/fintech-lessons";
 import { generatedTechnologyFocusIds } from "@/data/technology-depth-generated";
 import { cpp17Atlas75 } from "@/data/solutions/cpp17-atlas75";
+import { javaAtlas75 } from "@/data/solutions/java-atlas75";
 import { pythonAtlas75 } from "@/data/solutions/python-atlas75";
 
 describe("universal interview corpus", () => {
@@ -68,12 +69,14 @@ describe("universal interview corpus", () => {
     expect(dsaProblems.every((problem) => problem.practiceSource !== "leetcode" || problem.practiceDirect)).toBe(true);
   });
 
-  it("publishes Atlas 75 as exact lessons with reviewed C++17 references", () => {
+  it("publishes Atlas 75 as exact lessons with reviewed C++17, Java, and Python references", () => {
     const complete = dsaProblems.filter((problem) => problem.depthStatus === "complete");
     expect(complete).toHaveLength(75);
     expect(Object.keys(cpp17Atlas75)).toHaveLength(75);
+    expect(Object.keys(javaAtlas75)).toHaveLength(75);
     expect(Object.keys(pythonAtlas75)).toHaveLength(75);
     expect(new Set(Object.keys(cpp17Atlas75))).toEqual(new Set(complete.map((problem) => problem.id)));
+    expect(new Set(Object.keys(javaAtlas75))).toEqual(new Set(complete.map((problem) => problem.id)));
     expect(new Set(Object.keys(pythonAtlas75))).toEqual(new Set(complete.map((problem) => problem.id)));
     for (const problem of complete) {
       expect(problem.prompt.length).toBeGreaterThanOrEqual(80);
@@ -85,6 +88,7 @@ describe("universal interview corpus", () => {
       expect(problem.misconceptions).toHaveLength(3);
       expect(problem.followUps).toHaveLength(2);
       expect(cpp17Atlas75[problem.id]).not.toContain("Maintain only the state required");
+      expect(javaAtlas75[problem.id]).not.toContain("porting blueprint");
       expect(pythonAtlas75[problem.id]).not.toContain("Replace the transition");
     }
   });

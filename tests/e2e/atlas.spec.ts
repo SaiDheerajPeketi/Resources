@@ -190,8 +190,8 @@ test("Atlas 300 filters and loads a language-specific problem artifact", async (
   await expect(page.getByText("Reviewed solution")).toBeVisible();
   await expect(page.locator("pre")).toContainText("int editDistance");
   await page.getByRole("button", { name: "Java" }).click();
-  await expect(page.getByText("Blueprint · solution pending")).toBeVisible();
-  await expect(page.locator("pre")).toContainText("Edit Distance — porting blueprint");
+  await expect(page.getByText("Reviewed solution")).toBeVisible();
+  await expect(page.locator("pre")).toContainText("int editDistance");
   await page.getByRole("button", { name: "Python" }).click();
   await expect(page.getByText("Reviewed solution")).toBeVisible();
   await expect(page.locator("pre")).toContainText("def edit_distance");
