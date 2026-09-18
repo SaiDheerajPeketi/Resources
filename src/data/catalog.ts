@@ -16,7 +16,7 @@ import { devopsLessons } from "@/data/devops-lessons";
 import { securityLessons } from "@/data/security-lessons";
 import { fintechLessons } from "@/data/fintech-lessons";
 
-export const CONTENT_MANIFEST_VERSION = "2026.09.18-r22";
+export const CONTENT_MANIFEST_VERSION = "2026.09.18-r23";
 
 export const roles: RoleProfile[] = RoleProfileSchema.array().parse([
   { id: "sde", title: "Software Engineer", description: "Generalist, backend, full-stack, and systems interviews.", trackIds: ["foundations", "sde-systems"] },

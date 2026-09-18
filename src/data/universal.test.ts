@@ -12,6 +12,7 @@ import { devopsLessons } from "@/data/devops-lessons";
 import { securityLessons } from "@/data/security-lessons";
 import { fintechLessons } from "@/data/fintech-lessons";
 import { generatedTechnologyFocusIds } from "@/data/technology-depth-generated";
+import { domainRoadmaps } from "@/data/domain-roadmaps";
 import {
   reviewedCppSolutions,
   reviewedJavaSolutions,
@@ -129,5 +130,23 @@ describe("universal interview corpus", () => {
     expect(diagnostics.length).toBeGreaterThan(0);
     expect(new Set(packDefinitions.map((pack) => pack.kind))).toEqual(new Set(["track", "ecosystem", "sheet", "role", "full"]));
     expect(packDefinitions.find((pack) => pack.id === "full-corpus")?.routes.length).toBeGreaterThan(500);
+  });
+
+  it("keeps every domain and role roadmap on the full-depth contract", () => {
+    expect(domainRoadmaps).toHaveLength(6);
+    expect(rolePathRecords).toHaveLength(15);
+    for (const roadmap of [...domainRoadmaps, ...rolePathRecords]) {
+      expect(roadmap.stages.length).toBeGreaterThanOrEqual(5);
+      expect(roadmap.outcomes.length).toBeGreaterThanOrEqual(5);
+      expect(roadmap.interviewLoop.length).toBeGreaterThanOrEqual(4);
+      for (const stage of roadmap.stages) {
+        expect(stage.objective.length).toBeGreaterThanOrEqual(80);
+        expect(stage.concepts.length).toBeGreaterThanOrEqual(3);
+        expect(stage.practice.length).toBeGreaterThanOrEqual(2);
+        expect(stage.deliverable.length).toBeGreaterThanOrEqual(60);
+        expect(stage.readinessGate.length).toBeGreaterThanOrEqual(3);
+        expect(stage.interviewPrompts.length).toBeGreaterThanOrEqual(2);
+      }
+    }
   });
 });

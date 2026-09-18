@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r22",
+  "version": "2026.09.18-r23",
   "topics": 146,
   "technologies": 115,
   "fullDepthTechnologies": 115,
@@ -7,6 +7,7 @@
   "commands": 1380,
   "problems": 300,
   "companies": 32,
+  "domainRoadmaps": 6,
   "rolePaths": 15,
   "diagnostics": 1,
   "sheets": [

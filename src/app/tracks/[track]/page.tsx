@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, CheckCircle2, CircleDashed, Clock3 } from "lucide-react";
+import { ArrowRight, CheckCircle2, CircleDashed, Clock3, Route } from "lucide-react";
 import { topicById, topicsForTrack, tracks, trackById } from "@/data/catalog";
 import { TrackIdSchema } from "@/lib/schema";
 import { TrackIcon } from "@/components/track-icon";
 import { aiRoleMaps } from "@/data/ai-role-maps";
+import { domainRoadmapById } from "@/data/domain-roadmaps";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return tracks.map((track) => ({ track: track.id })); }
@@ -23,12 +24,45 @@ export default async function TrackPage({ params }: { params: Promise<{ track: s
   if (!parsed.success) notFound();
   const track = trackById.get(parsed.data)!;
   const topics = topicsForTrack(track.id);
+  const roadmap = domainRoadmapById.get(track.id)!;
   return <main id="main-content" className="index-page">
     <header className="index-title">
       <div className="track-title-icon"><TrackIcon trackId={track.id} size={31} /></div>
       <div><h1>{track.title}</h1><p>{track.description}</p></div>
       <Link href={`/atlas/`} className="text-action">Open map <ArrowRight size={17} /></Link>
     </header>
+    <section className="domain-roadmap" aria-labelledby="domain-roadmap-title" data-pagefind-body>
+      <header>
+        <div><Route size={24} /><h2 id="domain-roadmap-title">{roadmap.title}</h2></div>
+        <p>{roadmap.summary}</p>
+      </header>
+      <div className="roadmap-orientation">
+        <div><h3>Who this route is for</h3><p>{roadmap.audience}</p></div>
+        <div><h3>What you will be able to do</h3><ul>{roadmap.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}</ul></div>
+      </div>
+      <ol className="roadmap-stages">
+        {roadmap.stages.map((stage, index) => <li key={stage.id}>
+          <header>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <div><small>{stage.level} · about {stage.estimatedHours} hours</small><h3>{stage.title}</h3><p>{stage.objective}</p></div>
+          </header>
+          <div className="roadmap-prerequisites"><strong>Start after</strong><span>{stage.prerequisites.join(" · ")}</span></div>
+          <nav aria-label={`${stage.title} field notes`}>{stage.topicIds.map((id) => { const topic = topicById.get(id); return topic ? <Link key={id} href={`/topics/${topic.slug}/`}>{topic.title}<ArrowRight size={14} /></Link> : null; })}</nav>
+          <div className="roadmap-stage-grid">
+            <section><h4>Understand</h4><ul>{stage.concepts.map((line) => <li key={line}>{line}</li>)}</ul></section>
+            <section><h4>Practice deliberately</h4><ul>{stage.practice.map((line) => <li key={line}>{line}</li>)}</ul></section>
+            <section><h4>Pass the gate</h4><ul>{stage.readinessGate.map((line) => <li key={line}>{line}</li>)}</ul></section>
+          </div>
+          <div className="roadmap-deliverable"><strong>Build this proof</strong><p>{stage.deliverable}</p></div>
+          <div className="roadmap-prompts"><strong>Interview checks</strong><ul>{stage.interviewPrompts.map((prompt) => <li key={prompt}>{prompt}</li>)}</ul></div>
+        </li>)}
+      </ol>
+      <div className="roadmap-closeout">
+        <section><h3>Capstone: {roadmap.capstone.title}</h3><p>{roadmap.capstone.brief}</p><h4>Evidence to keep</h4><ul>{roadmap.capstone.evidence.map((line) => <li key={line}>{line}</li>)}</ul></section>
+        <section><h3>Interview loop</h3><ol>{roadmap.interviewLoop.map((line) => <li key={line}>{line}</li>)}</ol><h3>Common misconceptions</h3><dl>{roadmap.misconceptions.map((entry) => <div key={entry.claim}><dt>{entry.claim}</dt><dd>{entry.correction}</dd></div>)}</dl></section>
+      </div>
+      <details className="roadmap-revision"><summary>Final revision checklist</summary><ul>{roadmap.revisionChecklist.map((line) => <li key={line}>{line}</li>)}</ul></details>
+    </section>
     {track.id === "ai-data" ? <section className="role-map-field" aria-labelledby="ai-role-map-title">
       <header>
         <h2 id="ai-role-map-title">Choose the interview emphasis, not a different foundation.</h2>

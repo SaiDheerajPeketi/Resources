@@ -1,4 +1,5 @@
 import { DiagnosticSchema, type Diagnostic } from "@/lib/schema";
+import { roleRoadmaps } from "@/data/role-roadmaps";
 
 export type DiagnosticQuestion = { id: string; prompt: string; options: string[]; answer: number; competencyId: string; explanation: string };
 export const diagnosticQuestions: DiagnosticQuestion[] = [
@@ -20,22 +21,5 @@ export const diagnostics: Diagnostic[] = DiagnosticSchema.array().parse([
   { id: "universal-baseline", title: "Universal baseline", summary: "A short optional scan across DSA, core CS, systems, security, languages, AI/data, and operations.", questionIds: diagnosticQuestions.map((question) => question.id), competencyIds: [...new Set(diagnosticQuestions.map((question) => question.competencyId))] }
 ]);
 
-export const rolePaths = [
-  ["frontend", "Frontend Engineer", ["web-platform", "javascript", "typescript", "react", "nextjs", "playwright"]],
-  ["backend", "Backend Engineer", ["java", "spring-boot", "postgresql", "redis", "kafka", "docker"]],
-  ["full-stack", "Full-Stack Engineer", ["typescript", "react", "nextjs", "nodejs", "postgresql", "playwright"]],
-  ["java", "Java Engineer", ["java", "spring", "spring-boot", "hibernate", "junit-mockito", "maven"]],
-  ["python", "Python Engineer", ["python", "fastapi", "django", "pytest", "postgresql", "docker"]],
-  ["go", "Go Engineer", ["go", "go-http", "gin", "postgresql", "kubernetes", "observability"]],
-  ["android", "Android Engineer", ["java", "kotlin", "android", "jetpack-compose", "gradle", "sqlite"]],
-  ["ios", "iOS Engineer", ["swift", "ios", "swiftui", "sqlite", "git", "cicd"]],
-  ["mobile", "Cross-Platform Mobile Engineer", ["typescript", "react-native", "dart", "flutter", "cicd", "observability"]],
-  ["qa-sdet", "QA / SDET", ["java", "typescript", "selenium", "playwright", "cypress", "cicd"]],
-  ["data-analyst", "Data Analyst", ["sql", "python", "pandas", "jupyter", "postgresql", "dbt"]],
-  ["dba", "Database Administrator", ["dbms", "sql", "postgresql", "mysql", "redis", "linux"]],
-  ["cloud-architect", "Cloud Architect", ["aws", "azure", "gcp", "terraform", "kubernetes", "cloud-security"]],
-  ["solutions-architect", "Solutions Architect", ["computer-networks", "dbms", "aws", "kubernetes", "observability", "cloud-security"]],
-  ["ai-engineer", "AI Engineer", ["python", "pytorch", "hugging-face", "langchain", "llamaindex", "kubernetes"]]
-] as const;
-
-export const rolePathRecords = rolePaths.map(([id, title, technologyIds]) => ({ id, title, technologyIds: [...technologyIds], sheetId: id === "data-analyst" ? "atlas-75" : "atlas-180", foundationTopicIds: ["foundations/complexity-analysis", "foundations/sql-fundamentals", "foundations/networking-fundamentals"], reason: `Selected because ${title} interviews combine foundations, implementation fluency, debugging, and production trade-offs.` }));
+export const rolePathRecords = roleRoadmaps;
+export const rolePaths = roleRoadmaps.map(({ id, title, technologyIds }) => [id, title, technologyIds] as const);

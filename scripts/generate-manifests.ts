@@ -15,6 +15,7 @@ import { dsaPatterns, dsaProblems, dsaSheets } from "../src/data/dsa";
 import { coverageCrosswalks } from "../src/data/crosswalks";
 import { companyGuides, companySources } from "../src/data/companies";
 import { diagnostics, rolePathRecords } from "../src/data/learning";
+import { domainRoadmaps } from "../src/data/domain-roadmaps";
 
 const output = new URL("../public/generated/", import.meta.url);
 await mkdir(output, { recursive: true });
@@ -35,8 +36,8 @@ await writeJson("problem-manifest.json", { version: CONTENT_MANIFEST_VERSION, pa
 await writeJson("sheet-manifest.json", { version: CONTENT_MANIFEST_VERSION, sheets: dsaSheets });
 await writeJson("crosswalk-manifest.json", { version: CONTENT_MANIFEST_VERSION, crosswalks: coverageCrosswalks });
 await writeJson("company-manifest.json", { version: CONTENT_MANIFEST_VERSION, guides: companyGuides, sources: companySources });
-await writeJson("learning-manifest.json", { version: CONTENT_MANIFEST_VERSION, diagnostics, rolePaths: rolePathRecords });
-await writeJson("coverage-manifest.json", { version: CONTENT_MANIFEST_VERSION, topics: topics.length, technologies: technologies.length, fullDepthTechnologies: technologies.filter((technology) => technology.depthStatus === "complete").length, overviewTechnologies: technologies.filter((technology) => technology.depthStatus === "overview").length, commands: commands.length, problems: dsaProblems.length, companies: companyGuides.length, rolePaths: rolePathRecords.length, diagnostics: diagnostics.length, sheets: dsaSheets.map((sheet) => ({ id: sheet.id, count: sheet.problemIds.length })) });
+await writeJson("learning-manifest.json", { version: CONTENT_MANIFEST_VERSION, diagnostics, domainRoadmaps, rolePaths: rolePathRecords });
+await writeJson("coverage-manifest.json", { version: CONTENT_MANIFEST_VERSION, topics: topics.length, technologies: technologies.length, fullDepthTechnologies: technologies.filter((technology) => technology.depthStatus === "complete").length, overviewTechnologies: technologies.filter((technology) => technology.depthStatus === "overview").length, commands: commands.length, problems: dsaProblems.length, companies: companyGuides.length, domainRoadmaps: domainRoadmaps.length, rolePaths: rolePathRecords.length, diagnostics: diagnostics.length, sheets: dsaSheets.map((sheet) => ({ id: sheet.id, count: sheet.problemIds.length })) });
 await writeJson("pack-manifest.json", {
   version: CONTENT_MANIFEST_VERSION,
   packs: packDefinitions.map((pack) => ({

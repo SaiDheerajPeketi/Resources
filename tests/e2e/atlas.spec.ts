@@ -30,9 +30,13 @@ test("shared foundations expose complete theory and interview practice", async (
 
 test("AI and data pack exposes role maps and a complete specialist lesson", async ({ page }) => {
   await page.goto("/tracks/ai-data/");
+  await expect(page.getByRole("heading", { name: "AI + Data: from evidence to production decisions" })).toBeVisible();
+  await expect(page.locator(".roadmap-stages > li")).toHaveCount(5);
+  await expect(page.getByRole("heading", { name: "Embeddings, RAG, fine-tuning, and agents" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Capstone: Evidence-to-production AI system/ })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Choose the interview emphasis, not a different foundation." })).toBeVisible();
   await expect(page.getByText("MLOps Engineer", { exact: true })).toBeVisible();
-  await expect(page.getByRole("link", { name: "Retrieval-Augmented Generation" })).toBeVisible();
+  await expect(page.getByRole("table", { name: "AI and data role maps" }).getByRole("link", { name: "Retrieval-Augmented Generation" })).toBeVisible();
   await page.goto("/topics/ai-data/retrieval-augmented-generation/");
   await expect(page.getByRole("heading", { name: "Retrieval-Augmented Generation", level: 1 })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Basic → advanced study path" })).toBeVisible();
@@ -132,6 +136,9 @@ test("Stack Workbench opens a complete technology manual", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Java", level: 1 })).toBeVisible();
   await expect(page.getByText("full-depth manual")).toBeVisible();
   await expect(page.getByRole("heading", { name: "Basic → advanced learning path" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Practice this stage" }).first()).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Pass before continuing" }).first()).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Interview proof" }).first()).toBeVisible();
   await expect(page.getByRole("heading", { name: "Deep theory and trade-offs" })).toBeVisible();
   await expect(page.getByText("In plain English:").first()).toBeVisible();
   await expect(page.getByRole("heading", { name: "Analogy" }).first()).toBeVisible();
@@ -217,7 +224,13 @@ test("diagnostic, plan, review, and company guides are reachable", async ({ page
   await page.goto("/diagnostic/");
   await expect(page.getByRole("heading", { name: "Optional diagnostic" })).toBeVisible();
   await page.goto("/plan/");
-  await expect(page.getByRole("heading", { name: "Prerequisite-aware study plan" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Role roadmaps, basic to advanced" })).toBeVisible();
+  await expect(page.locator(".role-roadmap-stages > li")).toHaveCount(5);
+  await expect(page.getByRole("heading", { name: /Portfolio capstone:/ })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Mock interview loop" })).toBeVisible();
+  await page.getByLabel("Target role").selectOption("java");
+  await expect(page.getByRole("heading", { name: "Java Engineer basic → advanced roadmap" })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Spring Boot/ })).toBeVisible();
   await page.goto("/review/");
   await expect(page.getByRole("heading", { name: "Adaptive review queue" })).toBeVisible();
   await page.goto("/companies/amazon/");

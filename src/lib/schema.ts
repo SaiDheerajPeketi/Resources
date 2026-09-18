@@ -181,6 +181,51 @@ export const DiagnosticResultSchema = z.object({ id: z.string(), diagnosticId: z
 export const DiagnosticSchema = z.object({ id: z.string().regex(/^[a-z0-9-]+$/), title: z.string(), summary: z.string(), questionIds: z.array(z.string()).min(3), competencyIds: z.array(z.string()).min(1) });
 export const PlanItemSchema = z.object({ id: z.string(), resourceType: z.enum(["topic", "technology", "problem", "sheet", "review"]), resourceId: z.string(), reason: z.string(), prerequisiteIds: z.array(z.string()), completed: z.boolean() });
 export const StudyPlanSchema = z.object({ id: z.string(), title: z.string(), roleId: z.string(), createdAt: z.string().datetime(), items: z.array(PlanItemSchema).min(1) });
+export const RoadmapStageSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  title: z.string().min(1),
+  level: z.enum(["foundation", "interview", "advanced"]),
+  objective: z.string().min(80),
+  prerequisites: z.array(z.string().min(1)).min(1),
+  topicIds: z.array(z.string()).default([]),
+  technologyIds: z.array(z.string()).default([]),
+  concepts: z.array(z.string().min(20)).min(3),
+  practice: z.array(z.string().min(20)).min(2),
+  deliverable: z.string().min(60),
+  readinessGate: z.array(z.string().min(20)).min(3),
+  interviewPrompts: z.array(z.string().min(20)).min(2),
+  estimatedHours: z.number().int().positive()
+});
+export const DomainRoadmapSchema = z.object({
+  id: TrackIdSchema,
+  title: z.string().min(1),
+  summary: z.string().min(100),
+  audience: z.string().min(60),
+  outcomes: z.array(z.string().min(20)).min(5),
+  stages: z.array(RoadmapStageSchema).min(5),
+  capstone: z.object({ title: z.string().min(1), brief: z.string().min(100), evidence: z.array(z.string().min(20)).min(4) }),
+  interviewLoop: z.array(z.string().min(30)).min(4),
+  misconceptions: z.array(z.object({ claim: z.string().min(1), correction: z.string().min(40) })).min(4),
+  revisionChecklist: z.array(z.string().min(20)).min(8),
+  lastReviewed: z.string().date(),
+  asOf: z.string().date()
+});
+export const RoleRoadmapSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  title: z.string().min(1),
+  summary: z.string().min(100),
+  reason: z.string().min(80),
+  technologyIds: z.array(z.string()).min(6),
+  foundationTopicIds: z.array(z.string()).min(3),
+  sheetId: z.enum(["atlas-75", "atlas-180", "atlas-300"]),
+  outcomes: z.array(z.string().min(20)).min(5),
+  stages: z.array(RoadmapStageSchema).min(5),
+  portfolioProject: z.object({ title: z.string().min(1), brief: z.string().min(100), evidence: z.array(z.string().min(20)).min(4) }),
+  interviewLoop: z.array(z.string().min(30)).min(4),
+  failureModes: z.array(z.string().min(30)).min(4),
+  readinessChecklist: z.array(z.string().min(20)).min(8),
+  lastReviewed: z.string().date()
+});
 export const ReviewRatingSchema = z.enum(["again", "hard", "good", "easy"]);
 export const ReviewStateSchema = z.object({ id: z.string(), itemType: z.enum(["topic", "technology", "problem", "question", "flashcard"]), itemId: z.string(), dueAt: z.string().datetime(), stability: z.number().positive(), difficulty: z.number().min(1).max(10), repetitions: z.number().int().nonnegative(), lastRating: ReviewRatingSchema.optional(), updatedAt: z.string().datetime() });
 export const InterviewRoundSchema = z.object({ title: z.string().min(1), format: z.string().min(1), focus: z.array(z.string()).min(1), preparation: z.array(z.string()).min(1) });
@@ -417,6 +462,9 @@ export type DiagnosticResult = z.infer<typeof DiagnosticResultSchema>;
 export type CompetencyScore = z.infer<typeof CompetencyScoreSchema>;
 export type StudyPlan = z.infer<typeof StudyPlanSchema>;
 export type PlanItem = z.infer<typeof PlanItemSchema>;
+export type RoadmapStage = z.infer<typeof RoadmapStageSchema>;
+export type DomainRoadmap = z.infer<typeof DomainRoadmapSchema>;
+export type RoleRoadmap = z.infer<typeof RoleRoadmapSchema>;
 export type ReviewState = z.infer<typeof ReviewStateSchema>;
 export type ReviewRating = z.infer<typeof ReviewRatingSchema>;
 export type NamedCompanyGuide = z.infer<typeof NamedCompanyGuideSchema>;

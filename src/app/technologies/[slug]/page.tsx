@@ -78,7 +78,14 @@ export default async function TechnologyPage({ params }: { params: Promise<{ slu
             {item.learningPath.map((stage, index) => (
               <li key={stage.level}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
-                <div><small>{stage.level}</small><h3>{stage.title}</h3><p>{stage.objective}</p><ul>{stage.topics.map((topic) => <li key={topic}>{topic}</li>)}</ul></div>
+                <div>
+                  <small>{stage.level}</small><h3>{stage.title}</h3><p>{stage.objective}</p><ul>{stage.topics.map((topic) => <li key={topic}>{topic}</li>)}</ul>
+                  <div className="technology-stage-gate">
+                    <div><h4>Practice this stage</h4><p>Rebuild <strong>{item.workedExamples[index % item.workedExamples.length].title}</strong> without copying, then change one requirement and explain which mechanism or trade-off changes.</p></div>
+                    <div><h4>Pass before continuing</h4><ul>{item.revisionChecklist.slice(index * 2, index * 2 + 2).map((checkpoint) => <li key={checkpoint}>{checkpoint}</li>)}</ul></div>
+                    <div><h4>Interview proof</h4><p>{item.questions[index % item.questions.length].prompt}</p><small>{item.questions[index % item.questions.length].difficulty} · answer aloud, then score with the rubric below</small></div>
+                  </div>
+                </div>
               </li>
             ))}
           </ol>

@@ -230,6 +230,10 @@ Commands are displayed in ruled rows with purpose, platform, expected result, sa
 
 Full-depth manuals use a visible basic-to-expert learning ladder, numbered theory ledger, ruled misconception corrections, tricky-question explanations with strong-answer rubrics, rapid-recall rows, and a printable self-check sheet. Every theory entry begins with a plain-English translation, then pairs a bounded analogy (including where it stops matching) with a concrete example. A teal labelled status marks a manual that passed the full content contract. Future incomplete material must remain planned and outside published packs rather than appearing as a shallow overview.
 
+### Roadmap Ledger
+
+Domain and role roadmaps are sequential field ledgers, not course cards. Every stage exposes its prerequisite, linked notes or technologies, exact concepts, deliberate practice, proof artifact, readiness gate, and interview checks in the same reading path. Capstones, mock loops, misconception corrections, and final revision checks close the ledger. Desktop uses three ruled columns for understand/practice/gate; narrow screens preserve the order as one semantic document.
+
 ### DSA Ledger
 
 Sheets and problem inventories use dense ruled rows with stable problem numbers, pattern, difficulty, estimated time, solution-language availability, a non-color progress label, and an explicit external practice destination. The Atlas title remains the internal explanation link; a separate restrained control opens the verified LeetCode match or labelled GFG fallback. Filters sit above the ledger and do not detach results from their sheet context.

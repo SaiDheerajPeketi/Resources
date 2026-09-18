@@ -21,6 +21,7 @@ import { coverageCrosswalks } from "../src/data/crosswalks";
 import { companyGuides, companySources } from "../src/data/companies";
 import { diagnostics, diagnosticQuestions, rolePathRecords } from "../src/data/learning";
 import { generatedTechnologyFocusIds } from "../src/data/technology-depth-generated";
+import { domainRoadmaps } from "../src/data/domain-roadmaps";
 
 const errors: string[] = [];
 const technologyIds = new Set(technologies.map((item) => item.id));
@@ -74,7 +75,23 @@ const companySourceIds = new Set(companySources.map((source) => source.id));
 for (const guide of companyGuides) for (const id of guide.sourceIds) if (!companySourceIds.has(id)) errors.push(`Company guide ${guide.id} references unknown source ${id}.`);
 const diagnosticQuestionIds = new Set(diagnosticQuestions.map((question) => question.id));
 for (const diagnostic of diagnostics) for (const id of diagnostic.questionIds) if (!diagnosticQuestionIds.has(id)) errors.push(`Diagnostic ${diagnostic.id} references unknown question ${id}.`);
-for (const role of rolePathRecords) for (const id of role.technologyIds) if (!technologyIds.has(id)) errors.push(`Role path ${role.id} references unknown technology ${id}.`);
+if (domainRoadmaps.length !== 6) errors.push(`Expected six domain roadmaps, found ${domainRoadmaps.length}.`);
+for (const roadmap of domainRoadmaps) {
+  if (roadmap.stages.length < 5) errors.push(`Domain roadmap ${roadmap.id} has fewer than five stages.`);
+  for (const stage of roadmap.stages) {
+    for (const id of stage.topicIds) if (!topicById.has(id)) errors.push(`Domain roadmap ${roadmap.id} references unknown topic ${id}.`);
+    for (const id of stage.technologyIds) if (!technologyIds.has(id)) errors.push(`Domain roadmap ${roadmap.id} references unknown technology ${id}.`);
+  }
+}
+for (const role of rolePathRecords) {
+  if (role.stages.length < 5) errors.push(`Role path ${role.id} has fewer than five stages.`);
+  for (const id of role.technologyIds) if (!technologyIds.has(id)) errors.push(`Role path ${role.id} references unknown technology ${id}.`);
+  for (const id of role.foundationTopicIds) if (!topicById.has(id)) errors.push(`Role path ${role.id} references unknown foundation ${id}.`);
+  for (const stage of role.stages) {
+    for (const id of stage.topicIds) if (!topicById.has(id)) errors.push(`Role path ${role.id} references unknown topic ${id}.`);
+    for (const id of stage.technologyIds) if (!technologyIds.has(id)) errors.push(`Role path ${role.id} references unknown technology ${id}.`);
+  }
+}
 const structural = validateCatalog();
 if (structural.duplicates.length) errors.push(`Duplicate topics: ${structural.duplicates.join(", ")}`);
 if (structural.dangling.length) errors.push(`Dangling edges: ${structural.dangling.join(", ")}`);
