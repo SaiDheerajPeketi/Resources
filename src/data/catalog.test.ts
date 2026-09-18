@@ -15,10 +15,11 @@ describe("coverage catalog", () => {
     }
   });
 
-  it("publishes the complete shared-foundations and AI + Data packs", () => {
-    expect(publishedTopics).toHaveLength(54);
+  it("publishes the complete foundations, AI + Data, and SDE + Systems packs", () => {
+    expect(publishedTopics).toHaveLength(78);
     expect(publishedTopics.filter((topic) => topic.trackId === "foundations")).toHaveLength(24);
     expect(publishedTopics.filter((topic) => topic.trackId === "ai-data")).toHaveLength(26);
+    expect(publishedTopics.filter((topic) => topic.trackId === "sde-systems")).toHaveLength(25);
   });
 
   it("gives every published field note interview practice", () => {

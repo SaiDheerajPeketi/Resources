@@ -29,6 +29,18 @@ test("AI and data pack exposes role maps and a complete specialist lesson", asyn
   await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
 });
 
+test("SDE and systems pack exposes a complete design lesson", async ({ page }) => {
+  await page.goto("/tracks/sde-systems/");
+  const methodRow = page.getByRole("row").filter({ hasText: "System Design Interview Method" });
+  await expect(methodRow).toContainText("Published");
+  await expect(methodRow.getByRole("link", { name: "Open note" })).toBeVisible();
+  await page.goto("/topics/sde-systems/system-design-interview-method/");
+  await expect(page.getByRole("heading", { name: "System Design Interview Method", level: 1 })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Frame the problem" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Interview practice" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
+});
+
 test("interview workspace includes career artifacts and a timed mock", async ({ page }) => {
   await page.goto("/interview/");
   await expect(page.getByRole("heading", { name: "Career field guide" })).toBeVisible();
@@ -60,7 +72,7 @@ test("every track exposes its full manifest and keeps its published slice on-map
   await page.goto("/atlas/");
   await page.locator(".track-tabs button").filter({ hasText: "SDE + SYSTEMS" }).click();
   await expect(page.locator(".react-flow__node")).toHaveCount(25);
-  await expect(page.locator(".react-flow__node.is-selected")).toContainText("Consistent Hashing");
+  await expect(page.locator(".react-flow__node.is-selected")).toContainText("Object-Oriented Design");
   await expect(page.locator(".react-flow__node.is-selected")).toHaveAttribute("class", /is-selected/);
   await expect(page.getByText("25 mapped topics", { exact: true }).last()).toBeVisible();
 });

@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r3",
+  "version": "2026.09.18-r4",
   "packs": [
     {
       "id": "foundations",
@@ -95,10 +95,34 @@
         "/revision/",
         "/interview/",
         "/settings/",
-        "/topics/sde-systems/consistent-hashing/"
+        "/topics/sde-systems/object-oriented-design/",
+        "/topics/sde-systems/modern-c-plus-plus-internals/",
+        "/topics/sde-systems/memory-management/",
+        "/topics/sde-systems/concurrency/",
+        "/topics/sde-systems/operating-systems/",
+        "/topics/sde-systems/database-systems/",
+        "/topics/sde-systems/api-design/",
+        "/topics/sde-systems/backend-architecture/",
+        "/topics/sde-systems/browser-and-web-foundations/",
+        "/topics/sde-systems/mobile-foundations/",
+        "/topics/sde-systems/testing-strategy/",
+        "/topics/sde-systems/performance-engineering/",
+        "/topics/sde-systems/solid-and-design-patterns/",
+        "/topics/sde-systems/low-level-design/",
+        "/topics/sde-systems/distributed-systems-foundations/",
+        "/topics/sde-systems/consistent-hashing/",
+        "/topics/sde-systems/consistency-models/",
+        "/topics/sde-systems/caching/",
+        "/topics/sde-systems/queues-and-event-streams/",
+        "/topics/sde-systems/storage-systems/",
+        "/topics/sde-systems/capacity-planning/",
+        "/topics/sde-systems/reliability-engineering/",
+        "/topics/sde-systems/observability/",
+        "/topics/sde-systems/system-design-interview-method/",
+        "/topics/sde-systems/system-design-case-studies/"
       ],
-      "estimatedKb": 252,
-      "integrity": "sha256-03c683026182ddced61899d27410dc511e6cbc1dc755a40cf3c71da849a196a8"
+      "estimatedKb": 1980,
+      "integrity": "sha256-474b0ecd50f1987d67446cfedfe555d88f9df2fbd0fdd1468817e218c0a6c7d4"
     },
     {
       "id": "devops-cloud",

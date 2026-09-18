@@ -809,111 +809,125 @@
     "id": "sde-systems/object-oriented-design",
     "slug": "sde-systems/object-oriented-design",
     "title": "Object-Oriented Design",
-    "summary": "Planned field note covering object-oriented design for sde + systems interviews.",
+    "summary": "Model responsibilities, invariants, collaborations, and change boundaries without turning every noun into a class.",
     "trackId": "sde-systems",
     "level": "foundation",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "ai-engineer",
+      "ml-engineer",
+      "fintech",
+      "quant-dev"
     ]
   },
   {
     "id": "sde-systems/modern-c-plus-plus-internals",
     "slug": "sde-systems/modern-c-plus-plus-internals",
     "title": "Modern C++ Internals",
-    "summary": "Planned field note covering modern c++ internals for sde + systems interviews.",
+    "summary": "Reason about value categories, moves, templates, object layout, dispatch, and zero-cost abstractions in modern C++.",
     "trackId": "sde-systems",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "quant-dev",
+      "fintech",
+      "ml-engineer"
     ]
   },
   {
     "id": "sde-systems/memory-management",
     "slug": "sde-systems/memory-management",
     "title": "Memory Management",
-    "summary": "Planned field note covering memory management for sde + systems interviews.",
+    "summary": "Connect storage, lifetime, ownership, allocation, virtual memory, caches, and memory-safe C++ design.",
     "trackId": "sde-systems",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "quant-dev",
+      "fintech",
+      "ml-engineer"
     ]
   },
   {
     "id": "sde-systems/concurrency",
     "slug": "sde-systems/concurrency",
     "title": "Concurrency",
-    "summary": "Planned field note covering concurrency for sde + systems interviews.",
+    "summary": "Design correct concurrent code with happens-before reasoning, synchronization, atomics, task structures, and contention-aware measurement.",
     "trackId": "sde-systems",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "quant-dev",
+      "fintech",
+      "sre",
+      "ml-engineer"
     ]
   },
   {
     "id": "sde-systems/operating-systems",
     "slug": "sde-systems/operating-systems",
     "title": "Operating Systems",
-    "summary": "Planned field note covering operating systems for sde + systems interviews.",
+    "summary": "Understand processes, threads, scheduling, virtual memory, files, I/O, and the kernel boundaries behind application behavior.",
     "trackId": "sde-systems",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "sre",
+      "devops",
+      "security",
+      "quant-dev"
     ]
   },
   {
     "id": "sde-systems/database-systems",
     "slug": "sde-systems/database-systems",
     "title": "Database Systems",
-    "summary": "Planned field note covering database systems for sde + systems interviews.",
+    "summary": "Reason about relational storage, indexes, transactions, MVCC, query plans, replication, and schema choices under workload.",
     "trackId": "sde-systems",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
       "data-engineer",
-      "sre"
+      "fintech",
+      "sre",
+      "ml-engineer"
     ]
   },
   {
     "id": "sde-systems/api-design",
     "slug": "sde-systems/api-design",
     "title": "API Design",
-    "summary": "Planned field note covering api design for sde + systems interviews.",
+    "summary": "Design durable service contracts with clear resources, semantics, validation, errors, security, and evolution rules.",
     "trackId": "sde-systems",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "fintech",
+      "ai-engineer",
+      "ml-engineer",
+      "data-engineer"
     ]
   },
   {
     "id": "sde-systems/backend-architecture",
     "slug": "sde-systems/backend-architecture",
     "title": "Backend Architecture",
-    "summary": "Planned field note covering backend architecture for sde + systems interviews.",
+    "summary": "Shape backend boundaries, request flows, transactions, asynchronous work, and deployment units around change and failure.",
     "trackId": "sde-systems",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
+      "fintech",
+      "ai-engineer",
+      "ml-engineer",
       "sre"
     ]
   },
@@ -921,98 +935,104 @@
     "id": "sde-systems/browser-and-web-foundations",
     "slug": "sde-systems/browser-and-web-foundations",
     "title": "Browser and Web Foundations",
-    "summary": "Planned field note covering browser and web foundations for sde + systems interviews.",
+    "summary": "Trace navigation through DNS, TLS, HTTP, parsing, rendering, JavaScript scheduling, storage, and browser security.",
     "trackId": "sde-systems",
-    "level": "interview",
-    "publicationStatus": "planned",
+    "level": "foundation",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "security",
+      "devops"
     ]
   },
   {
     "id": "sde-systems/mobile-foundations",
     "slug": "sde-systems/mobile-foundations",
     "title": "Mobile Foundations",
-    "summary": "Planned field note covering mobile foundations for sde + systems interviews.",
+    "summary": "Design mobile clients around lifecycle, constrained resources, local state, synchronization, platform boundaries, and safe releases.",
     "trackId": "sde-systems",
-    "level": "interview",
-    "publicationStatus": "planned",
+    "level": "foundation",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "fintech",
+      "security"
     ]
   },
   {
     "id": "sde-systems/testing-strategy",
     "slug": "sde-systems/testing-strategy",
     "title": "Testing Strategy",
-    "summary": "Planned field note covering testing strategy for sde + systems interviews.",
+    "summary": "Build a risk-driven test portfolio across units, integrations, contracts, systems, properties, and production signals.",
     "trackId": "sde-systems",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "sre",
+      "devops",
+      "fintech",
+      "security"
     ]
   },
   {
     "id": "sde-systems/performance-engineering",
     "slug": "sde-systems/performance-engineering",
     "title": "Performance Engineering",
-    "summary": "Planned field note covering performance engineering for sde + systems interviews.",
+    "summary": "Measure and improve latency, throughput, utilization, allocation, I/O, and scalability with controlled experiments.",
     "trackId": "sde-systems",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "sre",
+      "quant-dev",
+      "ml-engineer",
+      "fintech"
     ]
   },
   {
     "id": "sde-systems/solid-and-design-patterns",
     "slug": "sde-systems/solid-and-design-patterns",
     "title": "SOLID and Design Patterns",
-    "summary": "Planned field note covering solid and design patterns for sde + systems interviews.",
+    "summary": "Use SOLID heuristics and design patterns to manage change, dependencies, and collaboration without ceremonial abstraction.",
     "trackId": "sde-systems",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "fintech",
+      "quant-dev"
     ]
   },
   {
     "id": "sde-systems/low-level-design",
     "slug": "sde-systems/low-level-design",
     "title": "Low-Level Design",
-    "summary": "Planned field note covering low-level design for sde + systems interviews.",
+    "summary": "Turn scoped requirements into objects, APIs, data structures, state machines, invariants, and extension points.",
     "trackId": "sde-systems",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "fintech",
+      "quant-dev"
     ]
   },
   {
     "id": "sde-systems/distributed-systems-foundations",
     "slug": "sde-systems/distributed-systems-foundations",
     "title": "Distributed Systems Foundations",
-    "summary": "Planned field note covering distributed systems foundations for sde + systems interviews.",
+    "summary": "Reason about partial failure, clocks, replication, partitioning, consensus, retries, and coordination across machines.",
     "trackId": "sde-systems",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
+      "sre",
       "data-engineer",
-      "sre"
+      "fintech",
+      "ml-engineer"
     ]
   },
   {
@@ -1035,13 +1055,14 @@
     "id": "sde-systems/consistency-models",
     "slug": "sde-systems/consistency-models",
     "title": "Consistency Models",
-    "summary": "Planned field note covering consistency models for sde + systems interviews.",
+    "summary": "Choose and communicate visibility and ordering guarantees across replicas, clients, and transactions.",
     "trackId": "sde-systems",
-    "level": "interview",
-    "publicationStatus": "planned",
+    "level": "advanced",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
       "data-engineer",
+      "fintech",
       "sre"
     ]
   },
@@ -1049,112 +1070,128 @@
     "id": "sde-systems/caching",
     "slug": "sde-systems/caching",
     "title": "Caching",
-    "summary": "Planned field note covering caching for sde + systems interviews.",
+    "summary": "Design caches with explicit keys, freshness, invalidation, admission, eviction, failure, and stampede control.",
     "trackId": "sde-systems",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "sre",
+      "fintech",
+      "ml-engineer",
+      "data-engineer"
     ]
   },
   {
     "id": "sde-systems/queues-and-event-streams",
     "slug": "sde-systems/queues-and-event-streams",
     "title": "Queues and Event Streams",
-    "summary": "Planned field note covering queues and event streams for sde + systems interviews.",
+    "summary": "Use work queues and append-only event streams with explicit delivery, ordering, replay, retention, and backpressure semantics.",
     "trackId": "sde-systems",
-    "level": "advanced",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
       "data-engineer",
-      "sre"
+      "sre",
+      "fintech",
+      "ml-engineer"
     ]
   },
   {
     "id": "sde-systems/storage-systems",
     "slug": "sde-systems/storage-systems",
     "title": "Storage Systems",
-    "summary": "Planned field note covering storage systems for sde + systems interviews.",
+    "summary": "Choose storage engines, indexes, logs, replication, partitioning, and media from access, durability, and recovery needs.",
     "trackId": "sde-systems",
-    "level": "advanced",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
       "data-engineer",
-      "sre"
+      "sre",
+      "fintech",
+      "ml-engineer"
     ]
   },
   {
     "id": "sde-systems/capacity-planning",
     "slug": "sde-systems/capacity-planning",
     "title": "Capacity Planning",
-    "summary": "Planned field note covering capacity planning for sde + systems interviews.",
+    "summary": "Translate product demand into traffic, concurrency, storage, network, compute, headroom, and cost estimates.",
     "trackId": "sde-systems",
-    "level": "advanced",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
+      "sre",
+      "devops",
       "data-engineer",
-      "sre"
+      "fintech"
     ]
   },
   {
     "id": "sde-systems/reliability-engineering",
     "slug": "sde-systems/reliability-engineering",
     "title": "Reliability Engineering",
-    "summary": "Planned field note covering reliability engineering for sde + systems interviews.",
+    "summary": "Engineer dependable services with SLIs, SLOs, error budgets, fault containment, recovery, and controlled overload.",
     "trackId": "sde-systems",
-    "level": "advanced",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
+      "sre",
       "sde",
-      "data-engineer",
-      "sre"
+      "devops",
+      "fintech",
+      "security"
     ]
   },
   {
     "id": "sde-systems/observability",
     "slug": "sde-systems/observability",
     "title": "Observability",
-    "summary": "Planned field note covering observability for sde + systems interviews.",
+    "summary": "Use metrics, logs, traces, profiles, context, and symptom-based alerts to explain production behavior.",
     "trackId": "sde-systems",
-    "level": "advanced",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
+      "sre",
       "sde",
-      "data-engineer",
-      "sre"
+      "devops",
+      "security",
+      "mlops-engineer"
     ]
   },
   {
     "id": "sde-systems/system-design-interview-method",
     "slug": "sde-systems/system-design-interview-method",
     "title": "System Design Interview Method",
-    "summary": "Planned field note covering system design interview method for sde + systems interviews.",
+    "summary": "Run a structured system-design interview from requirements and estimates through architecture, deep dives, failures, and trade-offs.",
     "trackId": "sde-systems",
-    "level": "advanced",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "sre",
+      "fintech",
+      "ml-engineer",
+      "data-engineer"
     ]
   },
   {
     "id": "sde-systems/system-design-case-studies",
     "slug": "sde-systems/system-design-case-studies",
     "title": "System Design Case Studies",
-    "summary": "Planned field note covering system design case studies for sde + systems interviews.",
+    "summary": "Compare recurring architectures for feeds, chat, file storage, payments, observability, and AI platforms through their dominant constraints.",
     "trackId": "sde-systems",
     "level": "advanced",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "sde",
-      "data-engineer",
-      "sre"
+      "sre",
+      "fintech",
+      "ml-engineer",
+      "data-engineer"
     ]
   },
   {

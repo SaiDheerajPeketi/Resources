@@ -2,6 +2,7 @@ import { edges, publishedTopics, topicById, topics, validateCatalog } from "../s
 import { questions } from "../src/data/questions";
 import { foundationLessons } from "../src/data/foundation-lessons";
 import { aiLessons } from "../src/data/ai-lessons";
+import { sdeLessons } from "../src/data/sde-lessons";
 
 const errors: string[] = [];
 const structural = validateCatalog();
@@ -55,6 +56,15 @@ for (const [topicId, lesson] of Object.entries(aiLessons)) {
   if (lesson.conceptMap.length < 4 || lesson.outcomes.length < 3 || lesson.theory.length < 3) errors.push(`AI lesson ${topicId} has an incomplete theory contract.`);
   if (lesson.failureModes.length < 4 || lesson.flashcards.length < 3 || lesson.revision.length < 5) errors.push(`AI lesson ${topicId} has an incomplete revision contract.`);
   if (lesson.sources.length < 2 || lesson.sources.some((source) => !source.url.startsWith("https://"))) errors.push(`AI lesson ${topicId} has invalid source metadata.`);
+}
+
+for (const [topicId, lesson] of Object.entries(sdeLessons)) {
+  const topic = topicById.get(topicId);
+  if (!topic) errors.push(`SDE lesson ${topicId} is absent from the manifest.`);
+  if (topic?.publicationStatus !== "published") errors.push(`SDE lesson ${topicId} is not published.`);
+  if (lesson.conceptMap.length < 4 || lesson.outcomes.length < 3 || lesson.theory.length < 3) errors.push(`SDE lesson ${topicId} has an incomplete theory contract.`);
+  if (lesson.failureModes.length < 4 || lesson.flashcards.length < 3 || lesson.revision.length < 5) errors.push(`SDE lesson ${topicId} has an incomplete revision contract.`);
+  if (lesson.sources.length < 2 || lesson.sources.some((source) => !source.url.startsWith("https://"))) errors.push(`SDE lesson ${topicId} has invalid source metadata.`);
 }
 
 const staleBefore = new Date("2025-09-18");

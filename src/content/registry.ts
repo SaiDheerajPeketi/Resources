@@ -52,6 +52,30 @@ import AgentsAndToolUse from "@/content/topics/ai-data/agents-and-tool-use.mdx";
 import LlmEvaluation from "@/content/topics/ai-data/llm-evaluation.mdx";
 import ResponsibleAi from "@/content/topics/ai-data/responsible-ai.mdx";
 import MlopsAndMlSystemDesign from "@/content/topics/ai-data/mlops-and-ml-system-design.mdx";
+import ObjectOrientedDesign from "@/content/topics/sde-systems/object-oriented-design.mdx";
+import ModernCppInternals from "@/content/topics/sde-systems/modern-c-plus-plus-internals.mdx";
+import MemoryManagement from "@/content/topics/sde-systems/memory-management.mdx";
+import Concurrency from "@/content/topics/sde-systems/concurrency.mdx";
+import OperatingSystems from "@/content/topics/sde-systems/operating-systems.mdx";
+import DatabaseSystems from "@/content/topics/sde-systems/database-systems.mdx";
+import ApiDesign from "@/content/topics/sde-systems/api-design.mdx";
+import BackendArchitecture from "@/content/topics/sde-systems/backend-architecture.mdx";
+import BrowserAndWebFoundations from "@/content/topics/sde-systems/browser-and-web-foundations.mdx";
+import MobileFoundations from "@/content/topics/sde-systems/mobile-foundations.mdx";
+import TestingStrategy from "@/content/topics/sde-systems/testing-strategy.mdx";
+import PerformanceEngineering from "@/content/topics/sde-systems/performance-engineering.mdx";
+import SolidAndDesignPatterns from "@/content/topics/sde-systems/solid-and-design-patterns.mdx";
+import LowLevelDesign from "@/content/topics/sde-systems/low-level-design.mdx";
+import DistributedSystemsFoundations from "@/content/topics/sde-systems/distributed-systems-foundations.mdx";
+import ConsistencyModels from "@/content/topics/sde-systems/consistency-models.mdx";
+import Caching from "@/content/topics/sde-systems/caching.mdx";
+import QueuesAndEventStreams from "@/content/topics/sde-systems/queues-and-event-streams.mdx";
+import StorageSystems from "@/content/topics/sde-systems/storage-systems.mdx";
+import CapacityPlanning from "@/content/topics/sde-systems/capacity-planning.mdx";
+import ReliabilityEngineering from "@/content/topics/sde-systems/reliability-engineering.mdx";
+import Observability from "@/content/topics/sde-systems/observability.mdx";
+import SystemDesignInterviewMethod from "@/content/topics/sde-systems/system-design-interview-method.mdx";
+import SystemDesignCaseStudies from "@/content/topics/sde-systems/system-design-case-studies.mdx";
 
 export const topicContent = {
   "foundations/c-plus-plus-interview-setup": CppInterviewSetup,
@@ -104,7 +128,31 @@ export const topicContent = {
   "ai-data/llm-evaluation": LlmEvaluation,
   "ai-data/responsible-ai": ResponsibleAi,
   "ai-data/mlops-and-ml-system-design": MlopsAndMlSystemDesign,
+  "sde-systems/object-oriented-design": ObjectOrientedDesign,
+  "sde-systems/modern-c-plus-plus-internals": ModernCppInternals,
+  "sde-systems/memory-management": MemoryManagement,
+  "sde-systems/concurrency": Concurrency,
+  "sde-systems/operating-systems": OperatingSystems,
+  "sde-systems/database-systems": DatabaseSystems,
+  "sde-systems/api-design": ApiDesign,
+  "sde-systems/backend-architecture": BackendArchitecture,
+  "sde-systems/browser-and-web-foundations": BrowserAndWebFoundations,
+  "sde-systems/mobile-foundations": MobileFoundations,
+  "sde-systems/testing-strategy": TestingStrategy,
+  "sde-systems/performance-engineering": PerformanceEngineering,
+  "sde-systems/solid-and-design-patterns": SolidAndDesignPatterns,
+  "sde-systems/low-level-design": LowLevelDesign,
+  "sde-systems/distributed-systems-foundations": DistributedSystemsFoundations,
   "sde-systems/consistent-hashing": ConsistentHashing,
+  "sde-systems/consistency-models": ConsistencyModels,
+  "sde-systems/caching": Caching,
+  "sde-systems/queues-and-event-streams": QueuesAndEventStreams,
+  "sde-systems/storage-systems": StorageSystems,
+  "sde-systems/capacity-planning": CapacityPlanning,
+  "sde-systems/reliability-engineering": ReliabilityEngineering,
+  "sde-systems/observability": Observability,
+  "sde-systems/system-design-interview-method": SystemDesignInterviewMethod,
+  "sde-systems/system-design-case-studies": SystemDesignCaseStudies,
   "devops-cloud/kubernetes-reconciliation": KubernetesReconciliation,
   "cybersecurity/threat-modeling": ThreatModeling,
   "fintech-quant/double-entry-ledgers": DoubleEntryLedgers

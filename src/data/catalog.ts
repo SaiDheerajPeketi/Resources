@@ -11,8 +11,9 @@ import {
 } from "@/lib/schema";
 import { foundationLessons } from "@/data/foundation-lessons";
 import { aiLessons } from "@/data/ai-lessons";
+import { sdeLessons } from "@/data/sde-lessons";
 
-export const CONTENT_MANIFEST_VERSION = "2026.09.18-r3";
+export const CONTENT_MANIFEST_VERSION = "2026.09.18-r4";
 
 export const roles: RoleProfile[] = RoleProfileSchema.array().parse([
   { id: "sde", title: "Software Engineer", description: "Generalist, backend, full-stack, and systems interviews.", trackIds: ["foundations", "sde-systems"] },
@@ -113,7 +114,7 @@ export const topics: TopicMeta[] = TopicMetaSchema.array().parse(
   tracks.flatMap((track) => titlesByTrack[track.id].map((title, index) => {
     const localSlug = slugify(title);
     const slug = `${track.id}/${localSlug}`;
-    const custom = published[slug] ?? foundationLessons[slug] ?? aiLessons[slug];
+    const custom = published[slug] ?? foundationLessons[slug] ?? aiLessons[slug] ?? sdeLessons[slug];
     return {
       id: slug,
       slug,

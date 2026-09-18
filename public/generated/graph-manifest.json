@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r3",
+  "version": "2026.09.18-r4",
   "edges": [
     {
       "id": "foundations/complexity-analysis->foundations/arrays-and-strings:prerequisite",
@@ -599,6 +599,306 @@
       "id": "sde-systems/distributed-systems-foundations->ai-data/mlops-and-ml-system-design:prerequisite",
       "source": "sde-systems/distributed-systems-foundations",
       "target": "ai-data/mlops-and-ml-system-design",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/c-plus-plus-interview-setup->sde-systems/object-oriented-design:prerequisite",
+      "source": "foundations/c-plus-plus-interview-setup",
+      "target": "sde-systems/object-oriented-design",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/c-plus-plus-interview-setup->sde-systems/modern-c-plus-plus-internals:prerequisite",
+      "source": "foundations/c-plus-plus-interview-setup",
+      "target": "sde-systems/modern-c-plus-plus-internals",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/stl-and-iterators->sde-systems/modern-c-plus-plus-internals:prerequisite",
+      "source": "foundations/stl-and-iterators",
+      "target": "sde-systems/modern-c-plus-plus-internals",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/modern-c-plus-plus-internals->sde-systems/memory-management:prerequisite",
+      "source": "sde-systems/modern-c-plus-plus-internals",
+      "target": "sde-systems/memory-management",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/c-plus-plus-interview-setup->sde-systems/memory-management:prerequisite",
+      "source": "foundations/c-plus-plus-interview-setup",
+      "target": "sde-systems/memory-management",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/memory-management->sde-systems/concurrency:prerequisite",
+      "source": "sde-systems/memory-management",
+      "target": "sde-systems/concurrency",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/graphs->sde-systems/concurrency:prerequisite",
+      "source": "foundations/graphs",
+      "target": "sde-systems/concurrency",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linux-and-the-cli->sde-systems/operating-systems:prerequisite",
+      "source": "foundations/linux-and-the-cli",
+      "target": "sde-systems/operating-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/concurrency->sde-systems/operating-systems:prerequisite",
+      "source": "sde-systems/concurrency",
+      "target": "sde-systems/operating-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/sql-fundamentals->sde-systems/database-systems:prerequisite",
+      "source": "foundations/sql-fundamentals",
+      "target": "sde-systems/database-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/operating-systems->sde-systems/database-systems:prerequisite",
+      "source": "sde-systems/operating-systems",
+      "target": "sde-systems/database-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/networking-fundamentals->sde-systems/api-design:prerequisite",
+      "source": "foundations/networking-fundamentals",
+      "target": "sde-systems/api-design",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/git-testing-and-debugging->sde-systems/api-design:prerequisite",
+      "source": "foundations/git-testing-and-debugging",
+      "target": "sde-systems/api-design",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/api-design->sde-systems/backend-architecture:prerequisite",
+      "source": "sde-systems/api-design",
+      "target": "sde-systems/backend-architecture",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/database-systems->sde-systems/backend-architecture:prerequisite",
+      "source": "sde-systems/database-systems",
+      "target": "sde-systems/backend-architecture",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/networking-fundamentals->sde-systems/browser-and-web-foundations:prerequisite",
+      "source": "foundations/networking-fundamentals",
+      "target": "sde-systems/browser-and-web-foundations",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/api-design->sde-systems/browser-and-web-foundations:prerequisite",
+      "source": "sde-systems/api-design",
+      "target": "sde-systems/browser-and-web-foundations",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/api-design->sde-systems/mobile-foundations:prerequisite",
+      "source": "sde-systems/api-design",
+      "target": "sde-systems/mobile-foundations",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/git-testing-and-debugging->sde-systems/mobile-foundations:prerequisite",
+      "source": "foundations/git-testing-and-debugging",
+      "target": "sde-systems/mobile-foundations",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/git-testing-and-debugging->sde-systems/testing-strategy:prerequisite",
+      "source": "foundations/git-testing-and-debugging",
+      "target": "sde-systems/testing-strategy",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/backend-architecture->sde-systems/testing-strategy:prerequisite",
+      "source": "sde-systems/backend-architecture",
+      "target": "sde-systems/testing-strategy",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/complexity-analysis->sde-systems/performance-engineering:prerequisite",
+      "source": "foundations/complexity-analysis",
+      "target": "sde-systems/performance-engineering",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/operating-systems->sde-systems/performance-engineering:prerequisite",
+      "source": "sde-systems/operating-systems",
+      "target": "sde-systems/performance-engineering",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/testing-strategy->sde-systems/performance-engineering:prerequisite",
+      "source": "sde-systems/testing-strategy",
+      "target": "sde-systems/performance-engineering",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/object-oriented-design->sde-systems/solid-and-design-patterns:prerequisite",
+      "source": "sde-systems/object-oriented-design",
+      "target": "sde-systems/solid-and-design-patterns",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/object-oriented-design->sde-systems/low-level-design:prerequisite",
+      "source": "sde-systems/object-oriented-design",
+      "target": "sde-systems/low-level-design",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/solid-and-design-patterns->sde-systems/low-level-design:prerequisite",
+      "source": "sde-systems/solid-and-design-patterns",
+      "target": "sde-systems/low-level-design",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/networking-fundamentals->sde-systems/distributed-systems-foundations:prerequisite",
+      "source": "foundations/networking-fundamentals",
+      "target": "sde-systems/distributed-systems-foundations",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/concurrency->sde-systems/distributed-systems-foundations:prerequisite",
+      "source": "sde-systems/concurrency",
+      "target": "sde-systems/distributed-systems-foundations",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/database-systems->sde-systems/distributed-systems-foundations:prerequisite",
+      "source": "sde-systems/database-systems",
+      "target": "sde-systems/distributed-systems-foundations",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/distributed-systems-foundations->sde-systems/consistency-models:prerequisite",
+      "source": "sde-systems/distributed-systems-foundations",
+      "target": "sde-systems/consistency-models",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/database-systems->sde-systems/consistency-models:prerequisite",
+      "source": "sde-systems/database-systems",
+      "target": "sde-systems/consistency-models",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/consistency-models->sde-systems/caching:prerequisite",
+      "source": "sde-systems/consistency-models",
+      "target": "sde-systems/caching",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/backend-architecture->sde-systems/caching:prerequisite",
+      "source": "sde-systems/backend-architecture",
+      "target": "sde-systems/caching",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/distributed-systems-foundations->sde-systems/queues-and-event-streams:prerequisite",
+      "source": "sde-systems/distributed-systems-foundations",
+      "target": "sde-systems/queues-and-event-streams",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/backend-architecture->sde-systems/queues-and-event-streams:prerequisite",
+      "source": "sde-systems/backend-architecture",
+      "target": "sde-systems/queues-and-event-streams",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/database-systems->sde-systems/storage-systems:prerequisite",
+      "source": "sde-systems/database-systems",
+      "target": "sde-systems/storage-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/distributed-systems-foundations->sde-systems/storage-systems:prerequisite",
+      "source": "sde-systems/distributed-systems-foundations",
+      "target": "sde-systems/storage-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/probability->sde-systems/capacity-planning:prerequisite",
+      "source": "foundations/probability",
+      "target": "sde-systems/capacity-planning",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/performance-engineering->sde-systems/capacity-planning:prerequisite",
+      "source": "sde-systems/performance-engineering",
+      "target": "sde-systems/capacity-planning",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/distributed-systems-foundations->sde-systems/reliability-engineering:prerequisite",
+      "source": "sde-systems/distributed-systems-foundations",
+      "target": "sde-systems/reliability-engineering",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/capacity-planning->sde-systems/reliability-engineering:prerequisite",
+      "source": "sde-systems/capacity-planning",
+      "target": "sde-systems/reliability-engineering",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/reliability-engineering->sde-systems/observability:prerequisite",
+      "source": "sde-systems/reliability-engineering",
+      "target": "sde-systems/observability",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/git-testing-and-debugging->sde-systems/observability:prerequisite",
+      "source": "foundations/git-testing-and-debugging",
+      "target": "sde-systems/observability",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/capacity-planning->sde-systems/system-design-interview-method:prerequisite",
+      "source": "sde-systems/capacity-planning",
+      "target": "sde-systems/system-design-interview-method",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/reliability-engineering->sde-systems/system-design-interview-method:prerequisite",
+      "source": "sde-systems/reliability-engineering",
+      "target": "sde-systems/system-design-interview-method",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/observability->sde-systems/system-design-interview-method:prerequisite",
+      "source": "sde-systems/observability",
+      "target": "sde-systems/system-design-interview-method",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/system-design-interview-method->sde-systems/system-design-case-studies:prerequisite",
+      "source": "sde-systems/system-design-interview-method",
+      "target": "sde-systems/system-design-case-studies",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/storage-systems->sde-systems/system-design-case-studies:prerequisite",
+      "source": "sde-systems/storage-systems",
+      "target": "sde-systems/system-design-case-studies",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/queues-and-event-streams->sde-systems/system-design-case-studies:prerequisite",
+      "source": "sde-systems/queues-and-event-streams",
+      "target": "sde-systems/system-design-case-studies",
       "kind": "prerequisite"
     },
     {
