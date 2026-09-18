@@ -1,7 +1,8 @@
 [
   {
     "id": "foundations/c-plus-plus-interview-setup",
-    "slug": "foundations/c-plus-plus-interview-setup",
+    "route": "/topics/foundations/c-plus-plus-interview-setup/",
+    "kind": "topic",
     "title": "C++ Interview Setup",
     "summary": "Build, run, and reason about C++17 interview code with a small, reliable template and explicit ownership.",
     "trackId": "foundations",
@@ -17,7 +18,8 @@
   },
   {
     "id": "foundations/complexity-analysis",
-    "slug": "foundations/complexity-analysis",
+    "route": "/topics/foundations/complexity-analysis/",
+    "kind": "topic",
     "title": "Complexity Analysis",
     "summary": "Derive time and space bounds, amortized costs, and input-sensitive trade-offs instead of memorizing labels.",
     "trackId": "foundations",
@@ -35,7 +37,8 @@
   },
   {
     "id": "foundations/stl-and-iterators",
-    "slug": "foundations/stl-and-iterators",
+    "route": "/topics/foundations/stl-and-iterators/",
+    "kind": "topic",
     "title": "STL and Iterators",
     "summary": "Choose C++ containers and algorithms by guarantees, then reason safely about iterators, comparators, and invalidation.",
     "trackId": "foundations",
@@ -52,7 +55,8 @@
   },
   {
     "id": "foundations/arrays-and-strings",
-    "slug": "foundations/arrays-and-strings",
+    "route": "/topics/foundations/arrays-and-strings/",
+    "kind": "topic",
     "title": "Arrays and Strings",
     "summary": "Solve sequence problems with explicit invariants: two pointers, windows, prefix summaries, and in-place transforms.",
     "trackId": "foundations",
@@ -70,7 +74,8 @@
   },
   {
     "id": "foundations/hash-tables",
-    "slug": "foundations/hash-tables",
+    "route": "/topics/foundations/hash-tables/",
+    "kind": "topic",
     "title": "Hash Tables",
     "summary": "Key-value storage, collision handling, load factor, resizing, and interview-grade implementations.",
     "trackId": "foundations",
@@ -88,7 +93,8 @@
   },
   {
     "id": "foundations/stacks-and-queues",
-    "slug": "foundations/stacks-and-queues",
+    "route": "/topics/foundations/stacks-and-queues/",
+    "kind": "topic",
     "title": "Stacks and Queues",
     "summary": "Recognize LIFO, FIFO, monotonic, and deque invariants in parsing, traversal, and next-element problems.",
     "trackId": "foundations",
@@ -104,7 +110,8 @@
   },
   {
     "id": "foundations/linked-lists",
-    "slug": "foundations/linked-lists",
+    "route": "/topics/foundations/linked-lists/",
+    "kind": "topic",
     "title": "Linked Lists",
     "summary": "Manipulate node chains safely using pointer invariants, sentinels, and fast/slow reasoning.",
     "trackId": "foundations",
@@ -118,7 +125,8 @@
   },
   {
     "id": "foundations/trees-and-bsts",
-    "slug": "foundations/trees-and-bsts",
+    "route": "/topics/foundations/trees-and-bsts/",
+    "kind": "topic",
     "title": "Trees and BSTs",
     "summary": "Reason about hierarchical data with recursive contracts, traversal order, and BST invariants.",
     "trackId": "foundations",
@@ -134,7 +142,8 @@
   },
   {
     "id": "foundations/heaps-and-priority-queues",
-    "slug": "foundations/heaps-and-priority-queues",
+    "route": "/topics/foundations/heaps-and-priority-queues/",
+    "kind": "topic",
     "title": "Heaps and Priority Queues",
     "summary": "Use partial ordering to retrieve extrema, maintain top-k sets, and schedule work efficiently.",
     "trackId": "foundations",
@@ -151,7 +160,8 @@
   },
   {
     "id": "foundations/graphs",
-    "slug": "foundations/graphs",
+    "route": "/topics/foundations/graphs/",
+    "kind": "topic",
     "title": "Graphs",
     "summary": "Model relationships and apply traversal, ordering, connectivity, and shortest-path invariants.",
     "trackId": "foundations",
@@ -169,7 +179,8 @@
   },
   {
     "id": "foundations/recursion-and-backtracking",
-    "slug": "foundations/recursion-and-backtracking",
+    "route": "/topics/foundations/recursion-and-backtracking/",
+    "kind": "topic",
     "title": "Recursion and Backtracking",
     "summary": "Design recursive contracts and prune state-space searches without corrupting shared state.",
     "trackId": "foundations",
@@ -183,7 +194,8 @@
   },
   {
     "id": "foundations/sorting-and-binary-search",
-    "slug": "foundations/sorting-and-binary-search",
+    "route": "/topics/foundations/sorting-and-binary-search/",
+    "kind": "topic",
     "title": "Sorting and Binary Search",
     "summary": "Choose sorting guarantees and use boundary-based binary search over values or monotone predicates.",
     "trackId": "foundations",
@@ -200,7 +212,8 @@
   },
   {
     "id": "foundations/greedy-algorithms",
-    "slug": "foundations/greedy-algorithms",
+    "route": "/topics/foundations/greedy-algorithms/",
+    "kind": "topic",
     "title": "Greedy Algorithms",
     "summary": "Make local choices only when an exchange argument or invariant proves they compose globally.",
     "trackId": "foundations",
@@ -215,7 +228,8 @@
   },
   {
     "id": "foundations/dynamic-programming",
-    "slug": "foundations/dynamic-programming",
+    "route": "/topics/foundations/dynamic-programming/",
+    "kind": "topic",
     "title": "Dynamic Programming",
     "summary": "Turn repeated subproblems into explicit state, transitions, base cases, and evaluation order.",
     "trackId": "foundations",
@@ -231,7 +245,8 @@
   },
   {
     "id": "foundations/bit-manipulation",
-    "slug": "foundations/bit-manipulation",
+    "route": "/topics/foundations/bit-manipulation/",
+    "kind": "topic",
     "title": "Bit Manipulation",
     "summary": "Use binary representations, masks, and XOR identities while avoiding signed-shift and width traps.",
     "trackId": "foundations",
@@ -246,7 +261,8 @@
   },
   {
     "id": "foundations/discrete-mathematics",
-    "slug": "foundations/discrete-mathematics",
+    "route": "/topics/foundations/discrete-mathematics/",
+    "kind": "topic",
     "title": "Discrete Mathematics",
     "summary": "Use logic, sets, counting, graphs, invariants, and proof techniques to justify interview algorithms.",
     "trackId": "foundations",
@@ -265,7 +281,8 @@
   },
   {
     "id": "foundations/linear-algebra",
-    "slug": "foundations/linear-algebra",
+    "route": "/topics/foundations/linear-algebra/",
+    "kind": "topic",
     "title": "Linear Algebra",
     "summary": "Understand vectors, matrices, projections, eigenstructure, and gradients as the language of ML and quantitative models.",
     "trackId": "foundations",
@@ -281,7 +298,8 @@
   },
   {
     "id": "foundations/probability",
-    "slug": "foundations/probability",
+    "route": "/topics/foundations/probability/",
+    "kind": "topic",
     "title": "Probability",
     "summary": "Model uncertainty with conditional probability, random variables, expectation, variance, and common distributions.",
     "trackId": "foundations",
@@ -299,7 +317,8 @@
   },
   {
     "id": "foundations/statistics",
-    "slug": "foundations/statistics",
+    "route": "/topics/foundations/statistics/",
+    "kind": "topic",
     "title": "Statistics",
     "summary": "Estimate, test, and communicate uncertainty while separating association, prediction, and causal claims.",
     "trackId": "foundations",
@@ -317,7 +336,8 @@
   },
   {
     "id": "foundations/sql-fundamentals",
-    "slug": "foundations/sql-fundamentals",
+    "route": "/topics/foundations/sql-fundamentals/",
+    "kind": "topic",
     "title": "SQL Fundamentals",
     "summary": "Query relational data correctly with joins, aggregation, windows, transactions, and index-aware reasoning.",
     "trackId": "foundations",
@@ -335,7 +355,8 @@
   },
   {
     "id": "foundations/linux-and-the-cli",
-    "slug": "foundations/linux-and-the-cli",
+    "route": "/topics/foundations/linux-and-the-cli/",
+    "kind": "topic",
     "title": "Linux and the CLI",
     "summary": "Navigate Linux processes, files, permissions, pipes, signals, and diagnostics from a safe command line.",
     "trackId": "foundations",
@@ -352,7 +373,8 @@
   },
   {
     "id": "foundations/networking-fundamentals",
-    "slug": "foundations/networking-fundamentals",
+    "route": "/topics/foundations/networking-fundamentals/",
+    "kind": "topic",
     "title": "Networking Fundamentals",
     "summary": "Trace traffic through DNS, transport, IP routing, TLS, and HTTP while debugging by layer.",
     "trackId": "foundations",
@@ -371,7 +393,8 @@
   },
   {
     "id": "foundations/git-testing-and-debugging",
-    "slug": "foundations/git-testing-and-debugging",
+    "route": "/topics/foundations/git-testing-and-debugging/",
+    "kind": "topic",
     "title": "Git, Testing, and Debugging",
     "summary": "Manage changes as commits, build layered tests, and debug from reproducible evidence rather than guesses.",
     "trackId": "foundations",
@@ -391,7 +414,8 @@
   },
   {
     "id": "foundations/behavioral-interview-basics",
-    "slug": "foundations/behavioral-interview-basics",
+    "route": "/topics/foundations/behavioral-interview-basics/",
+    "kind": "topic",
     "title": "Behavioral Interview Basics",
     "summary": "Turn real experience into concise, evidence-backed stories for recruiter, behavioral, project, and negotiation conversations.",
     "trackId": "foundations",
@@ -413,7 +437,8 @@
   },
   {
     "id": "ai-data/data-cleaning",
-    "slug": "ai-data/data-cleaning",
+    "route": "/topics/ai-data/data-cleaning/",
+    "kind": "topic",
     "title": "Data Cleaning",
     "summary": "Turn raw records into an auditable, leakage-safe analytical table without erasing meaningful variation.",
     "trackId": "ai-data",
@@ -429,7 +454,8 @@
   },
   {
     "id": "ai-data/exploratory-data-analysis",
-    "slug": "ai-data/exploratory-data-analysis",
+    "route": "/topics/ai-data/exploratory-data-analysis/",
+    "kind": "topic",
     "title": "Exploratory Data Analysis",
     "summary": "Use targeted summaries and visual reasoning to understand a dataset, test assumptions, and form falsifiable hypotheses.",
     "trackId": "ai-data",
@@ -445,7 +471,8 @@
   },
   {
     "id": "ai-data/experiment-design",
-    "slug": "ai-data/experiment-design",
+    "route": "/topics/ai-data/experiment-design/",
+    "kind": "topic",
     "title": "Experiment Design",
     "summary": "Design controlled experiments that identify causal effects, protect users, and support trustworthy product decisions.",
     "trackId": "ai-data",
@@ -460,7 +487,8 @@
   },
   {
     "id": "ai-data/feature-engineering",
-    "slug": "ai-data/feature-engineering",
+    "route": "/topics/ai-data/feature-engineering/",
+    "kind": "topic",
     "title": "Feature Engineering",
     "summary": "Create stable, available, and leakage-safe representations that expose useful signal to a model.",
     "trackId": "ai-data",
@@ -476,7 +504,8 @@
   },
   {
     "id": "ai-data/linear-models",
-    "slug": "ai-data/linear-models",
+    "route": "/topics/ai-data/linear-models/",
+    "kind": "topic",
     "title": "Linear Models",
     "summary": "Understand least squares, regularization, diagnostics, and the conditions under which linear models remain strong baselines.",
     "trackId": "ai-data",
@@ -491,7 +520,8 @@
   },
   {
     "id": "ai-data/logistic-regression",
-    "slug": "ai-data/logistic-regression",
+    "route": "/topics/ai-data/logistic-regression/",
+    "kind": "topic",
     "title": "Logistic Regression",
     "summary": "Model class log-odds, interpret conditional effects, regularize safely, and connect scores to calibrated decisions.",
     "trackId": "ai-data",
@@ -506,7 +536,8 @@
   },
   {
     "id": "ai-data/tree-ensembles",
-    "slug": "ai-data/tree-ensembles",
+    "route": "/topics/ai-data/tree-ensembles/",
+    "kind": "topic",
     "title": "Tree Ensembles",
     "summary": "Compare trees, random forests, and gradient boosting through their split logic, bias-variance behavior, and production trade-offs.",
     "trackId": "ai-data",
@@ -521,7 +552,8 @@
   },
   {
     "id": "ai-data/unsupervised-learning",
-    "slug": "ai-data/unsupervised-learning",
+    "route": "/topics/ai-data/unsupervised-learning/",
+    "kind": "topic",
     "title": "Unsupervised Learning",
     "summary": "Use clustering and dimensionality reduction as exploratory models whose value depends on geometry and downstream validation.",
     "trackId": "ai-data",
@@ -536,7 +568,8 @@
   },
   {
     "id": "ai-data/model-evaluation",
-    "slug": "ai-data/model-evaluation",
+    "route": "/topics/ai-data/model-evaluation/",
+    "kind": "topic",
     "title": "Model Evaluation",
     "summary": "Select metrics, design validation, diagnose leakage, and make model choices that survive production.",
     "trackId": "ai-data",
@@ -551,7 +584,8 @@
   },
   {
     "id": "ai-data/optimization-for-ml",
-    "slug": "ai-data/optimization-for-ml",
+    "route": "/topics/ai-data/optimization-for-ml/",
+    "kind": "topic",
     "title": "Optimization for ML",
     "summary": "Reason about objectives, gradients, conditioning, stochastic updates, and the optimization path that turns parameters into a fitted model.",
     "trackId": "ai-data",
@@ -567,7 +601,8 @@
   },
   {
     "id": "ai-data/neural-network-foundations",
-    "slug": "ai-data/neural-network-foundations",
+    "route": "/topics/ai-data/neural-network-foundations/",
+    "kind": "topic",
     "title": "Neural Network Foundations",
     "summary": "Build and debug multilayer networks through computation graphs, backpropagation, initialization, regularization, and training dynamics.",
     "trackId": "ai-data",
@@ -582,7 +617,8 @@
   },
   {
     "id": "ai-data/cnns",
-    "slug": "ai-data/cnns",
+    "route": "/topics/ai-data/cnns/",
+    "kind": "topic",
     "title": "CNNs",
     "summary": "Understand convolutional inductive bias, receptive fields, residual networks, and efficient vision-model debugging.",
     "trackId": "ai-data",
@@ -596,7 +632,8 @@
   },
   {
     "id": "ai-data/sequence-models",
-    "slug": "ai-data/sequence-models",
+    "route": "/topics/ai-data/sequence-models/",
+    "kind": "topic",
     "title": "Sequence Models",
     "summary": "Model ordered data with recurrence, gating, masking, teacher forcing, and sequence-aware evaluation.",
     "trackId": "ai-data",
@@ -611,7 +648,8 @@
   },
   {
     "id": "ai-data/transformers",
-    "slug": "ai-data/transformers",
+    "route": "/topics/ai-data/transformers/",
+    "kind": "topic",
     "title": "Transformers",
     "summary": "Derive attention, positional information, masking, architecture families, and the memory/compute trade-offs of transformer models.",
     "trackId": "ai-data",
@@ -626,7 +664,8 @@
   },
   {
     "id": "ai-data/natural-language-processing",
-    "slug": "ai-data/natural-language-processing",
+    "route": "/topics/ai-data/natural-language-processing/",
+    "kind": "topic",
     "title": "Natural Language Processing",
     "summary": "Model language through tokenization, representations, task formulation, decoding, and evaluation beyond surface overlap.",
     "trackId": "ai-data",
@@ -640,7 +679,8 @@
   },
   {
     "id": "ai-data/computer-vision",
-    "slug": "ai-data/computer-vision",
+    "route": "/topics/ai-data/computer-vision/",
+    "kind": "topic",
     "title": "Computer Vision",
     "summary": "Frame image classification, detection, and segmentation systems from labeling geometry through deployment shift.",
     "trackId": "ai-data",
@@ -654,7 +694,8 @@
   },
   {
     "id": "ai-data/recommender-systems",
-    "slug": "ai-data/recommender-systems",
+    "route": "/topics/ai-data/recommender-systems/",
+    "kind": "topic",
     "title": "Recommender Systems",
     "summary": "Design retrieval, ranking, and feedback systems that balance relevance, discovery, constraints, and long-term marketplace health.",
     "trackId": "ai-data",
@@ -669,7 +710,8 @@
   },
   {
     "id": "ai-data/forecasting",
-    "slug": "ai-data/forecasting",
+    "route": "/topics/ai-data/forecasting/",
+    "kind": "topic",
     "title": "Forecasting",
     "summary": "Forecast time-indexed outcomes with honest backtests, lag-aware features, uncertainty, hierarchy, and production monitoring.",
     "trackId": "ai-data",
@@ -684,7 +726,8 @@
   },
   {
     "id": "ai-data/embeddings",
-    "slug": "ai-data/embeddings",
+    "route": "/topics/ai-data/embeddings/",
+    "kind": "topic",
     "title": "Embeddings",
     "summary": "Use dense vector representations for semantic similarity while respecting geometry, domain shift, and evaluation limits.",
     "trackId": "ai-data",
@@ -699,7 +742,8 @@
   },
   {
     "id": "ai-data/vector-search",
-    "slug": "ai-data/vector-search",
+    "route": "/topics/ai-data/vector-search/",
+    "kind": "topic",
     "title": "Vector Search",
     "summary": "Design exact and approximate nearest-neighbor retrieval with measurable recall, latency, memory, filtering, and update behavior.",
     "trackId": "ai-data",
@@ -714,7 +758,8 @@
   },
   {
     "id": "ai-data/retrieval-augmented-generation",
-    "slug": "ai-data/retrieval-augmented-generation",
+    "route": "/topics/ai-data/retrieval-augmented-generation/",
+    "kind": "topic",
     "title": "Retrieval-Augmented Generation",
     "summary": "Build RAG systems that retrieve authoritative evidence, compose grounded context, cite sources, and fail safely when support is absent.",
     "trackId": "ai-data",
@@ -729,7 +774,8 @@
   },
   {
     "id": "ai-data/fine-tuning",
-    "slug": "ai-data/fine-tuning",
+    "route": "/topics/ai-data/fine-tuning/",
+    "kind": "topic",
     "title": "Fine-Tuning",
     "summary": "Choose when and how to adapt pretrained models with supervised examples, parameter-efficient methods, preference signals, and rigorous baselines.",
     "trackId": "ai-data",
@@ -744,7 +790,8 @@
   },
   {
     "id": "ai-data/agents-and-tool-use",
-    "slug": "ai-data/agents-and-tool-use",
+    "route": "/topics/ai-data/agents-and-tool-use/",
+    "kind": "topic",
     "title": "Agents and Tool Use",
     "summary": "Design bounded agent loops that select tools, validate arguments, preserve state, obtain approval, and terminate safely.",
     "trackId": "ai-data",
@@ -759,7 +806,8 @@
   },
   {
     "id": "ai-data/llm-evaluation",
-    "slug": "ai-data/llm-evaluation",
+    "route": "/topics/ai-data/llm-evaluation/",
+    "kind": "topic",
     "title": "LLM Evaluation",
     "summary": "Evaluate generative systems with task rubrics, deterministic checks, calibrated judges, safety probes, and production experiments.",
     "trackId": "ai-data",
@@ -774,7 +822,8 @@
   },
   {
     "id": "ai-data/responsible-ai",
-    "slug": "ai-data/responsible-ai",
+    "route": "/topics/ai-data/responsible-ai/",
+    "kind": "topic",
     "title": "Responsible AI",
     "summary": "Translate AI risks into scoped harms, data and model controls, human oversight, documentation, monitoring, and accountable decisions.",
     "trackId": "ai-data",
@@ -791,7 +840,8 @@
   },
   {
     "id": "ai-data/mlops-and-ml-system-design",
-    "slug": "ai-data/mlops-and-ml-system-design",
+    "route": "/topics/ai-data/mlops-and-ml-system-design/",
+    "kind": "topic",
     "title": "MLOps and ML System Design",
     "summary": "Design reproducible ML platforms spanning data, training, registry, deployment, feature serving, observability, governance, and recovery.",
     "trackId": "ai-data",
@@ -807,7 +857,8 @@
   },
   {
     "id": "sde-systems/object-oriented-design",
-    "slug": "sde-systems/object-oriented-design",
+    "route": "/topics/sde-systems/object-oriented-design/",
+    "kind": "topic",
     "title": "Object-Oriented Design",
     "summary": "Model responsibilities, invariants, collaborations, and change boundaries without turning every noun into a class.",
     "trackId": "sde-systems",
@@ -823,7 +874,8 @@
   },
   {
     "id": "sde-systems/modern-c-plus-plus-internals",
-    "slug": "sde-systems/modern-c-plus-plus-internals",
+    "route": "/topics/sde-systems/modern-c-plus-plus-internals/",
+    "kind": "topic",
     "title": "Modern C++ Internals",
     "summary": "Reason about value categories, moves, templates, object layout, dispatch, and zero-cost abstractions in modern C++.",
     "trackId": "sde-systems",
@@ -838,7 +890,8 @@
   },
   {
     "id": "sde-systems/memory-management",
-    "slug": "sde-systems/memory-management",
+    "route": "/topics/sde-systems/memory-management/",
+    "kind": "topic",
     "title": "Memory Management",
     "summary": "Connect storage, lifetime, ownership, allocation, virtual memory, caches, and memory-safe C++ design.",
     "trackId": "sde-systems",
@@ -853,7 +906,8 @@
   },
   {
     "id": "sde-systems/concurrency",
-    "slug": "sde-systems/concurrency",
+    "route": "/topics/sde-systems/concurrency/",
+    "kind": "topic",
     "title": "Concurrency",
     "summary": "Design correct concurrent code with happens-before reasoning, synchronization, atomics, task structures, and contention-aware measurement.",
     "trackId": "sde-systems",
@@ -869,7 +923,8 @@
   },
   {
     "id": "sde-systems/operating-systems",
-    "slug": "sde-systems/operating-systems",
+    "route": "/topics/sde-systems/operating-systems/",
+    "kind": "topic",
     "title": "Operating Systems",
     "summary": "Understand processes, threads, scheduling, virtual memory, files, I/O, and the kernel boundaries behind application behavior.",
     "trackId": "sde-systems",
@@ -885,7 +940,8 @@
   },
   {
     "id": "sde-systems/database-systems",
-    "slug": "sde-systems/database-systems",
+    "route": "/topics/sde-systems/database-systems/",
+    "kind": "topic",
     "title": "Database Systems",
     "summary": "Reason about relational storage, indexes, transactions, MVCC, query plans, replication, and schema choices under workload.",
     "trackId": "sde-systems",
@@ -901,7 +957,8 @@
   },
   {
     "id": "sde-systems/api-design",
-    "slug": "sde-systems/api-design",
+    "route": "/topics/sde-systems/api-design/",
+    "kind": "topic",
     "title": "API Design",
     "summary": "Design durable service contracts with clear resources, semantics, validation, errors, security, and evolution rules.",
     "trackId": "sde-systems",
@@ -917,7 +974,8 @@
   },
   {
     "id": "sde-systems/backend-architecture",
-    "slug": "sde-systems/backend-architecture",
+    "route": "/topics/sde-systems/backend-architecture/",
+    "kind": "topic",
     "title": "Backend Architecture",
     "summary": "Shape backend boundaries, request flows, transactions, asynchronous work, and deployment units around change and failure.",
     "trackId": "sde-systems",
@@ -933,7 +991,8 @@
   },
   {
     "id": "sde-systems/browser-and-web-foundations",
-    "slug": "sde-systems/browser-and-web-foundations",
+    "route": "/topics/sde-systems/browser-and-web-foundations/",
+    "kind": "topic",
     "title": "Browser and Web Foundations",
     "summary": "Trace navigation through DNS, TLS, HTTP, parsing, rendering, JavaScript scheduling, storage, and browser security.",
     "trackId": "sde-systems",
@@ -947,7 +1006,8 @@
   },
   {
     "id": "sde-systems/mobile-foundations",
-    "slug": "sde-systems/mobile-foundations",
+    "route": "/topics/sde-systems/mobile-foundations/",
+    "kind": "topic",
     "title": "Mobile Foundations",
     "summary": "Design mobile clients around lifecycle, constrained resources, local state, synchronization, platform boundaries, and safe releases.",
     "trackId": "sde-systems",
@@ -961,7 +1021,8 @@
   },
   {
     "id": "sde-systems/testing-strategy",
-    "slug": "sde-systems/testing-strategy",
+    "route": "/topics/sde-systems/testing-strategy/",
+    "kind": "topic",
     "title": "Testing Strategy",
     "summary": "Build a risk-driven test portfolio across units, integrations, contracts, systems, properties, and production signals.",
     "trackId": "sde-systems",
@@ -977,7 +1038,8 @@
   },
   {
     "id": "sde-systems/performance-engineering",
-    "slug": "sde-systems/performance-engineering",
+    "route": "/topics/sde-systems/performance-engineering/",
+    "kind": "topic",
     "title": "Performance Engineering",
     "summary": "Measure and improve latency, throughput, utilization, allocation, I/O, and scalability with controlled experiments.",
     "trackId": "sde-systems",
@@ -993,7 +1055,8 @@
   },
   {
     "id": "sde-systems/solid-and-design-patterns",
-    "slug": "sde-systems/solid-and-design-patterns",
+    "route": "/topics/sde-systems/solid-and-design-patterns/",
+    "kind": "topic",
     "title": "SOLID and Design Patterns",
     "summary": "Use SOLID heuristics and design patterns to manage change, dependencies, and collaboration without ceremonial abstraction.",
     "trackId": "sde-systems",
@@ -1007,7 +1070,8 @@
   },
   {
     "id": "sde-systems/low-level-design",
-    "slug": "sde-systems/low-level-design",
+    "route": "/topics/sde-systems/low-level-design/",
+    "kind": "topic",
     "title": "Low-Level Design",
     "summary": "Turn scoped requirements into objects, APIs, data structures, state machines, invariants, and extension points.",
     "trackId": "sde-systems",
@@ -1021,7 +1085,8 @@
   },
   {
     "id": "sde-systems/distributed-systems-foundations",
-    "slug": "sde-systems/distributed-systems-foundations",
+    "route": "/topics/sde-systems/distributed-systems-foundations/",
+    "kind": "topic",
     "title": "Distributed Systems Foundations",
     "summary": "Reason about partial failure, clocks, replication, partitioning, consensus, retries, and coordination across machines.",
     "trackId": "sde-systems",
@@ -1037,7 +1102,8 @@
   },
   {
     "id": "sde-systems/consistent-hashing",
-    "slug": "sde-systems/consistent-hashing",
+    "route": "/topics/sde-systems/consistent-hashing/",
+    "kind": "topic",
     "title": "Consistent Hashing",
     "summary": "Partition data across changing node sets while minimizing movement and balancing load.",
     "trackId": "sde-systems",
@@ -1053,7 +1119,8 @@
   },
   {
     "id": "sde-systems/consistency-models",
-    "slug": "sde-systems/consistency-models",
+    "route": "/topics/sde-systems/consistency-models/",
+    "kind": "topic",
     "title": "Consistency Models",
     "summary": "Choose and communicate visibility and ordering guarantees across replicas, clients, and transactions.",
     "trackId": "sde-systems",
@@ -1068,7 +1135,8 @@
   },
   {
     "id": "sde-systems/caching",
-    "slug": "sde-systems/caching",
+    "route": "/topics/sde-systems/caching/",
+    "kind": "topic",
     "title": "Caching",
     "summary": "Design caches with explicit keys, freshness, invalidation, admission, eviction, failure, and stampede control.",
     "trackId": "sde-systems",
@@ -1084,7 +1152,8 @@
   },
   {
     "id": "sde-systems/queues-and-event-streams",
-    "slug": "sde-systems/queues-and-event-streams",
+    "route": "/topics/sde-systems/queues-and-event-streams/",
+    "kind": "topic",
     "title": "Queues and Event Streams",
     "summary": "Use work queues and append-only event streams with explicit delivery, ordering, replay, retention, and backpressure semantics.",
     "trackId": "sde-systems",
@@ -1100,7 +1169,8 @@
   },
   {
     "id": "sde-systems/storage-systems",
-    "slug": "sde-systems/storage-systems",
+    "route": "/topics/sde-systems/storage-systems/",
+    "kind": "topic",
     "title": "Storage Systems",
     "summary": "Choose storage engines, indexes, logs, replication, partitioning, and media from access, durability, and recovery needs.",
     "trackId": "sde-systems",
@@ -1116,7 +1186,8 @@
   },
   {
     "id": "sde-systems/capacity-planning",
-    "slug": "sde-systems/capacity-planning",
+    "route": "/topics/sde-systems/capacity-planning/",
+    "kind": "topic",
     "title": "Capacity Planning",
     "summary": "Translate product demand into traffic, concurrency, storage, network, compute, headroom, and cost estimates.",
     "trackId": "sde-systems",
@@ -1132,7 +1203,8 @@
   },
   {
     "id": "sde-systems/reliability-engineering",
-    "slug": "sde-systems/reliability-engineering",
+    "route": "/topics/sde-systems/reliability-engineering/",
+    "kind": "topic",
     "title": "Reliability Engineering",
     "summary": "Engineer dependable services with SLIs, SLOs, error budgets, fault containment, recovery, and controlled overload.",
     "trackId": "sde-systems",
@@ -1148,7 +1220,8 @@
   },
   {
     "id": "sde-systems/observability",
-    "slug": "sde-systems/observability",
+    "route": "/topics/sde-systems/observability/",
+    "kind": "topic",
     "title": "Observability",
     "summary": "Use metrics, logs, traces, profiles, context, and symptom-based alerts to explain production behavior.",
     "trackId": "sde-systems",
@@ -1164,7 +1237,8 @@
   },
   {
     "id": "sde-systems/system-design-interview-method",
-    "slug": "sde-systems/system-design-interview-method",
+    "route": "/topics/sde-systems/system-design-interview-method/",
+    "kind": "topic",
     "title": "System Design Interview Method",
     "summary": "Run a structured system-design interview from requirements and estimates through architecture, deep dives, failures, and trade-offs.",
     "trackId": "sde-systems",
@@ -1180,7 +1254,8 @@
   },
   {
     "id": "sde-systems/system-design-case-studies",
-    "slug": "sde-systems/system-design-case-studies",
+    "route": "/topics/sde-systems/system-design-case-studies/",
+    "kind": "topic",
     "title": "System Design Case Studies",
     "summary": "Compare recurring architectures for feeds, chat, file storage, payments, observability, and AI platforms through their dominant constraints.",
     "trackId": "sde-systems",
@@ -1196,7 +1271,8 @@
   },
   {
     "id": "devops-cloud/shell-scripting",
-    "slug": "devops-cloud/shell-scripting",
+    "route": "/topics/devops-cloud/shell-scripting/",
+    "kind": "topic",
     "title": "Shell Scripting",
     "summary": "Write safe, observable shell automation with predictable expansion, failure handling, pipelines, and cleanup.",
     "trackId": "devops-cloud",
@@ -1211,7 +1287,8 @@
   },
   {
     "id": "devops-cloud/linux-internals",
-    "slug": "devops-cloud/linux-internals",
+    "route": "/topics/devops-cloud/linux-internals/",
+    "kind": "topic",
     "title": "Linux Internals",
     "summary": "Operate Linux by connecting processes, virtual memory, filesystems, namespaces, cgroups, signals, and kernel evidence.",
     "trackId": "devops-cloud",
@@ -1226,7 +1303,8 @@
   },
   {
     "id": "devops-cloud/dns-and-tls",
-    "slug": "devops-cloud/dns-and-tls",
+    "route": "/topics/devops-cloud/dns-and-tls/",
+    "kind": "topic",
     "title": "DNS and TLS",
     "summary": "Trace authoritative and recursive DNS plus TLS identity, key exchange, certificates, resumption, and failure.",
     "trackId": "devops-cloud",
@@ -1241,7 +1319,8 @@
   },
   {
     "id": "devops-cloud/production-networking",
-    "slug": "devops-cloud/production-networking",
+    "route": "/topics/devops-cloud/production-networking/",
+    "kind": "topic",
     "title": "Production Networking",
     "summary": "Design and debug production networks across routing, load balancing, NAT, firewalls, overlays, and failure domains.",
     "trackId": "devops-cloud",
@@ -1256,7 +1335,8 @@
   },
   {
     "id": "devops-cloud/gitops",
-    "slug": "devops-cloud/gitops",
+    "route": "/topics/devops-cloud/gitops/",
+    "kind": "topic",
     "title": "GitOps",
     "summary": "Operate declarative environments through reviewed desired state, reconciliation, promotion, drift detection, and recovery.",
     "trackId": "devops-cloud",
@@ -1271,7 +1351,8 @@
   },
   {
     "id": "devops-cloud/ci-cd",
-    "slug": "devops-cloud/ci-cd",
+    "route": "/topics/devops-cloud/ci-cd/",
+    "kind": "topic",
     "title": "CI/CD",
     "summary": "Build trustworthy delivery pipelines with reproducible artifacts, staged evidence, protected identities, and safe deployment.",
     "trackId": "devops-cloud",
@@ -1287,7 +1368,8 @@
   },
   {
     "id": "devops-cloud/containers",
-    "slug": "devops-cloud/containers",
+    "route": "/topics/devops-cloud/containers/",
+    "kind": "topic",
     "title": "Containers",
     "summary": "Understand images, runtimes, namespaces, cgroups, filesystems, registries, and the security boundary containers do and do not provide.",
     "trackId": "devops-cloud",
@@ -1303,7 +1385,8 @@
   },
   {
     "id": "devops-cloud/kubernetes-reconciliation",
-    "slug": "devops-cloud/kubernetes-reconciliation",
+    "route": "/topics/devops-cloud/kubernetes-reconciliation/",
+    "kind": "topic",
     "title": "Kubernetes Reconciliation",
     "summary": "Understand desired state, controllers, work queues, idempotency, and failure recovery in Kubernetes.",
     "trackId": "devops-cloud",
@@ -1318,7 +1401,8 @@
   },
   {
     "id": "devops-cloud/kubernetes-operations",
-    "slug": "devops-cloud/kubernetes-operations",
+    "route": "/topics/devops-cloud/kubernetes-operations/",
+    "kind": "topic",
     "title": "Kubernetes Operations",
     "summary": "Operate Kubernetes scheduling, networking, storage, rollouts, autoscaling, upgrades, and failures from control-plane evidence.",
     "trackId": "devops-cloud",
@@ -1334,7 +1418,8 @@
   },
   {
     "id": "devops-cloud/infrastructure-as-code",
-    "slug": "devops-cloud/infrastructure-as-code",
+    "route": "/topics/devops-cloud/infrastructure-as-code/",
+    "kind": "topic",
     "title": "Infrastructure as Code",
     "summary": "Manage infrastructure through declarative models, dependency graphs, immutable artifacts, policy, state, and controlled reconciliation.",
     "trackId": "devops-cloud",
@@ -1349,7 +1434,8 @@
   },
   {
     "id": "devops-cloud/terraform",
-    "slug": "devops-cloud/terraform",
+    "route": "/topics/devops-cloud/terraform/",
+    "kind": "topic",
     "title": "Terraform",
     "summary": "Use Terraform safely across configuration, graph evaluation, state, modules, providers, plans, imports, and refactors.",
     "trackId": "devops-cloud",
@@ -1364,7 +1450,8 @@
   },
   {
     "id": "devops-cloud/configuration-and-secrets",
-    "slug": "devops-cloud/configuration-and-secrets",
+    "route": "/topics/devops-cloud/configuration-and-secrets/",
+    "kind": "topic",
     "title": "Configuration and Secrets",
     "summary": "Deliver configuration and secrets with typed contracts, least privilege, rotation, audit, and failure-safe rollout.",
     "trackId": "devops-cloud",
@@ -1380,7 +1467,8 @@
   },
   {
     "id": "devops-cloud/release-strategies",
-    "slug": "devops-cloud/release-strategies",
+    "route": "/topics/devops-cloud/release-strategies/",
+    "kind": "topic",
     "title": "Release Strategies",
     "summary": "Choose rolling, blue-green, canary, feature-flag, and shadow techniques from risk, compatibility, cost, and recovery needs.",
     "trackId": "devops-cloud",
@@ -1396,7 +1484,8 @@
   },
   {
     "id": "devops-cloud/observability-stack",
-    "slug": "devops-cloud/observability-stack",
+    "route": "/topics/devops-cloud/observability-stack/",
+    "kind": "topic",
     "title": "Observability Stack",
     "summary": "Architect collection, transport, storage, query, retention, and governance for metrics, logs, traces, and profiles.",
     "trackId": "devops-cloud",
@@ -1411,7 +1500,8 @@
   },
   {
     "id": "devops-cloud/slis-slos-and-error-budgets",
-    "slug": "devops-cloud/slis-slos-and-error-budgets",
+    "route": "/topics/devops-cloud/slis-slos-and-error-budgets/",
+    "kind": "topic",
     "title": "SLIs, SLOs, and Error Budgets",
     "summary": "Turn user journeys into measurable reliability objectives, burn-rate alerts, and explicit risk decisions.",
     "trackId": "devops-cloud",
@@ -1427,7 +1517,8 @@
   },
   {
     "id": "devops-cloud/incident-response",
-    "slug": "devops-cloud/incident-response",
+    "route": "/topics/devops-cloud/incident-response/",
+    "kind": "topic",
     "title": "Incident Response",
     "summary": "Coordinate detection, triage, mitigation, communication, evidence, recovery, and learning during production incidents.",
     "trackId": "devops-cloud",
@@ -1443,7 +1534,8 @@
   },
   {
     "id": "devops-cloud/disaster-recovery",
-    "slug": "devops-cloud/disaster-recovery",
+    "route": "/topics/devops-cloud/disaster-recovery/",
+    "kind": "topic",
     "title": "Disaster Recovery",
     "summary": "Design tested recovery for site loss, corruption, dependency failure, and operator error using explicit RTO and RPO.",
     "trackId": "devops-cloud",
@@ -1459,7 +1551,8 @@
   },
   {
     "id": "devops-cloud/platform-engineering",
-    "slug": "devops-cloud/platform-engineering",
+    "route": "/topics/devops-cloud/platform-engineering/",
+    "kind": "topic",
     "title": "Platform Engineering",
     "summary": "Build an internal platform as a product with paved roads, self-service contracts, guardrails, reliability, and adoption evidence.",
     "trackId": "devops-cloud",
@@ -1475,7 +1568,8 @@
   },
   {
     "id": "devops-cloud/finops",
-    "slug": "devops-cloud/finops",
+    "route": "/topics/devops-cloud/finops/",
+    "kind": "topic",
     "title": "FinOps",
     "summary": "Make cloud value and cost visible, accountable, optimizable, and governable without sacrificing reliability or security.",
     "trackId": "devops-cloud",
@@ -1491,7 +1585,8 @@
   },
   {
     "id": "devops-cloud/service-mesh",
-    "slug": "devops-cloud/service-mesh",
+    "route": "/topics/devops-cloud/service-mesh/",
+    "kind": "topic",
     "title": "Service Mesh",
     "summary": "Evaluate service-mesh traffic, identity, policy, telemetry, and resiliency against its operational and latency cost.",
     "trackId": "devops-cloud",
@@ -1506,7 +1601,8 @@
   },
   {
     "id": "devops-cloud/aws-service-map",
-    "slug": "devops-cloud/aws-service-map",
+    "route": "/topics/devops-cloud/aws-service-map/",
+    "kind": "topic",
     "title": "AWS Service Map",
     "summary": "Map AWS organization, identity, networking, compute, storage, data, messaging, observability, and security services to architecture decisions.",
     "trackId": "devops-cloud",
@@ -1522,7 +1618,8 @@
   },
   {
     "id": "devops-cloud/azure-service-map",
-    "slug": "devops-cloud/azure-service-map",
+    "route": "/topics/devops-cloud/azure-service-map/",
+    "kind": "topic",
     "title": "Azure Service Map",
     "summary": "Map Azure tenants, management groups, subscriptions, identity, networking, compute, data, observability, and governance to workload needs.",
     "trackId": "devops-cloud",
@@ -1538,7 +1635,8 @@
   },
   {
     "id": "devops-cloud/gcp-service-map",
-    "slug": "devops-cloud/gcp-service-map",
+    "route": "/topics/devops-cloud/gcp-service-map/",
+    "kind": "topic",
     "title": "GCP Service Map",
     "summary": "Map Google Cloud resource hierarchy, IAM, VPC, compute, storage, data, messaging, observability, and security to workload design.",
     "trackId": "devops-cloud",
@@ -1554,7 +1652,8 @@
   },
   {
     "id": "devops-cloud/oci-translation-matrix",
-    "slug": "devops-cloud/oci-translation-matrix",
+    "route": "/topics/devops-cloud/oci-translation-matrix/",
+    "kind": "topic",
     "title": "OCI Translation Matrix",
     "summary": "Translate AWS, Azure, Google Cloud, and OCI concepts without assuming superficially similar services have identical semantics.",
     "trackId": "devops-cloud",
@@ -1570,7 +1669,8 @@
   },
   {
     "id": "cybersecurity/security-foundations",
-    "slug": "cybersecurity/security-foundations",
+    "route": "/topics/cybersecurity/security-foundations/",
+    "kind": "topic",
     "title": "Security Foundations",
     "summary": "Frame security through assets, adversaries, trust, risk, controls, assurance, and resilient recovery.",
     "trackId": "cybersecurity",
@@ -1586,7 +1686,8 @@
   },
   {
     "id": "cybersecurity/threat-modeling",
-    "slug": "cybersecurity/threat-modeling",
+    "route": "/topics/cybersecurity/threat-modeling/",
+    "kind": "topic",
     "title": "Threat Modeling",
     "summary": "Convert architecture into assets, trust boundaries, abuse cases, mitigations, and testable security requirements.",
     "trackId": "cybersecurity",
@@ -1602,7 +1703,8 @@
   },
   {
     "id": "cybersecurity/applied-cryptography",
-    "slug": "cybersecurity/applied-cryptography",
+    "route": "/topics/cybersecurity/applied-cryptography/",
+    "kind": "topic",
     "title": "Applied Cryptography",
     "summary": "Select standard cryptographic primitives and protocols for confidentiality, integrity, authenticity, passwords, randomness, and key lifecycle.",
     "trackId": "cybersecurity",
@@ -1618,7 +1720,8 @@
   },
   {
     "id": "cybersecurity/pki-and-tls",
-    "slug": "cybersecurity/pki-and-tls",
+    "route": "/topics/cybersecurity/pki-and-tls/",
+    "kind": "topic",
     "title": "PKI and TLS",
     "summary": "Operate certificate trust, issuance, validation, revocation, automation, and TLS policy across internal and public systems.",
     "trackId": "cybersecurity",
@@ -1634,7 +1737,8 @@
   },
   {
     "id": "cybersecurity/identity-and-access-management",
-    "slug": "cybersecurity/identity-and-access-management",
+    "route": "/topics/cybersecurity/identity-and-access-management/",
+    "kind": "topic",
     "title": "Identity and Access Management",
     "summary": "Design human and workload identity, authentication, federation, authorization, lifecycle, privileged access, and audit.",
     "trackId": "cybersecurity",
@@ -1650,7 +1754,8 @@
   },
   {
     "id": "cybersecurity/web-security",
-    "slug": "cybersecurity/web-security",
+    "route": "/topics/cybersecurity/web-security/",
+    "kind": "topic",
     "title": "Web Security",
     "summary": "Secure browser applications against injection, XSS, CSRF, clickjacking, session theft, origin confusion, and unsafe content.",
     "trackId": "cybersecurity",
@@ -1665,7 +1770,8 @@
   },
   {
     "id": "cybersecurity/api-security",
-    "slug": "cybersecurity/api-security",
+    "route": "/topics/cybersecurity/api-security/",
+    "kind": "topic",
     "title": "API Security",
     "summary": "Secure APIs against broken object/function authorization, unsafe input, abuse, SSRF, inventory drift, and dependency failure.",
     "trackId": "cybersecurity",
@@ -1681,7 +1787,8 @@
   },
   {
     "id": "cybersecurity/network-security",
-    "slug": "cybersecurity/network-security",
+    "route": "/topics/cybersecurity/network-security/",
+    "kind": "topic",
     "title": "Network Security",
     "summary": "Protect and investigate network paths through segmentation, identity, filtering, secure remote access, detection, and resilient architecture.",
     "trackId": "cybersecurity",
@@ -1696,7 +1803,8 @@
   },
   {
     "id": "cybersecurity/secure-coding",
-    "slug": "cybersecurity/secure-coding",
+    "route": "/topics/cybersecurity/secure-coding/",
+    "kind": "topic",
     "title": "Secure Coding",
     "summary": "Prevent vulnerability classes through explicit trust boundaries, safe language/library choices, invariants, review, and security-focused tests.",
     "trackId": "cybersecurity",
@@ -1711,7 +1819,8 @@
   },
   {
     "id": "cybersecurity/application-security",
-    "slug": "cybersecurity/application-security",
+    "route": "/topics/cybersecurity/application-security/",
+    "kind": "topic",
     "title": "Application Security",
     "summary": "Embed threat modeling, requirements, review, testing, dependency governance, release gates, and vulnerability response into product delivery.",
     "trackId": "cybersecurity",
@@ -1726,7 +1835,8 @@
   },
   {
     "id": "cybersecurity/cloud-security",
-    "slug": "cybersecurity/cloud-security",
+    "route": "/topics/cybersecurity/cloud-security/",
+    "kind": "topic",
     "title": "Cloud Security",
     "summary": "Secure cloud hierarchy, identity, network, data, control planes, posture, logging, and incident recovery under shared responsibility.",
     "trackId": "cybersecurity",
@@ -1742,7 +1852,8 @@
   },
   {
     "id": "cybersecurity/container-security",
-    "slug": "cybersecurity/container-security",
+    "route": "/topics/cybersecurity/container-security/",
+    "kind": "topic",
     "title": "Container Security",
     "summary": "Secure container source, build, image, registry, runtime, host, isolation, secrets, and incident evidence.",
     "trackId": "cybersecurity",
@@ -1757,7 +1868,8 @@
   },
   {
     "id": "cybersecurity/kubernetes-security",
-    "slug": "cybersecurity/kubernetes-security",
+    "route": "/topics/cybersecurity/kubernetes-security/",
+    "kind": "topic",
     "title": "Kubernetes Security",
     "summary": "Secure Kubernetes API access, tenancy, workloads, admission, network, secrets, nodes, supply chain, audit, and response.",
     "trackId": "cybersecurity",
@@ -1772,7 +1884,8 @@
   },
   {
     "id": "cybersecurity/software-supply-chain",
-    "slug": "cybersecurity/software-supply-chain",
+    "route": "/topics/cybersecurity/software-supply-chain/",
+    "kind": "topic",
     "title": "Software Supply Chain",
     "summary": "Protect source, dependencies, build identities, pipelines, artifacts, registries, provenance, and update channels from compromise.",
     "trackId": "cybersecurity",
@@ -1788,7 +1901,8 @@
   },
   {
     "id": "cybersecurity/devsecops",
-    "slug": "cybersecurity/devsecops",
+    "route": "/topics/cybersecurity/devsecops/",
+    "kind": "topic",
     "title": "DevSecOps",
     "summary": "Integrate risk, policy, secure defaults, automated evidence, exceptions, and feedback into fast delivery and operations.",
     "trackId": "cybersecurity",
@@ -1803,7 +1917,8 @@
   },
   {
     "id": "cybersecurity/vulnerability-management",
-    "slug": "cybersecurity/vulnerability-management",
+    "route": "/topics/cybersecurity/vulnerability-management/",
+    "kind": "topic",
     "title": "Vulnerability Management",
     "summary": "Inventory, prioritize, remediate, mitigate, verify, and communicate vulnerabilities using exploit and business context.",
     "trackId": "cybersecurity",
@@ -1819,7 +1934,8 @@
   },
   {
     "id": "cybersecurity/detection-engineering",
-    "slug": "cybersecurity/detection-engineering",
+    "route": "/topics/cybersecurity/detection-engineering/",
+    "kind": "topic",
     "title": "Detection Engineering",
     "summary": "Turn threat hypotheses into reliable telemetry, analytics, enrichment, testing, triage, and measurable detection coverage.",
     "trackId": "cybersecurity",
@@ -1834,7 +1950,8 @@
   },
   {
     "id": "cybersecurity/incident-response",
-    "slug": "cybersecurity/incident-response",
+    "route": "/topics/cybersecurity/incident-response/",
+    "kind": "topic",
     "title": "Incident Response",
     "summary": "Handle security incidents through preparation, evidence-led triage, containment, eradication, recovery, communication, and lessons.",
     "trackId": "cybersecurity",
@@ -1849,7 +1966,8 @@
   },
   {
     "id": "cybersecurity/forensics-basics",
-    "slug": "cybersecurity/forensics-basics",
+    "route": "/topics/cybersecurity/forensics-basics/",
+    "kind": "topic",
     "title": "Forensics Basics",
     "summary": "Collect, preserve, validate, analyze, and report digital evidence from endpoints, memory, networks, cloud, and applications.",
     "trackId": "cybersecurity",
@@ -1864,7 +1982,8 @@
   },
   {
     "id": "cybersecurity/ai-security",
-    "slug": "cybersecurity/ai-security",
+    "route": "/topics/cybersecurity/ai-security/",
+    "kind": "topic",
     "title": "AI Security",
     "summary": "Secure AI systems against data, model, prompt, tool, retrieval, supply-chain, privacy, abuse, and availability threats.",
     "trackId": "cybersecurity",
@@ -1880,7 +1999,8 @@
   },
   {
     "id": "cybersecurity/fintech-security",
-    "slug": "cybersecurity/fintech-security",
+    "route": "/topics/cybersecurity/fintech-security/",
+    "kind": "topic",
     "title": "Fintech Security",
     "summary": "Protect money movement, account access, financial data, ledgers, processors, fraud controls, audit, and recovery.",
     "trackId": "cybersecurity",
@@ -1896,7 +2016,8 @@
   },
   {
     "id": "cybersecurity/owasp-and-nist-mappings",
-    "slug": "cybersecurity/owasp-and-nist-mappings",
+    "route": "/topics/cybersecurity/owasp-and-nist-mappings/",
+    "kind": "topic",
     "title": "OWASP and NIST Mappings",
     "summary": "Use OWASP and NIST frameworks as complementary taxonomies for product risks, security outcomes, controls, evidence, and improvement.",
     "trackId": "cybersecurity",
@@ -1912,7 +2033,8 @@
   },
   {
     "id": "fintech-quant/money-representation",
-    "slug": "fintech-quant/money-representation",
+    "route": "/topics/fintech-quant/money-representation/",
+    "kind": "topic",
     "title": "Money Representation",
     "summary": "Represent amounts, currencies, precision, rounding, rates, and financial invariants without binary-floating ambiguity.",
     "trackId": "fintech-quant",
@@ -1927,7 +2049,8 @@
   },
   {
     "id": "fintech-quant/double-entry-ledgers",
-    "slug": "fintech-quant/double-entry-ledgers",
+    "route": "/topics/fintech-quant/double-entry-ledgers/",
+    "kind": "topic",
     "title": "Double-Entry Ledgers",
     "summary": "Model immutable balanced postings, account invariants, reversals, reconciliation, and audit trails.",
     "trackId": "fintech-quant",
@@ -1942,7 +2065,8 @@
   },
   {
     "id": "fintech-quant/idempotency",
-    "slug": "fintech-quant/idempotency",
+    "route": "/topics/fintech-quant/idempotency/",
+    "kind": "topic",
     "title": "Idempotency",
     "summary": "Make retried financial commands produce one intended business effect under timeout, duplication, races, and recovery.",
     "trackId": "fintech-quant",
@@ -1957,7 +2081,8 @@
   },
   {
     "id": "fintech-quant/payment-lifecycles",
-    "slug": "fintech-quant/payment-lifecycles",
+    "route": "/topics/fintech-quant/payment-lifecycles/",
+    "kind": "topic",
     "title": "Payment Lifecycles",
     "summary": "Model payment intent, authorization, capture, clearing, settlement, refund, reversal, dispute, and reconciliation as explicit states.",
     "trackId": "fintech-quant",
@@ -1972,7 +2097,8 @@
   },
   {
     "id": "fintech-quant/card-networks",
-    "slug": "fintech-quant/card-networks",
+    "route": "/topics/fintech-quant/card-networks/",
+    "kind": "topic",
     "title": "Card Networks",
     "summary": "Understand card participants, messages, authorization, clearing, settlement, tokenization, disputes, and card-present/not-present risk.",
     "trackId": "fintech-quant",
@@ -1987,7 +2113,8 @@
   },
   {
     "id": "fintech-quant/upi",
-    "slug": "fintech-quant/upi",
+    "route": "/topics/fintech-quant/upi/",
+    "kind": "topic",
     "title": "UPI",
     "summary": "Model UPI participants, collect/pay flows, mandates, asynchronous status, disputes, security, and reconciliation in India.",
     "trackId": "fintech-quant",
@@ -2002,7 +2129,8 @@
   },
   {
     "id": "fintech-quant/open-banking",
-    "slug": "fintech-quant/open-banking",
+    "route": "/topics/fintech-quant/open-banking/",
+    "kind": "topic",
     "title": "Open Banking",
     "summary": "Design consented financial-data and payment APIs with federation, scopes, lifecycle, revocation, data minimization, and ecosystem risk.",
     "trackId": "fintech-quant",
@@ -2017,7 +2145,8 @@
   },
   {
     "id": "fintech-quant/lending-systems",
-    "slug": "fintech-quant/lending-systems",
+    "route": "/topics/fintech-quant/lending-systems/",
+    "kind": "topic",
     "title": "Lending Systems",
     "summary": "Model applications, underwriting, offers, disbursement, schedules, accrual, payment allocation, delinquency, restructuring, and servicing.",
     "trackId": "fintech-quant",
@@ -2032,7 +2161,8 @@
   },
   {
     "id": "fintech-quant/reconciliation",
-    "slug": "fintech-quant/reconciliation",
+    "route": "/topics/fintech-quant/reconciliation/",
+    "kind": "topic",
     "title": "Reconciliation",
     "summary": "Prove agreement among internal ledgers, processors, banks, networks, and customer state through deterministic matching and exceptions.",
     "trackId": "fintech-quant",
@@ -2047,7 +2177,8 @@
   },
   {
     "id": "fintech-quant/clearing-and-settlement",
-    "slug": "fintech-quant/clearing-and-settlement",
+    "route": "/topics/fintech-quant/clearing-and-settlement/",
+    "kind": "topic",
     "title": "Clearing and Settlement",
     "summary": "Understand obligation calculation, netting, collateral, liquidity, settlement assets, finality, delivery-versus-payment, and default risk.",
     "trackId": "fintech-quant",
@@ -2062,7 +2193,8 @@
   },
   {
     "id": "fintech-quant/fraud-systems",
-    "slug": "fintech-quant/fraud-systems",
+    "route": "/topics/fintech-quant/fraud-systems/",
+    "kind": "topic",
     "title": "Fraud Systems",
     "summary": "Combine rules, models, graphs, identity, operations, experimentation, and feedback to prevent financial abuse with controlled customer friction.",
     "trackId": "fintech-quant",
@@ -2078,7 +2210,8 @@
   },
   {
     "id": "fintech-quant/kyc-and-aml",
-    "slug": "fintech-quant/kyc-and-aml",
+    "route": "/topics/fintech-quant/kyc-and-aml/",
+    "kind": "topic",
     "title": "KYC and AML",
     "summary": "Engineer risk-based customer due diligence, sanctions screening, transaction monitoring, case management, reporting, and evidence lifecycle.",
     "trackId": "fintech-quant",
@@ -2093,7 +2226,8 @@
   },
   {
     "id": "fintech-quant/pci-concepts",
-    "slug": "fintech-quant/pci-concepts",
+    "route": "/topics/fintech-quant/pci-concepts/",
+    "kind": "topic",
     "title": "PCI Concepts",
     "summary": "Understand PCI DSS scope, cardholder-data flows, segmentation, controls, service providers, evidence, and tokenization without treating compliance as security completeness.",
     "trackId": "fintech-quant",
@@ -2108,7 +2242,8 @@
   },
   {
     "id": "fintech-quant/auditability",
-    "slug": "fintech-quant/auditability",
+    "route": "/topics/fintech-quant/auditability/",
+    "kind": "topic",
     "title": "Auditability",
     "summary": "Create complete, immutable, attributable, privacy-aware evidence for financial state, decisions, access, change, and correction.",
     "trackId": "fintech-quant",
@@ -2123,7 +2258,8 @@
   },
   {
     "id": "fintech-quant/financial-resilience",
-    "slug": "fintech-quant/financial-resilience",
+    "route": "/topics/fintech-quant/financial-resilience/",
+    "kind": "topic",
     "title": "Financial Resilience",
     "summary": "Keep critical financial services correct and available through dependency failure, overload, regional loss, data corruption, and operational disruption.",
     "trackId": "fintech-quant",
@@ -2139,7 +2275,8 @@
   },
   {
     "id": "fintech-quant/market-microstructure",
-    "slug": "fintech-quant/market-microstructure",
+    "route": "/topics/fintech-quant/market-microstructure/",
+    "kind": "topic",
     "title": "Market Microstructure",
     "summary": "Understand venues, participants, order types, price formation, spreads, liquidity, fragmentation, execution cost, and market abuse.",
     "trackId": "fintech-quant",
@@ -2154,7 +2291,8 @@
   },
   {
     "id": "fintech-quant/order-books",
-    "slug": "fintech-quant/order-books",
+    "route": "/topics/fintech-quant/order-books/",
+    "kind": "topic",
     "title": "Order Books",
     "summary": "Implement and reason about limit-order-book state, matching, sequencing, market data, replay, recovery, and performance.",
     "trackId": "fintech-quant",
@@ -2168,7 +2306,8 @@
   },
   {
     "id": "fintech-quant/stochastic-processes",
-    "slug": "fintech-quant/stochastic-processes",
+    "route": "/topics/fintech-quant/stochastic-processes/",
+    "kind": "topic",
     "title": "Stochastic Processes",
     "summary": "Use discrete/continuous stochastic processes, Markov models, Brownian motion, martingales, and stochastic calculus with explicit assumptions.",
     "trackId": "fintech-quant",
@@ -2182,7 +2321,8 @@
   },
   {
     "id": "fintech-quant/time-series",
-    "slug": "fintech-quant/time-series",
+    "route": "/topics/fintech-quant/time-series/",
+    "kind": "topic",
     "title": "Time Series",
     "summary": "Model temporal dependence, trend, seasonality, stationarity, volatility, leakage, uncertainty, and regime change.",
     "trackId": "fintech-quant",
@@ -2197,7 +2337,8 @@
   },
   {
     "id": "fintech-quant/derivatives-pricing",
-    "slug": "fintech-quant/derivatives-pricing",
+    "route": "/topics/fintech-quant/derivatives-pricing/",
+    "kind": "topic",
     "title": "Derivatives Pricing",
     "summary": "Price forwards, futures, options, and swaps using no-arbitrage, replication, risk-neutral expectation, Greeks, trees, PDEs, and simulation.",
     "trackId": "fintech-quant",
@@ -2211,7 +2352,8 @@
   },
   {
     "id": "fintech-quant/portfolio-and-risk",
-    "slug": "fintech-quant/portfolio-and-risk",
+    "route": "/topics/fintech-quant/portfolio-and-risk/",
+    "kind": "topic",
     "title": "Portfolio and Risk",
     "summary": "Connect diversification, covariance, factor exposure, optimization, VaR/expected shortfall, stress, liquidity, and model governance.",
     "trackId": "fintech-quant",
@@ -2226,7 +2368,8 @@
   },
   {
     "id": "fintech-quant/backtesting",
-    "slug": "fintech-quant/backtesting",
+    "route": "/topics/fintech-quant/backtesting/",
+    "kind": "topic",
     "title": "Backtesting",
     "summary": "Evaluate strategies with point-in-time data, realistic execution, costs, controls for bias, robust statistics, and reproducible research.",
     "trackId": "fintech-quant",
@@ -2240,7 +2383,8 @@
   },
   {
     "id": "fintech-quant/low-latency-c-plus-plus",
-    "slug": "fintech-quant/low-latency-c-plus-plus",
+    "route": "/topics/fintech-quant/low-latency-c-plus-plus/",
+    "kind": "topic",
     "title": "Low-Latency C++",
     "summary": "Engineer predictable C++ latency through measurement, ownership, layout, allocation, concurrency, networking, and failure-aware trade-offs.",
     "trackId": "fintech-quant",
@@ -2254,7 +2398,8 @@
   },
   {
     "id": "fintech-quant/quant-puzzles",
-    "slug": "fintech-quant/quant-puzzles",
+    "route": "/topics/fintech-quant/quant-puzzles/",
+    "kind": "topic",
     "title": "Quant Puzzles",
     "summary": "Solve probability, expectation, conditioning, combinatorics, estimation, invariants, and logic puzzles with clear assumptions and checks.",
     "trackId": "fintech-quant",
@@ -2269,7 +2414,8 @@
   },
   {
     "id": "fintech-quant/india-us-and-eu-regulation",
-    "slug": "fintech-quant/india-us-and-eu-regulation",
+    "route": "/topics/fintech-quant/india-us-and-eu-regulation/",
+    "kind": "topic",
     "title": "India, US, and EU Regulation",
     "summary": "Navigate India-first financial technology regulation with US/EU comparisons, entity/product scope, effective dates, and evidence ownership.",
     "trackId": "fintech-quant",
@@ -2281,6 +2427,1417 @@
       "sde",
       "data-engineer",
       "quant-dev"
+    ]
+  },
+  {
+    "id": "java",
+    "route": "/technologies/java/",
+    "kind": "technology",
+    "title": "Java",
+    "summary": "Java syntax, OOP, collections, generics, exceptions, streams, I/O, the JVM, GC, concurrency, testing, build tools, Spring Boot, and persistence.",
+    "ecosystem": "java",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "java",
+      "backend",
+      "sde",
+      "fintech"
+    ]
+  },
+  {
+    "id": "oop-and-lld",
+    "route": "/technologies/oop-and-lld/",
+    "kind": "technology",
+    "title": "OOP, SOLID, UML, and LLD",
+    "summary": "Object modeling, composition, SOLID trade-offs, UML notation, design patterns, and interview-sized low-level designs.",
+    "ecosystem": "systems",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack"
+    ]
+  },
+  {
+    "id": "dbms",
+    "route": "/technologies/dbms/",
+    "kind": "technology",
+    "title": "Database Management Systems",
+    "summary": "Relational theory, SQL, normalization, indexes, query plans, ACID, isolation, MVCC, locks, WAL, replication, partitioning, and NoSQL trade-offs.",
+    "ecosystem": "database",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack"
+    ]
+  },
+  {
+    "id": "operating-systems",
+    "route": "/technologies/operating-systems/",
+    "kind": "technology",
+    "title": "Operating Systems",
+    "summary": "Processes, threads, scheduling, IPC, synchronization, deadlocks, virtual memory, paging, filesystems, I/O, Linux internals, virtualization, and containers.",
+    "ecosystem": "systems",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack"
+    ]
+  },
+  {
+    "id": "computer-networks",
+    "route": "/technologies/computer-networks/",
+    "kind": "technology",
+    "title": "Computer Networks",
+    "summary": "TCP/IP, subnetting, routing, ARP, NAT, ICMP, UDP, TCP, DNS, TLS, HTTP/1–3, sockets, proxies, load balancers, CDNs, WebSockets, gRPC, security, and debugging.",
+    "ecosystem": "systems",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack"
+    ]
+  },
+  {
+    "id": "computer-architecture",
+    "route": "/technologies/computer-architecture/",
+    "kind": "technology",
+    "title": "Computer Architecture",
+    "summary": "CPU pipelines, caches, memory hierarchy, instruction sets, branch prediction, SIMD, and performance reasoning.",
+    "ecosystem": "systems",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack"
+    ]
+  },
+  {
+    "id": "compilers",
+    "route": "/technologies/compilers/",
+    "kind": "technology",
+    "title": "Compilers",
+    "summary": "Lexing, parsing, semantic analysis, IR, optimization, code generation, linking, and runtime interfaces.",
+    "ecosystem": "systems",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack"
+    ]
+  },
+  {
+    "id": "theory-of-computation",
+    "route": "/technologies/theory-of-computation/",
+    "kind": "technology",
+    "title": "Theory of Computation",
+    "summary": "Automata, regular languages, grammars, computability, reductions, and complexity classes.",
+    "ecosystem": "systems",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack"
+    ]
+  },
+  {
+    "id": "software-engineering",
+    "route": "/technologies/software-engineering/",
+    "kind": "technology",
+    "title": "Software Engineering",
+    "summary": "Requirements, modularity, testing, version control, delivery, observability, maintenance, and engineering trade-offs.",
+    "ecosystem": "systems",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack"
+    ]
+  },
+  {
+    "id": "atlas-001",
+    "route": "/problems/atlas-001/",
+    "kind": "problem",
+    "title": "Complement Pair Ledger",
+    "summary": "Implement Complement Pair Ledger. Return the requested result for every valid input, explain the hashing invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "hashing",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-002",
+    "route": "/problems/atlas-002/",
+    "kind": "problem",
+    "title": "Longest Consecutive Run",
+    "summary": "Implement Longest Consecutive Run. Return the requested result for every valid input, explain the hashing invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "hashing",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-003",
+    "route": "/problems/atlas-003/",
+    "kind": "problem",
+    "title": "Grouped Word Signatures",
+    "summary": "Implement Grouped Word Signatures. Return the requested result for every valid input, explain the hashing invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "hashing",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-004",
+    "route": "/problems/atlas-004/",
+    "kind": "problem",
+    "title": "Zero-Sum Span",
+    "summary": "Implement Zero-Sum Span. Return the requested result for every valid input, explain the hashing invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "hashing",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-005",
+    "route": "/problems/atlas-005/",
+    "kind": "problem",
+    "title": "Frequency-Ordered Values",
+    "summary": "Implement Frequency-Ordered Values. Return the requested result for every valid input, explain the hashing invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "hashing",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-006",
+    "route": "/problems/atlas-006/",
+    "kind": "problem",
+    "title": "Filtered Palindrome",
+    "summary": "Implement Filtered Palindrome. Return the requested result for every valid input, explain the two pointers invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "two-pointers",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-007",
+    "route": "/problems/atlas-007/",
+    "kind": "problem",
+    "title": "Target Pair in Sorted Data",
+    "summary": "Implement Target Pair in Sorted Data. Return the requested result for every valid input, explain the two pointers invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "two-pointers",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-008",
+    "route": "/problems/atlas-008/",
+    "kind": "problem",
+    "title": "Maximum Container",
+    "summary": "Implement Maximum Container. Return the requested result for every valid input, explain the two pointers invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "two-pointers",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-009",
+    "route": "/problems/atlas-009/",
+    "kind": "problem",
+    "title": "Zero-Sum Triples",
+    "summary": "Implement Zero-Sum Triples. Return the requested result for every valid input, explain the two pointers invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "two-pointers",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-010",
+    "route": "/problems/atlas-010/",
+    "kind": "problem",
+    "title": "In-Place Sorted Deduplication",
+    "summary": "Implement In-Place Sorted Deduplication. Return the requested result for every valid input, explain the two pointers invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "two-pointers",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-011",
+    "route": "/problems/atlas-011/",
+    "kind": "problem",
+    "title": "Smallest Covering Window",
+    "summary": "Implement Smallest Covering Window. Return the requested result for every valid input, explain the sliding window invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "sliding-window",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-012",
+    "route": "/problems/atlas-012/",
+    "kind": "problem",
+    "title": "Longest Unique Segment",
+    "summary": "Implement Longest Unique Segment. Return the requested result for every valid input, explain the sliding window invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "sliding-window",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-013",
+    "route": "/problems/atlas-013/",
+    "kind": "problem",
+    "title": "Best Fixed-Length Window",
+    "summary": "Implement Best Fixed-Length Window. Return the requested result for every valid input, explain the sliding window invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "sliding-window",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-014",
+    "route": "/problems/atlas-014/",
+    "kind": "problem",
+    "title": "Uniform Segment After Replacements",
+    "summary": "Implement Uniform Segment After Replacements. Return the requested result for every valid input, explain the sliding window invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "sliding-window",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-015",
+    "route": "/problems/atlas-015/",
+    "kind": "problem",
+    "title": "Permutation Window",
+    "summary": "Implement Permutation Window. Return the requested result for every valid input, explain the sliding window invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "sliding-window",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-016",
+    "route": "/problems/atlas-016/",
+    "kind": "problem",
+    "title": "Immutable Range Totals",
+    "summary": "Implement Immutable Range Totals. Return the requested result for every valid input, explain the prefix sums invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "prefix-sums",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-017",
+    "route": "/problems/atlas-017/",
+    "kind": "problem",
+    "title": "Equilibrium Index",
+    "summary": "Implement Equilibrium Index. Return the requested result for every valid input, explain the prefix sums invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "prefix-sums",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-018",
+    "route": "/problems/atlas-018/",
+    "kind": "problem",
+    "title": "Count Target-Sum Subarrays",
+    "summary": "Implement Count Target-Sum Subarrays. Return the requested result for every valid input, explain the prefix sums invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "prefix-sums",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-019",
+    "route": "/problems/atlas-019/",
+    "kind": "problem",
+    "title": "Product Except Current",
+    "summary": "Implement Product Except Current. Return the requested result for every valid input, explain the prefix sums invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "prefix-sums",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-020",
+    "route": "/problems/atlas-020/",
+    "kind": "problem",
+    "title": "Batched Range Additions",
+    "summary": "Implement Batched Range Additions. Return the requested result for every valid input, explain the prefix sums invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "prefix-sums",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-021",
+    "route": "/problems/atlas-021/",
+    "kind": "problem",
+    "title": "Balanced Delimiters",
+    "summary": "Implement Balanced Delimiters. Return the requested result for every valid input, explain the monotonic stack invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "monotonic-stack",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-022",
+    "route": "/problems/atlas-022/",
+    "kind": "problem",
+    "title": "Minimum-Aware Stack",
+    "summary": "Implement Minimum-Aware Stack. Return the requested result for every valid input, explain the monotonic stack invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "monotonic-stack",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-023",
+    "route": "/problems/atlas-023/",
+    "kind": "problem",
+    "title": "Next Warmer Reading",
+    "summary": "Implement Next Warmer Reading. Return the requested result for every valid input, explain the monotonic stack invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "monotonic-stack",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-024",
+    "route": "/problems/atlas-024/",
+    "kind": "problem",
+    "title": "Largest Histogram Rectangle",
+    "summary": "Implement Largest Histogram Rectangle. Return the requested result for every valid input, explain the monotonic stack invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "monotonic-stack",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-025",
+    "route": "/problems/atlas-025/",
+    "kind": "problem",
+    "title": "Decode Nested Repetitions",
+    "summary": "Implement Decode Nested Repetitions. Return the requested result for every valid input, explain the monotonic stack invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "monotonic-stack",
+    "difficulty": "easy",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-026",
+    "route": "/problems/atlas-026/",
+    "kind": "problem",
+    "title": "Stable Insert Position",
+    "summary": "Implement Stable Insert Position. Return the requested result for every valid input, explain the binary search invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "binary-search",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-027",
+    "route": "/problems/atlas-027/",
+    "kind": "problem",
+    "title": "Lookup in a Rotated Array",
+    "summary": "Implement Lookup in a Rotated Array. Return the requested result for every valid input, explain the binary search invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "binary-search",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-028",
+    "route": "/problems/atlas-028/",
+    "kind": "problem",
+    "title": "First and Last Match",
+    "summary": "Implement First and Last Match. Return the requested result for every valid input, explain the binary search invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "binary-search",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-029",
+    "route": "/problems/atlas-029/",
+    "kind": "problem",
+    "title": "Minimum Feasible Processing Rate",
+    "summary": "Implement Minimum Feasible Processing Rate. Return the requested result for every valid input, explain the binary search invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "binary-search",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-030",
+    "route": "/problems/atlas-030/",
+    "kind": "problem",
+    "title": "Search a Row-Major Matrix",
+    "summary": "Implement Search a Row-Major Matrix. Return the requested result for every valid input, explain the binary search invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "binary-search",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-031",
+    "route": "/problems/atlas-031/",
+    "kind": "problem",
+    "title": "Merge Reservations",
+    "summary": "Implement Merge Reservations. Return the requested result for every valid input, explain the intervals invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "intervals",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-032",
+    "route": "/problems/atlas-032/",
+    "kind": "problem",
+    "title": "Insert a Reservation",
+    "summary": "Implement Insert a Reservation. Return the requested result for every valid input, explain the intervals invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "intervals",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-033",
+    "route": "/problems/atlas-033/",
+    "kind": "problem",
+    "title": "Minimum Meeting Rooms",
+    "summary": "Implement Minimum Meeting Rooms. Return the requested result for every valid input, explain the intervals invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "intervals",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-034",
+    "route": "/problems/atlas-034/",
+    "kind": "problem",
+    "title": "Remove Minimum Overlaps",
+    "summary": "Implement Remove Minimum Overlaps. Return the requested result for every valid input, explain the intervals invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "intervals",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-035",
+    "route": "/problems/atlas-035/",
+    "kind": "problem",
+    "title": "Intersect Two Schedules",
+    "summary": "Implement Intersect Two Schedules. Return the requested result for every valid input, explain the intervals invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "intervals",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-036",
+    "route": "/problems/atlas-036/",
+    "kind": "problem",
+    "title": "Reverse a Chain",
+    "summary": "Implement Reverse a Chain. Return the requested result for every valid input, explain the linked lists invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "linked-lists",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-037",
+    "route": "/problems/atlas-037/",
+    "kind": "problem",
+    "title": "Detect a Cycle",
+    "summary": "Implement Detect a Cycle. Return the requested result for every valid input, explain the linked lists invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "linked-lists",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-038",
+    "route": "/problems/atlas-038/",
+    "kind": "problem",
+    "title": "Merge Ordered Chains",
+    "summary": "Implement Merge Ordered Chains. Return the requested result for every valid input, explain the linked lists invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "linked-lists",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-039",
+    "route": "/problems/atlas-039/",
+    "kind": "problem",
+    "title": "Remove the Nth Node From End",
+    "summary": "Implement Remove the Nth Node From End. Return the requested result for every valid input, explain the linked lists invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "linked-lists",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-040",
+    "route": "/problems/atlas-040/",
+    "kind": "problem",
+    "title": "Copy Random Links",
+    "summary": "Implement Copy Random Links. Return the requested result for every valid input, explain the linked lists invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "linked-lists",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-041",
+    "route": "/problems/atlas-041/",
+    "kind": "problem",
+    "title": "Maximum Tree Depth",
+    "summary": "Implement Maximum Tree Depth. Return the requested result for every valid input, explain the tree dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tree-dfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-042",
+    "route": "/problems/atlas-042/",
+    "kind": "problem",
+    "title": "Tree Diameter",
+    "summary": "Implement Tree Diameter. Return the requested result for every valid input, explain the tree dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tree-dfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-043",
+    "route": "/problems/atlas-043/",
+    "kind": "problem",
+    "title": "Height-Balanced Tree",
+    "summary": "Implement Height-Balanced Tree. Return the requested result for every valid input, explain the tree dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tree-dfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-044",
+    "route": "/problems/atlas-044/",
+    "kind": "problem",
+    "title": "Validate Search-Tree Ordering",
+    "summary": "Implement Validate Search-Tree Ordering. Return the requested result for every valid input, explain the tree dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tree-dfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-045",
+    "route": "/problems/atlas-045/",
+    "kind": "problem",
+    "title": "Lowest Common Ancestor",
+    "summary": "Implement Lowest Common Ancestor. Return the requested result for every valid input, explain the tree dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tree-dfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-046",
+    "route": "/problems/atlas-046/",
+    "kind": "problem",
+    "title": "Level Order Values",
+    "summary": "Implement Level Order Values. Return the requested result for every valid input, explain the tree bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tree-bfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-047",
+    "route": "/problems/atlas-047/",
+    "kind": "problem",
+    "title": "Zigzag Levels",
+    "summary": "Implement Zigzag Levels. Return the requested result for every valid input, explain the tree bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tree-bfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-048",
+    "route": "/problems/atlas-048/",
+    "kind": "problem",
+    "title": "Right-Side Projection",
+    "summary": "Implement Right-Side Projection. Return the requested result for every valid input, explain the tree bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tree-bfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-049",
+    "route": "/problems/atlas-049/",
+    "kind": "problem",
+    "title": "Connect Level Neighbours",
+    "summary": "Implement Connect Level Neighbours. Return the requested result for every valid input, explain the tree bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tree-bfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-050",
+    "route": "/problems/atlas-050/",
+    "kind": "problem",
+    "title": "Minimum Leaf Depth",
+    "summary": "Implement Minimum Leaf Depth. Return the requested result for every valid input, explain the tree bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tree-bfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-051",
+    "route": "/problems/atlas-051/",
+    "kind": "problem",
+    "title": "Kth Largest Value",
+    "summary": "Implement Kth Largest Value. Return the requested result for every valid input, explain the heaps invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "heaps",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-052",
+    "route": "/problems/atlas-052/",
+    "kind": "problem",
+    "title": "Most Frequent K Values",
+    "summary": "Implement Most Frequent K Values. Return the requested result for every valid input, explain the heaps invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "heaps",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-053",
+    "route": "/problems/atlas-053/",
+    "kind": "problem",
+    "title": "Merge K Ordered Streams",
+    "summary": "Implement Merge K Ordered Streams. Return the requested result for every valid input, explain the heaps invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "heaps",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-054",
+    "route": "/problems/atlas-054/",
+    "kind": "problem",
+    "title": "Running Median",
+    "summary": "Implement Running Median. Return the requested result for every valid input, explain the heaps invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "heaps",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-055",
+    "route": "/problems/atlas-055/",
+    "kind": "problem",
+    "title": "Cooldown Task Scheduler",
+    "summary": "Implement Cooldown Task Scheduler. Return the requested result for every valid input, explain the heaps invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "heaps",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-056",
+    "route": "/problems/atlas-056/",
+    "kind": "problem",
+    "title": "Count Grid Islands",
+    "summary": "Implement Count Grid Islands. Return the requested result for every valid input, explain the graph bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "graph-bfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-057",
+    "route": "/problems/atlas-057/",
+    "kind": "problem",
+    "title": "Shortest Grid Escape",
+    "summary": "Implement Shortest Grid Escape. Return the requested result for every valid input, explain the graph bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "graph-bfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-058",
+    "route": "/problems/atlas-058/",
+    "kind": "problem",
+    "title": "Single-Letter Transformation",
+    "summary": "Implement Single-Letter Transformation. Return the requested result for every valid input, explain the graph bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "graph-bfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-059",
+    "route": "/problems/atlas-059/",
+    "kind": "problem",
+    "title": "Course Reachability",
+    "summary": "Implement Course Reachability. Return the requested result for every valid input, explain the graph bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "graph-bfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-060",
+    "route": "/problems/atlas-060/",
+    "kind": "problem",
+    "title": "Rot Spread Time",
+    "summary": "Implement Rot Spread Time. Return the requested result for every valid input, explain the graph bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "graph-bfs",
+    "difficulty": "medium",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-061",
+    "route": "/problems/atlas-061/",
+    "kind": "problem",
+    "title": "Clone a Network",
+    "summary": "Implement Clone a Network. Return the requested result for every valid input, explain the graph dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "graph-dfs",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-062",
+    "route": "/problems/atlas-062/",
+    "kind": "problem",
+    "title": "Detect a Directed Cycle",
+    "summary": "Implement Detect a Directed Cycle. Return the requested result for every valid input, explain the graph dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "graph-dfs",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-063",
+    "route": "/problems/atlas-063/",
+    "kind": "problem",
+    "title": "Count Connected Components",
+    "summary": "Implement Count Connected Components. Return the requested result for every valid input, explain the graph dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "graph-dfs",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-064",
+    "route": "/problems/atlas-064/",
+    "kind": "problem",
+    "title": "Dependency Ordering",
+    "summary": "Implement Dependency Ordering. Return the requested result for every valid input, explain the graph dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "graph-dfs",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-065",
+    "route": "/problems/atlas-065/",
+    "kind": "problem",
+    "title": "Critical Network Bridges",
+    "summary": "Implement Critical Network Bridges. Return the requested result for every valid input, explain the graph dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "graph-dfs",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-066",
+    "route": "/problems/atlas-066/",
+    "kind": "problem",
+    "title": "All Subsets",
+    "summary": "Implement All Subsets. Return the requested result for every valid input, explain the backtracking invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "backtracking",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-067",
+    "route": "/problems/atlas-067/",
+    "kind": "problem",
+    "title": "All Permutations",
+    "summary": "Implement All Permutations. Return the requested result for every valid input, explain the backtracking invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "backtracking",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-068",
+    "route": "/problems/atlas-068/",
+    "kind": "problem",
+    "title": "Target Combination Sums",
+    "summary": "Implement Target Combination Sums. Return the requested result for every valid input, explain the backtracking invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "backtracking",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-069",
+    "route": "/problems/atlas-069/",
+    "kind": "problem",
+    "title": "Place N Queens",
+    "summary": "Implement Place N Queens. Return the requested result for every valid input, explain the backtracking invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "backtracking",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-070",
+    "route": "/problems/atlas-070/",
+    "kind": "problem",
+    "title": "Trace a Word in a Grid",
+    "summary": "Implement Trace a Word in a Grid. Return the requested result for every valid input, explain the backtracking invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "backtracking",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-071",
+    "route": "/problems/atlas-071/",
+    "kind": "problem",
+    "title": "Count Stair Routes",
+    "summary": "Implement Count Stair Routes. Return the requested result for every valid input, explain the dynamic programming invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "dynamic-programming",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-072",
+    "route": "/problems/atlas-072/",
+    "kind": "problem",
+    "title": "Maximum Non-Adjacent Sum",
+    "summary": "Implement Maximum Non-Adjacent Sum. Return the requested result for every valid input, explain the dynamic programming invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "dynamic-programming",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-073",
+    "route": "/problems/atlas-073/",
+    "kind": "problem",
+    "title": "Minimum Coins",
+    "summary": "Implement Minimum Coins. Return the requested result for every valid input, explain the dynamic programming invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "dynamic-programming",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-074",
+    "route": "/problems/atlas-074/",
+    "kind": "problem",
+    "title": "Longest Increasing Subsequence",
+    "summary": "Implement Longest Increasing Subsequence. Return the requested result for every valid input, explain the dynamic programming invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "dynamic-programming",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-075",
+    "route": "/problems/atlas-075/",
+    "kind": "problem",
+    "title": "Edit Distance",
+    "summary": "Implement Edit Distance. Return the requested result for every valid input, explain the dynamic programming invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "dynamic-programming",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
     ]
   }
 ]

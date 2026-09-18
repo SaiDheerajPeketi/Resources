@@ -1,0 +1,1627 @@
+{
+  "version": "2026.09.18-r8",
+  "technologies": [
+    {
+      "id": "java",
+      "title": "Java",
+      "kind": "language",
+      "ecosystem": "java",
+      "summary": "Java syntax, OOP, collections, generics, exceptions, streams, I/O, the JVM, GC, concurrency, testing, build tools, Spring Boot, and persistence.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "java",
+        "backend",
+        "sde",
+        "fintech"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "25",
+        "lts": "25"
+      },
+      "mentalModel": "Java source becomes verified bytecode; the JVM profiles hot paths, manages memory, and gives threads a precisely specified shared-memory model.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "java-command-1",
+        "java-command-2",
+        "java-command-3",
+        "java-command-4",
+        "java-command-5",
+        "java-command-6",
+        "java-command-7",
+        "java-command-8",
+        "java-command-9",
+        "java-command-10",
+        "java-command-11",
+        "java-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Java",
+          "code": "record Account(String id, long cents) {\n  Account { if (cents < 0) throw new IllegalArgumentException(); }\n}",
+          "explanation": "A record expresses immutable data; the compact constructor protects its invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Java",
+          "code": "record Account(String id, long cents) {\n  Account { if (cents < 0) throw new IllegalArgumentException(); }\n}\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Java",
+          "code": "record Account(String id, long cents) {\n  Account { if (cents < 0) throw new IllegalArgumentException(); }\n}\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Java: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Java mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Java: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Java mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Java: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Java mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Java: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Java mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Java: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Java mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Java: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Java mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Java: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Java mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Java: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Java mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Java: core mental model",
+          "back": "Java source becomes verified bytecode; the JVM profiles hot paths, manages memory, and gives threads a precisely specified shared-memory model."
+        },
+        {
+          "front": "Java: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Java: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Java: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "java-source-1",
+        "java-source-2",
+        "java-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "oop-and-lld",
+      "title": "OOP, SOLID, UML, and LLD",
+      "kind": "platform",
+      "ecosystem": "systems",
+      "summary": "Object modeling, composition, SOLID trade-offs, UML notation, design patterns, and interview-sized low-level designs.",
+      "publicationStatus": "published",
+      "level": "interview",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "An object owns an invariant and offers behavior that preserves it; a good design keeps reasons to change narrow and dependencies explicit.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "oop-and-lld-command-1",
+        "oop-and-lld-command-2",
+        "oop-and-lld-command-3",
+        "oop-and-lld-command-4",
+        "oop-and-lld-command-5",
+        "oop-and-lld-command-6",
+        "oop-and-lld-command-7",
+        "oop-and-lld-command-8",
+        "oop-and-lld-command-9",
+        "oop-and-lld-command-10",
+        "oop-and-lld-command-11",
+        "oop-and-lld-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "OOP, SOLID, UML, and LLD",
+          "code": "// OOP, SOLID, UML, and LLD: smallest useful example",
+          "explanation": "Trace inputs, state, and outputs before adding OOP, SOLID, UML, and LLD abstractions."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "OOP, SOLID, UML, and LLD",
+          "code": "// OOP, SOLID, UML, and LLD: smallest useful example\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "OOP, SOLID, UML, and LLD",
+          "code": "// OOP, SOLID, UML, and LLD: smallest useful example\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "OOP, SOLID, UML, and LLD: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant OOP, SOLID, UML, and LLD mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "OOP, SOLID, UML, and LLD: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant OOP, SOLID, UML, and LLD mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "OOP, SOLID, UML, and LLD: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant OOP, SOLID, UML, and LLD mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "OOP, SOLID, UML, and LLD: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant OOP, SOLID, UML, and LLD mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "OOP, SOLID, UML, and LLD: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant OOP, SOLID, UML, and LLD mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "OOP, SOLID, UML, and LLD: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant OOP, SOLID, UML, and LLD mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "OOP, SOLID, UML, and LLD: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant OOP, SOLID, UML, and LLD mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "OOP, SOLID, UML, and LLD: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant OOP, SOLID, UML, and LLD mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "OOP, SOLID, UML, and LLD: core mental model",
+          "back": "An object owns an invariant and offers behavior that preserves it; a good design keeps reasons to change narrow and dependencies explicit."
+        },
+        {
+          "front": "OOP, SOLID, UML, and LLD: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "OOP, SOLID, UML, and LLD: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "OOP, SOLID, UML, and LLD: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "oop-and-lld-source-1",
+        "oop-and-lld-source-2",
+        "oop-and-lld-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "dbms",
+      "title": "Database Management Systems",
+      "kind": "database",
+      "ecosystem": "database",
+      "summary": "Relational theory, SQL, normalization, indexes, query plans, ACID, isolation, MVCC, locks, WAL, replication, partitioning, and NoSQL trade-offs.",
+      "publicationStatus": "published",
+      "level": "interview",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "A DBMS turns logical relations into durable pages while coordinating concurrent histories that must still satisfy declared invariants.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "dbms-command-1",
+        "dbms-command-2",
+        "dbms-command-3",
+        "dbms-command-4",
+        "dbms-command-5",
+        "dbms-command-6",
+        "dbms-command-7",
+        "dbms-command-8",
+        "dbms-command-9",
+        "dbms-command-10",
+        "dbms-command-11",
+        "dbms-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Database Management Systems",
+          "code": "// Database Management Systems: smallest useful example",
+          "explanation": "Trace inputs, state, and outputs before adding Database Management Systems abstractions."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Database Management Systems",
+          "code": "// Database Management Systems: smallest useful example\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Database Management Systems",
+          "code": "// Database Management Systems: smallest useful example\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Database Management Systems: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Database Management Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Database Management Systems: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Database Management Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Database Management Systems: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Database Management Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Database Management Systems: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Database Management Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Database Management Systems: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Database Management Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Database Management Systems: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Database Management Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Database Management Systems: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Database Management Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Database Management Systems: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Database Management Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Database Management Systems: core mental model",
+          "back": "A DBMS turns logical relations into durable pages while coordinating concurrent histories that must still satisfy declared invariants."
+        },
+        {
+          "front": "Database Management Systems: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Database Management Systems: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Database Management Systems: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "dbms-source-1",
+        "dbms-source-2",
+        "dbms-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "operating-systems",
+      "title": "Operating Systems",
+      "kind": "platform",
+      "ecosystem": "systems",
+      "summary": "Processes, threads, scheduling, IPC, synchronization, deadlocks, virtual memory, paging, filesystems, I/O, Linux internals, virtualization, and containers.",
+      "publicationStatus": "published",
+      "level": "interview",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "The kernel multiplexes processors, memory, and devices while presenting isolated processes with stable abstractions and enforceable protection boundaries.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "operating-systems-command-1",
+        "operating-systems-command-2",
+        "operating-systems-command-3",
+        "operating-systems-command-4",
+        "operating-systems-command-5",
+        "operating-systems-command-6",
+        "operating-systems-command-7",
+        "operating-systems-command-8",
+        "operating-systems-command-9",
+        "operating-systems-command-10",
+        "operating-systems-command-11",
+        "operating-systems-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Operating Systems",
+          "code": "// Operating Systems: smallest useful example",
+          "explanation": "Trace inputs, state, and outputs before adding Operating Systems abstractions."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Operating Systems",
+          "code": "// Operating Systems: smallest useful example\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Operating Systems",
+          "code": "// Operating Systems: smallest useful example\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Operating Systems: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Operating Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Operating Systems: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Operating Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Operating Systems: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Operating Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Operating Systems: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Operating Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Operating Systems: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Operating Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Operating Systems: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Operating Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Operating Systems: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Operating Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Operating Systems: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Operating Systems mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Operating Systems: core mental model",
+          "back": "The kernel multiplexes processors, memory, and devices while presenting isolated processes with stable abstractions and enforceable protection boundaries."
+        },
+        {
+          "front": "Operating Systems: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Operating Systems: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Operating Systems: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "operating-systems-source-1",
+        "operating-systems-source-2",
+        "operating-systems-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "computer-networks",
+      "title": "Computer Networks",
+      "kind": "platform",
+      "ecosystem": "systems",
+      "summary": "TCP/IP, subnetting, routing, ARP, NAT, ICMP, UDP, TCP, DNS, TLS, HTTP/1–3, sockets, proxies, load balancers, CDNs, WebSockets, gRPC, security, and debugging.",
+      "publicationStatus": "published",
+      "level": "interview",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Networks move best-effort packets across independently managed hops; reliability, naming, security, and application semantics are layered on top.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "computer-networks-command-1",
+        "computer-networks-command-2",
+        "computer-networks-command-3",
+        "computer-networks-command-4",
+        "computer-networks-command-5",
+        "computer-networks-command-6",
+        "computer-networks-command-7",
+        "computer-networks-command-8",
+        "computer-networks-command-9",
+        "computer-networks-command-10",
+        "computer-networks-command-11",
+        "computer-networks-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Computer Networks",
+          "code": "// Computer Networks: smallest useful example",
+          "explanation": "Trace inputs, state, and outputs before adding Computer Networks abstractions."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Computer Networks",
+          "code": "// Computer Networks: smallest useful example\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Computer Networks",
+          "code": "// Computer Networks: smallest useful example\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Computer Networks: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Computer Networks mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Networks: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Computer Networks mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Networks: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Computer Networks mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Networks: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Computer Networks mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Networks: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Computer Networks mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Networks: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Computer Networks mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Networks: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Computer Networks mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Networks: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Computer Networks mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Computer Networks: core mental model",
+          "back": "Networks move best-effort packets across independently managed hops; reliability, naming, security, and application semantics are layered on top."
+        },
+        {
+          "front": "Computer Networks: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Computer Networks: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Computer Networks: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "computer-networks-source-1",
+        "computer-networks-source-2",
+        "computer-networks-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "computer-architecture",
+      "title": "Computer Architecture",
+      "kind": "platform",
+      "ecosystem": "systems",
+      "summary": "CPU pipelines, caches, memory hierarchy, instruction sets, branch prediction, SIMD, and performance reasoning.",
+      "publicationStatus": "published",
+      "level": "interview",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Computer Architecture turns informal behavior into explicit models whose assumptions, invariants, and costs can be tested.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "computer-architecture-command-1",
+        "computer-architecture-command-2",
+        "computer-architecture-command-3",
+        "computer-architecture-command-4",
+        "computer-architecture-command-5",
+        "computer-architecture-command-6",
+        "computer-architecture-command-7",
+        "computer-architecture-command-8",
+        "computer-architecture-command-9",
+        "computer-architecture-command-10",
+        "computer-architecture-command-11",
+        "computer-architecture-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Computer Architecture",
+          "code": "// Computer Architecture: smallest useful example",
+          "explanation": "Trace inputs, state, and outputs before adding Computer Architecture abstractions."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Computer Architecture",
+          "code": "// Computer Architecture: smallest useful example\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Computer Architecture",
+          "code": "// Computer Architecture: smallest useful example\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Computer Architecture: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Computer Architecture mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Architecture: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Computer Architecture mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Architecture: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Computer Architecture mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Architecture: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Computer Architecture mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Architecture: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Computer Architecture mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Architecture: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Computer Architecture mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Architecture: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Computer Architecture mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Computer Architecture: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Computer Architecture mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Computer Architecture: core mental model",
+          "back": "Computer Architecture turns informal behavior into explicit models whose assumptions, invariants, and costs can be tested."
+        },
+        {
+          "front": "Computer Architecture: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Computer Architecture: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Computer Architecture: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "computer-architecture-source-1",
+        "computer-architecture-source-2",
+        "computer-architecture-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "compilers",
+      "title": "Compilers",
+      "kind": "platform",
+      "ecosystem": "systems",
+      "summary": "Lexing, parsing, semantic analysis, IR, optimization, code generation, linking, and runtime interfaces.",
+      "publicationStatus": "published",
+      "level": "interview",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Compilers turns informal behavior into explicit models whose assumptions, invariants, and costs can be tested.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "compilers-command-1",
+        "compilers-command-2",
+        "compilers-command-3",
+        "compilers-command-4",
+        "compilers-command-5",
+        "compilers-command-6",
+        "compilers-command-7",
+        "compilers-command-8",
+        "compilers-command-9",
+        "compilers-command-10",
+        "compilers-command-11",
+        "compilers-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Compilers",
+          "code": "// Compilers: smallest useful example",
+          "explanation": "Trace inputs, state, and outputs before adding Compilers abstractions."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Compilers",
+          "code": "// Compilers: smallest useful example\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Compilers",
+          "code": "// Compilers: smallest useful example\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Compilers: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Compilers mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Compilers: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Compilers mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Compilers: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Compilers mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Compilers: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Compilers mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Compilers: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Compilers mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Compilers: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Compilers mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Compilers: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Compilers mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Compilers: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Compilers mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Compilers: core mental model",
+          "back": "Compilers turns informal behavior into explicit models whose assumptions, invariants, and costs can be tested."
+        },
+        {
+          "front": "Compilers: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Compilers: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Compilers: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "compilers-source-1",
+        "compilers-source-2",
+        "compilers-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "theory-of-computation",
+      "title": "Theory of Computation",
+      "kind": "platform",
+      "ecosystem": "systems",
+      "summary": "Automata, regular languages, grammars, computability, reductions, and complexity classes.",
+      "publicationStatus": "published",
+      "level": "interview",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Theory of Computation turns informal behavior into explicit models whose assumptions, invariants, and costs can be tested.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "theory-of-computation-command-1",
+        "theory-of-computation-command-2",
+        "theory-of-computation-command-3",
+        "theory-of-computation-command-4",
+        "theory-of-computation-command-5",
+        "theory-of-computation-command-6",
+        "theory-of-computation-command-7",
+        "theory-of-computation-command-8",
+        "theory-of-computation-command-9",
+        "theory-of-computation-command-10",
+        "theory-of-computation-command-11",
+        "theory-of-computation-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Theory of Computation",
+          "code": "// Theory of Computation: smallest useful example",
+          "explanation": "Trace inputs, state, and outputs before adding Theory of Computation abstractions."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Theory of Computation",
+          "code": "// Theory of Computation: smallest useful example\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Theory of Computation",
+          "code": "// Theory of Computation: smallest useful example\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Theory of Computation: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Theory of Computation mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Theory of Computation: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Theory of Computation mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Theory of Computation: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Theory of Computation mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Theory of Computation: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Theory of Computation mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Theory of Computation: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Theory of Computation mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Theory of Computation: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Theory of Computation mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Theory of Computation: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Theory of Computation mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Theory of Computation: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Theory of Computation mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Theory of Computation: core mental model",
+          "back": "Theory of Computation turns informal behavior into explicit models whose assumptions, invariants, and costs can be tested."
+        },
+        {
+          "front": "Theory of Computation: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Theory of Computation: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Theory of Computation: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "theory-of-computation-source-1",
+        "theory-of-computation-source-2",
+        "theory-of-computation-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "software-engineering",
+      "title": "Software Engineering",
+      "kind": "platform",
+      "ecosystem": "systems",
+      "summary": "Requirements, modularity, testing, version control, delivery, observability, maintenance, and engineering trade-offs.",
+      "publicationStatus": "published",
+      "level": "interview",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Software Engineering turns informal behavior into explicit models whose assumptions, invariants, and costs can be tested.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "software-engineering-command-1",
+        "software-engineering-command-2",
+        "software-engineering-command-3",
+        "software-engineering-command-4",
+        "software-engineering-command-5",
+        "software-engineering-command-6",
+        "software-engineering-command-7",
+        "software-engineering-command-8",
+        "software-engineering-command-9",
+        "software-engineering-command-10",
+        "software-engineering-command-11",
+        "software-engineering-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Software Engineering",
+          "code": "// Software Engineering: smallest useful example",
+          "explanation": "Trace inputs, state, and outputs before adding Software Engineering abstractions."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Software Engineering",
+          "code": "// Software Engineering: smallest useful example\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Software Engineering",
+          "code": "// Software Engineering: smallest useful example\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Software Engineering: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Software Engineering mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Software Engineering: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Software Engineering mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Software Engineering: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Software Engineering mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Software Engineering: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Software Engineering mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Software Engineering: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Software Engineering mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Software Engineering: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Software Engineering mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Software Engineering: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Software Engineering mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Software Engineering: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Software Engineering mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Software Engineering: core mental model",
+          "back": "Software Engineering turns informal behavior into explicit models whose assumptions, invariants, and costs can be tested."
+        },
+        {
+          "front": "Software Engineering: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Software Engineering: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Software Engineering: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "software-engineering-source-1",
+        "software-engineering-source-2",
+        "software-engineering-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    }
+  ]
+}

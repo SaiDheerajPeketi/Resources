@@ -23,6 +23,7 @@ OWN-WORLD: Cool paper, deep ink, cobalt route lines, restrained teal and amber, 
 STORY: The learner sees the complete territory, traces prerequisites, selects a concept, and moves directly into study, practice, or revision.
 FIRST VIEWPORT: A 17/56/27 index-map-inspector split under one command strip; Hash Tables is selected, its route is traced, and its three actions sit at the lower right.
 FORM: Technical field atlas, user-pinned and retained over seed 3c6e11b2; map-dominant approved comp.
+LIBRARY FORM: Stack Workbench; ecosystem index, layered technology plates, and a command/lesson inspector in the same field-manual world.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->
 `;

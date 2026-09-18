@@ -1,0 +1,1085 @@
+{
+  "version": "2026.09.18-r8",
+  "commands": [
+    {
+      "id": "java-command-1",
+      "technologyId": "java",
+      "title": "Check the runtime",
+      "command": "java --version",
+      "purpose": "Confirm the active JDK.",
+      "platform": "all",
+      "expectedResult": "A successful Java result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "java-command-2",
+      "technologyId": "java",
+      "title": "Check the compiler",
+      "command": "javac --version",
+      "purpose": "Confirm source compatibility.",
+      "platform": "all",
+      "expectedResult": "A successful Java result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "java-command-3",
+      "technologyId": "java",
+      "title": "Compile one class",
+      "command": "javac Main.java",
+      "purpose": "Turn source into bytecode.",
+      "platform": "all",
+      "expectedResult": "A successful Java result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "java-command-4",
+      "technologyId": "java",
+      "title": "Run a class",
+      "command": "java Main",
+      "purpose": "Start the JVM with Main as the entry point.",
+      "platform": "all",
+      "expectedResult": "A successful Java result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "java-command-5",
+      "technologyId": "java",
+      "title": "Inspect bytecode",
+      "command": "javap -c Main.class",
+      "purpose": "Disassemble methods for JVM-level reasoning.",
+      "platform": "all",
+      "expectedResult": "A successful Java result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "java-command-6",
+      "technologyId": "java",
+      "title": "Open the REPL",
+      "command": "jshell",
+      "purpose": "Test APIs and language behavior interactively.",
+      "platform": "all",
+      "expectedResult": "A successful Java result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "java-command-7",
+      "technologyId": "java",
+      "title": "Run Maven tests",
+      "command": "./mvnw test",
+      "purpose": "Execute the Maven test lifecycle.",
+      "platform": "all",
+      "expectedResult": "A successful Java result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "java-command-8",
+      "technologyId": "java",
+      "title": "Package with Maven",
+      "command": "./mvnw package",
+      "purpose": "Compile, test, and package the application.",
+      "platform": "all",
+      "expectedResult": "A successful Java result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "java-command-9",
+      "technologyId": "java",
+      "title": "Run Gradle tests",
+      "command": "./gradlew test",
+      "purpose": "Execute the Gradle test task.",
+      "platform": "all",
+      "expectedResult": "A successful Java result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "java-command-10",
+      "technologyId": "java",
+      "title": "Inspect dependencies",
+      "command": "./mvnw dependency:tree",
+      "purpose": "Reveal transitive dependency selection.",
+      "platform": "all",
+      "expectedResult": "A successful Java result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "java-command-11",
+      "technologyId": "java",
+      "title": "Capture a flight recording",
+      "command": "jcmd <pid> JFR.start duration=60s filename=app.jfr",
+      "purpose": "Record JVM runtime events for analysis.",
+      "platform": "all",
+      "expectedResult": "A successful Java result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "java-command-12",
+      "technologyId": "java",
+      "title": "Inspect the heap",
+      "command": "jcmd <pid> GC.heap_info",
+      "purpose": "Read heap and collector information.",
+      "platform": "all",
+      "expectedResult": "A successful Java result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "oop-and-lld-command-1",
+      "technologyId": "oop-and-lld",
+      "title": "Run focused tests",
+      "command": "./gradlew test --tests '*ParkingLot*'",
+      "purpose": "Exercise one design boundary.",
+      "platform": "all",
+      "expectedResult": "A successful OOP, SOLID, UML, and LLD result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "oop-and-lld-command-2",
+      "technologyId": "oop-and-lld",
+      "title": "Find public APIs",
+      "command": "rg \"public (class|interface|record)\" src",
+      "purpose": "Review the exposed object model.",
+      "platform": "all",
+      "expectedResult": "A successful OOP, SOLID, UML, and LLD result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "oop-and-lld-command-3",
+      "technologyId": "oop-and-lld",
+      "title": "Render PlantUML",
+      "command": "plantuml design.puml",
+      "purpose": "Turn a text model into a reviewable diagram.",
+      "platform": "all",
+      "expectedResult": "A successful OOP, SOLID, UML, and LLD result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "oop-and-lld-command-4",
+      "technologyId": "oop-and-lld",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "oop-and-lld-command-5",
+      "technologyId": "oop-and-lld",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "oop-and-lld-command-6",
+      "technologyId": "oop-and-lld",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "oop-and-lld-command-7",
+      "technologyId": "oop-and-lld",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "oop-and-lld-command-8",
+      "technologyId": "oop-and-lld",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "oop-and-lld-command-9",
+      "technologyId": "oop-and-lld",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "oop-and-lld-command-10",
+      "technologyId": "oop-and-lld",
+      "title": "Read the manual",
+      "command": "man <tool>",
+      "purpose": "Use the installed manual for exact platform semantics.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "oop-and-lld-command-11",
+      "technologyId": "oop-and-lld",
+      "title": "Capture command timing",
+      "command": "time <command>",
+      "purpose": "Measure wall-clock behavior before optimizing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "oop-and-lld-command-12",
+      "technologyId": "oop-and-lld",
+      "title": "Inspect open files",
+      "command": "lsof -p <pid>",
+      "purpose": "Trace files and sockets owned by a process.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbms-command-1",
+      "technologyId": "dbms",
+      "title": "Connect safely",
+      "command": "psql \"$DATABASE_URL\"",
+      "purpose": "Open an authenticated SQL session.",
+      "platform": "all",
+      "expectedResult": "A successful Database Management Systems result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbms-command-2",
+      "technologyId": "dbms",
+      "title": "Describe a relation",
+      "command": "\\d+ accounts",
+      "purpose": "Inspect columns, indexes, and storage.",
+      "platform": "all",
+      "expectedResult": "A successful Database Management Systems result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbms-command-3",
+      "technologyId": "dbms",
+      "title": "Explain a query",
+      "command": "EXPLAIN (ANALYZE, BUFFERS) SELECT ...",
+      "purpose": "Compare estimates with measured execution.",
+      "platform": "all",
+      "expectedResult": "A successful Database Management Systems result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbms-command-4",
+      "technologyId": "dbms",
+      "title": "Inspect transactions",
+      "command": "SELECT * FROM pg_stat_activity;",
+      "purpose": "Find active and waiting sessions.",
+      "platform": "all",
+      "expectedResult": "A successful Database Management Systems result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbms-command-5",
+      "technologyId": "dbms",
+      "title": "Inspect locks",
+      "command": "SELECT * FROM pg_locks;",
+      "purpose": "Trace blocking and lock modes.",
+      "platform": "all",
+      "expectedResult": "A successful Database Management Systems result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbms-command-6",
+      "technologyId": "dbms",
+      "title": "Open SQLite",
+      "command": "sqlite3 app.db",
+      "purpose": "Start a local embedded database shell.",
+      "platform": "all",
+      "expectedResult": "A successful Database Management Systems result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbms-command-7",
+      "technologyId": "dbms",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbms-command-8",
+      "technologyId": "dbms",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbms-command-9",
+      "technologyId": "dbms",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbms-command-10",
+      "technologyId": "dbms",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbms-command-11",
+      "technologyId": "dbms",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbms-command-12",
+      "technologyId": "dbms",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "operating-systems-command-1",
+      "technologyId": "operating-systems",
+      "title": "Inspect processes",
+      "command": "ps -eo pid,ppid,stat,pcpu,pmem,comm",
+      "purpose": "Read process hierarchy and scheduler state.",
+      "platform": "all",
+      "expectedResult": "A successful Operating Systems result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "operating-systems-command-2",
+      "technologyId": "operating-systems",
+      "title": "Inspect threads",
+      "command": "ps -T -p <pid>",
+      "purpose": "List a process's schedulable threads.",
+      "platform": "all",
+      "expectedResult": "A successful Operating Systems result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "operating-systems-command-3",
+      "technologyId": "operating-systems",
+      "title": "Trace syscalls",
+      "command": "strace -f -o trace.log <command>",
+      "purpose": "Observe the user/kernel boundary.",
+      "platform": "all",
+      "expectedResult": "A successful Operating Systems result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "operating-systems-command-4",
+      "technologyId": "operating-systems",
+      "title": "Inspect memory maps",
+      "command": "cat /proc/<pid>/maps",
+      "purpose": "See virtual address regions.",
+      "platform": "all",
+      "expectedResult": "A successful Operating Systems result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "operating-systems-command-5",
+      "technologyId": "operating-systems",
+      "title": "Inspect descriptors",
+      "command": "ls -l /proc/<pid>/fd",
+      "purpose": "See a process's open handles.",
+      "platform": "all",
+      "expectedResult": "A successful Operating Systems result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "operating-systems-command-6",
+      "technologyId": "operating-systems",
+      "title": "Inspect pressure",
+      "command": "vmstat 1",
+      "purpose": "Watch runnable tasks, paging, and CPU time.",
+      "platform": "all",
+      "expectedResult": "A successful Operating Systems result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "operating-systems-command-7",
+      "technologyId": "operating-systems",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "operating-systems-command-8",
+      "technologyId": "operating-systems",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "operating-systems-command-9",
+      "technologyId": "operating-systems",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "operating-systems-command-10",
+      "technologyId": "operating-systems",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "operating-systems-command-11",
+      "technologyId": "operating-systems",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "operating-systems-command-12",
+      "technologyId": "operating-systems",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-networks-command-1",
+      "technologyId": "computer-networks",
+      "title": "Inspect addresses",
+      "command": "ip address",
+      "purpose": "List interfaces and assigned prefixes.",
+      "platform": "all",
+      "expectedResult": "A successful Computer Networks result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-networks-command-2",
+      "technologyId": "computer-networks",
+      "title": "Inspect routes",
+      "command": "ip route",
+      "purpose": "Read the forwarding decision table.",
+      "platform": "all",
+      "expectedResult": "A successful Computer Networks result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-networks-command-3",
+      "technologyId": "computer-networks",
+      "title": "Inspect sockets",
+      "command": "ss -tulpn",
+      "purpose": "List listening and connected sockets.",
+      "platform": "all",
+      "expectedResult": "A successful Computer Networks result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-networks-command-4",
+      "technologyId": "computer-networks",
+      "title": "Resolve DNS",
+      "command": "dig example.com A +trace",
+      "purpose": "Trace delegation and records.",
+      "platform": "all",
+      "expectedResult": "A successful Computer Networks result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-networks-command-5",
+      "technologyId": "computer-networks",
+      "title": "Inspect TLS",
+      "command": "openssl s_client -connect example.com:443 -servername example.com",
+      "purpose": "Read the negotiated certificate and cipher.",
+      "platform": "all",
+      "expectedResult": "A successful Computer Networks result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-networks-command-6",
+      "technologyId": "computer-networks",
+      "title": "Trace HTTP",
+      "command": "curl -v --http2 https://example.com",
+      "purpose": "Expose request, connection, and response details.",
+      "platform": "all",
+      "expectedResult": "A successful Computer Networks result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-networks-command-7",
+      "technologyId": "computer-networks",
+      "title": "Capture packets",
+      "command": "tcpdump -ni any port 443",
+      "purpose": "Capture matching traffic for protocol analysis.",
+      "platform": "all",
+      "expectedResult": "A successful Computer Networks result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-networks-command-8",
+      "technologyId": "computer-networks",
+      "title": "Trace a path",
+      "command": "traceroute example.com",
+      "purpose": "Estimate the routed hop sequence.",
+      "platform": "all",
+      "expectedResult": "A successful Computer Networks result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-networks-command-9",
+      "technologyId": "computer-networks",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-networks-command-10",
+      "technologyId": "computer-networks",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-networks-command-11",
+      "technologyId": "computer-networks",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-networks-command-12",
+      "technologyId": "computer-networks",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-architecture-command-1",
+      "technologyId": "computer-architecture",
+      "title": "Locate the build entry",
+      "command": "rg \"main|build|test\" .",
+      "purpose": "Find executable and verification boundaries.",
+      "platform": "all",
+      "expectedResult": "A successful Computer Architecture result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-architecture-command-2",
+      "technologyId": "computer-architecture",
+      "title": "Run the test suite",
+      "command": "<project-test-command>",
+      "purpose": "Verify observable behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Computer Architecture result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-architecture-command-3",
+      "technologyId": "computer-architecture",
+      "title": "Inspect generated artifacts",
+      "command": "find . -maxdepth 3 -type f",
+      "purpose": "Relate source inputs to build outputs.",
+      "platform": "all",
+      "expectedResult": "A successful Computer Architecture result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-architecture-command-4",
+      "technologyId": "computer-architecture",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-architecture-command-5",
+      "technologyId": "computer-architecture",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-architecture-command-6",
+      "technologyId": "computer-architecture",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-architecture-command-7",
+      "technologyId": "computer-architecture",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-architecture-command-8",
+      "technologyId": "computer-architecture",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-architecture-command-9",
+      "technologyId": "computer-architecture",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-architecture-command-10",
+      "technologyId": "computer-architecture",
+      "title": "Read the manual",
+      "command": "man <tool>",
+      "purpose": "Use the installed manual for exact platform semantics.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-architecture-command-11",
+      "technologyId": "computer-architecture",
+      "title": "Capture command timing",
+      "command": "time <command>",
+      "purpose": "Measure wall-clock behavior before optimizing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "computer-architecture-command-12",
+      "technologyId": "computer-architecture",
+      "title": "Inspect open files",
+      "command": "lsof -p <pid>",
+      "purpose": "Trace files and sockets owned by a process.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "compilers-command-1",
+      "technologyId": "compilers",
+      "title": "Locate the build entry",
+      "command": "rg \"main|build|test\" .",
+      "purpose": "Find executable and verification boundaries.",
+      "platform": "all",
+      "expectedResult": "A successful Compilers result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "compilers-command-2",
+      "technologyId": "compilers",
+      "title": "Run the test suite",
+      "command": "<project-test-command>",
+      "purpose": "Verify observable behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Compilers result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "compilers-command-3",
+      "technologyId": "compilers",
+      "title": "Inspect generated artifacts",
+      "command": "find . -maxdepth 3 -type f",
+      "purpose": "Relate source inputs to build outputs.",
+      "platform": "all",
+      "expectedResult": "A successful Compilers result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "compilers-command-4",
+      "technologyId": "compilers",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "compilers-command-5",
+      "technologyId": "compilers",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "compilers-command-6",
+      "technologyId": "compilers",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "compilers-command-7",
+      "technologyId": "compilers",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "compilers-command-8",
+      "technologyId": "compilers",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "compilers-command-9",
+      "technologyId": "compilers",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "compilers-command-10",
+      "technologyId": "compilers",
+      "title": "Read the manual",
+      "command": "man <tool>",
+      "purpose": "Use the installed manual for exact platform semantics.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "compilers-command-11",
+      "technologyId": "compilers",
+      "title": "Capture command timing",
+      "command": "time <command>",
+      "purpose": "Measure wall-clock behavior before optimizing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "compilers-command-12",
+      "technologyId": "compilers",
+      "title": "Inspect open files",
+      "command": "lsof -p <pid>",
+      "purpose": "Trace files and sockets owned by a process.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "theory-of-computation-command-1",
+      "technologyId": "theory-of-computation",
+      "title": "Locate the build entry",
+      "command": "rg \"main|build|test\" .",
+      "purpose": "Find executable and verification boundaries.",
+      "platform": "all",
+      "expectedResult": "A successful Theory of Computation result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "theory-of-computation-command-2",
+      "technologyId": "theory-of-computation",
+      "title": "Run the test suite",
+      "command": "<project-test-command>",
+      "purpose": "Verify observable behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Theory of Computation result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "theory-of-computation-command-3",
+      "technologyId": "theory-of-computation",
+      "title": "Inspect generated artifacts",
+      "command": "find . -maxdepth 3 -type f",
+      "purpose": "Relate source inputs to build outputs.",
+      "platform": "all",
+      "expectedResult": "A successful Theory of Computation result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "theory-of-computation-command-4",
+      "technologyId": "theory-of-computation",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "theory-of-computation-command-5",
+      "technologyId": "theory-of-computation",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "theory-of-computation-command-6",
+      "technologyId": "theory-of-computation",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "theory-of-computation-command-7",
+      "technologyId": "theory-of-computation",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "theory-of-computation-command-8",
+      "technologyId": "theory-of-computation",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "theory-of-computation-command-9",
+      "technologyId": "theory-of-computation",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "theory-of-computation-command-10",
+      "technologyId": "theory-of-computation",
+      "title": "Read the manual",
+      "command": "man <tool>",
+      "purpose": "Use the installed manual for exact platform semantics.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "theory-of-computation-command-11",
+      "technologyId": "theory-of-computation",
+      "title": "Capture command timing",
+      "command": "time <command>",
+      "purpose": "Measure wall-clock behavior before optimizing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "theory-of-computation-command-12",
+      "technologyId": "theory-of-computation",
+      "title": "Inspect open files",
+      "command": "lsof -p <pid>",
+      "purpose": "Trace files and sockets owned by a process.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "software-engineering-command-1",
+      "technologyId": "software-engineering",
+      "title": "Locate the build entry",
+      "command": "rg \"main|build|test\" .",
+      "purpose": "Find executable and verification boundaries.",
+      "platform": "all",
+      "expectedResult": "A successful Software Engineering result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "software-engineering-command-2",
+      "technologyId": "software-engineering",
+      "title": "Run the test suite",
+      "command": "<project-test-command>",
+      "purpose": "Verify observable behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Software Engineering result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "software-engineering-command-3",
+      "technologyId": "software-engineering",
+      "title": "Inspect generated artifacts",
+      "command": "find . -maxdepth 3 -type f",
+      "purpose": "Relate source inputs to build outputs.",
+      "platform": "all",
+      "expectedResult": "A successful Software Engineering result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "software-engineering-command-4",
+      "technologyId": "software-engineering",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "software-engineering-command-5",
+      "technologyId": "software-engineering",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "software-engineering-command-6",
+      "technologyId": "software-engineering",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "software-engineering-command-7",
+      "technologyId": "software-engineering",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "software-engineering-command-8",
+      "technologyId": "software-engineering",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "software-engineering-command-9",
+      "technologyId": "software-engineering",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "software-engineering-command-10",
+      "technologyId": "software-engineering",
+      "title": "Read the manual",
+      "command": "man <tool>",
+      "purpose": "Use the installed manual for exact platform semantics.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "software-engineering-command-11",
+      "technologyId": "software-engineering",
+      "title": "Capture command timing",
+      "command": "time <command>",
+      "purpose": "Measure wall-clock behavior before optimizing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "software-engineering-command-12",
+      "technologyId": "software-engineering",
+      "title": "Inspect open files",
+      "command": "lsof -p <pid>",
+      "purpose": "Trace files and sockets owned by a process.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    }
+  ]
+}

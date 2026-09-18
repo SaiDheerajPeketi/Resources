@@ -10,6 +10,8 @@ import { sdeLessons } from "../src/data/sde-lessons";
 import { devopsLessons } from "../src/data/devops-lessons";
 import { securityLessons } from "../src/data/security-lessons";
 import { fintechLessons } from "../src/data/fintech-lessons";
+import { commands, technologies, technologySources } from "../src/data/technologies";
+import { dsaPatterns, dsaProblems, dsaSheets } from "../src/data/dsa";
 
 const output = new URL("../public/generated/", import.meta.url);
 await mkdir(output, { recursive: true });
@@ -18,7 +20,16 @@ const writeJson = async (name: string, value: unknown) => writeFile(new URL(name
 
 await writeJson("content-manifest.json", { version: CONTENT_MANIFEST_VERSION, generatedAt: new Date().toISOString(), roles, tracks, topics });
 await writeJson("graph-manifest.json", { version: CONTENT_MANIFEST_VERSION, edges });
-await writeJson("search-index.json", topics.map(({ id, slug, title, summary, trackId, level, publicationStatus, roleIds }) => ({ id, slug, title, summary, trackId, level, publicationStatus, roleIds })));
+await writeJson("search-index.json", [
+  ...topics.map(({ id, slug, title, summary, trackId, level, publicationStatus, roleIds }) => ({ id, route: `/topics/${slug}/`, kind: "topic", title, summary, trackId, level, publicationStatus, roleIds })),
+  ...technologies.map(({ id, title, summary, ecosystem, level, publicationStatus, roleIds }) => ({ id, route: `/technologies/${id}/`, kind: "technology", title, summary, ecosystem, level, publicationStatus, roleIds })),
+  ...dsaProblems.map(({ id, title, prompt: summary, patternId, difficulty, publicationStatus, roleIds }) => ({ id, route: `/problems/${id}/`, kind: "problem", title, summary, patternId, difficulty, publicationStatus, roleIds }))
+]);
+await writeJson("technology-manifest.json", { version: CONTENT_MANIFEST_VERSION, technologies });
+await writeJson("command-manifest.json", { version: CONTENT_MANIFEST_VERSION, commands });
+await writeJson("problem-manifest.json", { version: CONTENT_MANIFEST_VERSION, patterns: dsaPatterns, problems: dsaProblems });
+await writeJson("sheet-manifest.json", { version: CONTENT_MANIFEST_VERSION, sheets: dsaSheets });
+await writeJson("coverage-manifest.json", { version: CONTENT_MANIFEST_VERSION, topics: topics.length, technologies: technologies.length, commands: commands.length, problems: dsaProblems.length, sheets: dsaSheets.map((sheet) => ({ id: sheet.id, count: sheet.problemIds.length })) });
 await writeJson("pack-manifest.json", {
   version: CONTENT_MANIFEST_VERSION,
   packs: packDefinitions.map((pack) => ({
@@ -39,6 +50,7 @@ await writeJson("content-freshness-report.json", {
   generatedAt,
   reviewPolicy: { staleBefore: staleBefore.toISOString().slice(0, 10), maximumAgeDays: 365 },
   topics: { total: topics.length, current: topics.length - staleTopics.length, stale: staleTopics },
+  technologies: { total: technologies.length, sources: technologySources.length, commands: commands.length },
   sources: { references: sources.length, uniqueUrls: new Set(sources.map((source) => source.url)).size, secureUrls: sources.filter((source) => source.url.startsWith("https://")).length },
   byTrack: tracks.map((track) => {
     const trackTopics = topics.filter((topic) => topic.trackId === track.id);

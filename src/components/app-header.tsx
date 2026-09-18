@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { BookOpen, CheckCircle2, Search, Settings2, WifiOff } from "lucide-react";
+import { BookOpen, CheckCircle2, Library, Search, Settings2, WifiOff } from "lucide-react";
 import { topics } from "@/data/catalog";
 
 export function AppHeader() {
@@ -72,6 +72,8 @@ export function AppHeader() {
           {online ? <CheckCircle2 size={16} /> : <WifiOff size={16} />}
           <span>{online ? "Ready" : "Offline"}</span>
         </span>
+        <Link href="/library/"><Library size={16} /> Library</Link>
+        <Link href="/sheets/">DSA</Link>
         <Link href="/revision/">Revision</Link>
         <Link className="icon-link" href="/settings/" aria-label="Settings"><Settings2 size={18} /></Link>
       </nav>

@@ -1,6 +1,6 @@
 {
-  "version": "2026.09.18-r7",
-  "generatedAt": "2026-09-18T06:03:30.787Z",
+  "version": "2026.09.18-r8",
+  "generatedAt": "2026-09-18T07:10:59.568Z",
   "reviewPolicy": {
     "staleBefore": "2025-09-18",
     "maximumAgeDays": 365
@@ -9,6 +9,11 @@
     "total": 146,
     "current": 146,
     "stale": []
+  },
+  "technologies": {
+    "total": 9,
+    "sources": 27,
+    "commands": 108
   },
   "sources": {
     "references": 285,

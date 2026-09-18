@@ -9,8 +9,26 @@ import { sdeLessons } from "../src/data/sde-lessons";
 import { devopsLessons } from "../src/data/devops-lessons";
 import { securityLessons } from "../src/data/security-lessons";
 import { fintechLessons } from "../src/data/fintech-lessons";
+import { commands, technologies, technologySources } from "../src/data/technologies";
+import { dsaPatterns, dsaProblems, dsaSheets } from "../src/data/dsa";
 
 const errors: string[] = [];
+const technologyIds = new Set(technologies.map((item) => item.id));
+const commandIds = new Set(commands.map((item) => item.id));
+const sourceIds = new Set(technologySources.map((item) => item.id));
+for (const technology of technologies) {
+  if (technology.commandIds.length < 12 || technology.workedExamples.length < 3 || technology.questions.length < 8 || technology.sourceIds.length < 3) errors.push(`Technology ${technology.id} is missing its publishable contract.`);
+  for (const id of technology.commandIds) if (!commandIds.has(id)) errors.push(`Technology ${technology.id} references unknown command ${id}.`);
+  for (const id of technology.sourceIds) if (!sourceIds.has(id)) errors.push(`Technology ${technology.id} references unknown source ${id}.`);
+  for (const id of technology.prerequisites) if (!technologyIds.has(id)) errors.push(`Technology ${technology.id} references unknown prerequisite ${id}.`);
+}
+const patternIds = new Set(dsaPatterns.map((item) => item.id));
+const problemIds = new Set(dsaProblems.map((item) => item.id));
+for (const problem of dsaProblems) {
+  if (!patternIds.has(problem.patternId)) errors.push(`Problem ${problem.id} references unknown pattern ${problem.patternId}.`);
+  if (problem.variantLanguages.length !== new Set(problem.variantLanguages).size) errors.push(`Problem ${problem.id} repeats a code variant.`);
+}
+for (const sheet of dsaSheets) for (const id of sheet.problemIds) if (!problemIds.has(id)) errors.push(`Sheet ${sheet.id} references unknown problem ${id}.`);
 const structural = validateCatalog();
 if (structural.duplicates.length) errors.push(`Duplicate topics: ${structural.duplicates.join(", ")}`);
 if (structural.dangling.length) errors.push(`Dangling edges: ${structural.dangling.join(", ")}`);
@@ -139,13 +157,16 @@ const sourceFiles = (directory: string): string[] => readdirSync(directory, { wi
   if (entry.isDirectory()) return sourceFiles(path);
   return [".tsx", ".mdx"].includes(extname(path)) ? [path] : [];
 });
-const staticRoutes = new Set(["/", "/atlas/", "/practice/", "/revision/", "/interview/", "/settings/", "/~offline/"]);
+const staticRoutes = new Set(["/", "/atlas/", "/library/", "/sheets/", "/practice/", "/revision/", "/interview/", "/settings/", "/~offline/"]);
 const trackIds = new Set(topics.map((topic) => topic.trackId));
 const topicSlugs = new Set(topics.map((topic) => topic.slug));
 const isKnownInternalRoute = (route: string) => staticRoutes.has(route)
   || /^\/generated\/(content-manifest|graph-manifest|search-index|pack-manifest|completeness-report|content-freshness-report)\.json$/.test(route)
   || (/^\/tracks\/[^/]+\/$/.test(route) && trackIds.has(route.split("/")[2] as never))
-  || (/^\/topics\/[^/]+\/[^/]+\/$/.test(route) && topicSlugs.has(route.slice(8, -1)));
+  || (/^\/topics\/[^/]+\/[^/]+\/$/.test(route) && topicSlugs.has(route.slice(8, -1)))
+  || (/^\/technologies\/[^/]+\/$/.test(route) && technologyIds.has(route.split("/")[2]))
+  || (/^\/sheets\/[^/]+\/$/.test(route) && dsaSheets.some((sheet) => sheet.id === route.split("/")[2]))
+  || (/^\/problems\/[^/]+\/$/.test(route) && problemIds.has(route.split("/")[2]));
 for (const file of sourceFiles(sourceRoot)) {
   const source = readFileSync(file, "utf8");
   const links = [

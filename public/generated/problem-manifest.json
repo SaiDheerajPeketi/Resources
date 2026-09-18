@@ -1,0 +1,4162 @@
+{
+  "version": "2026.09.18-r8",
+  "patterns": [
+    {
+      "id": "hashing",
+      "title": "Hash maps and sets",
+      "mentalModel": "Trade memory for direct access to facts seen so far.",
+      "recognitionSignals": [
+        "membership or frequency",
+        "pair or grouping lookup"
+      ],
+      "invariants": [
+        "The stored hash maps and sets state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "two-pointers",
+      "title": "Two pointers",
+      "mentalModel": "Move monotonic boundaries while preserving what has already been ruled out.",
+      "recognitionSignals": [
+        "sorted input",
+        "pair or partition condition"
+      ],
+      "invariants": [
+        "The stored two pointers state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "sliding-window",
+      "title": "Sliding window",
+      "mentalModel": "Maintain exactly the state needed for one contiguous range.",
+      "recognitionSignals": [
+        "contiguous range",
+        "longest, shortest, or count"
+      ],
+      "invariants": [
+        "The stored sliding window state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "prefix-sums",
+      "title": "Prefix sums",
+      "mentalModel": "Precompute cumulative state so a range becomes the difference of two prefixes.",
+      "recognitionSignals": [
+        "many range queries",
+        "subarray aggregate"
+      ],
+      "invariants": [
+        "The stored prefix sums state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "monotonic-stack",
+      "title": "Stacks",
+      "mentalModel": "Keep unresolved candidates in an order that makes the next decision local.",
+      "recognitionSignals": [
+        "nearest greater or smaller",
+        "nested structure"
+      ],
+      "invariants": [
+        "The stored stacks state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "binary-search",
+      "title": "Binary search",
+      "mentalModel": "Discard half of a monotonic search space after every predicate check.",
+      "recognitionSignals": [
+        "sorted domain",
+        "minimum feasible answer"
+      ],
+      "invariants": [
+        "The stored binary search state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "intervals",
+      "title": "Intervals",
+      "mentalModel": "Sort boundaries, then reason about overlap using the last accepted interval.",
+      "recognitionSignals": [
+        "time ranges",
+        "merge or schedule"
+      ],
+      "invariants": [
+        "The stored intervals state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "linked-lists",
+      "title": "Linked lists",
+      "mentalModel": "Change links with explicit previous/current/next ownership.",
+      "recognitionSignals": [
+        "pointer rewiring",
+        "cycle or midpoint"
+      ],
+      "invariants": [
+        "The stored linked lists state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "tree-dfs",
+      "title": "Tree depth-first search",
+      "mentalModel": "Ask each subtree for the smallest summary needed by its parent.",
+      "recognitionSignals": [
+        "subtree property",
+        "path or ancestor"
+      ],
+      "invariants": [
+        "The stored tree depth-first search state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "tree-bfs",
+      "title": "Tree breadth-first search",
+      "mentalModel": "Process a tree one frontier at a time.",
+      "recognitionSignals": [
+        "levels",
+        "minimum number of edges"
+      ],
+      "invariants": [
+        "The stored tree breadth-first search state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "heaps",
+      "title": "Heaps",
+      "mentalModel": "Retain only the best candidate or best k candidates seen so far.",
+      "recognitionSignals": [
+        "top k",
+        "repeated minimum or maximum"
+      ],
+      "invariants": [
+        "The stored heaps state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "graph-bfs",
+      "title": "Graph breadth-first search",
+      "mentalModel": "Expand an unweighted frontier to discover shortest edge counts.",
+      "recognitionSignals": [
+        "unweighted shortest path",
+        "multi-source spread"
+      ],
+      "invariants": [
+        "The stored graph breadth-first search state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "graph-dfs",
+      "title": "Graph depth-first search",
+      "mentalModel": "Explore one component completely while tracking visitation state.",
+      "recognitionSignals": [
+        "components or cycles",
+        "dependency ordering"
+      ],
+      "invariants": [
+        "The stored graph depth-first search state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "backtracking",
+      "title": "Backtracking",
+      "mentalModel": "Choose, recurse, and undo while pruning states that cannot succeed.",
+      "recognitionSignals": [
+        "enumerate choices",
+        "constraint satisfaction"
+      ],
+      "invariants": [
+        "The stored backtracking state exactly summarizes the processed region."
+      ]
+    },
+    {
+      "id": "dynamic-programming",
+      "title": "Dynamic programming",
+      "mentalModel": "Name a state, write its recurrence, and compute each overlapping subproblem once.",
+      "recognitionSignals": [
+        "optimal substructure",
+        "count or optimize choices"
+      ],
+      "invariants": [
+        "The stored dynamic programming state exactly summarizes the processed region."
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "id": "atlas-001",
+      "title": "Complement Pair Ledger",
+      "prompt": "Implement Complement Pair Ledger. Return the requested result for every valid input, explain the hashing invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "hashing",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 1,
+        "atlas180": 1,
+        "atlas300": 1
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the hashing state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the hashing invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the hashing pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/001",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-002",
+      "title": "Longest Consecutive Run",
+      "prompt": "Implement Longest Consecutive Run. Return the requested result for every valid input, explain the hashing invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "hashing",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 2,
+        "atlas180": 2,
+        "atlas300": 2
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the hashing state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the hashing invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the hashing pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/002",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-003",
+      "title": "Grouped Word Signatures",
+      "prompt": "Implement Grouped Word Signatures. Return the requested result for every valid input, explain the hashing invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "hashing",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 3,
+        "atlas180": 3,
+        "atlas300": 3
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the hashing state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the hashing invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the hashing pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/003",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-004",
+      "title": "Zero-Sum Span",
+      "prompt": "Implement Zero-Sum Span. Return the requested result for every valid input, explain the hashing invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "hashing",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 4,
+        "atlas180": 4,
+        "atlas300": 4
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the hashing state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the hashing invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the hashing pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/004",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-005",
+      "title": "Frequency-Ordered Values",
+      "prompt": "Implement Frequency-Ordered Values. Return the requested result for every valid input, explain the hashing invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "hashing",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 5,
+        "atlas180": 5,
+        "atlas300": 5
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the hashing state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the hashing invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the hashing pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/005",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-006",
+      "title": "Filtered Palindrome",
+      "prompt": "Implement Filtered Palindrome. Return the requested result for every valid input, explain the two pointers invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "two-pointers",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 6,
+        "atlas180": 6,
+        "atlas300": 6
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the two pointers state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the two pointers invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the two pointers pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/006",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-007",
+      "title": "Target Pair in Sorted Data",
+      "prompt": "Implement Target Pair in Sorted Data. Return the requested result for every valid input, explain the two pointers invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "two-pointers",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 7,
+        "atlas180": 7,
+        "atlas300": 7
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the two pointers state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the two pointers invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the two pointers pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/007",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-008",
+      "title": "Maximum Container",
+      "prompt": "Implement Maximum Container. Return the requested result for every valid input, explain the two pointers invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "two-pointers",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 8,
+        "atlas180": 8,
+        "atlas300": 8
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the two pointers state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the two pointers invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the two pointers pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/008",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-009",
+      "title": "Zero-Sum Triples",
+      "prompt": "Implement Zero-Sum Triples. Return the requested result for every valid input, explain the two pointers invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "two-pointers",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 9,
+        "atlas180": 9,
+        "atlas300": 9
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the two pointers state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the two pointers invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the two pointers pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/009",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-010",
+      "title": "In-Place Sorted Deduplication",
+      "prompt": "Implement In-Place Sorted Deduplication. Return the requested result for every valid input, explain the two pointers invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "two-pointers",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 10,
+        "atlas180": 10,
+        "atlas300": 10
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the two pointers state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the two pointers invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the two pointers pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/010",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-011",
+      "title": "Smallest Covering Window",
+      "prompt": "Implement Smallest Covering Window. Return the requested result for every valid input, explain the sliding window invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "sliding-window",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 11,
+        "atlas180": 11,
+        "atlas300": 11
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the sliding window state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the sliding window invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the sliding window pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/011",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-012",
+      "title": "Longest Unique Segment",
+      "prompt": "Implement Longest Unique Segment. Return the requested result for every valid input, explain the sliding window invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "sliding-window",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 12,
+        "atlas180": 12,
+        "atlas300": 12
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the sliding window state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the sliding window invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the sliding window pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/012",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-013",
+      "title": "Best Fixed-Length Window",
+      "prompt": "Implement Best Fixed-Length Window. Return the requested result for every valid input, explain the sliding window invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "sliding-window",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 13,
+        "atlas180": 13,
+        "atlas300": 13
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the sliding window state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the sliding window invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the sliding window pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/013",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-014",
+      "title": "Uniform Segment After Replacements",
+      "prompt": "Implement Uniform Segment After Replacements. Return the requested result for every valid input, explain the sliding window invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "sliding-window",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 14,
+        "atlas180": 14,
+        "atlas300": 14
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the sliding window state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the sliding window invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the sliding window pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/014",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-015",
+      "title": "Permutation Window",
+      "prompt": "Implement Permutation Window. Return the requested result for every valid input, explain the sliding window invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "sliding-window",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 15,
+        "atlas180": 15,
+        "atlas300": 15
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the sliding window state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the sliding window invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the sliding window pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/015",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-016",
+      "title": "Immutable Range Totals",
+      "prompt": "Implement Immutable Range Totals. Return the requested result for every valid input, explain the prefix sums invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "prefix-sums",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 16,
+        "atlas180": 16,
+        "atlas300": 16
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the prefix sums state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the prefix sums invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the prefix sums pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/016",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-017",
+      "title": "Equilibrium Index",
+      "prompt": "Implement Equilibrium Index. Return the requested result for every valid input, explain the prefix sums invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "prefix-sums",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 17,
+        "atlas180": 17,
+        "atlas300": 17
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the prefix sums state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the prefix sums invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the prefix sums pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/017",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-018",
+      "title": "Count Target-Sum Subarrays",
+      "prompt": "Implement Count Target-Sum Subarrays. Return the requested result for every valid input, explain the prefix sums invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "prefix-sums",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 18,
+        "atlas180": 18,
+        "atlas300": 18
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the prefix sums state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the prefix sums invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the prefix sums pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/018",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-019",
+      "title": "Product Except Current",
+      "prompt": "Implement Product Except Current. Return the requested result for every valid input, explain the prefix sums invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "prefix-sums",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 19,
+        "atlas180": 19,
+        "atlas300": 19
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the prefix sums state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the prefix sums invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the prefix sums pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/019",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-020",
+      "title": "Batched Range Additions",
+      "prompt": "Implement Batched Range Additions. Return the requested result for every valid input, explain the prefix sums invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "prefix-sums",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 20,
+        "atlas180": 20,
+        "atlas300": 20
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the prefix sums state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the prefix sums invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the prefix sums pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/020",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-021",
+      "title": "Balanced Delimiters",
+      "prompt": "Implement Balanced Delimiters. Return the requested result for every valid input, explain the monotonic stack invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "monotonic-stack",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 21,
+        "atlas180": 21,
+        "atlas300": 21
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the monotonic stack state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the monotonic stack invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the monotonic stack pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/021",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-022",
+      "title": "Minimum-Aware Stack",
+      "prompt": "Implement Minimum-Aware Stack. Return the requested result for every valid input, explain the monotonic stack invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "monotonic-stack",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 22,
+        "atlas180": 22,
+        "atlas300": 22
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the monotonic stack state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the monotonic stack invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the monotonic stack pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/022",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-023",
+      "title": "Next Warmer Reading",
+      "prompt": "Implement Next Warmer Reading. Return the requested result for every valid input, explain the monotonic stack invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "monotonic-stack",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 23,
+        "atlas180": 23,
+        "atlas300": 23
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the monotonic stack state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the monotonic stack invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the monotonic stack pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/023",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-024",
+      "title": "Largest Histogram Rectangle",
+      "prompt": "Implement Largest Histogram Rectangle. Return the requested result for every valid input, explain the monotonic stack invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "monotonic-stack",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 24,
+        "atlas180": 24,
+        "atlas300": 24
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the monotonic stack state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the monotonic stack invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the monotonic stack pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/024",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-025",
+      "title": "Decode Nested Repetitions",
+      "prompt": "Implement Decode Nested Repetitions. Return the requested result for every valid input, explain the monotonic stack invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "monotonic-stack",
+      "difficulty": "easy",
+      "estimatedMinutes": 20,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 25,
+        "atlas180": 25,
+        "atlas300": 25
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the monotonic stack state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the monotonic stack invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the monotonic stack pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/025",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-026",
+      "title": "Stable Insert Position",
+      "prompt": "Implement Stable Insert Position. Return the requested result for every valid input, explain the binary search invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "binary-search",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 26,
+        "atlas180": 26,
+        "atlas300": 26
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the binary search state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the binary search invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the binary search pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/026",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-027",
+      "title": "Lookup in a Rotated Array",
+      "prompt": "Implement Lookup in a Rotated Array. Return the requested result for every valid input, explain the binary search invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "binary-search",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 27,
+        "atlas180": 27,
+        "atlas300": 27
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the binary search state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the binary search invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the binary search pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/027",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-028",
+      "title": "First and Last Match",
+      "prompt": "Implement First and Last Match. Return the requested result for every valid input, explain the binary search invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "binary-search",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 28,
+        "atlas180": 28,
+        "atlas300": 28
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the binary search state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the binary search invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the binary search pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/028",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-029",
+      "title": "Minimum Feasible Processing Rate",
+      "prompt": "Implement Minimum Feasible Processing Rate. Return the requested result for every valid input, explain the binary search invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "binary-search",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 29,
+        "atlas180": 29,
+        "atlas300": 29
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the binary search state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the binary search invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the binary search pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/029",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-030",
+      "title": "Search a Row-Major Matrix",
+      "prompt": "Implement Search a Row-Major Matrix. Return the requested result for every valid input, explain the binary search invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "binary-search",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 30,
+        "atlas180": 30,
+        "atlas300": 30
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the binary search state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the binary search invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the binary search pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/030",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-031",
+      "title": "Merge Reservations",
+      "prompt": "Implement Merge Reservations. Return the requested result for every valid input, explain the intervals invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "intervals",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 31,
+        "atlas180": 31,
+        "atlas300": 31
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the intervals state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the intervals invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the intervals pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/031",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-032",
+      "title": "Insert a Reservation",
+      "prompt": "Implement Insert a Reservation. Return the requested result for every valid input, explain the intervals invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "intervals",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 32,
+        "atlas180": 32,
+        "atlas300": 32
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the intervals state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the intervals invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the intervals pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/032",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-033",
+      "title": "Minimum Meeting Rooms",
+      "prompt": "Implement Minimum Meeting Rooms. Return the requested result for every valid input, explain the intervals invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "intervals",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 33,
+        "atlas180": 33,
+        "atlas300": 33
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the intervals state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the intervals invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the intervals pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/033",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-034",
+      "title": "Remove Minimum Overlaps",
+      "prompt": "Implement Remove Minimum Overlaps. Return the requested result for every valid input, explain the intervals invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "intervals",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 34,
+        "atlas180": 34,
+        "atlas300": 34
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the intervals state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the intervals invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the intervals pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/034",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-035",
+      "title": "Intersect Two Schedules",
+      "prompt": "Implement Intersect Two Schedules. Return the requested result for every valid input, explain the intervals invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "intervals",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 35,
+        "atlas180": 35,
+        "atlas300": 35
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the intervals state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the intervals invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the intervals pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/035",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-036",
+      "title": "Reverse a Chain",
+      "prompt": "Implement Reverse a Chain. Return the requested result for every valid input, explain the linked lists invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "linked-lists",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 36,
+        "atlas180": 36,
+        "atlas300": 36
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the linked lists state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the linked lists invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the linked lists pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/036",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-037",
+      "title": "Detect a Cycle",
+      "prompt": "Implement Detect a Cycle. Return the requested result for every valid input, explain the linked lists invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "linked-lists",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 37,
+        "atlas180": 37,
+        "atlas300": 37
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the linked lists state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the linked lists invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the linked lists pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/037",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-038",
+      "title": "Merge Ordered Chains",
+      "prompt": "Implement Merge Ordered Chains. Return the requested result for every valid input, explain the linked lists invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "linked-lists",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 38,
+        "atlas180": 38,
+        "atlas300": 38
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the linked lists state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the linked lists invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the linked lists pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/038",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-039",
+      "title": "Remove the Nth Node From End",
+      "prompt": "Implement Remove the Nth Node From End. Return the requested result for every valid input, explain the linked lists invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "linked-lists",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 39,
+        "atlas180": 39,
+        "atlas300": 39
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the linked lists state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the linked lists invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the linked lists pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/039",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-040",
+      "title": "Copy Random Links",
+      "prompt": "Implement Copy Random Links. Return the requested result for every valid input, explain the linked lists invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "linked-lists",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 40,
+        "atlas180": 40,
+        "atlas300": 40
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the linked lists state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the linked lists invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the linked lists pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/040",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-041",
+      "title": "Maximum Tree Depth",
+      "prompt": "Implement Maximum Tree Depth. Return the requested result for every valid input, explain the tree dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "tree-dfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 41,
+        "atlas180": 41,
+        "atlas300": 41
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the tree dfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the tree dfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the tree dfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/041",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-042",
+      "title": "Tree Diameter",
+      "prompt": "Implement Tree Diameter. Return the requested result for every valid input, explain the tree dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "tree-dfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 42,
+        "atlas180": 42,
+        "atlas300": 42
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the tree dfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the tree dfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the tree dfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/042",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-043",
+      "title": "Height-Balanced Tree",
+      "prompt": "Implement Height-Balanced Tree. Return the requested result for every valid input, explain the tree dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "tree-dfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 43,
+        "atlas180": 43,
+        "atlas300": 43
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the tree dfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the tree dfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the tree dfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/043",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-044",
+      "title": "Validate Search-Tree Ordering",
+      "prompt": "Implement Validate Search-Tree Ordering. Return the requested result for every valid input, explain the tree dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "tree-dfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 44,
+        "atlas180": 44,
+        "atlas300": 44
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the tree dfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the tree dfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the tree dfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/044",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-045",
+      "title": "Lowest Common Ancestor",
+      "prompt": "Implement Lowest Common Ancestor. Return the requested result for every valid input, explain the tree dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "tree-dfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 45,
+        "atlas180": 45,
+        "atlas300": 45
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the tree dfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the tree dfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the tree dfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/045",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-046",
+      "title": "Level Order Values",
+      "prompt": "Implement Level Order Values. Return the requested result for every valid input, explain the tree bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "tree-bfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 46,
+        "atlas180": 46,
+        "atlas300": 46
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the tree bfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the tree bfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the tree bfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/046",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-047",
+      "title": "Zigzag Levels",
+      "prompt": "Implement Zigzag Levels. Return the requested result for every valid input, explain the tree bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "tree-bfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 47,
+        "atlas180": 47,
+        "atlas300": 47
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the tree bfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the tree bfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the tree bfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/047",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-048",
+      "title": "Right-Side Projection",
+      "prompt": "Implement Right-Side Projection. Return the requested result for every valid input, explain the tree bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "tree-bfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 48,
+        "atlas180": 48,
+        "atlas300": 48
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the tree bfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the tree bfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the tree bfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/048",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-049",
+      "title": "Connect Level Neighbours",
+      "prompt": "Implement Connect Level Neighbours. Return the requested result for every valid input, explain the tree bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "tree-bfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 49,
+        "atlas180": 49,
+        "atlas300": 49
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the tree bfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the tree bfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the tree bfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/049",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-050",
+      "title": "Minimum Leaf Depth",
+      "prompt": "Implement Minimum Leaf Depth. Return the requested result for every valid input, explain the tree bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "tree-bfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 50,
+        "atlas180": 50,
+        "atlas300": 50
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the tree bfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the tree bfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the tree bfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/050",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-051",
+      "title": "Kth Largest Value",
+      "prompt": "Implement Kth Largest Value. Return the requested result for every valid input, explain the heaps invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "heaps",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 51,
+        "atlas180": 51,
+        "atlas300": 51
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the heaps state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the heaps invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the heaps pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/051",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-052",
+      "title": "Most Frequent K Values",
+      "prompt": "Implement Most Frequent K Values. Return the requested result for every valid input, explain the heaps invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "heaps",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 52,
+        "atlas180": 52,
+        "atlas300": 52
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the heaps state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the heaps invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the heaps pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/052",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-053",
+      "title": "Merge K Ordered Streams",
+      "prompt": "Implement Merge K Ordered Streams. Return the requested result for every valid input, explain the heaps invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "heaps",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 53,
+        "atlas180": 53,
+        "atlas300": 53
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the heaps state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the heaps invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the heaps pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/053",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-054",
+      "title": "Running Median",
+      "prompt": "Implement Running Median. Return the requested result for every valid input, explain the heaps invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "heaps",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 54,
+        "atlas180": 54,
+        "atlas300": 54
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the heaps state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the heaps invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the heaps pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/054",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-055",
+      "title": "Cooldown Task Scheduler",
+      "prompt": "Implement Cooldown Task Scheduler. Return the requested result for every valid input, explain the heaps invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "heaps",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 55,
+        "atlas180": 55,
+        "atlas300": 55
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the heaps state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the heaps invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the heaps pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/055",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-056",
+      "title": "Count Grid Islands",
+      "prompt": "Implement Count Grid Islands. Return the requested result for every valid input, explain the graph bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "graph-bfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 56,
+        "atlas180": 56,
+        "atlas300": 56
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the graph bfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the graph bfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the graph bfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/056",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-057",
+      "title": "Shortest Grid Escape",
+      "prompt": "Implement Shortest Grid Escape. Return the requested result for every valid input, explain the graph bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "graph-bfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 57,
+        "atlas180": 57,
+        "atlas300": 57
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the graph bfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the graph bfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the graph bfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/057",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-058",
+      "title": "Single-Letter Transformation",
+      "prompt": "Implement Single-Letter Transformation. Return the requested result for every valid input, explain the graph bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "graph-bfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 58,
+        "atlas180": 58,
+        "atlas300": 58
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the graph bfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the graph bfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the graph bfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/058",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-059",
+      "title": "Course Reachability",
+      "prompt": "Implement Course Reachability. Return the requested result for every valid input, explain the graph bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "graph-bfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 59,
+        "atlas180": 59,
+        "atlas300": 59
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the graph bfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the graph bfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the graph bfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/059",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-060",
+      "title": "Rot Spread Time",
+      "prompt": "Implement Rot Spread Time. Return the requested result for every valid input, explain the graph bfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "graph-bfs",
+      "difficulty": "medium",
+      "estimatedMinutes": 35,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 60,
+        "atlas180": 60,
+        "atlas300": 60
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the graph bfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the graph bfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the graph bfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/060",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-061",
+      "title": "Clone a Network",
+      "prompt": "Implement Clone a Network. Return the requested result for every valid input, explain the graph dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "graph-dfs",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 61,
+        "atlas180": 61,
+        "atlas300": 61
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the graph dfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the graph dfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the graph dfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/061",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-062",
+      "title": "Detect a Directed Cycle",
+      "prompt": "Implement Detect a Directed Cycle. Return the requested result for every valid input, explain the graph dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "graph-dfs",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 62,
+        "atlas180": 62,
+        "atlas300": 62
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the graph dfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the graph dfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the graph dfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/062",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-063",
+      "title": "Count Connected Components",
+      "prompt": "Implement Count Connected Components. Return the requested result for every valid input, explain the graph dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "graph-dfs",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 63,
+        "atlas180": 63,
+        "atlas300": 63
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the graph dfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the graph dfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the graph dfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/063",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-064",
+      "title": "Dependency Ordering",
+      "prompt": "Implement Dependency Ordering. Return the requested result for every valid input, explain the graph dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "graph-dfs",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 64,
+        "atlas180": 64,
+        "atlas300": 64
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the graph dfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the graph dfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the graph dfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/064",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-065",
+      "title": "Critical Network Bridges",
+      "prompt": "Implement Critical Network Bridges. Return the requested result for every valid input, explain the graph dfs invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "graph-dfs",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 65,
+        "atlas180": 65,
+        "atlas300": 65
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the graph dfs state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the graph dfs invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the graph dfs pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/065",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-066",
+      "title": "All Subsets",
+      "prompt": "Implement All Subsets. Return the requested result for every valid input, explain the backtracking invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "backtracking",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 66,
+        "atlas180": 66,
+        "atlas300": 66
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the backtracking state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the backtracking invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the backtracking pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/066",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-067",
+      "title": "All Permutations",
+      "prompt": "Implement All Permutations. Return the requested result for every valid input, explain the backtracking invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "backtracking",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 67,
+        "atlas180": 67,
+        "atlas300": 67
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the backtracking state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the backtracking invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the backtracking pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/067",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-068",
+      "title": "Target Combination Sums",
+      "prompt": "Implement Target Combination Sums. Return the requested result for every valid input, explain the backtracking invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "backtracking",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 68,
+        "atlas180": 68,
+        "atlas300": 68
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the backtracking state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the backtracking invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the backtracking pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/068",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-069",
+      "title": "Place N Queens",
+      "prompt": "Implement Place N Queens. Return the requested result for every valid input, explain the backtracking invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "backtracking",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 69,
+        "atlas180": 69,
+        "atlas300": 69
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the backtracking state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the backtracking invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the backtracking pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/069",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-070",
+      "title": "Trace a Word in a Grid",
+      "prompt": "Implement Trace a Word in a Grid. Return the requested result for every valid input, explain the backtracking invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "backtracking",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 70,
+        "atlas180": 70,
+        "atlas300": 70
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the backtracking state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the backtracking invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the backtracking pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/070",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-071",
+      "title": "Count Stair Routes",
+      "prompt": "Implement Count Stair Routes. Return the requested result for every valid input, explain the dynamic programming invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "dynamic-programming",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 71,
+        "atlas180": 71,
+        "atlas300": 71
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the dynamic programming state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the dynamic programming invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the dynamic programming pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/071",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-072",
+      "title": "Maximum Non-Adjacent Sum",
+      "prompt": "Implement Maximum Non-Adjacent Sum. Return the requested result for every valid input, explain the dynamic programming invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "dynamic-programming",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 72,
+        "atlas180": 72,
+        "atlas300": 72
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the dynamic programming state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the dynamic programming invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the dynamic programming pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/072",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-073",
+      "title": "Minimum Coins",
+      "prompt": "Implement Minimum Coins. Return the requested result for every valid input, explain the dynamic programming invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "dynamic-programming",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "big-tech"
+      ],
+      "sheetRanks": {
+        "atlas75": 73,
+        "atlas180": 73,
+        "atlas300": 73
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the dynamic programming state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the dynamic programming invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the dynamic programming pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/073",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-074",
+      "title": "Longest Increasing Subsequence",
+      "prompt": "Implement Longest Increasing Subsequence. Return the requested result for every valid input, explain the dynamic programming invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "dynamic-programming",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "product-company"
+      ],
+      "sheetRanks": {
+        "atlas75": 74,
+        "atlas180": 74,
+        "atlas300": 74
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the dynamic programming state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the dynamic programming invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the dynamic programming pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/074",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "atlas-075",
+      "title": "Edit Distance",
+      "prompt": "Implement Edit Distance. Return the requested result for every valid input, explain the dynamic programming invariant, and avoid recomputing state that can be maintained incrementally.",
+      "patternId": "dynamic-programming",
+      "difficulty": "hard",
+      "estimatedMinutes": 50,
+      "roleIds": [
+        "sde",
+        "backend",
+        "java",
+        "python",
+        "go"
+      ],
+      "companyTags": [
+        "fintech"
+      ],
+      "sheetRanks": {
+        "atlas75": 75,
+        "atlas180": 75,
+        "atlas300": 75
+      },
+      "constraints": [
+        "Input may be empty unless the statement rules it out.",
+        "Choose a representation that fits the stated complexity target."
+      ],
+      "examples": [
+        {
+          "input": "A small representative input",
+          "output": "The corresponding result",
+          "explanation": "Trace the dynamic programming state after each element or edge."
+        }
+      ],
+      "hints": [
+        "Name the dynamic programming invariant before coding.",
+        "Test the empty, singleton, duplicate, and boundary cases."
+      ],
+      "approach": "Use the dynamic programming pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.",
+      "proof": "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
+      "edgeCases": [
+        "Empty or singleton input",
+        "Duplicate values and values at numeric boundaries"
+      ],
+      "variantLanguages": [
+        "cpp17",
+        "java",
+        "python",
+        "typescript"
+      ],
+      "sourceArtifact": "/generated/solutions/075",
+      "publicationStatus": "published",
+      "lastReviewed": "2026-09-18"
+    }
+  ]
+}
