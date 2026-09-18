@@ -1,4 +1,5 @@
 import { cpp17Atlas75 } from "@/data/solutions/cpp17-atlas75";
+import { pythonAtlas75 } from "@/data/solutions/python-atlas75";
 import type { CodeVariant, DSAProblem } from "@/lib/schema";
 
 type Language = CodeVariant["language"];
@@ -22,7 +23,7 @@ function blueprint(problem: DSAProblem, language: Language): string {
 }
 
 export function solutionVariant(problem: DSAProblem, language: Language): CodeVariant {
-  const reference = language === "cpp17" ? cpp17Atlas75[problem.id] : undefined;
+  const reference = language === "cpp17" ? cpp17Atlas75[problem.id] : language === "python" ? pythonAtlas75[problem.id] : undefined;
   return {
     id: `${problem.id}-${language}`,
     language,

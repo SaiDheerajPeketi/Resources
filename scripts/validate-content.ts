@@ -12,6 +12,7 @@ import { fintechLessons } from "../src/data/fintech-lessons";
 import { commands, technologies, technologySources } from "../src/data/technologies";
 import { dsaPatterns, dsaProblems, dsaSheets } from "../src/data/dsa";
 import { cpp17Atlas75 } from "../src/data/solutions/cpp17-atlas75";
+import { pythonAtlas75 } from "../src/data/solutions/python-atlas75";
 import { coverageCrosswalks } from "../src/data/crosswalks";
 import { companyGuides, companySources } from "../src/data/companies";
 import { diagnostics, diagnosticQuestions, rolePathRecords } from "../src/data/learning";
@@ -52,10 +53,12 @@ for (const problem of dsaProblems) {
     if (problem.prompt.length < 80 || problem.naiveApproach.length < 80 || problem.proof.length < 180) errors.push(`Complete problem ${problem.id} has shallow teaching copy.`);
     if (problem.examples.some((example) => example.input.includes("representative input") || example.output.includes("corresponding result"))) errors.push(`Complete problem ${problem.id} still has a placeholder example.`);
     if (!cpp17Atlas75[problem.id] || cpp17Atlas75[problem.id].includes("Maintain only the state required")) errors.push(`Complete problem ${problem.id} has no reviewed C++17 reference.`);
+    if (!pythonAtlas75[problem.id] || pythonAtlas75[problem.id].includes("Replace the transition")) errors.push(`Complete problem ${problem.id} has no reviewed Python reference.`);
   }
 }
 if (dsaProblems.filter((problem) => problem.depthStatus === "complete").length !== 75) errors.push("Atlas 75 full-depth contract is incomplete.");
 if (Object.keys(cpp17Atlas75).length !== 75) errors.push("Atlas 75 C++17 reference set is incomplete.");
+if (Object.keys(pythonAtlas75).length !== 75) errors.push("Atlas 75 Python reference set is incomplete.");
 for (const sheet of dsaSheets) for (const id of sheet.problemIds) if (!problemIds.has(id)) errors.push(`Sheet ${sheet.id} references unknown problem ${id}.`);
 for (const crosswalk of coverageCrosswalks) if (!problemIds.has(crosswalk.atlasProblemId)) errors.push(`Crosswalk ${crosswalk.id} references unknown problem ${crosswalk.atlasProblemId}.`);
 const companySourceIds = new Set(companySources.map((source) => source.id));
