@@ -1,4 +1,5 @@
 import { buildTechnology, type TechnologySpec } from "@/data/technology-factory";
+import { release10Specs } from "@/data/technology-specs-release10";
 
 const release8Specs: TechnologySpec[] = [
   {
@@ -98,7 +99,7 @@ const release9Specs: TechnologySpec[] = [
   languageSpec("web-platform", "HTML, CSS, and Web APIs", "web", "The browser parses HTML into structure, CSS into presentation rules, and JavaScript into behavior while the event loop, rendering pipeline, and security model coordinate the page.", [["Serve locally", "python -m http.server 8000", "Serve static files over HTTP."], ["Inspect response", "curl -I http://localhost:8000", "Read headers without the body."], ["Audit with Lighthouse", "npx lighthouse http://localhost:8000", "Measure performance, accessibility, and best practices."], ["Validate HTML", "npx html-validate .", "Check document semantics."], ["Lint CSS", "npx stylelint '**/*.css'", "Check configured CSS rules."], ["Run browser tests", "npx playwright test", "Execute automated browser scenarios."]], [["HTML Living Standard", "https://html.spec.whatwg.org/"], ["CSS specifications", "https://www.w3.org/Style/CSS/specs.en.html"], ["MDN Web APIs", "https://developer.mozilla.org/en-US/docs/Web/API"]], "web-api")
 ];
 
-const built = [...release8Specs, ...release9Specs].map(buildTechnology);
+const built = [...release8Specs, ...release9Specs, ...release10Specs].map(buildTechnology);
 export const technologies = built.map((item) => item.technology);
 export const commands = built.flatMap((item) => item.commands);
 export const technologySources = built.flatMap((item) => item.sources);

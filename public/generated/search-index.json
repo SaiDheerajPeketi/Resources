@@ -2870,6 +2870,924 @@
     ]
   },
   {
+    "id": "react",
+    "route": "/technologies/react/",
+    "kind": "technology",
+    "title": "React",
+    "summary": "React architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "nextjs",
+    "route": "/technologies/nextjs/",
+    "kind": "technology",
+    "title": "Next.js",
+    "summary": "Next.js architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "angular",
+    "route": "/technologies/angular/",
+    "kind": "technology",
+    "title": "Angular",
+    "summary": "Angular architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "vue",
+    "route": "/technologies/vue/",
+    "kind": "technology",
+    "title": "Vue",
+    "summary": "Vue architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "nuxt",
+    "route": "/technologies/nuxt/",
+    "kind": "technology",
+    "title": "Nuxt",
+    "summary": "Nuxt architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "svelte",
+    "route": "/technologies/svelte/",
+    "kind": "technology",
+    "title": "Svelte",
+    "summary": "Svelte architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "sveltekit",
+    "route": "/technologies/sveltekit/",
+    "kind": "technology",
+    "title": "SvelteKit",
+    "summary": "SvelteKit architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "redux-toolkit",
+    "route": "/technologies/redux-toolkit/",
+    "kind": "technology",
+    "title": "Redux Toolkit",
+    "summary": "Redux Toolkit architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "tanstack-query",
+    "route": "/technologies/tanstack-query/",
+    "kind": "technology",
+    "title": "TanStack Query",
+    "summary": "TanStack Query architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "tailwind-css",
+    "route": "/technologies/tailwind-css/",
+    "kind": "technology",
+    "title": "Tailwind CSS",
+    "summary": "Tailwind CSS architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "web",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "nodejs",
+    "route": "/technologies/nodejs/",
+    "kind": "technology",
+    "title": "Node.js",
+    "summary": "Node.js architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "express",
+    "route": "/technologies/express/",
+    "kind": "technology",
+    "title": "Express",
+    "summary": "Express architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "nestjs",
+    "route": "/technologies/nestjs/",
+    "kind": "technology",
+    "title": "NestJS",
+    "summary": "NestJS architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "spring",
+    "route": "/technologies/spring/",
+    "kind": "technology",
+    "title": "Spring Framework",
+    "summary": "Spring Framework architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "java",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "spring-boot",
+    "route": "/technologies/spring-boot/",
+    "kind": "technology",
+    "title": "Spring Boot",
+    "summary": "Spring Boot architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "java",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "hibernate",
+    "route": "/technologies/hibernate/",
+    "kind": "technology",
+    "title": "Hibernate ORM",
+    "summary": "Hibernate ORM architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "java",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "django",
+    "route": "/technologies/django/",
+    "kind": "technology",
+    "title": "Django",
+    "summary": "Django architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "python",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "django-rest-framework",
+    "route": "/technologies/django-rest-framework/",
+    "kind": "technology",
+    "title": "Django REST Framework",
+    "summary": "Django REST Framework architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "python",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "flask",
+    "route": "/technologies/flask/",
+    "kind": "technology",
+    "title": "Flask",
+    "summary": "Flask architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "python",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "fastapi",
+    "route": "/technologies/fastapi/",
+    "kind": "technology",
+    "title": "FastAPI",
+    "summary": "FastAPI architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "python",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "aspnet-core",
+    "route": "/technologies/aspnet-core/",
+    "kind": "technology",
+    "title": "ASP.NET Core",
+    "summary": "ASP.NET Core architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "dotnet",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "entity-framework-core",
+    "route": "/technologies/entity-framework-core/",
+    "kind": "technology",
+    "title": "Entity Framework Core",
+    "summary": "Entity Framework Core architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "dotnet",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "go-http",
+    "route": "/technologies/go-http/",
+    "kind": "technology",
+    "title": "Go net/http",
+    "summary": "Go net/http architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "go",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "gin",
+    "route": "/technologies/gin/",
+    "kind": "technology",
+    "title": "Gin",
+    "summary": "Gin architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "go",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "tokio",
+    "route": "/technologies/tokio/",
+    "kind": "technology",
+    "title": "Tokio",
+    "summary": "Tokio architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "rust",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "axum",
+    "route": "/technologies/axum/",
+    "kind": "technology",
+    "title": "Axum",
+    "summary": "Axum architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "rust",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "ktor",
+    "route": "/technologies/ktor/",
+    "kind": "technology",
+    "title": "Ktor",
+    "summary": "Ktor architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "java",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "laravel",
+    "route": "/technologies/laravel/",
+    "kind": "technology",
+    "title": "Laravel",
+    "summary": "Laravel architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "web",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "rails",
+    "route": "/technologies/rails/",
+    "kind": "technology",
+    "title": "Ruby on Rails",
+    "summary": "Ruby on Rails architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "web",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "akka",
+    "route": "/technologies/akka/",
+    "kind": "technology",
+    "title": "Akka",
+    "summary": "Akka architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "java",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "play-framework",
+    "route": "/technologies/play-framework/",
+    "kind": "technology",
+    "title": "Play Framework",
+    "summary": "Play Framework architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "java",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "postgresql",
+    "route": "/technologies/postgresql/",
+    "kind": "technology",
+    "title": "PostgreSQL",
+    "summary": "PostgreSQL architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "database",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "mysql",
+    "route": "/technologies/mysql/",
+    "kind": "technology",
+    "title": "MySQL",
+    "summary": "MySQL architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "database",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "sqlite",
+    "route": "/technologies/sqlite/",
+    "kind": "technology",
+    "title": "SQLite",
+    "summary": "SQLite architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "database",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "sql-server",
+    "route": "/technologies/sql-server/",
+    "kind": "technology",
+    "title": "SQL Server",
+    "summary": "SQL Server architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "database",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "mongodb",
+    "route": "/technologies/mongodb/",
+    "kind": "technology",
+    "title": "MongoDB",
+    "summary": "MongoDB architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "database",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "redis",
+    "route": "/technologies/redis/",
+    "kind": "technology",
+    "title": "Redis",
+    "summary": "Redis architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "database",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "elasticsearch-opensearch",
+    "route": "/technologies/elasticsearch-opensearch/",
+    "kind": "technology",
+    "title": "Elasticsearch and OpenSearch",
+    "summary": "Elasticsearch and OpenSearch architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "database",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "cassandra",
+    "route": "/technologies/cassandra/",
+    "kind": "technology",
+    "title": "Apache Cassandra",
+    "summary": "Apache Cassandra architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "database",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "dynamodb",
+    "route": "/technologies/dynamodb/",
+    "kind": "technology",
+    "title": "Amazon DynamoDB",
+    "summary": "Amazon DynamoDB architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "database",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "neo4j",
+    "route": "/technologies/neo4j/",
+    "kind": "technology",
+    "title": "Neo4j",
+    "summary": "Neo4j architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "database",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "junit-mockito",
+    "route": "/technologies/junit-mockito/",
+    "kind": "technology",
+    "title": "JUnit and Mockito",
+    "summary": "JUnit and Mockito architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "java",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "pytest",
+    "route": "/technologies/pytest/",
+    "kind": "technology",
+    "title": "pytest",
+    "summary": "pytest architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "python",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "jest-vitest",
+    "route": "/technologies/jest-vitest/",
+    "kind": "technology",
+    "title": "Jest and Vitest",
+    "summary": "Jest and Vitest architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "playwright",
+    "route": "/technologies/playwright/",
+    "kind": "technology",
+    "title": "Playwright",
+    "summary": "Playwright architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "cypress",
+    "route": "/technologies/cypress/",
+    "kind": "technology",
+    "title": "Cypress",
+    "summary": "Cypress architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "selenium",
+    "route": "/technologies/selenium/",
+    "kind": "technology",
+    "title": "Selenium",
+    "summary": "Selenium architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "web",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "maven",
+    "route": "/technologies/maven/",
+    "kind": "technology",
+    "title": "Maven",
+    "summary": "Maven architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "java",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "gradle",
+    "route": "/technologies/gradle/",
+    "kind": "technology",
+    "title": "Gradle",
+    "summary": "Gradle architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "java",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "npm-pnpm",
+    "route": "/technologies/npm-pnpm/",
+    "kind": "technology",
+    "title": "npm and pnpm",
+    "summary": "npm and pnpm architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "javascript",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "uv-poetry",
+    "route": "/technologies/uv-poetry/",
+    "kind": "technology",
+    "title": "uv and Poetry",
+    "summary": "uv and Poetry architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "python",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "cargo",
+    "route": "/technologies/cargo/",
+    "kind": "technology",
+    "title": "Cargo",
+    "summary": "Cargo architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "rust",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "go-modules",
+    "route": "/technologies/go-modules/",
+    "kind": "technology",
+    "title": "Go Modules",
+    "summary": "Go Modules architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "go",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
+    "id": "nuget",
+    "route": "/technologies/nuget/",
+    "kind": "technology",
+    "title": "NuGet",
+    "summary": "NuGet architecture, setup, lifecycle, testing, debugging, performance, security, deployment, and interview trade-offs.",
+    "ecosystem": "dotnet",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "frontend",
+      "backend",
+      "full-stack",
+      "sde",
+      "platform"
+    ]
+  },
+  {
     "id": "atlas-001",
     "route": "/problems/atlas-001/",
     "kind": "problem",
