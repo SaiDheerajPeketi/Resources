@@ -1,9 +1,9 @@
 {
-  "version": "2026.09.18-r8",
+  "version": "2026.09.18-r9",
   "topics": 146,
-  "technologies": 9,
-  "commands": 108,
-  "problems": 75,
+  "technologies": 28,
+  "commands": 336,
+  "problems": 180,
   "sheets": [
     {
       "id": "atlas-75",
@@ -11,11 +11,11 @@
     },
     {
       "id": "atlas-180",
-      "count": 75
+      "count": 180
     },
     {
       "id": "atlas-300",
-      "count": 75
+      "count": 180
     }
   ]
 }

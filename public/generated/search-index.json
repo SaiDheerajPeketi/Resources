@@ -2566,6 +2566,310 @@
     ]
   },
   {
+    "id": "c",
+    "route": "/technologies/c/",
+    "kind": "technology",
+    "title": "C",
+    "summary": "C setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "systems",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "cpp",
+    "route": "/technologies/cpp/",
+    "kind": "technology",
+    "title": "C++",
+    "summary": "C++ setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "systems",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "python",
+    "route": "/technologies/python/",
+    "kind": "technology",
+    "title": "Python",
+    "summary": "Python setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "python",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "javascript",
+    "route": "/technologies/javascript/",
+    "kind": "technology",
+    "title": "JavaScript",
+    "summary": "JavaScript setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "javascript",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "typescript",
+    "route": "/technologies/typescript/",
+    "kind": "technology",
+    "title": "TypeScript",
+    "summary": "TypeScript setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "javascript",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "go",
+    "route": "/technologies/go/",
+    "kind": "technology",
+    "title": "Go",
+    "summary": "Go setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "go",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "csharp",
+    "route": "/technologies/csharp/",
+    "kind": "technology",
+    "title": "C#",
+    "summary": "C# setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "dotnet",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "rust",
+    "route": "/technologies/rust/",
+    "kind": "technology",
+    "title": "Rust",
+    "summary": "Rust setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "rust",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "kotlin",
+    "route": "/technologies/kotlin/",
+    "kind": "technology",
+    "title": "Kotlin",
+    "summary": "Kotlin setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "java",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "swift",
+    "route": "/technologies/swift/",
+    "kind": "technology",
+    "title": "Swift",
+    "summary": "Swift setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "mobile",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "php",
+    "route": "/technologies/php/",
+    "kind": "technology",
+    "title": "PHP",
+    "summary": "PHP setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "web",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "ruby",
+    "route": "/technologies/ruby/",
+    "kind": "technology",
+    "title": "Ruby",
+    "summary": "Ruby setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "web",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "scala",
+    "route": "/technologies/scala/",
+    "kind": "technology",
+    "title": "Scala",
+    "summary": "Scala setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "java",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "dart",
+    "route": "/technologies/dart/",
+    "kind": "technology",
+    "title": "Dart",
+    "summary": "Dart setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "mobile",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "r",
+    "route": "/technologies/r/",
+    "kind": "technology",
+    "title": "R",
+    "summary": "R setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "data-ai",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "sql",
+    "route": "/technologies/sql/",
+    "kind": "technology",
+    "title": "SQL",
+    "summary": "SQL setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "database",
+    "level": "foundation",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "bash",
+    "route": "/technologies/bash/",
+    "kind": "technology",
+    "title": "Bash",
+    "summary": "Bash setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "devops",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "powershell",
+    "route": "/technologies/powershell/",
+    "kind": "technology",
+    "title": "PowerShell",
+    "summary": "PowerShell setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "dotnet",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
+    "id": "web-platform",
+    "route": "/technologies/web-platform/",
+    "kind": "technology",
+    "title": "HTML, CSS, and Web APIs",
+    "summary": "HTML, CSS, and Web APIs setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+    "ecosystem": "web",
+    "level": "interview",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "full-stack",
+      "platform"
+    ]
+  },
+  {
     "id": "atlas-001",
     "route": "/problems/atlas-001/",
     "kind": "problem",
@@ -3830,6 +4134,1791 @@
     "title": "Edit Distance",
     "summary": "Implement Edit Distance. Return the requested result for every valid input, explain the dynamic programming invariant, and avoid recomputing state that can be maintained incrementally.",
     "patternId": "dynamic-programming",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-076",
+    "route": "/problems/atlas-076/",
+    "kind": "problem",
+    "title": "Rotate a Square Matrix",
+    "summary": "Implement Rotate a Square Matrix. Return the requested result for every valid input, explain the matrix invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "matrix",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-077",
+    "route": "/problems/atlas-077/",
+    "kind": "problem",
+    "title": "Spiral Matrix Walk",
+    "summary": "Implement Spiral Matrix Walk. Return the requested result for every valid input, explain the matrix invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "matrix",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-078",
+    "route": "/problems/atlas-078/",
+    "kind": "problem",
+    "title": "Zero Rows and Columns",
+    "summary": "Implement Zero Rows and Columns. Return the requested result for every valid input, explain the matrix invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "matrix",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-079",
+    "route": "/problems/atlas-079/",
+    "kind": "problem",
+    "title": "Diagonal Traverse",
+    "summary": "Implement Diagonal Traverse. Return the requested result for every valid input, explain the matrix invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "matrix",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-080",
+    "route": "/problems/atlas-080/",
+    "kind": "problem",
+    "title": "Search a Sorted Matrix",
+    "summary": "Implement Search a Sorted Matrix. Return the requested result for every valid input, explain the matrix invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "matrix",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-081",
+    "route": "/problems/atlas-081/",
+    "kind": "problem",
+    "title": "Unique Value by XOR",
+    "summary": "Implement Unique Value by XOR. Return the requested result for every valid input, explain the bitwise invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "bitwise",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-082",
+    "route": "/problems/atlas-082/",
+    "kind": "problem",
+    "title": "Count Set Bits",
+    "summary": "Implement Count Set Bits. Return the requested result for every valid input, explain the bitwise invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "bitwise",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-083",
+    "route": "/problems/atlas-083/",
+    "kind": "problem",
+    "title": "Subset Masks",
+    "summary": "Implement Subset Masks. Return the requested result for every valid input, explain the bitwise invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "bitwise",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-084",
+    "route": "/problems/atlas-084/",
+    "kind": "problem",
+    "title": "Range Bitwise AND",
+    "summary": "Implement Range Bitwise AND. Return the requested result for every valid input, explain the bitwise invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "bitwise",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-085",
+    "route": "/problems/atlas-085/",
+    "kind": "problem",
+    "title": "Maximum XOR Pair",
+    "summary": "Implement Maximum XOR Pair. Return the requested result for every valid input, explain the bitwise invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "bitwise",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-086",
+    "route": "/problems/atlas-086/",
+    "kind": "problem",
+    "title": "Prefix Dictionary",
+    "summary": "Implement Prefix Dictionary. Return the requested result for every valid input, explain the tries invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tries",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-087",
+    "route": "/problems/atlas-087/",
+    "kind": "problem",
+    "title": "Wildcard Dictionary",
+    "summary": "Implement Wildcard Dictionary. Return the requested result for every valid input, explain the tries invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tries",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-088",
+    "route": "/problems/atlas-088/",
+    "kind": "problem",
+    "title": "Longest Shared Prefix",
+    "summary": "Implement Longest Shared Prefix. Return the requested result for every valid input, explain the tries invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tries",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-089",
+    "route": "/problems/atlas-089/",
+    "kind": "problem",
+    "title": "Word Replacement",
+    "summary": "Implement Word Replacement. Return the requested result for every valid input, explain the tries invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tries",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-090",
+    "route": "/problems/atlas-090/",
+    "kind": "problem",
+    "title": "Binary XOR Trie",
+    "summary": "Implement Binary XOR Trie. Return the requested result for every valid input, explain the tries invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "tries",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-091",
+    "route": "/problems/atlas-091/",
+    "kind": "problem",
+    "title": "Redundant Connection",
+    "summary": "Implement Redundant Connection. Return the requested result for every valid input, explain the union find invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "union-find",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-092",
+    "route": "/problems/atlas-092/",
+    "kind": "problem",
+    "title": "Dynamic Island Count",
+    "summary": "Implement Dynamic Island Count. Return the requested result for every valid input, explain the union find invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "union-find",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-093",
+    "route": "/problems/atlas-093/",
+    "kind": "problem",
+    "title": "Account Grouping",
+    "summary": "Implement Account Grouping. Return the requested result for every valid input, explain the union find invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "union-find",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-094",
+    "route": "/problems/atlas-094/",
+    "kind": "problem",
+    "title": "Equation Satisfiability",
+    "summary": "Implement Equation Satisfiability. Return the requested result for every valid input, explain the union find invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "union-find",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-095",
+    "route": "/problems/atlas-095/",
+    "kind": "problem",
+    "title": "Network Connection Budget",
+    "summary": "Implement Network Connection Budget. Return the requested result for every valid input, explain the union find invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "union-find",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-096",
+    "route": "/problems/atlas-096/",
+    "kind": "problem",
+    "title": "Weighted Route Cost",
+    "summary": "Implement Weighted Route Cost. Return the requested result for every valid input, explain the shortest paths invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "shortest-paths",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-097",
+    "route": "/problems/atlas-097/",
+    "kind": "problem",
+    "title": "Delayed Signal",
+    "summary": "Implement Delayed Signal. Return the requested result for every valid input, explain the shortest paths invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "shortest-paths",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-098",
+    "route": "/problems/atlas-098/",
+    "kind": "problem",
+    "title": "Cheapest Limited-Hop Flight",
+    "summary": "Implement Cheapest Limited-Hop Flight. Return the requested result for every valid input, explain the shortest paths invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "shortest-paths",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-099",
+    "route": "/problems/atlas-099/",
+    "kind": "problem",
+    "title": "Grid Effort Path",
+    "summary": "Implement Grid Effort Path. Return the requested result for every valid input, explain the shortest paths invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "shortest-paths",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-100",
+    "route": "/problems/atlas-100/",
+    "kind": "problem",
+    "title": "Negative-Edge Distances",
+    "summary": "Implement Negative-Edge Distances. Return the requested result for every valid input, explain the shortest paths invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "shortest-paths",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-101",
+    "route": "/problems/atlas-101/",
+    "kind": "problem",
+    "title": "Connect All Sites",
+    "summary": "Implement Connect All Sites. Return the requested result for every valid input, explain the minimum spanning tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "minimum-spanning-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-102",
+    "route": "/problems/atlas-102/",
+    "kind": "problem",
+    "title": "Minimum Cable Layout",
+    "summary": "Implement Minimum Cable Layout. Return the requested result for every valid input, explain the minimum spanning tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "minimum-spanning-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-103",
+    "route": "/problems/atlas-103/",
+    "kind": "problem",
+    "title": "Water Distribution Plan",
+    "summary": "Implement Water Distribution Plan. Return the requested result for every valid input, explain the minimum spanning tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "minimum-spanning-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-104",
+    "route": "/problems/atlas-104/",
+    "kind": "problem",
+    "title": "Cluster by Spacing",
+    "summary": "Implement Cluster by Spacing. Return the requested result for every valid input, explain the minimum spanning tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "minimum-spanning-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-105",
+    "route": "/problems/atlas-105/",
+    "kind": "problem",
+    "title": "Second-Best Spanning Tree",
+    "summary": "Implement Second-Best Spanning Tree. Return the requested result for every valid input, explain the minimum spanning tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "minimum-spanning-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-106",
+    "route": "/problems/atlas-106/",
+    "kind": "problem",
+    "title": "Course Ordering",
+    "summary": "Implement Course Ordering. Return the requested result for every valid input, explain the topological sort invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "topological-sort",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-107",
+    "route": "/problems/atlas-107/",
+    "kind": "problem",
+    "title": "Alien Alphabet",
+    "summary": "Implement Alien Alphabet. Return the requested result for every valid input, explain the topological sort invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "topological-sort",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-108",
+    "route": "/problems/atlas-108/",
+    "kind": "problem",
+    "title": "Build Pipeline Order",
+    "summary": "Implement Build Pipeline Order. Return the requested result for every valid input, explain the topological sort invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "topological-sort",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-109",
+    "route": "/problems/atlas-109/",
+    "kind": "problem",
+    "title": "Parallel Semesters",
+    "summary": "Implement Parallel Semesters. Return the requested result for every valid input, explain the topological sort invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "topological-sort",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-110",
+    "route": "/problems/atlas-110/",
+    "kind": "problem",
+    "title": "Safe Terminal Nodes",
+    "summary": "Implement Safe Terminal Nodes. Return the requested result for every valid input, explain the topological sort invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "topological-sort",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-111",
+    "route": "/problems/atlas-111/",
+    "kind": "problem",
+    "title": "Mutable Range Sum",
+    "summary": "Implement Mutable Range Sum. Return the requested result for every valid input, explain the segment tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "segment-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-112",
+    "route": "/problems/atlas-112/",
+    "kind": "problem",
+    "title": "Range Minimum",
+    "summary": "Implement Range Minimum. Return the requested result for every valid input, explain the segment tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "segment-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-113",
+    "route": "/problems/atlas-113/",
+    "kind": "problem",
+    "title": "Lazy Range Addition",
+    "summary": "Implement Lazy Range Addition. Return the requested result for every valid input, explain the segment tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "segment-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-114",
+    "route": "/problems/atlas-114/",
+    "kind": "problem",
+    "title": "Maximum Subarray Query",
+    "summary": "Implement Maximum Subarray Query. Return the requested result for every valid input, explain the segment tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "segment-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-115",
+    "route": "/problems/atlas-115/",
+    "kind": "problem",
+    "title": "Interval Coverage Tree",
+    "summary": "Implement Interval Coverage Tree. Return the requested result for every valid input, explain the segment tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "segment-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-116",
+    "route": "/problems/atlas-116/",
+    "kind": "problem",
+    "title": "Prefix Sum Updates",
+    "summary": "Implement Prefix Sum Updates. Return the requested result for every valid input, explain the fenwick tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "fenwick-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-117",
+    "route": "/problems/atlas-117/",
+    "kind": "problem",
+    "title": "Count Smaller Values",
+    "summary": "Implement Count Smaller Values. Return the requested result for every valid input, explain the fenwick tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "fenwick-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-118",
+    "route": "/problems/atlas-118/",
+    "kind": "problem",
+    "title": "Inversion Count",
+    "summary": "Implement Inversion Count. Return the requested result for every valid input, explain the fenwick tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "fenwick-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-119",
+    "route": "/problems/atlas-119/",
+    "kind": "problem",
+    "title": "Range Add Point Query",
+    "summary": "Implement Range Add Point Query. Return the requested result for every valid input, explain the fenwick tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "fenwick-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-120",
+    "route": "/problems/atlas-120/",
+    "kind": "problem",
+    "title": "Two-Dimensional Prefix Updates",
+    "summary": "Implement Two-Dimensional Prefix Updates. Return the requested result for every valid input, explain the fenwick tree invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "fenwick-tree",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-121",
+    "route": "/problems/atlas-121/",
+    "kind": "problem",
+    "title": "Find a Pattern with KMP",
+    "summary": "Implement Find a Pattern with KMP. Return the requested result for every valid input, explain the string matching invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "string-matching",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-122",
+    "route": "/problems/atlas-122/",
+    "kind": "problem",
+    "title": "Repeated Prefix Border",
+    "summary": "Implement Repeated Prefix Border. Return the requested result for every valid input, explain the string matching invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "string-matching",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-123",
+    "route": "/problems/atlas-123/",
+    "kind": "problem",
+    "title": "Rolling-Hash Search",
+    "summary": "Implement Rolling-Hash Search. Return the requested result for every valid input, explain the string matching invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "string-matching",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-124",
+    "route": "/problems/atlas-124/",
+    "kind": "problem",
+    "title": "Longest Palindromic Prefix",
+    "summary": "Implement Longest Palindromic Prefix. Return the requested result for every valid input, explain the string matching invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "string-matching",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-125",
+    "route": "/problems/atlas-125/",
+    "kind": "problem",
+    "title": "Multiple Pattern Matches",
+    "summary": "Implement Multiple Pattern Matches. Return the requested result for every valid input, explain the string matching invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "string-matching",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-126",
+    "route": "/problems/atlas-126/",
+    "kind": "problem",
+    "title": "Window Maximum",
+    "summary": "Implement Window Maximum. Return the requested result for every valid input, explain the advanced window invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "advanced-window",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-127",
+    "route": "/problems/atlas-127/",
+    "kind": "problem",
+    "title": "Window Median",
+    "summary": "Implement Window Median. Return the requested result for every valid input, explain the advanced window invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "advanced-window",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-128",
+    "route": "/problems/atlas-128/",
+    "kind": "problem",
+    "title": "Longest Bounded-Difference Segment",
+    "summary": "Implement Longest Bounded-Difference Segment. Return the requested result for every valid input, explain the advanced window invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "advanced-window",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-129",
+    "route": "/problems/atlas-129/",
+    "kind": "problem",
+    "title": "Distinct Count per Window",
+    "summary": "Implement Distinct Count per Window. Return the requested result for every valid input, explain the advanced window invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "advanced-window",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-130",
+    "route": "/problems/atlas-130/",
+    "kind": "problem",
+    "title": "Minimum Window with Two Budgets",
+    "summary": "Implement Minimum Window with Two Budgets. Return the requested result for every valid input, explain the advanced window invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "advanced-window",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-131",
+    "route": "/problems/atlas-131/",
+    "kind": "problem",
+    "title": "Maximum Non-Overlapping Jobs",
+    "summary": "Implement Maximum Non-Overlapping Jobs. Return the requested result for every valid input, explain the greedy invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "greedy",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-132",
+    "route": "/problems/atlas-132/",
+    "kind": "problem",
+    "title": "Minimum Refuelling Stops",
+    "summary": "Implement Minimum Refuelling Stops. Return the requested result for every valid input, explain the greedy invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "greedy",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-133",
+    "route": "/problems/atlas-133/",
+    "kind": "problem",
+    "title": "Gas Circuit Start",
+    "summary": "Implement Gas Circuit Start. Return the requested result for every valid input, explain the greedy invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "greedy",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-134",
+    "route": "/problems/atlas-134/",
+    "kind": "problem",
+    "title": "Candy Distribution",
+    "summary": "Implement Candy Distribution. Return the requested result for every valid input, explain the greedy invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "greedy",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-135",
+    "route": "/problems/atlas-135/",
+    "kind": "problem",
+    "title": "Patch Missing Coverage",
+    "summary": "Implement Patch Missing Coverage. Return the requested result for every valid input, explain the greedy invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "greedy",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-136",
+    "route": "/problems/atlas-136/",
+    "kind": "problem",
+    "title": "Unique Grid Paths",
+    "summary": "Implement Unique Grid Paths. Return the requested result for every valid input, explain the dp grid invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "dp-grid",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-137",
+    "route": "/problems/atlas-137/",
+    "kind": "problem",
+    "title": "Minimum Path Sum",
+    "summary": "Implement Minimum Path Sum. Return the requested result for every valid input, explain the dp grid invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "dp-grid",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-138",
+    "route": "/problems/atlas-138/",
+    "kind": "problem",
+    "title": "Obstacle Paths",
+    "summary": "Implement Obstacle Paths. Return the requested result for every valid input, explain the dp grid invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "dp-grid",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-139",
+    "route": "/problems/atlas-139/",
+    "kind": "problem",
+    "title": "Maximum Falling Path",
+    "summary": "Implement Maximum Falling Path. Return the requested result for every valid input, explain the dp grid invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "dp-grid",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-140",
+    "route": "/problems/atlas-140/",
+    "kind": "problem",
+    "title": "Two-Agent Grid Collection",
+    "summary": "Implement Two-Agent Grid Collection. Return the requested result for every valid input, explain the dp grid invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "dp-grid",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-141",
+    "route": "/problems/atlas-141/",
+    "kind": "problem",
+    "title": "Subset Sum",
+    "summary": "Implement Subset Sum. Return the requested result for every valid input, explain the knapsack invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "knapsack",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-142",
+    "route": "/problems/atlas-142/",
+    "kind": "problem",
+    "title": "Equal Partition",
+    "summary": "Implement Equal Partition. Return the requested result for every valid input, explain the knapsack invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "knapsack",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-143",
+    "route": "/problems/atlas-143/",
+    "kind": "problem",
+    "title": "Zero-One Knapsack",
+    "summary": "Implement Zero-One Knapsack. Return the requested result for every valid input, explain the knapsack invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "knapsack",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-144",
+    "route": "/problems/atlas-144/",
+    "kind": "problem",
+    "title": "Unbounded Knapsack",
+    "summary": "Implement Unbounded Knapsack. Return the requested result for every valid input, explain the knapsack invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "knapsack",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-145",
+    "route": "/problems/atlas-145/",
+    "kind": "problem",
+    "title": "Target Sign Assignments",
+    "summary": "Implement Target Sign Assignments. Return the requested result for every valid input, explain the knapsack invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "knapsack",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-146",
+    "route": "/problems/atlas-146/",
+    "kind": "problem",
+    "title": "Single Stock Trade",
+    "summary": "Implement Single Stock Trade. Return the requested result for every valid input, explain the state machine dp invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "state-machine-dp",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-147",
+    "route": "/problems/atlas-147/",
+    "kind": "problem",
+    "title": "Unlimited Stock Trades",
+    "summary": "Implement Unlimited Stock Trades. Return the requested result for every valid input, explain the state machine dp invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "state-machine-dp",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-148",
+    "route": "/problems/atlas-148/",
+    "kind": "problem",
+    "title": "Stock Trades with Fee",
+    "summary": "Implement Stock Trades with Fee. Return the requested result for every valid input, explain the state machine dp invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "state-machine-dp",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-149",
+    "route": "/problems/atlas-149/",
+    "kind": "problem",
+    "title": "Stock Cooldown",
+    "summary": "Implement Stock Cooldown. Return the requested result for every valid input, explain the state machine dp invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "state-machine-dp",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-150",
+    "route": "/problems/atlas-150/",
+    "kind": "problem",
+    "title": "At Most K Trades",
+    "summary": "Implement At Most K Trades. Return the requested result for every valid input, explain the state machine dp invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "state-machine-dp",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-151",
+    "route": "/problems/atlas-151/",
+    "kind": "problem",
+    "title": "Sliding Window Maximum",
+    "summary": "Implement Sliding Window Maximum. Return the requested result for every valid input, explain the monotonic queue invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "monotonic-queue",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-152",
+    "route": "/problems/atlas-152/",
+    "kind": "problem",
+    "title": "Shortest Sum-at-Least-K Segment",
+    "summary": "Implement Shortest Sum-at-Least-K Segment. Return the requested result for every valid input, explain the monotonic queue invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "monotonic-queue",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-153",
+    "route": "/problems/atlas-153/",
+    "kind": "problem",
+    "title": "Constrained Subsequence Sum",
+    "summary": "Implement Constrained Subsequence Sum. Return the requested result for every valid input, explain the monotonic queue invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "monotonic-queue",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-154",
+    "route": "/problems/atlas-154/",
+    "kind": "problem",
+    "title": "Jump Game Score",
+    "summary": "Implement Jump Game Score. Return the requested result for every valid input, explain the monotonic queue invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "monotonic-queue",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-155",
+    "route": "/problems/atlas-155/",
+    "kind": "problem",
+    "title": "Bounded Difference Stream",
+    "summary": "Implement Bounded Difference Stream. Return the requested result for every valid input, explain the monotonic queue invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "monotonic-queue",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-156",
+    "route": "/problems/atlas-156/",
+    "kind": "problem",
+    "title": "Peak Concurrent Meetings",
+    "summary": "Implement Peak Concurrent Meetings. Return the requested result for every valid input, explain the sweep line invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "sweep-line",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-157",
+    "route": "/problems/atlas-157/",
+    "kind": "problem",
+    "title": "Skyline Outline",
+    "summary": "Implement Skyline Outline. Return the requested result for every valid input, explain the sweep line invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "sweep-line",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-158",
+    "route": "/problems/atlas-158/",
+    "kind": "problem",
+    "title": "Rectangle Union Area",
+    "summary": "Implement Rectangle Union Area. Return the requested result for every valid input, explain the sweep line invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "sweep-line",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-159",
+    "route": "/problems/atlas-159/",
+    "kind": "problem",
+    "title": "Closest Active Segment",
+    "summary": "Implement Closest Active Segment. Return the requested result for every valid input, explain the sweep line invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "sweep-line",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-160",
+    "route": "/problems/atlas-160/",
+    "kind": "problem",
+    "title": "Calendar Conflict Ledger",
+    "summary": "Implement Calendar Conflict Ledger. Return the requested result for every valid input, explain the sweep line invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "sweep-line",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-161",
+    "route": "/problems/atlas-161/",
+    "kind": "problem",
+    "title": "Greatest Common Divisor",
+    "summary": "Implement Greatest Common Divisor. Return the requested result for every valid input, explain the number theory invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "number-theory",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-162",
+    "route": "/problems/atlas-162/",
+    "kind": "problem",
+    "title": "Prime Sieve",
+    "summary": "Implement Prime Sieve. Return the requested result for every valid input, explain the number theory invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "number-theory",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-163",
+    "route": "/problems/atlas-163/",
+    "kind": "problem",
+    "title": "Fast Modular Power",
+    "summary": "Implement Fast Modular Power. Return the requested result for every valid input, explain the number theory invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "number-theory",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-164",
+    "route": "/problems/atlas-164/",
+    "kind": "problem",
+    "title": "Modular Inverse",
+    "summary": "Implement Modular Inverse. Return the requested result for every valid input, explain the number theory invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "number-theory",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-165",
+    "route": "/problems/atlas-165/",
+    "kind": "problem",
+    "title": "Count Prime Factors",
+    "summary": "Implement Count Prime Factors. Return the requested result for every valid input, explain the number theory invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "number-theory",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-166",
+    "route": "/problems/atlas-166/",
+    "kind": "problem",
+    "title": "Binomial Coefficient",
+    "summary": "Implement Binomial Coefficient. Return the requested result for every valid input, explain the combinatorics invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "combinatorics",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-167",
+    "route": "/problems/atlas-167/",
+    "kind": "problem",
+    "title": "Catalan Structures",
+    "summary": "Implement Catalan Structures. Return the requested result for every valid input, explain the combinatorics invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "combinatorics",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-168",
+    "route": "/problems/atlas-168/",
+    "kind": "problem",
+    "title": "Count Grid Lattice Paths",
+    "summary": "Implement Count Grid Lattice Paths. Return the requested result for every valid input, explain the combinatorics invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "combinatorics",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-169",
+    "route": "/problems/atlas-169/",
+    "kind": "problem",
+    "title": "Derangement Count",
+    "summary": "Implement Derangement Count. Return the requested result for every valid input, explain the combinatorics invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "combinatorics",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-170",
+    "route": "/problems/atlas-170/",
+    "kind": "problem",
+    "title": "Inclusion-Exclusion Count",
+    "summary": "Implement Inclusion-Exclusion Count. Return the requested result for every valid input, explain the combinatorics invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "combinatorics",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-171",
+    "route": "/problems/atlas-171/",
+    "kind": "problem",
+    "title": "Merge Sort",
+    "summary": "Implement Merge Sort. Return the requested result for every valid input, explain the divide conquer invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "divide-conquer",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-172",
+    "route": "/problems/atlas-172/",
+    "kind": "problem",
+    "title": "Quickselect",
+    "summary": "Implement Quickselect. Return the requested result for every valid input, explain the divide conquer invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "divide-conquer",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-173",
+    "route": "/problems/atlas-173/",
+    "kind": "problem",
+    "title": "Count Reverse Pairs",
+    "summary": "Implement Count Reverse Pairs. Return the requested result for every valid input, explain the divide conquer invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "divide-conquer",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-174",
+    "route": "/problems/atlas-174/",
+    "kind": "problem",
+    "title": "Closest Point Pair",
+    "summary": "Implement Closest Point Pair. Return the requested result for every valid input, explain the divide conquer invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "divide-conquer",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-175",
+    "route": "/problems/atlas-175/",
+    "kind": "problem",
+    "title": "Multiply Large Integers",
+    "summary": "Implement Multiply Large Integers. Return the requested result for every valid input, explain the divide conquer invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "divide-conquer",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-176",
+    "route": "/problems/atlas-176/",
+    "kind": "problem",
+    "title": "Reservoir Sample",
+    "summary": "Implement Reservoir Sample. Return the requested result for every valid input, explain the randomized invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "randomized",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-177",
+    "route": "/problems/atlas-177/",
+    "kind": "problem",
+    "title": "Randomized Quickselect",
+    "summary": "Implement Randomized Quickselect. Return the requested result for every valid input, explain the randomized invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "randomized",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-178",
+    "route": "/problems/atlas-178/",
+    "kind": "problem",
+    "title": "Shuffle Uniformly",
+    "summary": "Implement Shuffle Uniformly. Return the requested result for every valid input, explain the randomized invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "randomized",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-179",
+    "route": "/problems/atlas-179/",
+    "kind": "problem",
+    "title": "Weighted Random Choice",
+    "summary": "Implement Weighted Random Choice. Return the requested result for every valid input, explain the randomized invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "randomized",
+    "difficulty": "hard",
+    "publicationStatus": "published",
+    "roleIds": [
+      "sde",
+      "backend",
+      "java",
+      "python",
+      "go"
+    ]
+  },
+  {
+    "id": "atlas-180",
+    "route": "/problems/atlas-180/",
+    "kind": "problem",
+    "title": "Random Set Operations",
+    "summary": "Implement Random Set Operations. Return the requested result for every valid input, explain the randomized invariant, and avoid recomputing state that can be maintained incrementally.",
+    "patternId": "randomized",
     "difficulty": "hard",
     "publicationStatus": "published",
     "roleIds": [

@@ -11,6 +11,7 @@ import { securityLessons } from "../src/data/security-lessons";
 import { fintechLessons } from "../src/data/fintech-lessons";
 import { commands, technologies, technologySources } from "../src/data/technologies";
 import { dsaPatterns, dsaProblems, dsaSheets } from "../src/data/dsa";
+import { coverageCrosswalks } from "../src/data/crosswalks";
 
 const errors: string[] = [];
 const technologyIds = new Set(technologies.map((item) => item.id));
@@ -29,6 +30,7 @@ for (const problem of dsaProblems) {
   if (problem.variantLanguages.length !== new Set(problem.variantLanguages).size) errors.push(`Problem ${problem.id} repeats a code variant.`);
 }
 for (const sheet of dsaSheets) for (const id of sheet.problemIds) if (!problemIds.has(id)) errors.push(`Sheet ${sheet.id} references unknown problem ${id}.`);
+for (const crosswalk of coverageCrosswalks) if (!problemIds.has(crosswalk.atlasProblemId)) errors.push(`Crosswalk ${crosswalk.id} references unknown problem ${crosswalk.atlasProblemId}.`);
 const structural = validateCatalog();
 if (structural.duplicates.length) errors.push(`Duplicate topics: ${structural.duplicates.join(", ")}`);
 if (structural.dangling.length) errors.push(`Dangling edges: ${structural.dangling.join(", ")}`);

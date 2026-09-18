@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r8",
+  "version": "2026.09.18-r9",
   "technologies": [
     {
       "id": "java",
@@ -1619,6 +1619,3445 @@
         "software-engineering-source-1",
         "software-engineering-source-2",
         "software-engineering-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "c",
+      "title": "C",
+      "kind": "language",
+      "ecosystem": "systems",
+      "summary": "C setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "C maps source closely to machine-level storage and calls; every object has a lifetime, representation, and ownership convention the programmer must enforce.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "c-command-1",
+        "c-command-2",
+        "c-command-3",
+        "c-command-4",
+        "c-command-5",
+        "c-command-6",
+        "c-command-7",
+        "c-command-8",
+        "c-command-9",
+        "c-command-10",
+        "c-command-11",
+        "c-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "C",
+          "code": "// C: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "C",
+          "code": "// C: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "C",
+          "code": "// C: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "C: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant C mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant C mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant C mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant C mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant C mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant C mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant C mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant C mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "C: core mental model",
+          "back": "C maps source closely to machine-level storage and calls; every object has a lifetime, representation, and ownership convention the programmer must enforce."
+        },
+        {
+          "front": "C: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "C: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "C: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "c-source-1",
+        "c-source-2",
+        "c-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cpp",
+      "title": "C++",
+      "kind": "language",
+      "ecosystem": "systems",
+      "summary": "C++ setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "C++ is a zero-overhead abstraction language: deterministic lifetimes and value semantics let high-level types compile to explicit machine work.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "cpp-command-1",
+        "cpp-command-2",
+        "cpp-command-3",
+        "cpp-command-4",
+        "cpp-command-5",
+        "cpp-command-6",
+        "cpp-command-7",
+        "cpp-command-8",
+        "cpp-command-9",
+        "cpp-command-10",
+        "cpp-command-11",
+        "cpp-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "C++",
+          "code": "// C++: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "C++",
+          "code": "// C++: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "C++",
+          "code": "// C++: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "C++: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant C++ mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C++: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant C++ mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C++: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant C++ mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C++: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant C++ mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C++: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant C++ mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C++: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant C++ mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C++: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant C++ mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C++: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant C++ mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "C++: core mental model",
+          "back": "C++ is a zero-overhead abstraction language: deterministic lifetimes and value semantics let high-level types compile to explicit machine work."
+        },
+        {
+          "front": "C++: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "C++: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "C++: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "cpp-source-1",
+        "cpp-source-2",
+        "cpp-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "python",
+      "title": "Python",
+      "kind": "language",
+      "ecosystem": "python",
+      "summary": "Python setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Python executes a dynamic object model through an implementation runtime; names reference objects, protocols define behavior, and the event loop coordinates cooperative I/O.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "python-command-1",
+        "python-command-2",
+        "python-command-3",
+        "python-command-4",
+        "python-command-5",
+        "python-command-6",
+        "python-command-7",
+        "python-command-8",
+        "python-command-9",
+        "python-command-10",
+        "python-command-11",
+        "python-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Python",
+          "code": "// Python: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Python",
+          "code": "// Python: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Python",
+          "code": "// Python: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Python: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Python mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Python: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Python mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Python: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Python mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Python: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Python mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Python: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Python mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Python: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Python mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Python: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Python mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Python: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Python mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Python: core mental model",
+          "back": "Python executes a dynamic object model through an implementation runtime; names reference objects, protocols define behavior, and the event loop coordinates cooperative I/O."
+        },
+        {
+          "front": "Python: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Python: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Python: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "python-source-1",
+        "python-source-2",
+        "python-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "javascript",
+      "title": "JavaScript",
+      "kind": "language",
+      "ecosystem": "javascript",
+      "summary": "JavaScript setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "JavaScript is a single-threaded run-to-completion language per agent; host event loops schedule jobs and I/O callbacks around the ECMAScript execution model.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "javascript-command-1",
+        "javascript-command-2",
+        "javascript-command-3",
+        "javascript-command-4",
+        "javascript-command-5",
+        "javascript-command-6",
+        "javascript-command-7",
+        "javascript-command-8",
+        "javascript-command-9",
+        "javascript-command-10",
+        "javascript-command-11",
+        "javascript-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "JavaScript",
+          "code": "// JavaScript: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "JavaScript",
+          "code": "// JavaScript: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "JavaScript",
+          "code": "// JavaScript: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "JavaScript: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant JavaScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "JavaScript: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant JavaScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "JavaScript: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant JavaScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "JavaScript: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant JavaScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "JavaScript: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant JavaScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "JavaScript: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant JavaScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "JavaScript: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant JavaScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "JavaScript: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant JavaScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "JavaScript: core mental model",
+          "back": "JavaScript is a single-threaded run-to-completion language per agent; host event loops schedule jobs and I/O callbacks around the ECMAScript execution model."
+        },
+        {
+          "front": "JavaScript: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "JavaScript: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "JavaScript: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "javascript-source-1",
+        "javascript-source-2",
+        "javascript-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "typescript",
+      "title": "TypeScript",
+      "kind": "language",
+      "ecosystem": "javascript",
+      "summary": "TypeScript setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "TypeScript statically checks a structural model of JavaScript and erases its types before runtime; soundness is traded for compatibility at explicit boundaries.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "typescript-command-1",
+        "typescript-command-2",
+        "typescript-command-3",
+        "typescript-command-4",
+        "typescript-command-5",
+        "typescript-command-6",
+        "typescript-command-7",
+        "typescript-command-8",
+        "typescript-command-9",
+        "typescript-command-10",
+        "typescript-command-11",
+        "typescript-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "TypeScript",
+          "code": "// TypeScript: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "TypeScript",
+          "code": "// TypeScript: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "TypeScript",
+          "code": "// TypeScript: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "TypeScript: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant TypeScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "TypeScript: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant TypeScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "TypeScript: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant TypeScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "TypeScript: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant TypeScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "TypeScript: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant TypeScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "TypeScript: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant TypeScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "TypeScript: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant TypeScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "TypeScript: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant TypeScript mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "TypeScript: core mental model",
+          "back": "TypeScript statically checks a structural model of JavaScript and erases its types before runtime; soundness is traded for compatibility at explicit boundaries."
+        },
+        {
+          "front": "TypeScript: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "TypeScript: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "TypeScript: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "typescript-source-1",
+        "typescript-source-2",
+        "typescript-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "go",
+      "title": "Go",
+      "kind": "language",
+      "ecosystem": "go",
+      "summary": "Go setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Go compiles simple value-oriented code into native programs; goroutines are multiplexed by the runtime and communicate through synchronization or channels.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "go-command-1",
+        "go-command-2",
+        "go-command-3",
+        "go-command-4",
+        "go-command-5",
+        "go-command-6",
+        "go-command-7",
+        "go-command-8",
+        "go-command-9",
+        "go-command-10",
+        "go-command-11",
+        "go-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Go",
+          "code": "// Go: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Go",
+          "code": "// Go: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Go",
+          "code": "// Go: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Go: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Go mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Go: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Go mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Go: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Go mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Go: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Go mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Go: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Go mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Go: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Go mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Go: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Go mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Go: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Go mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Go: core mental model",
+          "back": "Go compiles simple value-oriented code into native programs; goroutines are multiplexed by the runtime and communicate through synchronization or channels."
+        },
+        {
+          "front": "Go: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Go: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Go: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "go-source-1",
+        "go-source-2",
+        "go-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "csharp",
+      "title": "C#",
+      "kind": "language",
+      "ecosystem": "dotnet",
+      "summary": "C# setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "C# compiles to managed IL executed by .NET; the CLR supplies type safety, garbage collection, async tasks, and a shared base-class library.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "csharp-command-1",
+        "csharp-command-2",
+        "csharp-command-3",
+        "csharp-command-4",
+        "csharp-command-5",
+        "csharp-command-6",
+        "csharp-command-7",
+        "csharp-command-8",
+        "csharp-command-9",
+        "csharp-command-10",
+        "csharp-command-11",
+        "csharp-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "C#",
+          "code": "// C#: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "C#",
+          "code": "// C#: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "C#",
+          "code": "// C#: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "C#: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant C# mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C#: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant C# mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C#: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant C# mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C#: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant C# mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C#: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant C# mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C#: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant C# mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C#: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant C# mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "C#: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant C# mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "C#: core mental model",
+          "back": "C# compiles to managed IL executed by .NET; the CLR supplies type safety, garbage collection, async tasks, and a shared base-class library."
+        },
+        {
+          "front": "C#: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "C#: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "C#: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "csharp-source-1",
+        "csharp-source-2",
+        "csharp-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "rust",
+      "title": "Rust",
+      "kind": "language",
+      "ecosystem": "rust",
+      "summary": "Rust setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Rust proves aliasing and lifetime rules at compile time; ownership turns many memory and data-race failures into type errors without a garbage collector.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "rust-command-1",
+        "rust-command-2",
+        "rust-command-3",
+        "rust-command-4",
+        "rust-command-5",
+        "rust-command-6",
+        "rust-command-7",
+        "rust-command-8",
+        "rust-command-9",
+        "rust-command-10",
+        "rust-command-11",
+        "rust-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Rust",
+          "code": "// Rust: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Rust",
+          "code": "// Rust: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Rust",
+          "code": "// Rust: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Rust: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Rust mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Rust: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Rust mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Rust: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Rust mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Rust: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Rust mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Rust: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Rust mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Rust: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Rust mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Rust: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Rust mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Rust: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Rust mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Rust: core mental model",
+          "back": "Rust proves aliasing and lifetime rules at compile time; ownership turns many memory and data-race failures into type errors without a garbage collector."
+        },
+        {
+          "front": "Rust: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Rust: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Rust: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "rust-source-1",
+        "rust-source-2",
+        "rust-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "kotlin",
+      "title": "Kotlin",
+      "kind": "language",
+      "ecosystem": "java",
+      "summary": "Kotlin setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Kotlin adds null-safety, expression-oriented syntax, and coroutines while targeting JVM bytecode and interoperating with Java types and libraries.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "kotlin-command-1",
+        "kotlin-command-2",
+        "kotlin-command-3",
+        "kotlin-command-4",
+        "kotlin-command-5",
+        "kotlin-command-6",
+        "kotlin-command-7",
+        "kotlin-command-8",
+        "kotlin-command-9",
+        "kotlin-command-10",
+        "kotlin-command-11",
+        "kotlin-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Kotlin",
+          "code": "// Kotlin: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Kotlin",
+          "code": "// Kotlin: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Kotlin",
+          "code": "// Kotlin: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Kotlin: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Kotlin mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Kotlin: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Kotlin mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Kotlin: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Kotlin mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Kotlin: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Kotlin mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Kotlin: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Kotlin mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Kotlin: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Kotlin mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Kotlin: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Kotlin mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Kotlin: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Kotlin mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Kotlin: core mental model",
+          "back": "Kotlin adds null-safety, expression-oriented syntax, and coroutines while targeting JVM bytecode and interoperating with Java types and libraries."
+        },
+        {
+          "front": "Kotlin: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Kotlin: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Kotlin: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "kotlin-source-1",
+        "kotlin-source-2",
+        "kotlin-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "swift",
+      "title": "Swift",
+      "kind": "language",
+      "ecosystem": "mobile",
+      "summary": "Swift setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Swift combines value semantics, reference types, ARC, protocol-oriented design, and structured concurrency for Apple and server runtimes.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "swift-command-1",
+        "swift-command-2",
+        "swift-command-3",
+        "swift-command-4",
+        "swift-command-5",
+        "swift-command-6",
+        "swift-command-7",
+        "swift-command-8",
+        "swift-command-9",
+        "swift-command-10",
+        "swift-command-11",
+        "swift-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Swift",
+          "code": "// Swift: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Swift",
+          "code": "// Swift: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Swift",
+          "code": "// Swift: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Swift: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Swift mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Swift: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Swift mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Swift: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Swift mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Swift: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Swift mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Swift: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Swift mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Swift: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Swift mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Swift: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Swift mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Swift: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Swift mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Swift: core mental model",
+          "back": "Swift combines value semantics, reference types, ARC, protocol-oriented design, and structured concurrency for Apple and server runtimes."
+        },
+        {
+          "front": "Swift: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Swift: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Swift: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "swift-source-1",
+        "swift-source-2",
+        "swift-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "php",
+      "title": "PHP",
+      "kind": "language",
+      "ecosystem": "web",
+      "summary": "PHP setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "PHP evaluates request-scoped scripts in a server runtime, combining dynamic values, a broad standard library, and process-managed concurrency.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "php-command-1",
+        "php-command-2",
+        "php-command-3",
+        "php-command-4",
+        "php-command-5",
+        "php-command-6",
+        "php-command-7",
+        "php-command-8",
+        "php-command-9",
+        "php-command-10",
+        "php-command-11",
+        "php-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "PHP",
+          "code": "// PHP: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "PHP",
+          "code": "// PHP: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "PHP",
+          "code": "// PHP: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "PHP: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant PHP mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PHP: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant PHP mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PHP: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant PHP mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PHP: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant PHP mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PHP: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant PHP mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PHP: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant PHP mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PHP: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant PHP mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PHP: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant PHP mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "PHP: core mental model",
+          "back": "PHP evaluates request-scoped scripts in a server runtime, combining dynamic values, a broad standard library, and process-managed concurrency."
+        },
+        {
+          "front": "PHP: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "PHP: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "PHP: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "php-source-1",
+        "php-source-2",
+        "php-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "ruby",
+      "title": "Ruby",
+      "kind": "language",
+      "ecosystem": "web",
+      "summary": "Ruby setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Ruby sends messages to dynamic objects; blocks, modules, and metaprogramming shape behavior while implementations manage memory and native execution details.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "ruby-command-1",
+        "ruby-command-2",
+        "ruby-command-3",
+        "ruby-command-4",
+        "ruby-command-5",
+        "ruby-command-6",
+        "ruby-command-7",
+        "ruby-command-8",
+        "ruby-command-9",
+        "ruby-command-10",
+        "ruby-command-11",
+        "ruby-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Ruby",
+          "code": "// Ruby: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Ruby",
+          "code": "// Ruby: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Ruby",
+          "code": "// Ruby: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Ruby: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Ruby mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Ruby: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Ruby mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Ruby: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Ruby mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Ruby: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Ruby mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Ruby: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Ruby mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Ruby: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Ruby mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Ruby: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Ruby mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Ruby: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Ruby mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Ruby: core mental model",
+          "back": "Ruby sends messages to dynamic objects; blocks, modules, and metaprogramming shape behavior while implementations manage memory and native execution details."
+        },
+        {
+          "front": "Ruby: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Ruby: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Ruby: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "ruby-source-1",
+        "ruby-source-2",
+        "ruby-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "scala",
+      "title": "Scala",
+      "kind": "language",
+      "ecosystem": "java",
+      "summary": "Scala setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Scala combines JVM objects with algebraic data types and functional composition; its type system encodes relationships while the JVM supplies execution.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "scala-command-1",
+        "scala-command-2",
+        "scala-command-3",
+        "scala-command-4",
+        "scala-command-5",
+        "scala-command-6",
+        "scala-command-7",
+        "scala-command-8",
+        "scala-command-9",
+        "scala-command-10",
+        "scala-command-11",
+        "scala-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Scala",
+          "code": "// Scala: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Scala",
+          "code": "// Scala: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Scala",
+          "code": "// Scala: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Scala: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Scala mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Scala: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Scala mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Scala: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Scala mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Scala: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Scala mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Scala: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Scala mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Scala: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Scala mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Scala: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Scala mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Scala: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Scala mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Scala: core mental model",
+          "back": "Scala combines JVM objects with algebraic data types and functional composition; its type system encodes relationships while the JVM supplies execution."
+        },
+        {
+          "front": "Scala: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Scala: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Scala: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "scala-source-1",
+        "scala-source-2",
+        "scala-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "dart",
+      "title": "Dart",
+      "kind": "language",
+      "ecosystem": "mobile",
+      "summary": "Dart setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Dart executes in isolates with separate heaps and message passing; ahead-of-time and just-in-time modes serve production and development respectively.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "dart-command-1",
+        "dart-command-2",
+        "dart-command-3",
+        "dart-command-4",
+        "dart-command-5",
+        "dart-command-6",
+        "dart-command-7",
+        "dart-command-8",
+        "dart-command-9",
+        "dart-command-10",
+        "dart-command-11",
+        "dart-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Dart",
+          "code": "// Dart: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Dart",
+          "code": "// Dart: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Dart",
+          "code": "// Dart: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Dart: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Dart mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Dart: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Dart mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Dart: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Dart mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Dart: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Dart mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Dart: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Dart mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Dart: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Dart mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Dart: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Dart mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Dart: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Dart mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Dart: core mental model",
+          "back": "Dart executes in isolates with separate heaps and message passing; ahead-of-time and just-in-time modes serve production and development respectively."
+        },
+        {
+          "front": "Dart: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Dart: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Dart: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "dart-source-1",
+        "dart-source-2",
+        "dart-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "r",
+      "title": "R",
+      "kind": "language",
+      "ecosystem": "data-ai",
+      "summary": "R setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "R evaluates vectorized expressions over data-centric objects; lexical scoping, copy-on-modify semantics, and packages support statistical workflows.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "r-command-1",
+        "r-command-2",
+        "r-command-3",
+        "r-command-4",
+        "r-command-5",
+        "r-command-6",
+        "r-command-7",
+        "r-command-8",
+        "r-command-9",
+        "r-command-10",
+        "r-command-11",
+        "r-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "R",
+          "code": "// R: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "R",
+          "code": "// R: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "R",
+          "code": "// R: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "R: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant R mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "R: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant R mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "R: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant R mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "R: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant R mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "R: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant R mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "R: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant R mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "R: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant R mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "R: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant R mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "R: core mental model",
+          "back": "R evaluates vectorized expressions over data-centric objects; lexical scoping, copy-on-modify semantics, and packages support statistical workflows."
+        },
+        {
+          "front": "R: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "R: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "R: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "r-source-1",
+        "r-source-2",
+        "r-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "sql",
+      "title": "SQL",
+      "kind": "language",
+      "ecosystem": "database",
+      "summary": "SQL setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "foundation",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "SQL declares a result over relations; the optimizer chooses a physical plan while constraints and transactions protect data invariants.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "sql-command-1",
+        "sql-command-2",
+        "sql-command-3",
+        "sql-command-4",
+        "sql-command-5",
+        "sql-command-6",
+        "sql-command-7",
+        "sql-command-8",
+        "sql-command-9",
+        "sql-command-10",
+        "sql-command-11",
+        "sql-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "SQL",
+          "code": "// SQL: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "SQL",
+          "code": "// SQL: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "SQL",
+          "code": "// SQL: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "SQL: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant SQL mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "SQL: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant SQL mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "SQL: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant SQL mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "SQL: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant SQL mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "SQL: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant SQL mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "SQL: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant SQL mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "SQL: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant SQL mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "SQL: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant SQL mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "SQL: core mental model",
+          "back": "SQL declares a result over relations; the optimizer chooses a physical plan while constraints and transactions protect data invariants."
+        },
+        {
+          "front": "SQL: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "SQL: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "SQL: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "sql-source-1",
+        "sql-source-2",
+        "sql-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "bash",
+      "title": "Bash",
+      "kind": "tool",
+      "ecosystem": "devops",
+      "summary": "Bash setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "interview",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "Bash composes processes through text streams, exit statuses, file descriptors, expansion rules, and a mutable shell environment.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "bash-command-1",
+        "bash-command-2",
+        "bash-command-3",
+        "bash-command-4",
+        "bash-command-5",
+        "bash-command-6",
+        "bash-command-7",
+        "bash-command-8",
+        "bash-command-9",
+        "bash-command-10",
+        "bash-command-11",
+        "bash-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "Bash",
+          "code": "// Bash: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "Bash",
+          "code": "// Bash: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "Bash",
+          "code": "// Bash: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "Bash: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant Bash mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Bash: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Bash mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Bash: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Bash mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Bash: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Bash mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Bash: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Bash mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Bash: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Bash mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Bash: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant Bash mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "Bash: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant Bash mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "Bash: core mental model",
+          "back": "Bash composes processes through text streams, exit statuses, file descriptors, expansion rules, and a mutable shell environment."
+        },
+        {
+          "front": "Bash: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "Bash: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "Bash: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "bash-source-1",
+        "bash-source-2",
+        "bash-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "powershell",
+      "title": "PowerShell",
+      "kind": "tool",
+      "ecosystem": "dotnet",
+      "summary": "PowerShell setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "interview",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "PowerShell passes typed .NET objects through pipelines and separates commands into discoverable verb-noun operations with common parameter semantics.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "powershell-command-1",
+        "powershell-command-2",
+        "powershell-command-3",
+        "powershell-command-4",
+        "powershell-command-5",
+        "powershell-command-6",
+        "powershell-command-7",
+        "powershell-command-8",
+        "powershell-command-9",
+        "powershell-command-10",
+        "powershell-command-11",
+        "powershell-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "PowerShell",
+          "code": "// PowerShell: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "PowerShell",
+          "code": "// PowerShell: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "PowerShell",
+          "code": "// PowerShell: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "PowerShell: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant PowerShell mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PowerShell: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant PowerShell mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PowerShell: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant PowerShell mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PowerShell: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant PowerShell mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PowerShell: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant PowerShell mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PowerShell: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant PowerShell mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PowerShell: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant PowerShell mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "PowerShell: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant PowerShell mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "PowerShell: core mental model",
+          "back": "PowerShell passes typed .NET objects through pipelines and separates commands into discoverable verb-noun operations with common parameter semantics."
+        },
+        {
+          "front": "PowerShell: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "PowerShell: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "PowerShell: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "powershell-source-1",
+        "powershell-source-2",
+        "powershell-source-3"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "web-platform",
+      "title": "HTML, CSS, and Web APIs",
+      "kind": "web-api",
+      "ecosystem": "web",
+      "summary": "HTML, CSS, and Web APIs setup, syntax, runtime and memory model, concurrency, idioms, debugging, performance, security, packaging, testing, and interview questions.",
+      "publicationStatus": "published",
+      "level": "interview",
+      "prerequisites": [],
+      "roleIds": [
+        "sde",
+        "backend",
+        "full-stack",
+        "platform"
+      ],
+      "version": {
+        "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
+        "current": "stable"
+      },
+      "mentalModel": "The browser parses HTML into structure, CSS into presentation rules, and JavaScript into behavior while the event loop, rendering pipeline, and security model coordinate the page.",
+      "setup": [
+        "Install from the official distribution or package manager.",
+        "Pin the runtime and dependency versions in project metadata.",
+        "Run the version, build, and test checks before changing code."
+      ],
+      "runtime": [
+        "Name the execution unit and its lifecycle.",
+        "Trace allocation, scheduling, I/O, and cleanup.",
+        "Separate language or framework guarantees from implementation behavior."
+      ],
+      "testing": [
+        "Test one behavior at the smallest stable boundary.",
+        "Keep deterministic unit tests separate from integration and end-to-end checks."
+      ],
+      "debugging": [
+        "Reproduce with the smallest input and capture the first bad state.",
+        "Use structured logs, breakpoints, traces, or query plans before guessing."
+      ],
+      "performance": [
+        "Measure latency, throughput, allocation, and contention before optimizing.",
+        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+      ],
+      "security": [
+        "Validate untrusted input at the boundary and use least privilege.",
+        "Keep secrets out of source, logs, command history, and generated artifacts."
+      ],
+      "failureModes": [
+        "Using an unsupported or mismatched version.",
+        "Hiding an expensive operation behind a convenient abstraction.",
+        "Handling only the happy path while losing context from failures."
+      ],
+      "commandIds": [
+        "web-platform-command-1",
+        "web-platform-command-2",
+        "web-platform-command-3",
+        "web-platform-command-4",
+        "web-platform-command-5",
+        "web-platform-command-6",
+        "web-platform-command-7",
+        "web-platform-command-8",
+        "web-platform-command-9",
+        "web-platform-command-10",
+        "web-platform-command-11",
+        "web-platform-command-12"
+      ],
+      "workedExamples": [
+        {
+          "title": "Smallest working slice",
+          "language": "HTML, CSS, and Web APIs",
+          "code": "// HTML, CSS, and Web APIs: express the smallest complete program and make ownership explicit.",
+          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+        },
+        {
+          "title": "Boundary made explicit",
+          "language": "HTML, CSS, and Web APIs",
+          "code": "// HTML, CSS, and Web APIs: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
+          "explanation": "Move validation to the boundary so failures remain local and observable."
+        },
+        {
+          "title": "Testable production shape",
+          "language": "HTML, CSS, and Web APIs",
+          "code": "// HTML, CSS, and Web APIs: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
+          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+        }
+      ],
+      "questions": [
+        {
+          "prompt": "HTML, CSS, and Web APIs: Explain the runtime model without using framework slogans.",
+          "difficulty": "easy",
+          "answer": "A strong answer defines the relevant HTML, CSS, and Web APIs mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "HTML, CSS, and Web APIs: Which guarantees belong to the specification and which to the implementation?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant HTML, CSS, and Web APIs mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "HTML, CSS, and Web APIs: Design a minimal test pyramid for a production feature.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant HTML, CSS, and Web APIs mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "HTML, CSS, and Web APIs: Diagnose a latency regression using evidence rather than guesses.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant HTML, CSS, and Web APIs mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "HTML, CSS, and Web APIs: Name three failure modes and the signal that reveals each one.",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant HTML, CSS, and Web APIs mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "HTML, CSS, and Web APIs: How do memory, concurrency, and I/O interact here?",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant HTML, CSS, and Web APIs mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "HTML, CSS, and Web APIs: What is the safest upgrade path between supported versions?",
+          "difficulty": "medium",
+          "answer": "A strong answer defines the relevant HTML, CSS, and Web APIs mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        },
+        {
+          "prompt": "HTML, CSS, and Web APIs: Sketch a secure deployment and rollback strategy.",
+          "difficulty": "hard",
+          "answer": "A strong answer defines the relevant HTML, CSS, and Web APIs mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal."
+        }
+      ],
+      "flashcards": [
+        {
+          "front": "HTML, CSS, and Web APIs: core mental model",
+          "back": "The browser parses HTML into structure, CSS into presentation rules, and JavaScript into behavior while the event loop, rendering pipeline, and security model coordinate the page."
+        },
+        {
+          "front": "HTML, CSS, and Web APIs: first debugging move",
+          "back": "Reproduce narrowly and inspect the first incorrect state."
+        },
+        {
+          "front": "HTML, CSS, and Web APIs: performance rule",
+          "back": "Measure the constrained resource before changing the design."
+        },
+        {
+          "front": "HTML, CSS, and Web APIs: security rule",
+          "back": "Treat input and identity as untrusted until validated at a boundary."
+        }
+      ],
+      "cheatsheet": [
+        {
+          "title": "Interview frame",
+          "items": [
+            {
+              "label": "Explain",
+              "value": "model → invariant → example → trade-off"
+            },
+            {
+              "label": "Debug",
+              "value": "reproduce → observe → isolate → verify"
+            }
+          ]
+        },
+        {
+          "title": "Production frame",
+          "items": [
+            {
+              "label": "Ship",
+              "value": "pin → build → test → deploy → observe"
+            },
+            {
+              "label": "Recover",
+              "value": "limit blast radius → rollback → learn"
+            }
+          ]
+        }
+      ],
+      "sourceIds": [
+        "web-platform-source-1",
+        "web-platform-source-2",
+        "web-platform-source-3"
       ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"

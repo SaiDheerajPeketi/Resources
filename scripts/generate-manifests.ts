@@ -12,6 +12,7 @@ import { securityLessons } from "../src/data/security-lessons";
 import { fintechLessons } from "../src/data/fintech-lessons";
 import { commands, technologies, technologySources } from "../src/data/technologies";
 import { dsaPatterns, dsaProblems, dsaSheets } from "../src/data/dsa";
+import { coverageCrosswalks } from "../src/data/crosswalks";
 
 const output = new URL("../public/generated/", import.meta.url);
 await mkdir(output, { recursive: true });
@@ -29,6 +30,7 @@ await writeJson("technology-manifest.json", { version: CONTENT_MANIFEST_VERSION,
 await writeJson("command-manifest.json", { version: CONTENT_MANIFEST_VERSION, commands });
 await writeJson("problem-manifest.json", { version: CONTENT_MANIFEST_VERSION, patterns: dsaPatterns, problems: dsaProblems });
 await writeJson("sheet-manifest.json", { version: CONTENT_MANIFEST_VERSION, sheets: dsaSheets });
+await writeJson("crosswalk-manifest.json", { version: CONTENT_MANIFEST_VERSION, crosswalks: coverageCrosswalks });
 await writeJson("coverage-manifest.json", { version: CONTENT_MANIFEST_VERSION, topics: topics.length, technologies: technologies.length, commands: commands.length, problems: dsaProblems.length, sheets: dsaSheets.map((sheet) => ({ id: sheet.id, count: sheet.problemIds.length })) });
 await writeJson("pack-manifest.json", {
   version: CONTENT_MANIFEST_VERSION,

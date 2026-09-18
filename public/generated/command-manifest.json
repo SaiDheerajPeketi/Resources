@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r8",
+  "version": "2026.09.18-r9",
   "commands": [
     {
       "id": "java-command-1",
@@ -1077,6 +1077,2286 @@
       "title": "Inspect open files",
       "command": "lsof -p <pid>",
       "purpose": "Trace files and sockets owned by a process.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "c-command-1",
+      "technologyId": "c",
+      "title": "Check compiler",
+      "command": "cc --version",
+      "purpose": "Confirm the active C compiler.",
+      "platform": "all",
+      "expectedResult": "A successful C result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "c-command-2",
+      "technologyId": "c",
+      "title": "Compile with diagnostics",
+      "command": "cc -std=c17 -Wall -Wextra -Wpedantic main.c -o app",
+      "purpose": "Build a C17 executable with strict warnings.",
+      "platform": "all",
+      "expectedResult": "A successful C result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "c-command-3",
+      "technologyId": "c",
+      "title": "Run sanitizers",
+      "command": "cc -fsanitize=address,undefined -g main.c -o app",
+      "purpose": "Instrument memory and undefined behavior.",
+      "platform": "all",
+      "expectedResult": "A successful C result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "c-command-4",
+      "technologyId": "c",
+      "title": "Debug",
+      "command": "gdb ./app",
+      "purpose": "Start an interactive native debugger.",
+      "platform": "all",
+      "expectedResult": "A successful C result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "c-command-5",
+      "technologyId": "c",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "c-command-6",
+      "technologyId": "c",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "c-command-7",
+      "technologyId": "c",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "c-command-8",
+      "technologyId": "c",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "c-command-9",
+      "technologyId": "c",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "c-command-10",
+      "technologyId": "c",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "c-command-11",
+      "technologyId": "c",
+      "title": "Read the manual",
+      "command": "man <tool>",
+      "purpose": "Use the installed manual for exact platform semantics.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "c-command-12",
+      "technologyId": "c",
+      "title": "Capture command timing",
+      "command": "time <command>",
+      "purpose": "Measure wall-clock behavior before optimizing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "cpp-command-1",
+      "technologyId": "cpp",
+      "title": "Check compiler",
+      "command": "c++ --version",
+      "purpose": "Confirm the C++ toolchain.",
+      "platform": "all",
+      "expectedResult": "A successful C++ result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cpp-command-2",
+      "technologyId": "cpp",
+      "title": "Compile C++17",
+      "command": "c++ -std=c++17 -Wall -Wextra -Wpedantic main.cpp -o app",
+      "purpose": "Build the canonical interview target.",
+      "platform": "all",
+      "expectedResult": "A successful C++ result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cpp-command-3",
+      "technologyId": "cpp",
+      "title": "Compile C++23",
+      "command": "c++ -std=c++23 main.cpp -o app",
+      "purpose": "Try a modern-language callout.",
+      "platform": "all",
+      "expectedResult": "A successful C++ result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cpp-command-4",
+      "technologyId": "cpp",
+      "title": "Run sanitizers",
+      "command": "c++ -fsanitize=address,undefined -g main.cpp -o app",
+      "purpose": "Detect memory and undefined behavior.",
+      "platform": "all",
+      "expectedResult": "A successful C++ result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cpp-command-5",
+      "technologyId": "cpp",
+      "title": "Configure CMake",
+      "command": "cmake -S . -B build",
+      "purpose": "Generate an out-of-source build.",
+      "platform": "all",
+      "expectedResult": "A successful C++ result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cpp-command-6",
+      "technologyId": "cpp",
+      "title": "Build CMake",
+      "command": "cmake --build build",
+      "purpose": "Compile configured targets.",
+      "platform": "all",
+      "expectedResult": "A successful C++ result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cpp-command-7",
+      "technologyId": "cpp",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "cpp-command-8",
+      "technologyId": "cpp",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "cpp-command-9",
+      "technologyId": "cpp",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "cpp-command-10",
+      "technologyId": "cpp",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "cpp-command-11",
+      "technologyId": "cpp",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "cpp-command-12",
+      "technologyId": "cpp",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "python-command-1",
+      "technologyId": "python",
+      "title": "Check Python",
+      "command": "python --version",
+      "purpose": "Confirm the active interpreter.",
+      "platform": "all",
+      "expectedResult": "A successful Python result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "python-command-2",
+      "technologyId": "python",
+      "title": "Create a virtual environment",
+      "command": "python -m venv .venv",
+      "purpose": "Isolate project dependencies.",
+      "platform": "all",
+      "expectedResult": "A successful Python result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "python-command-3",
+      "technologyId": "python",
+      "title": "Run a module",
+      "command": "python -m package.module",
+      "purpose": "Use module-aware import semantics.",
+      "platform": "all",
+      "expectedResult": "A successful Python result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "python-command-4",
+      "technologyId": "python",
+      "title": "Run tests",
+      "command": "python -m pytest",
+      "purpose": "Execute the test suite.",
+      "platform": "all",
+      "expectedResult": "A successful Python result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "python-command-5",
+      "technologyId": "python",
+      "title": "Profile",
+      "command": "python -m cProfile app.py",
+      "purpose": "Measure call-level CPU time.",
+      "platform": "all",
+      "expectedResult": "A successful Python result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "python-command-6",
+      "technologyId": "python",
+      "title": "Compile-check",
+      "command": "python -m compileall src",
+      "purpose": "Check syntax across a source tree.",
+      "platform": "all",
+      "expectedResult": "A successful Python result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "python-command-7",
+      "technologyId": "python",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "python-command-8",
+      "technologyId": "python",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "python-command-9",
+      "technologyId": "python",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "python-command-10",
+      "technologyId": "python",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "python-command-11",
+      "technologyId": "python",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "python-command-12",
+      "technologyId": "python",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "javascript-command-1",
+      "technologyId": "javascript",
+      "title": "Check Node.js",
+      "command": "node --version",
+      "purpose": "Confirm the server-side runtime.",
+      "platform": "all",
+      "expectedResult": "A successful JavaScript result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "javascript-command-2",
+      "technologyId": "javascript",
+      "title": "Run a module",
+      "command": "node app.mjs",
+      "purpose": "Execute an ECMAScript module.",
+      "platform": "all",
+      "expectedResult": "A successful JavaScript result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "javascript-command-3",
+      "technologyId": "javascript",
+      "title": "Inspect the runtime",
+      "command": "node --inspect app.mjs",
+      "purpose": "Expose the debugger protocol.",
+      "platform": "all",
+      "expectedResult": "A successful JavaScript result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "javascript-command-4",
+      "technologyId": "javascript",
+      "title": "Run tests",
+      "command": "node --test",
+      "purpose": "Use the built-in test runner.",
+      "platform": "all",
+      "expectedResult": "A successful JavaScript result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "javascript-command-5",
+      "technologyId": "javascript",
+      "title": "Check package metadata",
+      "command": "npm pkg get",
+      "purpose": "Inspect package configuration.",
+      "platform": "all",
+      "expectedResult": "A successful JavaScript result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "javascript-command-6",
+      "technologyId": "javascript",
+      "title": "Audit dependencies",
+      "command": "npm audit",
+      "purpose": "Compare dependencies with known advisories.",
+      "platform": "all",
+      "expectedResult": "A successful JavaScript result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "javascript-command-7",
+      "technologyId": "javascript",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "javascript-command-8",
+      "technologyId": "javascript",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "javascript-command-9",
+      "technologyId": "javascript",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "javascript-command-10",
+      "technologyId": "javascript",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "javascript-command-11",
+      "technologyId": "javascript",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "javascript-command-12",
+      "technologyId": "javascript",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "typescript-command-1",
+      "technologyId": "typescript",
+      "title": "Check compiler",
+      "command": "tsc --version",
+      "purpose": "Confirm the TypeScript compiler.",
+      "platform": "all",
+      "expectedResult": "A successful TypeScript result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "typescript-command-2",
+      "technologyId": "typescript",
+      "title": "Initialize config",
+      "command": "tsc --init",
+      "purpose": "Create an explicit compiler policy.",
+      "platform": "all",
+      "expectedResult": "A successful TypeScript result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "typescript-command-3",
+      "technologyId": "typescript",
+      "title": "Type-check",
+      "command": "tsc --noEmit",
+      "purpose": "Validate types without generating JavaScript.",
+      "platform": "all",
+      "expectedResult": "A successful TypeScript result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "typescript-command-4",
+      "technologyId": "typescript",
+      "title": "Build",
+      "command": "tsc -p tsconfig.json",
+      "purpose": "Compile the selected project.",
+      "platform": "all",
+      "expectedResult": "A successful TypeScript result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "typescript-command-5",
+      "technologyId": "typescript",
+      "title": "Trace resolution",
+      "command": "tsc --traceResolution",
+      "purpose": "Explain module lookup decisions.",
+      "platform": "all",
+      "expectedResult": "A successful TypeScript result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "typescript-command-6",
+      "technologyId": "typescript",
+      "title": "Run tests",
+      "command": "npx vitest run",
+      "purpose": "Execute a TypeScript-friendly test suite.",
+      "platform": "all",
+      "expectedResult": "A successful TypeScript result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "typescript-command-7",
+      "technologyId": "typescript",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "typescript-command-8",
+      "technologyId": "typescript",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "typescript-command-9",
+      "technologyId": "typescript",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "typescript-command-10",
+      "technologyId": "typescript",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "typescript-command-11",
+      "technologyId": "typescript",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "typescript-command-12",
+      "technologyId": "typescript",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "go-command-1",
+      "technologyId": "go",
+      "title": "Check Go",
+      "command": "go version",
+      "purpose": "Confirm the toolchain.",
+      "platform": "all",
+      "expectedResult": "A successful Go result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "go-command-2",
+      "technologyId": "go",
+      "title": "Initialize a module",
+      "command": "go mod init example.com/app",
+      "purpose": "Create module identity.",
+      "platform": "all",
+      "expectedResult": "A successful Go result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "go-command-3",
+      "technologyId": "go",
+      "title": "Run",
+      "command": "go run .",
+      "purpose": "Build and execute the main package.",
+      "platform": "all",
+      "expectedResult": "A successful Go result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "go-command-4",
+      "technologyId": "go",
+      "title": "Test",
+      "command": "go test ./...",
+      "purpose": "Test all packages.",
+      "platform": "all",
+      "expectedResult": "A successful Go result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "go-command-5",
+      "technologyId": "go",
+      "title": "Race detector",
+      "command": "go test -race ./...",
+      "purpose": "Instrument shared-memory races.",
+      "platform": "all",
+      "expectedResult": "A successful Go result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "go-command-6",
+      "technologyId": "go",
+      "title": "Format",
+      "command": "gofmt -w .",
+      "purpose": "Apply canonical formatting.",
+      "platform": "all",
+      "expectedResult": "A successful Go result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "go-command-7",
+      "technologyId": "go",
+      "title": "Inspect dependencies",
+      "command": "go mod graph",
+      "purpose": "Print the selected module graph.",
+      "platform": "all",
+      "expectedResult": "A successful Go result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "go-command-8",
+      "technologyId": "go",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "go-command-9",
+      "technologyId": "go",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "go-command-10",
+      "technologyId": "go",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "go-command-11",
+      "technologyId": "go",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "go-command-12",
+      "technologyId": "go",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "csharp-command-1",
+      "technologyId": "csharp",
+      "title": "Check .NET",
+      "command": "dotnet --info",
+      "purpose": "Inspect SDKs and runtimes.",
+      "platform": "all",
+      "expectedResult": "A successful C# result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "csharp-command-2",
+      "technologyId": "csharp",
+      "title": "Create console app",
+      "command": "dotnet new console",
+      "purpose": "Scaffold a minimal project.",
+      "platform": "all",
+      "expectedResult": "A successful C# result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "csharp-command-3",
+      "technologyId": "csharp",
+      "title": "Build",
+      "command": "dotnet build",
+      "purpose": "Compile the solution.",
+      "platform": "all",
+      "expectedResult": "A successful C# result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "csharp-command-4",
+      "technologyId": "csharp",
+      "title": "Run",
+      "command": "dotnet run",
+      "purpose": "Build and execute the project.",
+      "platform": "all",
+      "expectedResult": "A successful C# result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "csharp-command-5",
+      "technologyId": "csharp",
+      "title": "Test",
+      "command": "dotnet test",
+      "purpose": "Run discovered test projects.",
+      "platform": "all",
+      "expectedResult": "A successful C# result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "csharp-command-6",
+      "technologyId": "csharp",
+      "title": "Format",
+      "command": "dotnet format",
+      "purpose": "Apply configured formatting and analyzers.",
+      "platform": "all",
+      "expectedResult": "A successful C# result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "csharp-command-7",
+      "technologyId": "csharp",
+      "title": "List packages",
+      "command": "dotnet list package",
+      "purpose": "Inspect package references.",
+      "platform": "all",
+      "expectedResult": "A successful C# result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "csharp-command-8",
+      "technologyId": "csharp",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "csharp-command-9",
+      "technologyId": "csharp",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "csharp-command-10",
+      "technologyId": "csharp",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "csharp-command-11",
+      "technologyId": "csharp",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "csharp-command-12",
+      "technologyId": "csharp",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "rust-command-1",
+      "technologyId": "rust",
+      "title": "Check Rust",
+      "command": "rustc --version",
+      "purpose": "Confirm the compiler.",
+      "platform": "all",
+      "expectedResult": "A successful Rust result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "rust-command-2",
+      "technologyId": "rust",
+      "title": "Create project",
+      "command": "cargo new app",
+      "purpose": "Scaffold a package.",
+      "platform": "all",
+      "expectedResult": "A successful Rust result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "rust-command-3",
+      "technologyId": "rust",
+      "title": "Check",
+      "command": "cargo check",
+      "purpose": "Type-check without code generation.",
+      "platform": "all",
+      "expectedResult": "A successful Rust result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "rust-command-4",
+      "technologyId": "rust",
+      "title": "Test",
+      "command": "cargo test",
+      "purpose": "Run unit, integration, and documentation tests.",
+      "platform": "all",
+      "expectedResult": "A successful Rust result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "rust-command-5",
+      "technologyId": "rust",
+      "title": "Lint",
+      "command": "cargo clippy --all-targets",
+      "purpose": "Run Rust-aware lints.",
+      "platform": "all",
+      "expectedResult": "A successful Rust result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "rust-command-6",
+      "technologyId": "rust",
+      "title": "Format",
+      "command": "cargo fmt --check",
+      "purpose": "Verify canonical formatting.",
+      "platform": "all",
+      "expectedResult": "A successful Rust result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "rust-command-7",
+      "technologyId": "rust",
+      "title": "Build optimized",
+      "command": "cargo build --release",
+      "purpose": "Produce an optimized binary.",
+      "platform": "all",
+      "expectedResult": "A successful Rust result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "rust-command-8",
+      "technologyId": "rust",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "rust-command-9",
+      "technologyId": "rust",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "rust-command-10",
+      "technologyId": "rust",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "rust-command-11",
+      "technologyId": "rust",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "rust-command-12",
+      "technologyId": "rust",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "kotlin-command-1",
+      "technologyId": "kotlin",
+      "title": "Check compiler",
+      "command": "kotlinc -version",
+      "purpose": "Confirm the Kotlin compiler.",
+      "platform": "all",
+      "expectedResult": "A successful Kotlin result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kotlin-command-2",
+      "technologyId": "kotlin",
+      "title": "Compile",
+      "command": "kotlinc Main.kt -include-runtime -d app.jar",
+      "purpose": "Build an executable jar.",
+      "platform": "all",
+      "expectedResult": "A successful Kotlin result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kotlin-command-3",
+      "technologyId": "kotlin",
+      "title": "Run",
+      "command": "java -jar app.jar",
+      "purpose": "Execute the packaged program.",
+      "platform": "all",
+      "expectedResult": "A successful Kotlin result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kotlin-command-4",
+      "technologyId": "kotlin",
+      "title": "Gradle tests",
+      "command": "./gradlew test",
+      "purpose": "Run JVM tests.",
+      "platform": "all",
+      "expectedResult": "A successful Kotlin result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kotlin-command-5",
+      "technologyId": "kotlin",
+      "title": "Gradle build",
+      "command": "./gradlew build",
+      "purpose": "Build and verify all configured tasks.",
+      "platform": "all",
+      "expectedResult": "A successful Kotlin result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kotlin-command-6",
+      "technologyId": "kotlin",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "kotlin-command-7",
+      "technologyId": "kotlin",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "kotlin-command-8",
+      "technologyId": "kotlin",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "kotlin-command-9",
+      "technologyId": "kotlin",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "kotlin-command-10",
+      "technologyId": "kotlin",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "kotlin-command-11",
+      "technologyId": "kotlin",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "kotlin-command-12",
+      "technologyId": "kotlin",
+      "title": "Read the manual",
+      "command": "man <tool>",
+      "purpose": "Use the installed manual for exact platform semantics.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "swift-command-1",
+      "technologyId": "swift",
+      "title": "Check Swift",
+      "command": "swift --version",
+      "purpose": "Confirm the toolchain.",
+      "platform": "all",
+      "expectedResult": "A successful Swift result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swift-command-2",
+      "technologyId": "swift",
+      "title": "Create package",
+      "command": "swift package init --type executable",
+      "purpose": "Scaffold a Swift Package.",
+      "platform": "all",
+      "expectedResult": "A successful Swift result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swift-command-3",
+      "technologyId": "swift",
+      "title": "Build",
+      "command": "swift build",
+      "purpose": "Compile package targets.",
+      "platform": "all",
+      "expectedResult": "A successful Swift result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swift-command-4",
+      "technologyId": "swift",
+      "title": "Run",
+      "command": "swift run",
+      "purpose": "Build and execute the executable target.",
+      "platform": "all",
+      "expectedResult": "A successful Swift result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swift-command-5",
+      "technologyId": "swift",
+      "title": "Test",
+      "command": "swift test",
+      "purpose": "Run package tests.",
+      "platform": "all",
+      "expectedResult": "A successful Swift result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swift-command-6",
+      "technologyId": "swift",
+      "title": "Resolve packages",
+      "command": "swift package resolve",
+      "purpose": "Resolve dependency versions.",
+      "platform": "all",
+      "expectedResult": "A successful Swift result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swift-command-7",
+      "technologyId": "swift",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "swift-command-8",
+      "technologyId": "swift",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "swift-command-9",
+      "technologyId": "swift",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "swift-command-10",
+      "technologyId": "swift",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "swift-command-11",
+      "technologyId": "swift",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "swift-command-12",
+      "technologyId": "swift",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "php-command-1",
+      "technologyId": "php",
+      "title": "Check PHP",
+      "command": "php --version",
+      "purpose": "Confirm the runtime.",
+      "platform": "all",
+      "expectedResult": "A successful PHP result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "php-command-2",
+      "technologyId": "php",
+      "title": "Run script",
+      "command": "php app.php",
+      "purpose": "Execute a CLI entry point.",
+      "platform": "all",
+      "expectedResult": "A successful PHP result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "php-command-3",
+      "technologyId": "php",
+      "title": "Syntax check",
+      "command": "php -l app.php",
+      "purpose": "Parse without executing.",
+      "platform": "all",
+      "expectedResult": "A successful PHP result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "php-command-4",
+      "technologyId": "php",
+      "title": "Start dev server",
+      "command": "php -S localhost:8000 -t public",
+      "purpose": "Serve a local document root.",
+      "platform": "all",
+      "expectedResult": "A successful PHP result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "php-command-5",
+      "technologyId": "php",
+      "title": "Install dependencies",
+      "command": "composer install",
+      "purpose": "Install locked packages.",
+      "platform": "all",
+      "expectedResult": "A successful PHP result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "php-command-6",
+      "technologyId": "php",
+      "title": "Run tests",
+      "command": "./vendor/bin/phpunit",
+      "purpose": "Execute PHPUnit tests.",
+      "platform": "all",
+      "expectedResult": "A successful PHP result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "php-command-7",
+      "technologyId": "php",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "php-command-8",
+      "technologyId": "php",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "php-command-9",
+      "technologyId": "php",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "php-command-10",
+      "technologyId": "php",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "php-command-11",
+      "technologyId": "php",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "php-command-12",
+      "technologyId": "php",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "ruby-command-1",
+      "technologyId": "ruby",
+      "title": "Check Ruby",
+      "command": "ruby --version",
+      "purpose": "Confirm the interpreter.",
+      "platform": "all",
+      "expectedResult": "A successful Ruby result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ruby-command-2",
+      "technologyId": "ruby",
+      "title": "Run script",
+      "command": "ruby app.rb",
+      "purpose": "Execute a Ruby file.",
+      "platform": "all",
+      "expectedResult": "A successful Ruby result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ruby-command-3",
+      "technologyId": "ruby",
+      "title": "Check syntax",
+      "command": "ruby -c app.rb",
+      "purpose": "Parse without running.",
+      "platform": "all",
+      "expectedResult": "A successful Ruby result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ruby-command-4",
+      "technologyId": "ruby",
+      "title": "Install bundle",
+      "command": "bundle install",
+      "purpose": "Install locked gems.",
+      "platform": "all",
+      "expectedResult": "A successful Ruby result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "ruby-command-5",
+      "technologyId": "ruby",
+      "title": "Run tests",
+      "command": "bundle exec rake test",
+      "purpose": "Execute the project test task.",
+      "platform": "all",
+      "expectedResult": "A successful Ruby result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ruby-command-6",
+      "technologyId": "ruby",
+      "title": "Open REPL",
+      "command": "irb",
+      "purpose": "Explore objects interactively.",
+      "platform": "all",
+      "expectedResult": "A successful Ruby result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ruby-command-7",
+      "technologyId": "ruby",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "ruby-command-8",
+      "technologyId": "ruby",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "ruby-command-9",
+      "technologyId": "ruby",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "ruby-command-10",
+      "technologyId": "ruby",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "ruby-command-11",
+      "technologyId": "ruby",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "ruby-command-12",
+      "technologyId": "ruby",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "scala-command-1",
+      "technologyId": "scala",
+      "title": "Check Scala",
+      "command": "scala -version",
+      "purpose": "Confirm the runner.",
+      "platform": "all",
+      "expectedResult": "A successful Scala result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scala-command-2",
+      "technologyId": "scala",
+      "title": "Check sbt",
+      "command": "sbt --version",
+      "purpose": "Confirm the build tool.",
+      "platform": "all",
+      "expectedResult": "A successful Scala result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scala-command-3",
+      "technologyId": "scala",
+      "title": "Compile",
+      "command": "sbt compile",
+      "purpose": "Compile project sources.",
+      "platform": "all",
+      "expectedResult": "A successful Scala result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scala-command-4",
+      "technologyId": "scala",
+      "title": "Test",
+      "command": "sbt test",
+      "purpose": "Run discovered tests.",
+      "platform": "all",
+      "expectedResult": "A successful Scala result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scala-command-5",
+      "technologyId": "scala",
+      "title": "Open console",
+      "command": "sbt console",
+      "purpose": "Start a project-aware REPL.",
+      "platform": "all",
+      "expectedResult": "A successful Scala result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scala-command-6",
+      "technologyId": "scala",
+      "title": "Inspect dependencies",
+      "command": "sbt dependencyTree",
+      "purpose": "Review transitive libraries.",
+      "platform": "all",
+      "expectedResult": "A successful Scala result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scala-command-7",
+      "technologyId": "scala",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "scala-command-8",
+      "technologyId": "scala",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "scala-command-9",
+      "technologyId": "scala",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "scala-command-10",
+      "technologyId": "scala",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "scala-command-11",
+      "technologyId": "scala",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "scala-command-12",
+      "technologyId": "scala",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "dart-command-1",
+      "technologyId": "dart",
+      "title": "Check Dart",
+      "command": "dart --version",
+      "purpose": "Confirm the SDK.",
+      "platform": "all",
+      "expectedResult": "A successful Dart result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dart-command-2",
+      "technologyId": "dart",
+      "title": "Create project",
+      "command": "dart create app",
+      "purpose": "Scaffold a package.",
+      "platform": "all",
+      "expectedResult": "A successful Dart result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dart-command-3",
+      "technologyId": "dart",
+      "title": "Run",
+      "command": "dart run",
+      "purpose": "Execute the package entry point.",
+      "platform": "all",
+      "expectedResult": "A successful Dart result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dart-command-4",
+      "technologyId": "dart",
+      "title": "Analyze",
+      "command": "dart analyze",
+      "purpose": "Run static analysis.",
+      "platform": "all",
+      "expectedResult": "A successful Dart result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dart-command-5",
+      "technologyId": "dart",
+      "title": "Test",
+      "command": "dart test",
+      "purpose": "Run tests.",
+      "platform": "all",
+      "expectedResult": "A successful Dart result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dart-command-6",
+      "technologyId": "dart",
+      "title": "Format",
+      "command": "dart format .",
+      "purpose": "Apply canonical formatting.",
+      "platform": "all",
+      "expectedResult": "A successful Dart result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dart-command-7",
+      "technologyId": "dart",
+      "title": "Compile native",
+      "command": "dart compile exe bin/app.dart",
+      "purpose": "Produce a native executable.",
+      "platform": "all",
+      "expectedResult": "A successful Dart result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dart-command-8",
+      "technologyId": "dart",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "dart-command-9",
+      "technologyId": "dart",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "dart-command-10",
+      "technologyId": "dart",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "dart-command-11",
+      "technologyId": "dart",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "dart-command-12",
+      "technologyId": "dart",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "r-command-1",
+      "technologyId": "r",
+      "title": "Check R",
+      "command": "R --version",
+      "purpose": "Confirm the runtime.",
+      "platform": "all",
+      "expectedResult": "A successful R result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "r-command-2",
+      "technologyId": "r",
+      "title": "Run script",
+      "command": "Rscript analysis.R",
+      "purpose": "Execute non-interactively.",
+      "platform": "all",
+      "expectedResult": "A successful R result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "r-command-3",
+      "technologyId": "r",
+      "title": "Open R",
+      "command": "R",
+      "purpose": "Start an interactive session.",
+      "platform": "all",
+      "expectedResult": "A successful R result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "r-command-4",
+      "technologyId": "r",
+      "title": "Check package",
+      "command": "R CMD check .",
+      "purpose": "Run package validation.",
+      "platform": "all",
+      "expectedResult": "A successful R result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "r-command-5",
+      "technologyId": "r",
+      "title": "Build package",
+      "command": "R CMD build .",
+      "purpose": "Create a source package.",
+      "platform": "all",
+      "expectedResult": "A successful R result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "r-command-6",
+      "technologyId": "r",
+      "title": "Install package",
+      "command": "R CMD INSTALL .",
+      "purpose": "Install the local package.",
+      "platform": "all",
+      "expectedResult": "A successful R result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "r-command-7",
+      "technologyId": "r",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "r-command-8",
+      "technologyId": "r",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "r-command-9",
+      "technologyId": "r",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "r-command-10",
+      "technologyId": "r",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "r-command-11",
+      "technologyId": "r",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "r-command-12",
+      "technologyId": "r",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "sql-command-1",
+      "technologyId": "sql",
+      "title": "Open PostgreSQL",
+      "command": "psql \"$DATABASE_URL\"",
+      "purpose": "Start a PostgreSQL session.",
+      "platform": "all",
+      "expectedResult": "A successful SQL result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "sql-command-2",
+      "technologyId": "sql",
+      "title": "Open SQLite",
+      "command": "sqlite3 app.db",
+      "purpose": "Start an embedded SQL session.",
+      "platform": "all",
+      "expectedResult": "A successful SQL result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "sql-command-3",
+      "technologyId": "sql",
+      "title": "Explain query",
+      "command": "EXPLAIN (ANALYZE, BUFFERS) SELECT ...",
+      "purpose": "Measure a PostgreSQL plan.",
+      "platform": "all",
+      "expectedResult": "A successful SQL result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "sql-command-4",
+      "technologyId": "sql",
+      "title": "List tables",
+      "command": "\\dt",
+      "purpose": "Inspect the current PostgreSQL schema.",
+      "platform": "all",
+      "expectedResult": "A successful SQL result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "sql-command-5",
+      "technologyId": "sql",
+      "title": "Describe table",
+      "command": "\\d+ accounts",
+      "purpose": "Inspect columns and indexes.",
+      "platform": "all",
+      "expectedResult": "A successful SQL result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "sql-command-6",
+      "technologyId": "sql",
+      "title": "Import CSV",
+      "command": "\\copy staging FROM 'data.csv' CSV HEADER",
+      "purpose": "Load a local file through the client.",
+      "platform": "all",
+      "expectedResult": "A successful SQL result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "sql-command-7",
+      "technologyId": "sql",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "sql-command-8",
+      "technologyId": "sql",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "sql-command-9",
+      "technologyId": "sql",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "sql-command-10",
+      "technologyId": "sql",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "sql-command-11",
+      "technologyId": "sql",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "sql-command-12",
+      "technologyId": "sql",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "bash-command-1",
+      "technologyId": "bash",
+      "title": "Check Bash",
+      "command": "bash --version",
+      "purpose": "Confirm the shell.",
+      "platform": "all",
+      "expectedResult": "A successful Bash result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "bash-command-2",
+      "technologyId": "bash",
+      "title": "Syntax check",
+      "command": "bash -n script.sh",
+      "purpose": "Parse without executing.",
+      "platform": "all",
+      "expectedResult": "A successful Bash result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "bash-command-3",
+      "technologyId": "bash",
+      "title": "Trace execution",
+      "command": "bash -x script.sh",
+      "purpose": "Print expanded commands as they run.",
+      "platform": "all",
+      "expectedResult": "A successful Bash result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "bash-command-4",
+      "technologyId": "bash",
+      "title": "Strict mode",
+      "command": "set -Eeuo pipefail",
+      "purpose": "Fail earlier on common scripting errors.",
+      "platform": "all",
+      "expectedResult": "A successful Bash result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "bash-command-5",
+      "technologyId": "bash",
+      "title": "Lint",
+      "command": "shellcheck script.sh",
+      "purpose": "Run shell-specific static analysis.",
+      "platform": "all",
+      "expectedResult": "A successful Bash result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "bash-command-6",
+      "technologyId": "bash",
+      "title": "Format",
+      "command": "shfmt -w script.sh",
+      "purpose": "Apply consistent shell formatting.",
+      "platform": "all",
+      "expectedResult": "A successful Bash result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "bash-command-7",
+      "technologyId": "bash",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "bash-command-8",
+      "technologyId": "bash",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "bash-command-9",
+      "technologyId": "bash",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "bash-command-10",
+      "technologyId": "bash",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "bash-command-11",
+      "technologyId": "bash",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "bash-command-12",
+      "technologyId": "bash",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "powershell-command-1",
+      "technologyId": "powershell",
+      "title": "Check PowerShell",
+      "command": "pwsh --version",
+      "purpose": "Confirm the runtime.",
+      "platform": "all",
+      "expectedResult": "A successful PowerShell result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "powershell-command-2",
+      "technologyId": "powershell",
+      "title": "Discover commands",
+      "command": "Get-Command",
+      "purpose": "List available commands.",
+      "platform": "all",
+      "expectedResult": "A successful PowerShell result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "powershell-command-3",
+      "technologyId": "powershell",
+      "title": "Read help",
+      "command": "Get-Help Get-Process -Full",
+      "purpose": "Read local command documentation.",
+      "platform": "all",
+      "expectedResult": "A successful PowerShell result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "powershell-command-4",
+      "technologyId": "powershell",
+      "title": "Inspect objects",
+      "command": "Get-Process | Get-Member",
+      "purpose": "Discover pipeline object shape.",
+      "platform": "all",
+      "expectedResult": "A successful PowerShell result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "powershell-command-5",
+      "technologyId": "powershell",
+      "title": "Analyze script",
+      "command": "Invoke-ScriptAnalyzer ./script.ps1",
+      "purpose": "Run PowerShell static analysis.",
+      "platform": "all",
+      "expectedResult": "A successful PowerShell result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "powershell-command-6",
+      "technologyId": "powershell",
+      "title": "Run tests",
+      "command": "Invoke-Pester",
+      "purpose": "Execute Pester tests.",
+      "platform": "all",
+      "expectedResult": "A successful PowerShell result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "powershell-command-7",
+      "technologyId": "powershell",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "powershell-command-8",
+      "technologyId": "powershell",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "powershell-command-9",
+      "technologyId": "powershell",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "powershell-command-10",
+      "technologyId": "powershell",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "powershell-command-11",
+      "technologyId": "powershell",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "powershell-command-12",
+      "technologyId": "powershell",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "web-platform-command-1",
+      "technologyId": "web-platform",
+      "title": "Serve locally",
+      "command": "python -m http.server 8000",
+      "purpose": "Serve static files over HTTP.",
+      "platform": "all",
+      "expectedResult": "A successful HTML, CSS, and Web APIs result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "web-platform-command-2",
+      "technologyId": "web-platform",
+      "title": "Inspect response",
+      "command": "curl -I http://localhost:8000",
+      "purpose": "Read headers without the body.",
+      "platform": "all",
+      "expectedResult": "A successful HTML, CSS, and Web APIs result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "web-platform-command-3",
+      "technologyId": "web-platform",
+      "title": "Audit with Lighthouse",
+      "command": "npx lighthouse http://localhost:8000",
+      "purpose": "Measure performance, accessibility, and best practices.",
+      "platform": "all",
+      "expectedResult": "A successful HTML, CSS, and Web APIs result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "web-platform-command-4",
+      "technologyId": "web-platform",
+      "title": "Validate HTML",
+      "command": "npx html-validate .",
+      "purpose": "Check document semantics.",
+      "platform": "all",
+      "expectedResult": "A successful HTML, CSS, and Web APIs result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "web-platform-command-5",
+      "technologyId": "web-platform",
+      "title": "Lint CSS",
+      "command": "npx stylelint '**/*.css'",
+      "purpose": "Check configured CSS rules.",
+      "platform": "all",
+      "expectedResult": "A successful HTML, CSS, and Web APIs result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "web-platform-command-6",
+      "technologyId": "web-platform",
+      "title": "Run browser tests",
+      "command": "npx playwright test",
+      "purpose": "Execute automated browser scenarios.",
+      "platform": "all",
+      "expectedResult": "A successful HTML, CSS, and Web APIs result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "web-platform-command-7",
+      "technologyId": "web-platform",
+      "title": "Open built-in help",
+      "command": "--help",
+      "purpose": "Print supported flags without changing state.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "web-platform-command-8",
+      "technologyId": "web-platform",
+      "title": "Inspect the installed version",
+      "command": "--version",
+      "purpose": "Report the active toolchain version.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "web-platform-command-9",
+      "technologyId": "web-platform",
+      "title": "List the project tree",
+      "command": "find . -maxdepth 2 -type f",
+      "purpose": "Confirm the files the tool will operate on.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "web-platform-command-10",
+      "technologyId": "web-platform",
+      "title": "Search configuration",
+      "command": "rg \"config|version|target\" .",
+      "purpose": "Locate version and runtime settings before editing.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "web-platform-command-11",
+      "technologyId": "web-platform",
+      "title": "Check repository changes",
+      "command": "git status --short",
+      "purpose": "Keep generated and authored changes distinguishable.",
+      "platform": "all",
+      "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "web-platform-command-12",
+      "technologyId": "web-platform",
+      "title": "Review the current patch",
+      "command": "git diff --stat",
+      "purpose": "Estimate the scope of a change before testing it.",
       "platform": "all",
       "expectedResult": "Read-only output or an isolated local change.",
       "safety": "safe"
