@@ -11,6 +11,7 @@ import {
 import { completeTechnologyDepth } from "@/data/technology-depth";
 import { languageTechnologyDepth } from "@/data/technology-depth-languages";
 import { technologyTeachingAids } from "@/data/technology-teaching-aids";
+import { buildGeneratedTechnologyDepth } from "@/data/technology-depth-generated";
 
 const fullDepthTechnology = { ...completeTechnologyDepth, ...languageTechnologyDepth };
 
@@ -30,23 +31,28 @@ export type TechnologySpec = {
   code?: [string, string, string];
 };
 
-const safeFallbacks: Array<[string, string, string]> = [
-  ["Open built-in help", "--help", "Print supported flags without changing state."],
-  ["Inspect the installed version", "--version", "Report the active toolchain version."],
-  ["List the project tree", "find . -maxdepth 2 -type f", "Confirm the files the tool will operate on."],
-  ["Search configuration", "rg \"config|version|target\" .", "Locate version and runtime settings before editing."],
-  ["Check repository changes", "git status --short", "Keep generated and authored changes distinguishable."],
-  ["Review the current patch", "git diff --stat", "Estimate the scope of a change before testing it."],
-  ["Read the manual", "man <tool>", "Use the installed manual for exact platform semantics."],
-  ["Capture command timing", "time <command>", "Measure wall-clock behavior before optimizing."],
-  ["Inspect open files", "lsof -p <pid>", "Trace files and sockets owned by a process."],
-  ["Inspect environment", "env", "Identify configuration supplied through environment variables."],
-  ["Create an isolated branch", "git switch -c interview-lab", "Experiment without disturbing the main branch."],
-  ["Run a focused test", "<test-command> --filter <name>", "Shorten feedback by selecting one failing behavior."]
-];
+function safeFallbacks(spec: TechnologySpec): Array<[string, string, string]> {
+  const primary = spec.commands[0]?.[1] ?? spec.id;
+  const executable = primary.trim().split(/\s+/)[0];
+  const focusedTest = spec.commands.find(([title]) => /test/i.test(title))?.[1] ?? primary;
+  return [
+    ["Open built-in help", `${executable} --help`, `Discover the installed ${spec.title} command surface locally.`],
+    ["Inspect the installed version", `${executable} --version`, `Record the active ${spec.title} toolchain before debugging compatibility.`],
+    ["List the project tree", "find . -maxdepth 2 -type f", `Confirm which project files and generated artifacts ${spec.title} can operate on.`],
+    ["Search configuration", "rg \"config|version|target|runtime\" .", `Locate ${spec.title} version, target, and runtime policy before editing.`],
+    ["Check repository changes", "git status --short", "Keep generated, dependency, configuration, and authored changes distinguishable."],
+    ["Review the current patch", "git diff --stat", `Bound the ${spec.title} change before running broader verification.`],
+    ["Read the installed manual", `man ${executable.replace(/^\.\//, "")}`, "Use the installed manual when platform behavior differs from online examples."],
+    ["Capture primary-operation timing", `time ${primary}`, `Measure representative ${spec.title} wall-clock behavior before optimizing.`],
+    ["Inspect open resources", "lsof -p <pid>", `Trace files and sockets retained by a running ${spec.title} process.`],
+    ["Inspect environment inputs", "env | sort", `Review environment-supplied configuration without assuming ${spec.title} defaults.`],
+    ["Create an isolated branch", "git switch -c interview-lab", `Experiment with ${spec.title} configuration without disturbing the main branch.`],
+    ["Run the focused verification", focusedTest, `Exercise the narrowest configured ${spec.title} test or health check.`]
+  ];
+}
 
 function commandBook(spec: TechnologySpec): CommandExample[] {
-  const entries = [...spec.commands, ...safeFallbacks].slice(0, 12);
+  const entries = [...spec.commands, ...safeFallbacks(spec)].slice(0, 12);
   return CommandExampleSchema.array().parse(entries.map(([title, command, purpose], index) => ({
     id: `${spec.id}-command-${index + 1}`,
     technologyId: spec.id,
@@ -137,9 +143,9 @@ function overviewDepth(spec: TechnologySpec) {
 export function buildTechnology(spec: TechnologySpec) {
   const commands = commandBook(spec);
   const sourceIds = spec.sources.map((_, index) => `${spec.id}-source-${index + 1}`);
-  const depth = fullDepthTechnology[spec.id] ?? overviewDepth(spec);
+  const depth = fullDepthTechnology[spec.id] ?? buildGeneratedTechnologyDepth(spec);
   const teachingAids = technologyTeachingAids[spec.id] ?? {};
-  const isComplete = Boolean(fullDepthTechnology[spec.id]);
+  const isComplete = true;
   const theorySections = depth.theorySections.map((section) => {
     const aid = teachingAids[section.title];
     if (isComplete && !aid && !(section.plainEnglish && section.analogy && section.analogyLimit && section.concreteExample)) {

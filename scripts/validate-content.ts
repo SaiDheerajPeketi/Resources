@@ -14,6 +14,7 @@ import { dsaPatterns, dsaProblems, dsaSheets } from "../src/data/dsa";
 import { coverageCrosswalks } from "../src/data/crosswalks";
 import { companyGuides, companySources } from "../src/data/companies";
 import { diagnostics, diagnosticQuestions, rolePathRecords } from "../src/data/learning";
+import { generatedTechnologyFocusIds } from "../src/data/technology-depth-generated";
 
 const errors: string[] = [];
 const technologyIds = new Set(technologies.map((item) => item.id));
@@ -25,11 +26,18 @@ for (const technology of technologies) {
   if (technology.theorySections.some((section) => !section.plainEnglish || !section.analogy || !section.analogyLimit || !section.concreteExample)) errors.push(`Technology ${technology.id} is missing plain-language teaching aids.`);
   if (technology.questions.some((question) => !question.whyTricky || question.rubric.length < 2)) errors.push(`Technology ${technology.id} has an incomplete tricky-question rubric.`);
   if (technology.flashcards.length < 8 || technology.cheatsheet.length < 3) errors.push(`Technology ${technology.id} has an incomplete recall contract.`);
+  if (technology.depthStatus !== "complete") errors.push(`Technology ${technology.id} is published without a complete A-Z manual.`);
+  if (generatedTechnologyFocusIds.has(technology.id)) {
+    if (technology.theorySections.length < 8 || technology.theorySections.some((section) => section.explanation.length < 180)) errors.push(`Generated manual ${technology.id} is missing specialist theory depth.`);
+    if (technology.workedExamples.length < 5 || technology.misconceptions.length < 6 || technology.revisionChecklist.length < 12) errors.push(`Generated manual ${technology.id} is missing applied examples or revision depth.`);
+    if (technology.questions.length < 12 || technology.flashcards.length < 12 || technology.cheatsheet.length < 5) errors.push(`Generated manual ${technology.id} is missing interview or recall depth.`);
+  }
   for (const id of technology.commandIds) if (!commandIds.has(id)) errors.push(`Technology ${technology.id} references unknown command ${id}.`);
   for (const id of technology.sourceIds) if (!sourceIds.has(id)) errors.push(`Technology ${technology.id} references unknown source ${id}.`);
   for (const id of technology.prerequisites) if (!technologyIds.has(id)) errors.push(`Technology ${technology.id} references unknown prerequisite ${id}.`);
 }
 const completeTechnologyIds = new Set(technologies.filter((technology) => technology.depthStatus === "complete").map((technology) => technology.id));
+if (completeTechnologyIds.size !== technologies.length) errors.push(`${technologies.length - completeTechnologyIds.size} published technology manuals are not complete.`);
 for (const id of ["java", "cpp", "python", "javascript", "typescript", "oop-and-lld", "dbms", "operating-systems", "computer-networks"]) if (!completeTechnologyIds.has(id)) errors.push(`Core depth manual ${id} is not marked complete.`);
 const patternIds = new Set(dsaPatterns.map((item) => item.id));
 const problemIds = new Set(dsaProblems.map((item) => item.id));

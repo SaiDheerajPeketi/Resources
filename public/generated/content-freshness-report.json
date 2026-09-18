@@ -1,6 +1,6 @@
 {
-  "version": "2026.09.18-r16",
-  "generatedAt": "2026-09-18T10:14:55.384Z",
+  "version": "2026.09.18-r17",
+  "generatedAt": "2026-09-18T10:47:12.455Z",
   "reviewPolicy": {
     "staleBefore": "2025-09-18",
     "maximumAgeDays": 365
@@ -12,8 +12,8 @@
   },
   "technologies": {
     "total": 115,
-    "fullDepth": 9,
-    "overview": 106,
+    "fullDepth": 115,
+    "overview": 0,
     "sources": 345,
     "commands": 1380
   },

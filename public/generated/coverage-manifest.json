@@ -1,9 +1,9 @@
 {
-  "version": "2026.09.18-r16",
+  "version": "2026.09.18-r17",
   "topics": 146,
   "technologies": 115,
-  "fullDepthTechnologies": 9,
-  "overviewTechnologies": 106,
+  "fullDepthTechnologies": 115,
+  "overviewTechnologies": 0,
   "commands": 1380,
   "problems": 300,
   "companies": 32,

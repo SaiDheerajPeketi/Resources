@@ -228,7 +228,7 @@ Commands are displayed in ruled rows with purpose, platform, expected result, sa
 
 ### Full-Depth Manual
 
-Full-depth manuals use a visible basic-to-expert learning ladder, numbered theory ledger, ruled misconception corrections, tricky-question explanations with strong-answer rubrics, rapid-recall rows, and a printable self-check sheet. Every theory entry begins with a plain-English translation, then pairs a bounded analogy (including where it stops matching) with a concrete example. An amber editorial notice marks overview material; a teal labelled status marks independently authored full-depth material. Never let the common page structure imply equal editorial depth.
+Full-depth manuals use a visible basic-to-expert learning ladder, numbered theory ledger, ruled misconception corrections, tricky-question explanations with strong-answer rubrics, rapid-recall rows, and a printable self-check sheet. Every theory entry begins with a plain-English translation, then pairs a bounded analogy (including where it stops matching) with a concrete example. A teal labelled status marks a manual that passed the full content contract. Future incomplete material must remain planned and outside published packs rather than appearing as a shallow overview.
 
 ### DSA Ledger
 
@@ -260,4 +260,4 @@ Sheets and problem inventories use dense ruled rows with stable problem numbers,
 - **Don't** hide planned content or make it look finished.
 - **Don't** place hundreds of technologies into the role graph; use the Stack Workbench and ecosystem index.
 - **Don't** let adaptive recommendations silently override user-controlled confidence or hide their selection reason.
-- **Don't** present generated overview prose as an exhaustive A–Z manual.
+- **Don't** publish a technology until its specialist focus map, theory depth, examples, interview practice, recall material, and authoritative sources pass the same measurable contract.

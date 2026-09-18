@@ -154,7 +154,24 @@ test("Stack Workbench opens a complete technology manual", async ({ page }) => {
   await expect(page.getByText("full-depth manual")).toBeVisible();
   await expect(page.getByRole("heading", { name: "Erased structural types and assignability" })).toBeVisible();
   await page.goto("/technologies/go/");
-  await expect(page.getByText("Editorial expansion in progress")).toBeVisible();
+  await expect(page.getByText("full-depth manual")).toBeVisible();
+  await expect(page.locator(".theory-ledger > article")).toHaveCount(8);
+  await expect(page.locator(".worked-example")).toHaveCount(5);
+  await expect(page.locator(".question-ledger > li")).toHaveCount(12);
+  await expect(page.locator(".flashcard-ledger > article")).toHaveCount(12);
+  await expect(page.getByRole("heading", { name: "A-Z focus map" })).toBeVisible();
+});
+
+test("framework, database, mobile, AI, and operations manuals all expose full depth", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop", "Representative corpus rendering is sufficient on one viewport");
+  for (const slug of ["react", "postgresql", "android", "pytorch", "kubernetes"]) {
+    await page.goto(`/technologies/${slug}/`);
+    await expect(page.getByText("full-depth manual")).toBeVisible();
+    await expect(page.locator(".theory-ledger > article")).toHaveCount(8);
+    await expect(page.locator(".worked-example")).toHaveCount(5);
+    await expect(page.locator(".question-ledger > li")).toHaveCount(12);
+    await expect(page.getByRole("heading", { name: "A-Z focus map" })).toBeVisible();
+  }
 });
 
 test("Atlas 300 filters and loads a language-specific problem artifact", async ({ page }) => {

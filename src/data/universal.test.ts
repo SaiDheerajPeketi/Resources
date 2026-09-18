@@ -11,9 +11,10 @@ import { sdeLessons } from "@/data/sde-lessons";
 import { devopsLessons } from "@/data/devops-lessons";
 import { securityLessons } from "@/data/security-lessons";
 import { fintechLessons } from "@/data/fintech-lessons";
+import { generatedTechnologyFocusIds } from "@/data/technology-depth-generated";
 
 describe("universal interview corpus", () => {
-  it("validates every technology depth contract without overstating editorial depth", () => {
+  it("publishes every technology as a complete, enforceable A-Z manual", () => {
     expect(technologies.length).toBeGreaterThanOrEqual(110);
     const commandIds = new Set(commands.map((item) => item.id));
     const sourceIds = new Set(technologySources.map((item) => item.id));
@@ -35,7 +36,20 @@ describe("universal interview corpus", () => {
     }
     const fullDepthIds = technologies.filter((technology) => technology.depthStatus === "complete").map((technology) => technology.id);
     expect(fullDepthIds).toEqual(expect.arrayContaining(["java", "cpp", "python", "javascript", "typescript", "oop-and-lld", "dbms", "operating-systems", "computer-networks"]));
-    expect(technologies.filter((technology) => technology.depthStatus === "overview").length).toBeGreaterThan(0);
+    expect(fullDepthIds).toHaveLength(technologies.length);
+    expect(technologies.filter((technology) => technology.depthStatus === "overview")).toHaveLength(0);
+    const generated = technologies.filter((technology) => generatedTechnologyFocusIds.has(technology.id));
+    expect(generated).toHaveLength(106);
+    for (const technology of generated) {
+      expect(technology.theorySections.length).toBeGreaterThanOrEqual(8);
+      expect(technology.theorySections.every((section) => section.explanation.length >= 180)).toBe(true);
+      expect(technology.workedExamples.length).toBeGreaterThanOrEqual(5);
+      expect(technology.misconceptions.length).toBeGreaterThanOrEqual(6);
+      expect(technology.revisionChecklist.length).toBeGreaterThanOrEqual(12);
+      expect(technology.questions.length).toBeGreaterThanOrEqual(12);
+      expect(technology.flashcards.length).toBeGreaterThanOrEqual(12);
+      expect(technology.cheatsheet.length).toBeGreaterThanOrEqual(5);
+    }
   });
 
   it("keeps Atlas 75, 180, and 300 strictly nested", () => {
