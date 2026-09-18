@@ -1,0 +1,222 @@
+import { FiveMinuteMap, LearningOutcomes, Analogy, KeyIdea, Pitfalls, InterviewPrompt, Hint, Solution, Flashcards, RevisionSheet, Sources, Flow, Checklist } from "@/components/lesson-components"
+
+<FiveMinuteMap items={[
+  "A hash function turns a key into a bucket index.",
+  "Collisions are inevitable; chaining or open addressing resolves them.",
+  "Load factor controls the memory-versus-latency trade-off.",
+  "Expected O(1) assumes a suitable hash function and controlled occupancy.",
+  "Rehashing changes bucket placement and usually invalidates iterators."
+]} />
+
+<LearningOutcomes>
+
+- Explain why lookup is expected constant time but worst-case linear.
+- Compare separate chaining, linear probing, quadratic probing, and double hashing.
+- Reason about load factor, resizing, cache locality, invalidation, and adversarial keys.
+- Sketch a C++17 implementation with explicit ownership and rehash behavior.
+
+</LearningOutcomes>
+
+## Mental model
+
+<Analogy title="A staffed parcel wall">
+
+Imagine a wall of numbered parcel cubbies. The hash function is the clerk who converts a recipient name into a cubby number. Two recipients may be assigned the same cubby, so the wall needs a collision policy: put a small list inside the cubby, or probe nearby cubbies according to a rule. If the wall becomes crowded, the clerk installs a larger wall and reassigns every parcel.
+
+</Analogy>
+
+The model separates four decisions that interview answers often blur:
+
+1. **Hashing:** deterministically convert a key into a wide integer.
+2. **Indexing:** reduce that integer into the current bucket range.
+3. **Collision resolution:** decide where equal-index keys coexist.
+4. **Growth:** keep occupancy low enough that the chosen collision strategy stays fast.
+
+<Flow steps={["key", "hash(key)", "bucket index", "collision policy", "entry"]} />
+
+## Complexity and assumptions
+
+For `n` entries and `m` buckets, the load factor is `α = n / m`.
+
+| Operation | Expected | Worst case | What the expectation needs |
+| --- | ---: | ---: | --- |
+| lookup | O(1) | O(n) | well-distributed hashes and controlled load |
+| insert | O(1) amortized | O(n) | occasional O(n) rehash spread across inserts |
+| erase | O(1) | O(n) | key can be located without pathological clustering |
+| full iteration | O(n + m) | O(n + m) | implementation may scan buckets as well as entries |
+
+<KeyIdea>
+
+<p>“O(1)” is not a law of hash tables. It is a probabilistic or amortized statement about a particular hash function, key distribution, collision policy, and resize rule.</p>
+
+</KeyIdea>
+
+### Separate chaining
+
+Each bucket points to a collection of entries. With uniform hashing, the expected chain length is approximately `α`, so a lookup is `O(1 + α)`. Chaining tolerates load factors above 1, offers straightforward deletion, and can keep node addresses stable during bucket-array growth. Its costs are per-node allocation, pointer chasing, and weak cache locality.
+
+### Open addressing
+
+All entries live directly in the bucket array. A probe sequence searches alternative slots:
+
+- **Linear probing:** `index + i`; excellent locality but primary clustering.
+- **Quadratic probing:** `index + c₁i + c₂i²`; reduces primary clustering but requires careful table-size rules.
+- **Double hashing:** `h₁(key) + i·h₂(key)`; good distribution when the step is compatible with table size.
+
+Open addressing needs an explicit empty state and usually a tombstone state. Clearing a deleted slot to “never used” can break lookup because it prematurely terminates a probe sequence.
+
+## Worked C++17 sketch
+
+This is deliberately small enough to discuss in an interview. Production containers require allocator policy, exception guarantees, heterogeneous lookup, iterators, and stronger adversarial behavior.
+
+```cpp
+#include <functional>
+#include <list>
+#include <stdexcept>
+#include <string>
+#include <utility>
+#include <vector>
+
+template <class V>
+class StringHashMap {
+    using Entry = std::pair<std::string, V>;
+    std::vector<std::list<Entry>> buckets_;
+    std::size_t size_ = 0;
+    static constexpr double max_load_ = 0.75;
+
+    std::size_t index_for(const std::string& key) const {
+        return std::hash<std::string>{}(key) % buckets_.size();
+    }
+
+    void rehash(std::size_t next_capacity) {
+        std::vector<std::list<Entry>> next(next_capacity);
+        for (auto& bucket : buckets_) {
+            for (auto& entry : bucket) {
+                auto i = std::hash<std::string>{}(entry.first) % next.size();
+                next[i].splice(next[i].end(), bucket, bucket.begin());
+            }
+        }
+        buckets_.swap(next);
+    }
+
+public:
+    explicit StringHashMap(std::size_t capacity = 8)
+        : buckets_(capacity ? capacity : 8) {}
+
+    V* find(const std::string& key) {
+        auto& bucket = buckets_[index_for(key)];
+        for (auto& [stored_key, value] : bucket)
+            if (stored_key == key) return &value;
+        return nullptr;
+    }
+
+    void insert_or_assign(std::string key, V value) {
+        if (auto* existing = find(key)) {
+            *existing = std::move(value);
+            return;
+        }
+        if (double(size_ + 1) / buckets_.size() > max_load_)
+            rehash(buckets_.size() * 2);
+        buckets_[index_for(key)].emplace_back(std::move(key), std::move(value));
+        ++size_;
+    }
+};
+```
+
+### What to narrate while coding
+
+<Checklist>
+
+<ul>
+  <li>Define whether inserting an existing key replaces or rejects.</li>
+  <li>Grow before insertion so the new load factor stays under the threshold.</li>
+  <li>State that rehashing changes bucket membership and the iterator contract.</li>
+  <li>Separate expected complexity from the adversarial worst case.</li>
+</ul>
+
+</Checklist>
+
+<Pitfalls>
+
+- Applying `% bucket_count` before mixing weak low bits can create patterns.
+- Growing by a tiny constant causes repeated O(n) rebuilds; geometric growth gives amortized bounds.
+- Using mutable fields inside a key breaks lookup because the key may now belong in another bucket.
+- Treating `std::unordered_map` as ordered produces nondeterministic output and brittle tests.
+- A public service with attacker-chosen keys may need keyed/randomized hashing, collision monitoring, or a container with stronger worst-case guarantees.
+- Concurrent reads are not automatically safe while another thread inserts or rehashes.
+
+</Pitfalls>
+
+## Interview checks
+
+<InterviewPrompt title="Load-factor reasoning" difficulty="Medium" timebox="5 min">
+
+Why does a production hash table resize before every bucket is occupied, and what trade-off does the threshold control?
+
+<Hint>Think about collision probability and expected chain or probe length, not physical capacity.</Hint>
+
+<Solution>
+
+The table resizes to keep expected collision cost bounded. A lower threshold spends more memory and copies more often but preserves shorter chains or probe sequences; a higher threshold improves space efficiency while increasing clustering and tail latency. A strong answer also calls rehashing an occasional O(n) operation whose cost is amortized across successful inserts.
+
+**Rubric:** connect load factor to collision cost; explain memory/latency trade-off; mention rehash cost.
+
+</Solution>
+
+</InterviewPrompt>
+
+<InterviewPrompt title="Adversarial design" difficulty="Hard" timebox="12 min">
+
+An HTTP server stores headers in a hash table. What changes when clients control all keys?
+
+<Hint>Expected complexity depends on a key-distribution assumption that an attacker can violate.</Hint>
+
+<Solution>
+
+Attackers can attempt collision floods that turn request parsing into quadratic work across many insertions. Use a per-process keyed hash where practical, cap header count and total bytes, set CPU/time limits, monitor collision or probe behavior, and consider containers with bounded worst-case lookup. Do not rely on secrecy of an unkeyed algorithm.
+
+</Solution>
+
+</InterviewPrompt>
+
+<Flashcards cards={[
+  { front: "What does load factor measure?", back: "Stored entries divided by bucket count: α = n/m." },
+  { front: "Why are tombstones needed in open addressing?", back: "A deleted slot must not terminate probe sequences for keys inserted later in that cluster." },
+  { front: "Expected lookup for chaining?", back: "O(1 + α) under uniform hashing; O(n) in the worst case." },
+  { front: "What makes insertion amortized O(1)?", back: "Geometric growth spreads occasional O(n) rehashes across many ordinary inserts." }
+]} />
+
+<RevisionSheet>
+
+### Core formulas
+
+- `α = n / m`
+- Chaining expected lookup: `O(1 + α)`
+- Open addressing degrades sharply as `α → 1`
+
+### Compare quickly
+
+| Chaining | Open addressing |
+| --- | --- |
+| simple deletion | tombstones/back-shift required |
+| allocation and pointer chasing | strong locality |
+| can exceed load 1 | must retain empty slots |
+| easier stable node addresses | compact storage |
+
+### Say this in interviews
+
+- “Expected O(1), worst-case O(n), amortized inserts because of geometric rehashing.”
+- “The invalidation contract is part of the design, not an implementation footnote.”
+- “Attacker-controlled keys change the threat model.”
+
+</RevisionSheet>
+
+<Sources>
+
+- [C++ reference: `std::unordered_map`](https://en.cppreference.com/w/cpp/container/unordered_map)
+- Cormen, Leiserson, Rivest, and Stein, *Introduction to Algorithms*, hashing chapters.
+- Sedgewick and Wayne, *Algorithms*, hash tables and linear probing.
+
+Reviewed 2026-09-18.
+
+</Sources>

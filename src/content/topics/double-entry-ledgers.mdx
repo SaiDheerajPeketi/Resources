@@ -1,0 +1,154 @@
+import { FiveMinuteMap, LearningOutcomes, Analogy, KeyIdea, Pitfalls, InterviewPrompt, Hint, Solution, Flashcards, RevisionSheet, Sources, Flow } from "@/components/lesson-components"
+
+<FiveMinuteMap items={[
+  "A business event becomes one or more immutable balanced ledger transactions.",
+  "Every transaction has at least two postings and total debits equal total credits.",
+  "Account type determines how debit and credit affect economic meaning.",
+  "Corrections use reversal or compensating entries; settled history is not edited.",
+  "Idempotency, reconciliation, audit evidence, and money representation are first-class."
+]} />
+
+<LearningOutcomes>
+
+- Distinguish business events, ledger transactions, postings, balances, and statements.
+- Preserve balance, immutability, idempotency, and currency invariants.
+- Model authorization, settlement, fees, refunds, and corrections without rewriting history.
+- Explain how reconciliation detects gaps between internal and external books.
+
+</LearningOutcomes>
+
+## Mental model
+
+<Analogy title="Conservation of financial quantity">
+
+A ledger transaction is like a conservation equation. Value does not appear in one account without a corresponding explanation in another. The two sides are not necessarily two customers; one side may be cash, receivable, payable, fee revenue, reserve, or suspense.
+
+</Analogy>
+
+<Flow steps={["business event", "idempotency key", "ledger transaction", "balanced postings", "derived balances", "reconciliation"]} />
+
+## Core entities
+
+| Entity | Responsibility |
+| --- | --- |
+| business event | domain fact: purchase captured, payout sent, refund approved |
+| ledger transaction | immutable atomic accounting record linked to the event |
+| posting | signed debit/credit against one account and currency |
+| account | named bucket with type, owner, currency, and posting policy |
+| balance | projection of postings at a point or accounting period |
+| reconciliation record | comparison between internal expectations and external evidence |
+
+<KeyIdea><p>Store postings as the source of truth and treat balances as rebuildable projections. A cached balance can be fast; it must still reconcile to immutable history.</p></KeyIdea>
+
+## Invariants
+
+1. **Balanced transaction:** for each currency and ledger scope, debits equal credits.
+2. **Atomicity:** either every posting commits or none commits.
+3. **Immutability:** corrections append new transactions.
+4. **Idempotency:** one business operation cannot create duplicate economic effect.
+5. **Exact money:** use integer minor units or a decimal type with explicit scale; never binary floating point.
+6. **Referential traceability:** posting → ledger transaction → business event → external reference.
+
+### Minimal relational shape
+
+```sql
+create table ledger_transaction (
+  id uuid primary key,
+  idempotency_key text unique not null,
+  event_type text not null,
+  effective_at timestamptz not null,
+  created_at timestamptz not null default now()
+);
+
+create table posting (
+  id uuid primary key,
+  transaction_id uuid not null references ledger_transaction(id),
+  account_id uuid not null,
+  currency char(3) not null,
+  side text not null check (side in ('debit', 'credit')),
+  amount_minor bigint not null check (amount_minor > 0)
+);
+```
+
+A database check cannot easily validate a sum across multiple rows at arbitrary intermediate points. Enforce the balance invariant through a transaction boundary, stored procedure, deferred constraint strategy, or append API that commits the complete posting set atomically.
+
+## Purchase and refund example
+
+The exact accounts depend on whether the platform is principal, agent, processor, or marketplace. One simplified settled purchase could move ₹1,000 from processor receivable to merchant payable. A ₹300 partial refund is a new balanced transaction that reduces merchant payable and creates customer/processor refund obligation. The original purchase remains unchanged.
+
+| Event | Debit | Credit | Amount |
+| --- | --- | --- | ---: |
+| purchase settled | processor cash/receivable | merchant payable | ₹1,000 |
+| partial refund created | merchant payable | refund payable | ₹300 |
+| refund paid | refund payable | processor cash | ₹300 |
+
+The remaining net merchant economic amount is ₹700 before fees and other adjustments.
+
+## Reconciliation
+
+Ledger balance proves internal arithmetic, not external truth. Reconciliation compares internal postings with processor, bank, network, or exchange statements using stable references, amount, currency, direction, and effective date. Differences enter explicit states such as unmatched, timing difference, amount mismatch, duplicate, or resolved—not a spreadsheet side channel.
+
+<Pitfalls>
+
+- Updating or deleting settled postings to “fix” a balance.
+- Using floating point for money.
+- Treating an application status column as the accounting record.
+- Reusing one idempotency key for semantically different operations.
+- Enforcing balance only in application memory across multiple database commits.
+- Mixing currencies in one balance equation without an explicit FX event.
+- Assuming a balanced ledger guarantees agreement with a bank or processor.
+- Backdating without separately preserving recorded-at time and audit authority.
+
+</Pitfalls>
+
+## Interview case
+
+<InterviewPrompt title="Partial refund" difficulty="Hard" timebox="20 min">
+
+A ₹1,000 card purchase settles, then receives a ₹300 partial refund. Model the business events and postings without mutating settled history.
+
+<Hint>Use separate balanced transactions for purchase, settlement, and refund. A correction is a new event, not an UPDATE.</Hint>
+
+<Solution>
+
+Record the settled purchase and partial refund as separate immutable transactions. The refund debits the merchant liability or relevant refund-funding account and credits a refund payable; payment of the refund clears that payable against processor cash/receivable. Preserve currency balance, link every transaction to business and processor references, enforce a refund idempotency key, cap cumulative refunds at the eligible amount, and reconcile the net ₹700 exposure plus timing differences to external statements.
+
+**Rubric:** immutable history; balanced postings; event separation; exact money; idempotency; reconciliation.
+
+</Solution>
+
+</InterviewPrompt>
+
+<Flashcards cards={[
+  { front: "Ledger transaction versus business event?", back: "The event is the domain fact; the ledger transaction is its immutable balanced accounting representation." },
+  { front: "Why not store only balances?", back: "Balances lose causal history, auditability, correction semantics, and rebuild/reconciliation evidence." },
+  { front: "How do you correct settled history?", back: "Append a reversal or compensating transaction linked to the original." },
+  { front: "Does a balanced ledger prove bank agreement?", back: "No. Reconciliation compares the internally balanced book with independent external evidence." }
+]} />
+
+<RevisionSheet>
+
+### Non-negotiable invariants
+
+- debits = credits per currency/scope
+- atomic postings
+- immutable history
+- exact money
+- idempotent economic effect
+- traceable references
+
+### Design sentence
+
+“The append-only postings are truth, balances are projections, corrections compensate rather than mutate, and reconciliation compares our truth with external evidence.”
+
+</RevisionSheet>
+
+<Sources>
+
+- PostgreSQL documentation on [constraints](https://www.postgresql.org/docs/current/ddl-constraints.html) and [transaction isolation](https://www.postgresql.org/docs/current/transaction-iso.html)
+- IASB, *Conceptual Framework for Financial Reporting*, for accounting definitions.
+- PCI Security Standards Council, current PCI DSS materials for systems handling cardholder data.
+
+Reviewed 2026-09-18. Educational architecture material, not accounting, legal, or financial advice.
+
+</Sources>

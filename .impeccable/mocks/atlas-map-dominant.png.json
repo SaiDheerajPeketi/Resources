@@ -1,0 +1,11 @@
+{
+  "approved": true,
+  "approvedAt": "2026-09-18",
+  "createdAt": "2026-09-18",
+  "tool": "OpenAI image generation",
+  "model": "tool-managed image generation model",
+  "prompt": "Canonical prompt is preserved verbatim in atlas-map-dominant.prompt.txt and embedded in the PNG metadata.",
+  "selectionBasis": "Matches the approved map-dominant first viewport: track index, prerequisite graph, and topic inspector remain simultaneously actionable.",
+  "promptFile": "atlas-map-dominant.prompt.txt",
+  "embeddedPromptVerified": true
+}

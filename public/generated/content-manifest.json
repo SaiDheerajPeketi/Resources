@@ -1,0 +1,3155 @@
+{
+  "version": "2026.09.18-r1",
+  "generatedAt": "2026-09-18T02:34:18.543Z",
+  "roles": [
+    {
+      "id": "sde",
+      "title": "Software Engineer",
+      "description": "Generalist, backend, full-stack, and systems interviews.",
+      "trackIds": [
+        "foundations",
+        "sde-systems"
+      ]
+    },
+    {
+      "id": "ai-engineer",
+      "title": "AI Engineer",
+      "description": "Production LLM, RAG, agent, evaluation, and AI platform work.",
+      "trackIds": [
+        "foundations",
+        "ai-data",
+        "sde-systems"
+      ]
+    },
+    {
+      "id": "ml-engineer",
+      "title": "ML Engineer",
+      "description": "Modeling, ML systems, serving, data, and MLOps.",
+      "trackIds": [
+        "foundations",
+        "ai-data",
+        "sde-systems"
+      ]
+    },
+    {
+      "id": "data-scientist",
+      "title": "Data Scientist",
+      "description": "Statistics, experimentation, SQL, modeling, and product cases.",
+      "trackIds": [
+        "foundations",
+        "ai-data"
+      ]
+    },
+    {
+      "id": "data-engineer",
+      "title": "Data Engineer",
+      "description": "Pipelines, storage, data modeling, distributed systems, and reliability.",
+      "trackIds": [
+        "foundations",
+        "ai-data",
+        "sde-systems",
+        "devops-cloud"
+      ]
+    },
+    {
+      "id": "devops",
+      "title": "DevOps / Platform Engineer",
+      "description": "Delivery systems, cloud platforms, infrastructure, and operations.",
+      "trackIds": [
+        "foundations",
+        "devops-cloud",
+        "cybersecurity"
+      ]
+    },
+    {
+      "id": "sre",
+      "title": "Site Reliability Engineer",
+      "description": "Reliability, observability, incidents, performance, and capacity.",
+      "trackIds": [
+        "foundations",
+        "sde-systems",
+        "devops-cloud"
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Security Engineer",
+      "description": "Application, cloud, platform, and incident security.",
+      "trackIds": [
+        "foundations",
+        "cybersecurity",
+        "devops-cloud"
+      ]
+    },
+    {
+      "id": "fintech",
+      "title": "Fintech Engineer",
+      "description": "Payments, ledgers, risk, fraud, reconciliation, and resilient financial systems.",
+      "trackIds": [
+        "foundations",
+        "sde-systems",
+        "fintech-quant",
+        "cybersecurity"
+      ]
+    },
+    {
+      "id": "quant-dev",
+      "title": "Quant Developer",
+      "description": "Markets, probability, pricing, backtesting, and low-latency C++.",
+      "trackIds": [
+        "foundations",
+        "sde-systems",
+        "fintech-quant"
+      ]
+    },
+    {
+      "id": "quant-research",
+      "title": "Quant Researcher",
+      "description": "Statistics, time series, stochastic models, and strategy research.",
+      "trackIds": [
+        "foundations",
+        "ai-data",
+        "fintech-quant"
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "id": "foundations",
+      "title": "Foundations",
+      "shortTitle": "Foundations",
+      "description": "C++, DSA, mathematics, SQL, Linux, networking, and interview fundamentals.",
+      "accent": "#1E76F3",
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer",
+        "devops",
+        "sre",
+        "security",
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ]
+    },
+    {
+      "id": "ai-data",
+      "title": "AI + Data",
+      "shortTitle": "AI + Data",
+      "description": "Statistics, machine learning, deep learning, LLM systems, data science, and MLOps.",
+      "accent": "#6A55C7",
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer",
+        "quant-research"
+      ]
+    },
+    {
+      "id": "sde-systems",
+      "title": "SDE + Systems",
+      "shortTitle": "SDE + Systems",
+      "description": "Core CS, software design, backend systems, concurrency, and distributed architecture.",
+      "accent": "#245B8C",
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-engineer",
+        "sre",
+        "fintech",
+        "quant-dev"
+      ]
+    },
+    {
+      "id": "devops-cloud",
+      "title": "DevOps + Cloud",
+      "shortTitle": "DevOps + Cloud",
+      "description": "Delivery, containers, Kubernetes, IaC, observability, SRE, and four-cloud mappings.",
+      "accent": "#23766F",
+      "roleIds": [
+        "devops",
+        "sre",
+        "data-engineer",
+        "security"
+      ]
+    },
+    {
+      "id": "cybersecurity",
+      "title": "Cybersecurity",
+      "shortTitle": "Cybersecurity",
+      "description": "Threat modeling, IAM, crypto, AppSec, cloud security, and incident response.",
+      "accent": "#9A5A13",
+      "roleIds": [
+        "security",
+        "devops",
+        "sre",
+        "fintech"
+      ]
+    },
+    {
+      "id": "fintech-quant",
+      "title": "Fintech + Quant",
+      "shortTitle": "Fintech + Quant",
+      "description": "Payments, ledgers, compliance, markets, pricing, risk, and low-latency systems.",
+      "accent": "#197B6F",
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research",
+        "sde"
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "id": "foundations/c-plus-plus-interview-setup",
+      "slug": "foundations/c-plus-plus-interview-setup",
+      "localSlug": "c-plus-plus-interview-setup",
+      "trackId": "foundations",
+      "title": "C++ Interview Setup",
+      "summary": "Planned field note covering c++ interview setup for foundations interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/complexity-analysis",
+      "slug": "foundations/complexity-analysis",
+      "localSlug": "complexity-analysis",
+      "trackId": "foundations",
+      "title": "Complexity Analysis",
+      "summary": "Planned field note covering complexity analysis for foundations interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/stl-and-iterators",
+      "slug": "foundations/stl-and-iterators",
+      "localSlug": "stl-and-iterators",
+      "trackId": "foundations",
+      "title": "STL and Iterators",
+      "summary": "Planned field note covering stl and iterators for foundations interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/arrays-and-strings",
+      "slug": "foundations/arrays-and-strings",
+      "localSlug": "arrays-and-strings",
+      "trackId": "foundations",
+      "title": "Arrays and Strings",
+      "summary": "Planned field note covering arrays and strings for foundations interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/hash-tables",
+      "slug": "foundations/hash-tables",
+      "localSlug": "hash-tables",
+      "trackId": "foundations",
+      "title": "Hash Tables",
+      "summary": "Key-value storage, collision handling, load factor, resizing, and interview-grade implementations.",
+      "level": "foundation",
+      "publicationStatus": "published",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-engineer",
+        "security",
+        "fintech",
+        "quant-dev"
+      ],
+      "prerequisites": [
+        "foundations/complexity-analysis",
+        "foundations/arrays-and-strings"
+      ],
+      "outcomes": [
+        "Explain expected O(1) operations",
+        "Compare collision strategies",
+        "Implement a robust C++ hash map sketch"
+      ],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/stacks-and-queues",
+      "slug": "foundations/stacks-and-queues",
+      "localSlug": "stacks-and-queues",
+      "trackId": "foundations",
+      "title": "Stacks and Queues",
+      "summary": "Planned field note covering stacks and queues for foundations interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/linked-lists",
+      "slug": "foundations/linked-lists",
+      "localSlug": "linked-lists",
+      "trackId": "foundations",
+      "title": "Linked Lists",
+      "summary": "Planned field note covering linked lists for foundations interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/trees-and-bsts",
+      "slug": "foundations/trees-and-bsts",
+      "localSlug": "trees-and-bsts",
+      "trackId": "foundations",
+      "title": "Trees and BSTs",
+      "summary": "Planned field note covering trees and bsts for foundations interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/heaps-and-priority-queues",
+      "slug": "foundations/heaps-and-priority-queues",
+      "localSlug": "heaps-and-priority-queues",
+      "trackId": "foundations",
+      "title": "Heaps and Priority Queues",
+      "summary": "Planned field note covering heaps and priority queues for foundations interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/graphs",
+      "slug": "foundations/graphs",
+      "localSlug": "graphs",
+      "trackId": "foundations",
+      "title": "Graphs",
+      "summary": "Planned field note covering graphs for foundations interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/recursion-and-backtracking",
+      "slug": "foundations/recursion-and-backtracking",
+      "localSlug": "recursion-and-backtracking",
+      "trackId": "foundations",
+      "title": "Recursion and Backtracking",
+      "summary": "Planned field note covering recursion and backtracking for foundations interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/sorting-and-binary-search",
+      "slug": "foundations/sorting-and-binary-search",
+      "localSlug": "sorting-and-binary-search",
+      "trackId": "foundations",
+      "title": "Sorting and Binary Search",
+      "summary": "Planned field note covering sorting and binary search for foundations interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/greedy-algorithms",
+      "slug": "foundations/greedy-algorithms",
+      "localSlug": "greedy-algorithms",
+      "trackId": "foundations",
+      "title": "Greedy Algorithms",
+      "summary": "Planned field note covering greedy algorithms for foundations interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/dynamic-programming",
+      "slug": "foundations/dynamic-programming",
+      "localSlug": "dynamic-programming",
+      "trackId": "foundations",
+      "title": "Dynamic Programming",
+      "summary": "Planned field note covering dynamic programming for foundations interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/bit-manipulation",
+      "slug": "foundations/bit-manipulation",
+      "localSlug": "bit-manipulation",
+      "trackId": "foundations",
+      "title": "Bit Manipulation",
+      "summary": "Planned field note covering bit manipulation for foundations interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/discrete-mathematics",
+      "slug": "foundations/discrete-mathematics",
+      "localSlug": "discrete-mathematics",
+      "trackId": "foundations",
+      "title": "Discrete Mathematics",
+      "summary": "Planned field note covering discrete mathematics for foundations interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/linear-algebra",
+      "slug": "foundations/linear-algebra",
+      "localSlug": "linear-algebra",
+      "trackId": "foundations",
+      "title": "Linear Algebra",
+      "summary": "Planned field note covering linear algebra for foundations interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/probability",
+      "slug": "foundations/probability",
+      "localSlug": "probability",
+      "trackId": "foundations",
+      "title": "Probability",
+      "summary": "Planned field note covering probability for foundations interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/statistics",
+      "slug": "foundations/statistics",
+      "localSlug": "statistics",
+      "trackId": "foundations",
+      "title": "Statistics",
+      "summary": "Planned field note covering statistics for foundations interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/sql-fundamentals",
+      "slug": "foundations/sql-fundamentals",
+      "localSlug": "sql-fundamentals",
+      "trackId": "foundations",
+      "title": "SQL Fundamentals",
+      "summary": "Planned field note covering sql fundamentals for foundations interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/linux-and-the-cli",
+      "slug": "foundations/linux-and-the-cli",
+      "localSlug": "linux-and-the-cli",
+      "trackId": "foundations",
+      "title": "Linux and the CLI",
+      "summary": "Planned field note covering linux and the cli for foundations interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/networking-fundamentals",
+      "slug": "foundations/networking-fundamentals",
+      "localSlug": "networking-fundamentals",
+      "trackId": "foundations",
+      "title": "Networking Fundamentals",
+      "summary": "Planned field note covering networking fundamentals for foundations interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/git-testing-and-debugging",
+      "slug": "foundations/git-testing-and-debugging",
+      "localSlug": "git-testing-and-debugging",
+      "trackId": "foundations",
+      "title": "Git, Testing, and Debugging",
+      "summary": "Planned field note covering git, testing, and debugging for foundations interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "foundations/behavioral-interview-basics",
+      "slug": "foundations/behavioral-interview-basics",
+      "localSlug": "behavioral-interview-basics",
+      "trackId": "foundations",
+      "title": "Behavioral Interview Basics",
+      "summary": "Planned field note covering behavioral interview basics for foundations interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "sde",
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/data-cleaning",
+      "slug": "ai-data/data-cleaning",
+      "localSlug": "data-cleaning",
+      "trackId": "ai-data",
+      "title": "Data Cleaning",
+      "summary": "Planned field note covering data cleaning for ai + data interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/exploratory-data-analysis",
+      "slug": "ai-data/exploratory-data-analysis",
+      "localSlug": "exploratory-data-analysis",
+      "trackId": "ai-data",
+      "title": "Exploratory Data Analysis",
+      "summary": "Planned field note covering exploratory data analysis for ai + data interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/experiment-design",
+      "slug": "ai-data/experiment-design",
+      "localSlug": "experiment-design",
+      "trackId": "ai-data",
+      "title": "Experiment Design",
+      "summary": "Planned field note covering experiment design for ai + data interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/feature-engineering",
+      "slug": "ai-data/feature-engineering",
+      "localSlug": "feature-engineering",
+      "trackId": "ai-data",
+      "title": "Feature Engineering",
+      "summary": "Planned field note covering feature engineering for ai + data interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/linear-models",
+      "slug": "ai-data/linear-models",
+      "localSlug": "linear-models",
+      "trackId": "ai-data",
+      "title": "Linear Models",
+      "summary": "Planned field note covering linear models for ai + data interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/logistic-regression",
+      "slug": "ai-data/logistic-regression",
+      "localSlug": "logistic-regression",
+      "trackId": "ai-data",
+      "title": "Logistic Regression",
+      "summary": "Planned field note covering logistic regression for ai + data interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/tree-ensembles",
+      "slug": "ai-data/tree-ensembles",
+      "localSlug": "tree-ensembles",
+      "trackId": "ai-data",
+      "title": "Tree Ensembles",
+      "summary": "Planned field note covering tree ensembles for ai + data interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/unsupervised-learning",
+      "slug": "ai-data/unsupervised-learning",
+      "localSlug": "unsupervised-learning",
+      "trackId": "ai-data",
+      "title": "Unsupervised Learning",
+      "summary": "Planned field note covering unsupervised learning for ai + data interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/model-evaluation",
+      "slug": "ai-data/model-evaluation",
+      "localSlug": "model-evaluation",
+      "trackId": "ai-data",
+      "title": "Model Evaluation",
+      "summary": "Select metrics, design validation, diagnose leakage, and make model choices that survive production.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 55,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "quant-research"
+      ],
+      "prerequisites": [
+        "foundations/probability",
+        "foundations/statistics"
+      ],
+      "outcomes": [
+        "Match metrics to business costs",
+        "Design leakage-safe validation",
+        "Explain threshold and calibration trade-offs"
+      ],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/optimization-for-ml",
+      "slug": "ai-data/optimization-for-ml",
+      "localSlug": "optimization-for-ml",
+      "trackId": "ai-data",
+      "title": "Optimization for ML",
+      "summary": "Planned field note covering optimization for ml for ai + data interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/neural-network-foundations",
+      "slug": "ai-data/neural-network-foundations",
+      "localSlug": "neural-network-foundations",
+      "trackId": "ai-data",
+      "title": "Neural Network Foundations",
+      "summary": "Planned field note covering neural network foundations for ai + data interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/cnns",
+      "slug": "ai-data/cnns",
+      "localSlug": "cnns",
+      "trackId": "ai-data",
+      "title": "CNNs",
+      "summary": "Planned field note covering cnns for ai + data interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/sequence-models",
+      "slug": "ai-data/sequence-models",
+      "localSlug": "sequence-models",
+      "trackId": "ai-data",
+      "title": "Sequence Models",
+      "summary": "Planned field note covering sequence models for ai + data interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/transformers",
+      "slug": "ai-data/transformers",
+      "localSlug": "transformers",
+      "trackId": "ai-data",
+      "title": "Transformers",
+      "summary": "Planned field note covering transformers for ai + data interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/natural-language-processing",
+      "slug": "ai-data/natural-language-processing",
+      "localSlug": "natural-language-processing",
+      "trackId": "ai-data",
+      "title": "Natural Language Processing",
+      "summary": "Planned field note covering natural language processing for ai + data interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/computer-vision",
+      "slug": "ai-data/computer-vision",
+      "localSlug": "computer-vision",
+      "trackId": "ai-data",
+      "title": "Computer Vision",
+      "summary": "Planned field note covering computer vision for ai + data interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/recommender-systems",
+      "slug": "ai-data/recommender-systems",
+      "localSlug": "recommender-systems",
+      "trackId": "ai-data",
+      "title": "Recommender Systems",
+      "summary": "Planned field note covering recommender systems for ai + data interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/forecasting",
+      "slug": "ai-data/forecasting",
+      "localSlug": "forecasting",
+      "trackId": "ai-data",
+      "title": "Forecasting",
+      "summary": "Planned field note covering forecasting for ai + data interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/embeddings",
+      "slug": "ai-data/embeddings",
+      "localSlug": "embeddings",
+      "trackId": "ai-data",
+      "title": "Embeddings",
+      "summary": "Planned field note covering embeddings for ai + data interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/vector-search",
+      "slug": "ai-data/vector-search",
+      "localSlug": "vector-search",
+      "trackId": "ai-data",
+      "title": "Vector Search",
+      "summary": "Planned field note covering vector search for ai + data interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/retrieval-augmented-generation",
+      "slug": "ai-data/retrieval-augmented-generation",
+      "localSlug": "retrieval-augmented-generation",
+      "trackId": "ai-data",
+      "title": "Retrieval-Augmented Generation",
+      "summary": "Planned field note covering retrieval-augmented generation for ai + data interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/fine-tuning",
+      "slug": "ai-data/fine-tuning",
+      "localSlug": "fine-tuning",
+      "trackId": "ai-data",
+      "title": "Fine-Tuning",
+      "summary": "Planned field note covering fine-tuning for ai + data interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/agents-and-tool-use",
+      "slug": "ai-data/agents-and-tool-use",
+      "localSlug": "agents-and-tool-use",
+      "trackId": "ai-data",
+      "title": "Agents and Tool Use",
+      "summary": "Planned field note covering agents and tool use for ai + data interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/llm-evaluation",
+      "slug": "ai-data/llm-evaluation",
+      "localSlug": "llm-evaluation",
+      "trackId": "ai-data",
+      "title": "LLM Evaluation",
+      "summary": "Planned field note covering llm evaluation for ai + data interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/responsible-ai",
+      "slug": "ai-data/responsible-ai",
+      "localSlug": "responsible-ai",
+      "trackId": "ai-data",
+      "title": "Responsible AI",
+      "summary": "Planned field note covering responsible ai for ai + data interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "ai-data/mlops-and-ml-system-design",
+      "slug": "ai-data/mlops-and-ml-system-design",
+      "localSlug": "mlops-and-ml-system-design",
+      "trackId": "ai-data",
+      "title": "MLOps and ML System Design",
+      "summary": "Planned field note covering mlops and ml system design for ai + data interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "ai-engineer",
+        "ml-engineer",
+        "data-scientist",
+        "data-engineer"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/object-oriented-design",
+      "slug": "sde-systems/object-oriented-design",
+      "localSlug": "object-oriented-design",
+      "trackId": "sde-systems",
+      "title": "Object-Oriented Design",
+      "summary": "Planned field note covering object-oriented design for sde + systems interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/modern-c-plus-plus-internals",
+      "slug": "sde-systems/modern-c-plus-plus-internals",
+      "localSlug": "modern-c-plus-plus-internals",
+      "trackId": "sde-systems",
+      "title": "Modern C++ Internals",
+      "summary": "Planned field note covering modern c++ internals for sde + systems interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/memory-management",
+      "slug": "sde-systems/memory-management",
+      "localSlug": "memory-management",
+      "trackId": "sde-systems",
+      "title": "Memory Management",
+      "summary": "Planned field note covering memory management for sde + systems interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/concurrency",
+      "slug": "sde-systems/concurrency",
+      "localSlug": "concurrency",
+      "trackId": "sde-systems",
+      "title": "Concurrency",
+      "summary": "Planned field note covering concurrency for sde + systems interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/operating-systems",
+      "slug": "sde-systems/operating-systems",
+      "localSlug": "operating-systems",
+      "trackId": "sde-systems",
+      "title": "Operating Systems",
+      "summary": "Planned field note covering operating systems for sde + systems interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/database-systems",
+      "slug": "sde-systems/database-systems",
+      "localSlug": "database-systems",
+      "trackId": "sde-systems",
+      "title": "Database Systems",
+      "summary": "Planned field note covering database systems for sde + systems interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/api-design",
+      "slug": "sde-systems/api-design",
+      "localSlug": "api-design",
+      "trackId": "sde-systems",
+      "title": "API Design",
+      "summary": "Planned field note covering api design for sde + systems interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/backend-architecture",
+      "slug": "sde-systems/backend-architecture",
+      "localSlug": "backend-architecture",
+      "trackId": "sde-systems",
+      "title": "Backend Architecture",
+      "summary": "Planned field note covering backend architecture for sde + systems interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/browser-and-web-foundations",
+      "slug": "sde-systems/browser-and-web-foundations",
+      "localSlug": "browser-and-web-foundations",
+      "trackId": "sde-systems",
+      "title": "Browser and Web Foundations",
+      "summary": "Planned field note covering browser and web foundations for sde + systems interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/mobile-foundations",
+      "slug": "sde-systems/mobile-foundations",
+      "localSlug": "mobile-foundations",
+      "trackId": "sde-systems",
+      "title": "Mobile Foundations",
+      "summary": "Planned field note covering mobile foundations for sde + systems interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/testing-strategy",
+      "slug": "sde-systems/testing-strategy",
+      "localSlug": "testing-strategy",
+      "trackId": "sde-systems",
+      "title": "Testing Strategy",
+      "summary": "Planned field note covering testing strategy for sde + systems interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/performance-engineering",
+      "slug": "sde-systems/performance-engineering",
+      "localSlug": "performance-engineering",
+      "trackId": "sde-systems",
+      "title": "Performance Engineering",
+      "summary": "Planned field note covering performance engineering for sde + systems interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/solid-and-design-patterns",
+      "slug": "sde-systems/solid-and-design-patterns",
+      "localSlug": "solid-and-design-patterns",
+      "trackId": "sde-systems",
+      "title": "SOLID and Design Patterns",
+      "summary": "Planned field note covering solid and design patterns for sde + systems interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/low-level-design",
+      "slug": "sde-systems/low-level-design",
+      "localSlug": "low-level-design",
+      "trackId": "sde-systems",
+      "title": "Low-Level Design",
+      "summary": "Planned field note covering low-level design for sde + systems interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/distributed-systems-foundations",
+      "slug": "sde-systems/distributed-systems-foundations",
+      "localSlug": "distributed-systems-foundations",
+      "trackId": "sde-systems",
+      "title": "Distributed Systems Foundations",
+      "summary": "Planned field note covering distributed systems foundations for sde + systems interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/consistent-hashing",
+      "slug": "sde-systems/consistent-hashing",
+      "localSlug": "consistent-hashing",
+      "trackId": "sde-systems",
+      "title": "Consistent Hashing",
+      "summary": "Partition data across changing node sets while minimizing movement and balancing load.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 45,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre",
+        "fintech",
+        "quant-dev"
+      ],
+      "prerequisites": [
+        "foundations/hash-tables",
+        "sde-systems/distributed-systems-foundations"
+      ],
+      "outcomes": [
+        "Derive movement under modulo hashing",
+        "Explain virtual nodes",
+        "Recognize hot-key and heterogeneity limits"
+      ],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/consistency-models",
+      "slug": "sde-systems/consistency-models",
+      "localSlug": "consistency-models",
+      "trackId": "sde-systems",
+      "title": "Consistency Models",
+      "summary": "Planned field note covering consistency models for sde + systems interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/caching",
+      "slug": "sde-systems/caching",
+      "localSlug": "caching",
+      "trackId": "sde-systems",
+      "title": "Caching",
+      "summary": "Planned field note covering caching for sde + systems interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/queues-and-event-streams",
+      "slug": "sde-systems/queues-and-event-streams",
+      "localSlug": "queues-and-event-streams",
+      "trackId": "sde-systems",
+      "title": "Queues and Event Streams",
+      "summary": "Planned field note covering queues and event streams for sde + systems interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/storage-systems",
+      "slug": "sde-systems/storage-systems",
+      "localSlug": "storage-systems",
+      "trackId": "sde-systems",
+      "title": "Storage Systems",
+      "summary": "Planned field note covering storage systems for sde + systems interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/capacity-planning",
+      "slug": "sde-systems/capacity-planning",
+      "localSlug": "capacity-planning",
+      "trackId": "sde-systems",
+      "title": "Capacity Planning",
+      "summary": "Planned field note covering capacity planning for sde + systems interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/reliability-engineering",
+      "slug": "sde-systems/reliability-engineering",
+      "localSlug": "reliability-engineering",
+      "trackId": "sde-systems",
+      "title": "Reliability Engineering",
+      "summary": "Planned field note covering reliability engineering for sde + systems interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/observability",
+      "slug": "sde-systems/observability",
+      "localSlug": "observability",
+      "trackId": "sde-systems",
+      "title": "Observability",
+      "summary": "Planned field note covering observability for sde + systems interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/system-design-interview-method",
+      "slug": "sde-systems/system-design-interview-method",
+      "localSlug": "system-design-interview-method",
+      "trackId": "sde-systems",
+      "title": "System Design Interview Method",
+      "summary": "Planned field note covering system design interview method for sde + systems interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "sde-systems/system-design-case-studies",
+      "slug": "sde-systems/system-design-case-studies",
+      "localSlug": "system-design-case-studies",
+      "trackId": "sde-systems",
+      "title": "System Design Case Studies",
+      "summary": "Planned field note covering system design case studies for sde + systems interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "sde",
+        "data-engineer",
+        "sre"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/shell-scripting",
+      "slug": "devops-cloud/shell-scripting",
+      "localSlug": "shell-scripting",
+      "trackId": "devops-cloud",
+      "title": "Shell Scripting",
+      "summary": "Planned field note covering shell scripting for devops + cloud interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/linux-internals",
+      "slug": "devops-cloud/linux-internals",
+      "localSlug": "linux-internals",
+      "trackId": "devops-cloud",
+      "title": "Linux Internals",
+      "summary": "Planned field note covering linux internals for devops + cloud interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/dns-and-tls",
+      "slug": "devops-cloud/dns-and-tls",
+      "localSlug": "dns-and-tls",
+      "trackId": "devops-cloud",
+      "title": "DNS and TLS",
+      "summary": "Planned field note covering dns and tls for devops + cloud interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/production-networking",
+      "slug": "devops-cloud/production-networking",
+      "localSlug": "production-networking",
+      "trackId": "devops-cloud",
+      "title": "Production Networking",
+      "summary": "Planned field note covering production networking for devops + cloud interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/gitops",
+      "slug": "devops-cloud/gitops",
+      "localSlug": "gitops",
+      "trackId": "devops-cloud",
+      "title": "GitOps",
+      "summary": "Planned field note covering gitops for devops + cloud interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/ci-cd",
+      "slug": "devops-cloud/ci-cd",
+      "localSlug": "ci-cd",
+      "trackId": "devops-cloud",
+      "title": "CI/CD",
+      "summary": "Planned field note covering ci/cd for devops + cloud interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/containers",
+      "slug": "devops-cloud/containers",
+      "localSlug": "containers",
+      "trackId": "devops-cloud",
+      "title": "Containers",
+      "summary": "Planned field note covering containers for devops + cloud interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/kubernetes-reconciliation",
+      "slug": "devops-cloud/kubernetes-reconciliation",
+      "localSlug": "kubernetes-reconciliation",
+      "trackId": "devops-cloud",
+      "title": "Kubernetes Reconciliation",
+      "summary": "Understand desired state, controllers, work queues, idempotency, and failure recovery in Kubernetes.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 50,
+      "roleIds": [
+        "devops",
+        "sre",
+        "data-engineer",
+        "security"
+      ],
+      "prerequisites": [
+        "devops-cloud/containers",
+        "foundations/networking-fundamentals"
+      ],
+      "outcomes": [
+        "Trace a reconciliation loop",
+        "Separate spec from observed state",
+        "Debug stuck resources systematically"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/kubernetes-operations",
+      "slug": "devops-cloud/kubernetes-operations",
+      "localSlug": "kubernetes-operations",
+      "trackId": "devops-cloud",
+      "title": "Kubernetes Operations",
+      "summary": "Planned field note covering kubernetes operations for devops + cloud interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/infrastructure-as-code",
+      "slug": "devops-cloud/infrastructure-as-code",
+      "localSlug": "infrastructure-as-code",
+      "trackId": "devops-cloud",
+      "title": "Infrastructure as Code",
+      "summary": "Planned field note covering infrastructure as code for devops + cloud interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/terraform",
+      "slug": "devops-cloud/terraform",
+      "localSlug": "terraform",
+      "trackId": "devops-cloud",
+      "title": "Terraform",
+      "summary": "Planned field note covering terraform for devops + cloud interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/configuration-and-secrets",
+      "slug": "devops-cloud/configuration-and-secrets",
+      "localSlug": "configuration-and-secrets",
+      "trackId": "devops-cloud",
+      "title": "Configuration and Secrets",
+      "summary": "Planned field note covering configuration and secrets for devops + cloud interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/release-strategies",
+      "slug": "devops-cloud/release-strategies",
+      "localSlug": "release-strategies",
+      "trackId": "devops-cloud",
+      "title": "Release Strategies",
+      "summary": "Planned field note covering release strategies for devops + cloud interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/observability-stack",
+      "slug": "devops-cloud/observability-stack",
+      "localSlug": "observability-stack",
+      "trackId": "devops-cloud",
+      "title": "Observability Stack",
+      "summary": "Planned field note covering observability stack for devops + cloud interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/slis-slos-and-error-budgets",
+      "slug": "devops-cloud/slis-slos-and-error-budgets",
+      "localSlug": "slis-slos-and-error-budgets",
+      "trackId": "devops-cloud",
+      "title": "SLIs, SLOs, and Error Budgets",
+      "summary": "Planned field note covering slis, slos, and error budgets for devops + cloud interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/incident-response",
+      "slug": "devops-cloud/incident-response",
+      "localSlug": "incident-response",
+      "trackId": "devops-cloud",
+      "title": "Incident Response",
+      "summary": "Planned field note covering incident response for devops + cloud interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/disaster-recovery",
+      "slug": "devops-cloud/disaster-recovery",
+      "localSlug": "disaster-recovery",
+      "trackId": "devops-cloud",
+      "title": "Disaster Recovery",
+      "summary": "Planned field note covering disaster recovery for devops + cloud interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/platform-engineering",
+      "slug": "devops-cloud/platform-engineering",
+      "localSlug": "platform-engineering",
+      "trackId": "devops-cloud",
+      "title": "Platform Engineering",
+      "summary": "Planned field note covering platform engineering for devops + cloud interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/finops",
+      "slug": "devops-cloud/finops",
+      "localSlug": "finops",
+      "trackId": "devops-cloud",
+      "title": "FinOps",
+      "summary": "Planned field note covering finops for devops + cloud interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/service-mesh",
+      "slug": "devops-cloud/service-mesh",
+      "localSlug": "service-mesh",
+      "trackId": "devops-cloud",
+      "title": "Service Mesh",
+      "summary": "Planned field note covering service mesh for devops + cloud interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/aws-service-map",
+      "slug": "devops-cloud/aws-service-map",
+      "localSlug": "aws-service-map",
+      "trackId": "devops-cloud",
+      "title": "AWS Service Map",
+      "summary": "Planned field note covering aws service map for devops + cloud interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/azure-service-map",
+      "slug": "devops-cloud/azure-service-map",
+      "localSlug": "azure-service-map",
+      "trackId": "devops-cloud",
+      "title": "Azure Service Map",
+      "summary": "Planned field note covering azure service map for devops + cloud interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/gcp-service-map",
+      "slug": "devops-cloud/gcp-service-map",
+      "localSlug": "gcp-service-map",
+      "trackId": "devops-cloud",
+      "title": "GCP Service Map",
+      "summary": "Planned field note covering gcp service map for devops + cloud interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "devops-cloud/oci-translation-matrix",
+      "slug": "devops-cloud/oci-translation-matrix",
+      "localSlug": "oci-translation-matrix",
+      "trackId": "devops-cloud",
+      "title": "OCI Translation Matrix",
+      "summary": "Planned field note covering oci translation matrix for devops + cloud interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "devops",
+        "sre",
+        "security"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/security-foundations",
+      "slug": "cybersecurity/security-foundations",
+      "localSlug": "security-foundations",
+      "trackId": "cybersecurity",
+      "title": "Security Foundations",
+      "summary": "Planned field note covering security foundations for cybersecurity interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/threat-modeling",
+      "slug": "cybersecurity/threat-modeling",
+      "localSlug": "threat-modeling",
+      "trackId": "cybersecurity",
+      "title": "Threat Modeling",
+      "summary": "Convert architecture into assets, trust boundaries, abuse cases, mitigations, and testable security requirements.",
+      "level": "foundation",
+      "publicationStatus": "published",
+      "durationMinutes": 45,
+      "roleIds": [
+        "security",
+        "devops",
+        "sre",
+        "fintech",
+        "sde"
+      ],
+      "prerequisites": [
+        "cybersecurity/security-foundations",
+        "foundations/networking-fundamentals"
+      ],
+      "outcomes": [
+        "Draw trust boundaries",
+        "Apply STRIDE without checklist theater",
+        "Prioritize mitigations by risk and evidence"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/applied-cryptography",
+      "slug": "cybersecurity/applied-cryptography",
+      "localSlug": "applied-cryptography",
+      "trackId": "cybersecurity",
+      "title": "Applied Cryptography",
+      "summary": "Planned field note covering applied cryptography for cybersecurity interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/pki-and-tls",
+      "slug": "cybersecurity/pki-and-tls",
+      "localSlug": "pki-and-tls",
+      "trackId": "cybersecurity",
+      "title": "PKI and TLS",
+      "summary": "Planned field note covering pki and tls for cybersecurity interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/identity-and-access-management",
+      "slug": "cybersecurity/identity-and-access-management",
+      "localSlug": "identity-and-access-management",
+      "trackId": "cybersecurity",
+      "title": "Identity and Access Management",
+      "summary": "Planned field note covering identity and access management for cybersecurity interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/web-security",
+      "slug": "cybersecurity/web-security",
+      "localSlug": "web-security",
+      "trackId": "cybersecurity",
+      "title": "Web Security",
+      "summary": "Planned field note covering web security for cybersecurity interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/api-security",
+      "slug": "cybersecurity/api-security",
+      "localSlug": "api-security",
+      "trackId": "cybersecurity",
+      "title": "API Security",
+      "summary": "Planned field note covering api security for cybersecurity interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/network-security",
+      "slug": "cybersecurity/network-security",
+      "localSlug": "network-security",
+      "trackId": "cybersecurity",
+      "title": "Network Security",
+      "summary": "Planned field note covering network security for cybersecurity interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/secure-coding",
+      "slug": "cybersecurity/secure-coding",
+      "localSlug": "secure-coding",
+      "trackId": "cybersecurity",
+      "title": "Secure Coding",
+      "summary": "Planned field note covering secure coding for cybersecurity interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/application-security",
+      "slug": "cybersecurity/application-security",
+      "localSlug": "application-security",
+      "trackId": "cybersecurity",
+      "title": "Application Security",
+      "summary": "Planned field note covering application security for cybersecurity interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/cloud-security",
+      "slug": "cybersecurity/cloud-security",
+      "localSlug": "cloud-security",
+      "trackId": "cybersecurity",
+      "title": "Cloud Security",
+      "summary": "Planned field note covering cloud security for cybersecurity interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/container-security",
+      "slug": "cybersecurity/container-security",
+      "localSlug": "container-security",
+      "trackId": "cybersecurity",
+      "title": "Container Security",
+      "summary": "Planned field note covering container security for cybersecurity interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/kubernetes-security",
+      "slug": "cybersecurity/kubernetes-security",
+      "localSlug": "kubernetes-security",
+      "trackId": "cybersecurity",
+      "title": "Kubernetes Security",
+      "summary": "Planned field note covering kubernetes security for cybersecurity interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/software-supply-chain",
+      "slug": "cybersecurity/software-supply-chain",
+      "localSlug": "software-supply-chain",
+      "trackId": "cybersecurity",
+      "title": "Software Supply Chain",
+      "summary": "Planned field note covering software supply chain for cybersecurity interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/devsecops",
+      "slug": "cybersecurity/devsecops",
+      "localSlug": "devsecops",
+      "trackId": "cybersecurity",
+      "title": "DevSecOps",
+      "summary": "Planned field note covering devsecops for cybersecurity interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/vulnerability-management",
+      "slug": "cybersecurity/vulnerability-management",
+      "localSlug": "vulnerability-management",
+      "trackId": "cybersecurity",
+      "title": "Vulnerability Management",
+      "summary": "Planned field note covering vulnerability management for cybersecurity interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/detection-engineering",
+      "slug": "cybersecurity/detection-engineering",
+      "localSlug": "detection-engineering",
+      "trackId": "cybersecurity",
+      "title": "Detection Engineering",
+      "summary": "Planned field note covering detection engineering for cybersecurity interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/incident-response",
+      "slug": "cybersecurity/incident-response",
+      "localSlug": "incident-response",
+      "trackId": "cybersecurity",
+      "title": "Incident Response",
+      "summary": "Planned field note covering incident response for cybersecurity interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/forensics-basics",
+      "slug": "cybersecurity/forensics-basics",
+      "localSlug": "forensics-basics",
+      "trackId": "cybersecurity",
+      "title": "Forensics Basics",
+      "summary": "Planned field note covering forensics basics for cybersecurity interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/ai-security",
+      "slug": "cybersecurity/ai-security",
+      "localSlug": "ai-security",
+      "trackId": "cybersecurity",
+      "title": "AI Security",
+      "summary": "Planned field note covering ai security for cybersecurity interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/fintech-security",
+      "slug": "cybersecurity/fintech-security",
+      "localSlug": "fintech-security",
+      "trackId": "cybersecurity",
+      "title": "Fintech Security",
+      "summary": "Planned field note covering fintech security for cybersecurity interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "cybersecurity/owasp-and-nist-mappings",
+      "slug": "cybersecurity/owasp-and-nist-mappings",
+      "localSlug": "owasp-and-nist-mappings",
+      "trackId": "cybersecurity",
+      "title": "OWASP and NIST Mappings",
+      "summary": "Planned field note covering owasp and nist mappings for cybersecurity interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "security",
+        "devops",
+        "fintech"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/money-representation",
+      "slug": "fintech-quant/money-representation",
+      "localSlug": "money-representation",
+      "trackId": "fintech-quant",
+      "title": "Money Representation",
+      "summary": "Planned field note covering money representation for fintech + quant interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/double-entry-ledgers",
+      "slug": "fintech-quant/double-entry-ledgers",
+      "localSlug": "double-entry-ledgers",
+      "trackId": "fintech-quant",
+      "title": "Double-Entry Ledgers",
+      "summary": "Model immutable balanced postings, account invariants, reversals, reconciliation, and audit trails.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 60,
+      "roleIds": [
+        "fintech",
+        "sde",
+        "data-engineer",
+        "security"
+      ],
+      "prerequisites": [
+        "fintech-quant/money-representation",
+        "foundations/sql-fundamentals"
+      ],
+      "outcomes": [
+        "Preserve balanced postings",
+        "Separate business events from ledger entries",
+        "Design safe corrections and reconciliation"
+      ],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/idempotency",
+      "slug": "fintech-quant/idempotency",
+      "localSlug": "idempotency",
+      "trackId": "fintech-quant",
+      "title": "Idempotency",
+      "summary": "Planned field note covering idempotency for fintech + quant interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/payment-lifecycles",
+      "slug": "fintech-quant/payment-lifecycles",
+      "localSlug": "payment-lifecycles",
+      "trackId": "fintech-quant",
+      "title": "Payment Lifecycles",
+      "summary": "Planned field note covering payment lifecycles for fintech + quant interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/card-networks",
+      "slug": "fintech-quant/card-networks",
+      "localSlug": "card-networks",
+      "trackId": "fintech-quant",
+      "title": "Card Networks",
+      "summary": "Planned field note covering card networks for fintech + quant interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/upi",
+      "slug": "fintech-quant/upi",
+      "localSlug": "upi",
+      "trackId": "fintech-quant",
+      "title": "UPI",
+      "summary": "Planned field note covering upi for fintech + quant interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/open-banking",
+      "slug": "fintech-quant/open-banking",
+      "localSlug": "open-banking",
+      "trackId": "fintech-quant",
+      "title": "Open Banking",
+      "summary": "Planned field note covering open banking for fintech + quant interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/lending-systems",
+      "slug": "fintech-quant/lending-systems",
+      "localSlug": "lending-systems",
+      "trackId": "fintech-quant",
+      "title": "Lending Systems",
+      "summary": "Planned field note covering lending systems for fintech + quant interviews.",
+      "level": "foundation",
+      "publicationStatus": "planned",
+      "durationMinutes": 35,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/reconciliation",
+      "slug": "fintech-quant/reconciliation",
+      "localSlug": "reconciliation",
+      "trackId": "fintech-quant",
+      "title": "Reconciliation",
+      "summary": "Planned field note covering reconciliation for fintech + quant interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/clearing-and-settlement",
+      "slug": "fintech-quant/clearing-and-settlement",
+      "localSlug": "clearing-and-settlement",
+      "trackId": "fintech-quant",
+      "title": "Clearing and Settlement",
+      "summary": "Planned field note covering clearing and settlement for fintech + quant interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/fraud-systems",
+      "slug": "fintech-quant/fraud-systems",
+      "localSlug": "fraud-systems",
+      "trackId": "fintech-quant",
+      "title": "Fraud Systems",
+      "summary": "Planned field note covering fraud systems for fintech + quant interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/kyc-and-aml",
+      "slug": "fintech-quant/kyc-and-aml",
+      "localSlug": "kyc-and-aml",
+      "trackId": "fintech-quant",
+      "title": "KYC and AML",
+      "summary": "Planned field note covering kyc and aml for fintech + quant interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/pci-concepts",
+      "slug": "fintech-quant/pci-concepts",
+      "localSlug": "pci-concepts",
+      "trackId": "fintech-quant",
+      "title": "PCI Concepts",
+      "summary": "Planned field note covering pci concepts for fintech + quant interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/auditability",
+      "slug": "fintech-quant/auditability",
+      "localSlug": "auditability",
+      "trackId": "fintech-quant",
+      "title": "Auditability",
+      "summary": "Planned field note covering auditability for fintech + quant interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/financial-resilience",
+      "slug": "fintech-quant/financial-resilience",
+      "localSlug": "financial-resilience",
+      "trackId": "fintech-quant",
+      "title": "Financial Resilience",
+      "summary": "Planned field note covering financial resilience for fintech + quant interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/market-microstructure",
+      "slug": "fintech-quant/market-microstructure",
+      "localSlug": "market-microstructure",
+      "trackId": "fintech-quant",
+      "title": "Market Microstructure",
+      "summary": "Planned field note covering market microstructure for fintech + quant interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/order-books",
+      "slug": "fintech-quant/order-books",
+      "localSlug": "order-books",
+      "trackId": "fintech-quant",
+      "title": "Order Books",
+      "summary": "Planned field note covering order books for fintech + quant interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/stochastic-processes",
+      "slug": "fintech-quant/stochastic-processes",
+      "localSlug": "stochastic-processes",
+      "trackId": "fintech-quant",
+      "title": "Stochastic Processes",
+      "summary": "Planned field note covering stochastic processes for fintech + quant interviews.",
+      "level": "interview",
+      "publicationStatus": "planned",
+      "durationMinutes": 50,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/time-series",
+      "slug": "fintech-quant/time-series",
+      "localSlug": "time-series",
+      "trackId": "fintech-quant",
+      "title": "Time Series",
+      "summary": "Planned field note covering time series for fintech + quant interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/derivatives-pricing",
+      "slug": "fintech-quant/derivatives-pricing",
+      "localSlug": "derivatives-pricing",
+      "trackId": "fintech-quant",
+      "title": "Derivatives Pricing",
+      "summary": "Planned field note covering derivatives pricing for fintech + quant interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/portfolio-and-risk",
+      "slug": "fintech-quant/portfolio-and-risk",
+      "localSlug": "portfolio-and-risk",
+      "trackId": "fintech-quant",
+      "title": "Portfolio and Risk",
+      "summary": "Planned field note covering portfolio and risk for fintech + quant interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/backtesting",
+      "slug": "fintech-quant/backtesting",
+      "localSlug": "backtesting",
+      "trackId": "fintech-quant",
+      "title": "Backtesting",
+      "summary": "Planned field note covering backtesting for fintech + quant interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/low-latency-c-plus-plus",
+      "slug": "fintech-quant/low-latency-c-plus-plus",
+      "localSlug": "low-latency-c-plus-plus",
+      "trackId": "fintech-quant",
+      "title": "Low-Latency C++",
+      "summary": "Planned field note covering low-latency c++ for fintech + quant interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/quant-puzzles",
+      "slug": "fintech-quant/quant-puzzles",
+      "localSlug": "quant-puzzles",
+      "trackId": "fintech-quant",
+      "title": "Quant Puzzles",
+      "summary": "Planned field note covering quant puzzles for fintech + quant interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    },
+    {
+      "id": "fintech-quant/india-us-and-eu-regulation",
+      "slug": "fintech-quant/india-us-and-eu-regulation",
+      "localSlug": "india-us-and-eu-regulation",
+      "trackId": "fintech-quant",
+      "title": "India, US, and EU Regulation",
+      "summary": "Planned field note covering india, us, and eu regulation for fintech + quant interviews.",
+      "level": "advanced",
+      "publicationStatus": "planned",
+      "durationMinutes": 65,
+      "roleIds": [
+        "fintech",
+        "quant-dev",
+        "quant-research"
+      ],
+      "prerequisites": [],
+      "outcomes": [],
+      "lastReviewed": "2026-09-18",
+      "asOf": "2026-09-18"
+    }
+  ]
+}

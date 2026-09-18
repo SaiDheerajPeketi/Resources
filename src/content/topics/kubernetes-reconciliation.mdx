@@ -1,0 +1,138 @@
+import { FiveMinuteMap, LearningOutcomes, Analogy, KeyIdea, Pitfalls, InterviewPrompt, Hint, Solution, Flashcards, RevisionSheet, Sources, Flow } from "@/components/lesson-components"
+
+<FiveMinuteMap items={[
+  "The API stores desired and observed resource state.",
+  "Controllers watch relevant changes and enqueue object keys.",
+  "A reconcile function reads current truth and makes bounded idempotent progress.",
+  "Status and conditions report observation; spec expresses intent.",
+  "Retries are normal, so every external side effect needs stable identity."
+]} />
+
+<LearningOutcomes>
+
+- Trace Deployment → ReplicaSet → Pod → scheduler → kubelet control paths.
+- Explain level-based reconciliation, work queues, finalizers, and conditions.
+- Write an idempotent controller outline and diagnose non-convergence.
+- Map the same concept across OCI OKE, AWS EKS, Azure AKS, and GCP GKE.
+
+</LearningOutcomes>
+
+## Mental model
+
+<Analogy title="A thermostat, not a one-time script">
+
+A thermostat repeatedly compares desired temperature with observed temperature and makes a bounded adjustment. It does not assume the previous command worked, and losing one notification does not lose the desired state. Kubernetes controllers use the same level-based pattern.
+
+</Analogy>
+
+<Flow steps={["watch event", "enqueue key", "read object", "observe dependents", "act", "write status", "requeue"]} />
+
+## Control paths
+
+A Deployment does not directly create containers:
+
+1. The Deployment controller creates or updates a ReplicaSet.
+2. The ReplicaSet controller creates missing Pods.
+3. The scheduler binds unscheduled Pods to nodes.
+4. The kubelet on each node drives the Pod’s containers toward the declared spec.
+5. Endpoint-related controllers reflect ready Pods into service discovery.
+
+Each controller owns a narrow responsibility. Convergence is the composition of their loops.
+
+## A reconcile outline
+
+```text
+reconcile(namespace/name):
+  parent = api.get(key)
+  if parent is absent: return success
+  if deletion requested: finalize idempotently; remove finalizer; return
+  observed = read dependents and external resources
+  desired = derive desired dependents from parent.spec
+  apply bounded differences using stable names or idempotency keys
+  patch parent.status.observedGeneration and conditions
+  requeue only when time or incomplete work requires it
+```
+
+<KeyIdea><p>Events are hints that something may have changed. The object store is truth. Reconciliation must succeed even when events are duplicated, coalesced, delayed, or missed.</p></KeyIdea>
+
+### Spec, status, and conditions
+
+- `spec`: user or higher-level-controller intent.
+- `status`: controller observation; should not become a second source of desired state.
+- `observedGeneration`: proves which spec generation the status reflects.
+- conditions: structured facts such as Ready, Progressing, or Degraded with reason and message.
+
+### Finalizers
+
+Deletion sets a timestamp before removing the object when finalizers exist. The responsible controller must perform external cleanup safely, then remove its finalizer. A stuck finalizer is usually a controller, permission, or external-cleanup problem—not a reason to erase metadata blindly.
+
+## Four-cloud translation
+
+| Concept | OCI | AWS | Azure | GCP |
+| --- | --- | --- | --- | --- |
+| managed Kubernetes | OKE | EKS | AKS | GKE |
+| worker abstraction | node pools | managed node groups | node pools | node pools |
+| workload identity | OCI workload identity | IRSA / pod identity | workload identity | Workload Identity Federation for GKE |
+| control-loop semantics | Kubernetes controllers | Kubernetes controllers | Kubernetes controllers | Kubernetes controllers |
+
+The managed service changes responsibility boundaries around upgrades, identity, networking, and control-plane operation. The reconciliation model remains Kubernetes.
+
+<Pitfalls>
+
+- Creating a new external resource on every retry because the operation lacks stable identity.
+- Returning success after a partial failure without recording or requeueing incomplete work.
+- Updating status in a way that retriggers the controller indefinitely.
+- Treating `Running` as `Ready` or `Ready` as application correctness.
+- Using polling alone when watches plus bounded resync provide faster, cheaper convergence.
+- Removing finalizers manually before understanding the abandoned external state.
+
+</Pitfalls>
+
+## Interview check
+
+<InterviewPrompt title="Five desired, three ready" difficulty="Medium" timebox="8 min">
+
+A Deployment requests five replicas but only three remain ready. Walk through the control path and name three reasons the system may not converge.
+
+<Hint>Separate desired objects, scheduled objects, running containers, and ready workloads.</Hint>
+
+<Solution>
+
+The Deployment controller ensures the correct ReplicaSet; the ReplicaSet controller creates Pods; the scheduler binds pending Pods; kubelets start containers; readiness gates availability. Failures include insufficient schedulable resources, admission/policy rejection, unbound volumes, image-pull or startup failures, failing readiness probes, node pressure, or controller/API connectivity problems. A strong answer checks conditions and events at each layer rather than restarting everything.
+
+</Solution>
+
+</InterviewPrompt>
+
+<Flashcards cards={[
+  { front: "Why must reconcile be idempotent?", back: "Retries and duplicate events are normal; the same desired/observed state must not create duplicate side effects." },
+  { front: "What does observedGeneration prove?", back: "That reported status was computed for a particular spec generation." },
+  { front: "What is a finalizer?", back: "A deletion dependency that lets a controller complete external cleanup before the API object disappears." },
+  { front: "Events versus state?", back: "Events enqueue work; the latest API state is authoritative." }
+]} />
+
+<RevisionSheet>
+
+### Reconcile loop
+
+watch → queue → read → compare → act idempotently → status → requeue
+
+### Debug order
+
+Deployment conditions → ReplicaSet desired/current → pending Pod events → scheduling/volumes → kubelet/container state → readiness → service endpoints
+
+### Interview warning
+
+Never say “Kubernetes notices and fixes it” without naming the controller, observed state, action, and failure boundary.
+
+</RevisionSheet>
+
+<Sources>
+
+- [Kubernetes controllers](https://kubernetes.io/docs/concepts/architecture/controller/)
+- [Kubernetes API conventions](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md)
+- [Kubernetes operators](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
+
+Reviewed 2026-09-18; cloud service names are time-sensitive.
+
+</Sources>

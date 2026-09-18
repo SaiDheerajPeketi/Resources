@@ -1,0 +1,12 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, BriefcaseBusiness, Clock3, Code2, Landmark, MessageSquareText, Network, ShieldCheck } from "lucide-react";
+export const metadata: Metadata = { title: "Interview loops" };
+const loops = [
+  { title: "Global product SDE", icon: Code2, duration: "4 × 45 min", rounds: ["DSA medium/hard", "low-level design", "system design", "behavioral and projects"] },
+  { title: "AI / ML engineer", icon: Network, duration: "4 × 50 min", rounds: ["Python/SQL and data", "ML fundamentals", "ML/LLM system design", "product and behavioral"] },
+  { title: "DevOps / SRE", icon: BriefcaseBusiness, duration: "4 × 45 min", rounds: ["Linux/network debugging", "cloud and Kubernetes", "reliability design", "incident leadership"] },
+  { title: "Security engineer", icon: ShieldCheck, duration: "3 × 60 min", rounds: ["threat-model case", "application/cloud security", "incident and behavioral"] },
+  { title: "Fintech / quant", icon: Landmark, duration: "4 × 45 min", rounds: ["probability and coding", "ledger/payment case", "markets or low latency", "risk and behavioral"] }
+];
+export default function InterviewPage() { return <main id="main-content" className="tool-page"><header className="tool-page-title"><h1>Interview loops</h1><p>Run complete mock sequences by company archetype, then convert misses into revision-list items.</p></header><section className="loop-list">{loops.map(({ title, icon: Icon, duration, rounds }) => <article key={title}><header><Icon size={22} /><h2>{title}</h2><span><Clock3 size={14} /> {duration}</span></header><ol>{rounds.map((round) => <li key={round}>{round}</li>)}</ol><Link href="/practice/">Start with the question bank <ArrowRight size={16} /></Link></article>)}</section><section className="career-field"><div><MessageSquareText size={22} /><h2>Career field notes</h2></div><div className="career-columns"><article><h3>STAR without theater</h3><p>Spend little time on context. Name your responsibility, the constraints, the decision you made, and measurable evidence. End with what changed in your judgment.</p></article><article><h3>Project deep dive</h3><p>Prepare architecture, ownership boundary, hardest failure, trade-off rejected, test evidence, operational result, and what you would redesign now.</p></article><article><h3>Recruiter and negotiation</h3><p>Clarify level, loop, location, compensation components, competing deadlines, and decision criteria. Never fabricate another offer.</p></article></div></section></main>; }

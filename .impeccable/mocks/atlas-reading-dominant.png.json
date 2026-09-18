@@ -1,0 +1,10 @@
+{
+  "approved": false,
+  "createdAt": "2026-09-18",
+  "tool": "OpenAI image generation",
+  "model": "tool-managed image generation model",
+  "prompt": "Canonical prompt is preserved verbatim in atlas-reading-dominant.prompt.txt and embedded in the PNG metadata.",
+  "promptFile": "atlas-reading-dominant.prompt.txt",
+  "embeddedPromptVerified": true,
+  "status": "explored alternative"
+}

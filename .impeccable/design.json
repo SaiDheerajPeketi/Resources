@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-18T08:07:00+05:30",
+  "title": "Design System: Interview Atlas",
+  "extensions": {
+    "colorMeta": {
+      "blueprint-blue": { "role": "primary", "displayName": "Blueprint Blue", "canonical": "#1768d4", "tonalRamp": ["#07172f", "#0b2b59", "#104384", "#135baa", "#1768d4", "#5794e3", "#a7c8f3", "#eaf2ff"] },
+      "annotation-teal": { "role": "secondary", "displayName": "Annotation Teal", "canonical": "#178d8b", "tonalRamp": ["#052322", "#0a403f", "#105d5b", "#147976", "#178d8b", "#5ab8b5", "#a8ddda", "#e3f6f4"] },
+      "annotation-amber": { "role": "tertiary", "displayName": "Annotation Amber", "canonical": "#bd771d", "tonalRamp": ["#2b1804", "#533008", "#7d4a0d", "#a76515", "#bd771d", "#dda653", "#f0d29c", "#fff3dc"] },
+      "cool-paper": { "role": "neutral", "displayName": "Cool Paper", "canonical": "#f9fbfd", "tonalRamp": ["#101b36", "#27344e", "#56647d", "#7b879b", "#bdc9d8", "#d9e0e8", "#eef2f6", "#f9fbfd"] }
+    },
+    "typographyMeta": {
+      "headline": { "displayName": "Atlas Headline", "purpose": "Track and topic titles." },
+      "body": { "displayName": "Field Note Body", "purpose": "Long-form learning and interface copy." },
+      "label": { "displayName": "Calibration Label", "purpose": "Compact metadata, status, level, and time." }
+    },
+    "shadows": [
+      { "name": "floating-overlay", "value": "0 12px 34px rgb(4 23 73 / 0.14)", "purpose": "Search results and true overlays." },
+      { "name": "selected-node", "value": "0 7px 18px rgb(30 118 243 / 0.16)", "purpose": "Current graph location." },
+      { "name": "quiet-lift", "value": "0 4px 12px rgb(4 23 73 / 0.055)", "purpose": "Available graph nodes." }
+    ],
+    "motion": [
+      { "name": "state-transition", "value": "160ms ease", "purpose": "Small control and panel state changes; disabled under reduced motion." }
+    ],
+    "breakpoints": [
+      { "name": "compact-desktop", "value": "1120px" },
+      { "name": "semantic-mobile", "value": "900px" },
+      { "name": "narrow-mobile", "value": "540px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single emphasized study action in a panel.",
+      "html": "<button class=\"ds-primary\">Open field note</button>",
+      "css": ".ds-primary { min-height:43px; padding:9px 12px; border:1px solid #1768d4; border-radius:7px; background:#1768d4; color:#fff; font:600 16px 'Atkinson Hyperlegible',sans-serif; } .ds-primary:hover { background:#135fc8; } .ds-primary:focus-visible { outline:3px solid rgb(23 104 212 / .35); outline-offset:3px; }"
+    },
+    {
+      "name": "Secondary Action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A restrained bordered working control.",
+      "html": "<button class=\"ds-secondary\">Add to revision</button>",
+      "css": ".ds-secondary { min-height:43px; padding:9px 12px; border:1px solid #8ba3c7; border-radius:7px; background:#fff; color:#101b36; font:600 16px 'Atkinson Hyperlegible',sans-serif; } .ds-secondary:hover { border-color:#1768d4; color:#135fc8; } .ds-secondary:focus-visible { outline:3px solid rgb(23 104 212 / .35); outline-offset:3px; }"
+    },
+    {
+      "name": "Command Search",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "The global route and topic search field.",
+      "html": "<label class=\"ds-search\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m20 20-3.5-3.5\"/></svg><input aria-label=\"Search the interview atlas\" placeholder=\"Search topics, roles, or concepts\"></label>",
+      "css": ".ds-search { height:42px; display:flex; align-items:center; gap:10px; padding:0 12px; border:1px solid #bdc9d8; border-radius:8px; background:#fff; color:#56647d; } .ds-search svg { width:18px; fill:none; stroke:currentColor; stroke-width:2; } .ds-search input { width:100%; border:0; outline:0; color:#101b36; font:16px 'Atkinson Hyperlegible',sans-serif; } .ds-search:focus-within { outline:3px solid rgb(23 104 212 / .35); outline-offset:3px; }"
+    },
+    {
+      "name": "Published Status",
+      "kind": "chip",
+      "refersTo": "chip-status",
+      "description": "A labelled non-color-only publication state.",
+      "html": "<span class=\"ds-chip\">● PUBLISHED</span>",
+      "css": ".ds-chip { display:inline-block; padding:3px 7px; border:1px solid #178d8b; border-radius:999px; background:#e3f6f4; color:#0d6864; font:10px/1.2 'JetBrains Mono',monospace; letter-spacing:.04em; }"
+    },
+    {
+      "name": "Active Track Index",
+      "kind": "nav",
+      "description": "The selected entry in the atlas track index.",
+      "html": "<button class=\"ds-track\"><span>⌘</span><strong>FOUNDATIONS</strong><small>24 mapped topics</small></button>",
+      "css": ".ds-track { position:relative; min-height:61px; display:grid; grid-template-columns:34px 1fr; gap:9px; align-items:center; width:240px; padding:8px 10px; border:0; border-radius:7px; background:#eaf2ff; color:#0757bd; text-align:left; font-family:'Atkinson Hyperlegible',sans-serif; } .ds-track::before { content:''; position:absolute; left:-13px; width:3px; height:47px; background:#1768d4; } .ds-track strong,.ds-track small { grid-column:2; } .ds-track small { color:#56647d; } .ds-track:focus-visible { outline:3px solid rgb(23 104 212 / .35); outline-offset:3px; }"
+    },
+    {
+      "name": "Selected Atlas Node",
+      "kind": "custom",
+      "description": "Current topic node with location marker and semantic state dot.",
+      "html": "<div class=\"ds-node\"><span></span>Hash Tables</div>",
+      "css": ".ds-node { position:relative; width:190px; min-height:46px; display:flex; align-items:center; padding:8px 14px 8px 36px; border:2px solid #1768d4; border-radius:8px; background:#fff; color:#101b36; box-shadow:0 7px 18px rgb(30 118 243 / .16); font:620 15px 'Atkinson Hyperlegible',sans-serif; } .ds-node span { position:absolute; left:13px; width:11px; height:11px; border-radius:50%; background:#1768d4; box-shadow:0 0 0 4px #eaf2ff; } .ds-node::after { content:'YOU ARE HERE'; position:absolute; left:18px; bottom:calc(100% + 2px); padding:4px 7px; background:#1768d4; color:#fff; font:8px/1 'JetBrains Mono',monospace; clip-path:polygon(0 0,100% 0,91% 100%,0 100%); }"
+    },
+    {
+      "name": "Revision Sheet",
+      "kind": "card",
+      "description": "Printable one-page memory aid with paper-like structure.",
+      "html": "<section class=\"ds-sheet\"><small>REVISION SHEET</small><h2>Hash Tables</h2><p>Lookup · collision strategy · load factor · resize</p></section>",
+      "css": ".ds-sheet { width:320px; padding:26px; border:1px solid #7187a5; border-radius:4px; background:#fff; color:#101b36; box-shadow:0 7px 20px rgb(4 23 73 / .06); font-family:'Atkinson Hyperlegible',sans-serif; } .ds-sheet small { color:#56647d; font:10px 'JetBrains Mono',monospace; letter-spacing:.12em; } .ds-sheet h2 { margin:9px 0; } .ds-sheet p { margin:0; color:#56647d; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Technical Field Atlas",
+    "overview": "A calm, precise engineering field manual built from cool paper, dark ink, fine rules, index tabs, and blueprint annotations. Information remains semantic, diagram-led, and suitable for long study sessions.",
+    "keyCharacteristics": ["Cool technical paper with dark blue-black ink.", "Blueprint blue reserved for active paths and primary actions.", "Teal and amber behave like restrained editorial annotations.", "Ruled, mostly flat surfaces with small-radius working controls.", "Mono typography is metadata, never the reading voice."],
+    "rules": [
+      { "name": "Blueprint Rarity Rule", "body": "Blueprint blue marks location, path, focus, or primary action; it is not a decorative fill.", "section": "colors" },
+      { "name": "Redundancy Rule", "body": "Never communicate status through hue alone. Use labels, line styles, icons, or geometry with color.", "section": "colors" },
+      { "name": "Mono Is Metadata Rule", "body": "Do not use the mono face for paragraphs, headings, or personality copy.", "section": "typography" },
+      { "name": "Map-and-Inspector Rule", "body": "On wide screens, selection context and explanation remain visible together. On narrow screens, preserve the same information order in a readable outline rather than shrinking the graph.", "section": "layout" },
+      { "name": "Flat-by-Default Rule", "body": "A shadow must explain focus, overlay, or physical page separation; static containers use rules instead.", "section": "elevation" }
+    ],
+    "dos": ["Do preserve the three-pane atlas relationship on wide screens and its semantic reading order on mobile.", "Do use rules, whitespace, and labels before introducing another container.", "Do pair every color state with text, iconography, or line treatment.", "Do keep body text in the hyperlegible sans face and metadata in mono.", "Do honor reduced-motion preferences for path tracing and panel transitions."],
+    "donts": ["Don't turn curriculum sections into a generic grid of dashboard cards.", "Don't add points, streaks, trophies, badges, or decorative progress theater.", "Don't introduce gradients, glassmorphism, stock imagery, or decorative analytics.", "Don't use dense shadows to manufacture hierarchy that rules and layout can express.", "Don't hide planned content or make it look finished."]
+  }
+}

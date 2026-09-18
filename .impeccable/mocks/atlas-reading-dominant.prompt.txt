@@ -1,0 +1,14 @@
+Use case: ui-mockup
+Asset type: high-fidelity desktop web application comp, 1536×1024 landscape
+Primary request: Design the first viewport of “Interview Atlas,” a serious offline technical interview study application. This is composition option 2: a technical field-note reading page is dominant while the prerequisite map remains persistently visible.
+Surface structure: a narrow full-height left atlas index occupying about 15%; a central field-note page occupying about 60%; a narrow right dependency rail occupying about 25%. A compact command search sits across the top. No marketing hero and no card dashboard.
+Real interface content: left index tracks FOUNDATIONS, AI + DATA, SDE + SYSTEMS, DEVOPS + CLOUD, CYBERSECURITY, FINTECH + QUANT. The central topic is HASH TABLES with sections “5-minute map,” “Mental model,” “Core operations,” “Collision strategies,” “Worked C++ example,” and “Interview checks.” Show a small key→bucket diagram and one short C++ code block. The right dependency rail traces Complexity → Arrays → Hash Tables → Graphs and includes actions “Practice 8 questions” and “Add to revision.”
+Style/medium: shippable realistic product UI, Technical Field Atlas visual world, not concept art and not a poster
+Composition/framing: straight-on desktop screenshot with complete browser viewport; central ruled field note feels like a precise engineering handbook page, not a blog
+Lighting/mood: neutral daylight reading environment, precise and calm
+Color palette: cool paper white, dark blue-black ink, blueprint cobalt as primary active line, restrained amber for warning callouts, teal for completed state
+Materials/textures: extremely subtle technical paper grain, fine rules, index tabs, calibration ticks; mostly flat semantic UI
+Typography: highly legible workhorse sans for reading, restrained technical mono only for code and metadata
+Constraints: status uses symbols and line styles as well as color; no card grid, no gradients, no glassmorphism, no gamification, no trophies, no points, no streaks, no dark theme, no stock photos, no logos other than text name, no watermark, no decorative dashboard charts
+Focal moment: the selected paragraph and miniature hash-bucket diagram connect visually to the active prerequisite rail without overwhelming reading
+Responsive intent: central article becomes the first mobile view while the atlas and dependency rail become drawers

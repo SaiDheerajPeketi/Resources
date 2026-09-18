@@ -1,0 +1,126 @@
+import { FiveMinuteMap, LearningOutcomes, Analogy, KeyIdea, Pitfalls, InterviewPrompt, Hint, Solution, Flashcards, RevisionSheet, Sources, Flow } from "@/components/lesson-components"
+
+<FiveMinuteMap items={[
+  "Define scope, security objectives, assets, and assumptions.",
+  "Draw data flows, identities, components, stores, and trust boundaries.",
+  "Generate abuse cases using attacker goals plus structured prompts such as STRIDE.",
+  "Rate risk with evidence and document accepted assumptions.",
+  "Turn mitigations into owners, requirements, and verification work."
+]} />
+
+<LearningOutcomes>
+
+- Build a useful data-flow diagram rather than an architecture poster.
+- Apply STRIDE as a prompt without mistaking it for risk prioritization.
+- Connect threats to concrete controls and test evidence.
+- Run a lightweight model during design and update it after material changes.
+
+</LearningOutcomes>
+
+## Mental model
+
+<Analogy title="A rehearsal for failure">
+
+Threat modeling is a design rehearsal. The team walks an attacker through the real system before the attacker does it in production. The output is not the diagram; it is a set of better design decisions and testable security requirements.
+
+</Analogy>
+
+<Flow steps={["scope", "assets", "data flow", "trust boundaries", "abuse cases", "risk", "mitigate", "verify"]} />
+
+## Diagram what changes trust
+
+Include:
+
+- external actors and identities,
+- processes and services,
+- data stores and sensitive data classes,
+- network or administrative boundaries,
+- third parties and asynchronous channels,
+- authentication and authorization transitions,
+- secrets and key-management dependencies.
+
+A trust boundary is where the level or owner of trust changes. A line between two boxes is not automatically a boundary, and a Kubernetes namespace is not automatically a security boundary.
+
+## STRIDE as a prompt
+
+| Category | Question | Typical control families |
+| --- | --- | --- |
+| Spoofing | Can an actor impersonate another identity? | strong authentication, binding, anti-replay |
+| Tampering | Can data or code change without detection? | authorization, integrity, signatures, immutability |
+| Repudiation | Can actions be denied without evidence? | attributable audit events, time integrity, retention |
+| Information disclosure | Can sensitive data cross an unintended boundary? | minimization, encryption, access control, redaction |
+| Denial of service | Can scarce resources be exhausted? | quotas, isolation, backpressure, degradation |
+| Elevation of privilege | Can a lower privilege gain a higher one? | least privilege, policy boundaries, sandboxing |
+
+<KeyIdea><p>STRIDE generates candidates. Risk comes from attacker capability, preconditions, exposure, impact, existing controls, and the confidence of your evidence.</p></KeyIdea>
+
+## Convert threats into work
+
+Weak mitigation: “Use encryption.”
+
+Testable mitigation: “Reset tokens are 128 bits or more of CSPRNG output, stored as digests, single-use, expire within 20 minutes, are invalidated on successful reset, and are never written to logs. Automated tests verify replay and expiry.”
+
+Each material threat needs an owner and one disposition: mitigate, avoid, transfer, or explicitly accept. Accepted risk records scope, rationale, expiry/review date, and decision owner.
+
+<Pitfalls>
+
+- Drawing only infrastructure while omitting identities and data.
+- Brainstorming a long threat list without prioritization or owners.
+- Using a scoring formula to create fake precision from unsupported numbers.
+- Listing controls that do not address the stated abuse path.
+- Treating “internal network,” namespace, VPC, or VPN as inherently trusted.
+- Running the exercise once and never updating it after architecture changes.
+- Logging secrets or sensitive payloads in the name of repudiation controls.
+
+</Pitfalls>
+
+## Interview case
+
+<InterviewPrompt title="Password-reset flow" difficulty="Medium" timebox="15 min">
+
+Threat-model a password-reset flow that sends an emailed token and changes credentials through a public API. Identify the most important trust boundaries and abuse cases.
+
+<Hint>Follow data from an unauthenticated client through the email provider and back. Consider token lifecycle, enumeration, replay, and existing sessions.</Hint>
+
+<Solution>
+
+Boundaries include the public client/API, identity store, reset-token store or signer, email provider, and the user’s mailbox. Threats include account enumeration, token guessing/leakage/replay, reuse after reset, CSRF, rate-limit evasion, mailbox compromise, host-header poisoning in links, and retained sessions. Mitigate with consistent responses, rate and abuse controls, opaque high-entropy single-use expiring tokens, trusted link construction, digest storage, session-revocation policy, and attributable audit events without token logging.
+
+**Rubric:** real boundaries; token lifecycle; enumeration and replay; mitigations mapped to threats; verification ideas.
+
+</Solution>
+
+</InterviewPrompt>
+
+<Flashcards cards={[
+  { front: "What makes a useful trust boundary?", back: "A change in trust level, control owner, identity authority, or security policy." },
+  { front: "What is STRIDE for?", back: "Systematic threat candidate generation—not risk scoring by itself." },
+  { front: "What makes a mitigation actionable?", back: "A precise requirement, owner, placement in the data flow, and verification evidence." },
+  { front: "When should a threat model change?", back: "When architecture, data classification, identity, dependencies, exposure, or assumptions materially change." }
+]} />
+
+<RevisionSheet>
+
+### Workshop sequence
+
+Scope → objectives/assets → diagram → boundaries → abuse cases → risk → decisions → verification
+
+### Questions that expose gaps
+
+- Who controls this input?
+- Where does identity change form?
+- What happens if this dependency lies, delays, or disappears?
+- Which secret reaches logs, queues, analytics, or support tools?
+- What evidence proves the mitigation works?
+
+</RevisionSheet>
+
+<Sources>
+
+- [OWASP Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)
+- [NIST Secure Software Development Framework](https://csrc.nist.gov/Projects/ssdf)
+- Shostack, *Threat Modeling: Designing for Security*.
+
+Reviewed 2026-09-18. Educational material, not a substitute for a system-specific security review.
+
+</Sources>

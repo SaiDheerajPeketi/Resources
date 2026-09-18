@@ -1,0 +1,107 @@
+{
+  "version": "2026.09.18-r1",
+  "packs": [
+    {
+      "id": "foundations",
+      "title": "Foundations offline pack",
+      "version": "2026.09.18-r1",
+      "routes": [
+        "/",
+        "/atlas/",
+        "/tracks/foundations/",
+        "/practice/",
+        "/revision/",
+        "/interview/",
+        "/settings/",
+        "/topics/foundations/hash-tables/"
+      ],
+      "estimatedKb": 252,
+      "integrity": "sha256-0e2a608991901529f4864c690052e5054ce73df4fdd61e24e16c4502f8931a06"
+    },
+    {
+      "id": "ai-data",
+      "title": "AI + Data offline pack",
+      "version": "2026.09.18-r1",
+      "routes": [
+        "/",
+        "/atlas/",
+        "/tracks/ai-data/",
+        "/practice/",
+        "/revision/",
+        "/interview/",
+        "/settings/",
+        "/topics/ai-data/model-evaluation/"
+      ],
+      "estimatedKb": 252,
+      "integrity": "sha256-eb02903f5d7e2676f3f0a02ceb5091e4c65ebdfff176ba63e46a87c59353e6f6"
+    },
+    {
+      "id": "sde-systems",
+      "title": "SDE + Systems offline pack",
+      "version": "2026.09.18-r1",
+      "routes": [
+        "/",
+        "/atlas/",
+        "/tracks/sde-systems/",
+        "/practice/",
+        "/revision/",
+        "/interview/",
+        "/settings/",
+        "/topics/sde-systems/consistent-hashing/"
+      ],
+      "estimatedKb": 252,
+      "integrity": "sha256-03c683026182ddced61899d27410dc511e6cbc1dc755a40cf3c71da849a196a8"
+    },
+    {
+      "id": "devops-cloud",
+      "title": "DevOps + Cloud offline pack",
+      "version": "2026.09.18-r1",
+      "routes": [
+        "/",
+        "/atlas/",
+        "/tracks/devops-cloud/",
+        "/practice/",
+        "/revision/",
+        "/interview/",
+        "/settings/",
+        "/topics/devops-cloud/kubernetes-reconciliation/"
+      ],
+      "estimatedKb": 252,
+      "integrity": "sha256-54722c72bc4b7c5e42b0bb15f07abb2dc6ce038c94471c3cffeabd88356ab0db"
+    },
+    {
+      "id": "cybersecurity",
+      "title": "Cybersecurity offline pack",
+      "version": "2026.09.18-r1",
+      "routes": [
+        "/",
+        "/atlas/",
+        "/tracks/cybersecurity/",
+        "/practice/",
+        "/revision/",
+        "/interview/",
+        "/settings/",
+        "/topics/cybersecurity/threat-modeling/"
+      ],
+      "estimatedKb": 252,
+      "integrity": "sha256-bffa63794f37ba48d8cbf3b594f36d3976a72afaeca835676fbf8949622188ad"
+    },
+    {
+      "id": "fintech-quant",
+      "title": "Fintech + Quant offline pack",
+      "version": "2026.09.18-r1",
+      "routes": [
+        "/",
+        "/atlas/",
+        "/tracks/fintech-quant/",
+        "/practice/",
+        "/revision/",
+        "/interview/",
+        "/settings/",
+        "/topics/fintech-quant/double-entry-ledgers/"
+      ],
+      "estimatedKb": 252,
+      "integrity": "sha256-125bd4c5270d3f31123869260d694e5a601305c31646217e5aeb1b528801ff35"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+Use case: ui-mockup
+Asset type: high-fidelity desktop web application comp, 1536×1024 landscape
+Primary request: Design the first viewport of “Interview Atlas,” a serious offline technical interview study application. This is composition option 1: the prerequisite map is the dominant working surface.
+Surface structure: a slim full-height left track index occupying about 17%; a wide central skill map occupying about 56%; a right selected-topic inspector occupying about 27%; one compact global command-search strip spans the top of the center and right regions. No marketing hero.
+Real interface content: tracks labeled FOUNDATIONS, AI + DATA, SDE + SYSTEMS, DEVOPS + CLOUD, CYBERSECURITY, FINTECH + QUANT. The center map shows connected topic nodes including Complexity, Arrays, Hash Tables, Graphs, Probability, Statistics, Machine Learning, System Design. “Hash Tables” is selected. The inspector says HASH TABLES, FOUNDATION, 35 MIN, and shows “Why it matters,” prerequisites Arrays and Complexity, and actions “Open field note,” “Practice 8 questions,” and “Add to revision.”
+Style/medium: shippable realistic product UI, Technical Field Atlas visual world, not concept art and not a poster
+Composition/framing: straight-on desktop screenshot with complete browser viewport, crisp information hierarchy, map nodes and edges clearly usable, one visible “you are here” folded index flag on the selected node
+Lighting/mood: neutral daylight reading environment, precise and calm
+Color palette: cool paper white, dark blue-black ink, blueprint cobalt as the primary active line, restrained amber for warnings, teal for completed state
+Materials/textures: extremely subtle technical paper grain, fine ruled lines, index tabs, calibration ticks; mostly flat semantic UI
+Typography: highly legible workhorse sans for interface and reading, restrained technical mono only for codes and metadata
+Constraints: core text must remain semantic-looking and readable; status uses icons and line styles as well as color; no cards grid, no gradients, no glassmorphism, no gamification, no trophies, no points, no streaks, no dark theme, no stock photos, no logos other than the text name, no watermark, no decorative dashboard charts
+Focal moment: selecting Hash Tables traces its prerequisite path in blueprint blue and updates the right inspector while the rest stays quiet
+Responsive intent: composition must plausibly collapse to an outline on mobile

@@ -1,0 +1,145 @@
+import { FiveMinuteMap, LearningOutcomes, Analogy, KeyIdea, Pitfalls, InterviewPrompt, Hint, Solution, Flashcards, RevisionSheet, Sources, Flow } from "@/components/lesson-components"
+
+<FiveMinuteMap items={[
+  "Begin with the decision and error costs, not a favorite metric.",
+  "Make validation resemble future inference and keep leakage paths closed.",
+  "Separate ranking quality, probability calibration, and threshold policy.",
+  "Slice performance by meaningful cohorts; averages hide failures.",
+  "Treat deployment drift and delayed labels as part of evaluation design."
+]} />
+
+<LearningOutcomes>
+
+- Select classification, regression, ranking, and probabilistic metrics from product costs.
+- Design random, grouped, stratified, temporal, and nested validation correctly.
+- Diagnose leakage, imbalance, calibration, threshold, and distribution-shift problems.
+- Explain the evaluation plan for an ML system rather than reciting metric definitions.
+
+</LearningOutcomes>
+
+## Mental model
+
+<Analogy title="A flight simulator, not a school exam">
+
+A useful validation set is a simulator of the decisions the deployed model will face. A random split can be a perfect school exam yet a terrible simulator if the same user, device, hospital, merchant, or future-derived feature appears on both sides. The evaluation protocol is part of the model.
+
+</Analogy>
+
+<Flow steps={["decision", "costs", "split protocol", "metric family", "threshold", "slice", "monitor"]} />
+
+## Metric families
+
+### Classification
+
+| Question | Useful measures | Common trap |
+| --- | --- | --- |
+| Can the model rank positives above negatives? | ROC-AUC, PR-AUC | ROC-AUC can look strong under extreme imbalance |
+| Are positive predictions trustworthy? | precision, PPV | depends on prevalence and threshold |
+| Are costly positives being missed? | recall, sensitivity | high recall can flood reviewers |
+| Are probabilities meaningful? | log loss, Brier score, calibration curve | accuracy cannot diagnose probability quality |
+| Does one operating point meet constraints? | confusion matrix, cost, recall at fixed precision | choosing threshold on the test set |
+
+`Fβ` weights recall `β²` times as strongly as precision. It is useful only when that weighting reflects the decision, not because one score is convenient.
+
+### Regression and forecasting
+
+- **MAE:** linear penalty, interpretable in target units, more robust to outliers.
+- **RMSE:** emphasizes large errors; appropriate when large misses are disproportionately expensive.
+- **Quantile loss:** evaluates conditional quantiles and asymmetric costs.
+- **MAPE:** unstable near zero and misleading with signed or small denominators.
+- **Prediction-interval coverage and width:** required when uncertainty affects decisions.
+
+<KeyIdea><p>A metric compresses a distribution of errors. Always inspect the distribution, slices, and examples that the scalar hides.</p></KeyIdea>
+
+## Validation protocols
+
+1. **Random stratified split:** appropriate when rows are exchangeable and class balance matters.
+2. **Group split:** keeps all records for one entity in a single fold.
+3. **Temporal split:** trains on the past and evaluates on a later period.
+4. **Rolling/expanding windows:** measures stability across multiple future-like periods.
+5. **Nested cross-validation:** separates hyperparameter selection from unbiased performance estimation when data is limited.
+
+### Leakage checklist
+
+- Was any feature computed using information available only after prediction time?
+- Were scalers, encoders, imputers, vocabulary, or feature selection fit before splitting?
+- Can duplicate or near-duplicate entities cross the boundary?
+- Does a label proxy directly encode the outcome?
+- Did threshold or hyperparameter decisions use the final test set?
+
+## Thresholds, calibration, and cost
+
+Suppose false negatives cost `C_FN`, false positives cost `C_FP`, and a threshold produces counts `FN(t)` and `FP(t)`. A simple operating objective is:
+
+`expected_cost(t) = C_FN·FN(t) + C_FP·FP(t)`
+
+Real systems add review capacity, customer friction, delayed recovery, and legal constraints. Choose the threshold on validation data, freeze it, and report the untouched test result.
+
+Calibration asks whether predictions near 0.7 are positive about 70% of the time. A model can rank well but calibrate poorly. Temperature scaling, isotonic regression, or Platt-style calibration must be fit on data not used to train the base model.
+
+<Pitfalls>
+
+- Reporting accuracy for rare-event detection.
+- Balancing the test set and then presenting precision as if it reflects production prevalence.
+- Resampling before the train/validation split.
+- Performing feature selection on the entire dataset.
+- Optimizing hundreds of experiments against one “untouched” test set until it is no longer untouched.
+- Ignoring confidence intervals when test cohorts are small.
+- Declaring a model better from a tiny aggregate gain that reverses on critical slices.
+
+</Pitfalls>
+
+## Interview case
+
+<InterviewPrompt title="Fraud threshold" difficulty="Medium" timebox="12 min">
+
+A fraud model sees 0.2% positives. False negatives cost ₹8,000 on average and false positives cost ₹35 in review time. Propose an evaluation and threshold-selection plan.
+
+<Hint>Accuracy is not decision-aware. Turn the cost asymmetry into an expected-value calculation and protect the time boundary.</Hint>
+
+<Solution>
+
+Use temporal and entity-aware splits, keeping all events for an account or instrument together. Report PR-AUC, recall at review-capacity constraints, precision, calibration, and expected cost. Choose a threshold on validation data, evaluate once on a later untouched window, and slice by channel, merchant/customer cohort, geography, and amount. Monitor base-rate, feature, calibration, and decision drift after deployment. Include uncertainty and delayed-label handling.
+
+**Rubric:** leakage-safe split; imbalance-aware metrics; threshold tied to cost/capacity; calibration; slice and drift plan.
+
+</Solution>
+
+</InterviewPrompt>
+
+<Flashcards cards={[
+  { front: "Ranking versus calibration?", back: "Ranking orders examples; calibration makes probability values match observed frequencies." },
+  { front: "When is a group split required?", back: "When records from one entity are correlated and must not appear in both train and evaluation sets." },
+  { front: "Why can PR-AUC be more informative than ROC-AUC?", back: "It focuses on positive-class precision/recall and reveals rare-event performance that false-positive rate can visually dilute." },
+  { front: "What makes a test set no longer untouched?", back: "Repeatedly using its result to choose features, models, thresholds, or narratives." }
+]} />
+
+<RevisionSheet>
+
+### Choose in order
+
+1. Decision and error cost.
+2. Future-like split.
+3. Metric family.
+4. Calibration and threshold policy.
+5. Slices, uncertainty, and monitoring.
+
+### Fast warnings
+
+- rare positives → do not lead with accuracy
+- entities repeat → grouped split
+- time matters → temporal validation
+- probabilities drive action → calibration
+- many experiments → protect a final test set
+
+</RevisionSheet>
+
+<Sources>
+
+- [scikit-learn model evaluation guide](https://scikit-learn.org/stable/modules/model_evaluation.html)
+- [scikit-learn probability calibration guide](https://scikit-learn.org/stable/modules/calibration.html)
+- Sculley et al., “Hidden Technical Debt in Machine Learning Systems.”
+
+Reviewed 2026-09-18.
+
+</Sources>

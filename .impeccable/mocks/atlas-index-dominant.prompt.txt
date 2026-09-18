@@ -1,0 +1,14 @@
+Use case: ui-mockup
+Asset type: high-fidelity desktop web application comp, 1536×1024 landscape
+Primary request: Design the first viewport of “Interview Atlas,” a serious offline technical interview study application. This is composition option 3: the indexed curriculum and role crossings are dominant, with a smaller live skill map.
+Surface structure: full-width top command search and study status; a substantial left-and-center tabular atlas index occupying about 68%, organized as ruled rows rather than cards; a right working panel occupying about 32% containing a compact prerequisite map and selected-topic details. No marketing hero.
+Real interface content: horizontal index tabs FOUNDATIONS, AI + DATA, SDE + SYSTEMS, DEVOPS + CLOUD, CYBERSECURITY, FINTECH + QUANT. Ruled rows include Complexity Analysis, Arrays & Strings, Hash Tables, Graphs, Probability, Statistics, Machine Learning, System Design, Containers, IAM, Ledgers, Market Microstructure. Columns show LEVEL, ROLES, STATUS, TIME, and NEXT ACTION using symbols plus labels. “Hash Tables” is selected; the right panel traces Complexity → Arrays → Hash Tables → Graphs and shows “Open field note,” “Practice 8 questions,” “Add to revision.”
+Style/medium: shippable realistic product UI, Technical Field Atlas visual world, not concept art and not a poster
+Composition/framing: straight-on desktop screenshot with complete browser viewport; dense but calm technical index, precise alignment and generous readable row height
+Lighting/mood: neutral daylight reading environment, precise and calm
+Color palette: cool paper white, dark blue-black ink, blueprint cobalt as primary active line, restrained amber for needs-review, teal for confident
+Materials/textures: extremely subtle technical paper grain, fine horizontal rules, index tabs, calibration ticks; mostly flat semantic UI
+Typography: highly legible workhorse sans, restrained technical mono only for codes and metadata
+Constraints: no card grid, no gradients, no glassmorphism, no gamification, no trophies, no points, no streaks, no dark theme, no stock photos, no logos other than text name, no watermark, no decorative dashboard charts
+Focal moment: one selected ruled row expands slightly and connects to the dependency path at right; the user’s stopped position is marked by a small folded atlas flag
+Responsive intent: the index becomes a grouped semantic list on mobile and the map moves below the selected row

@@ -1,0 +1,107 @@
+{
+  "version": "2026.09.18-r1",
+  "edges": [
+    {
+      "id": "foundations/complexity-analysis->foundations/arrays-and-strings",
+      "source": "foundations/complexity-analysis",
+      "target": "foundations/arrays-and-strings",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/arrays-and-strings->foundations/hash-tables",
+      "source": "foundations/arrays-and-strings",
+      "target": "foundations/hash-tables",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/hash-tables->foundations/graphs",
+      "source": "foundations/hash-tables",
+      "target": "foundations/graphs",
+      "kind": "applied-in"
+    },
+    {
+      "id": "foundations/probability->foundations/statistics",
+      "source": "foundations/probability",
+      "target": "foundations/statistics",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/statistics->ai-data/model-evaluation",
+      "source": "foundations/statistics",
+      "target": "ai-data/model-evaluation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linear-algebra->ai-data/neural-network-foundations",
+      "source": "foundations/linear-algebra",
+      "target": "ai-data/neural-network-foundations",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/model-evaluation->ai-data/llm-evaluation",
+      "source": "ai-data/model-evaluation",
+      "target": "ai-data/llm-evaluation",
+      "kind": "applied-in"
+    },
+    {
+      "id": "sde-systems/distributed-systems-foundations->sde-systems/consistent-hashing",
+      "source": "sde-systems/distributed-systems-foundations",
+      "target": "sde-systems/consistent-hashing",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/hash-tables->sde-systems/consistent-hashing",
+      "source": "foundations/hash-tables",
+      "target": "sde-systems/consistent-hashing",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/consistent-hashing->sde-systems/caching",
+      "source": "sde-systems/consistent-hashing",
+      "target": "sde-systems/caching",
+      "kind": "applied-in"
+    },
+    {
+      "id": "devops-cloud/containers->devops-cloud/kubernetes-reconciliation",
+      "source": "devops-cloud/containers",
+      "target": "devops-cloud/kubernetes-reconciliation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/kubernetes-reconciliation->devops-cloud/kubernetes-operations",
+      "source": "devops-cloud/kubernetes-reconciliation",
+      "target": "devops-cloud/kubernetes-operations",
+      "kind": "applied-in"
+    },
+    {
+      "id": "cybersecurity/security-foundations->cybersecurity/threat-modeling",
+      "source": "cybersecurity/security-foundations",
+      "target": "cybersecurity/threat-modeling",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/threat-modeling->cybersecurity/application-security",
+      "source": "cybersecurity/threat-modeling",
+      "target": "cybersecurity/application-security",
+      "kind": "applied-in"
+    },
+    {
+      "id": "fintech-quant/money-representation->fintech-quant/double-entry-ledgers",
+      "source": "fintech-quant/money-representation",
+      "target": "fintech-quant/double-entry-ledgers",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/double-entry-ledgers->fintech-quant/reconciliation",
+      "source": "fintech-quant/double-entry-ledgers",
+      "target": "fintech-quant/reconciliation",
+      "kind": "applied-in"
+    },
+    {
+      "id": "fintech-quant/double-entry-ledgers->fintech-quant/payment-lifecycles",
+      "source": "fintech-quant/double-entry-ledgers",
+      "target": "fintech-quant/payment-lifecycles",
+      "kind": "applied-in"
+    }
+  ]
+}

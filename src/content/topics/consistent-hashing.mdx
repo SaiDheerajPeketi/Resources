@@ -1,0 +1,114 @@
+import { FiveMinuteMap, LearningOutcomes, Analogy, KeyIdea, Pitfalls, InterviewPrompt, Hint, Solution, Flashcards, RevisionSheet, Sources, Flow } from "@/components/lesson-components"
+
+<FiveMinuteMap items={[
+  "Modulo partitioning remaps most keys when the node count changes.",
+  "Consistent hashing places nodes and keys on the same circular hash space.",
+  "A key belongs to the first node clockwise from its position.",
+  "Adding a node moves only the keys in its newly owned intervals.",
+  "Virtual nodes reduce imbalance and express heterogeneous capacity."
+]} />
+
+<LearningOutcomes>
+
+- Derive why modulo hashing is unstable under membership changes.
+- Explain rings, ownership intervals, replication, and virtual nodes.
+- Quantify approximate movement and identify limits such as hot keys.
+- Place consistent hashing correctly inside a cache or storage design.
+
+</LearningOutcomes>
+
+## Mental model
+
+<Analogy title="A circular railway with new stations">
+
+Keys are passengers dropped at points on a circular line. Each passenger walks clockwise to the next station. Adding one new station captures only passengers from the segment immediately behind it; passengers elsewhere keep their destination. Virtual nodes give one physical station several entrances around the line.
+
+</Analogy>
+
+<Flow steps={["hash key", "locate ring point", "walk clockwise", "choose owner", "choose replica successors"]} />
+
+## Why modulo remaps
+
+With `N` nodes, modulo partitioning assigns `owner = hash(key) mod N`. Changing `N` to `N+1` changes the divisor. Except for a small accidental fraction, keys receive a different remainder and move.
+
+Consistent hashing uses a fixed hash space. Nodes occupy positions independent of membership count. A join splits owned intervals; a leave transfers its intervals to successors. With well-balanced equal nodes, adding the `(N+1)`th node moves roughly `1/(N+1)` of keys.
+
+## Virtual nodes and weighted capacity
+
+One random point per physical node produces high variance: a node may own a huge arc. Assigning many virtual nodes per machine interleaves ownership and averages the variance. A machine with twice the capacity can receive roughly twice as many tokens.
+
+<KeyIdea><p>Virtual nodes improve distribution of independent keys. They do not divide one extremely hot key, repair correlated hashes, or replace load-aware routing.</p></KeyIdea>
+
+### Replication
+
+A common policy stores replicas on the next `R-1` distinct physical nodes clockwise. The word “distinct” matters because adjacent virtual nodes may belong to the same machine. Production placement also considers zones or racks so one failure domain does not contain every replica.
+
+### Membership and movement
+
+The ring must have an authoritative or eventually consistent membership view. During change:
+
+1. introduce new token ownership,
+2. stream the affected ranges,
+3. serve reads from old/new owners according to state,
+4. cut over writes safely,
+5. remove obsolete replicas after verification.
+
+This is a data-movement protocol, not just a lookup formula.
+
+<Pitfalls>
+
+- Treating the ring as perfectly balanced without enough tokens.
+- Counting virtual nodes rather than distinct physical failure domains for replication.
+- Moving ranges without controlling concurrent writes.
+- Using different hash functions or token maps across clients.
+- Assuming consistent hashing solves hot keys; popular keys still need replication, admission control, or request coalescing.
+- Ignoring capacity, zone, and network-cost differences.
+
+</Pitfalls>
+
+## Interview case
+
+<InterviewPrompt title="Cache-cluster expansion" difficulty="Medium" timebox="15 min">
+
+A cache cluster grows from 20 to 21 equal nodes. Compare expected key movement under modulo partitioning and consistent hashing with virtual nodes.
+
+<Hint>Modulo changes the divisor; a balanced ring changes only the new node’s intervals.</Hint>
+
+<Solution>
+
+Modulo hashing remaps most keys because `hash(key) mod 20` and `mod 21` usually differ. A balanced consistent-hash ring moves about `1/21`, or 4.8%, of keys to the added node. Virtual nodes reduce variance and can model capacity. State that cache misses may temporarily spike, client membership must converge, and hot keys remain a separate problem.
+
+</Solution>
+
+</InterviewPrompt>
+
+<Flashcards cards={[
+  { front: "Ring ownership rule?", back: "A key belongs to the first eligible node clockwise from the key’s hash position." },
+  { front: "Approximate movement adding one equal node?", back: "About 1/(N+1) of keys under a balanced consistent-hash ring." },
+  { front: "Primary purpose of virtual nodes?", back: "Lower ownership variance and express heterogeneous capacity." },
+  { front: "What does consistent hashing not solve?", back: "Single-key hotspots, membership coordination, safe data transfer, and failure-domain placement." }
+]} />
+
+<RevisionSheet>
+
+### Core contrast
+
+- modulo: simple, balanced, unstable membership
+- ring: stable membership, needs tokens and operational protocol
+- rendezvous hashing: score every node for a key; simple membership but O(N) naive selection
+
+### Interview sentence
+
+“The hash ring limits remapping; virtual nodes improve balance; the real design still needs membership convergence, failure-domain-aware replicas, and a safe range-transfer protocol.”
+
+</RevisionSheet>
+
+<Sources>
+
+- Karger et al., “Consistent Hashing and Random Trees.”
+- DeCandia et al., “Dynamo: Amazon’s Highly Available Key-value Store.”
+- Lakshman and Malik, “Cassandra: A Decentralized Structured Storage System.”
+
+Reviewed 2026-09-18.
+
+</Sources>
