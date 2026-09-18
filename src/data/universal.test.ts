@@ -5,6 +5,12 @@ import { coverageCrosswalks } from "@/data/crosswalks";
 import { companyGuides } from "@/data/companies";
 import { diagnostics, rolePathRecords } from "@/data/learning";
 import { packDefinitions } from "@/data/packs";
+import { foundationLessons } from "@/data/foundation-lessons";
+import { aiLessons } from "@/data/ai-lessons";
+import { sdeLessons } from "@/data/sde-lessons";
+import { devopsLessons } from "@/data/devops-lessons";
+import { securityLessons } from "@/data/security-lessons";
+import { fintechLessons } from "@/data/fintech-lessons";
 
 describe("universal interview corpus", () => {
   it("validates every technology depth contract without overstating editorial depth", () => {
@@ -40,6 +46,29 @@ describe("universal interview corpus", () => {
     expect([...atlas180].every((id) => atlas300.has(id))).toBe(true);
     expect(dsaProblems.slice(0, 180).every((problem) => problem.variantLanguages.length === 4)).toBe(true);
     expect(dsaProblems.slice(180).every((problem) => problem.variantLanguages.join() === "cpp17")).toBe(true);
+    expect(dsaProblems.every((problem) => problem.practiceUrl.startsWith("https://"))).toBe(true);
+    expect(dsaProblems.every((problem) => problem.practiceSource === "leetcode" || problem.practiceSource === "gfg")).toBe(true);
+    expect(dsaProblems.filter((problem) => problem.practiceSource === "leetcode").length).toBeGreaterThanOrEqual(100);
+    expect(dsaProblems.every((problem) => problem.practiceSource !== "leetcode" || problem.practiceDirect)).toBe(true);
+  });
+
+  it("keeps every role-track lesson on the detailed teaching contract", () => {
+    const lessons = { ...foundationLessons, ...aiLessons, ...sdeLessons, ...devopsLessons, ...securityLessons, ...fintechLessons };
+    expect(Object.keys(lessons)).toHaveLength(140);
+    for (const lesson of Object.values(lessons)) {
+      expect(lesson.outcomes.length).toBeGreaterThanOrEqual(3);
+      expect(lesson.conceptMap.length).toBeGreaterThanOrEqual(4);
+      expect(lesson.analogy.body.length).toBeGreaterThanOrEqual(80);
+      expect(lesson.theory.length).toBeGreaterThanOrEqual(3);
+      expect(lesson.theory.every((section) => section.body.length >= 120)).toBe(true);
+      expect(lesson.example.explanation.length).toBeGreaterThanOrEqual(60);
+      expect(lesson.failureModes.length).toBeGreaterThanOrEqual(4);
+      expect(lesson.question.answer.length).toBeGreaterThanOrEqual(120);
+      expect(lesson.question.rubric.length).toBeGreaterThanOrEqual(3);
+      expect(lesson.flashcards.length).toBeGreaterThanOrEqual(3);
+      expect(lesson.revision.length).toBeGreaterThanOrEqual(5);
+      expect(lesson.sources.length).toBeGreaterThanOrEqual(2);
+    }
   });
 
   it("maps every problem without copying external statements", () => {

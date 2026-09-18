@@ -1,4 +1,5 @@
 import { DSAPatternSchema, DSAProblemSchema, DSASheetSchema, type DSAProblem } from "@/lib/schema";
+import { getDsaPracticeTarget } from "@/data/dsa-practice";
 
 const patternSeeds = [
   ["hashing", "Hash maps and sets", "Trade memory for direct access to facts seen so far.", ["membership or frequency", "pair or grouping lookup"]],
@@ -66,6 +67,7 @@ const patternSeeds = [
 export const dsaPatterns = DSAPatternSchema.array().parse(patternSeeds.map(([id, title, mentalModel, recognitionSignals]) => ({
   id, title, mentalModel, recognitionSignals, invariants: [`The stored ${title.toLowerCase()} state exactly summarizes the processed region.`]
 })));
+const patternTitleById = new Map(dsaPatterns.map((pattern) => [pattern.id, pattern.title]));
 
 const problemTitles: Record<string, string[]> = {
   hashing: ["Complement Pair Ledger", "Longest Consecutive Run", "Grouped Word Signatures", "Zero-Sum Span", "Frequency-Ordered Values"],
@@ -135,8 +137,12 @@ const promptFor = (title: string, pattern: string) => `Implement ${title}. Retur
 
 export const dsaProblems: DSAProblem[] = DSAProblemSchema.array().parse(
   Object.entries(problemTitles).flatMap(([patternId, titles]) => titles.map((title, offset) => ({ patternId, title, offset })))
-    .map(({ patternId, title }, index) => ({
-      id: `atlas-${String(index + 1).padStart(3, "0")}`,
+    .map(({ patternId, title }, index) => {
+      const id = `atlas-${String(index + 1).padStart(3, "0")}`;
+      const patternTitle = patternTitleById.get(patternId) ?? patternId.replaceAll("-", " ");
+      const practice = getDsaPracticeTarget(id, title, patternTitle);
+      return {
+      id,
       title,
       prompt: promptFor(title, patternId),
       patternId,
@@ -152,10 +158,14 @@ export const dsaProblems: DSAProblem[] = DSAProblemSchema.array().parse(
       proof: "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
       edgeCases: ["Empty or singleton input", "Duplicate values and values at numeric boundaries"],
       variantLanguages: index < 180 ? ["cpp17", "java", "python", "typescript"] : ["cpp17"],
+      practiceSource: practice.source,
+      practiceLabel: practice.label,
+      practiceUrl: practice.url,
+      practiceDirect: practice.direct,
       sourceArtifact: `/generated/solutions/${String(index + 1).padStart(3, "0")}`,
       publicationStatus: "published",
       lastReviewed: "2026-09-18"
-    }))
+    }})
 );
 
 export const dsaSheets = DSASheetSchema.array().parse([

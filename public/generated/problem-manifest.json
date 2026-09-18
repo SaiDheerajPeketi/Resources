@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r15",
+  "version": "2026.09.18-r16",
   "patterns": [
     {
       "id": "hashing",
@@ -772,6 +772,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/two-sum/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/001",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -825,6 +829,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/longest-consecutive-sequence/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/002",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -878,6 +886,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/group-anagrams/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/003",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -931,6 +943,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Zero-Sum%20Span%20Hash%20maps%20and%20sets",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/004",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -984,6 +1000,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/sort-characters-by-frequency/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/005",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1037,6 +1057,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/valid-palindrome/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/006",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1090,6 +1114,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/007",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1143,6 +1171,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/container-with-most-water/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/008",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1196,6 +1228,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/3sum/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/009",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1249,6 +1285,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/010",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1302,6 +1342,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/minimum-window-substring/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/011",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1355,6 +1399,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/012",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1408,6 +1456,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/maximum-average-subarray-i/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/013",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1461,6 +1513,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/014",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1514,6 +1570,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/permutation-in-string/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/015",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1567,6 +1627,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/range-sum-query-immutable/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/016",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1620,6 +1684,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/find-pivot-index/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/017",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1673,6 +1741,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/subarray-sum-equals-k/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/018",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1726,6 +1798,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/product-of-array-except-self/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/019",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1779,6 +1855,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Batched%20Range%20Additions%20Prefix%20sums",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/020",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1832,6 +1912,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/valid-parentheses/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/021",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1885,6 +1969,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/min-stack/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/022",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1938,6 +2026,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/daily-temperatures/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/023",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -1991,6 +2083,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/024",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2044,6 +2140,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/decode-string/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/025",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2097,6 +2197,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/search-insert-position/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/026",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2150,6 +2254,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/027",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2203,6 +2311,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/028",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2256,6 +2368,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/koko-eating-bananas/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/029",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2309,6 +2425,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/search-a-2d-matrix/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/030",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2362,6 +2482,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/merge-intervals/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/031",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2415,6 +2539,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/insert-interval/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/032",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2468,6 +2596,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimum%20Meeting%20Rooms%20Intervals",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/033",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2521,6 +2653,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/non-overlapping-intervals/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/034",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2574,6 +2710,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/interval-list-intersections/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/035",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2627,6 +2767,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/reverse-linked-list/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/036",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2680,6 +2824,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/linked-list-cycle/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/037",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2733,6 +2881,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/merge-two-sorted-lists/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/038",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2786,6 +2938,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/039",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2839,6 +2995,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/040",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2892,6 +3052,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/041",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2945,6 +3109,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/diameter-of-binary-tree/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/042",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -2998,6 +3166,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/balanced-binary-tree/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/043",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3051,6 +3223,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/validate-binary-search-tree/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/044",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3104,6 +3280,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/045",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3157,6 +3337,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/046",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3210,6 +3394,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/047",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3263,6 +3451,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/binary-tree-right-side-view/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/048",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3316,6 +3508,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/populating-next-right-pointers-in-each-node/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/049",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3369,6 +3565,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/minimum-depth-of-binary-tree/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/050",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3422,6 +3622,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/051",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3475,6 +3679,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/top-k-frequent-elements/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/052",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3528,6 +3736,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/merge-k-sorted-lists/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/053",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3581,6 +3793,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/find-median-from-data-stream/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/054",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3634,6 +3850,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/task-scheduler/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/055",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3687,6 +3907,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/number-of-islands/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/056",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3740,6 +3964,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/057",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3793,6 +4021,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/word-ladder/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/058",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3846,6 +4078,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/course-schedule/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/059",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3899,6 +4135,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/rotting-oranges/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/060",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -3952,6 +4192,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/clone-graph/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/061",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4005,6 +4249,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Detect%20a%20Directed%20Cycle%20Graph%20depth-first%20search",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/062",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4058,6 +4306,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Count%20Connected%20Components%20Graph%20depth-first%20search",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/063",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4111,6 +4363,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/course-schedule-ii/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/064",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4164,6 +4420,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/critical-connections-in-a-network/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/065",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4217,6 +4477,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/subsets/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/066",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4270,6 +4534,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/permutations/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/067",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4323,6 +4591,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/combination-sum/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/068",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4376,6 +4648,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/n-queens/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/069",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4429,6 +4705,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/word-search/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/070",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4482,6 +4762,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/climbing-stairs/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/071",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4535,6 +4819,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/house-robber/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/072",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4588,6 +4876,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/coin-change/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/073",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4641,6 +4933,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/longest-increasing-subsequence/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/074",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4694,6 +4990,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/edit-distance/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/075",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4746,6 +5046,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/rotate-image/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/076",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4798,6 +5102,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/spiral-matrix/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/077",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4850,6 +5158,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/set-matrix-zeroes/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/078",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4902,6 +5214,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Diagonal%20Traverse%20Matrix%20traversal",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/079",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -4954,6 +5270,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/search-a-2d-matrix-ii/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/080",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5006,6 +5326,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/single-number/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/081",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5058,6 +5382,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/number-of-1-bits/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/082",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5110,6 +5438,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Subset%20Masks%20Bit%20manipulation",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/083",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5162,6 +5494,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/bitwise-and-of-numbers-range/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/084",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5214,6 +5550,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/085",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5266,6 +5606,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/086",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5318,6 +5662,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/087",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5370,6 +5718,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/longest-common-prefix/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/088",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5422,6 +5774,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/replace-words/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/089",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5474,6 +5830,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Binary%20XOR%20Trie%20Tries",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/090",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5526,6 +5886,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/redundant-connection/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/091",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5578,6 +5942,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Dynamic%20Island%20Count%20Disjoint-set%20union",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/092",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5630,6 +5998,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/accounts-merge/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/093",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5682,6 +6054,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/satisfiability-of-equality-equations/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/094",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5734,6 +6110,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Network%20Connection%20Budget%20Disjoint-set%20union",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/095",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5786,6 +6166,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Weighted%20Route%20Cost%20Weighted%20shortest%20paths",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/096",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5838,6 +6222,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/network-delay-time/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/097",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5890,6 +6278,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/098",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5942,6 +6334,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/path-with-minimum-effort/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/099",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -5994,6 +6390,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Negative-Edge%20Distances%20Weighted%20shortest%20paths",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/100",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6046,6 +6446,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/101",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6098,6 +6502,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimum%20Cable%20Layout%20Minimum%20spanning%20tree",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/102",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6150,6 +6558,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Water%20Distribution%20Plan%20Minimum%20spanning%20tree",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/103",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6202,6 +6614,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Cluster%20by%20Spacing%20Minimum%20spanning%20tree",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/104",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6254,6 +6670,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Second-Best%20Spanning%20Tree%20Minimum%20spanning%20tree",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/105",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6306,6 +6726,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/course-schedule-ii/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/106",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6358,6 +6782,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/alien-dictionary/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/107",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6410,6 +6838,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Build%20Pipeline%20Order%20Topological%20ordering",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/108",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6462,6 +6894,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Parallel%20Semesters%20Topological%20ordering",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/109",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6514,6 +6950,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/find-eventual-safe-states/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/110",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6566,6 +7006,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/range-sum-query-mutable/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/111",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6618,6 +7062,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Range%20Minimum%20Segment%20trees",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/112",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6670,6 +7118,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Lazy%20Range%20Addition%20Segment%20trees",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/113",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6722,6 +7174,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Maximum%20Subarray%20Query%20Segment%20trees",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/114",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6774,6 +7230,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Interval%20Coverage%20Tree%20Segment%20trees",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/115",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6826,6 +7286,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/count-of-smaller-numbers-after-self/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/116",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6878,6 +7342,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/reverse-pairs/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/117",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6930,6 +7398,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Inversion%20Count%20Fenwick%20trees",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/118",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -6982,6 +7454,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Range%20Add%20Point%20Query%20Fenwick%20trees",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/119",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7034,6 +7510,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Two-Dimensional%20Prefix%20Updates%20Fenwick%20trees",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/120",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7086,6 +7566,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/121",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7138,6 +7622,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Repeated%20Prefix%20Border%20String%20matching",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/122",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7190,6 +7678,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Rolling-Hash%20Search%20String%20matching",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/123",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7242,6 +7734,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Longest%20Palindromic%20Prefix%20String%20matching",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/124",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7294,6 +7790,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/multi-search-lcci/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/125",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7346,6 +7846,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/sliding-window-maximum/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/126",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7398,6 +7902,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/sliding-window-median/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/127",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7450,6 +7958,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/128",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7502,6 +8014,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/distinct-numbers-in-each-subarray/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/129",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7554,6 +8070,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimum%20Window%20with%20Two%20Budgets%20Advanced%20windows",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/130",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7606,6 +8126,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/non-overlapping-intervals/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/131",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7658,6 +8182,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/minimum-number-of-refueling-stops/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/132",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7710,6 +8238,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/gas-station/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/133",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7762,6 +8294,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/candy/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/134",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7814,6 +8350,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/patching-array/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/135",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7866,6 +8406,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/unique-paths/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/136",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7918,6 +8462,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/minimum-path-sum/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/137",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -7970,6 +8518,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/unique-paths-ii/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/138",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8022,6 +8574,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/minimum-falling-path-sum/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/139",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8074,6 +8630,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/cherry-pickup-ii/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/140",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8126,6 +8686,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/partition-equal-subset-sum/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/141",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8178,6 +8742,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/partition-equal-subset-sum/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/142",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8230,6 +8798,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Zero-One%20Knapsack%20Knapsack%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/143",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8282,6 +8854,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Unbounded%20Knapsack%20Knapsack%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/144",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8334,6 +8910,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/target-sum/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/145",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8386,6 +8966,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/146",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8438,6 +9022,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/147",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8490,6 +9078,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/148",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8542,6 +9134,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/149",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8594,6 +9190,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/150",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8646,6 +9246,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/sliding-window-maximum/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/151",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8698,6 +9302,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/152",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8750,6 +9358,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/constrained-subsequence-sum/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/153",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8802,6 +9414,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "leetcode",
+      "practiceLabel": "Solve on LeetCode",
+      "practiceUrl": "https://leetcode.com/problems/jump-game-vi/",
+      "practiceDirect": true,
       "sourceArtifact": "/generated/solutions/154",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8854,6 +9470,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Bounded%20Difference%20Stream%20Monotonic%20queues",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/155",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8906,6 +9526,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Peak%20Concurrent%20Meetings%20Sweep%20line",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/156",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -8958,6 +9582,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Skyline%20Outline%20Sweep%20line",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/157",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9010,6 +9638,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Rectangle%20Union%20Area%20Sweep%20line",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/158",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9062,6 +9694,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Closest%20Active%20Segment%20Sweep%20line",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/159",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9114,6 +9750,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Calendar%20Conflict%20Ledger%20Sweep%20line",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/160",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9166,6 +9806,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Greatest%20Common%20Divisor%20Number%20theory",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/161",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9218,6 +9862,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Prime%20Sieve%20Number%20theory",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/162",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9270,6 +9918,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Fast%20Modular%20Power%20Number%20theory",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/163",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9322,6 +9974,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Modular%20Inverse%20Number%20theory",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/164",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9374,6 +10030,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Count%20Prime%20Factors%20Number%20theory",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/165",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9426,6 +10086,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Binomial%20Coefficient%20Combinatorics",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/166",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9478,6 +10142,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Catalan%20Structures%20Combinatorics",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/167",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9530,6 +10198,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Count%20Grid%20Lattice%20Paths%20Combinatorics",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/168",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9582,6 +10254,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Derangement%20Count%20Combinatorics",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/169",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9634,6 +10310,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Inclusion-Exclusion%20Count%20Combinatorics",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/170",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9686,6 +10366,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Merge%20Sort%20Divide%20and%20conquer",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/171",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9738,6 +10422,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Quickselect%20Divide%20and%20conquer",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/172",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9790,6 +10478,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Count%20Reverse%20Pairs%20Divide%20and%20conquer",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/173",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9842,6 +10534,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Closest%20Point%20Pair%20Divide%20and%20conquer",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/174",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9894,6 +10590,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Multiply%20Large%20Integers%20Divide%20and%20conquer",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/175",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9946,6 +10646,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Reservoir%20Sample%20Randomized%20algorithms",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/176",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -9998,6 +10702,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Randomized%20Quickselect%20Randomized%20algorithms",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/177",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10050,6 +10758,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Shuffle%20Uniformly%20Randomized%20algorithms",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/178",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10102,6 +10814,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Weighted%20Random%20Choice%20Randomized%20algorithms",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/179",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10154,6 +10870,10 @@
         "python",
         "typescript"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Random%20Set%20Operations%20Randomized%20algorithms",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/180",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10202,6 +10922,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Kth%20Ancestor%20Queries%20Binary%20lifting",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/181",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10250,6 +10974,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Jump%20Along%20a%20Functional%20Graph%20Binary%20lifting",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/182",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10298,6 +11026,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Distance%20After%20K%20Jumps%20Binary%20lifting",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/183",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10346,6 +11078,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Cycle%20Entry%20by%20Doubling%20Binary%20lifting",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/184",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10394,6 +11130,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Aggregate%20Values%20Along%20Jumps%20Binary%20lifting",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/185",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10442,6 +11182,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Lowest%20Common%20Ancestor%20Queries%20Lowest%20common%20ancestors",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/186",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10490,6 +11234,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Distance%20Between%20Tree%20Nodes%20Lowest%20common%20ancestors",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/187",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10538,6 +11286,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Three-Node%20Meeting%20Point%20Lowest%20common%20ancestors",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/188",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10586,6 +11338,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Ancestor%20Range%20Minimum%20Lowest%20common%20ancestors",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/189",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10634,6 +11390,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Offline%20Ancestor%20Queries%20Lowest%20common%20ancestors",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/190",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10682,6 +11442,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Condense%20a%20Directed%20Graph%20Strongly%20connected%20components",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/191",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10730,6 +11494,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimum%20Source%20Components%20Strongly%20connected%20components",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/192",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10778,6 +11546,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Reachability%20After%20Condensation%20Strongly%20connected%20components",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/193",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10826,6 +11598,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Two-SAT%20Components%20Strongly%20connected%20components",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/194",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10874,6 +11650,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Strongly%20Connected%20Pairs%20Strongly%20connected%20components",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/195",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10922,6 +11702,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Maximum%20Network%20Throughput%20Maximum%20flow",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/196",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -10970,6 +11754,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimum%20Capacity%20Cut%20Maximum%20flow",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/197",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11018,6 +11806,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Vertex-Capacitated%20Flow%20Maximum%20flow",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/198",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11066,6 +11858,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Edge-Disjoint%20Routes%20Maximum%20flow",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/199",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11114,6 +11910,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Circulation%20with%20Demands%20Maximum%20flow",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/200",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11162,6 +11962,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Maximum%20Worker%20Assignment%20Bipartite%20matching",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/201",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11210,6 +12014,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimum%20Path%20Cover%20in%20a%20DAG%20Bipartite%20matching",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/202",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11258,6 +12066,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Domino%20Grid%20Matching%20Bipartite%20matching",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/203",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11306,6 +12118,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Stable%20Capacity%20Assignment%20Bipartite%20matching",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/204",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11354,6 +12170,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimum%20Vertex%20Cover%20from%20Matching%20Bipartite%20matching",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/205",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11402,6 +12222,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Heuristic%20Grid%20Route%20A*%20search",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/206",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11450,6 +12274,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Weighted%20Puzzle%20Search%20A*%20search",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/207",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11498,6 +12326,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Goal-Directed%20Road%20Path%20A*%20search",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/208",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11546,6 +12378,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Multi-Goal%20A*%20A*%20search",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/209",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11594,6 +12430,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Bidirectional%20Heuristic%20Search%20A*%20search",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/210",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11642,6 +12482,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Floyd%E2%80%93Warshall%20Distances%20All-pairs%20shortest%20paths",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/211",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11690,6 +12534,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Transitive%20Closure%20All-pairs%20shortest%20paths",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/212",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11738,6 +12586,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimum%20Directed%20Cycle%20All-pairs%20shortest%20paths",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/213",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11786,6 +12638,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Arbitrage%20Cycle%20Detection%20All-pairs%20shortest%20paths",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/214",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11834,6 +12690,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Dynamic%20Intermediate%20Vertices%20All-pairs%20shortest%20paths",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/215",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11882,6 +12742,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimum%20Direction%20Changes%200%E2%80%931%20BFS",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/216",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11930,6 +12794,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Free%20and%20Paid%20Roads%200%E2%80%931%20BFS",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/217",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -11978,6 +12846,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Binary%20Grid%20Cost%200%E2%80%931%20BFS",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/218",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12026,6 +12898,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimum%20Edge%20Reversals%200%E2%80%931%20BFS",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/219",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12074,6 +12950,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Alternating%20Zero-One%20Layers%200%E2%80%931%20BFS",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/220",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12122,6 +13002,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Flatten%20Subtree%20Values%20Euler%20tours",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/221",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12170,6 +13054,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Subtree%20Sum%20Updates%20Euler%20tours",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/222",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12218,6 +13106,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Ancestor%20by%20Entry%20Times%20Euler%20tours",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/223",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12266,6 +13158,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Euler%20Tour%20Path%20Difference%20Euler%20tours",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/224",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12314,6 +13210,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Offline%20Tree%20Queries%20Euler%20tours",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/225",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12362,6 +13262,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Path%20Sum%20Updates%20Heavy-light%20decomposition",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/226",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12410,6 +13314,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Path%20Maximum%20Queries%20Heavy-light%20decomposition",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/227",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12458,6 +13366,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=First%20Marked%20Ancestor%20Heavy-light%20decomposition",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/228",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12506,6 +13418,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Dynamic%20Tree%20Colors%20Heavy-light%20decomposition",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/229",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12554,6 +13470,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Edge%20Values%20on%20Tree%20Paths%20Heavy-light%20decomposition",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/230",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12602,6 +13522,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Versioned%20Array%20Updates%20Persistent%20data%20structures",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/231",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12650,6 +13574,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Kth%20Value%20in%20a%20Subarray%20Persistent%20data%20structures",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/232",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12698,6 +13626,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Persistent%20Frequency%20Tree%20Persistent%20data%20structures",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/233",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12746,6 +13678,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Time-Travel%20Connectivity%20Persistent%20data%20structures",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/234",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12794,6 +13730,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Versioned%20Text%20Edits%20Persistent%20data%20structures",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/235",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12842,6 +13782,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Static%20Range%20Minimum%20Sparse%20tables",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/236",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12890,6 +13834,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Range%20GCD%20Queries%20Sparse%20tables",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/237",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12938,6 +13886,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Idempotent%20Range%20Maximum%20Sparse%20tables",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/238",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -12986,6 +13938,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Lowest%20Common%20Ancestor%20RMQ%20Sparse%20tables",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/239",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13034,6 +13990,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Disjoint%20Sparse%20Aggregates%20Sparse%20tables",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/240",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13082,6 +14042,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Build%20a%20Suffix%20Array%20Suffix%20arrays",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/241",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13130,6 +14094,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Longest%20Repeated%20Substring%20Suffix%20arrays",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/242",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13178,6 +14146,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Count%20Distinct%20Substrings%20Suffix%20arrays",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/243",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13226,6 +14198,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Pattern%20Range%20in%20Suffix%20Order%20Suffix%20arrays",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/244",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13274,6 +14250,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Longest%20Common%20Substring%20by%20Suffixes%20Suffix%20arrays",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/245",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13322,6 +14302,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Count%20Distinct%20Substrings%20Online%20Suffix%20automata",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/246",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13370,6 +14354,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Longest%20Common%20Substring%20Automaton%20Suffix%20automata",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/247",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13418,6 +14406,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Substring%20Occurrence%20Counts%20Suffix%20automata",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/248",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13466,6 +14458,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Kth%20Lexicographic%20Substring%20Suffix%20automata",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/249",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13514,6 +14510,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimal%20Cyclic%20Shift%20States%20Suffix%20automata",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/250",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13562,6 +14562,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Multi-Pattern%20Search%20Aho%E2%80%93Corasick",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/251",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13610,6 +14614,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Forbidden%20Pattern%20Automaton%20Aho%E2%80%93Corasick",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/252",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13658,6 +14666,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Dictionary%20Occurrence%20Counts%20Aho%E2%80%93Corasick",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/253",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13706,6 +14718,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Streaming%20Alert%20Matcher%20Aho%E2%80%93Corasick",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/254",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13754,6 +14770,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Shortest%20String%20Covering%20Patterns%20Aho%E2%80%93Corasick",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/255",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13802,6 +14822,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Double-Hash%20Substring%20Equality%20Advanced%20rolling%20hashes",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/256",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13850,6 +14874,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Palindrome%20Query%20Hash%20Advanced%20rolling%20hashes",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/257",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13898,6 +14926,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Longest%20Duplicate%20Segment%20Advanced%20rolling%20hashes",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/258",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13946,6 +14978,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Cyclic%20Rotation%20Match%20Advanced%20rolling%20hashes",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/259",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -13994,6 +15030,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Two-Dimensional%20Rolling%20Hash%20Advanced%20rolling%20hashes",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/260",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14042,6 +15082,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Count%20Numbers%20Without%20Repeated%20Digits%20Digit%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/261",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14090,6 +15134,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Digit%20Sum%20in%20a%20Range%20Digit%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/262",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14138,6 +15186,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Numbers%20Avoiding%20a%20Pattern%20Digit%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/263",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14186,6 +15238,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Count%20Divisible%20Digit%20Sequences%20Digit%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/264",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14234,6 +15290,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Kth%20Number%20with%20a%20Digit%20Property%20Digit%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/265",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14282,6 +15342,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Maximum%20Independent%20Tree%20Set%20Tree%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/266",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14330,6 +15394,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Tree%20Diameter%20States%20Tree%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/267",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14378,6 +15446,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimum%20Tree%20Cameras%20Tree%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/268",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14426,6 +15498,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Rerooted%20Distance%20Sums%20Tree%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/269",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14474,6 +15550,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Tree%20Matching%20Tree%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/270",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14522,6 +15602,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Travelling%20Salesperson%20Bitmask%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/271",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14570,6 +15654,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimum%20Assignment%20Cost%20Bitmask%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/272",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14618,6 +15706,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Hamiltonian%20Path%20Count%20Bitmask%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/273",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14666,6 +15758,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Pairing%20by%20Compatibility%20Bitmask%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/274",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14714,6 +15810,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Subset%20Partition%20Optimization%20Bitmask%20dynamic%20programming",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/275",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14762,6 +15862,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Subset%20Sum%20Near%20Target%20Meet%20in%20the%20middle",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/276",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14810,6 +15914,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Count%20Bounded%20Subset%20Sums%20Meet%20in%20the%20middle",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/277",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14858,6 +15966,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Four-List%20Zero%20Sum%20Meet%20in%20the%20middle",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/278",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14906,6 +16018,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Minimum%20Partition%20Difference%20Meet%20in%20the%20middle",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/279",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -14954,6 +16070,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Maximum%20Compatible%20Split%20Meet%20in%20the%20middle",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/280",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15002,6 +16122,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Outer%20Fence%20Points%20Convex%20hull",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/281",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15050,6 +16174,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Hull%20Perimeter%20Convex%20hull",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/282",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15098,6 +16226,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Maximum%20Hull%20Diameter%20Convex%20hull",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/283",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15146,6 +16278,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Point%20Inside%20Convex%20Polygon%20Convex%20hull",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/284",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15194,6 +16330,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Dynamic%20Upper%20Hull%20Convex%20hull",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/285",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15242,6 +16382,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Segment%20Intersection%20Events%20Geometric%20sweep",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/286",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15290,6 +16434,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Rectangle%20Union%20Perimeter%20Geometric%20sweep",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/287",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15338,6 +16486,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Closest%20Pair%20Sweep%20Geometric%20sweep",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/288",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15386,6 +16538,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Visible%20Interval%20Coverage%20Geometric%20sweep",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/289",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15434,6 +16590,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Orthogonal%20Line%20Intersections%20Geometric%20sweep",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/290",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15482,6 +16642,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Robust%20Orientation%20Computational%20geometry",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/291",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15530,6 +16694,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Segment%20Intersection%20Computational%20geometry",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/292",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15578,6 +16746,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Point-to-Segment%20Distance%20Computational%20geometry",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/293",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15626,6 +16798,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Polygon%20Area%20and%20Centroid%20Computational%20geometry",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/294",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15674,6 +16850,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Circle%20Intersection%20Count%20Computational%20geometry",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/295",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15722,6 +16902,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Chinese%20Remainder%20System%20Advanced%20number%20theory",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/296",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15770,6 +16954,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Euler%20Totient%20Queries%20Advanced%20number%20theory",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/297",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15818,6 +17006,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Miller%E2%80%93Rabin%20Primality%20Advanced%20number%20theory",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/298",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15866,6 +17058,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Pollard%20Rho%20Factorization%20Advanced%20number%20theory",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/299",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"
@@ -15914,6 +17110,10 @@
       "variantLanguages": [
         "cpp17"
       ],
+      "practiceSource": "gfg",
+      "practiceLabel": "Find implementation on GFG",
+      "practiceUrl": "https://www.geeksforgeeks.org/search/?q=Number-Theoretic%20Transform%20Advanced%20number%20theory",
+      "practiceDirect": false,
       "sourceArtifact": "/generated/solutions/300",
       "publicationStatus": "published",
       "lastReviewed": "2026-09-18"

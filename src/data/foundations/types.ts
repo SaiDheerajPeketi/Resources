@@ -9,7 +9,7 @@ export interface FoundationLessonData {
   outcomes: string[];
   conceptMap: string[];
   keyIdea: string;
-  analogy: { title: string; body: string };
+  analogy: { title: string; body: string; limit?: string };
   theory: Array<{ heading: string; body: string }>;
   example: { title: string; language: string; code: string; explanation: string };
   failureModes: string[];

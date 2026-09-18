@@ -36,6 +36,9 @@ const problemIds = new Set(dsaProblems.map((item) => item.id));
 for (const problem of dsaProblems) {
   if (!patternIds.has(problem.patternId)) errors.push(`Problem ${problem.id} references unknown pattern ${problem.patternId}.`);
   if (problem.variantLanguages.length !== new Set(problem.variantLanguages).size) errors.push(`Problem ${problem.id} repeats a code variant.`);
+  if (!problem.practiceUrl.startsWith("https://")) errors.push(`Problem ${problem.id} has no secure external practice destination.`);
+  if (problem.practiceSource === "leetcode" && (!problem.practiceDirect || !problem.practiceUrl.startsWith("https://leetcode.com/problems/"))) errors.push(`Problem ${problem.id} has an invalid direct LeetCode mapping.`);
+  if (problem.practiceSource === "gfg" && !problem.practiceUrl.startsWith("https://www.geeksforgeeks.org/")) errors.push(`Problem ${problem.id} has an invalid GFG fallback.`);
 }
 for (const sheet of dsaSheets) for (const id of sheet.problemIds) if (!problemIds.has(id)) errors.push(`Sheet ${sheet.id} references unknown problem ${id}.`);
 for (const crosswalk of coverageCrosswalks) if (!problemIds.has(crosswalk.atlasProblemId)) errors.push(`Crosswalk ${crosswalk.id} references unknown problem ${crosswalk.atlasProblemId}.`);
@@ -130,6 +133,15 @@ for (const [topicId, lesson] of Object.entries(fintechLessons)) {
   if (lesson.conceptMap.length < 4 || lesson.outcomes.length < 3 || lesson.theory.length < 3) errors.push(`Fintech lesson ${topicId} has an incomplete theory contract.`);
   if (lesson.failureModes.length < 4 || lesson.flashcards.length < 3 || lesson.revision.length < 5) errors.push(`Fintech lesson ${topicId} has an incomplete revision contract.`);
   if (lesson.sources.length < 2 || lesson.sources.some((source) => !source.url.startsWith("https://"))) errors.push(`Fintech lesson ${topicId} has invalid source metadata.`);
+}
+
+const detailedLessons = { ...foundationLessons, ...aiLessons, ...sdeLessons, ...devopsLessons, ...securityLessons, ...fintechLessons };
+if (Object.keys(detailedLessons).length !== 140) errors.push(`Detailed lesson registry contains ${Object.keys(detailedLessons).length} entries instead of 140.`);
+for (const [topicId, lesson] of Object.entries(detailedLessons)) {
+  if (lesson.analogy.body.length < 80) errors.push(`Lesson ${topicId} has a shallow analogy.`);
+  if (lesson.theory.some((section) => section.body.length < 120)) errors.push(`Lesson ${topicId} has a shallow theory section.`);
+  if (lesson.example.explanation.length < 60) errors.push(`Lesson ${topicId} has an unexplained worked example.`);
+  if (lesson.question.answer.length < 120 || lesson.question.rubric.length < 3) errors.push(`Lesson ${topicId} has an incomplete interview answer.`);
 }
 
 const staleBefore = new Date("2025-09-18");

@@ -143,6 +143,10 @@ export const DSAProblemSchema = z.object({
   proof: z.string().min(1),
   edgeCases: z.array(z.string().min(1)).min(2),
   variantLanguages: z.array(z.enum(["cpp17", "java", "python", "typescript"])).min(1),
+  practiceSource: z.enum(["leetcode", "gfg"]),
+  practiceLabel: z.string().min(1),
+  practiceUrl: z.string().url(),
+  practiceDirect: z.boolean(),
   sourceArtifact: z.string().min(1),
   publicationStatus: PublicationStatusSchema,
   lastReviewed: z.string().date()

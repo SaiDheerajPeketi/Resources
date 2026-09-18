@@ -197,6 +197,7 @@ Workbench stack plates use 5px corners and small stepped offsets so depth commun
 ### Inputs / Fields
 
 - **Style:** white field, strong cool rule, 6–8px corners, dark ink.
+- **Selects:** use the same raised-paper field, blueprint chevron, compact label, and visible hover/focus/disabled states; browser-native select chrome must not introduce an unrelated visual system.
 - **Focus:** the global focus-visible outline remains unobscured.
 - **Error / Disabled:** error uses labelled Danger Red; disabled actions remain legible and explicitly unavailable.
 
@@ -231,7 +232,7 @@ Full-depth manuals use a visible basic-to-expert learning ladder, numbered theor
 
 ### DSA Ledger
 
-Sheets and problem inventories use dense ruled rows with stable problem numbers, pattern, difficulty, estimated time, solution-language availability, and a non-color progress label. Filters sit above the ledger and do not detach results from their sheet context.
+Sheets and problem inventories use dense ruled rows with stable problem numbers, pattern, difficulty, estimated time, solution-language availability, a non-color progress label, and an explicit external practice destination. The Atlas title remains the internal explanation link; a separate restrained control opens the verified LeetCode match or labelled GFG fallback. Filters sit above the ledger and do not detach results from their sheet context.
 
 ## Do's and Don'ts
 

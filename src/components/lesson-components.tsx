@@ -9,8 +9,8 @@ export function LearningOutcomes({ children }: { children: ReactNode }) {
   return <section className="outcome-block"><div className="lesson-section-icon"><Compass size={19} /></div><div><h2>Learning outcomes</h2>{children}</div></section>;
 }
 
-export function Analogy({ title, children }: { title: string; children: ReactNode }) {
-  return <aside className="analogy"><Lightbulb size={20} aria-hidden="true" /><div><h3>{title}</h3>{children}</div></aside>;
+export function Analogy({ title, children, limit }: { title: string; children: ReactNode; limit?: string }) {
+  return <aside className="analogy"><Lightbulb size={20} aria-hidden="true" /><div><h3>{title}</h3>{children}<p className="analogy-limit"><strong>Where the analogy stops matching:</strong> {limit ?? "Use the comparison to build intuition, not to infer guarantees. The exact behavior comes from the mechanisms, invariants, constraints, and failure modes that follow."}</p></div></aside>;
 }
 
 export function KeyIdea({ children }: { children: ReactNode }) {

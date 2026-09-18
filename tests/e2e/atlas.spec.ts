@@ -35,6 +35,9 @@ test("AI and data pack exposes role maps and a complete specialist lesson", asyn
   await expect(page.getByRole("link", { name: "Retrieval-Augmented Generation" })).toBeVisible();
   await page.goto("/topics/ai-data/retrieval-augmented-generation/");
   await expect(page.getByRole("heading", { name: "Retrieval-Augmented Generation", level: 1 })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Basic → advanced study path" })).toBeVisible();
+  await expect(page.getByText("Where the analogy stops matching:")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Theory, mechanisms, and trade-offs" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Grounded generation" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Interview practice" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
@@ -157,9 +160,12 @@ test("Stack Workbench opens a complete technology manual", async ({ page }) => {
 test("Atlas 300 filters and loads a language-specific problem artifact", async ({ page }) => {
   await page.goto("/sheets/atlas-300/");
   await expect(page.getByText("300 problems")).toBeVisible();
+  const firstRow = page.getByRole("row").filter({ hasText: "Complement Pair Ledger" });
+  await expect(firstRow.getByRole("link", { name: /Solve on LeetCode/ })).toHaveAttribute("href", "https://leetcode.com/problems/two-sum/");
   await page.getByLabel("Difficulty").selectOption("hard");
-  await page.getByRole("link", { name: "Edit Distance" }).click();
+  await page.getByRole("link", { name: "Edit Distance", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Edit Distance", level: 1 })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Solve on LeetCode/ })).toHaveAttribute("href", "https://leetcode.com/problems/edit-distance/");
   await page.getByRole("button", { name: "Load C++17 artifact" }).click();
   await expect(page.locator("pre")).toContainText("#include");
 });
