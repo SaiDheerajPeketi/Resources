@@ -1,5 +1,16 @@
 import { expect, test } from "@playwright/test";
 
+test("original role tracks remain directly accessible from the global navigation", async ({ page }) => {
+  await page.goto("/library/");
+  await page.getByRole("link", { name: "Role tracks" }).click();
+  await expect(page).toHaveURL(/\/atlas\/$/);
+  await expect(page.getByRole("button", { name: /AI \+ Data/i })).toHaveCount(1);
+  await expect(page.getByRole("button", { name: /SDE \+ Systems/i })).toHaveCount(1);
+  await expect(page.getByRole("button", { name: /DevOps \+ Cloud/i })).toHaveCount(1);
+  await expect(page.getByRole("button", { name: /Cybersecurity/i })).toHaveCount(1);
+  await expect(page.getByRole("button", { name: /Fintech \+ Quant/i })).toHaveCount(1);
+});
+
 test("atlas opens a published field note", async ({ page }) => {
   await page.goto("/atlas/");
   await expect(page.getByRole("heading", { name: "Foundations" })).toBeVisible();

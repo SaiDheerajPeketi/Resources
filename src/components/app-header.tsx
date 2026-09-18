@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { BookOpen, CheckCircle2, Library, Search, Settings2, WifiOff } from "lucide-react";
+import { BookOpen, CheckCircle2, Library, Map as MapIcon, Search, Settings2, WifiOff } from "lucide-react";
 import { BASE_PATH, withBasePath } from "@/lib/base-path";
 
 type SearchResult = { url: string; title: string; excerpt: string; meta: Record<string, string> };
@@ -79,6 +79,7 @@ export function AppHeader() {
           {online ? <CheckCircle2 size={16} /> : <WifiOff size={16} />}
           <span>{online ? "Ready" : "Offline"}</span>
         </span>
+        <Link className="tracks-nav" href="/atlas/" aria-label="Role tracks"><MapIcon size={16} /><span>Tracks</span></Link>
         <Link href="/library/"><Library size={16} /> Library</Link>
         <Link href="/sheets/">DSA</Link>
         <Link href="/review/">Review</Link>

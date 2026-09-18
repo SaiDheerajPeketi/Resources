@@ -88,6 +88,7 @@ button { color: inherit; }
 .header-actions a { text-decoration: none; color: #31405b; }
 .header-actions a:not(.icon-link) { display: inline-flex; align-items: center; gap: 6px; }
 .header-actions a:hover { color: var(--blue-deep); }
+.tracks-nav { white-space: nowrap; }
 .icon-link { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--rule); border-radius: 7px; }
 .network-state { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
 .network-state.is-online { color: #14736f; }
@@ -555,7 +556,9 @@ button { color: inherit; }
   .atlas-shell { grid-template-columns: 205px minmax(430px, 1fr) 310px; }
   .track-tabs button { grid-template-columns: 28px 1fr; padding-inline: 7px; }
   .topic-inspector { padding-inline: 17px; }
-  .header-actions > a:not(.icon-link), .network-state span { display: none; }
+  .header-actions > a:not(.icon-link):not(.tracks-nav), .network-state span { display: none; }
+  .header-actions .tracks-nav { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--rule); border-radius: 7px; }
+  .tracks-nav span { display: none; }
 }
 
 @media (max-width: 900px) {
