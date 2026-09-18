@@ -28,7 +28,7 @@ describe("universal interview corpus", () => {
       expect(technology.sourceIds.every((id) => sourceIds.has(id))).toBe(true);
     }
     const fullDepthIds = technologies.filter((technology) => technology.depthStatus === "complete").map((technology) => technology.id);
-    expect(fullDepthIds).toEqual(expect.arrayContaining(["java", "cpp", "python", "oop-and-lld", "dbms", "operating-systems", "computer-networks"]));
+    expect(fullDepthIds).toEqual(expect.arrayContaining(["java", "cpp", "python", "javascript", "typescript", "oop-and-lld", "dbms", "operating-systems", "computer-networks"]));
     expect(technologies.filter((technology) => technology.depthStatus === "overview").length).toBeGreaterThan(0);
   });
 

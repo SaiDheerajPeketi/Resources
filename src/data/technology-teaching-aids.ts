@@ -271,5 +271,81 @@ export const technologyTeachingAids: Record<string, Record<string, TechnologyTea
       analogyLimit: "Native extensions may release the GIL, alternative interpreters differ, and async tasks still block if code does not yield cooperatively.",
       concreteExample: "asyncio can manage thousands of socket waits efficiently, but a CPU-heavy loop blocks the event loop unless moved or divided."
     }
+  },
+  javascript: {
+    "Values, coercion, equality, and identity": {
+      plainEnglish: "JavaScript variables contain primitive values or object references, and its comparison operators follow different, precisely defined rules rather than one universal idea of equality.",
+      analogy: "Imagine a form desk that sometimes compares the writing exactly and sometimes converts both answers into a standard form first; an object comparison instead asks whether two tickets point to the same stored file.",
+      analogyLimit: "The language's coercion steps, NaN, signed zero, Symbols, and reference identity follow formal algorithms that an everyday form desk cannot predict by intuition.",
+      concreteExample: "0 == false is true after coercion, 0 === false is false because the types differ, and Object.is(NaN, NaN) is true even though NaN === NaN is false."
+    },
+    "Lexical scope, closures, and execution context": {
+      plainEnglish: "A function keeps access to the live bindings around the place where it was created, while ordinary-function this depends on how that function is called.",
+      analogy: "A closure carries a backstage pass to labelled storage drawers from its original theatre, even after the original scene has ended.",
+      analogyLimit: "The pass reaches live bindings rather than frozen photographs, and this, var hoisting, temporal dead zones, and garbage collection have separate language rules.",
+      concreteExample: "Callbacks created in a loop with let each see their iteration's binding, while callbacks sharing one var binding all observe its final changed value."
+    },
+    "Objects, prototypes, classes, and property semantics": {
+      plainEnglish: "An object first checks its own properties and then follows a prototype link for missing ones; class syntax organizes this machinery but does not replace it.",
+      analogy: "A device checks its local instruction card and, if an instruction is absent, consults a linked reference manual belonging to its model.",
+      analogyLimit: "JavaScript lookup can involve accessors, descriptors, private brands, proxies, mutation, and several prototype levels, so it is not simple document inheritance.",
+      concreteExample: "An instance can shadow an inherited property with its own value, while deleting that own value reveals the prototype's value again."
+    },
+    "Event loop, jobs, tasks, and asynchronous control flow": {
+      plainEnglish: "One JavaScript job runs until it finishes; promise continuations wait in a high-priority job queue, while the host later selects timers, input, rendering, and I/O work.",
+      analogy: "A clerk finishes the current customer, empties a tray of promised follow-up notes, and only then calls the next appointment from the building's schedule.",
+      analogyLimit: "Browsers and Node.js have different host phases, workers use separate agents, and exact fairness or timing is not guaranteed by the clerk picture.",
+      concreteExample: "A resolved Promise.then callback runs after the current stack but before a zero-delay timer, while a long synchronous loop delays both."
+    },
+    "Modules, packages, and runtime boundaries": {
+      plainEnglish: "Modules connect named live bindings, while package metadata and the actual loader decide which file and environment those names resolve to.",
+      analogy: "A switchboard wires a caller to a live extension instead of photocopying every future conversation, and a directory decides which extension a name means.",
+      analogyLimit: "Cyclic initialization, top-level await, package conditions, URL identity, bundlers, and CommonJS interoperability make the real module graph more complex.",
+      concreteExample: "An imported counter binding reflects later changes made by its exporting module, but assigning to that imported name is forbidden."
+    },
+    "Memory, performance, and security": {
+      plainEnglish: "The collector removes unreachable objects, engines optimize observed hot behavior, and security depends on keeping untrusted data away from dangerous context-specific operations.",
+      analogy: "A warehouse keeps every box reachable from an active inventory chain, rearranges frequently used aisles, and requires hazardous deliveries to pass the correct inspection station.",
+      analogyLimit: "Reachability roots, JIT speculation, deoptimization, DOM retention, and HTML, URL, SQL, or shell contexts each follow technical rules the warehouse cannot model fully.",
+      concreteExample: "A removed DOM node still leaks when a long-lived listener retains it, and placing a validated string into innerHTML can still create XSS because string type is not HTML safety."
+    }
+  },
+  typescript: {
+    "Erased structural types and assignability": {
+      plainEnglish: "TypeScript mostly accepts a value when it has the required shape, then removes ordinary type information before the JavaScript runs.",
+      analogy: "A blueprint inspector checks that a machine exposes the required controls, stamps the plan, and leaves; the running machine does not carry the inspector beside it.",
+      analogyLimit: "Assignability includes deliberate unsound rules, private members can affect compatibility, and runtime validators or metadata can exist only when separately implemented.",
+      concreteExample: "A plain object with id and name can satisfy a User interface without declaring it, but JSON claiming those fields still needs runtime validation."
+    },
+    "Narrowing, unions, and exhaustive modeling": {
+      plainEnglish: "A union lists the permitted alternatives, and runtime evidence lets the checker reduce that list along each control-flow path.",
+      analogy: "Tagged folders enter a sorting desk; reading the folder's state label reveals which documents are valid inside, and an empty remainder proves every label was handled.",
+      analogyLimit: "Mutable aliases, callbacks, getters, incorrect predicates, and assertions can invalidate the evidence after a check, unlike a sealed physical folder.",
+      concreteExample: "Switching on result.kind narrows a success variant to its data and an error variant to its message; assigning the default branch to never exposes a newly added variant."
+    },
+    "Generics, inference, variance, and constraints": {
+      plainEnglish: "Generics preserve a relationship between several type positions, constraints state the abilities required, and variance explains whether that relationship remains safe through assignment.",
+      analogy: "A configurable manufacturing jig accepts any material meeting its strength requirement and remembers that material from the input part to the matching output part.",
+      analogyLimit: "Inference has contextual rules, conditional types may distribute, and mutable inputs and outputs create soundness questions that a physical jig does not express.",
+      concreteExample: "get<T, K extends keyof T>(object, key): T[K] accepts only real keys and returns the value type associated with the particular selected key."
+    },
+    "Object types, excess properties, and soundness boundaries": {
+      plainEnglish: "An object type usually states the minimum required surface; a fresh literal gets an extra spelling check, but that does not make every object exact or deeply immutable.",
+      analogy: "Admission requires a minimum checklist, while a newly submitted form is also scanned for suspicious unexpected boxes that may be typos.",
+      analogyLimit: "The scan applies only in selected fresh-literal contexts, readonly is a view, and index signatures, callbacks, arrays, and declarations expose additional compatibility rules.",
+      concreteExample: "Passing { name: 'Ada', nmae: 'typo' } directly can trigger an excess-property error, while a variable containing name plus other legitimate data can satisfy { name: string }."
+    },
+    "Modules, declaration files, and build topology": {
+      plainEnglish: "TypeScript builds a static map over JavaScript modules, but the runtime loader, emitted files, declarations, and package exports must all agree for the application to work.",
+      analogy: "A transit planning map can describe valid routes, yet trains still fail if the real tracks, station names, and timetables were built differently.",
+      analogyLimit: "ESM and CommonJS semantics, conditional exports, file extensions, bundlers, project references, and incremental caches are more dynamic than one printed map.",
+      concreteExample: "A paths alias may give perfect editor completion and pass tsc, then fail in Node.js because the emitted import still contains an alias the loader does not recognize."
+    },
+    "Runtime validation and API evolution": {
+      plainEnglish: "Data crossing a network, storage, message, environment, or user boundary is unknown until runtime code validates it, and that validation must evolve with every producer and consumer.",
+      analogy: "Passport control verifies a traveler's current documents at the border; a name printed on an internal itinerary cannot replace that check.",
+      analogyLimit: "Validation is only a snapshot: authorization, semantic relationships, version skew, migrations, and malicious behavior require continuing policy beyond shape checking.",
+      concreteExample: "Parse a payment event's version, currency, integer amount, identifier format, and allowed state transition before constructing the trusted PaymentEvent used by business code."
+    }
   }
 };

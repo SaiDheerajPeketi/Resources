@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r14",
+  "version": "2026.09.18-r15",
   "technologies": [
     {
       "id": "java",
@@ -5568,170 +5568,234 @@
         "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
         "current": "stable"
       },
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "mentalModel": "JavaScript is a single-threaded run-to-completion language per agent; host event loops schedule jobs and I/O callbacks around the ECMAScript execution model.",
       "learningPath": [
         {
           "level": "basic",
-          "title": "Foundations",
-          "objective": "Build a correct vocabulary and smallest working JavaScript program.",
+          "title": "Language essentials",
+          "objective": "Write predictable JavaScript and explain values, coercion, scope, objects, and errors.",
           "topics": [
-            "installation and project shape",
-            "core syntax and data model",
-            "control flow and error handling",
-            "standard-library or platform primitives"
+            "primitive values, objects, typeof, truthiness, equality, and coercion",
+            "let, const, functions, lexical scope, closures, and this",
+            "arrays, objects, maps, sets, destructuring, spread, and iteration",
+            "exceptions, promises, modules, JSON, dates, and regular expressions",
+            "Node.js and browser execution, package scripts, linting, testing, and debugging"
           ]
         },
         {
           "level": "intermediate",
-          "title": "Working fluency",
-          "objective": "Use JavaScript idiomatically in tested application code.",
+          "title": "Data model and asynchronous composition",
+          "objective": "Use JavaScript protocols and async control flow without accidental shared state or ordering bugs.",
           "topics": [
-            "module and dependency boundaries",
-            "testing and debugging workflow",
-            "I/O, persistence, and external integration",
-            "common idioms and maintainable structure"
+            "property descriptors, prototypes, classes, private fields, and composition",
+            "iterables, iterators, generators, symbols, proxies, and metaprogramming",
+            "tasks, microtasks, promises, async/await, cancellation, and concurrency limits",
+            "ES modules, CommonJS interop, package exports, dependency resolution, and bundling",
+            "testing boundaries, fake timers, integration tests, browser tools, and source maps"
           ]
         },
         {
           "level": "advanced",
-          "title": "Runtime and trade-offs",
-          "objective": "Explain how JavaScript behaves under memory, concurrency, and performance pressure.",
+          "title": "Runtime internals and production behavior",
+          "objective": "Reason about engines, memory, event loops, performance, and host-specific behavior.",
           "topics": [
-            "execution and memory model",
-            "concurrency and scheduling",
-            "profiling and performance limits",
-            "failure recovery and observability"
+            "execution contexts, call stack, environments, bytecode, JIT, shapes, and deoptimization",
+            "heap reachability, weak references, closures, DOM/listener retention, and leak diagnosis",
+            "browser rendering, workers, Node.js phases, libuv, streams, buffers, and backpressure",
+            "HTTP clients, module loading, serialization, worker boundaries, and observability",
+            "profiling CPU, allocation, event-loop delay, I/O, rendering, and network waterfalls"
           ]
         },
         {
           "level": "expert",
-          "title": "Production judgment",
-          "objective": "Defend JavaScript design choices and diagnose realistic failures.",
+          "title": "Secure and evolvable JavaScript systems",
+          "objective": "Design dependable browser and server applications across compatibility and trust boundaries.",
           "topics": [
-            "security boundaries and threat model",
-            "compatibility and version upgrades",
-            "scaling and operational constraints",
-            "architecture trade-offs and interview cases"
+            "API contracts, schema evolution, feature detection, polyfills, and compatibility",
+            "XSS, prototype pollution, injection, supply-chain threats, CSP, and secret handling",
+            "timeouts, retries, idempotency, queues, stream ownership, and graceful shutdown",
+            "SSR/CSR boundaries, hydration, state ownership, caching, and performance budgets",
+            "architecture trade-offs across browser, Node.js, edge, workers, and native modules"
           ]
         }
       ],
       "theorySections": [
         {
-          "title": "Core abstraction",
-          "explanation": "JavaScript is a single-threaded run-to-completion language per agent; host event loops schedule jobs and I/O callbacks around the ECMAScript execution model. This overview establishes the nouns, lifecycle, and invariants that later examples must make concrete. It is not yet the complete editorial treatment for every subtopic in this technology.",
-          "plainEnglish": "Start by naming what JavaScript executes, what state it owns, and when that state begins and ends.",
-          "analogy": "Treat the runtime like a workshop: inputs arrive, named tools transform them, and an owner must clean up each resource.",
-          "analogyLimit": "Software can copy, share, or schedule state in ways a physical workshop cannot, so derive the actual guarantees from the runtime.",
-          "concreteExample": "Trace one JavaScript request from input validation through execution, output, failure, and cleanup.",
+          "title": "Values, coercion, equality, and identity",
+          "explanation": "JavaScript has primitive values and objects. Variables hold values, and an object value behaves as a reference to object identity. Strict equality compares primitives according to specified value rules and objects by identity; Object.is differs for NaN and signed zero. Abstract equality runs a coercion algorithm that can cross type boundaries. Truthiness is another conversion and must not be used when zero, empty string, false, null, and undefined carry different domain meanings.",
+          "plainEnglish": "JavaScript variables contain primitive values or object references, and its comparison operators follow different, precisely defined rules rather than one universal idea of equality.",
+          "analogy": "Imagine a form desk that sometimes compares the writing exactly and sometimes converts both answers into a standard form first; an object comparison instead asks whether two tickets point to the same stored file.",
+          "analogyLimit": "The language's coercion steps, NaN, signed zero, Symbols, and reference identity follow formal algorithms that an everyday form desk cannot predict by intuition.",
+          "concreteExample": "0 == false is true after coercion, 0 === false is false because the types differ, and Object.is(NaN, NaN) is true even though NaN === NaN is false.",
           "keyPoints": [
-            "Name the execution unit and its lifecycle.",
-            "Identify the state and invariant owned by each abstraction.",
-            "Separate specification guarantees from common implementation behavior."
+            "Prefer explicit domain normalization over relying on abstract equality.",
+            "typeof null is a historical result, not evidence that null is an ordinary object.",
+            "NaN is unequal to itself under ===; use Number.isNaN for numeric validation.",
+            "Object spread is shallow and invokes specified property enumeration semantics."
           ]
         },
         {
-          "title": "Data, memory, and lifetime",
-          "explanation": "JavaScript programs move data through values, references, resources, or persisted representations. A strong explanation follows ownership and lifetime from creation through sharing, mutation, cleanup, and failure instead of relying on syntax alone.",
-          "plainEnglish": "Know who owns each value, who may change it, who can still see it, and who must release associated resources.",
-          "analogy": "Think of a library book: several people may know its catalogue number, but one policy controls loans, returns, and replacement.",
-          "analogyLimit": "Memory aliases can be copied instantly and may outlive lexical scopes, unlike a single physical book.",
-          "concreteExample": "Follow a database connection from pool checkout through query, exception, rollback, and guaranteed return to the pool.",
+          "title": "Lexical scope, closures, and execution context",
+          "explanation": "Lexical scope is determined by source nesting. Every function creation captures access to its surrounding lexical environment, not a frozen copy of each value. A closure can therefore preserve private state or retain large object graphs. Function calls create execution contexts, and this is selected by the call expression, explicit binding, construction, or lexical capture in an arrow function. var has function scope and initialization behavior distinct from let and const.",
+          "plainEnglish": "A function keeps access to the live bindings around the place where it was created, while ordinary-function this depends on how that function is called.",
+          "analogy": "A closure carries a backstage pass to labelled storage drawers from its original theatre, even after the original scene has ended.",
+          "analogyLimit": "The pass reaches live bindings rather than frozen photographs, and this, var hoisting, temporal dead zones, and garbage collection have separate language rules.",
+          "concreteExample": "Callbacks created in a loop with let each see their iteration's binding, while callbacks sharing one var binding all observe its final changed value.",
           "keyPoints": [
-            "Trace allocation and cleanup.",
-            "Make aliasing and mutation explicit.",
-            "Treat resource lifetime separately from garbage-collected memory where applicable."
+            "Closures capture bindings, so later rebinding can be observed.",
+            "let and const are block scoped and inaccessible in the temporal dead zone before initialization.",
+            "Arrow functions do not define their own this, arguments, or constructor behavior.",
+            "Method extraction can lose its receiver because call-site form determines this."
           ]
         },
         {
-          "title": "Concurrency and I/O",
-          "explanation": "Concurrency in JavaScript must be derived from its runtime and host platform. Explain what can execute independently, how work waits, how cancellation and backpressure propagate, and which synchronization rule protects shared invariants.",
-          "plainEnglish": "Multiple tasks may make progress together, but shared state and limited downstream capacity still need explicit coordination.",
-          "analogy": "A restaurant can prepare several orders at once, yet it needs ticket ordering, limited ovens, and a rule for cancelled orders.",
-          "analogyLimit": "Computer scheduling and memory visibility have formal rules that human coordination analogies do not capture.",
-          "concreteExample": "Bound a worker queue, cancel work after the caller deadline, and protect the one invariant updated by competing tasks.",
+          "title": "Objects, prototypes, classes, and property semantics",
+          "explanation": "An object owns properties with value or accessor descriptors. If an own property is absent, lookup delegates through the object's prototype chain. class syntax defines methods, initialization order, private fields, and inheritance rules but does not replace prototype delegation. Assignment, Object.defineProperty, spread, and Proxy traps have different descriptor and side-effect behavior, so copying syntax is not a universal clone operation.",
+          "plainEnglish": "An object first checks its own properties and then follows a prototype link for missing ones; class syntax organizes this machinery but does not replace it.",
+          "analogy": "A device checks its local instruction card and, if an instruction is absent, consults a linked reference manual belonging to its model.",
+          "analogyLimit": "JavaScript lookup can involve accessors, descriptors, private brands, proxies, mutation, and several prototype levels, so it is not simple document inheritance.",
+          "concreteExample": "An instance can shadow an inherited property with its own value, while deleting that own value reveals the prototype's value again.",
           "keyPoints": [
-            "Distinguish concurrency from parallelism.",
-            "State the ordering or synchronization guarantee.",
-            "Bound queues, retries, and resource use."
+            "Own properties and inherited properties answer different questions.",
+            "Object.create chooses a prototype without invoking a class constructor.",
+            "Private fields are lexically branded and are not ordinary string-keyed properties.",
+            "Enumeration, writability, configurability, getters, and setters are separate property concerns."
           ]
         },
         {
-          "title": "Production behavior",
-          "explanation": "A production JavaScript system is evaluated through tests, diagnostics, performance evidence, security boundaries, compatible changes, and recovery. Convenient abstractions are useful only when their hidden cost and failure signals remain observable.",
-          "plainEnglish": "A feature is not finished when it works once; it must remain explainable, safe, measurable, and recoverable under failure.",
-          "analogy": "A bridge needs load limits, inspections, warning signs, and repair plans in addition to a successful first crossing.",
-          "analogyLimit": "Software can be rolled back or replicated quickly, but data compatibility and external effects may make recovery irreversible.",
-          "concreteExample": "Release to a small cohort, watch latency and error budgets, verify data compatibility, and keep a tested rollback trigger.",
+          "title": "Event loop, jobs, tasks, and asynchronous control flow",
+          "explanation": "A JavaScript job runs to completion before another job runs on the same agent. Promise reactions enqueue microtasks or jobs that run at defined checkpoints, commonly before the host selects another timer or I/O task. async functions return promises, and await suspends the function while scheduling its continuation. Concurrency is created by overlapping host operations, not by await itself. Correct systems bound fan-out and propagate deadlines, cancellation, errors, and cleanup.",
+          "plainEnglish": "One JavaScript job runs until it finishes; promise continuations wait in a high-priority job queue, while the host later selects timers, input, rendering, and I/O work.",
+          "analogy": "A clerk finishes the current customer, empties a tray of promised follow-up notes, and only then calls the next appointment from the building's schedule.",
+          "analogyLimit": "Browsers and Node.js have different host phases, workers use separate agents, and exact fairness or timing is not guaranteed by the clerk picture.",
+          "concreteExample": "A resolved Promise.then callback runs after the current stack but before a zero-delay timer, while a long synchronous loop delays both.",
           "keyPoints": [
-            "Measure before optimizing.",
-            "Validate untrusted boundaries and use least privilege.",
-            "Design rollback, migration, and failure diagnosis with the feature."
+            "Promise callbacks do not interrupt currently running JavaScript.",
+            "A long synchronous callback blocks timers, input, rendering, and other continuations on that agent.",
+            "Promise.all fails fast but does not cancel sibling work automatically.",
+            "Microtask loops can starve timers or rendering even though each callback is short."
+          ]
+        },
+        {
+          "title": "Modules, packages, and runtime boundaries",
+          "explanation": "ES modules use URL-like identity, static import/export structure, live bindings, and asynchronous loading capabilities. CommonJS loads through runtime require and exports object conventions. Package exports and conditions define public entry points for environments such as import, require, browser, or Node.js. A bundler may transform or replace resolution behavior, so successful bundling does not prove that direct runtime loading follows the same path.",
+          "plainEnglish": "Modules connect named live bindings, while package metadata and the actual loader decide which file and environment those names resolve to.",
+          "analogy": "A switchboard wires a caller to a live extension instead of photocopying every future conversation, and a directory decides which extension a name means.",
+          "analogyLimit": "Cyclic initialization, top-level await, package conditions, URL identity, bundlers, and CommonJS interoperability make the real module graph more complex.",
+          "concreteExample": "An imported counter binding reflects later changes made by its exporting module, but assigning to that imported name is forbidden.",
+          "keyPoints": [
+            "ES module imports are live read-only views of exported bindings.",
+            "A module is normally evaluated once per resolved identity, not once per source text.",
+            "Circular dependencies expose initialization ordering and temporal-dead-zone behavior.",
+            "Browser code and server code have different trust, secrets, filesystem, and API boundaries."
+          ]
+        },
+        {
+          "title": "Memory, performance, and security",
+          "explanation": "Reachability from roots determines whether objects can be collected. Closures, listeners, caches, module state, timers, and DOM references can retain otherwise useless graphs. Engine optimization depends on observed shapes and types and may deoptimize when behavior changes. Security follows data from an untrusted source to a context-sensitive sink; type checks and escaping for one context do not make data safe for another.",
+          "plainEnglish": "The collector removes unreachable objects, engines optimize observed hot behavior, and security depends on keeping untrusted data away from dangerous context-specific operations.",
+          "analogy": "A warehouse keeps every box reachable from an active inventory chain, rearranges frequently used aisles, and requires hazardous deliveries to pass the correct inspection station.",
+          "analogyLimit": "Reachability roots, JIT speculation, deoptimization, DOM retention, and HTML, URL, SQL, or shell contexts each follow technical rules the warehouse cannot model fully.",
+          "concreteExample": "A removed DOM node still leaks when a long-lived listener retains it, and placing a validated string into innerHTML can still create XSS because string type is not HTML safety.",
+          "keyPoints": [
+            "A managed heap can still leak through unintended reachability.",
+            "Measure retained size and root paths, not only allocation count.",
+            "Stable object shapes can help engines, but architecture and algorithms dominate most application performance.",
+            "Use safe APIs and context-aware encoding rather than blacklist filtering."
           ]
         }
       ],
       "misconceptions": [
         {
-          "claim": "JavaScript best practices are universal rules.",
-          "correction": "Practices are responses to constraints; state the workload, invariant, and trade-off before applying one.",
-          "whyItHappens": "Interview summaries often omit the forces that justify a recommendation."
+          "claim": "const makes an object immutable.",
+          "correction": "const prevents rebinding that variable; the referenced object's properties may still mutate unless an immutability policy is applied.",
+          "whyItHappens": "Variable binding and object state are both casually described as the value."
         },
         {
-          "claim": "A successful JavaScript build proves runtime correctness.",
-          "correction": "Build-time checks cover only declared contracts; runtime inputs, integration, resource limits, and concurrency still need evidence.",
-          "whyItHappens": "Fast local feedback is confused with end-to-end behavior."
+          "claim": "JavaScript is asynchronous and multi-threaded by default.",
+          "correction": "A job runs to completion on its agent; hosts overlap I/O and may provide workers with separate agents and communication boundaries.",
+          "whyItHappens": "Many operations complete later, so host concurrency is mistaken for simultaneous execution of one call stack."
         },
         {
-          "claim": "The most concise JavaScript API is automatically the most efficient.",
-          "correction": "Abstractions can hide allocation, I/O, network calls, queries, synchronization, or retries; inspect and measure the execution path.",
-          "whyItHappens": "Source-code size is used as a proxy for work performed."
+          "claim": "await blocks the thread until the promise resolves.",
+          "correction": "await suspends the async function and returns control; its continuation is scheduled after settlement while other work can run.",
+          "whyItHappens": "The syntax resembles synchronous blocking code."
         },
         {
-          "claim": "Adding parallelism always speeds up JavaScript workloads.",
-          "correction": "Useful parallelism is bounded by dependencies and resources; coordination, contention, queueing, and downstream limits can reduce throughput.",
-          "whyItHappens": "Available threads or workers are mistaken for additional system capacity."
+          "claim": "Promise.all runs functions in parallel.",
+          "correction": "It observes promises; operations normally begin when their promises are created, and actual parallelism depends on the host and workload.",
+          "whyItHappens": "A single combinator appears to be the place where concurrency starts."
+        },
+        {
+          "claim": "Classes replace prototypes.",
+          "correction": "Class instances still delegate through prototypes; class syntax adds defined construction, private fields, and method semantics.",
+          "whyItHappens": "The syntax resembles class-based languages."
+        },
+        {
+          "claim": "Garbage collection prevents memory leaks.",
+          "correction": "Collectors reclaim unreachable values; listeners, caches, closures, timers, and module roots can retain useless graphs.",
+          "whyItHappens": "Leaks are incorrectly defined only as forgotten manual deallocation."
         }
       ],
       "revisionChecklist": [
-        "Explain the JavaScript mental model without product slogans.",
-        "Name core types, lifecycle, invariants, and boundary conditions.",
-        "Trace one request or program from input through execution to output and cleanup.",
-        "State memory ownership, mutation, and resource-lifetime rules.",
-        "Explain concurrency, ordering, cancellation, and backpressure behavior.",
-        "Choose a test boundary and demonstrate an unhappy-path case.",
-        "Use one diagnostic tool and interpret its evidence.",
-        "Name a performance bottleneck, security risk, upgrade risk, and rollback path."
+        "Distinguish primitive values, object identity, equality variants, truthiness, nullishness, and explicit coercion.",
+        "Explain lexical scope, closure binding capture, temporal dead zones, var hoisting, and this selection.",
+        "Trace own property lookup, descriptors, prototypes, class initialization, and method extraction.",
+        "Order synchronous code, promise microtasks, timers, rendering, and Node.js host phases without relying on slogans.",
+        "Design async work with bounded concurrency, cancellation, timeouts, rejection ownership, and cleanup.",
+        "Compare ESM and CommonJS identity, live bindings, cycles, package exports, and runtime/bundler resolution.",
+        "Use browser or Node debugging, source maps, CPU profiles, heap snapshots, and event-loop diagnostics appropriately.",
+        "Explain engine profiling, shapes, JIT optimization, deoptimization, and why microbenchmarks can mislead.",
+        "Prevent XSS, injection, prototype pollution, unsafe redirects, secret exposure, and dependency compromise.",
+        "Choose browser, Node.js, worker, stream, and native boundaries from workload and trust constraints."
       ],
       "setup": [
-        "Install from the official distribution or package manager.",
-        "Pin runtime and dependency versions in project metadata.",
-        "Run version, build, and test checks before changing code."
+        "Install a supported Node.js release and verify node, npm or pnpm, and the lockfile agree with the project's declared engine policy.",
+        "Set package type and module entry points explicitly instead of relying on filename or tool defaults that differ between ESM and CommonJS.",
+        "Enable strict linting, formatting, a test runner, and source maps; keep browser and Node.js globals distinct in configuration.",
+        "Use a project-local package manager through the committed lockfile and inspect lifecycle scripts before installing untrusted dependencies.",
+        "Run one module, one test, one debugger session, and one production build before changing application behavior."
       ],
       "runtime": [
-        "Name the execution unit and its lifecycle.",
-        "Trace allocation, scheduling, I/O, and cleanup.",
-        "Separate language or framework guarantees from implementation behavior."
+        "JavaScript executes run-to-completion jobs on an agent; the host event loop schedules later tasks, promise jobs, rendering, and I/O callbacks.",
+        "Lexical environments bind names, closures retain reachable environments, and this is chosen by call form rather than lexical location except for arrow functions.",
+        "Objects delegate missing property lookup through prototype chains, while classes provide syntax and semantics over constructor/prototype machinery.",
+        "Modern engines parse and execute code through interpreter or baseline tiers, collect profiles, optimize hot paths, and deoptimize when assumptions fail.",
+        "Browser and Node.js hosts expose different APIs and scheduling phases even though the ECMAScript language core is shared."
       ],
       "testing": [
-        "Test one behavior at the smallest stable boundary.",
-        "Keep deterministic unit tests separate from integration and end-to-end checks."
+        "Test pure transformations synchronously, async policy with controlled promises or clocks, and host boundaries with realistic browser or server integrations.",
+        "Assert rejection, cancellation, timeout, duplicate delivery, partial response, and cleanup behavior rather than only fulfilled promise values.",
+        "Use fake timers only when the test owns every relevant clock; they do not automatically control I/O, promise queues, or host scheduling.",
+        "Run browser-level tests for DOM, navigation, accessibility, storage, security policy, and rendering behavior that a DOM mock cannot reproduce."
       ],
       "debugging": [
-        "Reproduce with the smallest input and capture the first bad state.",
-        "Use structured logs, breakpoints, traces, or query plans before guessing."
+        "Read the first relevant stack and preserve Error causes; source maps must match the deployed artifact before line numbers are trusted.",
+        "Use breakpoints, conditional breakpoints, watch expressions, and async stack traces to locate the first incorrect state or ordering assumption.",
+        "Inspect the browser network waterfall or Node.js diagnostics before attributing waiting time to JavaScript CPU.",
+        "Use CPU profiles, allocation/heap snapshots, event-loop-delay metrics, and retained paths for separate performance questions.",
+        "For module problems, inspect resolved URLs/files, package exports, package type, conditions, and the actual runtime or bundler resolution trace."
       ],
       "performance": [
-        "Measure latency, throughput, allocation, and contention before optimizing.",
-        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+        "Improve algorithms, round trips, payload size, rendering work, and batching before syntax-level micro-optimization.",
+        "Separate JavaScript CPU, event-loop queueing, garbage collection, layout/paint, network, database, and downstream waits.",
+        "Bound promise concurrency and stream buffering; Promise.all starts no work itself but can await an already unbounded set of operations.",
+        "Measure representative warm and cold paths because JIT state, caches, bundles, and connection reuse change behavior."
       ],
       "security": [
-        "Validate untrusted input at the boundary and use least privilege.",
-        "Keep secrets out of source, logs, command history, and generated artifacts."
+        "Treat HTML, URLs, DOM sinks, templates, SQL, shell arguments, object merges, redirects, and deserialization as explicit untrusted boundaries.",
+        "Prevent XSS with context-aware encoding, safe DOM APIs, trusted sanitization, and a restrictive Content Security Policy where applicable.",
+        "Block prototype-pollution keys and avoid recursively merging attacker-controlled objects into privileged configuration.",
+        "Audit package provenance and install scripts, minimize dependencies, pin resolutions, and never ship server secrets into browser bundles."
       ],
       "failureModes": [
-        "Using an unsupported or mismatched version.",
-        "Hiding an expensive operation behind a convenient abstraction.",
-        "Handling only the happy path while losing context from failures."
+        "Loose coercion or truthiness collapses distinct states such as zero, empty string, false, null, undefined, and NaN.",
+        "A closure, listener, timer, cache, detached DOM tree, or unresolved work retains an object graph indefinitely.",
+        "An async callback is launched without awaiting, cancellation, rejection handling, concurrency bounds, or ownership of its lifetime.",
+        "Promise microtask ordering is confused with timers or I/O tasks, producing starvation or stale-state races.",
+        "ESM/CommonJS, browser/Node.js, or bundler/runtime resolution differences load duplicate, incompatible, or unintended modules.",
+        "Untrusted data reaches an HTML, command, query, URL, or object-merge sink and becomes injection or prototype pollution."
       ],
       "commandIds": [
         "javascript-command-1",
@@ -5749,209 +5813,230 @@
       ],
       "workedExamples": [
         {
-          "title": "Smallest working slice",
+          "title": "Preserve zero while defaulting only missing values",
           "language": "JavaScript",
-          "code": "// JavaScript: express the smallest complete program and make ownership explicit.",
-          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+          "code": "function pageSize(input) {\n  const size = input ?? 25;\n  if (!Number.isInteger(size) || size < 0) throw new RangeError(\"invalid size\");\n  return size;\n}\n\nconsole.assert(pageSize(0) === 0);\nconsole.assert(pageSize(undefined) === 25);",
+          "explanation": "Nullish coalescing defaults only null or undefined. Using input || 25 would incorrectly replace the valid value zero because zero is falsy."
         },
         {
-          "title": "Boundary made explicit",
+          "title": "Bound asynchronous fan-out",
           "language": "JavaScript",
-          "code": "// JavaScript: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
-          "explanation": "Move validation to the boundary so failures remain local and observable."
+          "code": "async function mapLimit(values, limit, work) {\n  const output = new Array(values.length);\n  let next = 0;\n  async function worker() {\n    while (next < values.length) {\n      const index = next++;\n      output[index] = await work(values[index]);\n    }\n  }\n  await Promise.all(Array.from({ length: Math.min(limit, values.length) }, worker));\n  return output;\n}",
+          "explanation": "Only limit workers are active, results preserve input order, and rejection reaches the caller. A production version should also define cancellation, retry, deadline, and partial-result policy."
         },
         {
-          "title": "Testable production shape",
+          "title": "Avoid losing a method receiver",
           "language": "JavaScript",
-          "code": "// JavaScript: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
-          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+          "code": "class Counter {\n  value = 0;\n  increment = () => { this.value += 1; };\n}\n\nconst counter = new Counter();\nconst callback = counter.increment;\ncallback();\nconsole.assert(counter.value === 1);",
+          "explanation": "The arrow field captures the instance this lexically, so extracting the callback keeps the receiver. A prototype method would require binding or a receiver-preserving call site."
         }
       ],
       "questions": [
         {
-          "prompt": "JavaScript: Explain the runtime model without using framework slogans.",
+          "prompt": "Compare ==, ===, and Object.is with examples that differ.",
+          "difficulty": "medium",
+          "answer": "=== avoids cross-type coercion, compares objects by identity, treats NaN as unequal to itself, and treats +0 and -0 as equal. Object.is keeps identity/value comparison but treats NaN as equal to itself and signed zeros as different. == follows an abstract coercion algorithm and should be used only with deliberate knowledge of its cases.",
+          "whyTricky": "The answer is often reduced to 'always use triple equals' without understanding edge semantics.",
+          "rubric": [
+            "Covers coercion versus strict comparison.",
+            "Explains NaN and signed zero.",
+            "States object identity behavior."
+          ]
+        },
+        {
+          "prompt": "What does a closure capture: values or variables?",
+          "difficulty": "medium",
+          "answer": "A closure retains access to lexical environment bindings. If the binding is later reassigned, the closure observes the new value. Per-iteration let creates a fresh binding, while var in one function scope historically caused loop callbacks to share one changing binding.",
+          "whyTricky": "A closure is described as a frozen snapshot even though bindings remain live.",
+          "rubric": [
+            "Names lexical bindings.",
+            "Explains later rebinding.",
+            "Uses let-versus-var loop behavior."
+          ]
+        },
+        {
+          "prompt": "Predict the order of synchronous logs, Promise.then, queueMicrotask, and setTimeout.",
+          "difficulty": "hard",
+          "answer": "Run the current job synchronously. Promise reactions and queueMicrotask callbacks enter the microtask queue in enqueue order and run at the checkpoint after the stack empties. A timer callback is a later host task after its delay threshold and after earlier microtasks. Exact host phases beyond ECMAScript jobs must be identified for browser or Node.js.",
+          "whyTricky": "Timers are interpreted as exact delays and microtasks as separate threads.",
+          "rubric": [
+            "Starts with run-to-completion.",
+            "Orders microtasks before the next timer task.",
+            "Separates language guarantees from host phases."
+          ]
+        },
+        {
+          "prompt": "Why does extracting an object method sometimes make this undefined?",
           "difficulty": "easy",
-          "answer": "Start from the execution unit, state lifecycle, inputs, state, scheduling, outputs, and cleanup; then separate specified guarantees from one implementation.",
-          "whyTricky": "Fluent API usage can hide a weak execution model.",
+          "answer": "For ordinary functions, this is selected by call form. obj.method() supplies obj as receiver, while const f = obj.method; f() is a plain call and under strict semantics has undefined this. Bind the method, wrap the call, or use a deliberate lexical arrow callback where appropriate.",
+          "whyTricky": "this is assumed to be captured from the method's definition location.",
           "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
+            "Uses call-site selection.",
+            "Contrasts method and plain calls.",
+            "Provides a safe remedy."
           ]
         },
         {
-          "prompt": "JavaScript: Which guarantees belong to the specification and which to the implementation?",
+          "prompt": "Does Promise.all cancel remaining requests after one rejects?",
           "difficulty": "medium",
-          "answer": "Name each relied-on behavior, cite whether it is contractual, and explain how version or implementation changes would affect it.",
-          "whyTricky": "Familiar behavior is often mistaken for a portable guarantee.",
+          "answer": "No. The aggregate rejects after the first observed rejection, but sibling operations continue unless they support and receive cancellation. Use AbortController or another cancellation protocol, still observe cleanup and later failures, and define partial-result semantics.",
+          "whyTricky": "Fail-fast aggregate state is confused with stopping underlying work.",
           "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
+            "Rejects automatic cancellation.",
+            "Names an explicit cancellation protocol.",
+            "Mentions cleanup or sibling result ownership."
           ]
         },
         {
-          "prompt": "JavaScript: Design a minimal test pyramid for a production feature.",
-          "difficulty": "medium",
-          "answer": "Use deterministic unit tests for policy, integration tests for real boundaries, a few end-to-end journeys, and contract or property tests where interfaces or invariants need them.",
-          "whyTricky": "Test labels are less important than stable boundaries and failure coverage.",
-          "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
-          ]
-        },
-        {
-          "prompt": "JavaScript: Diagnose a latency regression using evidence rather than guesses.",
+          "prompt": "Explain an ES module circular dependency without saying imports are copied.",
           "difficulty": "hard",
-          "answer": "Reproduce under comparable load, decompose the latency budget, inspect traces and resource saturation, profile the constrained stage, change one cause, and verify tail as well as median latency.",
-          "whyTricky": "Average timing and correlation frequently produce false diagnoses.",
+          "answer": "Imports are live read-only bindings to exporter state. Modules are instantiated to connect bindings before evaluation, then evaluated in dependency order. In a cycle, a binding may exist but remain uninitialized, causing a temporal-dead-zone error if read too early. Refactor initialization or shared contracts rather than relying on side-effect order.",
+          "whyTricky": "Modules are modeled as textual inclusion or object copying.",
           "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
+            "States live bindings.",
+            "Separates instantiation from evaluation.",
+            "Explains uninitialized cyclic access."
           ]
         },
         {
-          "prompt": "JavaScript: Name three failure modes and the signal that reveals each one.",
-          "difficulty": "medium",
-          "answer": "Choose distinct correctness, resource, and integration failures and pair each with an observable log, metric, trace, state inspection, or failed invariant.",
-          "whyTricky": "Generic failure lists without discriminating evidence are not actionable.",
-          "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
-          ]
-        },
-        {
-          "prompt": "JavaScript: How do memory, concurrency, and I/O interact here?",
+          "prompt": "How do you diagnose a JavaScript memory leak?",
           "difficulty": "hard",
-          "answer": "Trace allocation and ownership across scheduled work and blocking or asynchronous boundaries, including queues, buffering, cancellation, cleanup, and backpressure.",
-          "whyTricky": "These resources are usually taught separately even though production failures couple them.",
+          "answer": "Confirm post-GC retained memory grows under comparable workload, take heap snapshots or allocation profiles, compare dominators and retained sizes, follow paths to roots, then identify the missing lifecycle cleanup. Common roots include listeners, timers, caches, closures, module state, and detached DOM nodes.",
+          "whyTricky": "High allocation rate or a large heap is treated as proof of a leak.",
           "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
+            "Uses post-GC trend.",
+            "Uses retained paths and dominators.",
+            "Connects a root to lifecycle ownership."
           ]
         },
         {
-          "prompt": "JavaScript: What is the safest upgrade path between supported versions?",
+          "prompt": "Why is assigning untrusted input to innerHTML dangerous when JSON parsing succeeded?",
           "difficulty": "medium",
-          "answer": "Read compatibility notes, pin inputs, test representative behavior, stage the rollout, observe agreed signals, retain rollback, and migrate data or APIs in compatible phases.",
-          "whyTricky": "A green build does not prove behavioral or operational compatibility.",
+          "answer": "JSON parsing establishes data syntax, not HTML safety. innerHTML is an HTML parser sink where attacker-controlled markup and event-capable content may execute. Use textContent for text, safe DOM construction, or a maintained context-appropriate sanitizer plus defense-in-depth CSP.",
+          "whyTricky": "Successful parsing or type shape is mistaken for output-context encoding.",
           "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
-          ]
-        },
-        {
-          "prompt": "JavaScript: Sketch a secure deployment and rollback strategy.",
-          "difficulty": "hard",
-          "answer": "Define identities, least privilege, secret delivery, trusted artifacts, input boundaries, audit signals, staged rollout, compatibility window, rollback trigger, and recovery verification.",
-          "whyTricky": "Deployment safety spans code, identity, data, and operational state.",
-          "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
+            "Separates data parsing from sink safety.",
+            "Names a safe API or sanitizer.",
+            "Includes context-aware security reasoning."
           ]
         }
       ],
       "flashcards": [
         {
-          "front": "JavaScript: core mental model",
-          "back": "JavaScript is a single-threaded run-to-completion language per agent; host event loops schedule jobs and I/O callbacks around the ECMAScript execution model."
+          "front": "const",
+          "back": "Prevents rebinding one variable; it does not make the referenced object immutable."
         },
         {
-          "front": "JavaScript: first debugging move",
-          "back": "Reproduce narrowly and inspect the first incorrect state."
+          "front": "Closure",
+          "back": "A function plus access to live bindings in its lexical environment."
         },
         {
-          "front": "JavaScript: performance rule",
-          "back": "Measure the constrained resource before changing the design."
+          "front": "this",
+          "back": "For ordinary functions, chosen by call form; arrows capture the surrounding this."
         },
         {
-          "front": "JavaScript: security rule",
-          "back": "Treat input and identity as untrusted until validated at a boundary."
+          "front": "Prototype",
+          "back": "The object consulted when an own property lookup misses."
         },
         {
-          "front": "JavaScript: concurrency rule",
-          "back": "Name the shared invariant, its owner, and the ordering mechanism."
+          "front": "Microtask",
+          "back": "Promise/job continuation run at a checkpoint before the host selects a later task."
         },
         {
-          "front": "JavaScript: testing rule",
-          "back": "Test behavior at the smallest stable boundary and include the unhappy path."
+          "front": "Promise.all",
+          "back": "Aggregates already-created promises; fail-fast rejection does not cancel sibling work."
         },
         {
-          "front": "JavaScript: upgrade rule",
-          "back": "Pin, read compatibility notes, stage, observe, and keep a tested rollback."
+          "front": "ESM import",
+          "back": "A live read-only binding to an export, connected before module evaluation."
         },
         {
-          "front": "JavaScript: interview frame",
-          "back": "Model → invariant → mechanism → example → trade-off → failure signal."
+          "front": "Managed leak",
+          "back": "Useless data remains reachable from roots such as listeners, caches, timers, closures, or modules."
         }
       ],
       "cheatsheet": [
         {
-          "title": "Learning path",
+          "title": "Values",
           "items": [
             {
-              "label": "Basic",
-              "value": "syntax + data + lifecycle"
+              "label": "===",
+              "value": "no cross-type coercion"
             },
             {
-              "label": "Intermediate",
-              "value": "idioms + tests + integration"
+              "label": "Object.is",
+              "value": "NaN same; signed zero differs"
             },
             {
-              "label": "Advanced",
-              "value": "runtime + concurrency + performance"
+              "label": "??",
+              "value": "default null/undefined only"
             },
             {
-              "label": "Expert",
-              "value": "security + operations + trade-offs"
+              "label": "?.",
+              "value": "short-circuit nullish access"
             }
           ]
         },
         {
-          "title": "Interview frame",
+          "title": "Functions",
           "items": [
             {
-              "label": "Explain",
-              "value": "model → invariant → mechanism"
+              "label": "Closure",
+              "value": "live lexical bindings"
             },
             {
-              "label": "Prove",
-              "value": "example → boundary → counterexample"
+              "label": "this",
+              "value": "ordinary: call site"
             },
             {
-              "label": "Compare",
-              "value": "workload → trade-off → failure"
+              "label": "Arrow",
+              "value": "lexical this; not constructor"
             },
             {
-              "label": "Debug",
-              "value": "reproduce → observe → isolate → verify"
+              "label": "Method",
+              "value": "preserve or bind receiver"
             }
           ]
         },
         {
-          "title": "Production frame",
+          "title": "Async",
           "items": [
             {
-              "label": "Ship",
-              "value": "pin → build → test → stage → observe"
+              "label": "Job",
+              "value": "run to completion"
             },
             {
-              "label": "Secure",
-              "value": "identity → least privilege → validate → audit"
+              "label": "Microtask",
+              "value": "promise continuation"
             },
             {
-              "label": "Scale",
-              "value": "measure → bound → backpressure → recover"
+              "label": "Task",
+              "value": "host timer/I/O/input unit"
             },
             {
-              "label": "Upgrade",
-              "value": "compatibility → migration → rollback"
+              "label": "Safety",
+              "value": "bound + timeout + cancel + clean"
+            }
+          ]
+        },
+        {
+          "title": "Security",
+          "items": [
+            {
+              "label": "HTML",
+              "value": "textContent/safe construction"
+            },
+            {
+              "label": "Objects",
+              "value": "block pollution keys"
+            },
+            {
+              "label": "Commands",
+              "value": "argument arrays; no shell concat"
+            },
+            {
+              "label": "Secrets",
+              "value": "never in browser bundle"
             }
           ]
         }
@@ -5983,170 +6068,234 @@
         "policy": "Use a supported stable release; verify the project lockfile before an interview exercise.",
         "current": "stable"
       },
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "mentalModel": "TypeScript statically checks a structural model of JavaScript and erases its types before runtime; soundness is traded for compatibility at explicit boundaries.",
       "learningPath": [
         {
           "level": "basic",
-          "title": "Foundations",
-          "objective": "Build a correct vocabulary and smallest working TypeScript program.",
+          "title": "Typed JavaScript foundations",
+          "objective": "Use TypeScript as a precise design and feedback tool without confusing its checks with runtime enforcement.",
           "topics": [
-            "installation and project shape",
-            "core syntax and data model",
-            "control flow and error handling",
-            "standard-library or platform primitives"
+            "JavaScript runtime prerequisites and TypeScript's erased compile-time role",
+            "inference, annotations, primitive, literal, array, tuple, function, and object types",
+            "strict null checks, optional properties, readonly views, and safe indexing",
+            "unions, intersections, aliases, interfaces, enums, and literal objects",
+            "strict tsconfig, type checking, emitting, source maps, testing, and editor diagnostics"
           ]
         },
         {
           "level": "intermediate",
-          "title": "Working fluency",
-          "objective": "Use TypeScript idiomatically in tested application code.",
+          "title": "Modeling and reusable constraints",
+          "objective": "Represent valid states and preserve useful relationships through APIs.",
           "topics": [
-            "module and dependency boundaries",
-            "testing and debugging workflow",
-            "I/O, persistence, and external integration",
-            "common idioms and maintainable structure"
+            "control-flow narrowing, discriminated unions, exhaustive checks, and user-defined guards",
+            "generics, constraints, keyof, indexed access, typeof, and inference",
+            "mapped, conditional, template-literal, and utility types",
+            "structural assignability, excess-property checks, function compatibility, and variance",
+            "ES modules, declaration files, package exports, and JavaScript interoperation"
           ]
         },
         {
           "level": "advanced",
-          "title": "Runtime and trade-offs",
-          "objective": "Explain how TypeScript behaves under memory, concurrency, and performance pressure.",
+          "title": "Compiler and library mechanics",
+          "objective": "Debug difficult type relationships, packaging failures, and large-build behavior.",
           "topics": [
-            "execution and memory model",
-            "concurrency and scheduling",
-            "profiling and performance limits",
-            "failure recovery and observability"
+            "distributive conditional types, infer, recursive types, and instantiation limits",
+            "variance, bivariance, unsound array mutation, assertions, and escape hatches",
+            "moduleResolution, target, module, lib, paths, package conditions, and declaration maps",
+            "project references, incremental builds, composite packages, API extraction, and compiler diagnostics",
+            "library authoring, overloads, declaration merging, semver, and public type tests"
           ]
         },
         {
           "level": "expert",
-          "title": "Production judgment",
-          "objective": "Defend TypeScript design choices and diagnose realistic failures.",
+          "title": "Trustworthy production boundaries",
+          "objective": "Keep compile-time guarantees aligned with changing runtime data and public contracts.",
           "topics": [
-            "security boundaries and threat model",
-            "compatibility and version upgrades",
-            "scaling and operational constraints",
-            "architecture trade-offs and interview cases"
+            "unknown input, parsers, schema validators, branded domain values, and trust boundaries",
+            "API evolution, versioned events, tolerant readers, migrations, and compatibility",
+            "JavaScript-to-TypeScript migration, strictness rollout, debt measurement, and ownership",
+            "type-level performance, readable diagnostics, stable inference, and abstraction budgets",
+            "security review, supply-chain types, generated clients, and end-to-end contract testing"
           ]
         }
       ],
       "theorySections": [
         {
-          "title": "Core abstraction",
-          "explanation": "TypeScript statically checks a structural model of JavaScript and erases its types before runtime; soundness is traded for compatibility at explicit boundaries. This overview establishes the nouns, lifecycle, and invariants that later examples must make concrete. It is not yet the complete editorial treatment for every subtopic in this technology.",
-          "plainEnglish": "Start by naming what TypeScript executes, what state it owns, and when that state begins and ends.",
-          "analogy": "Treat the runtime like a workshop: inputs arrive, named tools transform them, and an owner must clean up each resource.",
-          "analogyLimit": "Software can copy, share, or schedule state in ways a physical workshop cannot, so derive the actual guarantees from the runtime.",
-          "concreteExample": "Trace one TypeScript request from input validation through execution, output, failure, and cleanup.",
+          "title": "Erased structural types and assignability",
+          "explanation": "TypeScript checks whether one type can be assigned to another mainly by comparing their required structure. A value may satisfy an interface without declaring that it implements it. This enables flexible JavaScript interoperation, but identity-bearing concepts may need private members, unique symbols, or branded values. Types usually erase during emission, so a successful assignment proves only what the checker could infer about the source program, not what an external payload contains at runtime.",
+          "plainEnglish": "TypeScript mostly accepts a value when it has the required shape, then removes ordinary type information before the JavaScript runs.",
+          "analogy": "A blueprint inspector checks that a machine exposes the required controls, stamps the plan, and leaves; the running machine does not carry the inspector beside it.",
+          "analogyLimit": "Assignability includes deliberate unsound rules, private members can affect compatibility, and runtime validators or metadata can exist only when separately implemented.",
+          "concreteExample": "A plain object with id and name can satisfy a User interface without declaring it, but JSON claiming those fields still needs runtime validation.",
           "keyPoints": [
-            "Name the execution unit and its lifecycle.",
-            "Identify the state and invariant owned by each abstraction.",
-            "Separate specification guarantees from common implementation behavior."
+            "Structural compatibility asks whether required members and relationships exist.",
+            "Assignment compatibility is not mathematical subtyping and includes pragmatic rules.",
+            "Assertions change the checker's view but do not convert or validate a runtime value.",
+            "Use nominal-like brands only where confusing structurally identical values would be harmful."
           ]
         },
         {
-          "title": "Data, memory, and lifetime",
-          "explanation": "TypeScript programs move data through values, references, resources, or persisted representations. A strong explanation follows ownership and lifetime from creation through sharing, mutation, cleanup, and failure instead of relying on syntax alone.",
-          "plainEnglish": "Know who owns each value, who may change it, who can still see it, and who must release associated resources.",
-          "analogy": "Think of a library book: several people may know its catalogue number, but one policy controls loans, returns, and replacement.",
-          "analogyLimit": "Memory aliases can be copied instantly and may outlive lexical scopes, unlike a single physical book.",
-          "concreteExample": "Follow a database connection from pool checkout through query, exception, rollback, and guaranteed return to the pool.",
+          "title": "Narrowing, unions, and exhaustive modeling",
+          "explanation": "A union represents a value that may be one of several alternatives. Runtime checks such as typeof, instanceof, property tests, equality, truthiness, and discriminant comparison let control-flow analysis narrow the current possibility. A discriminated union gives every variant a stable literal tag, making invalid combinations harder to express. An exhaustive switch can route the remaining impossible branch to never so a newly added variant creates a useful compile-time failure.",
+          "plainEnglish": "A union lists the permitted alternatives, and runtime evidence lets the checker reduce that list along each control-flow path.",
+          "analogy": "Tagged folders enter a sorting desk; reading the folder's state label reveals which documents are valid inside, and an empty remainder proves every label was handled.",
+          "analogyLimit": "Mutable aliases, callbacks, getters, incorrect predicates, and assertions can invalidate the evidence after a check, unlike a sealed physical folder.",
+          "concreteExample": "Switching on result.kind narrows a success variant to its data and an error variant to its message; assigning the default branch to never exposes a newly added variant.",
           "keyPoints": [
-            "Trace allocation and cleanup.",
-            "Make aliasing and mutation explicit.",
-            "Treat resource lifetime separately from garbage-collected memory where applicable."
+            "Prefer one object union with a stable discriminant over unrelated optional fields.",
+            "Truthiness can accidentally discard valid zero, empty-string, or false variants.",
+            "A predicate annotation is a promise by its author and must match its runtime implementation.",
+            "Narrowing can be invalidated by mutation, aliases, callbacks, or an unchecked assertion."
           ]
         },
         {
-          "title": "Concurrency and I/O",
-          "explanation": "Concurrency in TypeScript must be derived from its runtime and host platform. Explain what can execute independently, how work waits, how cancellation and backpressure propagate, and which synchronization rule protects shared invariants.",
-          "plainEnglish": "Multiple tasks may make progress together, but shared state and limited downstream capacity still need explicit coordination.",
-          "analogy": "A restaurant can prepare several orders at once, yet it needs ticket ordering, limited ovens, and a rule for cancelled orders.",
-          "analogyLimit": "Computer scheduling and memory visibility have formal rules that human coordination analogies do not capture.",
-          "concreteExample": "Bound a worker queue, cancel work after the caller deadline, and protect the one invariant updated by competing tasks.",
+          "title": "Generics, inference, variance, and constraints",
+          "explanation": "A generic parameter represents a relationship that callers instantiate, not merely a placeholder to replace repeated any. Constraints specify capabilities while preserving more specific caller information. Inference gathers candidates from arguments, context, return use, and defaults. Variance describes how assignability changes when a generic argument changes: producers tend to be covariant, consumers contravariant under strict function checking, and mutable producer-consumers require invariance for full soundness.",
+          "plainEnglish": "Generics preserve a relationship between several type positions, constraints state the abilities required, and variance explains whether that relationship remains safe through assignment.",
+          "analogy": "A configurable manufacturing jig accepts any material meeting its strength requirement and remembers that material from the input part to the matching output part.",
+          "analogyLimit": "Inference has contextual rules, conditional types may distribute, and mutable inputs and outputs create soundness questions that a physical jig does not express.",
+          "concreteExample": "get<T, K extends keyof T>(object, key): T[K] accepts only real keys and returns the value type associated with the particular selected key.",
           "keyPoints": [
-            "Distinguish concurrency from parallelism.",
-            "State the ordering or synchronization guarantee.",
-            "Bound queues, retries, and resource use."
+            "Introduce a type parameter only when multiple positions share a meaningful relationship.",
+            "A constraint limits acceptable types but does not turn the value into only the constraint.",
+            "keyof and indexed access preserve the relationship between an object's keys and values.",
+            "Mutable arrays and method parameter bivariance expose deliberate soundness trade-offs."
           ]
         },
         {
-          "title": "Production behavior",
-          "explanation": "A production TypeScript system is evaluated through tests, diagnostics, performance evidence, security boundaries, compatible changes, and recovery. Convenient abstractions are useful only when their hidden cost and failure signals remain observable.",
-          "plainEnglish": "A feature is not finished when it works once; it must remain explainable, safe, measurable, and recoverable under failure.",
-          "analogy": "A bridge needs load limits, inspections, warning signs, and repair plans in addition to a successful first crossing.",
-          "analogyLimit": "Software can be rolled back or replicated quickly, but data compatibility and external effects may make recovery irreversible.",
-          "concreteExample": "Release to a small cohort, watch latency and error budgets, verify data compatibility, and keep a tested rollback trigger.",
+          "title": "Object types, excess properties, and soundness boundaries",
+          "explanation": "An object type states the minimum readable and writable surface expected at a program point. Structural assignment normally allows extra members, but a fresh object literal receives an excess-property check to catch likely misspellings; assigning the same value through a variable can be accepted. Optional, readonly, index signatures, methods, and function properties carry different compatibility consequences. TypeScript intentionally permits several unsound patterns to remain usable with common JavaScript code.",
+          "plainEnglish": "An object type usually states the minimum required surface; a fresh literal gets an extra spelling check, but that does not make every object exact or deeply immutable.",
+          "analogy": "Admission requires a minimum checklist, while a newly submitted form is also scanned for suspicious unexpected boxes that may be typos.",
+          "analogyLimit": "The scan applies only in selected fresh-literal contexts, readonly is a view, and index signatures, callbacks, arrays, and declarations expose additional compatibility rules.",
+          "concreteExample": "Passing { name: 'Ada', nmae: 'typo' } directly can trigger an excess-property error, while a variable containing name plus other legitimate data can satisfy { name: string }.",
           "keyPoints": [
-            "Measure before optimizing.",
-            "Validate untrusted boundaries and use least privilege.",
-            "Design rollback, migration, and failure diagnosis with the feature."
+            "Excess-property checking is a targeted fresh-literal diagnostic, not exact object typing.",
+            "readonly prevents writes through one view and is not deep runtime immutability.",
+            "An index signature must account for every compatible explicitly named property.",
+            "noUncheckedIndexedAccess models the possibility that a key or array position is absent."
+          ]
+        },
+        {
+          "title": "Modules, declaration files, and build topology",
+          "explanation": "A TypeScript module participates in both a type graph and a runtime module graph. Declaration files describe runtime values and type-only constructs but do not implement them. Compiler options for module syntax and resolution must match the loader, bundler, package exports, and file extensions actually used. Project references divide large builds into declared dependency units and reusable declaration outputs, but they require an acyclic, correctly published topology.",
+          "plainEnglish": "TypeScript builds a static map over JavaScript modules, but the runtime loader, emitted files, declarations, and package exports must all agree for the application to work.",
+          "analogy": "A transit planning map can describe valid routes, yet trains still fail if the real tracks, station names, and timetables were built differently.",
+          "analogyLimit": "ESM and CommonJS semantics, conditional exports, file extensions, bundlers, project references, and incremental caches are more dynamic than one printed map.",
+          "concreteExample": "A paths alias may give perfect editor completion and pass tsc, then fail in Node.js because the emitted import still contains an alias the loader does not recognize.",
+          "keyPoints": [
+            "paths helps the compiler resolve names but does not automatically rewrite runtime imports.",
+            "import type makes type-only intent explicit and prevents accidental runtime dependencies.",
+            "A .d.ts file can lie; test it against the JavaScript implementation and consumer configurations.",
+            "Package exports, types entries, conditions, and emitted files must describe one coherent public surface."
+          ]
+        },
+        {
+          "title": "Runtime validation and API evolution",
+          "explanation": "External data begins as unknown because the compiler did not create or observe it. A parser or schema validator must prove required structure and domain constraints, then return a trusted application type or a structured error. Public APIs and stored events evolve over time, so validation is coupled with versioning, migrations, compatibility rules, and observability. Types help propagate a validated contract inside the program; they cannot substitute for boundary enforcement.",
+          "plainEnglish": "Data crossing a network, storage, message, environment, or user boundary is unknown until runtime code validates it, and that validation must evolve with every producer and consumer.",
+          "analogy": "Passport control verifies a traveler's current documents at the border; a name printed on an internal itinerary cannot replace that check.",
+          "analogyLimit": "Validation is only a snapshot: authorization, semantic relationships, version skew, migrations, and malicious behavior require continuing policy beyond shape checking.",
+          "concreteExample": "Parse a payment event's version, currency, integer amount, identifier format, and allowed state transition before constructing the trusted PaymentEvent used by business code.",
+          "keyPoints": [
+            "Parse rather than cast at network, storage, environment, message, and user-input boundaries.",
+            "Validation must include semantic constraints such as ranges, formats, relationships, and authorization context.",
+            "Prefer additive changes and tolerant readers when compatibility policy permits them.",
+            "Keep schema, generated types, runtime validator, documentation, and deployed producer versions aligned."
           ]
         }
       ],
       "misconceptions": [
         {
-          "claim": "TypeScript best practices are universal rules.",
-          "correction": "Practices are responses to constraints; state the workload, invariant, and trade-off before applying one.",
-          "whyItHappens": "Interview summaries often omit the forces that justify a recommendation."
+          "claim": "TypeScript validates API responses at runtime.",
+          "correction": "Ordinary types erase; parse unknown response data with runtime validation before assigning trusted domain types.",
+          "whyItHappens": "Editor completion and successful compilation feel like evidence about data the compiler never observed."
         },
         {
-          "claim": "A successful TypeScript build proves runtime correctness.",
-          "correction": "Build-time checks cover only declared contracts; runtime inputs, integration, resource limits, and concurrency still need evidence.",
-          "whyItHappens": "Fast local feedback is confused with end-to-end behavior."
+          "claim": "If TypeScript compiles, the program is type-safe.",
+          "correction": "The language includes assertions, any, unchecked indexing, mutable variance, inaccurate declarations, and other pragmatic soundness boundaries.",
+          "whyItHappens": "Type checking is confused with a formal proof over every runtime input and dependency."
         },
         {
-          "claim": "The most concise TypeScript API is automatically the most efficient.",
-          "correction": "Abstractions can hide allocation, I/O, network calls, queries, synchronization, or retries; inspect and measure the execution path.",
-          "whyItHappens": "Source-code size is used as a proxy for work performed."
+          "claim": "Interfaces are always better than type aliases, or vice versa.",
+          "correction": "Both model object shapes; interfaces support declaration merging and extension conventions, while aliases compose unions, primitives, tuples, and conditional forms. Choose from the contract and project policy.",
+          "whyItHappens": "Style rules are repeated as language semantics."
         },
         {
-          "claim": "Adding parallelism always speeds up TypeScript workloads.",
-          "correction": "Useful parallelism is bounded by dependencies and resources; coordination, contention, queueing, and downstream limits can reduce throughput.",
-          "whyItHappens": "Available threads or workers are mistaken for additional system capacity."
+          "claim": "A type assertion converts the value.",
+          "correction": "as changes only the static view and emits no conversion or validation; use a parser or an explicit runtime transformation.",
+          "whyItHappens": "Assertion syntax resembles casts in languages where conversion may occur."
+        },
+        {
+          "claim": "private protects a secret at runtime.",
+          "correction": "TypeScript private is chiefly a compile-time access restriction; use JavaScript #private for runtime field privacy, and never depend on either for secrets exposed to an untrusted process or client.",
+          "whyItHappens": "Encapsulation and security boundaries are treated as identical."
+        },
+        {
+          "claim": "tsconfig paths makes aliases work everywhere.",
+          "correction": "paths guides TypeScript resolution; the runtime, test runner, bundler, and published package must independently understand or transform the same specifier.",
+          "whyItHappens": "A green editor import is mistaken for a loader guarantee."
         }
       ],
       "revisionChecklist": [
-        "Explain the TypeScript mental model without product slogans.",
-        "Name core types, lifecycle, invariants, and boundary conditions.",
-        "Trace one request or program from input through execution to output and cleanup.",
-        "State memory ownership, mutation, and resource-lifetime rules.",
-        "Explain concurrency, ordering, cancellation, and backpressure behavior.",
-        "Choose a test boundary and demonstrate an unhappy-path case.",
-        "Use one diagnostic tool and interpret its evidence.",
-        "Name a performance bottleneck, security risk, upgrade risk, and rollback path."
+        "Explain erasure, structural assignability, assertions, any, unknown, never, and the limits of static guarantees.",
+        "Model state with literal types, discriminated unions, precise optionality, and exhaustive never checks.",
+        "Use typeof, instanceof, in, equality, predicates, and assertion functions without unsafe truthiness shortcuts.",
+        "Design generics that preserve real input-output, key-value, producer-consumer, or container-element relationships.",
+        "Reason about covariance, contravariance, invariance, bivariance, mutable arrays, and strictFunctionTypes.",
+        "Distinguish object shape checks, excess-property checks, exactness, readonly views, and runtime immutability.",
+        "Explain mapped, conditional, distributive, template-literal, and infer-based types with a readable stopping point.",
+        "Align target, lib, module, moduleResolution, paths, file extensions, package exports, and the real loader.",
+        "Validate unknown boundaries and evolve schemas, declarations, generated types, stored data, and APIs together.",
+        "Use checker traces, emitted JavaScript, declaration output, type tests, compiler metrics, and consumer fixtures for diagnosis."
       ],
       "setup": [
-        "Install from the official distribution or package manager.",
-        "Pin runtime and dependency versions in project metadata.",
-        "Run version, build, and test checks before changing code."
+        "Install a supported Node.js release and project-local TypeScript compiler; pin both through the package manifest and lockfile.",
+        "Start from a strict tsconfig and choose target, module, moduleResolution, lib, rootDir, and outDir deliberately for the actual runtime.",
+        "Run tsc --noEmit as a separate correctness check even when a transpiler such as Babel, SWC, or esbuild emits JavaScript.",
+        "Enable exactOptionalPropertyTypes and noUncheckedIndexedAccess when the team accepts their more accurate models, then fix findings rather than casting them away.",
+        "Verify one source import, one emitted or bundled artifact, one runtime launch, one declaration consumer, and one source-mapped test before scaling the project."
       ],
       "runtime": [
-        "Name the execution unit and its lifecycle.",
-        "Trace allocation, scheduling, I/O, and cleanup.",
-        "Separate language or framework guarantees from implementation behavior."
+        "TypeScript parses and checks a superset of JavaScript, then emits JavaScript; ordinary types are erased and do not inspect network, storage, or user input at runtime.",
+        "Its type system is mainly structural: compatibility depends on members and relationships rather than a declared nominal ancestry, with deliberate pragmatic unsoundness.",
+        "Control-flow analysis narrows values from checks, assignments, reachability, discriminants, and predicates, but mutation and aliasing can invalidate human assumptions.",
+        "target controls emitted JavaScript syntax, lib controls assumed platform declarations, module controls emitted module syntax, and moduleResolution controls how imports are found.",
+        "The JavaScript engine, browser, or server ultimately decides execution, memory, concurrency, exceptions, and security behavior."
       ],
       "testing": [
-        "Test one behavior at the smallest stable boundary.",
-        "Keep deterministic unit tests separate from integration and end-to-end checks."
+        "Test runtime behavior normally; type annotations do not replace assertions for values, effects, errors, time, persistence, or integration behavior.",
+        "Add compile-time type tests for public inference, accepted calls, and intentionally rejected calls, especially for a reusable library.",
+        "Validate unknown external data at runtime and test malformed, missing, extra, stale, and version-skewed payloads.",
+        "Run consumer fixtures across supported compiler and runtime versions so declaration files and package exports are tested as users encounter them."
       ],
       "debugging": [
-        "Reproduce with the smallest input and capture the first bad state.",
-        "Use structured logs, breakpoints, traces, or query plans before guessing."
+        "Separate a TypeScript checker error, emitted-JavaScript failure, module-resolution failure, declaration-packaging failure, and editor cache problem before changing types.",
+        "Use tsc --noEmit, --traceResolution, --showConfig, --extendedDiagnostics, and declaration output to inspect the compiler's actual inputs and decisions.",
+        "Reduce a complex error to the smallest assignability relationship and name intermediate types rather than stacking more assertions.",
+        "Inspect generated JavaScript and source maps when decorators, class fields, async lowering, imports, or target-specific helpers affect runtime behavior.",
+        "For performance, measure file counts, graph structure, declaration complexity, instantiation count, and incremental invalidation instead of blaming all generics."
       ],
       "performance": [
-        "Measure latency, throughput, allocation, and contention before optimizing.",
-        "State the trade-off introduced by every cache, batch, pool, or parallel path."
+        "Type annotations normally have no runtime cost because they erase, but emitted helpers, polyfills, decorators, validation, and chosen target can change payload and execution cost.",
+        "Prefer understandable type relationships over clever recursive computation; editor latency and diagnostic clarity are user-facing performance.",
+        "Use project references and clear package boundaries for large graphs, while avoiding cycles and overly broad barrel exports that enlarge invalidation.",
+        "Profile the emitted JavaScript for runtime performance and the compiler separately for type-check performance."
       ],
       "security": [
-        "Validate untrusted input at the boundary and use least privilege.",
-        "Keep secrets out of source, logs, command history, and generated artifacts."
+        "Treat all external values as unknown until a runtime parser validates structure, constraints, and domain meaning; an assertion is not a security check.",
+        "Do not expose secrets because an interface calls a field private or because server-only source has types; emitted bundles and runtime boundaries decide exposure.",
+        "Review generated clients, declaration packages, transformers, plugins, and compiler or package scripts as executable supply-chain inputs.",
+        "Preserve context-specific protections against HTML, query, command, path, URL, and object-merge injection after narrowing a value to string or object."
       ],
       "failureModes": [
-        "Using an unsupported or mismatched version.",
-        "Hiding an expensive operation behind a convenient abstraction.",
-        "Handling only the happy path while losing context from failures."
+        "A type assertion silences evidence while the incompatible runtime value remains unchanged.",
+        "any enters through a dependency, generated file, catch path, JSON helper, or unchecked index and disables useful checking downstream.",
+        "A union lacks a stable discriminant, so combinations that should be impossible remain representable or narrowing becomes fragile.",
+        "Compiler paths or aliases resolve during checking but are not rewritten or understood by the production runtime.",
+        "Mutable arrays, callbacks, or indexed access exploit a soundness boundary and permit a value that the static surface appears to forbid.",
+        "A declaration file, package export, runtime artifact, and documented support policy describe different public APIs."
       ],
       "commandIds": [
         "typescript-command-1",
@@ -6164,209 +6313,230 @@
       ],
       "workedExamples": [
         {
-          "title": "Smallest working slice",
+          "title": "Make state transitions exhaustive",
           "language": "TypeScript",
-          "code": "// TypeScript: express the smallest complete program and make ownership explicit.",
-          "explanation": "Start with the execution model, then introduce abstractions only when they preserve a named invariant."
+          "code": "type Job =\n  | { state: \"queued\"; position: number }\n  | { state: \"running\"; startedAt: Date }\n  | { state: \"failed\"; error: Error }\n  | { state: \"done\"; result: string };\n\nfunction assertNever(value: never): never {\n  throw new Error(`Unhandled job: ${JSON.stringify(value)}`);\n}\n\nfunction label(job: Job): string {\n  switch (job.state) {\n    case \"queued\": return `#${job.position}`;\n    case \"running\": return job.startedAt.toISOString();\n    case \"failed\": return job.error.message;\n    case \"done\": return job.result;\n    default: return assertNever(job);\n  }\n}",
+          "explanation": "The discriminant connects each state to exactly its valid fields. Adding another variant makes the default branch receive a non-never value, so the compiler identifies every switch that needs a policy."
         },
         {
-          "title": "Boundary made explicit",
+          "title": "Validate unknown data before trust",
           "language": "TypeScript",
-          "code": "// TypeScript: express the smallest complete program and make ownership explicit.\n// validate input and surface a useful failure",
-          "explanation": "Move validation to the boundary so failures remain local and observable."
+          "code": "type Port = number & { readonly __brand: unique symbol };\n\nfunction parsePort(value: unknown): Port {\n  if (typeof value !== \"number\" || !Number.isInteger(value) || value < 1 || value > 65535) {\n    throw new TypeError(\"port must be an integer from 1 to 65535\");\n  }\n  return value as Port;\n}\n\nconst port = parsePort(JSON.parse(\"8080\"));",
+          "explanation": "Unknown forces the boundary to prove both representation and domain constraints. The assertion is safe only after the runtime checks; the brand then prevents an arbitrary number from being reused as a validated Port inside checked code."
         },
         {
-          "title": "Testable production shape",
+          "title": "Preserve the key-to-value relationship",
           "language": "TypeScript",
-          "code": "// TypeScript: express the smallest complete program and make ownership explicit.\n// inject dependencies; measure the result; cover the unhappy path",
-          "explanation": "Separate policy from side effects, then test the contract rather than the implementation detail."
+          "code": "function get<T extends object, K extends keyof T>(object: T, key: K): T[K] {\n  return object[key];\n}\n\nconst config = { retries: 3, mode: \"safe\" as const };\nconst retries = get(config, \"retries\"); // number\nconst mode = get(config, \"mode\");       // \"safe\"\n// get(config, \"timeout\");             // compile-time error",
+          "explanation": "K is constrained to the actual keys of T, and T[K] preserves the value type associated with the selected key. Replacing the signature with string and any would discard both relationships."
         }
       ],
       "questions": [
         {
-          "prompt": "TypeScript: Explain the runtime model without using framework slogans.",
+          "prompt": "Compare any, unknown, and never.",
           "difficulty": "easy",
-          "answer": "Start from the execution unit, state lifecycle, inputs, state, scheduling, outputs, and cleanup; then separate specified guarantees from one implementation.",
-          "whyTricky": "Fluent API usage can hide a weak execution model.",
+          "answer": "any opts out of useful checking and spreads unsafety. unknown can hold any value but requires narrowing before use. never represents no possible value, appears in unreachable or non-returning paths, and supports exhaustiveness checks.",
+          "whyTricky": "All three are loosely called special top or bottom types without connecting them to safe operations.",
           "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
+            "Describes any as an escape hatch.",
+            "Requires narrowing for unknown.",
+            "Explains never as impossible or exhaustive."
           ]
         },
         {
-          "prompt": "TypeScript: Which guarantees belong to the specification and which to the implementation?",
+          "prompt": "Why can a typed fetch call still return an invalid User?",
+          "difficulty": "easy",
+          "answer": "The annotation or generic does not inspect bytes returned by the server. JSON parsing returns runtime data whose structure and domain constraints may differ. Receive it as unknown, validate it with a parser or schema, and only then expose a trusted User.",
+          "whyTricky": "A generic API such as fetchJson<User> can make an assertion look like validation.",
+          "rubric": [
+            "Mentions erasure or lack of runtime inspection.",
+            "Starts external data as unknown.",
+            "Requires runtime structural and semantic validation."
+          ]
+        },
+        {
+          "prompt": "Why can an object with extra fields be assigned to a smaller interface, but the same object literal may get an error?",
           "difficulty": "medium",
-          "answer": "Name each relied-on behavior, cite whether it is contractual, and explain how version or implementation changes would affect it.",
-          "whyTricky": "Familiar behavior is often mistaken for a portable guarantee.",
+          "answer": "Structural assignment requires at least the target members and generally permits extras. Fresh object literals receive an excess-property check intended to catch misspellings or mistaken fields. That diagnostic is not exact-object semantics and can disappear through an intermediate variable.",
+          "whyTricky": "The fresh-literal check is mistaken for a universal rule that extra properties are forbidden.",
           "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
+            "Explains structural minimum shape.",
+            "Names the fresh-literal excess check.",
+            "States it is not exact typing."
           ]
         },
         {
-          "prompt": "TypeScript: Design a minimal test pyramid for a production feature.",
-          "difficulty": "medium",
-          "answer": "Use deterministic unit tests for policy, integration tests for real boundaries, a few end-to-end journeys, and contract or property tests where interfaces or invariants need them.",
-          "whyTricky": "Test labels are less important than stable boundaries and failure coverage.",
-          "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
-          ]
-        },
-        {
-          "prompt": "TypeScript: Diagnose a latency regression using evidence rather than guesses.",
+          "prompt": "How can narrowing become unsafe after a callback or mutation?",
           "difficulty": "hard",
-          "answer": "Reproduce under comparable load, decompose the latency budget, inspect traces and resource saturation, profile the constrained stage, change one cause, and verify tail as well as median latency.",
-          "whyTricky": "Average timing and correlation frequently produce false diagnoses.",
+          "answer": "A check describes a value at one control-flow point. An alias, property write, callback, getter, or external code may change the value before later use, and the compiler cannot model every effect. Copy stable data, narrow close to use, avoid mutable shared state, and validate again at untrusted boundaries.",
+          "whyTricky": "Narrowing is imagined as a permanent runtime seal on the value.",
           "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
+            "Locates narrowing at a control-flow point.",
+            "Names mutation or aliasing effects.",
+            "Gives an ownership or revalidation remedy."
           ]
         },
         {
-          "prompt": "TypeScript: Name three failure modes and the signal that reveals each one.",
-          "difficulty": "medium",
-          "answer": "Choose distinct correctness, resource, and integration failures and pair each with an observable log, metric, trace, state inspection, or failed invariant.",
-          "whyTricky": "Generic failure lists without discriminating evidence are not actionable.",
-          "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
-          ]
-        },
-        {
-          "prompt": "TypeScript: How do memory, concurrency, and I/O interact here?",
+          "prompt": "Explain covariance, contravariance, and why mutable arrays are problematic.",
           "difficulty": "hard",
-          "answer": "Trace allocation and ownership across scheduled work and blocking or asynchronous boundaries, including queues, buffering, cancellation, cleanup, and backpressure.",
-          "whyTricky": "These resources are usually taught separately even though production failures couple them.",
+          "answer": "A producer of T is safely covariant, while a consumer is safely contravariant. A mutable array both returns and accepts T, so full soundness calls for invariance. TypeScript permits familiar covariant-looking array assignment in cases that can allow writing an incompatible subtype; readonly arrays remove the consumer operation and are safer.",
+          "whyTricky": "Variance is memorized as symbols without connecting it to read and write operations.",
           "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
+            "Relates covariance to output.",
+            "Relates contravariance to input.",
+            "Shows the mutable array write hazard and readonly remedy."
           ]
         },
         {
-          "prompt": "TypeScript: What is the safest upgrade path between supported versions?",
-          "difficulty": "medium",
-          "answer": "Read compatibility notes, pin inputs, test representative behavior, stage the rollout, observe agreed signals, retain rollback, and migrate data or APIs in compatible phases.",
-          "whyTricky": "A green build does not prove behavioral or operational compatibility.",
-          "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
-          ]
-        },
-        {
-          "prompt": "TypeScript: Sketch a secure deployment and rollback strategy.",
+          "prompt": "When do conditional types distribute over unions?",
           "difficulty": "hard",
-          "answer": "Define identities, least privilege, secret delivery, trusted artifacts, input boundaries, audit signals, staged rollout, compatibility window, rollback trigger, and recovery verification.",
-          "whyTricky": "Deployment safety spans code, identity, data, and operational state.",
+          "answer": "A conditional with a naked type parameter on the checked side, such as T extends U ? X : Y, distributes when T is a union. Each member is evaluated and results are united. Wrapping both sides in one-element tuples suppresses distribution when the union must be tested as a whole.",
+          "whyTricky": "A conditional type is read as one runtime if statement rather than type-level instantiation over union members.",
           "rubric": [
-            "Defines the relevant mechanism and invariant.",
-            "Uses a concrete example and names a trade-off.",
-            "Includes a failure signal or verification method."
+            "Names the naked type parameter condition.",
+            "Explains member-wise evaluation.",
+            "Shows tuple wrapping to prevent distribution."
+          ]
+        },
+        {
+          "prompt": "Type alias or interface: how do you choose without slogans?",
+          "difficulty": "medium",
+          "answer": "Use either for ordinary object contracts according to local convention. Prefer an interface when open declaration merging or an extendable public object contract is intended. Use a type alias for unions, primitives, tuples, mapped or conditional compositions. Avoid accidental merging and optimize for a stable, readable API.",
+          "whyTricky": "Teams promote a stylistic default into a false semantic hierarchy.",
+          "rubric": [
+            "Acknowledges shared object-shape capability.",
+            "Mentions declaration merging or extension.",
+            "Mentions non-object composition for aliases."
+          ]
+        },
+        {
+          "prompt": "Why can an import pass tsc but fail in Node.js?",
+          "difficulty": "medium",
+          "answer": "The checker may resolve through paths, declarations, source extensions, or a moduleResolution mode that the runtime loader does not share. Verify emitted specifiers, package type, file extensions, exports conditions, installed artifacts, and Node's ESM or CommonJS rules. Configure the toolchain around one real runtime contract.",
+          "whyTricky": "Module resolution and module execution are treated as a single compiler feature.",
+          "rubric": [
+            "Separates checker resolution from runtime loading.",
+            "Names paths or emitted specifiers.",
+            "Checks package and loader configuration."
           ]
         }
       ],
       "flashcards": [
         {
-          "front": "TypeScript: core mental model",
-          "back": "TypeScript statically checks a structural model of JavaScript and erases its types before runtime; soundness is traded for compatibility at explicit boundaries."
+          "front": "Type erasure",
+          "back": "Ordinary TypeScript types are removed from emitted JavaScript and do not validate runtime input."
         },
         {
-          "front": "TypeScript: first debugging move",
-          "back": "Reproduce narrowly and inspect the first incorrect state."
+          "front": "Structural typing",
+          "back": "Compatibility primarily follows required members and relationships, not a declared nominal identity."
         },
         {
-          "front": "TypeScript: performance rule",
-          "back": "Measure the constrained resource before changing the design."
+          "front": "unknown",
+          "back": "A safe top type: any value may enter, but operations require narrowing first."
         },
         {
-          "front": "TypeScript: security rule",
-          "back": "Treat input and identity as untrusted until validated at a boundary."
+          "front": "never",
+          "back": "The impossible type, useful for unreachable paths and exhaustive union checks."
         },
         {
-          "front": "TypeScript: concurrency rule",
-          "back": "Name the shared invariant, its owner, and the ordering mechanism."
+          "front": "Discriminated union",
+          "back": "A union whose variants have a stable literal tag connected to their valid fields."
         },
         {
-          "front": "TypeScript: testing rule",
-          "back": "Test behavior at the smallest stable boundary and include the unhappy path."
+          "front": "Generic constraint",
+          "back": "Limits capabilities required of a type parameter while preserving caller-specific information."
         },
         {
-          "front": "TypeScript: upgrade rule",
-          "back": "Pin, read compatibility notes, stage, observe, and keep a tested rollback."
+          "front": "Excess-property check",
+          "back": "A fresh-object-literal diagnostic for likely mistakes; it is not exact object typing."
         },
         {
-          "front": "TypeScript: interview frame",
-          "back": "Model → invariant → mechanism → example → trade-off → failure signal."
+          "front": "paths",
+          "back": "Compiler resolution mapping that does not itself rewrite or teach the runtime to load an alias."
         }
       ],
       "cheatsheet": [
         {
-          "title": "Learning path",
+          "title": "Safety ladder",
           "items": [
             {
-              "label": "Basic",
-              "value": "syntax + data + lifecycle"
+              "label": "unknown",
+              "value": "narrow before use"
             },
             {
-              "label": "Intermediate",
-              "value": "idioms + tests + integration"
+              "label": "guard",
+              "value": "runtime check + predicate"
             },
             {
-              "label": "Advanced",
-              "value": "runtime + concurrency + performance"
+              "label": "parser",
+              "value": "validate or return error"
             },
             {
-              "label": "Expert",
-              "value": "security + operations + trade-offs"
+              "label": "as",
+              "value": "static claim only"
             }
           ]
         },
         {
-          "title": "Interview frame",
+          "title": "Modeling",
           "items": [
             {
-              "label": "Explain",
-              "value": "model → invariant → mechanism"
+              "label": "Union",
+              "value": "one of alternatives"
             },
             {
-              "label": "Prove",
-              "value": "example → boundary → counterexample"
+              "label": "Intersection",
+              "value": "all combined obligations"
             },
             {
-              "label": "Compare",
-              "value": "workload → trade-off → failure"
+              "label": "never",
+              "value": "exhaustive remainder"
             },
             {
-              "label": "Debug",
-              "value": "reproduce → observe → isolate → verify"
+              "label": "Brand",
+              "value": "nominal-like domain marker"
             }
           ]
         },
         {
-          "title": "Production frame",
+          "title": "Generics",
           "items": [
             {
-              "label": "Ship",
-              "value": "pin → build → test → stage → observe"
+              "label": "extends",
+              "value": "capability constraint"
             },
             {
-              "label": "Secure",
-              "value": "identity → least privilege → validate → audit"
+              "label": "keyof T",
+              "value": "known property keys"
             },
             {
-              "label": "Scale",
-              "value": "measure → bound → backpressure → recover"
+              "label": "T[K]",
+              "value": "value for selected key"
             },
             {
-              "label": "Upgrade",
-              "value": "compatibility → migration → rollback"
+              "label": "readonly",
+              "value": "remove writes through view"
+            }
+          ]
+        },
+        {
+          "title": "Build",
+          "items": [
+            {
+              "label": "target",
+              "value": "emitted JS level"
+            },
+            {
+              "label": "lib",
+              "value": "assumed platform APIs"
+            },
+            {
+              "label": "module",
+              "value": "emitted module form"
+            },
+            {
+              "label": "moduleResolution",
+              "value": "import lookup rules"
             }
           ]
         }

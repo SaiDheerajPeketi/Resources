@@ -30,7 +30,7 @@ for (const technology of technologies) {
   for (const id of technology.prerequisites) if (!technologyIds.has(id)) errors.push(`Technology ${technology.id} references unknown prerequisite ${id}.`);
 }
 const completeTechnologyIds = new Set(technologies.filter((technology) => technology.depthStatus === "complete").map((technology) => technology.id));
-for (const id of ["java", "cpp", "python", "oop-and-lld", "dbms", "operating-systems", "computer-networks"]) if (!completeTechnologyIds.has(id)) errors.push(`Core depth manual ${id} is not marked complete.`);
+for (const id of ["java", "cpp", "python", "javascript", "typescript", "oop-and-lld", "dbms", "operating-systems", "computer-networks"]) if (!completeTechnologyIds.has(id)) errors.push(`Core depth manual ${id} is not marked complete.`);
 const patternIds = new Set(dsaPatterns.map((item) => item.id));
 const problemIds = new Set(dsaProblems.map((item) => item.id));
 for (const problem of dsaProblems) {

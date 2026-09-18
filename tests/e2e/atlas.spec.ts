@@ -145,6 +145,12 @@ test("Stack Workbench opens a complete technology manual", async ({ page }) => {
   await expect(page.getByText("full-depth manual")).toBeVisible();
   await expect(page.getByRole("heading", { name: "RAII and deterministic resource management" })).toBeVisible();
   await page.goto("/technologies/javascript/");
+  await expect(page.getByText("full-depth manual")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Event loop, jobs, tasks, and asynchronous control flow" })).toBeVisible();
+  await page.goto("/technologies/typescript/");
+  await expect(page.getByText("full-depth manual")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Erased structural types and assignability" })).toBeVisible();
+  await page.goto("/technologies/go/");
   await expect(page.getByText("Editorial expansion in progress")).toBeVisible();
 });
 

@@ -2634,7 +2634,7 @@
     "ecosystem": "javascript",
     "level": "foundation",
     "publicationStatus": "published",
-    "depthStatus": "overview",
+    "depthStatus": "complete",
     "roleIds": [
       "sde",
       "backend",
@@ -2651,7 +2651,7 @@
     "ecosystem": "javascript",
     "level": "foundation",
     "publicationStatus": "published",
-    "depthStatus": "overview",
+    "depthStatus": "complete",
     "roleIds": [
       "sde",
       "backend",
