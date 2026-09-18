@@ -14,8 +14,8 @@ export function ProblemSolution({ problemId, languages }: { problemId: string; l
     const module = next === "cpp17" ? await import("@/data/solutions/cpp17") : next === "java" ? await import("@/data/solutions/java") : next === "python" ? await import("@/data/solutions/python") : await import("@/data/solutions/typescript");
     setVariant(module.solutions[problemId]); setLoading(false);
   }
-  return <section className="problem-solution"><header><h2>Implementation scaffold</h2><div role="group" aria-label="Solution language">{languages.map((item) => <button key={item} className={language === item ? "is-active" : ""} onClick={() => load(item)}>{labels[item]}</button>)}</div></header>
+  return <section className="problem-solution"><header><div><h2>{variant?.completeness === "porting-blueprint" ? "Porting blueprint" : "Reference implementation"}</h2>{variant && <span className={`solution-status ${variant.completeness}`}>{variant.completeness === "reference" ? "Reviewed solution" : "Blueprint · solution pending"}</span>}</div><div role="group" aria-label="Solution language">{languages.map((item) => <button key={item} className={language === item ? "is-active" : ""} onClick={() => load(item)}>{labels[item]}</button>)}</div></header>
     {!variant && <button className="primary-action" onClick={() => load(language)}>Load {labels[language]} artifact</button>}
-    {loading ? <p>Loading the language-specific artifact…</p> : variant && <><pre><code>{variant.source}</code></pre><p>{variant.complexity}</p></>}
+    {loading ? <p>Loading the language-specific artifact…</p> : variant && <>{variant.completeness === "porting-blueprint" && <p className="blueprint-notice">This tab is an honest language-porting guide, not a finished solution. Use the reviewed C++17 tab where available while this port is authored and verified.</p>}<pre><code>{variant.source}</code></pre><p>{variant.complexity}</p></>}
   </section>;
 }

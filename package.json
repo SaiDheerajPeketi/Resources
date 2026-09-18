@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "next dev --webpack",
-    "prebuild": "npm run validate:content && node --import tsx scripts/generate-manifests.ts",
+    "prebuild": "npm run validate:content && npm run validate:cpp && node --import tsx scripts/generate-manifests.ts",
     "build": "next build --webpack && pagefind --site out",
     "start": "npx serve out",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "validate:content": "node --import tsx scripts/validate-content.ts"
+    "validate:content": "node --import tsx scripts/validate-content.ts",
+    "validate:cpp": "node --import tsx scripts/validate-cpp-solutions.ts"
   },
   "dependencies": {
     "@fontsource-variable/atkinson-hyperlegible-next": "^5.3.0",

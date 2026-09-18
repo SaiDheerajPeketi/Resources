@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r17",
+  "version": "2026.09.18-r18",
   "edges": [
     {
       "id": "foundations/complexity-analysis->foundations/arrays-and-strings:prerequisite",

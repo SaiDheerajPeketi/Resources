@@ -234,6 +234,8 @@ Full-depth manuals use a visible basic-to-expert learning ladder, numbered theor
 
 Sheets and problem inventories use dense ruled rows with stable problem numbers, pattern, difficulty, estimated time, solution-language availability, a non-color progress label, and an explicit external practice destination. The Atlas title remains the internal explanation link; a separate restrained control opens the verified LeetCode match or labelled GFG fallback. Filters sit above the ledger and do not detach results from their sheet context.
 
+Every row also carries a written lesson-depth label. A full problem page moves from exact contract and worked trace through analogy, baseline, optimal method, invariant proof, complexity, misconceptions, follow-ups, and reviewed reference code. Unreviewed language ports are visibly labelled blueprints and never presented as finished solutions.
+
 ## Do's and Don'ts
 
 ### Do:

@@ -1,5 +1,6 @@
 import { DSAPatternSchema, DSAProblemSchema, DSASheetSchema, type DSAProblem } from "@/lib/schema";
 import { getDsaPracticeTarget } from "@/data/dsa-practice";
+import { buildDsaDepth } from "@/data/dsa-depth";
 
 const patternSeeds = [
   ["hashing", "Hash maps and sets", "Trade memory for direct access to facts seen so far.", ["membership or frequency", "pair or grouping lookup"]],
@@ -133,30 +134,24 @@ const problemTitles: Record<string, string[]> = {
 };
 
 const difficulty = (position: number) => position < 25 ? "easy" : position < 60 ? "medium" : "hard";
-const promptFor = (title: string, pattern: string) => `Implement ${title}. Return the requested result for every valid input, explain the ${pattern.replaceAll("-", " ")} invariant, and avoid recomputing state that can be maintained incrementally.`;
-
 export const dsaProblems: DSAProblem[] = DSAProblemSchema.array().parse(
   Object.entries(problemTitles).flatMap(([patternId, titles]) => titles.map((title, offset) => ({ patternId, title, offset })))
     .map(({ patternId, title }, index) => {
       const id = `atlas-${String(index + 1).padStart(3, "0")}`;
       const patternTitle = patternTitleById.get(patternId) ?? patternId.replaceAll("-", " ");
+      const pattern = dsaPatterns.find((item) => item.id === patternId);
       const practice = getDsaPracticeTarget(id, title, patternTitle);
+      const depth = buildDsaDepth({ id, title, patternId, patternTitle, mentalModel: pattern?.mentalModel ?? `Maintain the smallest correct ${patternTitle.toLowerCase()} state.` });
       return {
       id,
       title,
-      prompt: promptFor(title, patternId),
+      ...depth,
       patternId,
       difficulty: difficulty(index),
       estimatedMinutes: index < 25 ? 20 : index < 60 ? 35 : 50,
       roleIds: ["sde", "backend", "java", "python", "go"],
       companyTags: index % 3 === 0 ? ["big-tech"] : index % 3 === 1 ? ["product-company"] : ["fintech"],
       sheetRanks: { ...(index < 75 ? { atlas75: index + 1 } : {}), ...(index < 180 ? { atlas180: index + 1 } : {}), atlas300: index + 1 },
-      constraints: ["Input may be empty unless the statement rules it out.", "Choose a representation that fits the stated complexity target."],
-      examples: [{ input: "A small representative input", output: "The corresponding result", explanation: `Trace the ${patternId.replaceAll("-", " ")} state after each element or edge.` }],
-      hints: [`Name the ${patternId.replaceAll("-", " ")} invariant before coding.`, "Test the empty, singleton, duplicate, and boundary cases."],
-      approach: `Use the ${patternId.replaceAll("-", " ")} pattern. State the maintained invariant, update only the affected state, and prove that discarded candidates cannot improve the answer.`,
-      proof: "Initialization establishes the invariant. Each update preserves it while making progress. At termination, every feasible candidate has been represented or safely excluded, so the reported result is correct.",
-      edgeCases: ["Empty or singleton input", "Duplicate values and values at numeric boundaries"],
       variantLanguages: index < 180 ? ["cpp17", "java", "python", "typescript"] : ["cpp17"],
       practiceSource: practice.source,
       practiceLabel: practice.label,

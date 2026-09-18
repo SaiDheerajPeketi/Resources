@@ -178,13 +178,20 @@ test("Atlas 300 filters and loads a language-specific problem artifact", async (
   await page.goto("/sheets/atlas-300/");
   await expect(page.getByText("300 problems")).toBeVisible();
   const firstRow = page.getByRole("row").filter({ hasText: "Complement Pair Ledger" });
+  await expect(firstRow.getByText("Full", { exact: true })).toBeVisible();
   await expect(firstRow.getByRole("link", { name: /Solve on LeetCode/ })).toHaveAttribute("href", "https://leetcode.com/problems/two-sum/");
   await page.getByLabel("Difficulty").selectOption("hard");
   await page.getByRole("link", { name: "Edit Distance", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Edit Distance", level: 1 })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "From baseline to optimal" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Traps and misconceptions" })).toBeVisible();
   await expect(page.getByRole("link", { name: /Solve on LeetCode/ })).toHaveAttribute("href", "https://leetcode.com/problems/edit-distance/");
   await page.getByRole("button", { name: "Load C++17 artifact" }).click();
-  await expect(page.locator("pre")).toContainText("#include");
+  await expect(page.getByText("Reviewed solution")).toBeVisible();
+  await expect(page.locator("pre")).toContainText("int editDistance");
+  await page.getByRole("button", { name: "Java" }).click();
+  await expect(page.getByText("Blueprint · solution pending")).toBeVisible();
+  await expect(page.locator("pre")).toContainText("Edit Distance — porting blueprint");
 });
 
 test("diagnostic, plan, review, and company guides are reachable", async ({ page }, testInfo) => {

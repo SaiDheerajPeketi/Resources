@@ -12,6 +12,7 @@ import { devopsLessons } from "@/data/devops-lessons";
 import { securityLessons } from "@/data/security-lessons";
 import { fintechLessons } from "@/data/fintech-lessons";
 import { generatedTechnologyFocusIds } from "@/data/technology-depth-generated";
+import { cpp17Atlas75 } from "@/data/solutions/cpp17-atlas75";
 
 describe("universal interview corpus", () => {
   it("publishes every technology as a complete, enforceable A-Z manual", () => {
@@ -64,6 +65,24 @@ describe("universal interview corpus", () => {
     expect(dsaProblems.every((problem) => problem.practiceSource === "leetcode" || problem.practiceSource === "gfg")).toBe(true);
     expect(dsaProblems.filter((problem) => problem.practiceSource === "leetcode").length).toBeGreaterThanOrEqual(100);
     expect(dsaProblems.every((problem) => problem.practiceSource !== "leetcode" || problem.practiceDirect)).toBe(true);
+  });
+
+  it("publishes Atlas 75 as exact lessons with reviewed C++17 references", () => {
+    const complete = dsaProblems.filter((problem) => problem.depthStatus === "complete");
+    expect(complete).toHaveLength(75);
+    expect(Object.keys(cpp17Atlas75)).toHaveLength(75);
+    expect(new Set(Object.keys(cpp17Atlas75))).toEqual(new Set(complete.map((problem) => problem.id)));
+    for (const problem of complete) {
+      expect(problem.prompt.length).toBeGreaterThanOrEqual(80);
+      expect(problem.examples[0].input).not.toContain("representative input");
+      expect(problem.examples[0].explanation.length).toBeGreaterThanOrEqual(80);
+      expect(problem.naiveApproach.length).toBeGreaterThanOrEqual(80);
+      expect(problem.proof.length).toBeGreaterThanOrEqual(180);
+      expect(problem.walkthrough).toHaveLength(3);
+      expect(problem.misconceptions).toHaveLength(3);
+      expect(problem.followUps).toHaveLength(2);
+      expect(cpp17Atlas75[problem.id]).not.toContain("Maintain only the state required");
+    }
   });
 
   it("keeps every role-track lesson on the detailed teaching contract", () => {

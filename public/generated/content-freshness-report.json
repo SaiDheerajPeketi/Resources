@@ -1,6 +1,6 @@
 {
-  "version": "2026.09.18-r17",
-  "generatedAt": "2026-09-18T10:47:12.455Z",
+  "version": "2026.09.18-r18",
+  "generatedAt": "2026-09-18T11:23:55.078Z",
   "reviewPolicy": {
     "staleBefore": "2025-09-18",
     "maximumAgeDays": 365

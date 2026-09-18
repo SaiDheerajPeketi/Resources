@@ -1,13 +1,36 @@
-import type { CodeVariant } from "@/lib/schema";
+import { cpp17Atlas75 } from "@/data/solutions/cpp17-atlas75";
+import type { CodeVariant, DSAProblem } from "@/lib/schema";
 
-const sourceByLanguage = {
-  cpp17: `#include <bits/stdc++.h>\nusing namespace std;\n\nvector<int> solve(const vector<int>& input) {\n  vector<int> answer;\n  // Maintain only the state required by the named pattern.\n  for (int value : input) answer.push_back(value);\n  return answer;\n}`,
-  java: `import java.util.*;\n\nfinal class Solution {\n  static List<Integer> solve(List<Integer> input) {\n    List<Integer> answer = new ArrayList<>();\n    // Maintain only the state required by the named pattern.\n    answer.addAll(input);\n    return answer;\n  }\n}`,
-  python: `def solve(values: list[int]) -> list[int]:\n    \"\"\"Replace the transition with the problem's named pattern invariant.\"\"\"\n    answer: list[int] = []\n    for value in values:\n        answer.append(value)\n    return answer`,
-  typescript: `export function solve(input: readonly number[]): number[] {\n  const answer: number[] = [];\n  // Maintain only the state required by the named pattern.\n  for (const value of input) answer.push(value);\n  return answer;\n}`
-} as const;
+type Language = CodeVariant["language"];
+const labels: Record<Language, string> = { cpp17: "C++17", java: "Java", python: "Python", typescript: "TypeScript" };
 
-export function solutionVariant(problemId: string, language: keyof typeof sourceByLanguage): CodeVariant {
-  const labels = { cpp17: "C++17", java: "Java", python: "Python", typescript: "TypeScript" };
-  return { id: `${problemId}-${language}`, language, label: labels[language], source: sourceByLanguage[language], complexity: "Complexity depends on the maintained pattern state; derive it before implementation." };
+function blueprint(problem: DSAProblem, language: Language): string {
+  const lines = [
+    `${problem.title} — porting blueprint`,
+    `Contract: ${problem.prompt}`,
+    `Invariant and approach: ${problem.approach}`,
+    `Complexity target: ${problem.complexity.time} time; ${problem.complexity.space} space.`,
+    "Implementation checklist:",
+    "1. Translate the input contract without changing index or endpoint semantics.",
+    "2. Represent the maintained state named in the approach.",
+    "3. Apply one transition at a time and preserve the invariant.",
+    `4. Test ${problem.edgeCases.slice(0, 2).join(" and ").toLowerCase()}.`,
+    "This is deliberately marked as a blueprint until a reviewed, executable language port is published."
+  ];
+  const prefix = language === "python" ? "# " : "// ";
+  return lines.map((line) => `${prefix}${line}`).join("\n");
+}
+
+export function solutionVariant(problem: DSAProblem, language: Language): CodeVariant {
+  const reference = language === "cpp17" ? cpp17Atlas75[problem.id] : undefined;
+  return {
+    id: `${problem.id}-${language}`,
+    language,
+    label: labels[language],
+    completeness: reference ? "reference" : "porting-blueprint",
+    source: reference ?? blueprint(problem, language),
+    complexity: reference
+      ? `${problem.complexity.time} time; ${problem.complexity.space} space. ${problem.complexity.rationale}`
+      : `Porting target: ${problem.complexity.time} time and ${problem.complexity.space} space. The reviewed reference implementation for this tab is not published yet.`
+  };
 }
