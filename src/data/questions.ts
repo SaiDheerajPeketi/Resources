@@ -4,6 +4,7 @@ import { aiLessons } from "@/data/ai-lessons";
 import { sdeLessons } from "@/data/sde-lessons";
 import { devopsLessons } from "@/data/devops-lessons";
 import { securityLessons } from "@/data/security-lessons";
+import { fintechLessons } from "@/data/fintech-lessons";
 
 const handcraftedQuestions: Question[] = [
   {
@@ -87,13 +88,20 @@ const securityQuestions = Object.entries(securityLessons).map(([topicId, lesson]
   trackId: "cybersecurity" as const
 }));
 
+const fintechQuestions = Object.entries(fintechLessons).map(([topicId, lesson]) => ({
+  ...lesson.question,
+  topicId,
+  trackId: "fintech-quant" as const
+}));
+
 export const questions: Question[] = QuestionSchema.array().parse([
   ...handcraftedQuestions,
   ...foundationQuestions,
   ...aiQuestions,
   ...sdeQuestions,
   ...devopsQuestions,
-  ...securityQuestions
+  ...securityQuestions,
+  ...fintechQuestions
 ]);
 
 export const questionById = new Map(questions.map((question) => [question.id, question]));

@@ -1914,14 +1914,15 @@
     "id": "fintech-quant/money-representation",
     "slug": "fintech-quant/money-representation",
     "title": "Money Representation",
-    "summary": "Planned field note covering money representation for fintech + quant interviews.",
+    "summary": "Represent amounts, currencies, precision, rounding, rates, and financial invariants without binary-floating ambiguity.",
     "trackId": "fintech-quant",
     "level": "foundation",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
+      "sde",
       "quant-dev",
-      "quant-research"
+      "data-engineer"
     ]
   },
   {
@@ -1943,322 +1944,343 @@
     "id": "fintech-quant/idempotency",
     "slug": "fintech-quant/idempotency",
     "title": "Idempotency",
-    "summary": "Planned field note covering idempotency for fintech + quant interviews.",
+    "summary": "Make retried financial commands produce one intended business effect under timeout, duplication, races, and recovery.",
     "trackId": "fintech-quant",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
-      "quant-dev",
-      "quant-research"
+      "sde",
+      "sre",
+      "data-engineer"
     ]
   },
   {
     "id": "fintech-quant/payment-lifecycles",
     "slug": "fintech-quant/payment-lifecycles",
     "title": "Payment Lifecycles",
-    "summary": "Planned field note covering payment lifecycles for fintech + quant interviews.",
+    "summary": "Model payment intent, authorization, capture, clearing, settlement, refund, reversal, dispute, and reconciliation as explicit states.",
     "trackId": "fintech-quant",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
-      "quant-dev",
-      "quant-research"
+      "sde",
+      "sre",
+      "data-engineer"
     ]
   },
   {
     "id": "fintech-quant/card-networks",
     "slug": "fintech-quant/card-networks",
     "title": "Card Networks",
-    "summary": "Planned field note covering card networks for fintech + quant interviews.",
+    "summary": "Understand card participants, messages, authorization, clearing, settlement, tokenization, disputes, and card-present/not-present risk.",
     "trackId": "fintech-quant",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
-      "quant-dev",
-      "quant-research"
+      "sde",
+      "security",
+      "data-engineer"
     ]
   },
   {
     "id": "fintech-quant/upi",
     "slug": "fintech-quant/upi",
     "title": "UPI",
-    "summary": "Planned field note covering upi for fintech + quant interviews.",
+    "summary": "Model UPI participants, collect/pay flows, mandates, asynchronous status, disputes, security, and reconciliation in India.",
     "trackId": "fintech-quant",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
-      "quant-dev",
-      "quant-research"
+      "sde",
+      "security",
+      "data-engineer"
     ]
   },
   {
     "id": "fintech-quant/open-banking",
     "slug": "fintech-quant/open-banking",
     "title": "Open Banking",
-    "summary": "Planned field note covering open banking for fintech + quant interviews.",
+    "summary": "Design consented financial-data and payment APIs with federation, scopes, lifecycle, revocation, data minimization, and ecosystem risk.",
     "trackId": "fintech-quant",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
-      "quant-dev",
-      "quant-research"
+      "sde",
+      "security",
+      "data-engineer"
     ]
   },
   {
     "id": "fintech-quant/lending-systems",
     "slug": "fintech-quant/lending-systems",
     "title": "Lending Systems",
-    "summary": "Planned field note covering lending systems for fintech + quant interviews.",
+    "summary": "Model applications, underwriting, offers, disbursement, schedules, accrual, payment allocation, delinquency, restructuring, and servicing.",
     "trackId": "fintech-quant",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
-      "quant-dev",
-      "quant-research"
+      "sde",
+      "data-engineer",
+      "security"
     ]
   },
   {
     "id": "fintech-quant/reconciliation",
     "slug": "fintech-quant/reconciliation",
     "title": "Reconciliation",
-    "summary": "Planned field note covering reconciliation for fintech + quant interviews.",
+    "summary": "Prove agreement among internal ledgers, processors, banks, networks, and customer state through deterministic matching and exceptions.",
     "trackId": "fintech-quant",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
-      "quant-dev",
-      "quant-research"
+      "data-engineer",
+      "sde",
+      "sre"
     ]
   },
   {
     "id": "fintech-quant/clearing-and-settlement",
     "slug": "fintech-quant/clearing-and-settlement",
     "title": "Clearing and Settlement",
-    "summary": "Planned field note covering clearing and settlement for fintech + quant interviews.",
+    "summary": "Understand obligation calculation, netting, collateral, liquidity, settlement assets, finality, delivery-versus-payment, and default risk.",
     "trackId": "fintech-quant",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
       "quant-dev",
-      "quant-research"
+      "sde",
+      "data-engineer"
     ]
   },
   {
     "id": "fintech-quant/fraud-systems",
     "slug": "fintech-quant/fraud-systems",
     "title": "Fraud Systems",
-    "summary": "Planned field note covering fraud systems for fintech + quant interviews.",
+    "summary": "Combine rules, models, graphs, identity, operations, experimentation, and feedback to prevent financial abuse with controlled customer friction.",
     "trackId": "fintech-quant",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
-      "quant-dev",
-      "quant-research"
+      "data-scientist",
+      "ml-engineer",
+      "security",
+      "sde"
     ]
   },
   {
     "id": "fintech-quant/kyc-and-aml",
     "slug": "fintech-quant/kyc-and-aml",
     "title": "KYC and AML",
-    "summary": "Planned field note covering kyc and aml for fintech + quant interviews.",
+    "summary": "Engineer risk-based customer due diligence, sanctions screening, transaction monitoring, case management, reporting, and evidence lifecycle.",
     "trackId": "fintech-quant",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
-      "quant-dev",
-      "quant-research"
+      "security",
+      "data-engineer",
+      "sde"
     ]
   },
   {
     "id": "fintech-quant/pci-concepts",
     "slug": "fintech-quant/pci-concepts",
     "title": "PCI Concepts",
-    "summary": "Planned field note covering pci concepts for fintech + quant interviews.",
+    "summary": "Understand PCI DSS scope, cardholder-data flows, segmentation, controls, service providers, evidence, and tokenization without treating compliance as security completeness.",
     "trackId": "fintech-quant",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
-      "quant-dev",
-      "quant-research"
+      "security",
+      "devops",
+      "sde"
     ]
   },
   {
     "id": "fintech-quant/auditability",
     "slug": "fintech-quant/auditability",
     "title": "Auditability",
-    "summary": "Planned field note covering auditability for fintech + quant interviews.",
+    "summary": "Create complete, immutable, attributable, privacy-aware evidence for financial state, decisions, access, change, and correction.",
     "trackId": "fintech-quant",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
-      "quant-dev",
-      "quant-research"
+      "security",
+      "sde",
+      "data-engineer"
     ]
   },
   {
     "id": "fintech-quant/financial-resilience",
     "slug": "fintech-quant/financial-resilience",
     "title": "Financial Resilience",
-    "summary": "Planned field note covering financial resilience for fintech + quant interviews.",
+    "summary": "Keep critical financial services correct and available through dependency failure, overload, regional loss, data corruption, and operational disruption.",
     "trackId": "fintech-quant",
-    "level": "interview",
-    "publicationStatus": "planned",
+    "level": "advanced",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
-      "quant-dev",
-      "quant-research"
+      "sre",
+      "devops",
+      "security",
+      "sde"
     ]
   },
   {
     "id": "fintech-quant/market-microstructure",
     "slug": "fintech-quant/market-microstructure",
     "title": "Market Microstructure",
-    "summary": "Planned field note covering market microstructure for fintech + quant interviews.",
+    "summary": "Understand venues, participants, order types, price formation, spreads, liquidity, fragmentation, execution cost, and market abuse.",
     "trackId": "fintech-quant",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
-      "fintech",
       "quant-dev",
-      "quant-research"
+      "quant-research",
+      "fintech",
+      "sde"
     ]
   },
   {
     "id": "fintech-quant/order-books",
     "slug": "fintech-quant/order-books",
     "title": "Order Books",
-    "summary": "Planned field note covering order books for fintech + quant interviews.",
+    "summary": "Implement and reason about limit-order-book state, matching, sequencing, market data, replay, recovery, and performance.",
     "trackId": "fintech-quant",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
-      "fintech",
       "quant-dev",
-      "quant-research"
+      "sde",
+      "fintech"
     ]
   },
   {
     "id": "fintech-quant/stochastic-processes",
     "slug": "fintech-quant/stochastic-processes",
     "title": "Stochastic Processes",
-    "summary": "Planned field note covering stochastic processes for fintech + quant interviews.",
+    "summary": "Use discrete/continuous stochastic processes, Markov models, Brownian motion, martingales, and stochastic calculus with explicit assumptions.",
     "trackId": "fintech-quant",
-    "level": "interview",
-    "publicationStatus": "planned",
+    "level": "advanced",
+    "publicationStatus": "published",
     "roleIds": [
-      "fintech",
+      "quant-research",
       "quant-dev",
-      "quant-research"
+      "data-scientist"
     ]
   },
   {
     "id": "fintech-quant/time-series",
     "slug": "fintech-quant/time-series",
     "title": "Time Series",
-    "summary": "Planned field note covering time series for fintech + quant interviews.",
+    "summary": "Model temporal dependence, trend, seasonality, stationarity, volatility, leakage, uncertainty, and regime change.",
     "trackId": "fintech-quant",
-    "level": "advanced",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
-      "fintech",
-      "quant-dev",
-      "quant-research"
+      "quant-research",
+      "data-scientist",
+      "ml-engineer",
+      "fintech"
     ]
   },
   {
     "id": "fintech-quant/derivatives-pricing",
     "slug": "fintech-quant/derivatives-pricing",
     "title": "Derivatives Pricing",
-    "summary": "Planned field note covering derivatives pricing for fintech + quant interviews.",
+    "summary": "Price forwards, futures, options, and swaps using no-arbitrage, replication, risk-neutral expectation, Greeks, trees, PDEs, and simulation.",
     "trackId": "fintech-quant",
     "level": "advanced",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
-      "fintech",
+      "quant-research",
       "quant-dev",
-      "quant-research"
+      "fintech"
     ]
   },
   {
     "id": "fintech-quant/portfolio-and-risk",
     "slug": "fintech-quant/portfolio-and-risk",
     "title": "Portfolio and Risk",
-    "summary": "Planned field note covering portfolio and risk for fintech + quant interviews.",
+    "summary": "Connect diversification, covariance, factor exposure, optimization, VaR/expected shortfall, stress, liquidity, and model governance.",
     "trackId": "fintech-quant",
-    "level": "advanced",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
-      "fintech",
+      "quant-research",
       "quant-dev",
-      "quant-research"
+      "fintech",
+      "data-scientist"
     ]
   },
   {
     "id": "fintech-quant/backtesting",
     "slug": "fintech-quant/backtesting",
     "title": "Backtesting",
-    "summary": "Planned field note covering backtesting for fintech + quant interviews.",
+    "summary": "Evaluate strategies with point-in-time data, realistic execution, costs, controls for bias, robust statistics, and reproducible research.",
     "trackId": "fintech-quant",
-    "level": "advanced",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
-      "fintech",
+      "quant-research",
       "quant-dev",
-      "quant-research"
+      "data-scientist"
     ]
   },
   {
     "id": "fintech-quant/low-latency-c-plus-plus",
     "slug": "fintech-quant/low-latency-c-plus-plus",
     "title": "Low-Latency C++",
-    "summary": "Planned field note covering low-latency c++ for fintech + quant interviews.",
+    "summary": "Engineer predictable C++ latency through measurement, ownership, layout, allocation, concurrency, networking, and failure-aware trade-offs.",
     "trackId": "fintech-quant",
     "level": "advanced",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
-      "fintech",
       "quant-dev",
-      "quant-research"
+      "sde",
+      "fintech"
     ]
   },
   {
     "id": "fintech-quant/quant-puzzles",
     "slug": "fintech-quant/quant-puzzles",
     "title": "Quant Puzzles",
-    "summary": "Planned field note covering quant puzzles for fintech + quant interviews.",
+    "summary": "Solve probability, expectation, conditioning, combinatorics, estimation, invariants, and logic puzzles with clear assumptions and checks.",
     "trackId": "fintech-quant",
-    "level": "advanced",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
-      "fintech",
+      "quant-research",
       "quant-dev",
-      "quant-research"
+      "fintech",
+      "data-scientist"
     ]
   },
   {
     "id": "fintech-quant/india-us-and-eu-regulation",
     "slug": "fintech-quant/india-us-and-eu-regulation",
     "title": "India, US, and EU Regulation",
-    "summary": "Planned field note covering india, us, and eu regulation for fintech + quant interviews.",
+    "summary": "Navigate India-first financial technology regulation with US/EU comparisons, entity/product scope, effective dates, and evidence ownership.",
     "trackId": "fintech-quant",
     "level": "advanced",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "fintech",
-      "quant-dev",
-      "quant-research"
+      "security",
+      "sde",
+      "data-engineer",
+      "quant-dev"
     ]
   }
 ]

@@ -14,8 +14,9 @@ import { aiLessons } from "@/data/ai-lessons";
 import { sdeLessons } from "@/data/sde-lessons";
 import { devopsLessons } from "@/data/devops-lessons";
 import { securityLessons } from "@/data/security-lessons";
+import { fintechLessons } from "@/data/fintech-lessons";
 
-export const CONTENT_MANIFEST_VERSION = "2026.09.18-r5";
+export const CONTENT_MANIFEST_VERSION = "2026.09.18-r6";
 
 export const roles: RoleProfile[] = RoleProfileSchema.array().parse([
   { id: "sde", title: "Software Engineer", description: "Generalist, backend, full-stack, and systems interviews.", trackIds: ["foundations", "sde-systems"] },
@@ -116,7 +117,7 @@ export const topics: TopicMeta[] = TopicMetaSchema.array().parse(
   tracks.flatMap((track) => titlesByTrack[track.id].map((title, index) => {
     const localSlug = slugify(title);
     const slug = `${track.id}/${localSlug}`;
-    const custom = published[slug] ?? foundationLessons[slug] ?? aiLessons[slug] ?? sdeLessons[slug] ?? devopsLessons[slug] ?? securityLessons[slug];
+    const custom = published[slug] ?? foundationLessons[slug] ?? aiLessons[slug] ?? sdeLessons[slug] ?? devopsLessons[slug] ?? securityLessons[slug] ?? fintechLessons[slug];
     return {
       id: slug,
       slug,

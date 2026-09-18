@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r5",
+  "version": "2026.09.18-r6",
   "packs": [
     {
       "id": "foundations",
@@ -214,10 +214,34 @@
         "/revision/",
         "/interview/",
         "/settings/",
-        "/topics/fintech-quant/double-entry-ledgers/"
+        "/topics/fintech-quant/money-representation/",
+        "/topics/fintech-quant/double-entry-ledgers/",
+        "/topics/fintech-quant/idempotency/",
+        "/topics/fintech-quant/payment-lifecycles/",
+        "/topics/fintech-quant/card-networks/",
+        "/topics/fintech-quant/upi/",
+        "/topics/fintech-quant/open-banking/",
+        "/topics/fintech-quant/lending-systems/",
+        "/topics/fintech-quant/reconciliation/",
+        "/topics/fintech-quant/clearing-and-settlement/",
+        "/topics/fintech-quant/fraud-systems/",
+        "/topics/fintech-quant/kyc-and-aml/",
+        "/topics/fintech-quant/pci-concepts/",
+        "/topics/fintech-quant/auditability/",
+        "/topics/fintech-quant/financial-resilience/",
+        "/topics/fintech-quant/market-microstructure/",
+        "/topics/fintech-quant/order-books/",
+        "/topics/fintech-quant/stochastic-processes/",
+        "/topics/fintech-quant/time-series/",
+        "/topics/fintech-quant/derivatives-pricing/",
+        "/topics/fintech-quant/portfolio-and-risk/",
+        "/topics/fintech-quant/backtesting/",
+        "/topics/fintech-quant/low-latency-c-plus-plus/",
+        "/topics/fintech-quant/quant-puzzles/",
+        "/topics/fintech-quant/india-us-and-eu-regulation/"
       ],
-      "estimatedKb": 252,
-      "integrity": "sha256-125bd4c5270d3f31123869260d694e5a601305c31646217e5aeb1b528801ff35"
+      "estimatedKb": 1980,
+      "integrity": "sha256-6e47ab5e9f0bd89adcca94d0ce1b5c11aacba34ff7952d125c5ad8a5f29fb1d2"
     }
   ]
 }

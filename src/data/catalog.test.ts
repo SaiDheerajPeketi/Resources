@@ -16,12 +16,13 @@ describe("coverage catalog", () => {
   });
 
   it("publishes the complete first five release packs", () => {
-    expect(publishedTopics).toHaveLength(122);
+    expect(publishedTopics).toHaveLength(146);
     expect(publishedTopics.filter((topic) => topic.trackId === "foundations")).toHaveLength(24);
     expect(publishedTopics.filter((topic) => topic.trackId === "ai-data")).toHaveLength(26);
     expect(publishedTopics.filter((topic) => topic.trackId === "sde-systems")).toHaveLength(25);
     expect(publishedTopics.filter((topic) => topic.trackId === "devops-cloud")).toHaveLength(24);
     expect(publishedTopics.filter((topic) => topic.trackId === "cybersecurity")).toHaveLength(22);
+    expect(publishedTopics.filter((topic) => topic.trackId === "fintech-quant")).toHaveLength(25);
   });
 
   it("gives every published field note interview practice", () => {

@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r5",
+  "version": "2026.09.18-r6",
   "edges": [
     {
       "id": "foundations/complexity-analysis->foundations/arrays-and-strings:prerequisite",
@@ -1490,9 +1490,381 @@
       "kind": "prerequisite"
     },
     {
+      "id": "foundations/discrete-mathematics->fintech-quant/money-representation:prerequisite",
+      "source": "foundations/discrete-mathematics",
+      "target": "fintech-quant/money-representation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/sql-fundamentals->fintech-quant/money-representation:prerequisite",
+      "source": "foundations/sql-fundamentals",
+      "target": "fintech-quant/money-representation",
+      "kind": "prerequisite"
+    },
+    {
       "id": "foundations/sql-fundamentals->fintech-quant/double-entry-ledgers:prerequisite",
       "source": "foundations/sql-fundamentals",
       "target": "fintech-quant/double-entry-ledgers",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/money-representation->fintech-quant/idempotency:prerequisite",
+      "source": "fintech-quant/money-representation",
+      "target": "fintech-quant/idempotency",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/api-design->fintech-quant/idempotency:prerequisite",
+      "source": "sde-systems/api-design",
+      "target": "fintech-quant/idempotency",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/database-systems->fintech-quant/idempotency:prerequisite",
+      "source": "sde-systems/database-systems",
+      "target": "fintech-quant/idempotency",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/idempotency->fintech-quant/payment-lifecycles:prerequisite",
+      "source": "fintech-quant/idempotency",
+      "target": "fintech-quant/payment-lifecycles",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/double-entry-ledgers->fintech-quant/payment-lifecycles:prerequisite",
+      "source": "fintech-quant/double-entry-ledgers",
+      "target": "fintech-quant/payment-lifecycles",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/payment-lifecycles->fintech-quant/card-networks:prerequisite",
+      "source": "fintech-quant/payment-lifecycles",
+      "target": "fintech-quant/card-networks",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/reconciliation->fintech-quant/card-networks:prerequisite",
+      "source": "fintech-quant/reconciliation",
+      "target": "fintech-quant/card-networks",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/payment-lifecycles->fintech-quant/upi:prerequisite",
+      "source": "fintech-quant/payment-lifecycles",
+      "target": "fintech-quant/upi",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/idempotency->fintech-quant/upi:prerequisite",
+      "source": "fintech-quant/idempotency",
+      "target": "fintech-quant/upi",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/identity-and-access-management->fintech-quant/open-banking:prerequisite",
+      "source": "cybersecurity/identity-and-access-management",
+      "target": "fintech-quant/open-banking",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/api-design->fintech-quant/open-banking:prerequisite",
+      "source": "sde-systems/api-design",
+      "target": "fintech-quant/open-banking",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/payment-lifecycles->fintech-quant/open-banking:prerequisite",
+      "source": "fintech-quant/payment-lifecycles",
+      "target": "fintech-quant/open-banking",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/money-representation->fintech-quant/lending-systems:prerequisite",
+      "source": "fintech-quant/money-representation",
+      "target": "fintech-quant/lending-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/double-entry-ledgers->fintech-quant/lending-systems:prerequisite",
+      "source": "fintech-quant/double-entry-ledgers",
+      "target": "fintech-quant/lending-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/statistics->fintech-quant/lending-systems:prerequisite",
+      "source": "foundations/statistics",
+      "target": "fintech-quant/lending-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/double-entry-ledgers->fintech-quant/reconciliation:prerequisite",
+      "source": "fintech-quant/double-entry-ledgers",
+      "target": "fintech-quant/reconciliation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/payment-lifecycles->fintech-quant/reconciliation:prerequisite",
+      "source": "fintech-quant/payment-lifecycles",
+      "target": "fintech-quant/reconciliation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/reconciliation->fintech-quant/clearing-and-settlement:prerequisite",
+      "source": "fintech-quant/reconciliation",
+      "target": "fintech-quant/clearing-and-settlement",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/payment-lifecycles->fintech-quant/clearing-and-settlement:prerequisite",
+      "source": "fintech-quant/payment-lifecycles",
+      "target": "fintech-quant/clearing-and-settlement",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/model-evaluation->fintech-quant/fraud-systems:prerequisite",
+      "source": "ai-data/model-evaluation",
+      "target": "fintech-quant/fraud-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/feature-engineering->fintech-quant/fraud-systems:prerequisite",
+      "source": "ai-data/feature-engineering",
+      "target": "fintech-quant/fraud-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/payment-lifecycles->fintech-quant/fraud-systems:prerequisite",
+      "source": "fintech-quant/payment-lifecycles",
+      "target": "fintech-quant/fraud-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/identity-and-access-management->fintech-quant/kyc-and-aml:prerequisite",
+      "source": "cybersecurity/identity-and-access-management",
+      "target": "fintech-quant/kyc-and-aml",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/fraud-systems->fintech-quant/kyc-and-aml:prerequisite",
+      "source": "fintech-quant/fraud-systems",
+      "target": "fintech-quant/kyc-and-aml",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/card-networks->fintech-quant/pci-concepts:prerequisite",
+      "source": "fintech-quant/card-networks",
+      "target": "fintech-quant/pci-concepts",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/network-security->fintech-quant/pci-concepts:prerequisite",
+      "source": "cybersecurity/network-security",
+      "target": "fintech-quant/pci-concepts",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/application-security->fintech-quant/pci-concepts:prerequisite",
+      "source": "cybersecurity/application-security",
+      "target": "fintech-quant/pci-concepts",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/double-entry-ledgers->fintech-quant/auditability:prerequisite",
+      "source": "fintech-quant/double-entry-ledgers",
+      "target": "fintech-quant/auditability",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/identity-and-access-management->fintech-quant/auditability:prerequisite",
+      "source": "cybersecurity/identity-and-access-management",
+      "target": "fintech-quant/auditability",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/reliability-engineering->fintech-quant/financial-resilience:prerequisite",
+      "source": "sde-systems/reliability-engineering",
+      "target": "fintech-quant/financial-resilience",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/disaster-recovery->fintech-quant/financial-resilience:prerequisite",
+      "source": "devops-cloud/disaster-recovery",
+      "target": "fintech-quant/financial-resilience",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/reconciliation->fintech-quant/financial-resilience:prerequisite",
+      "source": "fintech-quant/reconciliation",
+      "target": "fintech-quant/financial-resilience",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/probability->fintech-quant/market-microstructure:prerequisite",
+      "source": "foundations/probability",
+      "target": "fintech-quant/market-microstructure",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/clearing-and-settlement->fintech-quant/market-microstructure:prerequisite",
+      "source": "fintech-quant/clearing-and-settlement",
+      "target": "fintech-quant/market-microstructure",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/market-microstructure->fintech-quant/order-books:prerequisite",
+      "source": "fintech-quant/market-microstructure",
+      "target": "fintech-quant/order-books",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/low-level-design->fintech-quant/order-books:prerequisite",
+      "source": "sde-systems/low-level-design",
+      "target": "fintech-quant/order-books",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/concurrency->fintech-quant/order-books:prerequisite",
+      "source": "sde-systems/concurrency",
+      "target": "fintech-quant/order-books",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/probability->fintech-quant/stochastic-processes:prerequisite",
+      "source": "foundations/probability",
+      "target": "fintech-quant/stochastic-processes",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/statistics->fintech-quant/stochastic-processes:prerequisite",
+      "source": "foundations/statistics",
+      "target": "fintech-quant/stochastic-processes",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linear-algebra->fintech-quant/stochastic-processes:prerequisite",
+      "source": "foundations/linear-algebra",
+      "target": "fintech-quant/stochastic-processes",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/statistics->fintech-quant/time-series:prerequisite",
+      "source": "foundations/statistics",
+      "target": "fintech-quant/time-series",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/forecasting->fintech-quant/time-series:prerequisite",
+      "source": "ai-data/forecasting",
+      "target": "fintech-quant/time-series",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/stochastic-processes->fintech-quant/time-series:prerequisite",
+      "source": "fintech-quant/stochastic-processes",
+      "target": "fintech-quant/time-series",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/stochastic-processes->fintech-quant/derivatives-pricing:prerequisite",
+      "source": "fintech-quant/stochastic-processes",
+      "target": "fintech-quant/derivatives-pricing",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linear-algebra->fintech-quant/derivatives-pricing:prerequisite",
+      "source": "foundations/linear-algebra",
+      "target": "fintech-quant/derivatives-pricing",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linear-algebra->fintech-quant/portfolio-and-risk:prerequisite",
+      "source": "foundations/linear-algebra",
+      "target": "fintech-quant/portfolio-and-risk",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/statistics->fintech-quant/portfolio-and-risk:prerequisite",
+      "source": "foundations/statistics",
+      "target": "fintech-quant/portfolio-and-risk",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/time-series->fintech-quant/portfolio-and-risk:prerequisite",
+      "source": "fintech-quant/time-series",
+      "target": "fintech-quant/portfolio-and-risk",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/time-series->fintech-quant/backtesting:prerequisite",
+      "source": "fintech-quant/time-series",
+      "target": "fintech-quant/backtesting",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/market-microstructure->fintech-quant/backtesting:prerequisite",
+      "source": "fintech-quant/market-microstructure",
+      "target": "fintech-quant/backtesting",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/portfolio-and-risk->fintech-quant/backtesting:prerequisite",
+      "source": "fintech-quant/portfolio-and-risk",
+      "target": "fintech-quant/backtesting",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/modern-c-plus-plus-internals->fintech-quant/low-latency-c-plus-plus:prerequisite",
+      "source": "sde-systems/modern-c-plus-plus-internals",
+      "target": "fintech-quant/low-latency-c-plus-plus",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/concurrency->fintech-quant/low-latency-c-plus-plus:prerequisite",
+      "source": "sde-systems/concurrency",
+      "target": "fintech-quant/low-latency-c-plus-plus",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/performance-engineering->fintech-quant/low-latency-c-plus-plus:prerequisite",
+      "source": "sde-systems/performance-engineering",
+      "target": "fintech-quant/low-latency-c-plus-plus",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/order-books->fintech-quant/low-latency-c-plus-plus:prerequisite",
+      "source": "fintech-quant/order-books",
+      "target": "fintech-quant/low-latency-c-plus-plus",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/probability->fintech-quant/quant-puzzles:prerequisite",
+      "source": "foundations/probability",
+      "target": "fintech-quant/quant-puzzles",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/discrete-mathematics->fintech-quant/quant-puzzles:prerequisite",
+      "source": "foundations/discrete-mathematics",
+      "target": "fintech-quant/quant-puzzles",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/kyc-and-aml->fintech-quant/india-us-and-eu-regulation:prerequisite",
+      "source": "fintech-quant/kyc-and-aml",
+      "target": "fintech-quant/india-us-and-eu-regulation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/financial-resilience->fintech-quant/india-us-and-eu-regulation:prerequisite",
+      "source": "fintech-quant/financial-resilience",
+      "target": "fintech-quant/india-us-and-eu-regulation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/owasp-and-nist-mappings->fintech-quant/india-us-and-eu-regulation:prerequisite",
+      "source": "cybersecurity/owasp-and-nist-mappings",
+      "target": "fintech-quant/india-us-and-eu-regulation",
       "kind": "prerequisite"
     }
   ]

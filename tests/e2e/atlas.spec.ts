@@ -61,6 +61,17 @@ test("cybersecurity pack exposes current defensive engineering depth", async ({ 
   await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
 });
 
+test("Fintech and quant pack exposes payment and quantitative depth", async ({ page }) => {
+  await page.goto("/tracks/fintech-quant/");
+  const regulationRow = page.getByRole("row").filter({ hasText: "India, US, and EU Regulation" });
+  await expect(regulationRow).toContainText("Published");
+  await page.goto("/topics/fintech-quant/backtesting/");
+  await expect(page.getByRole("heading", { name: "Backtesting", level: 1 })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Data integrity" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Interview practice" })).toBeVisible();
+  await expect(page.getByText(/not legal, investment, trading, or financial advice/i)).toBeVisible();
+});
+
 test("interview workspace includes career artifacts and a timed mock", async ({ page }) => {
   await page.goto("/interview/");
   await expect(page.getByRole("heading", { name: "Career field guide" })).toBeVisible();

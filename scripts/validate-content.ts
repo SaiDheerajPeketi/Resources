@@ -5,6 +5,7 @@ import { aiLessons } from "../src/data/ai-lessons";
 import { sdeLessons } from "../src/data/sde-lessons";
 import { devopsLessons } from "../src/data/devops-lessons";
 import { securityLessons } from "../src/data/security-lessons";
+import { fintechLessons } from "../src/data/fintech-lessons";
 
 const errors: string[] = [];
 const structural = validateCatalog();
@@ -78,6 +79,15 @@ for (const [collection, lessons] of [["DevOps", devopsLessons], ["Security", sec
     if (lesson.failureModes.length < 4 || lesson.flashcards.length < 3 || lesson.revision.length < 5) errors.push(`${collection} lesson ${topicId} has an incomplete revision contract.`);
     if (lesson.sources.length < 2 || lesson.sources.some((source) => !source.url.startsWith("https://"))) errors.push(`${collection} lesson ${topicId} has invalid source metadata.`);
   }
+}
+
+for (const [topicId, lesson] of Object.entries(fintechLessons)) {
+  const topic = topicById.get(topicId);
+  if (!topic) errors.push(`Fintech lesson ${topicId} is absent from the manifest.`);
+  if (topic?.publicationStatus !== "published") errors.push(`Fintech lesson ${topicId} is not published.`);
+  if (lesson.conceptMap.length < 4 || lesson.outcomes.length < 3 || lesson.theory.length < 3) errors.push(`Fintech lesson ${topicId} has an incomplete theory contract.`);
+  if (lesson.failureModes.length < 4 || lesson.flashcards.length < 3 || lesson.revision.length < 5) errors.push(`Fintech lesson ${topicId} has an incomplete revision contract.`);
+  if (lesson.sources.length < 2 || lesson.sources.some((source) => !source.url.startsWith("https://"))) errors.push(`Fintech lesson ${topicId} has invalid source metadata.`);
 }
 
 const staleBefore = new Date("2025-09-18");

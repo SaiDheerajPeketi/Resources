@@ -120,6 +120,30 @@ import ForensicsBasics from "@/content/topics/cybersecurity/forensics-basics.mdx
 import AiSecurity from "@/content/topics/cybersecurity/ai-security.mdx";
 import FintechSecurity from "@/content/topics/cybersecurity/fintech-security.mdx";
 import OwaspAndNistMappings from "@/content/topics/cybersecurity/owasp-and-nist-mappings.mdx";
+import MoneyRepresentation from "@/content/topics/fintech-quant/money-representation.mdx";
+import Idempotency from "@/content/topics/fintech-quant/idempotency.mdx";
+import PaymentLifecycles from "@/content/topics/fintech-quant/payment-lifecycles.mdx";
+import CardNetworks from "@/content/topics/fintech-quant/card-networks.mdx";
+import Upi from "@/content/topics/fintech-quant/upi.mdx";
+import OpenBanking from "@/content/topics/fintech-quant/open-banking.mdx";
+import LendingSystems from "@/content/topics/fintech-quant/lending-systems.mdx";
+import Reconciliation from "@/content/topics/fintech-quant/reconciliation.mdx";
+import ClearingAndSettlement from "@/content/topics/fintech-quant/clearing-and-settlement.mdx";
+import FraudSystems from "@/content/topics/fintech-quant/fraud-systems.mdx";
+import KycAndAml from "@/content/topics/fintech-quant/kyc-and-aml.mdx";
+import PciConcepts from "@/content/topics/fintech-quant/pci-concepts.mdx";
+import Auditability from "@/content/topics/fintech-quant/auditability.mdx";
+import FinancialResilience from "@/content/topics/fintech-quant/financial-resilience.mdx";
+import MarketMicrostructure from "@/content/topics/fintech-quant/market-microstructure.mdx";
+import OrderBooks from "@/content/topics/fintech-quant/order-books.mdx";
+import StochasticProcesses from "@/content/topics/fintech-quant/stochastic-processes.mdx";
+import TimeSeries from "@/content/topics/fintech-quant/time-series.mdx";
+import DerivativesPricing from "@/content/topics/fintech-quant/derivatives-pricing.mdx";
+import PortfolioAndRisk from "@/content/topics/fintech-quant/portfolio-and-risk.mdx";
+import Backtesting from "@/content/topics/fintech-quant/backtesting.mdx";
+import LowLatencyCpp from "@/content/topics/fintech-quant/low-latency-c-plus-plus.mdx";
+import QuantPuzzles from "@/content/topics/fintech-quant/quant-puzzles.mdx";
+import IndiaUsAndEuRegulation from "@/content/topics/fintech-quant/india-us-and-eu-regulation.mdx";
 
 export const topicContent = {
   "foundations/c-plus-plus-interview-setup": CppInterviewSetup,
@@ -243,5 +267,29 @@ export const topicContent = {
   "cybersecurity/ai-security": AiSecurity,
   "cybersecurity/fintech-security": FintechSecurity,
   "cybersecurity/owasp-and-nist-mappings": OwaspAndNistMappings,
-  "fintech-quant/double-entry-ledgers": DoubleEntryLedgers
+  "fintech-quant/money-representation": MoneyRepresentation,
+  "fintech-quant/double-entry-ledgers": DoubleEntryLedgers,
+  "fintech-quant/idempotency": Idempotency,
+  "fintech-quant/payment-lifecycles": PaymentLifecycles,
+  "fintech-quant/card-networks": CardNetworks,
+  "fintech-quant/upi": Upi,
+  "fintech-quant/open-banking": OpenBanking,
+  "fintech-quant/lending-systems": LendingSystems,
+  "fintech-quant/reconciliation": Reconciliation,
+  "fintech-quant/clearing-and-settlement": ClearingAndSettlement,
+  "fintech-quant/fraud-systems": FraudSystems,
+  "fintech-quant/kyc-and-aml": KycAndAml,
+  "fintech-quant/pci-concepts": PciConcepts,
+  "fintech-quant/auditability": Auditability,
+  "fintech-quant/financial-resilience": FinancialResilience,
+  "fintech-quant/market-microstructure": MarketMicrostructure,
+  "fintech-quant/order-books": OrderBooks,
+  "fintech-quant/stochastic-processes": StochasticProcesses,
+  "fintech-quant/time-series": TimeSeries,
+  "fintech-quant/derivatives-pricing": DerivativesPricing,
+  "fintech-quant/portfolio-and-risk": PortfolioAndRisk,
+  "fintech-quant/backtesting": Backtesting,
+  "fintech-quant/low-latency-c-plus-plus": LowLatencyCpp,
+  "fintech-quant/quant-puzzles": QuantPuzzles,
+  "fintech-quant/india-us-and-eu-regulation": IndiaUsAndEuRegulation
 } as const;
