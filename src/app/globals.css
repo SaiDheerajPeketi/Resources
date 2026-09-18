@@ -406,7 +406,7 @@ button { color: inherit; }
 
 /* Technology field manuals */
 .manual-shell { display: grid; grid-template-columns: 235px minmax(0, 1fr); min-height: calc(100vh - var(--header-height)); }
-.manual-index { position: sticky; top: var(--header-height); height: calc(100vh - var(--header-height)); padding: 24px 18px; background: rgb(255 255 255 / 0.76); border-right: 1px solid var(--rule); }
+.manual-index { position: sticky; top: var(--header-height); height: calc(100vh - var(--header-height)); overflow-y: auto; padding: 24px 18px; background: rgb(255 255 255 / 0.76); border-right: 1px solid var(--rule); }
 .manual-index h2 { margin: 28px 0 16px; font-size: 1.45rem; line-height: 1.03; }
 .manual-index nav { display: grid; border-block: 1px solid var(--rule); }
 .manual-index nav a { padding: 9px 2px; border-bottom: 1px solid #e9edf2; color: #34435d; text-decoration: none; font-size: 0.84rem; }
@@ -415,12 +415,17 @@ button { color: inherit; }
 .manual-article > header { padding-bottom: 31px; border-bottom: 2px solid var(--ink); }
 .manual-article > header > div { display: flex; gap: 7px; }
 .manual-article > header span, .problem-page > header span { padding: 3px 7px; border: 1px solid var(--rule-strong); border-radius: 999px; color: var(--muted); font: 0.64rem/1.2 "JetBrains Mono Variable", monospace; text-transform: uppercase; }
+.manual-article > header .depth-state.complete { border-color: #79bdb8; background: var(--teal-soft); color: #0c6d68; }
+.manual-article > header .depth-state.overview { border-color: #d8b97f; background: var(--amber-soft); color: #75460b; }
 .manual-article h1 { margin: 15px 0 8px; font-size: clamp(2.5rem, 6vw, 5.1rem); line-height: 0.94; letter-spacing: -0.035em; }
 .manual-article > header p { max-width: 68ch; margin: 0; color: var(--muted); font-size: 1.06rem; }
 .manual-article > section { padding: 35px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: calc(var(--header-height) + 16px); }
 .manual-article h2 { display: flex; align-items: center; gap: 9px; margin: 0 0 18px; font-size: 1.65rem; letter-spacing: -0.02em; }
 .manual-article h3 { margin: 0 0 8px; }
 .lead-copy { max-width: 70ch; font-size: 1.12rem; }
+.section-intro { max-width: 70ch; color: var(--muted); }
+.depth-notice { display: flex; align-items: start; gap: 11px; margin-top: 26px; padding: 14px 16px; border: 1px solid #d7b879; border-radius: 7px; background: var(--amber-soft); color: #75460b; }
+.depth-notice svg { flex: 0 0 auto; margin-top: 2px; }.depth-notice p { margin: 4px 0 0; }
 .manual-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-top: 26px; }
 .manual-columns > div { padding-top: 15px; border-top: 1px solid var(--rule-strong); }
 .manual-columns li { margin: 7px 0; }
@@ -438,10 +443,24 @@ button { color: inherit; }
 .worked-example { margin: 22px 0; }
 .worked-example pre, .problem-solution pre { max-width: 100%; overflow: auto; padding: 17px; border-radius: 7px; background: #101b36; color: #ecf2ff; }
 .worked-example code, .problem-solution code { font: 0.78rem/1.55 "JetBrains Mono Variable", monospace; }
+.learning-ladder { list-style: none; margin: 24px 0 0; padding: 0; border-top: 2px solid var(--ink); }
+.learning-ladder > li { display: grid; grid-template-columns: 42px 1fr; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+.learning-ladder > li > span, .theory-ledger article > span, .flashcard-ledger article > span { color: var(--blue-deep); font: 0.72rem/1.6 "JetBrains Mono Variable", monospace; }
+.learning-ladder small { color: var(--muted); font: 0.65rem/1.3 "JetBrains Mono Variable", monospace; letter-spacing: 0.07em; text-transform: uppercase; }
+.learning-ladder h3 { margin-top: 4px; font-size: 1.12rem; }.learning-ladder p { margin: 0; color: var(--muted); }.learning-ladder ul { columns: 2; margin: 12px 0 0; padding-left: 18px; }.learning-ladder ul li { margin: 5px 18px 5px 0; break-inside: avoid; }
+.theory-ledger, .flashcard-ledger { border-top: 2px solid var(--ink); }
+.theory-ledger article, .flashcard-ledger article { display: grid; grid-template-columns: 42px 1fr; gap: 16px; padding: 21px 0; border-bottom: 1px solid var(--rule); }
+.theory-ledger p { max-width: 76ch; margin: 7px 0 12px; line-height: 1.62; }.theory-ledger li { margin: 6px 0; }
+.misconception-ledger { border-top: 2px solid var(--ink); }
+.misconception-ledger article { padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.misconception-ledger h3 { color: #75460b; font-size: 1.02rem; }.misconception-ledger p { max-width: 77ch; margin: 6px 0; }.misconception-ledger strong { color: var(--ink); }
 .question-ledger { list-style: none; padding: 0; border-top: 1px solid var(--ink); }
-.question-ledger li { display: grid; grid-template-columns: 34px 1fr auto; gap: 13px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
-.question-ledger li > span { color: var(--blue-deep); font: 0.72rem/1.6 "JetBrains Mono Variable", monospace; }
-.question-ledger h3 { font-size: 1rem; }.question-ledger p { margin: 4px 0 0; color: var(--muted); }.question-ledger small { text-transform: uppercase; }
+.question-ledger > li { display: grid; grid-template-columns: 34px 1fr auto; gap: 13px; padding: 19px 0; border-bottom: 1px solid var(--rule); }
+.question-ledger > li > span { color: var(--blue-deep); font: 0.72rem/1.6 "JetBrains Mono Variable", monospace; }
+.question-ledger h3 { font-size: 1rem; }.question-ledger p { margin: 6px 0 0; color: var(--muted); }.question-ledger > li > small { text-transform: uppercase; }
+.question-ledger .why-tricky { margin-top: 12px; padding: 9px 11px; background: var(--amber-soft); color: #75460b; }.question-ledger h4 { margin: 15px 0 4px; }.question-ledger ul { margin: 0; padding-left: 18px; }.question-ledger ul li { margin: 4px 0; }
+.flashcard-ledger article h3 { font-size: 0.98rem; }.flashcard-ledger article p { margin: 4px 0 0; color: var(--muted); }
+.revision-checklist { margin-bottom: 26px; padding: 18px; border: 1px solid var(--rule-strong); border-radius: 4px; background: #f7f9fc; }.revision-checklist ul { columns: 2; padding-left: 18px; }.revision-checklist li { margin: 6px 18px 6px 0; break-inside: avoid; }
 .print-sheet dl { margin: 0; }.print-sheet dl div { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 8px 0; border-bottom: 1px solid var(--rule); }.print-sheet dt { font-weight: 700; }.print-sheet dd { margin: 0; }
 
 /* DSA ledgers */
@@ -472,7 +491,7 @@ button { color: inherit; }
 }
 @media (max-width: 720px) {
   .workbench-shell { display: block; }.workbench-index { border-right: 0; border-bottom: 1px solid var(--rule); }.ecosystem-tabs { grid-template-columns: repeat(2, 1fr); }.workbench-map > header { display: block; }.workbench-map header > span { margin-top: 12px; }.stack-layers { padding: 28px 18px; }.workbench-inspector { border-top: 1px solid var(--rule); }
-  .manual-shell { display: block; }.manual-index { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--rule); }.manual-index nav { grid-template-columns: repeat(2, 1fr); }.manual-article { padding: 38px 21px 70px; }.manual-columns { grid-template-columns: 1fr; }.command-book article > div { align-items: start; }.copy-command span { display: none; }
+  .manual-shell { display: block; }.manual-index { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--rule); }.manual-index nav { grid-template-columns: repeat(2, 1fr); }.manual-article { padding: 38px 21px 70px; }.manual-article > header > div { flex-wrap: wrap; }.manual-columns { grid-template-columns: 1fr; }.learning-ladder ul, .revision-checklist ul { columns: 1; }.command-book article > div { align-items: start; }.copy-command span { display: none; }
   .sheet-ledger a { display: block; }.sheet-ledger h2 { margin-top: 6px; }.sheet-ledger p { margin: 7px 0; }.sheet-filters { display: grid; }.sheet-filters > span { margin-left: 0; }.sheet-filters select { width: 100%; }.problem-solution header { display: block; }.problem-solution header > div { margin-top: 10px; flex-wrap: wrap; }
   .company-directory > section > div, .diagnostic-results > div { grid-template-columns: 1fr; }.company-directory a { grid-template-columns: 110px 1fr; }.company-directory a:nth-child(odd), .diagnostic-results article:nth-child(odd) { border-right: 0; }.company-directory a small { grid-column: 2; }.plan-workbench { grid-template-columns: 1fr; }.plan-workbench > aside { position: static; }.review-ledger > article { grid-template-columns: 1fr; }.review-ledger article > div:last-child { flex-wrap: wrap; }
 }

@@ -7,18 +7,28 @@ import { diagnostics, rolePathRecords } from "@/data/learning";
 import { packDefinitions } from "@/data/packs";
 
 describe("universal interview corpus", () => {
-  it("publishes complete technology contracts", () => {
+  it("validates every technology depth contract without overstating editorial depth", () => {
     expect(technologies.length).toBeGreaterThanOrEqual(110);
     const commandIds = new Set(commands.map((item) => item.id));
     const sourceIds = new Set(technologySources.map((item) => item.id));
     for (const technology of technologies) {
       expect(technology.commandIds).toHaveLength(12);
       expect(technology.workedExamples.length).toBeGreaterThanOrEqual(3);
+      expect(technology.learningPath).toHaveLength(4);
+      expect(technology.theorySections.length).toBeGreaterThanOrEqual(4);
+      expect(technology.misconceptions.length).toBeGreaterThanOrEqual(4);
+      expect(technology.revisionChecklist.length).toBeGreaterThanOrEqual(8);
       expect(technology.questions.length).toBeGreaterThanOrEqual(8);
+      expect(technology.questions.every((question) => question.whyTricky && question.rubric.length >= 2)).toBe(true);
+      expect(technology.flashcards.length).toBeGreaterThanOrEqual(8);
+      expect(technology.cheatsheet.length).toBeGreaterThanOrEqual(3);
       expect(technology.sourceIds.length).toBeGreaterThanOrEqual(3);
       expect(technology.commandIds.every((id) => commandIds.has(id))).toBe(true);
       expect(technology.sourceIds.every((id) => sourceIds.has(id))).toBe(true);
     }
+    const fullDepthIds = technologies.filter((technology) => technology.depthStatus === "complete").map((technology) => technology.id);
+    expect(fullDepthIds).toEqual(expect.arrayContaining(["java", "oop-and-lld", "dbms", "operating-systems", "computer-networks"]));
+    expect(technologies.filter((technology) => technology.depthStatus === "overview").length).toBeGreaterThan(0);
   });
 
   it("keeps Atlas 75, 180, and 300 strictly nested", () => {

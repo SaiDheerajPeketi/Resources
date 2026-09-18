@@ -25,7 +25,7 @@ await writeJson("content-manifest.json", { version: CONTENT_MANIFEST_VERSION, ge
 await writeJson("graph-manifest.json", { version: CONTENT_MANIFEST_VERSION, edges });
 await writeJson("search-index.json", [
   ...topics.map(({ id, slug, title, summary, trackId, level, publicationStatus, roleIds }) => ({ id, route: `/topics/${slug}/`, kind: "topic", title, summary, trackId, level, publicationStatus, roleIds })),
-  ...technologies.map(({ id, title, summary, ecosystem, level, publicationStatus, roleIds }) => ({ id, route: `/technologies/${id}/`, kind: "technology", title, summary, ecosystem, level, publicationStatus, roleIds })),
+  ...technologies.map(({ id, title, summary, ecosystem, level, publicationStatus, depthStatus, roleIds }) => ({ id, route: `/technologies/${id}/`, kind: "technology", title, summary, ecosystem, level, publicationStatus, depthStatus, roleIds })),
   ...dsaProblems.map(({ id, title, prompt: summary, patternId, difficulty, publicationStatus, roleIds }) => ({ id, route: `/problems/${id}/`, kind: "problem", title, summary, patternId, difficulty, publicationStatus, roleIds })),
   ...companyGuides.map(({ id, name: title, summary, archetype, roleFocus: roleIds }) => ({ id, route: `/companies/${id}/`, kind: "company", title, summary, archetype, publicationStatus: "published", roleIds }))
 ]);
@@ -36,7 +36,7 @@ await writeJson("sheet-manifest.json", { version: CONTENT_MANIFEST_VERSION, shee
 await writeJson("crosswalk-manifest.json", { version: CONTENT_MANIFEST_VERSION, crosswalks: coverageCrosswalks });
 await writeJson("company-manifest.json", { version: CONTENT_MANIFEST_VERSION, guides: companyGuides, sources: companySources });
 await writeJson("learning-manifest.json", { version: CONTENT_MANIFEST_VERSION, diagnostics, rolePaths: rolePathRecords });
-await writeJson("coverage-manifest.json", { version: CONTENT_MANIFEST_VERSION, topics: topics.length, technologies: technologies.length, commands: commands.length, problems: dsaProblems.length, companies: companyGuides.length, rolePaths: rolePathRecords.length, diagnostics: diagnostics.length, sheets: dsaSheets.map((sheet) => ({ id: sheet.id, count: sheet.problemIds.length })) });
+await writeJson("coverage-manifest.json", { version: CONTENT_MANIFEST_VERSION, topics: topics.length, technologies: technologies.length, fullDepthTechnologies: technologies.filter((technology) => technology.depthStatus === "complete").length, overviewTechnologies: technologies.filter((technology) => technology.depthStatus === "overview").length, commands: commands.length, problems: dsaProblems.length, companies: companyGuides.length, rolePaths: rolePathRecords.length, diagnostics: diagnostics.length, sheets: dsaSheets.map((sheet) => ({ id: sheet.id, count: sheet.problemIds.length })) });
 await writeJson("pack-manifest.json", {
   version: CONTENT_MANIFEST_VERSION,
   packs: packDefinitions.map((pack) => ({
@@ -57,7 +57,7 @@ await writeJson("content-freshness-report.json", {
   generatedAt,
   reviewPolicy: { staleBefore: staleBefore.toISOString().slice(0, 10), maximumAgeDays: 365 },
   topics: { total: topics.length, current: topics.length - staleTopics.length, stale: staleTopics },
-  technologies: { total: technologies.length, sources: technologySources.length, commands: commands.length },
+  technologies: { total: technologies.length, fullDepth: technologies.filter((technology) => technology.depthStatus === "complete").length, overview: technologies.filter((technology) => technology.depthStatus === "overview").length, sources: technologySources.length, commands: commands.length },
   sources: { references: sources.length, uniqueUrls: new Set(sources.map((source) => source.url)).size, secureUrls: sources.filter((source) => source.url.startsWith("https://")).length },
   byTrack: tracks.map((track) => {
     const trackTopics = topics.filter((topic) => topic.trackId === track.id);
@@ -72,6 +72,7 @@ await writeJson("completeness-report.json", {
   practice: { questions: questions.length, sets: practiceSets.length, categories: [...new Set(practiceSets.map((set) => set.category))], companyArchetypes: companyArchetypes.length, crossTrackMocks: mockLoops.length },
   audit: {
     unpublishedTopics: topics.filter((topic) => topic.publicationStatus !== "published").map((topic) => topic.id),
+    overviewTechnologies: technologies.filter((technology) => technology.depthStatus === "overview").map((technology) => technology.id),
     topicsWithoutQuestions: topics.filter((topic) => !questions.some((question) => question.topicId === topic.id)).map((topic) => topic.id),
     duplicateQuestionIds: questions.filter((question, index) => questions.findIndex((item) => item.id === question.id) !== index).map((question) => question.id),
     duplicateQuestionPrompts: questionPrompts.filter((prompt, index) => questionPrompts.indexOf(prompt) !== index),

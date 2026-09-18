@@ -225,6 +225,10 @@ A stack plate is a wide ruled technology row with an ecosystem code, kind, versi
 
 Commands are displayed in ruled rows with purpose, platform, expected result, safety classification, and an explicit copy control. Shell text uses the mono font; explanations remain in the reading face. Safety always has a written label and may use amber or red only as redundant emphasis.
 
+### Full-Depth Manual
+
+Full-depth manuals use a visible basic-to-expert learning ladder, numbered theory ledger, ruled misconception corrections, tricky-question explanations with strong-answer rubrics, rapid-recall rows, and a printable self-check sheet. An amber editorial notice marks overview material; a teal labelled status marks independently authored full-depth material. Never let the common page structure imply equal editorial depth.
+
 ### DSA Ledger
 
 Sheets and problem inventories use dense ruled rows with stable problem numbers, pattern, difficulty, estimated time, solution-language availability, and a non-color progress label. Filters sit above the ledger and do not detach results from their sheet context.
@@ -243,6 +247,7 @@ Sheets and problem inventories use dense ruled rows with stable problem numbers,
 - **Do** keep Stack Workbench layers in runtime-to-framework-to-tooling reading order and preserve that order on mobile.
 - **Do** give every command a stated purpose, platform, expected result, and safety classification.
 - **Do** use ruled ledgers for large problem, command, company, and technology inventories.
+- **Do** label technology depth explicitly and reserve “full depth” for subject-specific theory, misconceptions, question rubrics, and revision material.
 
 ### Don't:
 
@@ -253,3 +258,4 @@ Sheets and problem inventories use dense ruled rows with stable problem numbers,
 - **Don't** hide planned content or make it look finished.
 - **Don't** place hundreds of technologies into the role graph; use the Stack Workbench and ecosystem index.
 - **Don't** let adaptive recommendations silently override user-controlled confidence or hide their selection reason.
+- **Don't** present generated overview prose as an exhaustive A–Z manual.

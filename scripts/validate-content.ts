@@ -20,11 +20,16 @@ const technologyIds = new Set(technologies.map((item) => item.id));
 const commandIds = new Set(commands.map((item) => item.id));
 const sourceIds = new Set(technologySources.map((item) => item.id));
 for (const technology of technologies) {
-  if (technology.commandIds.length < 12 || technology.workedExamples.length < 3 || technology.questions.length < 8 || technology.sourceIds.length < 3) errors.push(`Technology ${technology.id} is missing its publishable contract.`);
+  if (technology.commandIds.length < 12 || technology.workedExamples.length < 3 || technology.questions.length < 8 || technology.sourceIds.length < 3) errors.push(`Technology ${technology.id} is missing its reference contract.`);
+  if (technology.learningPath.length < 4 || technology.theorySections.length < 4 || technology.misconceptions.length < 4 || technology.revisionChecklist.length < 8) errors.push(`Technology ${technology.id} is missing its depth and revision contract.`);
+  if (technology.questions.some((question) => !question.whyTricky || question.rubric.length < 2)) errors.push(`Technology ${technology.id} has an incomplete tricky-question rubric.`);
+  if (technology.flashcards.length < 8 || technology.cheatsheet.length < 3) errors.push(`Technology ${technology.id} has an incomplete recall contract.`);
   for (const id of technology.commandIds) if (!commandIds.has(id)) errors.push(`Technology ${technology.id} references unknown command ${id}.`);
   for (const id of technology.sourceIds) if (!sourceIds.has(id)) errors.push(`Technology ${technology.id} references unknown source ${id}.`);
   for (const id of technology.prerequisites) if (!technologyIds.has(id)) errors.push(`Technology ${technology.id} references unknown prerequisite ${id}.`);
 }
+const completeTechnologyIds = new Set(technologies.filter((technology) => technology.depthStatus === "complete").map((technology) => technology.id));
+for (const id of ["java", "oop-and-lld", "dbms", "operating-systems", "computer-networks"]) if (!completeTechnologyIds.has(id)) errors.push(`Core depth manual ${id} is not marked complete.`);
 const patternIds = new Set(dsaPatterns.map((item) => item.id));
 const problemIds = new Set(dsaProblems.map((item) => item.id));
 for (const problem of dsaProblems) {

@@ -59,6 +59,22 @@ export const CheatsheetSectionSchema = z.object({
   title: z.string().min(1),
   items: z.array(z.object({ label: z.string().min(1), value: z.string().min(1) })).min(2)
 });
+export const LearningStageSchema = z.object({
+  level: z.enum(["basic", "intermediate", "advanced", "expert"]),
+  title: z.string().min(1),
+  objective: z.string().min(1),
+  topics: z.array(z.string().min(1)).min(3)
+});
+export const TechnologyTheorySectionSchema = z.object({
+  title: z.string().min(1),
+  explanation: z.string().min(80),
+  keyPoints: z.array(z.string().min(1)).min(3)
+});
+export const MisconceptionSchema = z.object({
+  claim: z.string().min(1),
+  correction: z.string().min(1),
+  whyItHappens: z.string().min(1)
+});
 export const TechnologyMetaSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
   title: z.string().min(1),
@@ -70,7 +86,12 @@ export const TechnologyMetaSchema = z.object({
   prerequisites: z.array(z.string()),
   roleIds: z.array(z.string()).min(1),
   version: VersionSupportSchema,
+  depthStatus: z.enum(["overview", "complete"]),
   mentalModel: z.string().min(1),
+  learningPath: z.array(LearningStageSchema).min(4),
+  theorySections: z.array(TechnologyTheorySectionSchema).min(4),
+  misconceptions: z.array(MisconceptionSchema).min(4),
+  revisionChecklist: z.array(z.string().min(1)).min(8),
   setup: z.array(z.string().min(1)).min(3),
   runtime: z.array(z.string().min(1)).min(3),
   testing: z.array(z.string().min(1)).min(2),
@@ -80,9 +101,15 @@ export const TechnologyMetaSchema = z.object({
   failureModes: z.array(z.string().min(1)).min(3),
   commandIds: z.array(z.string()).min(12),
   workedExamples: z.array(z.object({ title: z.string().min(1), language: z.string().min(1), code: z.string().min(1), explanation: z.string().min(1) })).min(3),
-  questions: z.array(z.object({ prompt: z.string().min(1), difficulty: z.enum(["easy", "medium", "hard"]), answer: z.string().min(1) })).min(8),
-  flashcards: z.array(z.object({ front: z.string().min(1), back: z.string().min(1) })).min(4),
-  cheatsheet: z.array(CheatsheetSectionSchema).min(2),
+  questions: z.array(z.object({
+    prompt: z.string().min(1),
+    difficulty: z.enum(["easy", "medium", "hard"]),
+    answer: z.string().min(1),
+    whyTricky: z.string().min(1),
+    rubric: z.array(z.string().min(1)).min(2)
+  })).min(8),
+  flashcards: z.array(z.object({ front: z.string().min(1), back: z.string().min(1) })).min(8),
+  cheatsheet: z.array(CheatsheetSectionSchema).min(3),
   sourceIds: z.array(z.string()).min(3),
   lastReviewed: z.string().date(),
   asOf: z.string().date()

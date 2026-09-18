@@ -8,6 +8,7 @@ import {
   type TechnologyKind,
   type TechnologyMeta
 } from "@/lib/schema";
+import { completeTechnologyDepth } from "@/data/technology-depth";
 
 export type TechnologySpec = {
   id: string;
@@ -63,9 +64,76 @@ function examples(spec: TechnologySpec) {
   ];
 }
 
+function overviewDepth(spec: TechnologySpec) {
+  return {
+    workedExamples: examples(spec),
+    setup: ["Install from the official distribution or package manager.", "Pin runtime and dependency versions in project metadata.", "Run version, build, and test checks before changing code."],
+    runtime: ["Name the execution unit and its lifecycle.", "Trace allocation, scheduling, I/O, and cleanup.", "Separate language or framework guarantees from implementation behavior."],
+    testing: ["Test one behavior at the smallest stable boundary.", "Keep deterministic unit tests separate from integration and end-to-end checks."],
+    debugging: ["Reproduce with the smallest input and capture the first bad state.", "Use structured logs, breakpoints, traces, or query plans before guessing."],
+    performance: ["Measure latency, throughput, allocation, and contention before optimizing.", "State the trade-off introduced by every cache, batch, pool, or parallel path."],
+    security: ["Validate untrusted input at the boundary and use least privilege.", "Keep secrets out of source, logs, command history, and generated artifacts."],
+    failureModes: ["Using an unsupported or mismatched version.", "Hiding an expensive operation behind a convenient abstraction.", "Handling only the happy path while losing context from failures."],
+    learningPath: [
+      { level: "basic" as const, title: "Foundations", objective: `Build a correct vocabulary and smallest working ${spec.title} program.`, topics: ["installation and project shape", "core syntax and data model", "control flow and error handling", "standard-library or platform primitives"] },
+      { level: "intermediate" as const, title: "Working fluency", objective: `Use ${spec.title} idiomatically in tested application code.`, topics: ["module and dependency boundaries", "testing and debugging workflow", "I/O, persistence, and external integration", "common idioms and maintainable structure"] },
+      { level: "advanced" as const, title: "Runtime and trade-offs", objective: `Explain how ${spec.title} behaves under memory, concurrency, and performance pressure.`, topics: ["execution and memory model", "concurrency and scheduling", "profiling and performance limits", "failure recovery and observability"] },
+      { level: "expert" as const, title: "Production judgment", objective: `Defend ${spec.title} design choices and diagnose realistic failures.`, topics: ["security boundaries and threat model", "compatibility and version upgrades", "scaling and operational constraints", "architecture trade-offs and interview cases"] }
+    ],
+    theorySections: [
+      { title: "Core abstraction", explanation: `${spec.mentalModel} This overview establishes the nouns, lifecycle, and invariants that later examples must make concrete. It is not yet the complete editorial treatment for every subtopic in this technology.`, keyPoints: ["Name the execution unit and its lifecycle.", "Identify the state and invariant owned by each abstraction.", "Separate specification guarantees from common implementation behavior."] },
+      { title: "Data, memory, and lifetime", explanation: `${spec.title} programs move data through values, references, resources, or persisted representations. A strong explanation follows ownership and lifetime from creation through sharing, mutation, cleanup, and failure instead of relying on syntax alone.`, keyPoints: ["Trace allocation and cleanup.", "Make aliasing and mutation explicit.", "Treat resource lifetime separately from garbage-collected memory where applicable."] },
+      { title: "Concurrency and I/O", explanation: `Concurrency in ${spec.title} must be derived from its runtime and host platform. Explain what can execute independently, how work waits, how cancellation and backpressure propagate, and which synchronization rule protects shared invariants.`, keyPoints: ["Distinguish concurrency from parallelism.", "State the ordering or synchronization guarantee.", "Bound queues, retries, and resource use."] },
+      { title: "Production behavior", explanation: `A production ${spec.title} system is evaluated through tests, diagnostics, performance evidence, security boundaries, compatible changes, and recovery. Convenient abstractions are useful only when their hidden cost and failure signals remain observable.`, keyPoints: ["Measure before optimizing.", "Validate untrusted boundaries and use least privilege.", "Design rollback, migration, and failure diagnosis with the feature."] }
+    ],
+    misconceptions: [
+      { claim: `${spec.title} best practices are universal rules.`, correction: "Practices are responses to constraints; state the workload, invariant, and trade-off before applying one.", whyItHappens: "Interview summaries often omit the forces that justify a recommendation." },
+      { claim: `A successful ${spec.title} build proves runtime correctness.`, correction: "Build-time checks cover only declared contracts; runtime inputs, integration, resource limits, and concurrency still need evidence.", whyItHappens: "Fast local feedback is confused with end-to-end behavior." },
+      { claim: `The most concise ${spec.title} API is automatically the most efficient.`, correction: "Abstractions can hide allocation, I/O, network calls, queries, synchronization, or retries; inspect and measure the execution path.", whyItHappens: "Source-code size is used as a proxy for work performed." },
+      { claim: `Adding parallelism always speeds up ${spec.title} workloads.`, correction: "Useful parallelism is bounded by dependencies and resources; coordination, contention, queueing, and downstream limits can reduce throughput.", whyItHappens: "Available threads or workers are mistaken for additional system capacity." }
+    ],
+    revisionChecklist: [
+      `Explain the ${spec.title} mental model without product slogans.`,
+      "Name core types, lifecycle, invariants, and boundary conditions.",
+      "Trace one request or program from input through execution to output and cleanup.",
+      "State memory ownership, mutation, and resource-lifetime rules.",
+      "Explain concurrency, ordering, cancellation, and backpressure behavior.",
+      "Choose a test boundary and demonstrate an unhappy-path case.",
+      "Use one diagnostic tool and interpret its evidence.",
+      "Name a performance bottleneck, security risk, upgrade risk, and rollback path."
+    ],
+    questions: [
+      ["Explain the runtime model without using framework slogans.", "easy" as const, "Start from the execution unit, state lifecycle, inputs, state, scheduling, outputs, and cleanup; then separate specified guarantees from one implementation.", "Fluent API usage can hide a weak execution model."],
+      ["Which guarantees belong to the specification and which to the implementation?", "medium" as const, "Name each relied-on behavior, cite whether it is contractual, and explain how version or implementation changes would affect it.", "Familiar behavior is often mistaken for a portable guarantee."],
+      ["Design a minimal test pyramid for a production feature.", "medium" as const, "Use deterministic unit tests for policy, integration tests for real boundaries, a few end-to-end journeys, and contract or property tests where interfaces or invariants need them.", "Test labels are less important than stable boundaries and failure coverage."],
+      ["Diagnose a latency regression using evidence rather than guesses.", "hard" as const, "Reproduce under comparable load, decompose the latency budget, inspect traces and resource saturation, profile the constrained stage, change one cause, and verify tail as well as median latency.", "Average timing and correlation frequently produce false diagnoses."],
+      ["Name three failure modes and the signal that reveals each one.", "medium" as const, "Choose distinct correctness, resource, and integration failures and pair each with an observable log, metric, trace, state inspection, or failed invariant.", "Generic failure lists without discriminating evidence are not actionable."],
+      ["How do memory, concurrency, and I/O interact here?", "hard" as const, "Trace allocation and ownership across scheduled work and blocking or asynchronous boundaries, including queues, buffering, cancellation, cleanup, and backpressure.", "These resources are usually taught separately even though production failures couple them."],
+      ["What is the safest upgrade path between supported versions?", "medium" as const, "Read compatibility notes, pin inputs, test representative behavior, stage the rollout, observe agreed signals, retain rollback, and migrate data or APIs in compatible phases.", "A green build does not prove behavioral or operational compatibility."],
+      ["Sketch a secure deployment and rollback strategy.", "hard" as const, "Define identities, least privilege, secret delivery, trusted artifacts, input boundaries, audit signals, staged rollout, compatibility window, rollback trigger, and recovery verification.", "Deployment safety spans code, identity, data, and operational state." ]
+    ].map(([prompt, difficulty, answer, whyTricky]) => ({ prompt: `${spec.title}: ${prompt}`, difficulty, answer, whyTricky, rubric: ["Defines the relevant mechanism and invariant.", "Uses a concrete example and names a trade-off.", "Includes a failure signal or verification method."] })),
+    flashcards: [
+      { front: `${spec.title}: core mental model`, back: spec.mentalModel },
+      { front: `${spec.title}: first debugging move`, back: "Reproduce narrowly and inspect the first incorrect state." },
+      { front: `${spec.title}: performance rule`, back: "Measure the constrained resource before changing the design." },
+      { front: `${spec.title}: security rule`, back: "Treat input and identity as untrusted until validated at a boundary." },
+      { front: `${spec.title}: concurrency rule`, back: "Name the shared invariant, its owner, and the ordering mechanism." },
+      { front: `${spec.title}: testing rule`, back: "Test behavior at the smallest stable boundary and include the unhappy path." },
+      { front: `${spec.title}: upgrade rule`, back: "Pin, read compatibility notes, stage, observe, and keep a tested rollback." },
+      { front: `${spec.title}: interview frame`, back: "Model → invariant → mechanism → example → trade-off → failure signal." }
+    ],
+    cheatsheet: [
+      { title: "Learning path", items: [{ label: "Basic", value: "syntax + data + lifecycle" }, { label: "Intermediate", value: "idioms + tests + integration" }, { label: "Advanced", value: "runtime + concurrency + performance" }, { label: "Expert", value: "security + operations + trade-offs" }] },
+      { title: "Interview frame", items: [{ label: "Explain", value: "model → invariant → mechanism" }, { label: "Prove", value: "example → boundary → counterexample" }, { label: "Compare", value: "workload → trade-off → failure" }, { label: "Debug", value: "reproduce → observe → isolate → verify" }] },
+      { title: "Production frame", items: [{ label: "Ship", value: "pin → build → test → stage → observe" }, { label: "Secure", value: "identity → least privilege → validate → audit" }, { label: "Scale", value: "measure → bound → backpressure → recover" }, { label: "Upgrade", value: "compatibility → migration → rollback" }] }
+    ]
+  };
+}
+
 export function buildTechnology(spec: TechnologySpec) {
   const commands = commandBook(spec);
   const sourceIds = spec.sources.map((_, index) => `${spec.id}-source-${index + 1}`);
+  const depth = completeTechnologyDepth[spec.id] ?? overviewDepth(spec);
   const technology: TechnologyMeta = TechnologyMetaSchema.parse({
     id: spec.id,
     title: spec.title,
@@ -77,36 +145,24 @@ export function buildTechnology(spec: TechnologySpec) {
     prerequisites: spec.prerequisites ?? [],
     roleIds: spec.roles ?? ["sde", "backend", "full-stack"],
     version: { policy: "Use a supported stable release; verify the project lockfile before an interview exercise.", current: spec.version ?? "stable", ...(spec.lts ? { lts: spec.lts } : {}) },
+    depthStatus: completeTechnologyDepth[spec.id] ? "complete" : "overview",
     mentalModel: spec.mentalModel,
-    setup: ["Install from the official distribution or package manager.", "Pin the runtime and dependency versions in project metadata.", "Run the version, build, and test checks before changing code."],
-    runtime: ["Name the execution unit and its lifecycle.", "Trace allocation, scheduling, I/O, and cleanup.", "Separate language or framework guarantees from implementation behavior."],
-    testing: ["Test one behavior at the smallest stable boundary.", "Keep deterministic unit tests separate from integration and end-to-end checks."],
-    debugging: ["Reproduce with the smallest input and capture the first bad state.", "Use structured logs, breakpoints, traces, or query plans before guessing."],
-    performance: ["Measure latency, throughput, allocation, and contention before optimizing.", "State the trade-off introduced by every cache, batch, pool, or parallel path."],
-    security: ["Validate untrusted input at the boundary and use least privilege.", "Keep secrets out of source, logs, command history, and generated artifacts."],
-    failureModes: ["Using an unsupported or mismatched version.", "Hiding an expensive operation behind a convenient abstraction.", "Handling only the happy path while losing context from failures."],
+    learningPath: depth.learningPath,
+    theorySections: depth.theorySections,
+    misconceptions: depth.misconceptions,
+    revisionChecklist: depth.revisionChecklist,
+    setup: depth.setup,
+    runtime: depth.runtime,
+    testing: depth.testing,
+    debugging: depth.debugging,
+    performance: depth.performance,
+    security: depth.security,
+    failureModes: depth.failureModes,
     commandIds: commands.map((command) => command.id),
-    workedExamples: examples(spec),
-    questions: [
-      ["Explain the runtime model without using framework slogans.", "easy"],
-      ["Which guarantees belong to the specification and which to the implementation?", "medium"],
-      ["Design a minimal test pyramid for a production feature.", "medium"],
-      ["Diagnose a latency regression using evidence rather than guesses.", "hard"],
-      ["Name three failure modes and the signal that reveals each one.", "medium"],
-      ["How do memory, concurrency, and I/O interact here?", "hard"],
-      ["What is the safest upgrade path between supported versions?", "medium"],
-      ["Sketch a secure deployment and rollback strategy.", "hard"]
-    ].map(([prompt, difficulty], index) => ({ prompt: `${spec.title}: ${prompt}`, difficulty, answer: `A strong answer defines the relevant ${spec.title} mechanism, states its invariant, gives a concrete example, and names a trade-off or failure signal.`, id: index })),
-    flashcards: [
-      { front: `${spec.title}: core mental model`, back: spec.mentalModel },
-      { front: `${spec.title}: first debugging move`, back: "Reproduce narrowly and inspect the first incorrect state." },
-      { front: `${spec.title}: performance rule`, back: "Measure the constrained resource before changing the design." },
-      { front: `${spec.title}: security rule`, back: "Treat input and identity as untrusted until validated at a boundary." }
-    ],
-    cheatsheet: [
-      { title: "Interview frame", items: [{ label: "Explain", value: "model → invariant → example → trade-off" }, { label: "Debug", value: "reproduce → observe → isolate → verify" }] },
-      { title: "Production frame", items: [{ label: "Ship", value: "pin → build → test → deploy → observe" }, { label: "Recover", value: "limit blast radius → rollback → learn" }] }
-    ],
+    workedExamples: depth.workedExamples,
+    questions: depth.questions,
+    flashcards: depth.flashcards,
+    cheatsheet: depth.cheatsheet,
     sourceIds,
     lastReviewed: "2026-09-18",
     asOf: "2026-09-18"

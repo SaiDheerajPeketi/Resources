@@ -2438,6 +2438,7 @@
     "ecosystem": "java",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "complete",
     "roleIds": [
       "java",
       "backend",
@@ -2454,6 +2455,7 @@
     "ecosystem": "systems",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "complete",
     "roleIds": [
       "sde",
       "backend",
@@ -2469,6 +2471,7 @@
     "ecosystem": "database",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "complete",
     "roleIds": [
       "sde",
       "backend",
@@ -2484,6 +2487,7 @@
     "ecosystem": "systems",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "complete",
     "roleIds": [
       "sde",
       "backend",
@@ -2499,6 +2503,7 @@
     "ecosystem": "systems",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "complete",
     "roleIds": [
       "sde",
       "backend",
@@ -2514,6 +2519,7 @@
     "ecosystem": "systems",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2529,6 +2535,7 @@
     "ecosystem": "systems",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2544,6 +2551,7 @@
     "ecosystem": "systems",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2559,6 +2567,7 @@
     "ecosystem": "systems",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2574,6 +2583,7 @@
     "ecosystem": "systems",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2590,6 +2600,7 @@
     "ecosystem": "systems",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2606,6 +2617,7 @@
     "ecosystem": "python",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2622,6 +2634,7 @@
     "ecosystem": "javascript",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2638,6 +2651,7 @@
     "ecosystem": "javascript",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2654,6 +2668,7 @@
     "ecosystem": "go",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2670,6 +2685,7 @@
     "ecosystem": "dotnet",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2686,6 +2702,7 @@
     "ecosystem": "rust",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2702,6 +2719,7 @@
     "ecosystem": "java",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2718,6 +2736,7 @@
     "ecosystem": "mobile",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2734,6 +2753,7 @@
     "ecosystem": "web",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2750,6 +2770,7 @@
     "ecosystem": "web",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2766,6 +2787,7 @@
     "ecosystem": "java",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2782,6 +2804,7 @@
     "ecosystem": "mobile",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2798,6 +2821,7 @@
     "ecosystem": "data-ai",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2814,6 +2838,7 @@
     "ecosystem": "database",
     "level": "foundation",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2830,6 +2855,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2846,6 +2872,7 @@
     "ecosystem": "dotnet",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2862,6 +2889,7 @@
     "ecosystem": "web",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "sde",
       "backend",
@@ -2878,6 +2906,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -2895,6 +2924,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -2912,6 +2942,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -2929,6 +2960,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -2946,6 +2978,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -2963,6 +2996,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -2980,6 +3014,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -2997,6 +3032,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3014,6 +3050,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3031,6 +3068,7 @@
     "ecosystem": "web",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3048,6 +3086,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3065,6 +3104,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3082,6 +3122,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3099,6 +3140,7 @@
     "ecosystem": "java",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3116,6 +3158,7 @@
     "ecosystem": "java",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3133,6 +3176,7 @@
     "ecosystem": "java",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3150,6 +3194,7 @@
     "ecosystem": "python",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3167,6 +3212,7 @@
     "ecosystem": "python",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3184,6 +3230,7 @@
     "ecosystem": "python",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3201,6 +3248,7 @@
     "ecosystem": "python",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3218,6 +3266,7 @@
     "ecosystem": "dotnet",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3235,6 +3284,7 @@
     "ecosystem": "dotnet",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3252,6 +3302,7 @@
     "ecosystem": "go",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3269,6 +3320,7 @@
     "ecosystem": "go",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3286,6 +3338,7 @@
     "ecosystem": "rust",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3303,6 +3356,7 @@
     "ecosystem": "rust",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3320,6 +3374,7 @@
     "ecosystem": "java",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3337,6 +3392,7 @@
     "ecosystem": "web",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3354,6 +3410,7 @@
     "ecosystem": "web",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3371,6 +3428,7 @@
     "ecosystem": "java",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3388,6 +3446,7 @@
     "ecosystem": "java",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3405,6 +3464,7 @@
     "ecosystem": "database",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3422,6 +3482,7 @@
     "ecosystem": "database",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3439,6 +3500,7 @@
     "ecosystem": "database",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3456,6 +3518,7 @@
     "ecosystem": "database",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3473,6 +3536,7 @@
     "ecosystem": "database",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3490,6 +3554,7 @@
     "ecosystem": "database",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3507,6 +3572,7 @@
     "ecosystem": "database",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3524,6 +3590,7 @@
     "ecosystem": "database",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3541,6 +3608,7 @@
     "ecosystem": "database",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3558,6 +3626,7 @@
     "ecosystem": "database",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3575,6 +3644,7 @@
     "ecosystem": "java",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3592,6 +3662,7 @@
     "ecosystem": "python",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3609,6 +3680,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3626,6 +3698,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3643,6 +3716,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3660,6 +3734,7 @@
     "ecosystem": "web",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3677,6 +3752,7 @@
     "ecosystem": "java",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3694,6 +3770,7 @@
     "ecosystem": "java",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3711,6 +3788,7 @@
     "ecosystem": "javascript",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3728,6 +3806,7 @@
     "ecosystem": "python",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3745,6 +3824,7 @@
     "ecosystem": "rust",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3762,6 +3842,7 @@
     "ecosystem": "go",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3779,6 +3860,7 @@
     "ecosystem": "dotnet",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "frontend",
       "backend",
@@ -3796,6 +3878,7 @@
     "ecosystem": "mobile",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "android",
       "ios",
@@ -3812,6 +3895,7 @@
     "ecosystem": "mobile",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "android",
       "ios",
@@ -3828,6 +3912,7 @@
     "ecosystem": "mobile",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "android",
       "ios",
@@ -3844,6 +3929,7 @@
     "ecosystem": "mobile",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "android",
       "ios",
@@ -3860,6 +3946,7 @@
     "ecosystem": "mobile",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "android",
       "ios",
@@ -3876,6 +3963,7 @@
     "ecosystem": "mobile",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "android",
       "ios",
@@ -3892,6 +3980,7 @@
     "ecosystem": "data-ai",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -3908,6 +3997,7 @@
     "ecosystem": "data-ai",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -3924,6 +4014,7 @@
     "ecosystem": "data-ai",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -3940,6 +4031,7 @@
     "ecosystem": "data-ai",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -3956,6 +4048,7 @@
     "ecosystem": "data-ai",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -3972,6 +4065,7 @@
     "ecosystem": "data-ai",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -3988,6 +4082,7 @@
     "ecosystem": "data-ai",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -4004,6 +4099,7 @@
     "ecosystem": "data-ai",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -4020,6 +4116,7 @@
     "ecosystem": "data-ai",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -4036,6 +4133,7 @@
     "ecosystem": "data-ai",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -4052,6 +4150,7 @@
     "ecosystem": "data-ai",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -4068,6 +4167,7 @@
     "ecosystem": "data-ai",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -4084,6 +4184,7 @@
     "ecosystem": "data-ai",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -4100,6 +4201,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",
@@ -4116,6 +4218,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",
@@ -4132,6 +4235,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",
@@ -4148,6 +4252,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",
@@ -4164,6 +4269,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",
@@ -4180,6 +4286,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",
@@ -4196,6 +4303,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",
@@ -4212,6 +4320,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",
@@ -4228,6 +4337,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",
@@ -4244,6 +4354,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",
@@ -4260,6 +4371,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",
@@ -4276,6 +4388,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",
@@ -4292,6 +4405,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",
@@ -4308,6 +4422,7 @@
     "ecosystem": "devops",
     "level": "interview",
     "publicationStatus": "published",
+    "depthStatus": "overview",
     "roleIds": [
       "devops",
       "sre",

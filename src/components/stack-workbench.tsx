@@ -39,18 +39,18 @@ export function StackWorkbench() {
         {["framework", "tool", "data-ai", "mobile", "web-api", "language", "runtime", "database", "platform"].map((kind) => {
           const items = visible.filter((technology) => technology.kind === kind);
           if (!items.length) return null;
-          return <section className="stack-layer" key={kind}><h3>{kind.replace("-", " ")}</h3><div>{items.map((technology) => <button key={technology.id} className={selected?.id === technology.id ? "is-selected" : ""} onClick={() => setSelectedId(technology.id)}><Boxes size={17} /><span><strong>{technology.title}</strong><small>{technology.level} · {technology.version.current}</small></span></button>)}</div></section>;
+          return <section className="stack-layer" key={kind}><h3>{kind.replace("-", " ")}</h3><div>{items.map((technology) => <button key={technology.id} className={selected?.id === technology.id ? "is-selected" : ""} onClick={() => setSelectedId(technology.id)}><Boxes size={17} /><span><strong>{technology.title}</strong><small>{technology.depthStatus === "complete" ? "full depth" : "overview"} · {technology.version.current}</small></span></button>)}</div></section>;
         })}
       </div>
       <footer><span>base layer</span><span>application layer</span></footer>
     </section>
     <aside className="workbench-inspector" aria-live="polite">
       {selected ? <>
-        <div className="inspector-meta"><span>{selected.kind}</span><span><CheckCircle2 size={14} /> published</span></div>
+        <div className="inspector-meta"><span>{selected.kind}</span><span>{selected.depthStatus === "complete" ? <CheckCircle2 size={14} /> : <Clock3 size={14} />} {selected.depthStatus === "complete" ? "full depth" : "overview"}</span></div>
         <h2>{selected.title}</h2><p className="inspector-summary">{selected.summary}</p>
         <section><h3>Mental model</h3><p>{selected.mentalModel}</p></section>
         <section><h3>Version policy</h3><dl><div><dt>Current guide</dt><dd>{selected.version.current}</dd></div>{selected.version.lts && <div><dt>LTS</dt><dd>{selected.version.lts}</dd></div>}<div><dt>Reviewed</dt><dd>{selected.lastReviewed}</dd></div></dl></section>
-        <section><h3>Interview coverage</h3><p>{selected.questions.length} graded questions · {selected.commandIds.length} commands · {selected.workedExamples.length} examples</p></section>
+        <section><h3>Interview coverage</h3><p>{selected.theorySections.length} theory sections · {selected.misconceptions.length} misconception checks · {selected.questions.length} graded questions · {selected.flashcards.length} flashcards</p></section>
         <Link className="primary-action workbench-open" href={`/technologies/${selected.id}/`}><Clock3 size={17} /> Open field manual</Link>
       </> : <p>No published technology is available in this ecosystem yet.</p>}
     </aside>

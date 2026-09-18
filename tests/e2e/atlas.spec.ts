@@ -127,8 +127,15 @@ test("Stack Workbench opens a complete technology manual", async ({ page }) => {
   await page.getByRole("button", { name: /Java/ }).first().click();
   await page.getByRole("link", { name: /Open field manual/ }).click();
   await expect(page.getByRole("heading", { name: "Java", level: 1 })).toBeVisible();
+  await expect(page.getByText("full-depth manual")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Basic → advanced learning path" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Deep theory and trade-offs" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Misconceptions and confused distinctions" })).toBeVisible();
   await expect(page.getByRole("heading", { name: /Command cookbook/ })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Interview questions" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Tricky interview questions" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Rapid-recall flashcards" })).toBeVisible();
+  await page.goto("/technologies/python/");
+  await expect(page.getByText("Editorial expansion in progress")).toBeVisible();
 });
 
 test("Atlas 300 filters and loads a language-specific problem artifact", async ({ page }) => {
