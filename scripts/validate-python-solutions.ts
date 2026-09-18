@@ -2,7 +2,7 @@ import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { spawnSync } from "node:child_process";
-import { pythonAtlas75 } from "../src/data/solutions/python-atlas75";
+import { reviewedPythonSolutions } from "../src/data/solutions/reviewed-solutions";
 
 const prelude = `from bisect import bisect_left, bisect_right
 from collections import Counter, deque
@@ -26,7 +26,7 @@ class GraphNode:
 const work = mkdtempSync(join(tmpdir(), "interview-atlas-python-"));
 const failures: string[] = [];
 try {
-  for (const [id, source] of Object.entries(pythonAtlas75)) {
+  for (const [id, source] of Object.entries(reviewedPythonSolutions)) {
     const file = join(work, `${id}.py`);
     writeFileSync(file, `${prelude}\n${source}\n`);
     const result = spawnSync(process.env.PYTHON ?? "python3", ["-m", "py_compile", file], {
@@ -43,4 +43,4 @@ if (failures.length) {
   console.error(failures.join("\n\n"));
   process.exit(1);
 }
-console.log(`Compiled ${Object.keys(pythonAtlas75).length} Atlas 75 Python references.`);
+console.log(`Compiled ${Object.keys(reviewedPythonSolutions).length} reviewed Python references.`);

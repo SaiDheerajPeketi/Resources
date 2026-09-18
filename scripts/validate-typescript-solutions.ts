@@ -2,7 +2,7 @@ import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { spawnSync } from "node:child_process";
-import { typescriptAtlas75 } from "../src/data/solutions/typescript-atlas75";
+import { reviewedTypescriptSolutions } from "../src/data/solutions/reviewed-solutions";
 
 const prelude = `class ListNode {
   constructor(public val: number, public next: ListNode | null = null) {}
@@ -31,7 +31,7 @@ class GraphNode {
 
 const work = mkdtempSync(join(tmpdir(), "interview-atlas-typescript-"));
 try {
-  const files = Object.entries(typescriptAtlas75).map(([id, source]) => {
+  const files = Object.entries(reviewedTypescriptSolutions).map(([id, source]) => {
     const file = join(work, `${id}.ts`);
     writeFileSync(file, `${prelude}\n${source}\nexport {};\n`);
     return file;
@@ -55,4 +55,4 @@ try {
   rmSync(work, { recursive: true, force: true });
 }
 
-console.log(`Compiled ${Object.keys(typescriptAtlas75).length} Atlas 75 TypeScript references in strict mode.`);
+console.log(`Compiled ${Object.keys(reviewedTypescriptSolutions).length} reviewed TypeScript references in strict mode.`);

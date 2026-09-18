@@ -200,6 +200,18 @@ test("Atlas 300 filters and loads a language-specific problem artifact", async (
   await expect(page.locator("pre")).toContainText("function editDistance");
 });
 
+test("Atlas 90 extension exposes a full trie lesson and reviewed artifacts", async ({ page }) => {
+  await page.goto("/problems/atlas-090/");
+  await expect(page.getByRole("heading", { name: "Binary XOR Trie", level: 1 })).toBeVisible();
+  await expect(page.getByText("Full lesson", { exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "From baseline to optimal" })).toBeVisible();
+  await page.getByRole("button", { name: "Load C++17 artifact" }).click();
+  await expect(page.locator("pre")).toContainText("streamingMaximumXor");
+  await page.getByRole("button", { name: "TypeScript" }).click();
+  await expect(page.getByText("Reviewed solution")).toBeVisible();
+  await expect(page.locator("pre")).toContainText("function streamingMaximumXor");
+});
+
 test("diagnostic, plan, review, and company guides are reachable", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== "desktop", "One local workflow check is sufficient");
   await page.goto("/diagnostic/");

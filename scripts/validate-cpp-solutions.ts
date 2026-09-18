@@ -2,7 +2,7 @@ import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { spawnSync } from "node:child_process";
-import { cpp17Atlas75 } from "../src/data/solutions/cpp17-atlas75";
+import { reviewedCppSolutions } from "../src/data/solutions/reviewed-solutions";
 
 const prelude = `#include <algorithm>
 #include <array>
@@ -10,12 +10,14 @@ const prelude = `#include <algorithm>
 #include <climits>
 #include <functional>
 #include <map>
+#include <memory>
 #include <numeric>
 #include <optional>
 #include <queue>
 #include <stack>
 #include <stdexcept>
 #include <string>
+#include <sstream>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
@@ -31,7 +33,7 @@ struct GraphNode { int val; vector<GraphNode*> neighbors; GraphNode(int v = 0) :
 const work = mkdtempSync(join(tmpdir(), "interview-atlas-cpp-"));
 const failures: string[] = [];
 try {
-  for (const [id, source] of Object.entries(cpp17Atlas75)) {
+  for (const [id, source] of Object.entries(reviewedCppSolutions)) {
     const file = join(work, `${id}.cpp`);
     writeFileSync(file, `${prelude}\n${source}\n`);
     const result = spawnSync(process.env.CXX ?? "c++", ["-std=c++17", "-fsyntax-only", file], { encoding: "utf8" });
@@ -45,4 +47,4 @@ if (failures.length) {
   console.error(failures.join("\n\n"));
   process.exit(1);
 }
-console.log(`Compiled ${Object.keys(cpp17Atlas75).length} Atlas 75 C++17 references.`);
+console.log(`Compiled ${Object.keys(reviewedCppSolutions).length} reviewed C++17 references.`);

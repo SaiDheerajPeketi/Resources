@@ -2,7 +2,7 @@ import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { spawnSync } from "node:child_process";
-import { javaAtlas75 } from "../src/data/solutions/java-atlas75";
+import { reviewedJavaSolutions } from "../src/data/solutions/reviewed-solutions";
 
 const prelude = `import java.util.*;
 
@@ -39,7 +39,7 @@ class GraphNode {
 const work = mkdtempSync(join(tmpdir(), "interview-atlas-java-"));
 const failures: string[] = [];
 try {
-  for (const [id, source] of Object.entries(javaAtlas75)) {
+  for (const [id, source] of Object.entries(reviewedJavaSolutions)) {
     const sourceDirectory = join(work, id);
     mkdirSync(sourceDirectory);
     const file = join(sourceDirectory, "Solution.java");
@@ -57,4 +57,4 @@ if (failures.length) {
   console.error(failures.join("\n\n"));
   process.exit(1);
 }
-console.log(`Compiled ${Object.keys(javaAtlas75).length} Atlas 75 Java 17 references.`);
+console.log(`Compiled ${Object.keys(reviewedJavaSolutions).length} reviewed Java 17 references.`);

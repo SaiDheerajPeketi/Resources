@@ -11,10 +11,12 @@ import { securityLessons } from "../src/data/security-lessons";
 import { fintechLessons } from "../src/data/fintech-lessons";
 import { commands, technologies, technologySources } from "../src/data/technologies";
 import { dsaPatterns, dsaProblems, dsaSheets } from "../src/data/dsa";
-import { cpp17Atlas75 } from "../src/data/solutions/cpp17-atlas75";
-import { javaAtlas75 } from "../src/data/solutions/java-atlas75";
-import { pythonAtlas75 } from "../src/data/solutions/python-atlas75";
-import { typescriptAtlas75 } from "../src/data/solutions/typescript-atlas75";
+import {
+  reviewedCppSolutions,
+  reviewedJavaSolutions,
+  reviewedPythonSolutions,
+  reviewedTypescriptSolutions
+} from "../src/data/solutions/reviewed-solutions";
 import { coverageCrosswalks } from "../src/data/crosswalks";
 import { companyGuides, companySources } from "../src/data/companies";
 import { diagnostics, diagnosticQuestions, rolePathRecords } from "../src/data/learning";
@@ -54,17 +56,18 @@ for (const problem of dsaProblems) {
   if (problem.depthStatus === "complete") {
     if (problem.prompt.length < 80 || problem.naiveApproach.length < 80 || problem.proof.length < 180) errors.push(`Complete problem ${problem.id} has shallow teaching copy.`);
     if (problem.examples.some((example) => example.input.includes("representative input") || example.output.includes("corresponding result"))) errors.push(`Complete problem ${problem.id} still has a placeholder example.`);
-    if (!cpp17Atlas75[problem.id] || cpp17Atlas75[problem.id].includes("Maintain only the state required")) errors.push(`Complete problem ${problem.id} has no reviewed C++17 reference.`);
-    if (!javaAtlas75[problem.id] || javaAtlas75[problem.id].includes("porting blueprint")) errors.push(`Complete problem ${problem.id} has no reviewed Java reference.`);
-    if (!pythonAtlas75[problem.id] || pythonAtlas75[problem.id].includes("Replace the transition")) errors.push(`Complete problem ${problem.id} has no reviewed Python reference.`);
-    if (!typescriptAtlas75[problem.id] || typescriptAtlas75[problem.id].includes("porting blueprint")) errors.push(`Complete problem ${problem.id} has no reviewed TypeScript reference.`);
+    if (!reviewedCppSolutions[problem.id] || reviewedCppSolutions[problem.id].includes("Maintain only the state required")) errors.push(`Complete problem ${problem.id} has no reviewed C++17 reference.`);
+    if (!reviewedJavaSolutions[problem.id] || reviewedJavaSolutions[problem.id].includes("porting blueprint")) errors.push(`Complete problem ${problem.id} has no reviewed Java reference.`);
+    if (!reviewedPythonSolutions[problem.id] || reviewedPythonSolutions[problem.id].includes("Replace the transition")) errors.push(`Complete problem ${problem.id} has no reviewed Python reference.`);
+    if (!reviewedTypescriptSolutions[problem.id] || reviewedTypescriptSolutions[problem.id].includes("porting blueprint")) errors.push(`Complete problem ${problem.id} has no reviewed TypeScript reference.`);
   }
 }
-if (dsaProblems.filter((problem) => problem.depthStatus === "complete").length !== 75) errors.push("Atlas 75 full-depth contract is incomplete.");
-if (Object.keys(cpp17Atlas75).length !== 75) errors.push("Atlas 75 C++17 reference set is incomplete.");
-if (Object.keys(javaAtlas75).length !== 75) errors.push("Atlas 75 Java reference set is incomplete.");
-if (Object.keys(pythonAtlas75).length !== 75) errors.push("Atlas 75 Python reference set is incomplete.");
-if (Object.keys(typescriptAtlas75).length !== 75) errors.push("Atlas 75 TypeScript reference set is incomplete.");
+const completeProblemCount = dsaProblems.filter((problem) => problem.depthStatus === "complete").length;
+if (completeProblemCount !== 90) errors.push(`Expected 90 full-depth DSA lessons, found ${completeProblemCount}.`);
+if (Object.keys(reviewedCppSolutions).length !== completeProblemCount) errors.push("Reviewed C++17 reference set does not match completed DSA lessons.");
+if (Object.keys(reviewedJavaSolutions).length !== completeProblemCount) errors.push("Reviewed Java reference set does not match completed DSA lessons.");
+if (Object.keys(reviewedPythonSolutions).length !== completeProblemCount) errors.push("Reviewed Python reference set does not match completed DSA lessons.");
+if (Object.keys(reviewedTypescriptSolutions).length !== completeProblemCount) errors.push("Reviewed TypeScript reference set does not match completed DSA lessons.");
 for (const sheet of dsaSheets) for (const id of sheet.problemIds) if (!problemIds.has(id)) errors.push(`Sheet ${sheet.id} references unknown problem ${id}.`);
 for (const crosswalk of coverageCrosswalks) if (!problemIds.has(crosswalk.atlasProblemId)) errors.push(`Crosswalk ${crosswalk.id} references unknown problem ${crosswalk.atlasProblemId}.`);
 const companySourceIds = new Set(companySources.map((source) => source.id));

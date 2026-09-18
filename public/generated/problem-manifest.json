@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r21",
+  "version": "2026.09.18-r22",
   "patterns": [
     {
       "id": "hashing",
@@ -8001,7 +8001,7 @@
     {
       "id": "atlas-076",
       "title": "Rotate a Square Matrix",
-      "prompt": "Solve the original Rotate a Square Matrix interview exercise by defining its inputs, outputs, validity rules, and matrix traversal invariant before implementation.",
+      "prompt": "Rotate an n×n integer matrix 90 degrees clockwise in place and return the mutated matrix. Allocating a second n×n matrix is not allowed. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "matrix",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -8020,64 +8020,65 @@
         "atlas300": 76
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative rotate a square matrix input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the matrix traversal state rather than treating the algorithm as a memorized recipe."
+          "input": "matrix = [[1,2,3],[4,5,6],[7,8,9]]",
+          "output": "[[7,4,1],[8,5,2],[9,6,3]]",
+          "explanation": "Transpose across the main diagonal to obtain [[1,4,7],[2,5,8],[3,6,9]], then reverse each row. Every original cell (r,c) finishes at (c,n−1−r). This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when matrix traversal applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Rotate a Square Matrix into a precise state and invariant.",
+        "Contrast the direct baseline with the matrix traversal solution.",
+        "Implement, prove, and test the O(n²) / O(1) approach."
       ],
       "analogy": {
-        "body": "Matrix traversal is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "Picture a warehouse floor labelled by row and column. A traversal is a route plan: state the current coordinates, direction, and closed boundaries so every tile is handled exactly once.",
+        "limit": "The floor-map analogy does not decide whether mutation is permitted or how ragged rows behave; those remain explicit contract choices."
       },
       "hints": [
-        "Write the matrix traversal invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each matrix traversal transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases An empty matrix remains empty and Odd n leaves the center cell unchanged do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Rotate a Square Matrix: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Matrix traversal. Treat row, column, direction, and boundary as explicit state. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "Writing each value into a fresh output matrix is simple and linear, but consumes O(n²) additional space and misses the in-place requirement. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "Transpose pairs above the main diagonal, then reverse every row. These two in-place transformations compose to one clockwise quarter-turn.",
+      "proof": "Invariant: After transposition, original (r,c) is at (c,r); reversing row c moves column r to n−1−r, exactly the clockwise destination (c,n−1−r). Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for matrix = [[1,2,3],[4,5,6],[7,8,9]].",
+        "Transpose across the main diagonal to obtain [[1,4,7],[2,5,8],[3,6,9]], then reverse each row. Every original cell (r,c) finishes at (c,n−1−r).",
+        "The algorithm returns [[7,4,1],[8,5,2],[9,6,3]]; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(n²)",
+        "space": "O(1)",
+        "rationale": "The bound follows from the described transitions: Transpose pairs above the main diagonal, then reverse every row. These two in-place transformations compose to one clockwise quarter-turn. State retained beyond the output is bounded by O(1)."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Matrix traversal is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The matrix traversal name is the proof.",
+          "correction": "After transposition, original (r,c) is at (c,r); reversing row c moves column r to n−1−r, exactly the clockwise destination (c,n−1−r)."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test an empty matrix remains empty and odd n leaves the center cell unchanged."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(n²) time and O(1) space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Rotate a Square Matrix while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(n²) solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "An empty matrix remains empty",
+        "Odd n leaves the center cell unchanged"
       ],
       "variantLanguages": [
         "cpp17",
@@ -8096,7 +8097,7 @@
     {
       "id": "atlas-077",
       "title": "Spiral Matrix Walk",
-      "prompt": "Solve the original Spiral Matrix Walk interview exercise by defining its inputs, outputs, validity rules, and matrix traversal invariant before implementation.",
+      "prompt": "Return all values of a rectangular matrix in clockwise spiral order, starting at the top-left corner. Do not mutate the input. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "matrix",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -8115,64 +8116,65 @@
         "atlas300": 77
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative spiral matrix walk input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the matrix traversal state rather than treating the algorithm as a memorized recipe."
+          "input": "matrix = [[1,2,3],[4,5,6],[7,8,9]]",
+          "output": "[1,2,3,6,9,8,7,4,5]",
+          "explanation": "Read the top edge 1,2,3; right edge 6,9; bottom edge 8,7; left edge 4. Shrinking all four boundaries leaves the center 5. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when matrix traversal applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Spiral Matrix Walk into a precise state and invariant.",
+        "Contrast the direct baseline with the matrix traversal solution.",
+        "Implement, prove, and test the O(rows×cols) / O(1) excluding output approach."
       ],
       "analogy": {
-        "body": "Matrix traversal is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "Picture a warehouse floor labelled by row and column. A traversal is a route plan: state the current coordinates, direction, and closed boundaries so every tile is handled exactly once.",
+        "limit": "The floor-map analogy does not decide whether mutation is permitted or how ragged rows behave; those remain explicit contract choices."
       },
       "hints": [
-        "Write the matrix traversal invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each matrix traversal transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases A single row must not be emitted twice and A single column must not be emitted twice do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Spiral Matrix Walk: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Matrix traversal. Treat row, column, direction, and boundary as explicit state. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "Simulating movement with a visited matrix works but spends O(rows×cols) extra memory and adds direction-change bookkeeping. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "Maintain inclusive top, bottom, left, and right boundaries. Read one perimeter clockwise, then shrink its corresponding boundary, guarding the bottom and left passes after shrinkage.",
+      "proof": "Invariant: Before each round, the boundaries enclose exactly the unreported cells. Each guarded edge pass reports a disjoint boundary segment, and shrinking removes precisely those cells. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for matrix = [[1,2,3],[4,5,6],[7,8,9]].",
+        "Read the top edge 1,2,3; right edge 6,9; bottom edge 8,7; left edge 4. Shrinking all four boundaries leaves the center 5.",
+        "The algorithm returns [1,2,3,6,9,8,7,4,5]; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(rows×cols)",
+        "space": "O(1) excluding output",
+        "rationale": "The bound follows from the described transitions: Maintain inclusive top, bottom, left, and right boundaries. Read one perimeter clockwise, then shrink its corresponding boundary, guarding the bottom and left passes after shrinkage. State retained beyond the output is bounded by O(1) excluding output."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Matrix traversal is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The matrix traversal name is the proof.",
+          "correction": "Before each round, the boundaries enclose exactly the unreported cells. Each guarded edge pass reports a disjoint boundary segment, and shrinking removes precisely those cells."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test a single row must not be emitted twice and a single column must not be emitted twice."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(rows×cols) time and O(1) excluding output space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Spiral Matrix Walk while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(rows×cols) solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "A single row must not be emitted twice",
+        "A single column must not be emitted twice"
       ],
       "variantLanguages": [
         "cpp17",
@@ -8191,7 +8193,7 @@
     {
       "id": "atlas-078",
       "title": "Zero Rows and Columns",
-      "prompt": "Solve the original Zero Rows and Columns interview exercise by defining its inputs, outputs, validity rules, and matrix traversal invariant before implementation.",
+      "prompt": "If any cell in an integer matrix is zero, set its entire row and column to zero in place. Changes introduced during processing must not create additional zero rows or columns. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "matrix",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -8210,64 +8212,65 @@
         "atlas300": 78
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative zero rows and columns input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the matrix traversal state rather than treating the algorithm as a memorized recipe."
+          "input": "matrix = [[1,1,1],[1,0,1],[1,1,1]]",
+          "output": "[[1,0,1],[0,0,0],[1,0,1]]",
+          "explanation": "The original zero marks row 1 and column 1. Use the first cell of that row and column as markers, then zero marked interiors and finally the first row and column. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when matrix traversal applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Zero Rows and Columns into a precise state and invariant.",
+        "Contrast the direct baseline with the matrix traversal solution.",
+        "Implement, prove, and test the O(rows×cols) / O(1) approach."
       ],
       "analogy": {
-        "body": "Matrix traversal is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "Picture a warehouse floor labelled by row and column. A traversal is a route plan: state the current coordinates, direction, and closed boundaries so every tile is handled exactly once.",
+        "limit": "The floor-map analogy does not decide whether mutation is permitted or how ragged rows behave; those remain explicit contract choices."
       },
       "hints": [
-        "Write the matrix traversal invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each matrix traversal transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases A zero at matrix[0][0] affects both first-boundary flags and A one-row or one-column matrix still obeys the marker order do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Zero Rows and Columns: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Matrix traversal. Treat row, column, direction, and boundary as explicit state. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "Collecting every zero coordinate or allocating row and column boolean arrays is correct but uses O(rows+cols) or more extra space. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "Record whether the first row and first column originally contain zero. Use their remaining cells as marker arrays, zero the interior from those markers, then apply the saved first-row and first-column flags.",
+      "proof": "Invariant: Markers are written only from original interior zeros before any bulk zeroing. Therefore each marker represents exactly an originally affected row or column, while the two saved flags protect the shared marker boundaries. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for matrix = [[1,1,1],[1,0,1],[1,1,1]].",
+        "The original zero marks row 1 and column 1. Use the first cell of that row and column as markers, then zero marked interiors and finally the first row and column.",
+        "The algorithm returns [[1,0,1],[0,0,0],[1,0,1]]; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(rows×cols)",
+        "space": "O(1)",
+        "rationale": "The bound follows from the described transitions: Record whether the first row and first column originally contain zero. Use their remaining cells as marker arrays, zero the interior from those markers, then apply the saved first-row and first-column flags. State retained beyond the output is bounded by O(1)."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Matrix traversal is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The matrix traversal name is the proof.",
+          "correction": "Markers are written only from original interior zeros before any bulk zeroing. Therefore each marker represents exactly an originally affected row or column, while the two saved flags protect the shared marker boundaries."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test a zero at matrix[0][0] affects both first-boundary flags and a one-row or one-column matrix still obeys the marker order."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(rows×cols) time and O(1) space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Zero Rows and Columns while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(rows×cols) solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "A zero at matrix[0][0] affects both first-boundary flags",
+        "A one-row or one-column matrix still obeys the marker order"
       ],
       "variantLanguages": [
         "cpp17",
@@ -8286,7 +8289,7 @@
     {
       "id": "atlas-079",
       "title": "Diagonal Traverse",
-      "prompt": "Solve the original Diagonal Traverse interview exercise by defining its inputs, outputs, validity rules, and matrix traversal invariant before implementation.",
+      "prompt": "Return the values of a rectangular matrix ordered by diagonals of equal row+column index, reversing every even-numbered diagonal so traversal alternates up-right and down-left. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "matrix",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -8305,64 +8308,65 @@
         "atlas300": 79
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative diagonal traverse input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the matrix traversal state rather than treating the algorithm as a memorized recipe."
+          "input": "matrix = [[1,2,3],[4,5,6],[7,8,9]]",
+          "output": "[1,2,4,7,5,3,6,8,9]",
+          "explanation": "Diagonal sums are 0:[1], 1:[2,4], 2:[3,5,7], 3:[6,8], 4:[9]. Reverse sums 0,2,4 to produce the alternating traversal. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when matrix traversal applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Diagonal Traverse into a precise state and invariant.",
+        "Contrast the direct baseline with the matrix traversal solution.",
+        "Implement, prove, and test the O(rows×cols) / O(1) excluding output approach."
       ],
       "analogy": {
-        "body": "Matrix traversal is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "Picture a warehouse floor labelled by row and column. A traversal is a route plan: state the current coordinates, direction, and closed boundaries so every tile is handled exactly once.",
+        "limit": "The floor-map analogy does not decide whether mutation is permitted or how ragged rows behave; those remain explicit contract choices."
       },
       "hints": [
-        "Write the matrix traversal invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each matrix traversal transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases Rectangular matrices change which border starts a diagonal and A single cell produces one value do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Diagonal Traverse: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Matrix traversal. Treat row, column, direction, and boundary as explicit state. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "Grouping all cells by row+column and reversing buckets is correct but retains O(rows×cols) additional data beyond the required output. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "Visit diagonals by sum d from 0 through rows+cols−2. Choose the legal starting cell for d and walk along the diagonal in the direction determined by d parity.",
+      "proof": "Invariant: Every cell has one unique diagonal index r+c. The start formulas select one endpoint of that diagonal, and parity chooses the required endpoint and direction, so each cell is emitted once in the required order. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for matrix = [[1,2,3],[4,5,6],[7,8,9]].",
+        "Diagonal sums are 0:[1], 1:[2,4], 2:[3,5,7], 3:[6,8], 4:[9]. Reverse sums 0,2,4 to produce the alternating traversal.",
+        "The algorithm returns [1,2,4,7,5,3,6,8,9]; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(rows×cols)",
+        "space": "O(1) excluding output",
+        "rationale": "The bound follows from the described transitions: Visit diagonals by sum d from 0 through rows+cols−2. Choose the legal starting cell for d and walk along the diagonal in the direction determined by d parity. State retained beyond the output is bounded by O(1) excluding output."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Matrix traversal is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The matrix traversal name is the proof.",
+          "correction": "Every cell has one unique diagonal index r+c. The start formulas select one endpoint of that diagonal, and parity chooses the required endpoint and direction, so each cell is emitted once in the required order."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test rectangular matrices change which border starts a diagonal and a single cell produces one value."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(rows×cols) time and O(1) excluding output space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Diagonal Traverse while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(rows×cols) solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "Rectangular matrices change which border starts a diagonal",
+        "A single cell produces one value"
       ],
       "variantLanguages": [
         "cpp17",
@@ -8381,7 +8385,7 @@
     {
       "id": "atlas-080",
       "title": "Search a Sorted Matrix",
-      "prompt": "Solve the original Search a Sorted Matrix interview exercise by defining its inputs, outputs, validity rules, and matrix traversal invariant before implementation.",
+      "prompt": "Rows and columns of an integer matrix are each sorted in nondecreasing order. Return whether a target value occurs in the matrix. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "matrix",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -8400,64 +8404,65 @@
         "atlas300": 80
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative search a sorted matrix input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the matrix traversal state rather than treating the algorithm as a memorized recipe."
+          "input": "matrix = [[1,4,7,11],[2,5,8,12],[3,6,9,16]], target = 8",
+          "output": "true",
+          "explanation": "Start at 11 in the top-right. Because 11>8 move left to 7; because 7<8 move down to 8 and succeed. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when matrix traversal applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Search a Sorted Matrix into a precise state and invariant.",
+        "Contrast the direct baseline with the matrix traversal solution.",
+        "Implement, prove, and test the O(rows+cols) / O(1) approach."
       ],
       "analogy": {
-        "body": "Matrix traversal is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "Picture a warehouse floor labelled by row and column. A traversal is a route plan: state the current coordinates, direction, and closed boundaries so every tile is handled exactly once.",
+        "limit": "The floor-map analogy does not decide whether mutation is permitted or how ragged rows behave; those remain explicit contract choices."
       },
       "hints": [
-        "Write the matrix traversal invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each matrix traversal transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases An empty matrix returns false and Duplicates do not change the elimination rule do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Search a Sorted Matrix: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Matrix traversal. Treat row, column, direction, and boundary as explicit state. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "Searching every row independently with binary search costs O(rows log cols); scanning every cell ignores both sorted dimensions. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "Start at the top-right cell. Move left when the value is too large and down when it is too small; equality succeeds.",
+      "proof": "Invariant: At (r,c), a value greater than target eliminates column c below as well because those values are no smaller; a smaller value eliminates row r to the left because those values are no larger. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for matrix = [[1,4,7,11],[2,5,8,12],[3,6,9,16]], target = 8.",
+        "Start at 11 in the top-right. Because 11>8 move left to 7; because 7<8 move down to 8 and succeed.",
+        "The algorithm returns true; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(rows+cols)",
+        "space": "O(1)",
+        "rationale": "The bound follows from the described transitions: Start at the top-right cell. Move left when the value is too large and down when it is too small; equality succeeds. State retained beyond the output is bounded by O(1)."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Matrix traversal is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The matrix traversal name is the proof.",
+          "correction": "At (r,c), a value greater than target eliminates column c below as well because those values are no smaller; a smaller value eliminates row r to the left because those values are no larger."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test an empty matrix returns false and duplicates do not change the elimination rule."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(rows+cols) time and O(1) space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Search a Sorted Matrix while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(rows+cols) solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "An empty matrix returns false",
+        "Duplicates do not change the elimination rule"
       ],
       "variantLanguages": [
         "cpp17",
@@ -8476,7 +8481,7 @@
     {
       "id": "atlas-081",
       "title": "Unique Value by XOR",
-      "prompt": "Solve the original Unique Value by XOR interview exercise by defining its inputs, outputs, validity rules, and bit manipulation invariant before implementation.",
+      "prompt": "Every integer in an array appears exactly twice except one value that appears once. Return the unique value using constant extra space. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "bitwise",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -8495,64 +8500,65 @@
         "atlas300": 81
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative unique value by xor input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the bit manipulation state rather than treating the algorithm as a memorized recipe."
+          "input": "values = [4,1,2,1,2]",
+          "output": "4",
+          "explanation": "XOR accumulates 4⊕1⊕2⊕1⊕2. Equal pairs cancel to zero, and zero is the identity, leaving 4. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when bit manipulation applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Unique Value by XOR into a precise state and invariant.",
+        "Contrast the direct baseline with the bit manipulation solution.",
+        "Implement, prove, and test the O(n) / O(1) approach."
       ],
       "analogy": {
-        "body": "Bit manipulation is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "An integer is a compact panel of independent switches. AND keeps switches on in both panels, XOR marks disagreements, and shifting moves the viewing window across positions.",
+        "limit": "Languages differ in integer width and signed-shift behavior, so a bit identity must be paired with a documented numeric representation."
       },
       "hints": [
-        "Write the bit manipulation invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each bit manipulation transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases The unique value may be zero and Negative integers work under the language's fixed-width XOR representation do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Unique Value by XOR: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Bit manipulation. Represent boolean facts as bits and use algebraic identities to update many facts at once. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "A frequency map is linear but uses O(n) extra space; sorting uses O(n log n) time and mutates or copies the input. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "XOR every value into one accumulator and return it.",
+      "proof": "Invariant: XOR is associative and commutative, x⊕x=0, and x⊕0=x. Reordering groups every duplicate pair into zero, leaving only the unpaired value. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for values = [4,1,2,1,2].",
+        "XOR accumulates 4⊕1⊕2⊕1⊕2. Equal pairs cancel to zero, and zero is the identity, leaving 4.",
+        "The algorithm returns 4; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(n)",
+        "space": "O(1)",
+        "rationale": "The bound follows from the described transitions: XOR every value into one accumulator and return it. State retained beyond the output is bounded by O(1)."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Bit manipulation is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The bit manipulation name is the proof.",
+          "correction": "XOR is associative and commutative, x⊕x=0, and x⊕0=x. Reordering groups every duplicate pair into zero, leaving only the unpaired value."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test the unique value may be zero and negative integers work under the language's fixed-width xor representation."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(n) time and O(1) space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Unique Value by XOR while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(n) solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "The unique value may be zero",
+        "Negative integers work under the language's fixed-width XOR representation"
       ],
       "variantLanguages": [
         "cpp17",
@@ -8571,7 +8577,7 @@
     {
       "id": "atlas-082",
       "title": "Count Set Bits",
-      "prompt": "Solve the original Count Set Bits interview exercise by defining its inputs, outputs, validity rules, and bit manipulation invariant before implementation.",
+      "prompt": "For every integer i from 0 through n inclusive, return the number of set bits in i's binary representation. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "bitwise",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -8590,64 +8596,65 @@
         "atlas300": 82
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative count set bits input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the bit manipulation state rather than treating the algorithm as a memorized recipe."
+          "input": "n = 5",
+          "output": "[0,1,1,2,1,2]",
+          "explanation": "For i=5 (101₂), i>>1 is 2 (10₂) with one set bit and i&1 contributes one more, so count[5]=2. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when bit manipulation applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Count Set Bits into a precise state and invariant.",
+        "Contrast the direct baseline with the bit manipulation solution.",
+        "Implement, prove, and test the O(n) / O(n) for the returned array approach."
       ],
       "analogy": {
-        "body": "Bit manipulation is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "An integer is a compact panel of independent switches. AND keeps switches on in both panels, XOR marks disagreements, and shifting moves the viewing window across positions.",
+        "limit": "Languages differ in integer width and signed-shift behavior, so a bit identity must be paired with a documented numeric representation."
       },
       "hints": [
-        "Write the bit manipulation invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each bit manipulation transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases n=0 returns [0] and Use a nonnegative n contract do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Count Set Bits: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Bit manipulation. Represent boolean facts as bits and use algebraic identities to update many facts at once. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "Calling a bit-count loop independently for each number costs O(n log n) bit operations and repeats prefix work. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "Build counts from 0 upward using count[i]=count[i>>1]+(i&1), reusing the answer for the number with its last bit removed.",
+      "proof": "Invariant: Right shift removes exactly the least-significant bit; the remaining set bits are count[i>>1], and i&1 is exactly the removed bit's contribution. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for n = 5.",
+        "For i=5 (101₂), i>>1 is 2 (10₂) with one set bit and i&1 contributes one more, so count[5]=2.",
+        "The algorithm returns [0,1,1,2,1,2]; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(n)",
+        "space": "O(n) for the returned array",
+        "rationale": "The bound follows from the described transitions: Build counts from 0 upward using count[i]=count[i>>1]+(i&1), reusing the answer for the number with its last bit removed. State retained beyond the output is bounded by O(n) for the returned array."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Bit manipulation is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The bit manipulation name is the proof.",
+          "correction": "Right shift removes exactly the least-significant bit; the remaining set bits are count[i>>1], and i&1 is exactly the removed bit's contribution."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test n=0 returns [0] and use a nonnegative n contract."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(n) time and O(n) for the returned array space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Count Set Bits while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(n) solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "n=0 returns [0]",
+        "Use a nonnegative n contract"
       ],
       "variantLanguages": [
         "cpp17",
@@ -8666,7 +8673,7 @@
     {
       "id": "atlas-083",
       "title": "Subset Masks",
-      "prompt": "Solve the original Subset Masks interview exercise by defining its inputs, outputs, validity rules, and bit manipulation invariant before implementation.",
+      "prompt": "Return every subset of an array of n distinct values by interpreting integers 0 through 2ⁿ−1 as inclusion masks. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "bitwise",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -8685,64 +8692,65 @@
         "atlas300": 83
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative subset masks input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the bit manipulation state rather than treating the algorithm as a memorized recipe."
+          "input": "values = [10,20,30]",
+          "output": "[[],[10],[20],[10,20],[30],[10,30],[20,30],[10,20,30]]",
+          "explanation": "Mask 5 is 101₂, so bits 0 and 2 select 10 and 30. Iterating all eight masks produces every subset exactly once. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when bit manipulation applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Subset Masks into a precise state and invariant.",
+        "Contrast the direct baseline with the bit manipulation solution.",
+        "Implement, prove, and test the O(n·2ⁿ) / O(n) working space excluding output approach."
       ],
       "analogy": {
-        "body": "Bit manipulation is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "An integer is a compact panel of independent switches. AND keeps switches on in both panels, XOR marks disagreements, and shifting moves the viewing window across positions.",
+        "limit": "Languages differ in integer width and signed-shift behavior, so a bit identity must be paired with a documented numeric representation."
       },
       "hints": [
-        "Write the bit manipulation invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each bit manipulation transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases Mask zero represents the empty subset and Bit shifts require n below the language's safe mask width do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Subset Masks: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Bit manipulation. Represent boolean facts as bits and use algebraic identities to update many facts at once. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "Recursive backtracking has the same optimal output bound and is often clearer; generating arbitrary combinations and deduplicating adds unnecessary work. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "For each mask from 0 to 2ⁿ−1, include values[i] exactly when bit i is set, then append the built subset.",
+      "proof": "Invariant: Each subset has one unique n-bit characteristic vector, and every n-bit vector appears once in the mask range, creating a bijection between masks and subsets. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for values = [10,20,30].",
+        "Mask 5 is 101₂, so bits 0 and 2 select 10 and 30. Iterating all eight masks produces every subset exactly once.",
+        "The algorithm returns [[],[10],[20],[10,20],[30],[10,30],[20,30],[10,20,30]]; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(n·2ⁿ)",
+        "space": "O(n) working space excluding output",
+        "rationale": "The bound follows from the described transitions: For each mask from 0 to 2ⁿ−1, include values[i] exactly when bit i is set, then append the built subset. State retained beyond the output is bounded by O(n) working space excluding output."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Bit manipulation is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The bit manipulation name is the proof.",
+          "correction": "Each subset has one unique n-bit characteristic vector, and every n-bit vector appears once in the mask range, creating a bijection between masks and subsets."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test mask zero represents the empty subset and bit shifts require n below the language's safe mask width."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(n·2ⁿ) time and O(n) working space excluding output space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Subset Masks while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(n·2ⁿ) solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "Mask zero represents the empty subset",
+        "Bit shifts require n below the language's safe mask width"
       ],
       "variantLanguages": [
         "cpp17",
@@ -8761,7 +8769,7 @@
     {
       "id": "atlas-084",
       "title": "Range Bitwise AND",
-      "prompt": "Solve the original Range Bitwise AND interview exercise by defining its inputs, outputs, validity rules, and bit manipulation invariant before implementation.",
+      "prompt": "Return the bitwise AND of every integer in the inclusive range [left,right], where 0≤left≤right. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "bitwise",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -8780,64 +8788,65 @@
         "atlas300": 84
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative range bitwise and input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the bit manipulation state rather than treating the algorithm as a memorized recipe."
+          "input": "left = 5, right = 7",
+          "output": "4",
+          "explanation": "5=101₂, 6=110₂, and 7=111₂. The varying suffix contains both zero and one in each position, so only the common prefix 1 remains: 100₂. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when bit manipulation applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Range Bitwise AND into a precise state and invariant.",
+        "Contrast the direct baseline with the bit manipulation solution.",
+        "Implement, prove, and test the O(log maxValue) / O(1) approach."
       ],
       "analogy": {
-        "body": "Bit manipulation is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "An integer is a compact panel of independent switches. AND keeps switches on in both panels, XOR marks disagreements, and shifting moves the viewing window across positions.",
+        "limit": "Languages differ in integer width and signed-shift behavior, so a bit identity must be paired with a documented numeric representation."
       },
       "hints": [
-        "Write the bit manipulation invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each bit manipulation transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases left=right returns that value and A range containing zero returns zero do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Range Bitwise AND: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Bit manipulation. Represent boolean facts as bits and use algebraic identities to update many facts at once. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "ANDing every number individually performs right−left operations, which is infeasible for a wide range. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "Right-shift left and right together until equal, counting shifts. Their equal value is the common binary prefix; shift it back to restore the fixed positions.",
+      "proof": "Invariant: Any bit below the first differing prefix position flips somewhere in the contiguous range and therefore ANDs to zero. Bits in the shared prefix never change and remain set exactly when the prefix bit is set. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for left = 5, right = 7.",
+        "5=101₂, 6=110₂, and 7=111₂. The varying suffix contains both zero and one in each position, so only the common prefix 1 remains: 100₂.",
+        "The algorithm returns 4; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(log maxValue)",
+        "space": "O(1)",
+        "rationale": "The bound follows from the described transitions: Right-shift left and right together until equal, counting shifts. Their equal value is the common binary prefix; shift it back to restore the fixed positions. State retained beyond the output is bounded by O(1)."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Bit manipulation is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The bit manipulation name is the proof.",
+          "correction": "Any bit below the first differing prefix position flips somewhere in the contiguous range and therefore ANDs to zero. Bits in the shared prefix never change and remain set exactly when the prefix bit is set."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test left=right returns that value and a range containing zero returns zero."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(log maxValue) time and O(1) space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Range Bitwise AND while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(log maxValue) solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "left=right returns that value",
+        "A range containing zero returns zero"
       ],
       "variantLanguages": [
         "cpp17",
@@ -8856,7 +8865,7 @@
     {
       "id": "atlas-085",
       "title": "Maximum XOR Pair",
-      "prompt": "Solve the original Maximum XOR Pair interview exercise by defining its inputs, outputs, validity rules, and bit manipulation invariant before implementation.",
+      "prompt": "Given nonnegative integers, return the maximum XOR value obtainable from two distinct array elements. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "bitwise",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -8875,64 +8884,65 @@
         "atlas300": 85
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative maximum xor pair input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the bit manipulation state rather than treating the algorithm as a memorized recipe."
+          "input": "values = [3,10,5,25,2,8]",
+          "output": "28",
+          "explanation": "The best pair is 5 (00101₂) and 25 (11001₂), whose XOR is 11100₂=28. Greedily prefer an opposite bit at each trie level. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when bit manipulation applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Maximum XOR Pair into a precise state and invariant.",
+        "Contrast the direct baseline with the bit manipulation solution.",
+        "Implement, prove, and test the O(n·w) / O(n·w) approach."
       ],
       "analogy": {
-        "body": "Bit manipulation is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "An integer is a compact panel of independent switches. AND keeps switches on in both panels, XOR marks disagreements, and shifting moves the viewing window across positions.",
+        "limit": "Languages differ in integer width and signed-shift behavior, so a bit identity must be paired with a documented numeric representation."
       },
       "hints": [
-        "Write the bit manipulation invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each bit manipulation transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases Fewer than two values has no distinct pair and returns 0 and Choose a documented bit width covering the input range do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Maximum XOR Pair: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Bit manipulation. Represent boolean facts as bits and use algebraic identities to update many facts at once. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "Checking every pair is O(n²). Sorting does not place maximum-XOR partners next to each other. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "Insert values into a binary trie from most-significant bit to least. For each value, query the trie by choosing the opposite available bit first, accumulating the XOR score.",
+      "proof": "Invariant: At each bit from high to low, choosing an opposite bit makes the current prefix strictly larger than any same-bit choice, so lower bits cannot overturn that greedy decision. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for values = [3,10,5,25,2,8].",
+        "The best pair is 5 (00101₂) and 25 (11001₂), whose XOR is 11100₂=28. Greedily prefer an opposite bit at each trie level.",
+        "The algorithm returns 28; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(n·w)",
+        "space": "O(n·w)",
+        "rationale": "The bound follows from the described transitions: Insert values into a binary trie from most-significant bit to least. For each value, query the trie by choosing the opposite available bit first, accumulating the XOR score. State retained beyond the output is bounded by O(n·w)."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Bit manipulation is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The bit manipulation name is the proof.",
+          "correction": "At each bit from high to low, choosing an opposite bit makes the current prefix strictly larger than any same-bit choice, so lower bits cannot overturn that greedy decision."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test fewer than two values has no distinct pair and returns 0 and choose a documented bit width covering the input range."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(n·w) time and O(n·w) space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Maximum XOR Pair while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(n·w) solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "Fewer than two values has no distinct pair and returns 0",
+        "Choose a documented bit width covering the input range"
       ],
       "variantLanguages": [
         "cpp17",
@@ -8951,7 +8961,7 @@
     {
       "id": "atlas-086",
       "title": "Prefix Dictionary",
-      "prompt": "Solve the original Prefix Dictionary interview exercise by defining its inputs, outputs, validity rules, and tries invariant before implementation.",
+      "prompt": "Implement a prefix dictionary supporting insert(word), search(word) for exact membership, and startsWith(prefix) for prefix existence over lowercase English letters. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "tries",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -8970,64 +8980,65 @@
         "atlas300": 86
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative prefix dictionary input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the tries state rather than treating the algorithm as a memorized recipe."
+          "input": "insert(\"atlas\"); search(\"atlas\"); search(\"at\"); startsWith(\"at\")",
+          "output": "true, false, true",
+          "explanation": "Insertion creates edges a→t→l→a→s and marks only the final node terminal. The node for t exists, so the prefix succeeds, but it is not terminal, so exact search fails. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when tries applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Prefix Dictionary into a precise state and invariant.",
+        "Contrast the direct baseline with the tries solution.",
+        "Implement, prove, and test the O(wordLength) per operation / O(total inserted characters) approach."
       ],
       "analogy": {
-        "body": "Tries is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "A trie is a shared-signpost tree: words with the same beginning walk the same corridor, then branch only when their next character differs.",
+        "limit": "Tries trade memory for predictable prefix time; large alphabets may require maps or compressed edges instead of a fixed child array."
       },
       "hints": [
-        "Write the tries invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each tries transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases The empty string requires an explicit policy and Inserting the same word twice remains idempotent for membership do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Prefix Dictionary: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Tries. Store shared prefixes as paths so prefix queries cost key length rather than corpus size. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "A hash set answers exact search but prefix queries may scan every word; storing every possible prefix duplicates keys substantially. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "Represent each trie node by child links and a terminal flag. Walk or create one edge per character for insertion; walk without creation for queries and inspect the terminal flag only for exact search.",
+      "proof": "Invariant: A path exists exactly for prefixes of inserted words because insertion creates precisely those character edges. A terminal flag is set exactly at inserted word endings, separating words from mere prefixes. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for insert(\"atlas\"); search(\"atlas\"); search(\"at\"); startsWith(\"at\").",
+        "Insertion creates edges a→t→l→a→s and marks only the final node terminal. The node for t exists, so the prefix succeeds, but it is not terminal, so exact search fails.",
+        "The algorithm returns true, false, true; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(wordLength) per operation",
+        "space": "O(total inserted characters)",
+        "rationale": "The bound follows from the described transitions: Represent each trie node by child links and a terminal flag. Walk or create one edge per character for insertion; walk without creation for queries and inspect the terminal flag only for exact search. State retained beyond the output is bounded by O(total inserted characters)."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Tries is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The tries name is the proof.",
+          "correction": "A path exists exactly for prefixes of inserted words because insertion creates precisely those character edges. A terminal flag is set exactly at inserted word endings, separating words from mere prefixes."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test the empty string requires an explicit policy and inserting the same word twice remains idempotent for membership."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(wordLength) per operation time and O(total inserted characters) space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Prefix Dictionary while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(wordLength) per operation solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "The empty string requires an explicit policy",
+        "Inserting the same word twice remains idempotent for membership"
       ],
       "variantLanguages": [
         "cpp17",
@@ -9046,7 +9057,7 @@
     {
       "id": "atlas-087",
       "title": "Wildcard Dictionary",
-      "prompt": "Solve the original Wildcard Dictionary interview exercise by defining its inputs, outputs, validity rules, and tries invariant before implementation.",
+      "prompt": "Implement a lowercase word dictionary with addWord and search, where a dot in a search pattern matches any single letter. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "tries",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -9065,64 +9076,65 @@
         "atlas300": 87
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative wildcard dictionary input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the tries state rather than treating the algorithm as a memorized recipe."
+          "input": "addWord(\"bad\"), addWord(\"dad\"), search(\".ad\"), search(\"b..\")",
+          "output": "true, true",
+          "explanation": "At the first dot, branch to every root child. The b branch follows a then d to a terminal node; b.. similarly explores all legal children for its two wildcards. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when tries applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Wildcard Dictionary into a precise state and invariant.",
+        "Contrast the direct baseline with the tries solution.",
+        "Implement, prove, and test the O(26^dots·patternLength) worst case / O(patternLength) recursion approach."
       ],
       "analogy": {
-        "body": "Tries is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "A trie is a shared-signpost tree: words with the same beginning walk the same corridor, then branch only when their next character differs.",
+        "limit": "Tries trade memory for predictable prefix time; large alphabets may require maps or compressed edges instead of a fixed child array."
       },
       "hints": [
-        "Write the tries invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each tries transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases A trailing dot must still land on a terminal node and Patterns longer than every stored word fail naturally do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Wildcard Dictionary: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Tries. Store shared prefixes as paths so prefix queries cost key length rather than corpus size. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "Testing the pattern against every stored word is O(dictionarySize×wordLength) per query and ignores shared prefixes. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "Store words in a trie. Search recursively by pattern index: follow one child for a letter, or try every child for a dot; accept only when the pattern ends at a terminal node.",
+      "proof": "Invariant: The recursive state represents exactly all trie nodes reachable by strings matching the processed pattern prefix. Literal and wildcard transitions enumerate precisely the legal next nodes. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for addWord(\"bad\"), addWord(\"dad\"), search(\".ad\"), search(\"b..\").",
+        "At the first dot, branch to every root child. The b branch follows a then d to a terminal node; b.. similarly explores all legal children for its two wildcards.",
+        "The algorithm returns true, true; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(26^dots·patternLength) worst case",
+        "space": "O(patternLength) recursion",
+        "rationale": "The bound follows from the described transitions: Store words in a trie. Search recursively by pattern index: follow one child for a letter, or try every child for a dot; accept only when the pattern ends at a terminal node. State retained beyond the output is bounded by O(patternLength) recursion."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Tries is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The tries name is the proof.",
+          "correction": "The recursive state represents exactly all trie nodes reachable by strings matching the processed pattern prefix. Literal and wildcard transitions enumerate precisely the legal next nodes."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test a trailing dot must still land on a terminal node and patterns longer than every stored word fail naturally."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(26^dots·patternLength) worst case time and O(patternLength) recursion space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Wildcard Dictionary while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(26^dots·patternLength) worst case solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "A trailing dot must still land on a terminal node",
+        "Patterns longer than every stored word fail naturally"
       ],
       "variantLanguages": [
         "cpp17",
@@ -9141,7 +9153,7 @@
     {
       "id": "atlas-088",
       "title": "Longest Shared Prefix",
-      "prompt": "Solve the original Longest Shared Prefix interview exercise by defining its inputs, outputs, validity rules, and tries invariant before implementation.",
+      "prompt": "Return the longest prefix shared by every string in a nonempty list. Return an empty string when no first character is shared. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "tries",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -9160,64 +9172,65 @@
         "atlas300": 88
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative longest shared prefix input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the tries state rather than treating the algorithm as a memorized recipe."
+          "input": "words = [\"flower\",\"flow\",\"flight\"]",
+          "output": "\"fl\"",
+          "explanation": "Compare column 0 f and column 1 l across every word. At column 2, flower and flow have o while flight has i, so stop before that column. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when tries applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Longest Shared Prefix into a precise state and invariant.",
+        "Contrast the direct baseline with the tries solution.",
+        "Implement, prove, and test the O(total characters inspected) / O(1) excluding output approach."
       ],
       "analogy": {
-        "body": "Tries is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "A trie is a shared-signpost tree: words with the same beginning walk the same corridor, then branch only when their next character differs.",
+        "limit": "Tries trade memory for predictable prefix time; large alphabets may require maps or compressed edges instead of a fixed child array."
       },
       "hints": [
-        "Write the tries invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each tries transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases A list containing an empty string returns empty and One input word is its own longest common prefix do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Longest Shared Prefix: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Tries. Store shared prefixes as paths so prefix queries cost key length rather than corpus size. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "Building a trie solves the problem but allocates nodes unnecessary for one batch query; repeatedly trimming and rescanning prefixes can repeat comparisons. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "Use the first word as an upper bound. Scan its characters by position and compare the same position in every other word, stopping at a mismatch or shorter word.",
+      "proof": "Invariant: Before index i, every word equals the first word on [0,i). The first mismatch or missing position proves no longer common prefix exists; otherwise extending by one remains valid. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for words = [\"flower\",\"flow\",\"flight\"].",
+        "Compare column 0 f and column 1 l across every word. At column 2, flower and flow have o while flight has i, so stop before that column.",
+        "The algorithm returns \"fl\"; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(total characters inspected)",
+        "space": "O(1) excluding output",
+        "rationale": "The bound follows from the described transitions: Use the first word as an upper bound. Scan its characters by position and compare the same position in every other word, stopping at a mismatch or shorter word. State retained beyond the output is bounded by O(1) excluding output."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Tries is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The tries name is the proof.",
+          "correction": "Before index i, every word equals the first word on [0,i). The first mismatch or missing position proves no longer common prefix exists; otherwise extending by one remains valid."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test a list containing an empty string returns empty and one input word is its own longest common prefix."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(total characters inspected) time and O(1) excluding output space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Longest Shared Prefix while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(total characters inspected) solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "A list containing an empty string returns empty",
+        "One input word is its own longest common prefix"
       ],
       "variantLanguages": [
         "cpp17",
@@ -9236,7 +9249,7 @@
     {
       "id": "atlas-089",
       "title": "Word Replacement",
-      "prompt": "Solve the original Word Replacement interview exercise by defining its inputs, outputs, validity rules, and tries invariant before implementation.",
+      "prompt": "Given dictionary roots and a sentence of lowercase space-separated words, replace each word by its shortest dictionary root that is a prefix; keep the word when no root matches. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "tries",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -9255,64 +9268,65 @@
         "atlas300": 89
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative word replacement input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the tries state rather than treating the algorithm as a memorized recipe."
+          "input": "roots = [\"cat\",\"bat\",\"rat\"], sentence = \"the cattle was rattled by the battery\"",
+          "output": "\"the cat was rat by the bat\"",
+          "explanation": "Walking cattle reaches terminal cat after three letters, so stop without exploring the longer suffix. Rattled and battery similarly stop at rat and bat. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when tries applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Word Replacement into a precise state and invariant.",
+        "Contrast the direct baseline with the tries solution.",
+        "Implement, prove, and test the O(total root characters + sentence characters) / O(total root characters) approach."
       ],
       "analogy": {
-        "body": "Tries is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "A trie is a shared-signpost tree: words with the same beginning walk the same corridor, then branch only when their next character differs.",
+        "limit": "Tries trade memory for predictable prefix time; large alphabets may require maps or compressed edges instead of a fixed child array."
       },
       "hints": [
-        "Write the tries invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each tries transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases Multiple spaces require a documented tokenization policy and A root that equals the full word replaces it with itself do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Word Replacement: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Tries. Store shared prefixes as paths so prefix queries cost key length rather than corpus size. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "For every word, testing every root with startsWith costs O(words×roots×rootLength); sorting roots helps but still repeats prefix scans. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "Insert roots into a trie. For each sentence word, walk characters until an edge is missing or the first terminal node is reached; emit that shortest terminal prefix or the original word.",
+      "proof": "Invariant: Trie traversal follows exactly the word's prefixes in increasing length. Therefore the first terminal node is the shortest valid root, and a missing edge proves no longer dictionary root can match. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for roots = [\"cat\",\"bat\",\"rat\"], sentence = \"the cattle was rattled by the battery\".",
+        "Walking cattle reaches terminal cat after three letters, so stop without exploring the longer suffix. Rattled and battery similarly stop at rat and bat.",
+        "The algorithm returns \"the cat was rat by the bat\"; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(total root characters + sentence characters)",
+        "space": "O(total root characters)",
+        "rationale": "The bound follows from the described transitions: Insert roots into a trie. For each sentence word, walk characters until an edge is missing or the first terminal node is reached; emit that shortest terminal prefix or the original word. State retained beyond the output is bounded by O(total root characters)."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Tries is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The tries name is the proof.",
+          "correction": "Trie traversal follows exactly the word's prefixes in increasing length. Therefore the first terminal node is the shortest valid root, and a missing edge proves no longer dictionary root can match."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test multiple spaces require a documented tokenization policy and a root that equals the full word replaces it with itself."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(total root characters + sentence characters) time and O(total root characters) space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Word Replacement while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(total root characters + sentence characters) solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "Multiple spaces require a documented tokenization policy",
+        "A root that equals the full word replaces it with itself"
       ],
       "variantLanguages": [
         "cpp17",
@@ -9331,7 +9345,7 @@
     {
       "id": "atlas-090",
       "title": "Binary XOR Trie",
-      "prompt": "Solve the original Binary XOR Trie interview exercise by defining its inputs, outputs, validity rules, and tries invariant before implementation.",
+      "prompt": "Maintain nonnegative integers in a binary trie and, for each query value, return the maximum XOR obtainable with any stored value. Return the overall maximum across the supplied values after each value may match an earlier one. Preserve every stated ordering, indexing, and tie rule.",
       "patternId": "tries",
       "difficulty": "hard",
       "estimatedMinutes": 50,
@@ -9350,64 +9364,65 @@
         "atlas300": 90
       },
       "constraints": [
-        "Clarify sizes, value ranges, mutability, and tie-breaking with the interviewer.",
-        "Choose numeric and storage types that keep the stated operations safe."
+        "Use the exact input and output contract above; do not silently change index, interval, or tie semantics.",
+        "Choose representations that meet the stated time and space bounds."
       ],
       "examples": [
         {
-          "input": "Representative binary xor trie input",
-          "output": "The result required by the clarified contract",
-          "explanation": "Trace the tries state rather than treating the algorithm as a memorized recipe."
+          "input": "values = [3,10,5,25,2,8]",
+          "output": "28",
+          "explanation": "Insert 3, then query 10 against earlier values; continue inserting and querying. When 25 queries the stored 5, opposite high bits produce XOR 28. This trace names the maintained state so you can reproduce the transition on a new input."
         }
       ],
-      "depthStatus": "overview",
+      "depthStatus": "complete",
       "learningObjectives": [
-        "Recognize when tries applies and when it does not.",
-        "Derive the maintained state and correctness invariant before coding.",
-        "Defend time, space, edge cases, and an alternative approach in an interview."
+        "Translate Binary XOR Trie into a precise state and invariant.",
+        "Contrast the direct baseline with the tries solution.",
+        "Implement, prove, and test the O(n·w) / O(n·w) approach."
       ],
       "analogy": {
-        "body": "Tries is like keeping a compact field notebook: record only the facts future decisions require, update them when the input changes, and avoid replaying the entire history.",
-        "limit": "The notebook metaphor explains state reuse, but the exact invariant and legal transitions still depend on the problem contract."
+        "body": "A trie is a shared-signpost tree: words with the same beginning walk the same corridor, then branch only when their next character differs.",
+        "limit": "Tries trade memory for predictable prefix time; large alphabets may require maps or compressed edges instead of a fixed child array."
       },
       "hints": [
-        "Write the tries invariant in one sentence.",
-        "Test the smallest input and an adversarial boundary before optimizing."
+        "First write what must remain true after each tries transition.",
+        "Use the worked trace to identify which earlier state is reused instead of recomputed.",
+        "Before coding, explain why the cases An empty or singleton list returns 0 and Use a bit width that includes the maximum possible input bit do not violate the invariant."
       ],
-      "naiveApproach": "Start with the direct exhaustive method for Binary XOR Trie: enumerate every feasible candidate and validate it independently. This baseline is useful for testing, but it repeats state and usually misses the intended interview bound.",
-      "approach": "Apply Tries. Store shared prefixes as paths so prefix queries cost key length rather than corpus size. Define the state precisely, update only what changed, and state why discarded candidates cannot later become optimal.",
-      "proof": "Establish the state invariant before the first update, show that one legal transition preserves it, and show that each transition makes progress. At termination, connect the invariant to the requested result and account for every feasible candidate.",
+      "naiveApproach": "Comparing each incoming value with every previous value is quadratic and repeats identical high-bit decisions. Use this version as a small-input oracle when testing the optimized implementation.",
+      "approach": "Insert the first value. For every later value, greedily query opposite bits from most significant to least against previously inserted values, update the maximum, then insert the value.",
+      "proof": "Invariant: For a fixed query, an opposite bit at the highest position where choices differ yields a larger XOR prefix than a same-bit edge regardless of remaining suffix bits; greedy descent is therefore optimal. Initialization satisfies this statement before any candidate is processed. The algorithm's update preserves it while permanently resolving or advancing at least one candidate. When processing ends, the invariant covers the entire input, so the reported result satisfies the contract.",
       "walkthrough": [
-        "Write the smallest nontrivial input and initialize the exact maintained state.",
-        "Perform one transition and name every state value that changes.",
-        "Reach termination and verify the returned object against the original contract."
+        "Set up the state for values = [3,10,5,25,2,8].",
+        "Insert 3, then query 10 against earlier values; continue inserting and querying. When 25 queries the stored 5, opposite high bits produce XOR 28.",
+        "The algorithm returns 28; re-check it against the contract and the invariant rather than only the sample arithmetic."
       ],
       "complexity": {
-        "time": "Derive from the number of state transitions",
-        "space": "Derive from retained candidates",
-        "rationale": "Count how often each element, vertex, edge, or state can enter and leave the maintained structure; do not quote a pattern complexity without this accounting."
+        "time": "O(n·w)",
+        "space": "O(n·w)",
+        "rationale": "The bound follows from the described transitions: Insert the first value. For every later value, greedily query opposite bits from most significant to least against previously inserted values, update the maximum, then insert the value. State retained beyond the output is bounded by O(n·w)."
       },
       "misconceptions": [
         {
-          "claim": "Recognizing Tries is enough to justify the solution.",
-          "correction": "Pattern recognition suggests a candidate; the invariant and contract prove that it fits this problem."
+          "claim": "The tries name is the proof.",
+          "correction": "For a fixed query, an opposite bit at the highest position where choices differ yields a larger XOR prefix than a same-bit edge regardless of remaining suffix bits; greedy descent is therefore optimal."
         },
         {
-          "claim": "Passing the sample proves correctness.",
-          "correction": "The sample illustrates one path; a proof plus adversarial boundary cases covers the input space."
+          "claim": "The happy-path example covers boundary semantics.",
+          "correction": "Explicitly test an empty or singleton list returns 0 and use a bit width that includes the maximum possible input bit."
         },
         {
-          "claim": "The named data structure determines the complexity automatically.",
-          "correction": "Complexity follows from operation count, and one element may be processed more than once."
+          "claim": "A faster-looking implementation is automatically better.",
+          "correction": "The target is O(n·w) time and O(n·w) space with the same exact contract; compare implementations against both."
         }
       ],
       "followUps": [
-        "How would the design change for streaming input or online updates?",
-        "Which assumption makes the chosen bound possible, and what breaks if it is removed?"
+        "Can you implement Binary XOR Trie while preserving the same invariant under streaming or incremental input?",
+        "Which contract change would invalidate the O(n·w) solution, and what data structure would you consider next?"
       ],
       "edgeCases": [
-        "Empty, singleton, and minimum legal input",
-        "Duplicates, ties, disconnected state, or numeric boundaries"
+        "An empty or singleton list returns 0",
+        "Use a bit width that includes the maximum possible input bit"
       ],
       "variantLanguages": [
         "cpp17",
