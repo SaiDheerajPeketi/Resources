@@ -1,6 +1,7 @@
 import { cpp17Atlas75 } from "@/data/solutions/cpp17-atlas75";
 import { javaAtlas75 } from "@/data/solutions/java-atlas75";
 import { pythonAtlas75 } from "@/data/solutions/python-atlas75";
+import { typescriptAtlas75 } from "@/data/solutions/typescript-atlas75";
 import type { CodeVariant, DSAProblem } from "@/lib/schema";
 
 type Language = CodeVariant["language"];
@@ -30,7 +31,9 @@ export function solutionVariant(problem: DSAProblem, language: Language): CodeVa
       ? javaAtlas75[problem.id]
       : language === "python"
         ? pythonAtlas75[problem.id]
-        : undefined;
+        : language === "typescript"
+          ? typescriptAtlas75[problem.id]
+          : undefined;
   return {
     id: `${problem.id}-${language}`,
     language,

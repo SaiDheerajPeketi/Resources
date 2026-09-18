@@ -195,6 +195,9 @@ test("Atlas 300 filters and loads a language-specific problem artifact", async (
   await page.getByRole("button", { name: "Python" }).click();
   await expect(page.getByText("Reviewed solution")).toBeVisible();
   await expect(page.locator("pre")).toContainText("def edit_distance");
+  await page.getByRole("button", { name: "TypeScript" }).click();
+  await expect(page.getByText("Reviewed solution")).toBeVisible();
+  await expect(page.locator("pre")).toContainText("function editDistance");
 });
 
 test("diagnostic, plan, review, and company guides are reachable", async ({ page }, testInfo) => {

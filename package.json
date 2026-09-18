@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev --webpack",
-    "prebuild": "npm run validate:content && npm run validate:cpp && npm run validate:java && npm run validate:python && node --import tsx scripts/generate-manifests.ts",
+    "prebuild": "npm run validate:content && npm run validate:cpp && npm run validate:java && npm run validate:python && npm run validate:typescript && node --import tsx scripts/generate-manifests.ts",
     "build": "next build --webpack && pagefind --site out",
     "start": "npx serve out",
     "test": "vitest run",
@@ -14,7 +14,8 @@
     "validate:content": "node --import tsx scripts/validate-content.ts",
     "validate:cpp": "node --import tsx scripts/validate-cpp-solutions.ts",
     "validate:java": "node --import tsx scripts/validate-java-solutions.ts",
-    "validate:python": "node --import tsx scripts/validate-python-solutions.ts"
+    "validate:python": "node --import tsx scripts/validate-python-solutions.ts",
+    "validate:typescript": "node --import tsx scripts/validate-typescript-solutions.ts"
   },
   "dependencies": {
     "@fontsource-variable/atkinson-hyperlegible-next": "^5.3.0",
