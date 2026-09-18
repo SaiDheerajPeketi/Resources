@@ -346,12 +346,30 @@ button { color: inherit; }
 .loop-list ol { columns: 2; margin: 0; padding-left: 22px; color: #35445f; }
 .loop-list a { display: inline-flex; align-items: center; gap: 7px; color: var(--blue-deep); text-decoration: none; font-weight: 650; }
 .career-field { margin-top: 55px; padding-top: 25px; border-top: 2px solid var(--ink); }
-.career-field > div:first-child { display: flex; align-items: center; gap: 9px; }
 .career-field h2 { margin: 0; }
-.career-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 22px; }
-.career-columns article { padding-top: 15px; border-top: 1px solid var(--rule-strong); }
-.career-columns h3 { margin: 0 0 7px; }
-.career-columns p { margin: 0; color: var(--muted); }
+.career-field-heading { display: grid; grid-template-columns: minmax(260px, 0.8fr) minmax(360px, 1.2fr); gap: 34px; align-items: end; }
+.career-field-heading > div { display: flex; align-items: center; gap: 9px; }
+.career-field-heading > p { max-width: 62ch; margin: 0; color: var(--muted); }
+.career-field-list { margin-top: 25px; border-top: 1px solid var(--rule-strong); }
+.career-field-list article { display: grid; grid-template-columns: minmax(210px, 0.75fr) minmax(300px, 1.2fr) minmax(280px, 1fr); gap: clamp(22px, 3.5vw, 52px); padding: 25px 0; border-bottom: 1px solid var(--rule); }
+.career-field-list article > header { display: grid; grid-template-columns: 25px 1fr; gap: 9px; align-content: start; }
+.career-field-list h3 { margin: 0 0 5px; font-size: 1.08rem; }
+.career-field-list header p, .career-template p { margin: 0; color: var(--muted); }
+.career-field-list ul { margin: 0; padding-left: 19px; columns: 2; column-gap: 28px; }
+.career-field-list li { break-inside: avoid; margin-bottom: 7px; color: var(--muted); }
+.career-template { align-self: start; padding: 2px 0 2px 16px; border-left: 1px solid var(--blue); }
+.career-template strong { display: block; margin-bottom: 6px; color: var(--blue-deep); font: 0.66rem/1.2 "JetBrains Mono Variable", monospace; letter-spacing: 0.08em; text-transform: uppercase; }
+.mock-field { margin-top: 64px; border-top: 2px solid var(--ink); }
+.mock-field > header { display: grid; grid-template-columns: minmax(260px, 0.8fr) minmax(360px, 1.2fr); gap: 34px; align-items: end; padding: 25px 0 20px; }
+.mock-field > header h2, .mock-field h3 { margin: 0; }
+.mock-field > header p { max-width: 62ch; margin: 0; color: var(--muted); }
+.mock-field ol { margin: 0; padding: 0; border-top: 1px solid var(--rule-strong); list-style: none; }
+.mock-field li { display: grid; grid-template-columns: 110px 1fr; gap: 28px; padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.mock-field time { color: var(--blue-deep); font: 0.7rem/1.5 "JetBrains Mono Variable", monospace; letter-spacing: 0.07em; }
+.mock-field li p { max-width: 72ch; margin: 5px 0 0; color: var(--muted); }
+.mock-close { display: flex; justify-content: space-between; align-items: center; gap: 28px; padding: 18px 0; }
+.mock-close p { margin: 0; }
+.mock-close a { flex: none; display: inline-flex; align-items: center; gap: 7px; color: var(--blue-deep); text-decoration: none; font-weight: 650; }
 
 @media (max-width: 1120px) {
   .app-header { grid-template-columns: 220px 1fr auto; padding-inline: 14px; }
@@ -406,7 +424,9 @@ button { color: inherit; }
   .settings-actions { padding: 25px 0 0; border: 0; border-top: 1px solid var(--rule); }
   .loop-list article { grid-template-columns: 1fr; gap: 14px; padding: 20px 0; }
   .loop-list ol { columns: 1; }
-  .career-columns { grid-template-columns: 1fr; }
+  .career-field-heading, .mock-field > header { grid-template-columns: 1fr; gap: 10px; align-items: start; }
+  .career-field-list article { grid-template-columns: 1fr; gap: 17px; }
+  .career-field-list ul { columns: 1; }
 }
 
 @media (max-width: 540px) {
@@ -429,6 +449,8 @@ button { color: inherit; }
   .track-title-icon { width: 42px; height: 42px; }
   .revision-rows > div { grid-template-columns: 1fr auto; padding: 10px 0; }
   .revision-rows > div > a { grid-column: 1; }
+  .mock-field li { grid-template-columns: 72px 1fr; gap: 14px; }
+  .mock-close { display: grid; }
   .practice-toolbar { grid-template-columns: 1fr 1fr; }
   .practice-toolbar label { grid-column: 1 / -1; }
   .question-stage { padding-inline: 0; }

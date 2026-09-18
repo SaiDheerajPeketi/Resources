@@ -38,7 +38,10 @@ function createGraph(trackId: TrackId, selectedId: string) {
 
 export function AtlasWorkspace({ initialTrack = "foundations" }: { initialTrack?: TrackId }) {
   const [trackId, setTrackId] = useState<TrackId>(initialTrack);
-  const defaultTopic = publishedTopics.find((topic) => topic.trackId === initialTrack) ?? topicsForTrack(initialTrack)[0];
+  const preferredTopic = (nextTrack: TrackId) => nextTrack === "foundations"
+    ? topicById.get("foundations/hash-tables")!
+    : publishedTopics.find((topic) => topic.trackId === nextTrack) ?? topicsForTrack(nextTrack)[0];
+  const defaultTopic = preferredTopic(initialTrack);
   const [selectedId, setSelectedId] = useState(defaultTopic.id);
   const [notice, setNotice] = useState("");
   const selected = topicById.get(selectedId) ?? defaultTopic;
@@ -47,7 +50,7 @@ export function AtlasWorkspace({ initialTrack = "foundations" }: { initialTrack?
 
   const changeTrack = (next: TrackId) => {
     setTrackId(next);
-    const nextTopic = publishedTopics.find((topic) => topic.trackId === next) ?? topicsForTrack(next)[0];
+    const nextTopic = preferredTopic(next);
     setSelectedId(nextTopic.id);
     setNotice("");
   };

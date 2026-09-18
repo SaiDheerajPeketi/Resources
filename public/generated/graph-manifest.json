@@ -1,107 +1,299 @@
 {
-  "version": "2026.09.18-r1",
+  "version": "2026.09.18-r2",
   "edges": [
     {
-      "id": "foundations/complexity-analysis->foundations/arrays-and-strings",
+      "id": "foundations/complexity-analysis->foundations/arrays-and-strings:prerequisite",
       "source": "foundations/complexity-analysis",
       "target": "foundations/arrays-and-strings",
       "kind": "prerequisite"
     },
     {
-      "id": "foundations/arrays-and-strings->foundations/hash-tables",
+      "id": "foundations/arrays-and-strings->foundations/hash-tables:prerequisite",
       "source": "foundations/arrays-and-strings",
       "target": "foundations/hash-tables",
       "kind": "prerequisite"
     },
     {
-      "id": "foundations/hash-tables->foundations/graphs",
+      "id": "foundations/hash-tables->foundations/graphs:applied-in",
       "source": "foundations/hash-tables",
       "target": "foundations/graphs",
       "kind": "applied-in"
     },
     {
-      "id": "foundations/probability->foundations/statistics",
+      "id": "foundations/probability->foundations/statistics:prerequisite",
       "source": "foundations/probability",
       "target": "foundations/statistics",
       "kind": "prerequisite"
     },
     {
-      "id": "foundations/statistics->ai-data/model-evaluation",
+      "id": "foundations/statistics->ai-data/model-evaluation:prerequisite",
       "source": "foundations/statistics",
       "target": "ai-data/model-evaluation",
       "kind": "prerequisite"
     },
     {
-      "id": "foundations/linear-algebra->ai-data/neural-network-foundations",
+      "id": "foundations/linear-algebra->ai-data/neural-network-foundations:prerequisite",
       "source": "foundations/linear-algebra",
       "target": "ai-data/neural-network-foundations",
       "kind": "prerequisite"
     },
     {
-      "id": "ai-data/model-evaluation->ai-data/llm-evaluation",
+      "id": "ai-data/model-evaluation->ai-data/llm-evaluation:applied-in",
       "source": "ai-data/model-evaluation",
       "target": "ai-data/llm-evaluation",
       "kind": "applied-in"
     },
     {
-      "id": "sde-systems/distributed-systems-foundations->sde-systems/consistent-hashing",
+      "id": "sde-systems/distributed-systems-foundations->sde-systems/consistent-hashing:prerequisite",
       "source": "sde-systems/distributed-systems-foundations",
       "target": "sde-systems/consistent-hashing",
       "kind": "prerequisite"
     },
     {
-      "id": "foundations/hash-tables->sde-systems/consistent-hashing",
+      "id": "foundations/hash-tables->sde-systems/consistent-hashing:prerequisite",
       "source": "foundations/hash-tables",
       "target": "sde-systems/consistent-hashing",
       "kind": "prerequisite"
     },
     {
-      "id": "sde-systems/consistent-hashing->sde-systems/caching",
+      "id": "sde-systems/consistent-hashing->sde-systems/caching:applied-in",
       "source": "sde-systems/consistent-hashing",
       "target": "sde-systems/caching",
       "kind": "applied-in"
     },
     {
-      "id": "devops-cloud/containers->devops-cloud/kubernetes-reconciliation",
+      "id": "devops-cloud/containers->devops-cloud/kubernetes-reconciliation:prerequisite",
       "source": "devops-cloud/containers",
       "target": "devops-cloud/kubernetes-reconciliation",
       "kind": "prerequisite"
     },
     {
-      "id": "devops-cloud/kubernetes-reconciliation->devops-cloud/kubernetes-operations",
+      "id": "devops-cloud/kubernetes-reconciliation->devops-cloud/kubernetes-operations:applied-in",
       "source": "devops-cloud/kubernetes-reconciliation",
       "target": "devops-cloud/kubernetes-operations",
       "kind": "applied-in"
     },
     {
-      "id": "cybersecurity/security-foundations->cybersecurity/threat-modeling",
+      "id": "cybersecurity/security-foundations->cybersecurity/threat-modeling:prerequisite",
       "source": "cybersecurity/security-foundations",
       "target": "cybersecurity/threat-modeling",
       "kind": "prerequisite"
     },
     {
-      "id": "cybersecurity/threat-modeling->cybersecurity/application-security",
+      "id": "cybersecurity/threat-modeling->cybersecurity/application-security:applied-in",
       "source": "cybersecurity/threat-modeling",
       "target": "cybersecurity/application-security",
       "kind": "applied-in"
     },
     {
-      "id": "fintech-quant/money-representation->fintech-quant/double-entry-ledgers",
+      "id": "fintech-quant/money-representation->fintech-quant/double-entry-ledgers:prerequisite",
       "source": "fintech-quant/money-representation",
       "target": "fintech-quant/double-entry-ledgers",
       "kind": "prerequisite"
     },
     {
-      "id": "fintech-quant/double-entry-ledgers->fintech-quant/reconciliation",
+      "id": "fintech-quant/double-entry-ledgers->fintech-quant/reconciliation:applied-in",
       "source": "fintech-quant/double-entry-ledgers",
       "target": "fintech-quant/reconciliation",
       "kind": "applied-in"
     },
     {
-      "id": "fintech-quant/double-entry-ledgers->fintech-quant/payment-lifecycles",
+      "id": "fintech-quant/double-entry-ledgers->fintech-quant/payment-lifecycles:applied-in",
       "source": "fintech-quant/double-entry-ledgers",
       "target": "fintech-quant/payment-lifecycles",
       "kind": "applied-in"
+    },
+    {
+      "id": "foundations/c-plus-plus-interview-setup->foundations/complexity-analysis:prerequisite",
+      "source": "foundations/c-plus-plus-interview-setup",
+      "target": "foundations/complexity-analysis",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/c-plus-plus-interview-setup->foundations/stl-and-iterators:prerequisite",
+      "source": "foundations/c-plus-plus-interview-setup",
+      "target": "foundations/stl-and-iterators",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/complexity-analysis->foundations/stl-and-iterators:prerequisite",
+      "source": "foundations/complexity-analysis",
+      "target": "foundations/stl-and-iterators",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/stl-and-iterators->foundations/arrays-and-strings:prerequisite",
+      "source": "foundations/stl-and-iterators",
+      "target": "foundations/arrays-and-strings",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/complexity-analysis->foundations/hash-tables:prerequisite",
+      "source": "foundations/complexity-analysis",
+      "target": "foundations/hash-tables",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/arrays-and-strings->foundations/stacks-and-queues:prerequisite",
+      "source": "foundations/arrays-and-strings",
+      "target": "foundations/stacks-and-queues",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/c-plus-plus-interview-setup->foundations/linked-lists:prerequisite",
+      "source": "foundations/c-plus-plus-interview-setup",
+      "target": "foundations/linked-lists",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/complexity-analysis->foundations/linked-lists:prerequisite",
+      "source": "foundations/complexity-analysis",
+      "target": "foundations/linked-lists",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/stacks-and-queues->foundations/trees-and-bsts:prerequisite",
+      "source": "foundations/stacks-and-queues",
+      "target": "foundations/trees-and-bsts",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linked-lists->foundations/trees-and-bsts:prerequisite",
+      "source": "foundations/linked-lists",
+      "target": "foundations/trees-and-bsts",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/trees-and-bsts->foundations/heaps-and-priority-queues:prerequisite",
+      "source": "foundations/trees-and-bsts",
+      "target": "foundations/heaps-and-priority-queues",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/stl-and-iterators->foundations/heaps-and-priority-queues:prerequisite",
+      "source": "foundations/stl-and-iterators",
+      "target": "foundations/heaps-and-priority-queues",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/stacks-and-queues->foundations/graphs:prerequisite",
+      "source": "foundations/stacks-and-queues",
+      "target": "foundations/graphs",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/heaps-and-priority-queues->foundations/graphs:prerequisite",
+      "source": "foundations/heaps-and-priority-queues",
+      "target": "foundations/graphs",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/stacks-and-queues->foundations/recursion-and-backtracking:prerequisite",
+      "source": "foundations/stacks-and-queues",
+      "target": "foundations/recursion-and-backtracking",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/trees-and-bsts->foundations/recursion-and-backtracking:prerequisite",
+      "source": "foundations/trees-and-bsts",
+      "target": "foundations/recursion-and-backtracking",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/arrays-and-strings->foundations/sorting-and-binary-search:prerequisite",
+      "source": "foundations/arrays-and-strings",
+      "target": "foundations/sorting-and-binary-search",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/complexity-analysis->foundations/sorting-and-binary-search:prerequisite",
+      "source": "foundations/complexity-analysis",
+      "target": "foundations/sorting-and-binary-search",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/sorting-and-binary-search->foundations/greedy-algorithms:prerequisite",
+      "source": "foundations/sorting-and-binary-search",
+      "target": "foundations/greedy-algorithms",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/recursion-and-backtracking->foundations/dynamic-programming:prerequisite",
+      "source": "foundations/recursion-and-backtracking",
+      "target": "foundations/dynamic-programming",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/greedy-algorithms->foundations/dynamic-programming:prerequisite",
+      "source": "foundations/greedy-algorithms",
+      "target": "foundations/dynamic-programming",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/c-plus-plus-interview-setup->foundations/bit-manipulation:prerequisite",
+      "source": "foundations/c-plus-plus-interview-setup",
+      "target": "foundations/bit-manipulation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/discrete-mathematics->foundations/bit-manipulation:prerequisite",
+      "source": "foundations/discrete-mathematics",
+      "target": "foundations/bit-manipulation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/discrete-mathematics->foundations/linear-algebra:prerequisite",
+      "source": "foundations/discrete-mathematics",
+      "target": "foundations/linear-algebra",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/discrete-mathematics->foundations/probability:prerequisite",
+      "source": "foundations/discrete-mathematics",
+      "target": "foundations/probability",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/discrete-mathematics->foundations/sql-fundamentals:prerequisite",
+      "source": "foundations/discrete-mathematics",
+      "target": "foundations/sql-fundamentals",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linux-and-the-cli->foundations/networking-fundamentals:prerequisite",
+      "source": "foundations/linux-and-the-cli",
+      "target": "foundations/networking-fundamentals",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linux-and-the-cli->foundations/git-testing-and-debugging:prerequisite",
+      "source": "foundations/linux-and-the-cli",
+      "target": "foundations/git-testing-and-debugging",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/probability->ai-data/model-evaluation:prerequisite",
+      "source": "foundations/probability",
+      "target": "ai-data/model-evaluation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/networking-fundamentals->devops-cloud/kubernetes-reconciliation:prerequisite",
+      "source": "foundations/networking-fundamentals",
+      "target": "devops-cloud/kubernetes-reconciliation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/networking-fundamentals->cybersecurity/threat-modeling:prerequisite",
+      "source": "foundations/networking-fundamentals",
+      "target": "cybersecurity/threat-modeling",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/sql-fundamentals->fintech-quant/double-entry-ledgers:prerequisite",
+      "source": "foundations/sql-fundamentals",
+      "target": "fintech-quant/double-entry-ledgers",
+      "kind": "prerequisite"
     }
   ]
 }

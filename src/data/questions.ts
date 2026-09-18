@@ -1,6 +1,7 @@
 import { QuestionSchema, type Question } from "@/lib/schema";
+import { foundationLessons } from "@/data/foundation-lessons";
 
-export const questions: Question[] = QuestionSchema.array().parse([
+const handcraftedQuestions: Question[] = [
   {
     id: "hash-load-factor", topicId: "foundations/hash-tables", trackId: "foundations", type: "short", difficulty: "medium", timeboxMinutes: 5,
     prompt: "Why does a production hash table resize before every bucket is occupied, and what trade-off does the load-factor threshold control?",
@@ -50,6 +51,17 @@ export const questions: Question[] = QuestionSchema.array().parse([
     answer: "Record each stage as an immutable balanced transaction using accounts appropriate to authorization/clearing/settlement. The partial refund posts a new ₹300 reversal or refund transaction that debits the merchant/refund liability side and credits the customer or settlement receivable side, preserving the original ₹1,000 entries. Link by business identifiers, enforce idempotency, and reconcile the net ₹700 exposure to processor statements.",
     rubric: ["Immutable history", "Balanced refund postings", "Separates business events", "Mentions idempotency and reconciliation"], tags: ["ledger", "payments"]
   }
+];
+
+const foundationQuestions = Object.entries(foundationLessons).map(([topicId, lesson]) => ({
+  ...lesson.question,
+  topicId,
+  trackId: "foundations" as const
+}));
+
+export const questions: Question[] = QuestionSchema.array().parse([
+  ...handcraftedQuestions,
+  ...foundationQuestions
 ]);
 
 export const questionById = new Map(questions.map((question) => [question.id, question]));

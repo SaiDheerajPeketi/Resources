@@ -2,12 +2,14 @@
 
 An offline-first technical interview preparation atlas built with Next.js, TypeScript, local MDX, Dexie, React Flow, Pagefind, and Serwist.
 
-## Release 1 scope
+## Release 2 scope
 
 - A versioned destination map of 146 topics across Foundations, AI + Data, SDE + Systems, DevOps + Cloud, Cybersecurity, and Fintech + Quant.
-- Six complete field notes—one per track—with concept maps, analogies, theory, worked examples, failure modes, interview prompts, hints, solutions, flashcards, revision sheets, and sources.
+- The complete 24-topic shared-foundations pack: C++17, core DSA patterns, discrete mathematics, linear algebra, probability, statistics, SQL, Linux, networking, Git, testing, debugging, and behavioral preparation.
+- Twenty-nine complete field notes across the corpus, each with concept maps, analogies, theory, worked examples, failure modes, original interview prompts, hints, solutions, rubrics, flashcards, revision sheets, and canonical sources.
 - Desktop prerequisite graph plus a semantic mobile outline.
-- Original practice questions, interview-loop templates, named revision lists, bookmarks, notes, progress states, and attempts.
+- Thirty original practice questions, role-specific interview loops, resume/project/STAR/recruiter/negotiation guidance, and a reusable timed mock template.
+- Named revision lists, bookmarks, notes, progress states, and attempts.
 - Validated JSON backup/restore and Markdown export.
 - Installable PWA shell and versioned downloadable track packs with integrity metadata.
 - Static search artifacts, print layouts, and a fully static deployment in `out/`.
@@ -38,4 +40,4 @@ The browser suite runs against the production static export and covers desktop/m
 
 The source of truth is `src/data/catalog.ts`; generated manifests are written to `public/generated/` during the build. Published MDX field notes live in `src/content/topics/`. Product and design decisions are recorded in `PRODUCT.md` and `DESIGN.md`.
 
-Content version: `2026.09.18-r1`.
+Content version: `2026.09.18-r2`.

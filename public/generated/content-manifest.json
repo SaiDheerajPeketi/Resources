@@ -1,6 +1,6 @@
 {
-  "version": "2026.09.18-r1",
-  "generatedAt": "2026-09-18T02:34:18.543Z",
+  "version": "2026.09.18-r2",
+  "generatedAt": "2026-09-18T04:11:38.330Z",
   "roles": [
     {
       "id": "sde",
@@ -211,18 +211,23 @@
       "localSlug": "c-plus-plus-interview-setup",
       "trackId": "foundations",
       "title": "C++ Interview Setup",
-      "summary": "Planned field note covering c++ interview setup for foundations interviews.",
+      "summary": "Build, run, and reason about C++17 interview code with a small, reliable template and explicit ownership.",
       "level": "foundation",
-      "publicationStatus": "planned",
+      "publicationStatus": "published",
       "durationMinutes": 35,
       "roleIds": [
         "sde",
         "ai-engineer",
         "ml-engineer",
-        "data-scientist"
+        "fintech",
+        "quant-dev"
       ],
       "prerequisites": [],
-      "outcomes": [],
+      "outcomes": [
+        "Explain the compile-link-run pipeline",
+        "Use references, const, and RAII deliberately",
+        "Write a portable C++17 interview harness"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -231,18 +236,27 @@
       "localSlug": "complexity-analysis",
       "trackId": "foundations",
       "title": "Complexity Analysis",
-      "summary": "Planned field note covering complexity analysis for foundations interviews.",
+      "summary": "Derive time and space bounds, amortized costs, and input-sensitive trade-offs instead of memorizing labels.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 45,
       "roleIds": [
         "sde",
         "ai-engineer",
         "ml-engineer",
-        "data-scientist"
+        "data-scientist",
+        "data-engineer",
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/c-plus-plus-interview-setup"
+      ],
+      "outcomes": [
+        "Derive bounds from operation counts",
+        "Distinguish worst, expected, and amortized cost",
+        "Expose hidden input dimensions and space costs"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -251,18 +265,27 @@
       "localSlug": "stl-and-iterators",
       "trackId": "foundations",
       "title": "STL and Iterators",
-      "summary": "Planned field note covering stl and iterators for foundations interviews.",
+      "summary": "Choose C++ containers and algorithms by guarantees, then reason safely about iterators, comparators, and invalidation.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 50,
       "roleIds": [
         "sde",
         "ai-engineer",
         "ml-engineer",
-        "data-scientist"
+        "data-engineer",
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/c-plus-plus-interview-setup",
+        "foundations/complexity-analysis"
+      ],
+      "outcomes": [
+        "Select containers from operation requirements",
+        "Apply algorithms over valid ranges",
+        "Explain iterator invalidation"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -271,18 +294,28 @@
       "localSlug": "arrays-and-strings",
       "trackId": "foundations",
       "title": "Arrays and Strings",
-      "summary": "Planned field note covering arrays and strings for foundations interviews.",
+      "summary": "Solve sequence problems with explicit invariants: two pointers, windows, prefix summaries, and in-place transforms.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 55,
       "roleIds": [
         "sde",
         "ai-engineer",
         "ml-engineer",
-        "data-scientist"
+        "data-scientist",
+        "data-engineer",
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/complexity-analysis",
+        "foundations/stl-and-iterators"
+      ],
+      "outcomes": [
+        "Choose pointer, window, or prefix patterns",
+        "State a loop invariant",
+        "Handle encoding and boundaries deliberately"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -321,18 +354,25 @@
       "localSlug": "stacks-and-queues",
       "trackId": "foundations",
       "title": "Stacks and Queues",
-      "summary": "Planned field note covering stacks and queues for foundations interviews.",
+      "summary": "Recognize LIFO, FIFO, monotonic, and deque invariants in parsing, traversal, and next-element problems.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 45,
       "roleIds": [
         "sde",
         "ai-engineer",
-        "ml-engineer",
-        "data-scientist"
+        "data-engineer",
+        "devops",
+        "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/arrays-and-strings"
+      ],
+      "outcomes": [
+        "Model work with LIFO or FIFO",
+        "Build monotonic structures",
+        "Explain amortized deque operations"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -341,18 +381,24 @@
       "localSlug": "linked-lists",
       "trackId": "foundations",
       "title": "Linked Lists",
-      "summary": "Planned field note covering linked lists for foundations interviews.",
+      "summary": "Manipulate node chains safely using pointer invariants, sentinels, and fast/slow reasoning.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 45,
       "roleIds": [
         "sde",
-        "ai-engineer",
-        "ml-engineer",
-        "data-scientist"
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/c-plus-plus-interview-setup",
+        "foundations/complexity-analysis"
+      ],
+      "outcomes": [
+        "Reverse and splice without losing nodes",
+        "Use sentinels at boundaries",
+        "Derive fast/slow algorithms"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -361,18 +407,26 @@
       "localSlug": "trees-and-bsts",
       "trackId": "foundations",
       "title": "Trees and BSTs",
-      "summary": "Planned field note covering trees and bsts for foundations interviews.",
+      "summary": "Reason about hierarchical data with recursive contracts, traversal order, and BST invariants.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 60,
       "roleIds": [
         "sde",
         "ai-engineer",
-        "ml-engineer",
-        "data-scientist"
+        "data-engineer",
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/stacks-and-queues",
+        "foundations/linked-lists"
+      ],
+      "outcomes": [
+        "Select DFS or BFS",
+        "Write subtree contracts",
+        "Validate BSTs with global bounds"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -381,18 +435,27 @@
       "localSlug": "heaps-and-priority-queues",
       "trackId": "foundations",
       "title": "Heaps and Priority Queues",
-      "summary": "Planned field note covering heaps and priority queues for foundations interviews.",
-      "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "summary": "Use partial ordering to retrieve extrema, maintain top-k sets, and schedule work efficiently.",
+      "level": "foundation",
+      "publicationStatus": "published",
+      "durationMinutes": 45,
       "roleIds": [
         "sde",
         "ai-engineer",
-        "ml-engineer",
-        "data-scientist"
+        "data-engineer",
+        "devops",
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/trees-and-bsts",
+        "foundations/stl-and-iterators"
+      ],
+      "outcomes": [
+        "Explain heap invariants",
+        "Choose heap direction for top-k",
+        "State build, push, and pop costs"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -401,18 +464,28 @@
       "localSlug": "graphs",
       "trackId": "foundations",
       "title": "Graphs",
-      "summary": "Planned field note covering graphs for foundations interviews.",
+      "summary": "Model relationships and apply traversal, ordering, connectivity, and shortest-path invariants.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 70,
       "roleIds": [
         "sde",
         "ai-engineer",
-        "ml-engineer",
-        "data-scientist"
+        "data-engineer",
+        "devops",
+        "security",
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/stacks-and-queues",
+        "foundations/heaps-and-priority-queues"
+      ],
+      "outcomes": [
+        "Choose graph representations",
+        "Select BFS, DFS, topological sort, or Dijkstra",
+        "Prove visitation and relaxation invariants"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -421,18 +494,24 @@
       "localSlug": "recursion-and-backtracking",
       "trackId": "foundations",
       "title": "Recursion and Backtracking",
-      "summary": "Planned field note covering recursion and backtracking for foundations interviews.",
-      "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "summary": "Design recursive contracts and prune state-space searches without corrupting shared state.",
+      "level": "foundation",
+      "publicationStatus": "published",
+      "durationMinutes": 55,
       "roleIds": [
         "sde",
         "ai-engineer",
-        "ml-engineer",
-        "data-scientist"
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/stacks-and-queues",
+        "foundations/trees-and-bsts"
+      ],
+      "outcomes": [
+        "Define base cases and decreasing measures",
+        "Trace call-stack state",
+        "Build choose-explore-unchoose searches"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -441,18 +520,27 @@
       "localSlug": "sorting-and-binary-search",
       "trackId": "foundations",
       "title": "Sorting and Binary Search",
-      "summary": "Planned field note covering sorting and binary search for foundations interviews.",
-      "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "summary": "Choose sorting guarantees and use boundary-based binary search over values or monotone predicates.",
+      "level": "foundation",
+      "publicationStatus": "published",
+      "durationMinutes": 60,
       "roleIds": [
         "sde",
         "ai-engineer",
-        "ml-engineer",
-        "data-scientist"
+        "data-scientist",
+        "data-engineer",
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/arrays-and-strings",
+        "foundations/complexity-analysis"
+      ],
+      "outcomes": [
+        "Compare sorting guarantees",
+        "Implement lower bound safely",
+        "Search a monotone answer space"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -461,18 +549,24 @@
       "localSlug": "greedy-algorithms",
       "trackId": "foundations",
       "title": "Greedy Algorithms",
-      "summary": "Planned field note covering greedy algorithms for foundations interviews.",
+      "summary": "Make local choices only when an exchange argument or invariant proves they compose globally.",
       "level": "interview",
-      "publicationStatus": "planned",
+      "publicationStatus": "published",
       "durationMinutes": 50,
       "roleIds": [
         "sde",
-        "ai-engineer",
-        "ml-engineer",
-        "data-scientist"
+        "data-scientist",
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/sorting-and-binary-search"
+      ],
+      "outcomes": [
+        "Recognize greedy structure",
+        "Prove rules by exchange or staying ahead",
+        "Find counterexamples and switch to DP"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -481,18 +575,26 @@
       "localSlug": "dynamic-programming",
       "trackId": "foundations",
       "title": "Dynamic Programming",
-      "summary": "Planned field note covering dynamic programming for foundations interviews.",
+      "summary": "Turn repeated subproblems into explicit state, transitions, base cases, and evaluation order.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 75,
       "roleIds": [
         "sde",
         "ai-engineer",
-        "ml-engineer",
-        "data-scientist"
+        "data-scientist",
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/recursion-and-backtracking",
+        "foundations/greedy-algorithms"
+      ],
+      "outcomes": [
+        "Define minimal sufficient state",
+        "Derive transitions and order",
+        "Optimize space safely"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -501,18 +603,25 @@
       "localSlug": "bit-manipulation",
       "trackId": "foundations",
       "title": "Bit Manipulation",
-      "summary": "Planned field note covering bit manipulation for foundations interviews.",
+      "summary": "Use binary representations, masks, and XOR identities while avoiding signed-shift and width traps.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 40,
       "roleIds": [
         "sde",
-        "ai-engineer",
-        "ml-engineer",
-        "data-scientist"
+        "security",
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/c-plus-plus-interview-setup",
+        "foundations/discrete-mathematics"
+      ],
+      "outcomes": [
+        "Read and update bit fields",
+        "Apply XOR and power-of-two identities",
+        "Use unsigned operations safely"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -521,18 +630,26 @@
       "localSlug": "discrete-mathematics",
       "trackId": "foundations",
       "title": "Discrete Mathematics",
-      "summary": "Planned field note covering discrete mathematics for foundations interviews.",
-      "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "summary": "Use logic, sets, counting, graphs, invariants, and proof techniques to justify interview algorithms.",
+      "level": "foundation",
+      "publicationStatus": "published",
+      "durationMinutes": 60,
       "roleIds": [
         "sde",
         "ai-engineer",
         "ml-engineer",
-        "data-scientist"
+        "data-scientist",
+        "security",
+        "fintech",
+        "quant-dev",
+        "quant-research"
       ],
       "prerequisites": [],
-      "outcomes": [],
+      "outcomes": [
+        "Translate conditions into logic and sets",
+        "Apply counting and recurrence reasoning",
+        "Construct contradiction, induction, and invariant proofs"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -541,18 +658,25 @@
       "localSlug": "linear-algebra",
       "trackId": "foundations",
       "title": "Linear Algebra",
-      "summary": "Planned field note covering linear algebra for foundations interviews.",
-      "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "summary": "Understand vectors, matrices, projections, eigenstructure, and gradients as the language of ML and quantitative models.",
+      "level": "foundation",
+      "publicationStatus": "published",
+      "durationMinutes": 70,
       "roleIds": [
-        "sde",
         "ai-engineer",
         "ml-engineer",
-        "data-scientist"
+        "data-scientist",
+        "quant-dev",
+        "quant-research"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/discrete-mathematics"
+      ],
+      "outcomes": [
+        "Interpret matrix operations geometrically",
+        "Reason about rank, basis, and projections",
+        "Connect decompositions to ML"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -561,18 +685,27 @@
       "localSlug": "probability",
       "trackId": "foundations",
       "title": "Probability",
-      "summary": "Planned field note covering probability for foundations interviews.",
-      "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "summary": "Model uncertainty with conditional probability, random variables, expectation, variance, and common distributions.",
+      "level": "foundation",
+      "publicationStatus": "published",
+      "durationMinutes": 75,
       "roleIds": [
-        "sde",
         "ai-engineer",
         "ml-engineer",
-        "data-scientist"
+        "data-scientist",
+        "security",
+        "fintech",
+        "quant-dev",
+        "quant-research"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/discrete-mathematics"
+      ],
+      "outcomes": [
+        "Compute conditional and total probability",
+        "Apply Bayes with base rates",
+        "Use expectation, variance, and distribution assumptions correctly"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -581,18 +714,27 @@
       "localSlug": "statistics",
       "trackId": "foundations",
       "title": "Statistics",
-      "summary": "Planned field note covering statistics for foundations interviews.",
-      "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "summary": "Estimate, test, and communicate uncertainty while separating association, prediction, and causal claims.",
+      "level": "foundation",
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
-        "sde",
         "ai-engineer",
         "ml-engineer",
-        "data-scientist"
+        "data-scientist",
+        "data-engineer",
+        "fintech",
+        "quant-dev",
+        "quant-research"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/probability"
+      ],
+      "outcomes": [
+        "Interpret estimators and intervals",
+        "Design and critique tests",
+        "Detect bias, leakage, and causal overclaiming"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -601,18 +743,27 @@
       "localSlug": "sql-fundamentals",
       "trackId": "foundations",
       "title": "SQL Fundamentals",
-      "summary": "Planned field note covering sql fundamentals for foundations interviews.",
-      "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "summary": "Query relational data correctly with joins, aggregation, windows, transactions, and index-aware reasoning.",
+      "level": "foundation",
+      "publicationStatus": "published",
+      "durationMinutes": 75,
       "roleIds": [
         "sde",
         "ai-engineer",
         "ml-engineer",
-        "data-scientist"
+        "data-scientist",
+        "data-engineer",
+        "fintech",
+        "quant-research"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/discrete-mathematics"
+      ],
+      "outcomes": [
+        "Write correct joins and grouped queries",
+        "Use windows without collapsing rows",
+        "Explain transactions, constraints, and index trade-offs"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -621,18 +772,24 @@
       "localSlug": "linux-and-the-cli",
       "trackId": "foundations",
       "title": "Linux and the CLI",
-      "summary": "Planned field note covering linux and the cli for foundations interviews.",
-      "level": "advanced",
-      "publicationStatus": "planned",
+      "summary": "Navigate Linux processes, files, permissions, pipes, signals, and diagnostics from a safe command line.",
+      "level": "foundation",
+      "publicationStatus": "published",
       "durationMinutes": 65,
       "roleIds": [
         "sde",
-        "ai-engineer",
-        "ml-engineer",
-        "data-scientist"
+        "data-engineer",
+        "devops",
+        "sre",
+        "security",
+        "fintech"
       ],
       "prerequisites": [],
-      "outcomes": [],
+      "outcomes": [
+        "Explain processes, descriptors, and permissions",
+        "Compose observable pipelines safely",
+        "Diagnose CPU, memory, disk, and network symptoms"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -641,18 +798,28 @@
       "localSlug": "networking-fundamentals",
       "trackId": "foundations",
       "title": "Networking Fundamentals",
-      "summary": "Planned field note covering networking fundamentals for foundations interviews.",
-      "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "summary": "Trace traffic through DNS, transport, IP routing, TLS, and HTTP while debugging by layer.",
+      "level": "foundation",
+      "publicationStatus": "published",
+      "durationMinutes": 75,
       "roleIds": [
         "sde",
         "ai-engineer",
-        "ml-engineer",
-        "data-scientist"
+        "data-engineer",
+        "devops",
+        "sre",
+        "security",
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/linux-and-the-cli"
+      ],
+      "outcomes": [
+        "Explain packet and connection paths",
+        "Compare TCP, UDP, HTTP, DNS, and TLS",
+        "Debug failures layer by layer"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -661,18 +828,29 @@
       "localSlug": "git-testing-and-debugging",
       "trackId": "foundations",
       "title": "Git, Testing, and Debugging",
-      "summary": "Planned field note covering git, testing, and debugging for foundations interviews.",
-      "level": "advanced",
-      "publicationStatus": "planned",
+      "summary": "Manage changes as commits, build layered tests, and debug from reproducible evidence rather than guesses.",
+      "level": "foundation",
+      "publicationStatus": "published",
       "durationMinutes": 65,
       "roleIds": [
         "sde",
         "ai-engineer",
         "ml-engineer",
-        "data-scientist"
+        "data-engineer",
+        "devops",
+        "sre",
+        "security",
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/linux-and-the-cli"
+      ],
+      "outcomes": [
+        "Explain Git objects, branches, and merges",
+        "Choose unit, integration, and end-to-end tests",
+        "Run a hypothesis-driven debugging loop"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -681,18 +859,29 @@
       "localSlug": "behavioral-interview-basics",
       "trackId": "foundations",
       "title": "Behavioral Interview Basics",
-      "summary": "Planned field note covering behavioral interview basics for foundations interviews.",
-      "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "summary": "Turn real experience into concise, evidence-backed stories for recruiter, behavioral, project, and negotiation conversations.",
+      "level": "foundation",
+      "publicationStatus": "published",
+      "durationMinutes": 55,
       "roleIds": [
         "sde",
         "ai-engineer",
         "ml-engineer",
-        "data-scientist"
+        "data-scientist",
+        "data-engineer",
+        "devops",
+        "sre",
+        "security",
+        "fintech",
+        "quant-dev",
+        "quant-research"
       ],
       "prerequisites": [],
-      "outcomes": [],
+      "outcomes": [
+        "Build adaptable STAR stories",
+        "Lead project deep dives",
+        "Handle recruiter and negotiation conversations accurately"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {

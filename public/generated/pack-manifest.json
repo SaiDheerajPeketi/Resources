@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r1",
+  "version": "2026.09.18-r2",
   "packs": [
     {
       "id": "foundations",
@@ -13,10 +13,33 @@
         "/revision/",
         "/interview/",
         "/settings/",
-        "/topics/foundations/hash-tables/"
+        "/topics/foundations/c-plus-plus-interview-setup/",
+        "/topics/foundations/complexity-analysis/",
+        "/topics/foundations/stl-and-iterators/",
+        "/topics/foundations/arrays-and-strings/",
+        "/topics/foundations/hash-tables/",
+        "/topics/foundations/stacks-and-queues/",
+        "/topics/foundations/linked-lists/",
+        "/topics/foundations/trees-and-bsts/",
+        "/topics/foundations/heaps-and-priority-queues/",
+        "/topics/foundations/graphs/",
+        "/topics/foundations/recursion-and-backtracking/",
+        "/topics/foundations/sorting-and-binary-search/",
+        "/topics/foundations/greedy-algorithms/",
+        "/topics/foundations/dynamic-programming/",
+        "/topics/foundations/bit-manipulation/",
+        "/topics/foundations/discrete-mathematics/",
+        "/topics/foundations/linear-algebra/",
+        "/topics/foundations/probability/",
+        "/topics/foundations/statistics/",
+        "/topics/foundations/sql-fundamentals/",
+        "/topics/foundations/linux-and-the-cli/",
+        "/topics/foundations/networking-fundamentals/",
+        "/topics/foundations/git-testing-and-debugging/",
+        "/topics/foundations/behavioral-interview-basics/"
       ],
-      "estimatedKb": 252,
-      "integrity": "sha256-0e2a608991901529f4864c690052e5054ce73df4fdd61e24e16c4502f8931a06"
+      "estimatedKb": 1908,
+      "integrity": "sha256-cafa7b51ddfb816cb5ec1c5f40dd201161701afe04a416bee3f323d11dae5e98"
     },
     {
       "id": "ai-data",

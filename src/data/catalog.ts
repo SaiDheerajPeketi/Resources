@@ -9,8 +9,9 @@ import {
   type Track,
   type TrackId
 } from "@/lib/schema";
+import { foundationLessons } from "@/data/foundation-lessons";
 
-export const CONTENT_MANIFEST_VERSION = "2026.09.18-r1";
+export const CONTENT_MANIFEST_VERSION = "2026.09.18-r2";
 
 export const roles: RoleProfile[] = RoleProfileSchema.array().parse([
   { id: "sde", title: "Software Engineer", description: "Generalist, backend, full-stack, and systems interviews.", trackIds: ["foundations", "sde-systems"] },
@@ -110,7 +111,7 @@ export const topics: TopicMeta[] = TopicMetaSchema.array().parse(
   tracks.flatMap((track) => titlesByTrack[track.id].map((title, index) => {
     const localSlug = slugify(title);
     const slug = `${track.id}/${localSlug}`;
-    const custom = published[slug];
+    const custom = published[slug] ?? foundationLessons[slug];
     return {
       id: slug,
       slug,
@@ -150,7 +151,11 @@ const edgePairs: Array<[string, string, ConceptEdge["kind"]]> = [
   ["fintech-quant/double-entry-ledgers", "fintech-quant/payment-lifecycles", "applied-in"]
 ];
 
-export const edges: ConceptEdge[] = ConceptEdgeSchema.array().parse(edgePairs.map(([source, target, kind]) => ({ id: `${source}->${target}`, source, target, kind })));
+const prerequisitePairs: Array<[string, string, ConceptEdge["kind"]]> = topics.flatMap((topic) =>
+  topic.prerequisites.map((source) => [source, topic.id, "prerequisite"] as [string, string, ConceptEdge["kind"]])
+);
+const uniqueEdgePairs = [...new Map([...edgePairs, ...prerequisitePairs].map((edge) => [`${edge[0]}->${edge[1]}:${edge[2]}`, edge])).values()];
+export const edges: ConceptEdge[] = ConceptEdgeSchema.array().parse(uniqueEdgePairs.map(([source, target, kind]) => ({ id: `${source}->${target}:${kind}`, source, target, kind })));
 export const publishedTopics = topics.filter((topic) => topic.publicationStatus === "published");
 export const topicById = new Map(topics.map((topic) => [topic.id, topic]));
 export const trackById = new Map(tracks.map((track) => [track.id, track]));

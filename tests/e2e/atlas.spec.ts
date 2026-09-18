@@ -9,6 +9,22 @@ test("atlas opens a published field note", async ({ page }) => {
   await expect(page.getByText("Five-minute map")).toBeVisible();
 });
 
+test("shared foundations expose complete theory and interview practice", async ({ page }) => {
+  await page.goto("/topics/foundations/sql-fundamentals/");
+  await expect(page.getByRole("heading", { name: "SQL Fundamentals", level: 1 })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Relational correctness" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Interview practice" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
+});
+
+test("interview workspace includes career artifacts and a timed mock", async ({ page }) => {
+  await page.goto("/interview/");
+  await expect(page.getByRole("heading", { name: "Career field guide" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Resume construction" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Seventy-five-minute mock template" })).toBeVisible();
+  await expect(page.getByText("65–75")).toBeVisible();
+});
+
 test("mobile uses the semantic outline", async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== "mobile", "Mobile-only fallback check");
   await page.goto("/atlas/");
@@ -46,6 +62,7 @@ test("study state survives reload and appears in a named revision list", async (
   await page.getByRole("button", { name: "Add to revision" }).click();
   await page.getByLabel("Private note").fill("Review collision strategies.");
   await page.getByRole("button", { name: "Save note" }).click();
+  await expect(page.getByText("Note saved locally.")).toBeVisible();
   await page.reload();
   await expect(page.getByLabel("Study status")).toHaveValue("revising");
   await expect(page.getByRole("button", { name: "Bookmarked" })).toBeVisible();

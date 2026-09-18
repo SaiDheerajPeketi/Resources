@@ -15,6 +15,11 @@ describe("coverage catalog", () => {
     }
   });
 
+  it("publishes the complete shared-foundations pack", () => {
+    expect(publishedTopics).toHaveLength(29);
+    expect(publishedTopics.filter((topic) => topic.trackId === "foundations")).toHaveLength(24);
+  });
+
   it("gives every published field note interview practice", () => {
     for (const topic of publishedTopics) {
       expect(questions.some((question) => question.topicId === topic.id)).toBe(true);
