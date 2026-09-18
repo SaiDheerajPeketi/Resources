@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r2",
+  "version": "2026.09.18-r3",
   "packs": [
     {
       "id": "foundations",
@@ -53,10 +53,35 @@
         "/revision/",
         "/interview/",
         "/settings/",
-        "/topics/ai-data/model-evaluation/"
+        "/topics/ai-data/data-cleaning/",
+        "/topics/ai-data/exploratory-data-analysis/",
+        "/topics/ai-data/experiment-design/",
+        "/topics/ai-data/feature-engineering/",
+        "/topics/ai-data/linear-models/",
+        "/topics/ai-data/logistic-regression/",
+        "/topics/ai-data/tree-ensembles/",
+        "/topics/ai-data/unsupervised-learning/",
+        "/topics/ai-data/model-evaluation/",
+        "/topics/ai-data/optimization-for-ml/",
+        "/topics/ai-data/neural-network-foundations/",
+        "/topics/ai-data/cnns/",
+        "/topics/ai-data/sequence-models/",
+        "/topics/ai-data/transformers/",
+        "/topics/ai-data/natural-language-processing/",
+        "/topics/ai-data/computer-vision/",
+        "/topics/ai-data/recommender-systems/",
+        "/topics/ai-data/forecasting/",
+        "/topics/ai-data/embeddings/",
+        "/topics/ai-data/vector-search/",
+        "/topics/ai-data/retrieval-augmented-generation/",
+        "/topics/ai-data/fine-tuning/",
+        "/topics/ai-data/agents-and-tool-use/",
+        "/topics/ai-data/llm-evaluation/",
+        "/topics/ai-data/responsible-ai/",
+        "/topics/ai-data/mlops-and-ml-system-design/"
       ],
-      "estimatedKb": 252,
-      "integrity": "sha256-eb02903f5d7e2676f3f0a02ceb5091e4c65ebdfff176ba63e46a87c59353e6f6"
+      "estimatedKb": 2052,
+      "integrity": "sha256-020b7048ae1ad817dd0d67b4464cf892024b4c93debfbb3925e41f639c29c009"
     },
     {
       "id": "sde-systems",

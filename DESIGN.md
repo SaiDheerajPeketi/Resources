@@ -144,6 +144,8 @@ Desktop atlas pages use a 17% / flexible center / 27% three-pane grid below a 70
 
 At 1120px the panes tighten. At 900px the application becomes a vertical document: tracks turn into horizontally scrollable index tabs, the interactive graph is replaced by the semantically equivalent topic outline, and the inspector follows it. At 540px the command header stacks and nonessential utility labels yield to icons. Spacing follows a compact 6/8/12/16/24px rhythm, with larger article gaps used only between lesson sections.
 
+Ruled comparisons use the same row-and-column grammar as adjacent manifests so curated guidance and complete inventories remain part of one field manual. When comparison rows collapse on narrow screens, retain the subject plus the decisive fields and repeat a visible inline label inside every surviving non-title cell.
+
 **The Map-and-Inspector Rule.** On wide screens, selection context and explanation remain visible together. On narrow screens, preserve the same information order in a readable outline rather than shrinking the graph.
 
 ## Elevation & Depth
@@ -194,6 +196,15 @@ Working controls use gently curved 6–9px corners. Revision sheets use a tighte
 
 Track navigation is an index, not a tab-card collection. Active items gain a Blueprint Wash and a three-pixel edge marker. Mobile retains the same labels in a horizontally scrollable strip with a blue underline.
 
+### Ruled Comparisons
+
+- **Structure:** use the manifest's ruled table grammar for side-by-side comparisons rather than introducing cards.
+- **Priority Links:** render prioritized destinations as direct links labelled with their canonical destination titles; do not expose internal slugs or replace the title with a generic action.
+- **Responsive Collapse:** keep the subject and decisive fields, and show a compact mono field label inside each surviving non-title cell.
+- **Manifest Boundary:** end the curated comparison before the complete inventory and give that manifest its own heading and scope statement.
+
+**The Curated-to-Complete Rule.** A comparison helps the reader choose an emphasis; the explicitly headed manifest that follows remains the authoritative complete inventory.
+
 ### Atlas Node
 
 Nodes are bordered paper labels with circular state markers. Planned nodes use a dashed outline, published nodes use teal state marks, and the selected node gets a Blueprint border, traced path, and folded location flag.
@@ -207,6 +218,8 @@ Nodes are bordered paper labels with circular state markers. Planned nodes use a
 - **Do** pair every color state with text, iconography, or line treatment.
 - **Do** keep body text in the hyperlegible sans face and metadata in mono.
 - **Do** honor reduced-motion preferences for path tracing and panel transitions.
+- **Do** use canonical destination titles for priority links and visible field labels when comparison rows collapse.
+- **Do** separate curated comparisons from complete manifests with an explicit heading and scope statement.
 
 ### Don't:
 

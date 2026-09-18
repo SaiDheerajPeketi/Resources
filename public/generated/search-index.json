@@ -415,120 +415,123 @@
     "id": "ai-data/data-cleaning",
     "slug": "ai-data/data-cleaning",
     "title": "Data Cleaning",
-    "summary": "Planned field note covering data cleaning for ai + data interviews.",
+    "summary": "Turn raw records into an auditable, leakage-safe analytical table without erasing meaningful variation.",
     "trackId": "ai-data",
     "level": "foundation",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "data-engineer",
+      "mlops-engineer"
     ]
   },
   {
     "id": "ai-data/exploratory-data-analysis",
     "slug": "ai-data/exploratory-data-analysis",
     "title": "Exploratory Data Analysis",
-    "summary": "Planned field note covering exploratory data analysis for ai + data interviews.",
+    "summary": "Use targeted summaries and visual reasoning to understand a dataset, test assumptions, and form falsifiable hypotheses.",
     "trackId": "ai-data",
     "level": "foundation",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
-      "ai-engineer",
-      "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "ml-engineer",
+      "ai-engineer",
+      "data-engineer",
+      "quant-research"
     ]
   },
   {
     "id": "ai-data/experiment-design",
     "slug": "ai-data/experiment-design",
     "title": "Experiment Design",
-    "summary": "Planned field note covering experiment design for ai + data interviews.",
+    "summary": "Design controlled experiments that identify causal effects, protect users, and support trustworthy product decisions.",
     "trackId": "ai-data",
     "level": "foundation",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
-      "ai-engineer",
-      "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "ml-engineer",
+      "ai-engineer",
+      "quant-research"
     ]
   },
   {
     "id": "ai-data/feature-engineering",
     "slug": "ai-data/feature-engineering",
     "title": "Feature Engineering",
-    "summary": "Planned field note covering feature engineering for ai + data interviews.",
+    "summary": "Create stable, available, and leakage-safe representations that expose useful signal to a model.",
     "trackId": "ai-data",
     "level": "foundation",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
-      "ai-engineer",
       "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "ai-engineer",
+      "data-engineer",
+      "mlops-engineer"
     ]
   },
   {
     "id": "ai-data/linear-models",
     "slug": "ai-data/linear-models",
     "title": "Linear Models",
-    "summary": "Planned field note covering linear models for ai + data interviews.",
+    "summary": "Understand least squares, regularization, diagnostics, and the conditions under which linear models remain strong baselines.",
     "trackId": "ai-data",
     "level": "foundation",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
-      "ai-engineer",
-      "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "ml-engineer",
+      "ai-engineer",
+      "quant-research"
     ]
   },
   {
     "id": "ai-data/logistic-regression",
     "slug": "ai-data/logistic-regression",
     "title": "Logistic Regression",
-    "summary": "Planned field note covering logistic regression for ai + data interviews.",
+    "summary": "Model class log-odds, interpret conditional effects, regularize safely, and connect scores to calibrated decisions.",
     "trackId": "ai-data",
     "level": "foundation",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
-      "ai-engineer",
-      "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "ml-engineer",
+      "ai-engineer",
+      "quant-research"
     ]
   },
   {
     "id": "ai-data/tree-ensembles",
     "slug": "ai-data/tree-ensembles",
     "title": "Tree Ensembles",
-    "summary": "Planned field note covering tree ensembles for ai + data interviews.",
+    "summary": "Compare trees, random forests, and gradient boosting through their split logic, bias-variance behavior, and production trade-offs.",
     "trackId": "ai-data",
-    "level": "foundation",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
-      "ai-engineer",
-      "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "ml-engineer",
+      "ai-engineer",
+      "quant-research"
     ]
   },
   {
     "id": "ai-data/unsupervised-learning",
     "slug": "ai-data/unsupervised-learning",
     "title": "Unsupervised Learning",
-    "summary": "Planned field note covering unsupervised learning for ai + data interviews.",
+    "summary": "Use clustering and dimensionality reduction as exploratory models whose value depends on geometry and downstream validation.",
     "trackId": "ai-data",
     "level": "foundation",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
-      "ai-engineer",
-      "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "ml-engineer",
+      "ai-engineer",
+      "quant-research"
     ]
   },
   {
@@ -550,118 +553,116 @@
     "id": "ai-data/optimization-for-ml",
     "slug": "ai-data/optimization-for-ml",
     "title": "Optimization for ML",
-    "summary": "Planned field note covering optimization for ml for ai + data interviews.",
+    "summary": "Reason about objectives, gradients, conditioning, stochastic updates, and the optimization path that turns parameters into a fitted model.",
     "trackId": "ai-data",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
-      "ai-engineer",
       "ml-engineer",
+      "ai-engineer",
       "data-scientist",
-      "data-engineer"
+      "quant-research",
+      "mlops-engineer"
     ]
   },
   {
     "id": "ai-data/neural-network-foundations",
     "slug": "ai-data/neural-network-foundations",
     "title": "Neural Network Foundations",
-    "summary": "Planned field note covering neural network foundations for ai + data interviews.",
+    "summary": "Build and debug multilayer networks through computation graphs, backpropagation, initialization, regularization, and training dynamics.",
     "trackId": "ai-data",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "mlops-engineer"
     ]
   },
   {
     "id": "ai-data/cnns",
     "slug": "ai-data/cnns",
     "title": "CNNs",
-    "summary": "Planned field note covering cnns for ai + data interviews.",
+    "summary": "Understand convolutional inductive bias, receptive fields, residual networks, and efficient vision-model debugging.",
     "trackId": "ai-data",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
-      "data-scientist",
-      "data-engineer"
+      "data-scientist"
     ]
   },
   {
     "id": "ai-data/sequence-models",
     "slug": "ai-data/sequence-models",
     "title": "Sequence Models",
-    "summary": "Planned field note covering sequence models for ai + data interviews.",
+    "summary": "Model ordered data with recurrence, gating, masking, teacher forcing, and sequence-aware evaluation.",
     "trackId": "ai-data",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "quant-research"
     ]
   },
   {
     "id": "ai-data/transformers",
     "slug": "ai-data/transformers",
     "title": "Transformers",
-    "summary": "Planned field note covering transformers for ai + data interviews.",
+    "summary": "Derive attention, positional information, masking, architecture families, and the memory/compute trade-offs of transformer models.",
     "trackId": "ai-data",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "mlops-engineer"
     ]
   },
   {
     "id": "ai-data/natural-language-processing",
     "slug": "ai-data/natural-language-processing",
     "title": "Natural Language Processing",
-    "summary": "Planned field note covering natural language processing for ai + data interviews.",
+    "summary": "Model language through tokenization, representations, task formulation, decoding, and evaluation beyond surface overlap.",
     "trackId": "ai-data",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
-      "data-scientist",
-      "data-engineer"
+      "data-scientist"
     ]
   },
   {
     "id": "ai-data/computer-vision",
     "slug": "ai-data/computer-vision",
     "title": "Computer Vision",
-    "summary": "Planned field note covering computer vision for ai + data interviews.",
+    "summary": "Frame image classification, detection, and segmentation systems from labeling geometry through deployment shift.",
     "trackId": "ai-data",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
-      "data-scientist",
-      "data-engineer"
+      "data-scientist"
     ]
   },
   {
     "id": "ai-data/recommender-systems",
     "slug": "ai-data/recommender-systems",
     "title": "Recommender Systems",
-    "summary": "Planned field note covering recommender systems for ai + data interviews.",
+    "summary": "Design retrieval, ranking, and feedback systems that balance relevance, discovery, constraints, and long-term marketplace health.",
     "trackId": "ai-data",
-    "level": "interview",
-    "publicationStatus": "planned",
+    "level": "advanced",
+    "publicationStatus": "published",
     "roleIds": [
-      "ai-engineer",
       "ml-engineer",
+      "ai-engineer",
       "data-scientist",
       "data-engineer"
     ]
@@ -670,14 +671,14 @@
     "id": "ai-data/forecasting",
     "slug": "ai-data/forecasting",
     "title": "Forecasting",
-    "summary": "Planned field note covering forecasting for ai + data interviews.",
+    "summary": "Forecast time-indexed outcomes with honest backtests, lag-aware features, uncertainty, hierarchy, and production monitoring.",
     "trackId": "ai-data",
     "level": "interview",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
-      "ai-engineer",
-      "ml-engineer",
       "data-scientist",
+      "ml-engineer",
+      "quant-research",
       "data-engineer"
     ]
   },
@@ -685,10 +686,10 @@
     "id": "ai-data/embeddings",
     "slug": "ai-data/embeddings",
     "title": "Embeddings",
-    "summary": "Planned field note covering embeddings for ai + data interviews.",
+    "summary": "Use dense vector representations for semantic similarity while respecting geometry, domain shift, and evaluation limits.",
     "trackId": "ai-data",
-    "level": "advanced",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
@@ -700,105 +701,108 @@
     "id": "ai-data/vector-search",
     "slug": "ai-data/vector-search",
     "title": "Vector Search",
-    "summary": "Planned field note covering vector search for ai + data interviews.",
+    "summary": "Design exact and approximate nearest-neighbor retrieval with measurable recall, latency, memory, filtering, and update behavior.",
     "trackId": "ai-data",
     "level": "advanced",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
-      "data-scientist",
-      "data-engineer"
+      "data-engineer",
+      "mlops-engineer"
     ]
   },
   {
     "id": "ai-data/retrieval-augmented-generation",
     "slug": "ai-data/retrieval-augmented-generation",
     "title": "Retrieval-Augmented Generation",
-    "summary": "Planned field note covering retrieval-augmented generation for ai + data interviews.",
+    "summary": "Build RAG systems that retrieve authoritative evidence, compose grounded context, cite sources, and fail safely when support is absent.",
     "trackId": "ai-data",
     "level": "advanced",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
-      "data-scientist",
-      "data-engineer"
+      "data-engineer",
+      "mlops-engineer"
     ]
   },
   {
     "id": "ai-data/fine-tuning",
     "slug": "ai-data/fine-tuning",
     "title": "Fine-Tuning",
-    "summary": "Planned field note covering fine-tuning for ai + data interviews.",
+    "summary": "Choose when and how to adapt pretrained models with supervised examples, parameter-efficient methods, preference signals, and rigorous baselines.",
     "trackId": "ai-data",
     "level": "advanced",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "mlops-engineer"
     ]
   },
   {
     "id": "ai-data/agents-and-tool-use",
     "slug": "ai-data/agents-and-tool-use",
     "title": "Agents and Tool Use",
-    "summary": "Planned field note covering agents and tool use for ai + data interviews.",
+    "summary": "Design bounded agent loops that select tools, validate arguments, preserve state, obtain approval, and terminate safely.",
     "trackId": "ai-data",
     "level": "advanced",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
-      "data-scientist",
-      "data-engineer"
+      "mlops-engineer",
+      "security"
     ]
   },
   {
     "id": "ai-data/llm-evaluation",
     "slug": "ai-data/llm-evaluation",
     "title": "LLM Evaluation",
-    "summary": "Planned field note covering llm evaluation for ai + data interviews.",
+    "summary": "Evaluate generative systems with task rubrics, deterministic checks, calibrated judges, safety probes, and production experiments.",
     "trackId": "ai-data",
     "level": "advanced",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "mlops-engineer"
     ]
   },
   {
     "id": "ai-data/responsible-ai",
     "slug": "ai-data/responsible-ai",
     "title": "Responsible AI",
-    "summary": "Planned field note covering responsible ai for ai + data interviews.",
+    "summary": "Translate AI risks into scoped harms, data and model controls, human oversight, documentation, monitoring, and accountable decisions.",
     "trackId": "ai-data",
-    "level": "advanced",
-    "publicationStatus": "planned",
+    "level": "interview",
+    "publicationStatus": "published",
     "roleIds": [
       "ai-engineer",
       "ml-engineer",
       "data-scientist",
-      "data-engineer"
+      "data-engineer",
+      "mlops-engineer",
+      "security"
     ]
   },
   {
     "id": "ai-data/mlops-and-ml-system-design",
     "slug": "ai-data/mlops-and-ml-system-design",
     "title": "MLOps and ML System Design",
-    "summary": "Planned field note covering mlops and ml system design for ai + data interviews.",
+    "summary": "Design reproducible ML platforms spanning data, training, registry, deployment, feature serving, observability, governance, and recovery.",
     "trackId": "ai-data",
     "level": "advanced",
-    "publicationStatus": "planned",
+    "publicationStatus": "published",
     "roleIds": [
-      "ai-engineer",
       "ml-engineer",
-      "data-scientist",
-      "data-engineer"
+      "mlops-engineer",
+      "ai-engineer",
+      "data-engineer",
+      "sre"
     ]
   },
   {

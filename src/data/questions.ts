@@ -1,5 +1,6 @@
 import { QuestionSchema, type Question } from "@/lib/schema";
 import { foundationLessons } from "@/data/foundation-lessons";
+import { aiLessons } from "@/data/ai-lessons";
 
 const handcraftedQuestions: Question[] = [
   {
@@ -59,9 +60,16 @@ const foundationQuestions = Object.entries(foundationLessons).map(([topicId, les
   trackId: "foundations" as const
 }));
 
+const aiQuestions = Object.entries(aiLessons).map(([topicId, lesson]) => ({
+  ...lesson.question,
+  topicId,
+  trackId: "ai-data" as const
+}));
+
 export const questions: Question[] = QuestionSchema.array().parse([
   ...handcraftedQuestions,
-  ...foundationQuestions
+  ...foundationQuestions,
+  ...aiQuestions
 ]);
 
 export const questionById = new Map(questions.map((question) => [question.id, question]));

@@ -17,6 +17,18 @@ test("shared foundations expose complete theory and interview practice", async (
   await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
 });
 
+test("AI and data pack exposes role maps and a complete specialist lesson", async ({ page }) => {
+  await page.goto("/tracks/ai-data/");
+  await expect(page.getByRole("heading", { name: "Choose the interview emphasis, not a different foundation." })).toBeVisible();
+  await expect(page.getByText("MLOps Engineer", { exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Retrieval-Augmented Generation" })).toBeVisible();
+  await page.goto("/topics/ai-data/retrieval-augmented-generation/");
+  await expect(page.getByRole("heading", { name: "Retrieval-Augmented Generation", level: 1 })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Grounded generation" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Interview practice" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
+});
+
 test("interview workspace includes career artifacts and a timed mock", async ({ page }) => {
   await page.goto("/interview/");
   await expect(page.getByRole("heading", { name: "Career field guide" })).toBeVisible();

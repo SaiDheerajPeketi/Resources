@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r2",
+  "version": "2026.09.18-r3",
   "edges": [
     {
       "id": "foundations/complexity-analysis->foundations/arrays-and-strings:prerequisite",
@@ -272,9 +272,333 @@
       "kind": "prerequisite"
     },
     {
+      "id": "foundations/sql-fundamentals->ai-data/data-cleaning:prerequisite",
+      "source": "foundations/sql-fundamentals",
+      "target": "ai-data/data-cleaning",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/statistics->ai-data/data-cleaning:prerequisite",
+      "source": "foundations/statistics",
+      "target": "ai-data/data-cleaning",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/data-cleaning->ai-data/exploratory-data-analysis:prerequisite",
+      "source": "ai-data/data-cleaning",
+      "target": "ai-data/exploratory-data-analysis",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/statistics->ai-data/exploratory-data-analysis:prerequisite",
+      "source": "foundations/statistics",
+      "target": "ai-data/exploratory-data-analysis",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/probability->ai-data/experiment-design:prerequisite",
+      "source": "foundations/probability",
+      "target": "ai-data/experiment-design",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/statistics->ai-data/experiment-design:prerequisite",
+      "source": "foundations/statistics",
+      "target": "ai-data/experiment-design",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/exploratory-data-analysis->ai-data/experiment-design:prerequisite",
+      "source": "ai-data/exploratory-data-analysis",
+      "target": "ai-data/experiment-design",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/data-cleaning->ai-data/feature-engineering:prerequisite",
+      "source": "ai-data/data-cleaning",
+      "target": "ai-data/feature-engineering",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/exploratory-data-analysis->ai-data/feature-engineering:prerequisite",
+      "source": "ai-data/exploratory-data-analysis",
+      "target": "ai-data/feature-engineering",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linear-algebra->ai-data/linear-models:prerequisite",
+      "source": "foundations/linear-algebra",
+      "target": "ai-data/linear-models",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/statistics->ai-data/linear-models:prerequisite",
+      "source": "foundations/statistics",
+      "target": "ai-data/linear-models",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/feature-engineering->ai-data/linear-models:prerequisite",
+      "source": "ai-data/feature-engineering",
+      "target": "ai-data/linear-models",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/linear-models->ai-data/logistic-regression:prerequisite",
+      "source": "ai-data/linear-models",
+      "target": "ai-data/logistic-regression",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/probability->ai-data/logistic-regression:prerequisite",
+      "source": "foundations/probability",
+      "target": "ai-data/logistic-regression",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/model-evaluation->ai-data/tree-ensembles:prerequisite",
+      "source": "ai-data/model-evaluation",
+      "target": "ai-data/tree-ensembles",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/feature-engineering->ai-data/tree-ensembles:prerequisite",
+      "source": "ai-data/feature-engineering",
+      "target": "ai-data/tree-ensembles",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linear-algebra->ai-data/unsupervised-learning:prerequisite",
+      "source": "foundations/linear-algebra",
+      "target": "ai-data/unsupervised-learning",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/feature-engineering->ai-data/unsupervised-learning:prerequisite",
+      "source": "ai-data/feature-engineering",
+      "target": "ai-data/unsupervised-learning",
+      "kind": "prerequisite"
+    },
+    {
       "id": "foundations/probability->ai-data/model-evaluation:prerequisite",
       "source": "foundations/probability",
       "target": "ai-data/model-evaluation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linear-algebra->ai-data/optimization-for-ml:prerequisite",
+      "source": "foundations/linear-algebra",
+      "target": "ai-data/optimization-for-ml",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/linear-models->ai-data/optimization-for-ml:prerequisite",
+      "source": "ai-data/linear-models",
+      "target": "ai-data/optimization-for-ml",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/optimization-for-ml->ai-data/neural-network-foundations:prerequisite",
+      "source": "ai-data/optimization-for-ml",
+      "target": "ai-data/neural-network-foundations",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/neural-network-foundations->ai-data/cnns:prerequisite",
+      "source": "ai-data/neural-network-foundations",
+      "target": "ai-data/cnns",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/neural-network-foundations->ai-data/sequence-models:prerequisite",
+      "source": "ai-data/neural-network-foundations",
+      "target": "ai-data/sequence-models",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/neural-network-foundations->ai-data/transformers:prerequisite",
+      "source": "ai-data/neural-network-foundations",
+      "target": "ai-data/transformers",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/sequence-models->ai-data/transformers:prerequisite",
+      "source": "ai-data/sequence-models",
+      "target": "ai-data/transformers",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/transformers->ai-data/natural-language-processing:prerequisite",
+      "source": "ai-data/transformers",
+      "target": "ai-data/natural-language-processing",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/model-evaluation->ai-data/natural-language-processing:prerequisite",
+      "source": "ai-data/model-evaluation",
+      "target": "ai-data/natural-language-processing",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/cnns->ai-data/computer-vision:prerequisite",
+      "source": "ai-data/cnns",
+      "target": "ai-data/computer-vision",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/model-evaluation->ai-data/computer-vision:prerequisite",
+      "source": "ai-data/model-evaluation",
+      "target": "ai-data/computer-vision",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/embeddings->ai-data/recommender-systems:prerequisite",
+      "source": "ai-data/embeddings",
+      "target": "ai-data/recommender-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/model-evaluation->ai-data/recommender-systems:prerequisite",
+      "source": "ai-data/model-evaluation",
+      "target": "ai-data/recommender-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/experiment-design->ai-data/recommender-systems:prerequisite",
+      "source": "ai-data/experiment-design",
+      "target": "ai-data/recommender-systems",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/statistics->ai-data/forecasting:prerequisite",
+      "source": "foundations/statistics",
+      "target": "ai-data/forecasting",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/feature-engineering->ai-data/forecasting:prerequisite",
+      "source": "ai-data/feature-engineering",
+      "target": "ai-data/forecasting",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/model-evaluation->ai-data/forecasting:prerequisite",
+      "source": "ai-data/model-evaluation",
+      "target": "ai-data/forecasting",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linear-algebra->ai-data/embeddings:prerequisite",
+      "source": "foundations/linear-algebra",
+      "target": "ai-data/embeddings",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/transformers->ai-data/embeddings:prerequisite",
+      "source": "ai-data/transformers",
+      "target": "ai-data/embeddings",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/embeddings->ai-data/vector-search:prerequisite",
+      "source": "ai-data/embeddings",
+      "target": "ai-data/vector-search",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/complexity-analysis->ai-data/vector-search:prerequisite",
+      "source": "foundations/complexity-analysis",
+      "target": "ai-data/vector-search",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/vector-search->ai-data/retrieval-augmented-generation:prerequisite",
+      "source": "ai-data/vector-search",
+      "target": "ai-data/retrieval-augmented-generation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/natural-language-processing->ai-data/retrieval-augmented-generation:prerequisite",
+      "source": "ai-data/natural-language-processing",
+      "target": "ai-data/retrieval-augmented-generation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/model-evaluation->ai-data/retrieval-augmented-generation:prerequisite",
+      "source": "ai-data/model-evaluation",
+      "target": "ai-data/retrieval-augmented-generation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/transformers->ai-data/fine-tuning:prerequisite",
+      "source": "ai-data/transformers",
+      "target": "ai-data/fine-tuning",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/model-evaluation->ai-data/fine-tuning:prerequisite",
+      "source": "ai-data/model-evaluation",
+      "target": "ai-data/fine-tuning",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/retrieval-augmented-generation->ai-data/agents-and-tool-use:prerequisite",
+      "source": "ai-data/retrieval-augmented-generation",
+      "target": "ai-data/agents-and-tool-use",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/api-design->ai-data/agents-and-tool-use:prerequisite",
+      "source": "sde-systems/api-design",
+      "target": "ai-data/agents-and-tool-use",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/model-evaluation->ai-data/llm-evaluation:prerequisite",
+      "source": "ai-data/model-evaluation",
+      "target": "ai-data/llm-evaluation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/transformers->ai-data/llm-evaluation:prerequisite",
+      "source": "ai-data/transformers",
+      "target": "ai-data/llm-evaluation",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/model-evaluation->ai-data/responsible-ai:prerequisite",
+      "source": "ai-data/model-evaluation",
+      "target": "ai-data/responsible-ai",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/statistics->ai-data/responsible-ai:prerequisite",
+      "source": "foundations/statistics",
+      "target": "ai-data/responsible-ai",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/model-evaluation->ai-data/mlops-and-ml-system-design:prerequisite",
+      "source": "ai-data/model-evaluation",
+      "target": "ai-data/mlops-and-ml-system-design",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/feature-engineering->ai-data/mlops-and-ml-system-design:prerequisite",
+      "source": "ai-data/feature-engineering",
+      "target": "ai-data/mlops-and-ml-system-design",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/ci-cd->ai-data/mlops-and-ml-system-design:prerequisite",
+      "source": "devops-cloud/ci-cd",
+      "target": "ai-data/mlops-and-ml-system-design",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/distributed-systems-foundations->ai-data/mlops-and-ml-system-design:prerequisite",
+      "source": "sde-systems/distributed-systems-foundations",
+      "target": "ai-data/mlops-and-ml-system-design",
       "kind": "prerequisite"
     },
     {

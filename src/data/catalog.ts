@@ -10,8 +10,9 @@ import {
   type TrackId
 } from "@/lib/schema";
 import { foundationLessons } from "@/data/foundation-lessons";
+import { aiLessons } from "@/data/ai-lessons";
 
-export const CONTENT_MANIFEST_VERSION = "2026.09.18-r2";
+export const CONTENT_MANIFEST_VERSION = "2026.09.18-r3";
 
 export const roles: RoleProfile[] = RoleProfileSchema.array().parse([
   { id: "sde", title: "Software Engineer", description: "Generalist, backend, full-stack, and systems interviews.", trackIds: ["foundations", "sde-systems"] },
@@ -19,6 +20,7 @@ export const roles: RoleProfile[] = RoleProfileSchema.array().parse([
   { id: "ml-engineer", title: "ML Engineer", description: "Modeling, ML systems, serving, data, and MLOps.", trackIds: ["foundations", "ai-data", "sde-systems"] },
   { id: "data-scientist", title: "Data Scientist", description: "Statistics, experimentation, SQL, modeling, and product cases.", trackIds: ["foundations", "ai-data"] },
   { id: "data-engineer", title: "Data Engineer", description: "Pipelines, storage, data modeling, distributed systems, and reliability.", trackIds: ["foundations", "ai-data", "sde-systems", "devops-cloud"] },
+  { id: "mlops-engineer", title: "MLOps Engineer", description: "Training platforms, model delivery, feature systems, observability, and ML reliability.", trackIds: ["foundations", "ai-data", "sde-systems", "devops-cloud"] },
   { id: "devops", title: "DevOps / Platform Engineer", description: "Delivery systems, cloud platforms, infrastructure, and operations.", trackIds: ["foundations", "devops-cloud", "cybersecurity"] },
   { id: "sre", title: "Site Reliability Engineer", description: "Reliability, observability, incidents, performance, and capacity.", trackIds: ["foundations", "sde-systems", "devops-cloud"] },
   { id: "security", title: "Security Engineer", description: "Application, cloud, platform, and incident security.", trackIds: ["foundations", "cybersecurity", "devops-cloud"] },
@@ -28,10 +30,10 @@ export const roles: RoleProfile[] = RoleProfileSchema.array().parse([
 ]);
 
 export const tracks: Track[] = TrackSchema.array().parse([
-  { id: "foundations", title: "Foundations", shortTitle: "Foundations", description: "C++, DSA, mathematics, SQL, Linux, networking, and interview fundamentals.", accent: "#1E76F3", roleIds: ["sde", "ai-engineer", "ml-engineer", "data-scientist", "data-engineer", "devops", "sre", "security", "fintech", "quant-dev", "quant-research"] },
-  { id: "ai-data", title: "AI + Data", shortTitle: "AI + Data", description: "Statistics, machine learning, deep learning, LLM systems, data science, and MLOps.", accent: "#6A55C7", roleIds: ["ai-engineer", "ml-engineer", "data-scientist", "data-engineer", "quant-research"] },
-  { id: "sde-systems", title: "SDE + Systems", shortTitle: "SDE + Systems", description: "Core CS, software design, backend systems, concurrency, and distributed architecture.", accent: "#245B8C", roleIds: ["sde", "ai-engineer", "ml-engineer", "data-engineer", "sre", "fintech", "quant-dev"] },
-  { id: "devops-cloud", title: "DevOps + Cloud", shortTitle: "DevOps + Cloud", description: "Delivery, containers, Kubernetes, IaC, observability, SRE, and four-cloud mappings.", accent: "#23766F", roleIds: ["devops", "sre", "data-engineer", "security"] },
+  { id: "foundations", title: "Foundations", shortTitle: "Foundations", description: "C++, DSA, mathematics, SQL, Linux, networking, and interview fundamentals.", accent: "#1E76F3", roleIds: ["sde", "ai-engineer", "ml-engineer", "data-scientist", "data-engineer", "mlops-engineer", "devops", "sre", "security", "fintech", "quant-dev", "quant-research"] },
+  { id: "ai-data", title: "AI + Data", shortTitle: "AI + Data", description: "Statistics, machine learning, deep learning, LLM systems, data science, and MLOps.", accent: "#6A55C7", roleIds: ["ai-engineer", "ml-engineer", "data-scientist", "data-engineer", "mlops-engineer", "quant-research"] },
+  { id: "sde-systems", title: "SDE + Systems", shortTitle: "SDE + Systems", description: "Core CS, software design, backend systems, concurrency, and distributed architecture.", accent: "#245B8C", roleIds: ["sde", "ai-engineer", "ml-engineer", "data-engineer", "mlops-engineer", "sre", "fintech", "quant-dev"] },
+  { id: "devops-cloud", title: "DevOps + Cloud", shortTitle: "DevOps + Cloud", description: "Delivery, containers, Kubernetes, IaC, observability, SRE, and four-cloud mappings.", accent: "#23766F", roleIds: ["devops", "sre", "data-engineer", "mlops-engineer", "security"] },
   { id: "cybersecurity", title: "Cybersecurity", shortTitle: "Cybersecurity", description: "Threat modeling, IAM, crypto, AppSec, cloud security, and incident response.", accent: "#9A5A13", roleIds: ["security", "devops", "sre", "fintech"] },
   { id: "fintech-quant", title: "Fintech + Quant", shortTitle: "Fintech + Quant", description: "Payments, ledgers, compliance, markets, pricing, risk, and low-latency systems.", accent: "#197B6F", roleIds: ["fintech", "quant-dev", "quant-research", "sde"] }
 ]);
@@ -111,7 +113,7 @@ export const topics: TopicMeta[] = TopicMetaSchema.array().parse(
   tracks.flatMap((track) => titlesByTrack[track.id].map((title, index) => {
     const localSlug = slugify(title);
     const slug = `${track.id}/${localSlug}`;
-    const custom = published[slug] ?? foundationLessons[slug];
+    const custom = published[slug] ?? foundationLessons[slug] ?? aiLessons[slug];
     return {
       id: slug,
       slug,

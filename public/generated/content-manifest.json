@@ -1,6 +1,6 @@
 {
-  "version": "2026.09.18-r2",
-  "generatedAt": "2026-09-18T04:11:38.330Z",
+  "version": "2026.09.18-r3",
+  "generatedAt": "2026-09-18T04:43:30.954Z",
   "roles": [
     {
       "id": "sde",
@@ -44,6 +44,17 @@
       "id": "data-engineer",
       "title": "Data Engineer",
       "description": "Pipelines, storage, data modeling, distributed systems, and reliability.",
+      "trackIds": [
+        "foundations",
+        "ai-data",
+        "sde-systems",
+        "devops-cloud"
+      ]
+    },
+    {
+      "id": "mlops-engineer",
+      "title": "MLOps Engineer",
+      "description": "Training platforms, model delivery, feature systems, observability, and ML reliability.",
       "trackIds": [
         "foundations",
         "ai-data",
@@ -126,6 +137,7 @@
         "ml-engineer",
         "data-scientist",
         "data-engineer",
+        "mlops-engineer",
         "devops",
         "sre",
         "security",
@@ -145,6 +157,7 @@
         "ml-engineer",
         "data-scientist",
         "data-engineer",
+        "mlops-engineer",
         "quant-research"
       ]
     },
@@ -159,6 +172,7 @@
         "ai-engineer",
         "ml-engineer",
         "data-engineer",
+        "mlops-engineer",
         "sre",
         "fintech",
         "quant-dev"
@@ -174,6 +188,7 @@
         "devops",
         "sre",
         "data-engineer",
+        "mlops-engineer",
         "security"
       ]
     },
@@ -890,18 +905,26 @@
       "localSlug": "data-cleaning",
       "trackId": "ai-data",
       "title": "Data Cleaning",
-      "summary": "Planned field note covering data cleaning for ai + data interviews.",
+      "summary": "Turn raw records into an auditable, leakage-safe analytical table without erasing meaningful variation.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 55,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "data-engineer",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/sql-fundamentals",
+        "foundations/statistics"
+      ],
+      "outcomes": [
+        "Profile schema, missingness, duplicates, and outliers",
+        "Choose defensible repair strategies",
+        "Build reproducible train/serve-safe cleaning pipelines"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -910,18 +933,26 @@
       "localSlug": "exploratory-data-analysis",
       "trackId": "ai-data",
       "title": "Exploratory Data Analysis",
-      "summary": "Planned field note covering exploratory data analysis for ai + data interviews.",
+      "summary": "Use targeted summaries and visual reasoning to understand a dataset, test assumptions, and form falsifiable hypotheses.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 55,
       "roleIds": [
-        "ai-engineer",
-        "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "ml-engineer",
+        "ai-engineer",
+        "data-engineer",
+        "quant-research"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/data-cleaning",
+        "foundations/statistics"
+      ],
+      "outcomes": [
+        "Run univariate, bivariate, and slice-based analysis",
+        "Separate discovery from confirmation",
+        "Find leakage, imbalance, drift, and collection artifacts"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -930,18 +961,26 @@
       "localSlug": "experiment-design",
       "trackId": "ai-data",
       "title": "Experiment Design",
-      "summary": "Planned field note covering experiment design for ai + data interviews.",
+      "summary": "Design controlled experiments that identify causal effects, protect users, and support trustworthy product decisions.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 70,
       "roleIds": [
-        "ai-engineer",
-        "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "ml-engineer",
+        "ai-engineer",
+        "quant-research"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/probability",
+        "foundations/statistics",
+        "ai-data/exploratory-data-analysis"
+      ],
+      "outcomes": [
+        "Define estimands, units, metrics, and guardrails",
+        "Calculate and reason about power",
+        "Diagnose interference, novelty, peeking, and instrumentation failures"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -950,18 +989,26 @@
       "localSlug": "feature-engineering",
       "trackId": "ai-data",
       "title": "Feature Engineering",
-      "summary": "Planned field note covering feature engineering for ai + data interviews.",
+      "summary": "Create stable, available, and leakage-safe representations that expose useful signal to a model.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 60,
       "roleIds": [
-        "ai-engineer",
         "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "ai-engineer",
+        "data-engineer",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/data-cleaning",
+        "ai-data/exploratory-data-analysis"
+      ],
+      "outcomes": [
+        "Engineer numeric, categorical, temporal, and interaction features",
+        "Prevent target and time leakage",
+        "Design train/serve-consistent transformations"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -970,18 +1017,26 @@
       "localSlug": "linear-models",
       "trackId": "ai-data",
       "title": "Linear Models",
-      "summary": "Planned field note covering linear models for ai + data interviews.",
+      "summary": "Understand least squares, regularization, diagnostics, and the conditions under which linear models remain strong baselines.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 65,
       "roleIds": [
-        "ai-engineer",
-        "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "ml-engineer",
+        "ai-engineer",
+        "quant-research"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/linear-algebra",
+        "foundations/statistics",
+        "ai-data/feature-engineering"
+      ],
+      "outcomes": [
+        "Derive and interpret least squares",
+        "Compare L1 and L2 regularization",
+        "Diagnose residual, collinearity, and extrapolation failures"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -990,18 +1045,25 @@
       "localSlug": "logistic-regression",
       "trackId": "ai-data",
       "title": "Logistic Regression",
-      "summary": "Planned field note covering logistic regression for ai + data interviews.",
+      "summary": "Model class log-odds, interpret conditional effects, regularize safely, and connect scores to calibrated decisions.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 60,
       "roleIds": [
-        "ai-engineer",
-        "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "ml-engineer",
+        "ai-engineer",
+        "quant-research"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/linear-models",
+        "foundations/probability"
+      ],
+      "outcomes": [
+        "Explain sigmoid, log-odds, and cross-entropy",
+        "Interpret coefficients and odds ratios",
+        "Separate probability estimation from threshold policy"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1010,18 +1072,25 @@
       "localSlug": "tree-ensembles",
       "trackId": "ai-data",
       "title": "Tree Ensembles",
-      "summary": "Planned field note covering tree ensembles for ai + data interviews.",
-      "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "summary": "Compare trees, random forests, and gradient boosting through their split logic, bias-variance behavior, and production trade-offs.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 70,
       "roleIds": [
-        "ai-engineer",
-        "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "ml-engineer",
+        "ai-engineer",
+        "quant-research"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/model-evaluation",
+        "ai-data/feature-engineering"
+      ],
+      "outcomes": [
+        "Explain impurity-based splitting and overfitting",
+        "Contrast bagging and boosting",
+        "Interpret features without trusting biased importance blindly"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1030,18 +1099,25 @@
       "localSlug": "unsupervised-learning",
       "trackId": "ai-data",
       "title": "Unsupervised Learning",
-      "summary": "Planned field note covering unsupervised learning for ai + data interviews.",
+      "summary": "Use clustering and dimensionality reduction as exploratory models whose value depends on geometry and downstream validation.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 65,
       "roleIds": [
-        "ai-engineer",
-        "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "ml-engineer",
+        "ai-engineer",
+        "quant-research"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/linear-algebra",
+        "ai-data/feature-engineering"
+      ],
+      "outcomes": [
+        "Select clustering assumptions deliberately",
+        "Explain PCA and embedding limits",
+        "Validate stability and downstream usefulness without ground-truth labels"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1077,18 +1153,26 @@
       "localSlug": "optimization-for-ml",
       "trackId": "ai-data",
       "title": "Optimization for ML",
-      "summary": "Planned field note covering optimization for ml for ai + data interviews.",
+      "summary": "Reason about objectives, gradients, conditioning, stochastic updates, and the optimization path that turns parameters into a fitted model.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 70,
       "roleIds": [
-        "ai-engineer",
         "ml-engineer",
+        "ai-engineer",
         "data-scientist",
-        "data-engineer"
+        "quant-research",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/linear-algebra",
+        "ai-data/linear-models"
+      ],
+      "outcomes": [
+        "Derive gradient-based updates",
+        "Diagnose learning-rate and conditioning problems",
+        "Distinguish optimization error from generalization error"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1097,18 +1181,25 @@
       "localSlug": "neural-network-foundations",
       "trackId": "ai-data",
       "title": "Neural Network Foundations",
-      "summary": "Planned field note covering neural network foundations for ai + data interviews.",
+      "summary": "Build and debug multilayer networks through computation graphs, backpropagation, initialization, regularization, and training dynamics.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/linear-algebra",
+        "ai-data/optimization-for-ml"
+      ],
+      "outcomes": [
+        "Explain forward and backward passes",
+        "Choose activations, initialization, normalization, and losses",
+        "Diagnose vanishing, exploding, and overfitting behavior"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1117,18 +1208,23 @@
       "localSlug": "cnns",
       "trackId": "ai-data",
       "title": "CNNs",
-      "summary": "Planned field note covering cnns for ai + data interviews.",
+      "summary": "Understand convolutional inductive bias, receptive fields, residual networks, and efficient vision-model debugging.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 70,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
-        "data-scientist",
-        "data-engineer"
+        "data-scientist"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/neural-network-foundations"
+      ],
+      "outcomes": [
+        "Compute convolution shapes and receptive fields",
+        "Explain equivariance, pooling, and residual blocks",
+        "Design leakage-safe image training and evaluation"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1137,18 +1233,24 @@
       "localSlug": "sequence-models",
       "trackId": "ai-data",
       "title": "Sequence Models",
-      "summary": "Planned field note covering sequence models for ai + data interviews.",
+      "summary": "Model ordered data with recurrence, gating, masking, teacher forcing, and sequence-aware evaluation.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 70,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "quant-research"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/neural-network-foundations"
+      ],
+      "outcomes": [
+        "Explain RNN, LSTM, and GRU state updates",
+        "Handle variable lengths and causal masking",
+        "Diagnose long-range dependency and train/inference mismatch"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1157,18 +1259,25 @@
       "localSlug": "transformers",
       "trackId": "ai-data",
       "title": "Transformers",
-      "summary": "Planned field note covering transformers for ai + data interviews.",
+      "summary": "Derive attention, positional information, masking, architecture families, and the memory/compute trade-offs of transformer models.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 85,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/neural-network-foundations",
+        "ai-data/sequence-models"
+      ],
+      "outcomes": [
+        "Compute scaled dot-product attention and shapes",
+        "Compare encoder, decoder, and encoder-decoder models",
+        "Reason about context length, KV cache, and quadratic cost"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1177,18 +1286,24 @@
       "localSlug": "natural-language-processing",
       "trackId": "ai-data",
       "title": "Natural Language Processing",
-      "summary": "Planned field note covering natural language processing for ai + data interviews.",
+      "summary": "Model language through tokenization, representations, task formulation, decoding, and evaluation beyond surface overlap.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 75,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
-        "data-scientist",
-        "data-engineer"
+        "data-scientist"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/transformers",
+        "ai-data/model-evaluation"
+      ],
+      "outcomes": [
+        "Compare tokenization and NLP task formulations",
+        "Choose encoder, decoder, or encoder-decoder architectures",
+        "Evaluate language systems for meaning, safety, and distribution shift"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1197,18 +1312,24 @@
       "localSlug": "computer-vision",
       "trackId": "ai-data",
       "title": "Computer Vision",
-      "summary": "Planned field note covering computer vision for ai + data interviews.",
+      "summary": "Frame image classification, detection, and segmentation systems from labeling geometry through deployment shift.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 75,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
-        "data-scientist",
-        "data-engineer"
+        "data-scientist"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/cnns",
+        "ai-data/model-evaluation"
+      ],
+      "outcomes": [
+        "Distinguish core vision task outputs and metrics",
+        "Design augmentation and transfer-learning pipelines",
+        "Diagnose shortcut learning and acquisition shift"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1217,18 +1338,26 @@
       "localSlug": "recommender-systems",
       "trackId": "ai-data",
       "title": "Recommender Systems",
-      "summary": "Planned field note covering recommender systems for ai + data interviews.",
-      "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "summary": "Design retrieval, ranking, and feedback systems that balance relevance, discovery, constraints, and long-term marketplace health.",
+      "level": "advanced",
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
-        "ai-engineer",
         "ml-engineer",
+        "ai-engineer",
         "data-scientist",
         "data-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/embeddings",
+        "ai-data/model-evaluation",
+        "ai-data/experiment-design"
+      ],
+      "outcomes": [
+        "Explain collaborative, content, retrieval, and ranking approaches",
+        "Handle implicit feedback and cold start",
+        "Evaluate offline, online, and long-term ecosystem effects"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1237,18 +1366,26 @@
       "localSlug": "forecasting",
       "trackId": "ai-data",
       "title": "Forecasting",
-      "summary": "Planned field note covering forecasting for ai + data interviews.",
+      "summary": "Forecast time-indexed outcomes with honest backtests, lag-aware features, uncertainty, hierarchy, and production monitoring.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 75,
       "roleIds": [
-        "ai-engineer",
-        "ml-engineer",
         "data-scientist",
+        "ml-engineer",
+        "quant-research",
         "data-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/statistics",
+        "ai-data/feature-engineering",
+        "ai-data/model-evaluation"
+      ],
+      "outcomes": [
+        "Decompose level, trend, seasonality, and residuals",
+        "Design rolling-origin validation",
+        "Produce and evaluate probabilistic forecasts"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1257,18 +1394,25 @@
       "localSlug": "embeddings",
       "trackId": "ai-data",
       "title": "Embeddings",
-      "summary": "Planned field note covering embeddings for ai + data interviews.",
-      "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "summary": "Use dense vector representations for semantic similarity while respecting geometry, domain shift, and evaluation limits.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 60,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
         "data-scientist",
         "data-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/linear-algebra",
+        "ai-data/transformers"
+      ],
+      "outcomes": [
+        "Explain contrastive representation learning",
+        "Choose pooling, similarity, and normalization",
+        "Evaluate embedding quality on a real retrieval or clustering task"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1277,18 +1421,25 @@
       "localSlug": "vector-search",
       "trackId": "ai-data",
       "title": "Vector Search",
-      "summary": "Planned field note covering vector search for ai + data interviews.",
+      "summary": "Design exact and approximate nearest-neighbor retrieval with measurable recall, latency, memory, filtering, and update behavior.",
       "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "publicationStatus": "published",
+      "durationMinutes": 70,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
-        "data-scientist",
-        "data-engineer"
+        "data-engineer",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/embeddings",
+        "foundations/complexity-analysis"
+      ],
+      "outcomes": [
+        "Compare flat, HNSW, IVF, and product-quantized indexes",
+        "Tune recall-latency-memory trade-offs",
+        "Handle metadata filters, deletes, sharding, and embedding migration"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1297,18 +1448,26 @@
       "localSlug": "retrieval-augmented-generation",
       "trackId": "ai-data",
       "title": "Retrieval-Augmented Generation",
-      "summary": "Planned field note covering retrieval-augmented generation for ai + data interviews.",
+      "summary": "Build RAG systems that retrieve authoritative evidence, compose grounded context, cite sources, and fail safely when support is absent.",
       "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "publicationStatus": "published",
+      "durationMinutes": 85,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
-        "data-scientist",
-        "data-engineer"
+        "data-engineer",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/vector-search",
+        "ai-data/natural-language-processing",
+        "ai-data/model-evaluation"
+      ],
+      "outcomes": [
+        "Design ingestion, chunking, hybrid retrieval, reranking, and generation",
+        "Evaluate retrieval separately from answer quality",
+        "Control freshness, permissions, prompt injection, and citation fidelity"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1317,18 +1476,25 @@
       "localSlug": "fine-tuning",
       "trackId": "ai-data",
       "title": "Fine-Tuning",
-      "summary": "Planned field note covering fine-tuning for ai + data interviews.",
+      "summary": "Choose when and how to adapt pretrained models with supervised examples, parameter-efficient methods, preference signals, and rigorous baselines.",
       "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "publicationStatus": "published",
+      "durationMinutes": 75,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/transformers",
+        "ai-data/model-evaluation"
+      ],
+      "outcomes": [
+        "Distinguish prompting, retrieval, supervised tuning, and preference optimization",
+        "Build high-signal train/eval datasets",
+        "Reason about LoRA, catastrophic forgetting, cost, and deployment"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1337,18 +1503,25 @@
       "localSlug": "agents-and-tool-use",
       "trackId": "ai-data",
       "title": "Agents and Tool Use",
-      "summary": "Planned field note covering agents and tool use for ai + data interviews.",
+      "summary": "Design bounded agent loops that select tools, validate arguments, preserve state, obtain approval, and terminate safely.",
       "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
-        "data-scientist",
-        "data-engineer"
+        "mlops-engineer",
+        "security"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/retrieval-augmented-generation",
+        "sde-systems/api-design"
+      ],
+      "outcomes": [
+        "Explain plan-act-observe control loops",
+        "Design typed tool boundaries and state",
+        "Control permissions, side effects, prompt injection, and runaway execution"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1357,18 +1530,25 @@
       "localSlug": "llm-evaluation",
       "trackId": "ai-data",
       "title": "LLM Evaluation",
-      "summary": "Planned field note covering llm evaluation for ai + data interviews.",
+      "summary": "Evaluate generative systems with task rubrics, deterministic checks, calibrated judges, safety probes, and production experiments.",
       "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/model-evaluation",
+        "ai-data/transformers"
+      ],
+      "outcomes": [
+        "Build representative, versioned evaluation sets",
+        "Combine deterministic, model-graded, and human judgments",
+        "Measure quality, safety, latency, cost, and regressions"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1377,18 +1557,27 @@
       "localSlug": "responsible-ai",
       "trackId": "ai-data",
       "title": "Responsible AI",
-      "summary": "Planned field note covering responsible ai for ai + data interviews.",
-      "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "summary": "Translate AI risks into scoped harms, data and model controls, human oversight, documentation, monitoring, and accountable decisions.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 75,
       "roleIds": [
         "ai-engineer",
         "ml-engineer",
         "data-scientist",
-        "data-engineer"
+        "data-engineer",
+        "mlops-engineer",
+        "security"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/model-evaluation",
+        "foundations/statistics"
+      ],
+      "outcomes": [
+        "Identify affected parties and plausible harms",
+        "Measure fairness and safety with contextual limits",
+        "Design governance, documentation, appeal, and monitoring controls"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
@@ -1397,18 +1586,28 @@
       "localSlug": "mlops-and-ml-system-design",
       "trackId": "ai-data",
       "title": "MLOps and ML System Design",
-      "summary": "Planned field note covering mlops and ml system design for ai + data interviews.",
+      "summary": "Design reproducible ML platforms spanning data, training, registry, deployment, feature serving, observability, governance, and recovery.",
       "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "publicationStatus": "published",
+      "durationMinutes": 95,
       "roleIds": [
-        "ai-engineer",
         "ml-engineer",
-        "data-scientist",
-        "data-engineer"
+        "mlops-engineer",
+        "ai-engineer",
+        "data-engineer",
+        "sre"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/model-evaluation",
+        "ai-data/feature-engineering",
+        "devops-cloud/ci-cd",
+        "sde-systems/distributed-systems-foundations"
+      ],
+      "outcomes": [
+        "Draw an end-to-end ML lifecycle",
+        "Design batch, online, and streaming inference paths",
+        "Define release, monitoring, rollback, lineage, and cost controls"
+      ],
       "lastReviewed": "2026-09-18"
     },
     {
