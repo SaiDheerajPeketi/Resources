@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r4",
+  "version": "2026.09.18-r5",
   "edges": [
     {
       "id": "foundations/complexity-analysis->foundations/arrays-and-strings:prerequisite",
@@ -902,15 +902,591 @@
       "kind": "prerequisite"
     },
     {
+      "id": "foundations/linux-and-the-cli->devops-cloud/shell-scripting:prerequisite",
+      "source": "foundations/linux-and-the-cli",
+      "target": "devops-cloud/shell-scripting",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linux-and-the-cli->devops-cloud/linux-internals:prerequisite",
+      "source": "foundations/linux-and-the-cli",
+      "target": "devops-cloud/linux-internals",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/operating-systems->devops-cloud/linux-internals:prerequisite",
+      "source": "sde-systems/operating-systems",
+      "target": "devops-cloud/linux-internals",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/networking-fundamentals->devops-cloud/dns-and-tls:prerequisite",
+      "source": "foundations/networking-fundamentals",
+      "target": "devops-cloud/dns-and-tls",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/dns-and-tls->devops-cloud/production-networking:prerequisite",
+      "source": "devops-cloud/dns-and-tls",
+      "target": "devops-cloud/production-networking",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/distributed-systems-foundations->devops-cloud/production-networking:prerequisite",
+      "source": "sde-systems/distributed-systems-foundations",
+      "target": "devops-cloud/production-networking",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/git-testing-and-debugging->devops-cloud/gitops:prerequisite",
+      "source": "foundations/git-testing-and-debugging",
+      "target": "devops-cloud/gitops",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/git-testing-and-debugging->devops-cloud/ci-cd:prerequisite",
+      "source": "foundations/git-testing-and-debugging",
+      "target": "devops-cloud/ci-cd",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/testing-strategy->devops-cloud/ci-cd:prerequisite",
+      "source": "sde-systems/testing-strategy",
+      "target": "devops-cloud/ci-cd",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/linux-internals->devops-cloud/containers:prerequisite",
+      "source": "devops-cloud/linux-internals",
+      "target": "devops-cloud/containers",
+      "kind": "prerequisite"
+    },
+    {
       "id": "foundations/networking-fundamentals->devops-cloud/kubernetes-reconciliation:prerequisite",
       "source": "foundations/networking-fundamentals",
       "target": "devops-cloud/kubernetes-reconciliation",
       "kind": "prerequisite"
     },
     {
+      "id": "devops-cloud/kubernetes-reconciliation->devops-cloud/kubernetes-operations:prerequisite",
+      "source": "devops-cloud/kubernetes-reconciliation",
+      "target": "devops-cloud/kubernetes-operations",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/containers->devops-cloud/kubernetes-operations:prerequisite",
+      "source": "devops-cloud/containers",
+      "target": "devops-cloud/kubernetes-operations",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/production-networking->devops-cloud/kubernetes-operations:prerequisite",
+      "source": "devops-cloud/production-networking",
+      "target": "devops-cloud/kubernetes-operations",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/gitops->devops-cloud/infrastructure-as-code:prerequisite",
+      "source": "devops-cloud/gitops",
+      "target": "devops-cloud/infrastructure-as-code",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/ci-cd->devops-cloud/infrastructure-as-code:prerequisite",
+      "source": "devops-cloud/ci-cd",
+      "target": "devops-cloud/infrastructure-as-code",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/infrastructure-as-code->devops-cloud/terraform:prerequisite",
+      "source": "devops-cloud/infrastructure-as-code",
+      "target": "devops-cloud/terraform",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/infrastructure-as-code->devops-cloud/configuration-and-secrets:prerequisite",
+      "source": "devops-cloud/infrastructure-as-code",
+      "target": "devops-cloud/configuration-and-secrets",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/identity-and-access-management->devops-cloud/configuration-and-secrets:prerequisite",
+      "source": "cybersecurity/identity-and-access-management",
+      "target": "devops-cloud/configuration-and-secrets",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/ci-cd->devops-cloud/release-strategies:prerequisite",
+      "source": "devops-cloud/ci-cd",
+      "target": "devops-cloud/release-strategies",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/kubernetes-operations->devops-cloud/release-strategies:prerequisite",
+      "source": "devops-cloud/kubernetes-operations",
+      "target": "devops-cloud/release-strategies",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/observability->devops-cloud/observability-stack:prerequisite",
+      "source": "sde-systems/observability",
+      "target": "devops-cloud/observability-stack",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/kubernetes-operations->devops-cloud/observability-stack:prerequisite",
+      "source": "devops-cloud/kubernetes-operations",
+      "target": "devops-cloud/observability-stack",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/reliability-engineering->devops-cloud/slis-slos-and-error-budgets:prerequisite",
+      "source": "sde-systems/reliability-engineering",
+      "target": "devops-cloud/slis-slos-and-error-budgets",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/observability-stack->devops-cloud/slis-slos-and-error-budgets:prerequisite",
+      "source": "devops-cloud/observability-stack",
+      "target": "devops-cloud/slis-slos-and-error-budgets",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/slis-slos-and-error-budgets->devops-cloud/incident-response:prerequisite",
+      "source": "devops-cloud/slis-slos-and-error-budgets",
+      "target": "devops-cloud/incident-response",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/observability-stack->devops-cloud/incident-response:prerequisite",
+      "source": "devops-cloud/observability-stack",
+      "target": "devops-cloud/incident-response",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/incident-response->devops-cloud/disaster-recovery:prerequisite",
+      "source": "devops-cloud/incident-response",
+      "target": "devops-cloud/disaster-recovery",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/storage-systems->devops-cloud/disaster-recovery:prerequisite",
+      "source": "sde-systems/storage-systems",
+      "target": "devops-cloud/disaster-recovery",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/gitops->devops-cloud/platform-engineering:prerequisite",
+      "source": "devops-cloud/gitops",
+      "target": "devops-cloud/platform-engineering",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/kubernetes-operations->devops-cloud/platform-engineering:prerequisite",
+      "source": "devops-cloud/kubernetes-operations",
+      "target": "devops-cloud/platform-engineering",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/observability-stack->devops-cloud/platform-engineering:prerequisite",
+      "source": "devops-cloud/observability-stack",
+      "target": "devops-cloud/platform-engineering",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/capacity-planning->devops-cloud/finops:prerequisite",
+      "source": "sde-systems/capacity-planning",
+      "target": "devops-cloud/finops",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/platform-engineering->devops-cloud/finops:prerequisite",
+      "source": "devops-cloud/platform-engineering",
+      "target": "devops-cloud/finops",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/production-networking->devops-cloud/service-mesh:prerequisite",
+      "source": "devops-cloud/production-networking",
+      "target": "devops-cloud/service-mesh",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/kubernetes-operations->devops-cloud/service-mesh:prerequisite",
+      "source": "devops-cloud/kubernetes-operations",
+      "target": "devops-cloud/service-mesh",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/identity-and-access-management->devops-cloud/service-mesh:prerequisite",
+      "source": "cybersecurity/identity-and-access-management",
+      "target": "devops-cloud/service-mesh",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/infrastructure-as-code->devops-cloud/aws-service-map:prerequisite",
+      "source": "devops-cloud/infrastructure-as-code",
+      "target": "devops-cloud/aws-service-map",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/production-networking->devops-cloud/aws-service-map:prerequisite",
+      "source": "devops-cloud/production-networking",
+      "target": "devops-cloud/aws-service-map",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/infrastructure-as-code->devops-cloud/azure-service-map:prerequisite",
+      "source": "devops-cloud/infrastructure-as-code",
+      "target": "devops-cloud/azure-service-map",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/production-networking->devops-cloud/azure-service-map:prerequisite",
+      "source": "devops-cloud/production-networking",
+      "target": "devops-cloud/azure-service-map",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/infrastructure-as-code->devops-cloud/gcp-service-map:prerequisite",
+      "source": "devops-cloud/infrastructure-as-code",
+      "target": "devops-cloud/gcp-service-map",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/production-networking->devops-cloud/gcp-service-map:prerequisite",
+      "source": "devops-cloud/production-networking",
+      "target": "devops-cloud/gcp-service-map",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/aws-service-map->devops-cloud/oci-translation-matrix:prerequisite",
+      "source": "devops-cloud/aws-service-map",
+      "target": "devops-cloud/oci-translation-matrix",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/azure-service-map->devops-cloud/oci-translation-matrix:prerequisite",
+      "source": "devops-cloud/azure-service-map",
+      "target": "devops-cloud/oci-translation-matrix",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/gcp-service-map->devops-cloud/oci-translation-matrix:prerequisite",
+      "source": "devops-cloud/gcp-service-map",
+      "target": "devops-cloud/oci-translation-matrix",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/networking-fundamentals->cybersecurity/security-foundations:prerequisite",
+      "source": "foundations/networking-fundamentals",
+      "target": "cybersecurity/security-foundations",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/linux-and-the-cli->cybersecurity/security-foundations:prerequisite",
+      "source": "foundations/linux-and-the-cli",
+      "target": "cybersecurity/security-foundations",
+      "kind": "prerequisite"
+    },
+    {
       "id": "foundations/networking-fundamentals->cybersecurity/threat-modeling:prerequisite",
       "source": "foundations/networking-fundamentals",
       "target": "cybersecurity/threat-modeling",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/security-foundations->cybersecurity/applied-cryptography:prerequisite",
+      "source": "cybersecurity/security-foundations",
+      "target": "cybersecurity/applied-cryptography",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/discrete-mathematics->cybersecurity/applied-cryptography:prerequisite",
+      "source": "foundations/discrete-mathematics",
+      "target": "cybersecurity/applied-cryptography",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/applied-cryptography->cybersecurity/pki-and-tls:prerequisite",
+      "source": "cybersecurity/applied-cryptography",
+      "target": "cybersecurity/pki-and-tls",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/dns-and-tls->cybersecurity/pki-and-tls:prerequisite",
+      "source": "devops-cloud/dns-and-tls",
+      "target": "cybersecurity/pki-and-tls",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/security-foundations->cybersecurity/identity-and-access-management:prerequisite",
+      "source": "cybersecurity/security-foundations",
+      "target": "cybersecurity/identity-and-access-management",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/applied-cryptography->cybersecurity/identity-and-access-management:prerequisite",
+      "source": "cybersecurity/applied-cryptography",
+      "target": "cybersecurity/identity-and-access-management",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/browser-and-web-foundations->cybersecurity/web-security:prerequisite",
+      "source": "sde-systems/browser-and-web-foundations",
+      "target": "cybersecurity/web-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/threat-modeling->cybersecurity/web-security:prerequisite",
+      "source": "cybersecurity/threat-modeling",
+      "target": "cybersecurity/web-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/api-design->cybersecurity/api-security:prerequisite",
+      "source": "sde-systems/api-design",
+      "target": "cybersecurity/api-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/identity-and-access-management->cybersecurity/api-security:prerequisite",
+      "source": "cybersecurity/identity-and-access-management",
+      "target": "cybersecurity/api-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/threat-modeling->cybersecurity/api-security:prerequisite",
+      "source": "cybersecurity/threat-modeling",
+      "target": "cybersecurity/api-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/production-networking->cybersecurity/network-security:prerequisite",
+      "source": "devops-cloud/production-networking",
+      "target": "cybersecurity/network-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/security-foundations->cybersecurity/network-security:prerequisite",
+      "source": "cybersecurity/security-foundations",
+      "target": "cybersecurity/network-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/security-foundations->cybersecurity/secure-coding:prerequisite",
+      "source": "cybersecurity/security-foundations",
+      "target": "cybersecurity/secure-coding",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "foundations/git-testing-and-debugging->cybersecurity/secure-coding:prerequisite",
+      "source": "foundations/git-testing-and-debugging",
+      "target": "cybersecurity/secure-coding",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/threat-modeling->cybersecurity/application-security:prerequisite",
+      "source": "cybersecurity/threat-modeling",
+      "target": "cybersecurity/application-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/secure-coding->cybersecurity/application-security:prerequisite",
+      "source": "cybersecurity/secure-coding",
+      "target": "cybersecurity/application-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/testing-strategy->cybersecurity/application-security:prerequisite",
+      "source": "sde-systems/testing-strategy",
+      "target": "cybersecurity/application-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/identity-and-access-management->cybersecurity/cloud-security:prerequisite",
+      "source": "cybersecurity/identity-and-access-management",
+      "target": "cybersecurity/cloud-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/aws-service-map->cybersecurity/cloud-security:prerequisite",
+      "source": "devops-cloud/aws-service-map",
+      "target": "cybersecurity/cloud-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/azure-service-map->cybersecurity/cloud-security:prerequisite",
+      "source": "devops-cloud/azure-service-map",
+      "target": "cybersecurity/cloud-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/gcp-service-map->cybersecurity/cloud-security:prerequisite",
+      "source": "devops-cloud/gcp-service-map",
+      "target": "cybersecurity/cloud-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/containers->cybersecurity/container-security:prerequisite",
+      "source": "devops-cloud/containers",
+      "target": "cybersecurity/container-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/cloud-security->cybersecurity/container-security:prerequisite",
+      "source": "cybersecurity/cloud-security",
+      "target": "cybersecurity/container-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/software-supply-chain->cybersecurity/container-security:prerequisite",
+      "source": "cybersecurity/software-supply-chain",
+      "target": "cybersecurity/container-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/kubernetes-operations->cybersecurity/kubernetes-security:prerequisite",
+      "source": "devops-cloud/kubernetes-operations",
+      "target": "cybersecurity/kubernetes-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/container-security->cybersecurity/kubernetes-security:prerequisite",
+      "source": "cybersecurity/container-security",
+      "target": "cybersecurity/kubernetes-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/identity-and-access-management->cybersecurity/kubernetes-security:prerequisite",
+      "source": "cybersecurity/identity-and-access-management",
+      "target": "cybersecurity/kubernetes-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/application-security->cybersecurity/software-supply-chain:prerequisite",
+      "source": "cybersecurity/application-security",
+      "target": "cybersecurity/software-supply-chain",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/ci-cd->cybersecurity/software-supply-chain:prerequisite",
+      "source": "devops-cloud/ci-cd",
+      "target": "cybersecurity/software-supply-chain",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/software-supply-chain->cybersecurity/devsecops:prerequisite",
+      "source": "cybersecurity/software-supply-chain",
+      "target": "cybersecurity/devsecops",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/gitops->cybersecurity/devsecops:prerequisite",
+      "source": "devops-cloud/gitops",
+      "target": "cybersecurity/devsecops",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/application-security->cybersecurity/vulnerability-management:prerequisite",
+      "source": "cybersecurity/application-security",
+      "target": "cybersecurity/vulnerability-management",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/cloud-security->cybersecurity/vulnerability-management:prerequisite",
+      "source": "cybersecurity/cloud-security",
+      "target": "cybersecurity/vulnerability-management",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "sde-systems/observability->cybersecurity/detection-engineering:prerequisite",
+      "source": "sde-systems/observability",
+      "target": "cybersecurity/detection-engineering",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/threat-modeling->cybersecurity/detection-engineering:prerequisite",
+      "source": "cybersecurity/threat-modeling",
+      "target": "cybersecurity/detection-engineering",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/network-security->cybersecurity/detection-engineering:prerequisite",
+      "source": "cybersecurity/network-security",
+      "target": "cybersecurity/detection-engineering",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/detection-engineering->cybersecurity/incident-response:prerequisite",
+      "source": "cybersecurity/detection-engineering",
+      "target": "cybersecurity/incident-response",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/incident-response->cybersecurity/incident-response:prerequisite",
+      "source": "devops-cloud/incident-response",
+      "target": "cybersecurity/incident-response",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/incident-response->cybersecurity/forensics-basics:prerequisite",
+      "source": "cybersecurity/incident-response",
+      "target": "cybersecurity/forensics-basics",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "devops-cloud/linux-internals->cybersecurity/forensics-basics:prerequisite",
+      "source": "devops-cloud/linux-internals",
+      "target": "cybersecurity/forensics-basics",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/mlops-and-ml-system-design->cybersecurity/ai-security:prerequisite",
+      "source": "ai-data/mlops-and-ml-system-design",
+      "target": "cybersecurity/ai-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "ai-data/agents-and-tool-use->cybersecurity/ai-security:prerequisite",
+      "source": "ai-data/agents-and-tool-use",
+      "target": "cybersecurity/ai-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/threat-modeling->cybersecurity/ai-security:prerequisite",
+      "source": "cybersecurity/threat-modeling",
+      "target": "cybersecurity/ai-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "fintech-quant/double-entry-ledgers->cybersecurity/fintech-security:prerequisite",
+      "source": "fintech-quant/double-entry-ledgers",
+      "target": "cybersecurity/fintech-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/api-security->cybersecurity/fintech-security:prerequisite",
+      "source": "cybersecurity/api-security",
+      "target": "cybersecurity/fintech-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/identity-and-access-management->cybersecurity/fintech-security:prerequisite",
+      "source": "cybersecurity/identity-and-access-management",
+      "target": "cybersecurity/fintech-security",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/application-security->cybersecurity/owasp-and-nist-mappings:prerequisite",
+      "source": "cybersecurity/application-security",
+      "target": "cybersecurity/owasp-and-nist-mappings",
+      "kind": "prerequisite"
+    },
+    {
+      "id": "cybersecurity/incident-response->cybersecurity/owasp-and-nist-mappings:prerequisite",
+      "source": "cybersecurity/incident-response",
+      "target": "cybersecurity/owasp-and-nist-mappings",
       "kind": "prerequisite"
     },
     {

@@ -41,6 +41,26 @@ test("SDE and systems pack exposes a complete design lesson", async ({ page }) =
   await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
 });
 
+test("DevOps and cloud pack exposes provider translation and SRE depth", async ({ page }) => {
+  await page.goto("/tracks/devops-cloud/");
+  const cloudRow = page.getByRole("row").filter({ hasText: "OCI Translation Matrix" });
+  await expect(cloudRow).toContainText("Published");
+  await page.goto("/topics/devops-cloud/oci-translation-matrix/");
+  await expect(page.getByRole("heading", { name: "OCI Translation Matrix", level: 1 })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Core matrix" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Interview practice" })).toBeVisible();
+});
+
+test("cybersecurity pack exposes current defensive engineering depth", async ({ page }) => {
+  await page.goto("/tracks/cybersecurity/");
+  const securityRow = page.getByRole("row").filter({ hasText: "AI Security" });
+  await expect(securityRow).toContainText("Published");
+  await page.goto("/topics/cybersecurity/ai-security/");
+  await expect(page.getByRole("heading", { name: "AI Security", level: 1 })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "LLM and agent controls" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
+});
+
 test("interview workspace includes career artifacts and a timed mock", async ({ page }) => {
   await page.goto("/interview/");
   await expect(page.getByRole("heading", { name: "Career field guide" })).toBeVisible();

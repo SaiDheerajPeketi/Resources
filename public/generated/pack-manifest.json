@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r4",
+  "version": "2026.09.18-r5",
   "packs": [
     {
       "id": "foundations",
@@ -136,10 +136,33 @@
         "/revision/",
         "/interview/",
         "/settings/",
-        "/topics/devops-cloud/kubernetes-reconciliation/"
+        "/topics/devops-cloud/shell-scripting/",
+        "/topics/devops-cloud/linux-internals/",
+        "/topics/devops-cloud/dns-and-tls/",
+        "/topics/devops-cloud/production-networking/",
+        "/topics/devops-cloud/gitops/",
+        "/topics/devops-cloud/ci-cd/",
+        "/topics/devops-cloud/containers/",
+        "/topics/devops-cloud/kubernetes-reconciliation/",
+        "/topics/devops-cloud/kubernetes-operations/",
+        "/topics/devops-cloud/infrastructure-as-code/",
+        "/topics/devops-cloud/terraform/",
+        "/topics/devops-cloud/configuration-and-secrets/",
+        "/topics/devops-cloud/release-strategies/",
+        "/topics/devops-cloud/observability-stack/",
+        "/topics/devops-cloud/slis-slos-and-error-budgets/",
+        "/topics/devops-cloud/incident-response/",
+        "/topics/devops-cloud/disaster-recovery/",
+        "/topics/devops-cloud/platform-engineering/",
+        "/topics/devops-cloud/finops/",
+        "/topics/devops-cloud/service-mesh/",
+        "/topics/devops-cloud/aws-service-map/",
+        "/topics/devops-cloud/azure-service-map/",
+        "/topics/devops-cloud/gcp-service-map/",
+        "/topics/devops-cloud/oci-translation-matrix/"
       ],
-      "estimatedKb": 252,
-      "integrity": "sha256-54722c72bc4b7c5e42b0bb15f07abb2dc6ce038c94471c3cffeabd88356ab0db"
+      "estimatedKb": 1908,
+      "integrity": "sha256-d033e2e92df4a1c5cbc78c1e63f05628e28ffbb9163030c448643026383e5b4a"
     },
     {
       "id": "cybersecurity",
@@ -153,10 +176,31 @@
         "/revision/",
         "/interview/",
         "/settings/",
-        "/topics/cybersecurity/threat-modeling/"
+        "/topics/cybersecurity/security-foundations/",
+        "/topics/cybersecurity/threat-modeling/",
+        "/topics/cybersecurity/applied-cryptography/",
+        "/topics/cybersecurity/pki-and-tls/",
+        "/topics/cybersecurity/identity-and-access-management/",
+        "/topics/cybersecurity/web-security/",
+        "/topics/cybersecurity/api-security/",
+        "/topics/cybersecurity/network-security/",
+        "/topics/cybersecurity/secure-coding/",
+        "/topics/cybersecurity/application-security/",
+        "/topics/cybersecurity/cloud-security/",
+        "/topics/cybersecurity/container-security/",
+        "/topics/cybersecurity/kubernetes-security/",
+        "/topics/cybersecurity/software-supply-chain/",
+        "/topics/cybersecurity/devsecops/",
+        "/topics/cybersecurity/vulnerability-management/",
+        "/topics/cybersecurity/detection-engineering/",
+        "/topics/cybersecurity/incident-response/",
+        "/topics/cybersecurity/forensics-basics/",
+        "/topics/cybersecurity/ai-security/",
+        "/topics/cybersecurity/fintech-security/",
+        "/topics/cybersecurity/owasp-and-nist-mappings/"
       ],
-      "estimatedKb": 252,
-      "integrity": "sha256-bffa63794f37ba48d8cbf3b594f36d3976a72afaeca835676fbf8949622188ad"
+      "estimatedKb": 1764,
+      "integrity": "sha256-42f4927ce7fcdfd9ddcde90ceb51293a10b055e382814aac8228719d029432a1"
     },
     {
       "id": "fintech-quant",

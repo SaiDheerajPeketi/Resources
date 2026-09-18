@@ -76,6 +76,50 @@ import ReliabilityEngineering from "@/content/topics/sde-systems/reliability-eng
 import Observability from "@/content/topics/sde-systems/observability.mdx";
 import SystemDesignInterviewMethod from "@/content/topics/sde-systems/system-design-interview-method.mdx";
 import SystemDesignCaseStudies from "@/content/topics/sde-systems/system-design-case-studies.mdx";
+import ShellScripting from "@/content/topics/devops-cloud/shell-scripting.mdx";
+import LinuxInternals from "@/content/topics/devops-cloud/linux-internals.mdx";
+import DnsAndTls from "@/content/topics/devops-cloud/dns-and-tls.mdx";
+import ProductionNetworking from "@/content/topics/devops-cloud/production-networking.mdx";
+import Gitops from "@/content/topics/devops-cloud/gitops.mdx";
+import CiCd from "@/content/topics/devops-cloud/ci-cd.mdx";
+import Containers from "@/content/topics/devops-cloud/containers.mdx";
+import KubernetesOperations from "@/content/topics/devops-cloud/kubernetes-operations.mdx";
+import InfrastructureAsCode from "@/content/topics/devops-cloud/infrastructure-as-code.mdx";
+import Terraform from "@/content/topics/devops-cloud/terraform.mdx";
+import ConfigurationAndSecrets from "@/content/topics/devops-cloud/configuration-and-secrets.mdx";
+import ReleaseStrategies from "@/content/topics/devops-cloud/release-strategies.mdx";
+import ObservabilityStack from "@/content/topics/devops-cloud/observability-stack.mdx";
+import SlisSlosAndErrorBudgets from "@/content/topics/devops-cloud/slis-slos-and-error-budgets.mdx";
+import DevopsIncidentResponse from "@/content/topics/devops-cloud/incident-response.mdx";
+import DisasterRecovery from "@/content/topics/devops-cloud/disaster-recovery.mdx";
+import PlatformEngineering from "@/content/topics/devops-cloud/platform-engineering.mdx";
+import Finops from "@/content/topics/devops-cloud/finops.mdx";
+import ServiceMesh from "@/content/topics/devops-cloud/service-mesh.mdx";
+import AwsServiceMap from "@/content/topics/devops-cloud/aws-service-map.mdx";
+import AzureServiceMap from "@/content/topics/devops-cloud/azure-service-map.mdx";
+import GcpServiceMap from "@/content/topics/devops-cloud/gcp-service-map.mdx";
+import OciTranslationMatrix from "@/content/topics/devops-cloud/oci-translation-matrix.mdx";
+import SecurityFoundations from "@/content/topics/cybersecurity/security-foundations.mdx";
+import AppliedCryptography from "@/content/topics/cybersecurity/applied-cryptography.mdx";
+import PkiAndTls from "@/content/topics/cybersecurity/pki-and-tls.mdx";
+import IdentityAndAccessManagement from "@/content/topics/cybersecurity/identity-and-access-management.mdx";
+import WebSecurity from "@/content/topics/cybersecurity/web-security.mdx";
+import ApiSecurity from "@/content/topics/cybersecurity/api-security.mdx";
+import NetworkSecurity from "@/content/topics/cybersecurity/network-security.mdx";
+import SecureCoding from "@/content/topics/cybersecurity/secure-coding.mdx";
+import ApplicationSecurity from "@/content/topics/cybersecurity/application-security.mdx";
+import CloudSecurity from "@/content/topics/cybersecurity/cloud-security.mdx";
+import ContainerSecurity from "@/content/topics/cybersecurity/container-security.mdx";
+import KubernetesSecurity from "@/content/topics/cybersecurity/kubernetes-security.mdx";
+import SoftwareSupplyChain from "@/content/topics/cybersecurity/software-supply-chain.mdx";
+import Devsecops from "@/content/topics/cybersecurity/devsecops.mdx";
+import VulnerabilityManagement from "@/content/topics/cybersecurity/vulnerability-management.mdx";
+import DetectionEngineering from "@/content/topics/cybersecurity/detection-engineering.mdx";
+import SecurityIncidentResponse from "@/content/topics/cybersecurity/incident-response.mdx";
+import ForensicsBasics from "@/content/topics/cybersecurity/forensics-basics.mdx";
+import AiSecurity from "@/content/topics/cybersecurity/ai-security.mdx";
+import FintechSecurity from "@/content/topics/cybersecurity/fintech-security.mdx";
+import OwaspAndNistMappings from "@/content/topics/cybersecurity/owasp-and-nist-mappings.mdx";
 
 export const topicContent = {
   "foundations/c-plus-plus-interview-setup": CppInterviewSetup,
@@ -153,7 +197,51 @@ export const topicContent = {
   "sde-systems/observability": Observability,
   "sde-systems/system-design-interview-method": SystemDesignInterviewMethod,
   "sde-systems/system-design-case-studies": SystemDesignCaseStudies,
+  "devops-cloud/shell-scripting": ShellScripting,
+  "devops-cloud/linux-internals": LinuxInternals,
+  "devops-cloud/dns-and-tls": DnsAndTls,
+  "devops-cloud/production-networking": ProductionNetworking,
+  "devops-cloud/gitops": Gitops,
+  "devops-cloud/ci-cd": CiCd,
+  "devops-cloud/containers": Containers,
   "devops-cloud/kubernetes-reconciliation": KubernetesReconciliation,
+  "devops-cloud/kubernetes-operations": KubernetesOperations,
+  "devops-cloud/infrastructure-as-code": InfrastructureAsCode,
+  "devops-cloud/terraform": Terraform,
+  "devops-cloud/configuration-and-secrets": ConfigurationAndSecrets,
+  "devops-cloud/release-strategies": ReleaseStrategies,
+  "devops-cloud/observability-stack": ObservabilityStack,
+  "devops-cloud/slis-slos-and-error-budgets": SlisSlosAndErrorBudgets,
+  "devops-cloud/incident-response": DevopsIncidentResponse,
+  "devops-cloud/disaster-recovery": DisasterRecovery,
+  "devops-cloud/platform-engineering": PlatformEngineering,
+  "devops-cloud/finops": Finops,
+  "devops-cloud/service-mesh": ServiceMesh,
+  "devops-cloud/aws-service-map": AwsServiceMap,
+  "devops-cloud/azure-service-map": AzureServiceMap,
+  "devops-cloud/gcp-service-map": GcpServiceMap,
+  "devops-cloud/oci-translation-matrix": OciTranslationMatrix,
+  "cybersecurity/security-foundations": SecurityFoundations,
   "cybersecurity/threat-modeling": ThreatModeling,
+  "cybersecurity/applied-cryptography": AppliedCryptography,
+  "cybersecurity/pki-and-tls": PkiAndTls,
+  "cybersecurity/identity-and-access-management": IdentityAndAccessManagement,
+  "cybersecurity/web-security": WebSecurity,
+  "cybersecurity/api-security": ApiSecurity,
+  "cybersecurity/network-security": NetworkSecurity,
+  "cybersecurity/secure-coding": SecureCoding,
+  "cybersecurity/application-security": ApplicationSecurity,
+  "cybersecurity/cloud-security": CloudSecurity,
+  "cybersecurity/container-security": ContainerSecurity,
+  "cybersecurity/kubernetes-security": KubernetesSecurity,
+  "cybersecurity/software-supply-chain": SoftwareSupplyChain,
+  "cybersecurity/devsecops": Devsecops,
+  "cybersecurity/vulnerability-management": VulnerabilityManagement,
+  "cybersecurity/detection-engineering": DetectionEngineering,
+  "cybersecurity/incident-response": SecurityIncidentResponse,
+  "cybersecurity/forensics-basics": ForensicsBasics,
+  "cybersecurity/ai-security": AiSecurity,
+  "cybersecurity/fintech-security": FintechSecurity,
+  "cybersecurity/owasp-and-nist-mappings": OwaspAndNistMappings,
   "fintech-quant/double-entry-ledgers": DoubleEntryLedgers
 } as const;

@@ -1,6 +1,6 @@
 {
-  "version": "2026.09.18-r4",
-  "generatedAt": "2026-09-18T05:07:43.209Z",
+  "version": "2026.09.18-r5",
+  "generatedAt": "2026-09-18T05:30:57.323Z",
   "roles": [
     {
       "id": "sde",
@@ -2307,17 +2307,24 @@
       "localSlug": "shell-scripting",
       "trackId": "devops-cloud",
       "title": "Shell Scripting",
-      "summary": "Planned field note covering shell scripting for devops + cloud interviews.",
+      "summary": "Write safe, observable shell automation with predictable expansion, failure handling, pipelines, and cleanup.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 65,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "data-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/linux-and-the-cli"
+      ],
+      "outcomes": [
+        "Explain shell parsing, quoting, expansion, and exit status",
+        "Build idempotent scripts with validation and cleanup",
+        "Choose when Bash is appropriate and when to move to a general-purpose language"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2327,17 +2334,25 @@
       "localSlug": "linux-internals",
       "trackId": "devops-cloud",
       "title": "Linux Internals",
-      "summary": "Planned field note covering linux internals for devops + cloud interviews.",
-      "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "summary": "Operate Linux by connecting processes, virtual memory, filesystems, namespaces, cgroups, signals, and kernel evidence.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 85,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "sde"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/linux-and-the-cli",
+        "sde-systems/operating-systems"
+      ],
+      "outcomes": [
+        "Trace process, memory, filesystem, and I/O behavior",
+        "Explain namespaces, cgroups, capabilities, and service supervision",
+        "Diagnose saturation using kernel-visible evidence"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2347,17 +2362,24 @@
       "localSlug": "dns-and-tls",
       "trackId": "devops-cloud",
       "title": "DNS and TLS",
-      "summary": "Planned field note covering dns and tls for devops + cloud interviews.",
-      "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "summary": "Trace authoritative and recursive DNS plus TLS identity, key exchange, certificates, resumption, and failure.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "sde"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/networking-fundamentals"
+      ],
+      "outcomes": [
+        "Trace recursive DNS resolution and caching",
+        "Explain modern TLS authentication and key establishment",
+        "Diagnose expiry, name, chain, DNSSEC, and propagation failures"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2367,17 +2389,25 @@
       "localSlug": "production-networking",
       "trackId": "devops-cloud",
       "title": "Production Networking",
-      "summary": "Planned field note covering production networking for devops + cloud interviews.",
-      "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "summary": "Design and debug production networks across routing, load balancing, NAT, firewalls, overlays, and failure domains.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 85,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "sde"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/dns-and-tls",
+        "sde-systems/distributed-systems-foundations"
+      ],
+      "outcomes": [
+        "Trace packets across L2/L3/L4/L7 components",
+        "Compare load-balancing, routing, NAT, and segmentation choices",
+        "Diagnose loss, latency, MTU, asymmetric path, and exhaustion"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2387,17 +2417,24 @@
       "localSlug": "gitops",
       "trackId": "devops-cloud",
       "title": "GitOps",
-      "summary": "Planned field note covering gitops for devops + cloud interviews.",
-      "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "summary": "Operate declarative environments through reviewed desired state, reconciliation, promotion, drift detection, and recovery.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 65,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/git-testing-and-debugging"
+      ],
+      "outcomes": [
+        "Explain pull-based reconciliation and desired-state ownership",
+        "Design promotion, policy, secrets, and rollback workflows",
+        "Distinguish safe emergency change from unmanaged drift"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2407,17 +2444,26 @@
       "localSlug": "ci-cd",
       "trackId": "devops-cloud",
       "title": "CI/CD",
-      "summary": "Planned field note covering ci/cd for devops + cloud interviews.",
-      "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "summary": "Build trustworthy delivery pipelines with reproducible artifacts, staged evidence, protected identities, and safe deployment.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "sde",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/git-testing-and-debugging",
+        "sde-systems/testing-strategy"
+      ],
+      "outcomes": [
+        "Design CI stages from fast feedback to release evidence",
+        "Harden pipeline identity, dependencies, artifacts, and provenance",
+        "Choose deployment gates, rollout verification, rollback, and recovery"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2427,17 +2473,25 @@
       "localSlug": "containers",
       "trackId": "devops-cloud",
       "title": "Containers",
-      "summary": "Planned field note covering containers for devops + cloud interviews.",
+      "summary": "Understand images, runtimes, namespaces, cgroups, filesystems, registries, and the security boundary containers do and do not provide.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "sde",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/linux-internals"
+      ],
+      "outcomes": [
+        "Trace image build, distribution, unpack, and process startup",
+        "Explain namespace, cgroup, capability, filesystem, and network isolation",
+        "Build minimal, reproducible, non-root, operable images"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2475,17 +2529,27 @@
       "localSlug": "kubernetes-operations",
       "trackId": "devops-cloud",
       "title": "Kubernetes Operations",
-      "summary": "Planned field note covering kubernetes operations for devops + cloud interviews.",
+      "summary": "Operate Kubernetes scheduling, networking, storage, rollouts, autoscaling, upgrades, and failures from control-plane evidence.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 95,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "mlops-engineer",
+        "data-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/kubernetes-reconciliation",
+        "devops-cloud/containers",
+        "devops-cloud/production-networking"
+      ],
+      "outcomes": [
+        "Trace workload scheduling, readiness, service routing, and storage binding",
+        "Debug pending, crashing, unavailable, and throttled workloads",
+        "Plan capacity, autoscaling, disruption, upgrade, and disaster recovery"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2495,17 +2559,25 @@
       "localSlug": "infrastructure-as-code",
       "trackId": "devops-cloud",
       "title": "Infrastructure as Code",
-      "summary": "Planned field note covering infrastructure as code for devops + cloud interviews.",
+      "summary": "Manage infrastructure through declarative models, dependency graphs, immutable artifacts, policy, state, and controlled reconciliation.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 75,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "data-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/gitops",
+        "devops-cloud/ci-cd"
+      ],
+      "outcomes": [
+        "Compare declarative and imperative infrastructure automation",
+        "Design reusable modules, environments, state, and promotion",
+        "Control drift, destructive change, secrets, policy, and recovery"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2515,17 +2587,24 @@
       "localSlug": "terraform",
       "trackId": "devops-cloud",
       "title": "Terraform",
-      "summary": "Planned field note covering terraform for devops + cloud interviews.",
+      "summary": "Use Terraform safely across configuration, graph evaluation, state, modules, providers, plans, imports, and refactors.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 85,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "data-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/infrastructure-as-code"
+      ],
+      "outcomes": [
+        "Explain Terraform evaluation, graph, plan, apply, and state",
+        "Design maintainable modules and environment boundaries",
+        "Perform safe imports, moves, replacement, and provider upgrades"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2535,17 +2614,26 @@
       "localSlug": "configuration-and-secrets",
       "trackId": "devops-cloud",
       "title": "Configuration and Secrets",
-      "summary": "Planned field note covering configuration and secrets for devops + cloud interviews.",
+      "summary": "Deliver configuration and secrets with typed contracts, least privilege, rotation, audit, and failure-safe rollout.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 75,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "sde",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/infrastructure-as-code",
+        "cybersecurity/identity-and-access-management"
+      ],
+      "outcomes": [
+        "Separate code, configuration, feature control, and secrets",
+        "Design secret issuance, delivery, rotation, and revocation",
+        "Roll configuration changes safely across versions and failure domains"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2555,17 +2643,26 @@
       "localSlug": "release-strategies",
       "trackId": "devops-cloud",
       "title": "Release Strategies",
-      "summary": "Planned field note covering release strategies for devops + cloud interviews.",
+      "summary": "Choose rolling, blue-green, canary, feature-flag, and shadow techniques from risk, compatibility, cost, and recovery needs.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 70,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "sde",
+        "security",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/ci-cd",
+        "devops-cloud/kubernetes-operations"
+      ],
+      "outcomes": [
+        "Compare deployment and release strategies",
+        "Design automated guardrails and progressive exposure",
+        "Plan data, API, queue, and rollback compatibility"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2575,17 +2672,25 @@
       "localSlug": "observability-stack",
       "trackId": "devops-cloud",
       "title": "Observability Stack",
-      "summary": "Planned field note covering observability stack for devops + cloud interviews.",
+      "summary": "Architect collection, transport, storage, query, retention, and governance for metrics, logs, traces, and profiles.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "sde-systems/observability",
+        "devops-cloud/kubernetes-operations"
+      ],
+      "outcomes": [
+        "Design telemetry pipelines for reliability and cost",
+        "Control schema, cardinality, sampling, tenancy, and retention",
+        "Keep ingestion available while isolating expensive queries"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2595,17 +2700,26 @@
       "localSlug": "slis-slos-and-error-budgets",
       "trackId": "devops-cloud",
       "title": "SLIs, SLOs, and Error Budgets",
-      "summary": "Planned field note covering slis, slos, and error budgets for devops + cloud interviews.",
+      "summary": "Turn user journeys into measurable reliability objectives, burn-rate alerts, and explicit risk decisions.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 70,
       "roleIds": [
-        "devops",
         "sre",
-        "security"
+        "devops",
+        "sde",
+        "fintech",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "sde-systems/reliability-engineering",
+        "devops-cloud/observability-stack"
+      ],
+      "outcomes": [
+        "Define good-event and distribution SLIs",
+        "Select SLO windows and targets from user/business needs",
+        "Use error budgets and multi-window burn rates to guide action"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2615,17 +2729,26 @@
       "localSlug": "incident-response",
       "trackId": "devops-cloud",
       "title": "Incident Response",
-      "summary": "Planned field note covering incident response for devops + cloud interviews.",
+      "summary": "Coordinate detection, triage, mitigation, communication, evidence, recovery, and learning during production incidents.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
-        "devops",
         "sre",
-        "security"
+        "devops",
+        "security",
+        "sde",
+        "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/slis-slos-and-error-budgets",
+        "devops-cloud/observability-stack"
+      ],
+      "outcomes": [
+        "Use clear incident roles, severity, and command structure",
+        "Prioritize mitigation while preserving evidence and communication",
+        "Write systemic post-incident actions that reduce recurrence or impact"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2635,17 +2758,26 @@
       "localSlug": "disaster-recovery",
       "trackId": "devops-cloud",
       "title": "Disaster Recovery",
-      "summary": "Planned field note covering disaster recovery for devops + cloud interviews.",
+      "summary": "Design tested recovery for site loss, corruption, dependency failure, and operator error using explicit RTO and RPO.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
-        "devops",
         "sre",
-        "security"
+        "devops",
+        "security",
+        "fintech",
+        "data-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/incident-response",
+        "sde-systems/storage-systems"
+      ],
+      "outcomes": [
+        "Derive RTO/RPO from business impact",
+        "Compare backup/restore, pilot-light, warm-standby, and active-active",
+        "Plan dependency, identity, data, DNS, and control-plane recovery"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2655,17 +2787,27 @@
       "localSlug": "platform-engineering",
       "trackId": "devops-cloud",
       "title": "Platform Engineering",
-      "summary": "Planned field note covering platform engineering for devops + cloud interviews.",
-      "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "summary": "Build an internal platform as a product with paved roads, self-service contracts, guardrails, reliability, and adoption evidence.",
+      "level": "advanced",
+      "publicationStatus": "published",
+      "durationMinutes": 70,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "mlops-engineer",
+        "data-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/gitops",
+        "devops-cloud/kubernetes-operations",
+        "devops-cloud/observability-stack"
+      ],
+      "outcomes": [
+        "Discover developer journeys and platform product outcomes",
+        "Design self-service interfaces with safe defaults and escape hatches",
+        "Measure adoption, lead time, reliability, cognitive load, and platform SLOs"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2675,17 +2817,26 @@
       "localSlug": "finops",
       "trackId": "devops-cloud",
       "title": "FinOps",
-      "summary": "Planned field note covering finops for devops + cloud interviews.",
+      "summary": "Make cloud value and cost visible, accountable, optimizable, and governable without sacrificing reliability or security.",
       "level": "advanced",
-      "publicationStatus": "planned",
+      "publicationStatus": "published",
       "durationMinutes": 65,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "data-engineer",
+        "mlops-engineer",
+        "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "sde-systems/capacity-planning",
+        "devops-cloud/platform-engineering"
+      ],
+      "outcomes": [
+        "Allocate shared and direct costs to useful units",
+        "Use unit economics, forecasts, commitments, and anomaly response",
+        "Balance cost with performance, reliability, sustainability, and delivery speed"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2695,17 +2846,26 @@
       "localSlug": "service-mesh",
       "trackId": "devops-cloud",
       "title": "Service Mesh",
-      "summary": "Planned field note covering service mesh for devops + cloud interviews.",
+      "summary": "Evaluate service-mesh traffic, identity, policy, telemetry, and resiliency against its operational and latency cost.",
       "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "publicationStatus": "published",
+      "durationMinutes": 70,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "sde"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/production-networking",
+        "devops-cloud/kubernetes-operations",
+        "cybersecurity/identity-and-access-management"
+      ],
+      "outcomes": [
+        "Explain data-plane and control-plane responsibilities",
+        "Design workload identity, mTLS, routing, policy, and telemetry",
+        "Recognize when a mesh adds more complexity than value"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2715,17 +2875,26 @@
       "localSlug": "aws-service-map",
       "trackId": "devops-cloud",
       "title": "AWS Service Map",
-      "summary": "Planned field note covering aws service map for devops + cloud interviews.",
-      "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "summary": "Map AWS organization, identity, networking, compute, storage, data, messaging, observability, and security services to architecture decisions.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 90,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "data-engineer",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/infrastructure-as-code",
+        "devops-cloud/production-networking"
+      ],
+      "outcomes": [
+        "Navigate AWS resource hierarchy, IAM, and network boundaries",
+        "Choose core compute, storage, database, and messaging services",
+        "Apply Well-Architected reliability, security, performance, cost, and operations trade-offs"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2735,17 +2904,26 @@
       "localSlug": "azure-service-map",
       "trackId": "devops-cloud",
       "title": "Azure Service Map",
-      "summary": "Planned field note covering azure service map for devops + cloud interviews.",
-      "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "summary": "Map Azure tenants, management groups, subscriptions, identity, networking, compute, data, observability, and governance to workload needs.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 90,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "data-engineer",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/infrastructure-as-code",
+        "devops-cloud/production-networking"
+      ],
+      "outcomes": [
+        "Navigate Azure hierarchy, Entra identity, RBAC, and policy",
+        "Choose core compute, network, storage, data, and integration services",
+        "Apply Azure Well-Architected and landing-zone design"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2755,17 +2933,26 @@
       "localSlug": "gcp-service-map",
       "trackId": "devops-cloud",
       "title": "GCP Service Map",
-      "summary": "Planned field note covering gcp service map for devops + cloud interviews.",
-      "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "summary": "Map Google Cloud resource hierarchy, IAM, VPC, compute, storage, data, messaging, observability, and security to workload design.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 90,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "data-engineer",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/infrastructure-as-code",
+        "devops-cloud/production-networking"
+      ],
+      "outcomes": [
+        "Navigate organization, folders, projects, IAM, and organization policy",
+        "Choose core compute, storage, database, analytics, and messaging services",
+        "Apply Google Cloud Well-Architected and landing-zone principles"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2775,17 +2962,27 @@
       "localSlug": "oci-translation-matrix",
       "trackId": "devops-cloud",
       "title": "OCI Translation Matrix",
-      "summary": "Planned field note covering oci translation matrix for devops + cloud interviews.",
+      "summary": "Translate AWS, Azure, Google Cloud, and OCI concepts without assuming superficially similar services have identical semantics.",
       "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "publicationStatus": "published",
+      "durationMinutes": 85,
       "roleIds": [
         "devops",
         "sre",
-        "security"
+        "security",
+        "data-engineer",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/aws-service-map",
+        "devops-cloud/azure-service-map",
+        "devops-cloud/gcp-service-map"
+      ],
+      "outcomes": [
+        "Map organizational, identity, network, compute, storage, database, Kubernetes, and observability concepts",
+        "Identify semantic gaps hidden by service-name equivalence",
+        "Run a structured cross-cloud architecture translation"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2795,17 +2992,26 @@
       "localSlug": "security-foundations",
       "trackId": "cybersecurity",
       "title": "Security Foundations",
-      "summary": "Planned field note covering security foundations for cybersecurity interviews.",
+      "summary": "Frame security through assets, adversaries, trust, risk, controls, assurance, and resilient recovery.",
       "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
         "security",
         "devops",
+        "sre",
+        "sde",
         "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "foundations/networking-fundamentals",
+        "foundations/linux-and-the-cli"
+      ],
+      "outcomes": [
+        "Distinguish confidentiality, integrity, availability, authenticity, and accountability",
+        "Model assets, threats, vulnerabilities, likelihood, impact, and residual risk",
+        "Layer preventive, detective, responsive, and recovery controls"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2844,17 +3050,26 @@
       "localSlug": "applied-cryptography",
       "trackId": "cybersecurity",
       "title": "Applied Cryptography",
-      "summary": "Planned field note covering applied cryptography for cybersecurity interviews.",
-      "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "summary": "Select standard cryptographic primitives and protocols for confidentiality, integrity, authenticity, passwords, randomness, and key lifecycle.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 95,
       "roleIds": [
         "security",
+        "sde",
+        "fintech",
         "devops",
-        "fintech"
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "cybersecurity/security-foundations",
+        "foundations/discrete-mathematics"
+      ],
+      "outcomes": [
+        "Choose hashes, MACs, AEAD, signatures, KDFs, and CSPRNGs correctly",
+        "Explain nonce, randomness, key separation, and password hashing",
+        "Design key generation, storage, rotation, revocation, and crypto agility"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2864,17 +3079,26 @@
       "localSlug": "pki-and-tls",
       "trackId": "cybersecurity",
       "title": "PKI and TLS",
-      "summary": "Planned field note covering pki and tls for cybersecurity interviews.",
-      "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "summary": "Operate certificate trust, issuance, validation, revocation, automation, and TLS policy across internal and public systems.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 90,
       "roleIds": [
         "security",
         "devops",
+        "sre",
+        "sde",
         "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "cybersecurity/applied-cryptography",
+        "devops-cloud/dns-and-tls"
+      ],
+      "outcomes": [
+        "Explain certificate chains, extensions, validation, and revocation",
+        "Design public and private CA hierarchy and issuance",
+        "Automate certificate lifecycle and respond to key compromise"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2884,17 +3108,26 @@
       "localSlug": "identity-and-access-management",
       "trackId": "cybersecurity",
       "title": "Identity and Access Management",
-      "summary": "Planned field note covering identity and access management for cybersecurity interviews.",
-      "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "summary": "Design human and workload identity, authentication, federation, authorization, lifecycle, privileged access, and audit.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 95,
       "roleIds": [
         "security",
         "devops",
+        "sre",
+        "sde",
         "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "cybersecurity/security-foundations",
+        "cybersecurity/applied-cryptography"
+      ],
+      "outcomes": [
+        "Separate identity proofing, authentication, federation, and authorization",
+        "Compare RBAC, ABAC, ReBAC, and policy enforcement",
+        "Design joiner-mover-leaver and privileged-access lifecycle"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2904,17 +3137,25 @@
       "localSlug": "web-security",
       "trackId": "cybersecurity",
       "title": "Web Security",
-      "summary": "Planned field note covering web security for cybersecurity interviews.",
-      "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "summary": "Secure browser applications against injection, XSS, CSRF, clickjacking, session theft, origin confusion, and unsafe content.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 90,
       "roleIds": [
         "security",
-        "devops",
-        "fintech"
+        "sde",
+        "fintech",
+        "devops"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "sde-systems/browser-and-web-foundations",
+        "cybersecurity/threat-modeling"
+      ],
+      "outcomes": [
+        "Explain browser origin, cookie, CSP, CORS, and rendering trust",
+        "Prevent XSS, CSRF, injection, session, and navigation attacks",
+        "Design layered browser-facing defenses and verification"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2924,17 +3165,27 @@
       "localSlug": "api-security",
       "trackId": "cybersecurity",
       "title": "API Security",
-      "summary": "Planned field note covering api security for cybersecurity interviews.",
-      "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "summary": "Secure APIs against broken object/function authorization, unsafe input, abuse, SSRF, inventory drift, and dependency failure.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 85,
       "roleIds": [
         "security",
+        "sde",
+        "fintech",
         "devops",
-        "fintech"
+        "ai-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "sde-systems/api-design",
+        "cybersecurity/identity-and-access-management",
+        "cybersecurity/threat-modeling"
+      ],
+      "outcomes": [
+        "Apply authentication and object/action-level authorization",
+        "Control schemas, resources, rate, outbound requests, and sensitive data",
+        "Inventory, test, observe, and retire API versions safely"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2944,17 +3195,25 @@
       "localSlug": "network-security",
       "trackId": "cybersecurity",
       "title": "Network Security",
-      "summary": "Planned field note covering network security for cybersecurity interviews.",
-      "level": "foundation",
-      "publicationStatus": "planned",
-      "durationMinutes": 35,
+      "summary": "Protect and investigate network paths through segmentation, identity, filtering, secure remote access, detection, and resilient architecture.",
+      "level": "interview",
+      "publicationStatus": "published",
+      "durationMinutes": 85,
       "roleIds": [
         "security",
         "devops",
+        "sre",
         "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/production-networking",
+        "cybersecurity/security-foundations"
+      ],
+      "outcomes": [
+        "Model zones, flows, trust boundaries, and choke points",
+        "Apply deny-default segmentation, secure access, egress control, and DDoS layers",
+        "Use network telemetry without treating the network as sufficient identity"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2964,17 +3223,25 @@
       "localSlug": "secure-coding",
       "trackId": "cybersecurity",
       "title": "Secure Coding",
-      "summary": "Planned field note covering secure coding for cybersecurity interviews.",
+      "summary": "Prevent vulnerability classes through explicit trust boundaries, safe language/library choices, invariants, review, and security-focused tests.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 85,
       "roleIds": [
         "security",
-        "devops",
-        "fintech"
+        "sde",
+        "fintech",
+        "quant-dev"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "cybersecurity/security-foundations",
+        "foundations/git-testing-and-debugging"
+      ],
+      "outcomes": [
+        "Apply safe input, output, memory, error, concurrency, and secret practices",
+        "Recognize injection, traversal, deserialization, integer, and memory-safety risks",
+        "Use review, static/dynamic analysis, fuzzing, and sanitizers effectively"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -2984,17 +3251,26 @@
       "localSlug": "application-security",
       "trackId": "cybersecurity",
       "title": "Application Security",
-      "summary": "Planned field note covering application security for cybersecurity interviews.",
+      "summary": "Embed threat modeling, requirements, review, testing, dependency governance, release gates, and vulnerability response into product delivery.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
         "security",
+        "sde",
         "devops",
         "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "cybersecurity/threat-modeling",
+        "cybersecurity/secure-coding",
+        "sde-systems/testing-strategy"
+      ],
+      "outcomes": [
+        "Design a risk-based secure development lifecycle",
+        "Combine review, SAST, DAST, SCA, fuzzing, and penetration testing",
+        "Triage findings by reachability, exploitability, impact, and compensating controls"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -3004,17 +3280,28 @@
       "localSlug": "cloud-security",
       "trackId": "cybersecurity",
       "title": "Cloud Security",
-      "summary": "Planned field note covering cloud security for cybersecurity interviews.",
+      "summary": "Secure cloud hierarchy, identity, network, data, control planes, posture, logging, and incident recovery under shared responsibility.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 90,
       "roleIds": [
         "security",
         "devops",
-        "fintech"
+        "sre",
+        "fintech",
+        "data-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "cybersecurity/identity-and-access-management",
+        "devops-cloud/aws-service-map",
+        "devops-cloud/azure-service-map",
+        "devops-cloud/gcp-service-map"
+      ],
+      "outcomes": [
+        "Apply shared responsibility across IaaS, PaaS, and SaaS",
+        "Design landing-zone guardrails and workload isolation",
+        "Detect and respond to identity, data, network, and control-plane compromise"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -3024,17 +3311,26 @@
       "localSlug": "container-security",
       "trackId": "cybersecurity",
       "title": "Container Security",
-      "summary": "Planned field note covering container security for cybersecurity interviews.",
+      "summary": "Secure container source, build, image, registry, runtime, host, isolation, secrets, and incident evidence.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
         "security",
         "devops",
-        "fintech"
+        "sre",
+        "sde"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/containers",
+        "cybersecurity/cloud-security",
+        "cybersecurity/software-supply-chain"
+      ],
+      "outcomes": [
+        "Harden image build and provenance",
+        "Reduce runtime privilege and host attack surface",
+        "Triage image vulnerabilities by deployed reachability and containment"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -3044,17 +3340,26 @@
       "localSlug": "kubernetes-security",
       "trackId": "cybersecurity",
       "title": "Kubernetes Security",
-      "summary": "Planned field note covering kubernetes security for cybersecurity interviews.",
+      "summary": "Secure Kubernetes API access, tenancy, workloads, admission, network, secrets, nodes, supply chain, audit, and response.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 95,
       "roleIds": [
         "security",
         "devops",
-        "fintech"
+        "sre",
+        "mlops-engineer"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "devops-cloud/kubernetes-operations",
+        "cybersecurity/container-security",
+        "cybersecurity/identity-and-access-management"
+      ],
+      "outcomes": [
+        "Harden control plane, RBAC, service accounts, and admission",
+        "Apply Pod Security, network policy, secrets, and node isolation",
+        "Investigate and contain Kubernetes compromise"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -3064,17 +3369,26 @@
       "localSlug": "software-supply-chain",
       "trackId": "cybersecurity",
       "title": "Software Supply Chain",
-      "summary": "Planned field note covering software supply chain for cybersecurity interviews.",
+      "summary": "Protect source, dependencies, build identities, pipelines, artifacts, registries, provenance, and update channels from compromise.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 90,
       "roleIds": [
         "security",
         "devops",
+        "sre",
+        "sde",
         "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "cybersecurity/application-security",
+        "devops-cloud/ci-cd"
+      ],
+      "outcomes": [
+        "Threat-model source-to-production trust",
+        "Use SBOM, signatures, provenance, isolation, and policy correctly",
+        "Respond to compromised dependency, builder, artifact, or signing identity"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -3084,17 +3398,25 @@
       "localSlug": "devsecops",
       "trackId": "cybersecurity",
       "title": "DevSecOps",
-      "summary": "Planned field note covering devsecops for cybersecurity interviews.",
+      "summary": "Integrate risk, policy, secure defaults, automated evidence, exceptions, and feedback into fast delivery and operations.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 75,
       "roleIds": [
         "security",
         "devops",
-        "fintech"
+        "sre",
+        "sde"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "cybersecurity/software-supply-chain",
+        "devops-cloud/gitops"
+      ],
+      "outcomes": [
+        "Place security checks at the earliest faithful stage",
+        "Design policy-as-code and exception workflows",
+        "Share security ownership without shifting all work to developers"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -3104,17 +3426,26 @@
       "localSlug": "vulnerability-management",
       "trackId": "cybersecurity",
       "title": "Vulnerability Management",
-      "summary": "Planned field note covering vulnerability management for cybersecurity interviews.",
+      "summary": "Inventory, prioritize, remediate, mitigate, verify, and communicate vulnerabilities using exploit and business context.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
         "security",
         "devops",
+        "sre",
+        "sde",
         "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "cybersecurity/application-security",
+        "cybersecurity/cloud-security"
+      ],
+      "outcomes": [
+        "Build asset and component visibility",
+        "Prioritize beyond severity using exposure, reachability, exploitation, and impact",
+        "Run patch, mitigation, exception, verification, and disclosure workflows"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -3124,17 +3455,26 @@
       "localSlug": "detection-engineering",
       "trackId": "cybersecurity",
       "title": "Detection Engineering",
-      "summary": "Planned field note covering detection engineering for cybersecurity interviews.",
+      "summary": "Turn threat hypotheses into reliable telemetry, analytics, enrichment, testing, triage, and measurable detection coverage.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 85,
       "roleIds": [
         "security",
+        "sre",
         "devops",
         "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "sde-systems/observability",
+        "cybersecurity/threat-modeling",
+        "cybersecurity/network-security"
+      ],
+      "outcomes": [
+        "Write behavior-based detection hypotheses",
+        "Engineer telemetry, normalization, correlation, and enrichment",
+        "Test and measure detections through versioned lifecycle"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -3144,17 +3484,25 @@
       "localSlug": "incident-response",
       "trackId": "cybersecurity",
       "title": "Incident Response",
-      "summary": "Planned field note covering incident response for cybersecurity interviews.",
+      "summary": "Handle security incidents through preparation, evidence-led triage, containment, eradication, recovery, communication, and lessons.",
       "level": "interview",
-      "publicationStatus": "planned",
-      "durationMinutes": 50,
+      "publicationStatus": "published",
+      "durationMinutes": 90,
       "roleIds": [
         "security",
+        "sre",
         "devops",
         "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "cybersecurity/detection-engineering",
+        "devops-cloud/incident-response"
+      ],
+      "outcomes": [
+        "Classify and coordinate security incidents",
+        "Preserve evidence while containing identities, hosts, network, and data paths",
+        "Recover trusted state and meet legal, regulatory, customer, and learning needs"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -3164,17 +3512,25 @@
       "localSlug": "forensics-basics",
       "trackId": "cybersecurity",
       "title": "Forensics Basics",
-      "summary": "Planned field note covering forensics basics for cybersecurity interviews.",
+      "summary": "Collect, preserve, validate, analyze, and report digital evidence from endpoints, memory, networks, cloud, and applications.",
       "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "publicationStatus": "published",
+      "durationMinutes": 80,
       "roleIds": [
         "security",
+        "sre",
         "devops",
         "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "cybersecurity/incident-response",
+        "devops-cloud/linux-internals"
+      ],
+      "outcomes": [
+        "Preserve evidence integrity and chain of custody",
+        "Prioritize volatile and durable evidence sources",
+        "Build defensible timelines while distinguishing fact, interpretation, and uncertainty"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -3184,17 +3540,27 @@
       "localSlug": "ai-security",
       "trackId": "cybersecurity",
       "title": "AI Security",
-      "summary": "Planned field note covering ai security for cybersecurity interviews.",
+      "summary": "Secure AI systems against data, model, prompt, tool, retrieval, supply-chain, privacy, abuse, and availability threats.",
       "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "publicationStatus": "published",
+      "durationMinutes": 90,
       "roleIds": [
         "security",
-        "devops",
-        "fintech"
+        "ai-engineer",
+        "ml-engineer",
+        "mlops-engineer",
+        "sde"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "ai-data/mlops-and-ml-system-design",
+        "ai-data/agents-and-tool-use",
+        "cybersecurity/threat-modeling"
+      ],
+      "outcomes": [
+        "Threat-model training, inference, RAG, and agent boundaries",
+        "Control prompt injection, tool authority, data leakage, poisoning, and model supply chain",
+        "Evaluate security with adversarial tests, monitoring, and incident response"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -3204,17 +3570,27 @@
       "localSlug": "fintech-security",
       "trackId": "cybersecurity",
       "title": "Fintech Security",
-      "summary": "Planned field note covering fintech security for cybersecurity interviews.",
+      "summary": "Protect money movement, account access, financial data, ledgers, processors, fraud controls, audit, and recovery.",
       "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "publicationStatus": "published",
+      "durationMinutes": 95,
       "roleIds": [
         "security",
-        "devops",
-        "fintech"
+        "fintech",
+        "sde",
+        "sre",
+        "devops"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "fintech-quant/double-entry-ledgers",
+        "cybersecurity/api-security",
+        "cybersecurity/identity-and-access-management"
+      ],
+      "outcomes": [
+        "Threat-model financial workflows and trust boundaries",
+        "Protect transaction intent, idempotency, ledger integrity, sensitive data, and privileged operations",
+        "Design fraud detection, reconciliation, incident response, and regulatory evidence"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
@@ -3224,17 +3600,26 @@
       "localSlug": "owasp-and-nist-mappings",
       "trackId": "cybersecurity",
       "title": "OWASP and NIST Mappings",
-      "summary": "Planned field note covering owasp and nist mappings for cybersecurity interviews.",
+      "summary": "Use OWASP and NIST frameworks as complementary taxonomies for product risks, security outcomes, controls, evidence, and improvement.",
       "level": "advanced",
-      "publicationStatus": "planned",
-      "durationMinutes": 65,
+      "publicationStatus": "published",
+      "durationMinutes": 75,
       "roleIds": [
         "security",
         "devops",
+        "sre",
+        "sde",
         "fintech"
       ],
-      "prerequisites": [],
-      "outcomes": [],
+      "prerequisites": [
+        "cybersecurity/application-security",
+        "cybersecurity/incident-response"
+      ],
+      "outcomes": [
+        "Distinguish risk lists, maturity models, control catalogs, and outcome frameworks",
+        "Map application findings to organizational security outcomes without claiming equivalence",
+        "Build evidence-backed profiles and improvement plans"
+      ],
       "lastReviewed": "2026-09-18",
       "asOf": "2026-09-18"
     },
