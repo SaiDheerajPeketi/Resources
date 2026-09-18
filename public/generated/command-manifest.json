@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r10",
+  "version": "2026.09.18-r11",
   "commands": [
     {
       "id": "java-command-1",
@@ -9839,6 +9839,3966 @@
       "purpose": "Estimate the scope of a change before testing it.",
       "platform": "all",
       "expectedResult": "Read-only output or an isolated local change.",
+      "safety": "safe"
+    },
+    {
+      "id": "android-command-1",
+      "technologyId": "android",
+      "title": "Run the primary health check",
+      "command": "./gradlew assembleDebug",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Android result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "android-command-2",
+      "technologyId": "android",
+      "title": "Inspect built-in help",
+      "command": "./gradlew --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Android result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "android-command-3",
+      "technologyId": "android",
+      "title": "Capture version",
+      "command": "./gradlew --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Android result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "android-command-4",
+      "technologyId": "android",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Android result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "android-command-5",
+      "technologyId": "android",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Android result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "android-command-6",
+      "technologyId": "android",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Android result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "android-command-7",
+      "technologyId": "android",
+      "title": "Time the operation",
+      "command": "time ./gradlew assembleDebug",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Android result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "android-command-8",
+      "technologyId": "android",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Android result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "android-command-9",
+      "technologyId": "android",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Android result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "android-command-10",
+      "technologyId": "android",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Android result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "android-command-11",
+      "technologyId": "android",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Android result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "android-command-12",
+      "technologyId": "android",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Android result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jetpack-compose-command-1",
+      "technologyId": "jetpack-compose",
+      "title": "Run the primary health check",
+      "command": "./gradlew testDebugUnitTest",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Jetpack Compose result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jetpack-compose-command-2",
+      "technologyId": "jetpack-compose",
+      "title": "Inspect built-in help",
+      "command": "./gradlew --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Jetpack Compose result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jetpack-compose-command-3",
+      "technologyId": "jetpack-compose",
+      "title": "Capture version",
+      "command": "./gradlew --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Jetpack Compose result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jetpack-compose-command-4",
+      "technologyId": "jetpack-compose",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Jetpack Compose result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jetpack-compose-command-5",
+      "technologyId": "jetpack-compose",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Jetpack Compose result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jetpack-compose-command-6",
+      "technologyId": "jetpack-compose",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Jetpack Compose result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jetpack-compose-command-7",
+      "technologyId": "jetpack-compose",
+      "title": "Time the operation",
+      "command": "time ./gradlew testDebugUnitTest",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Jetpack Compose result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jetpack-compose-command-8",
+      "technologyId": "jetpack-compose",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Jetpack Compose result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jetpack-compose-command-9",
+      "technologyId": "jetpack-compose",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Jetpack Compose result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jetpack-compose-command-10",
+      "technologyId": "jetpack-compose",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Jetpack Compose result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jetpack-compose-command-11",
+      "technologyId": "jetpack-compose",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Jetpack Compose result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jetpack-compose-command-12",
+      "technologyId": "jetpack-compose",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Jetpack Compose result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ios-command-1",
+      "technologyId": "ios",
+      "title": "Run the primary health check",
+      "command": "xcodebuild -scheme App build",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful iOS result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ios-command-2",
+      "technologyId": "ios",
+      "title": "Inspect built-in help",
+      "command": "xcodebuild --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful iOS result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ios-command-3",
+      "technologyId": "ios",
+      "title": "Capture version",
+      "command": "xcodebuild --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful iOS result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ios-command-4",
+      "technologyId": "ios",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful iOS result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ios-command-5",
+      "technologyId": "ios",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful iOS result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ios-command-6",
+      "technologyId": "ios",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful iOS result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ios-command-7",
+      "technologyId": "ios",
+      "title": "Time the operation",
+      "command": "time xcodebuild -scheme App build",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful iOS result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ios-command-8",
+      "technologyId": "ios",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful iOS result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ios-command-9",
+      "technologyId": "ios",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful iOS result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ios-command-10",
+      "technologyId": "ios",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful iOS result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ios-command-11",
+      "technologyId": "ios",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful iOS result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ios-command-12",
+      "technologyId": "ios",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful iOS result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swiftui-command-1",
+      "technologyId": "swiftui",
+      "title": "Run the primary health check",
+      "command": "xcodebuild test -scheme App",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful SwiftUI result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swiftui-command-2",
+      "technologyId": "swiftui",
+      "title": "Inspect built-in help",
+      "command": "xcodebuild --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful SwiftUI result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swiftui-command-3",
+      "technologyId": "swiftui",
+      "title": "Capture version",
+      "command": "xcodebuild --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful SwiftUI result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swiftui-command-4",
+      "technologyId": "swiftui",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful SwiftUI result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swiftui-command-5",
+      "technologyId": "swiftui",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful SwiftUI result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swiftui-command-6",
+      "technologyId": "swiftui",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful SwiftUI result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swiftui-command-7",
+      "technologyId": "swiftui",
+      "title": "Time the operation",
+      "command": "time xcodebuild test -scheme App",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful SwiftUI result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swiftui-command-8",
+      "technologyId": "swiftui",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful SwiftUI result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swiftui-command-9",
+      "technologyId": "swiftui",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful SwiftUI result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swiftui-command-10",
+      "technologyId": "swiftui",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful SwiftUI result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swiftui-command-11",
+      "technologyId": "swiftui",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful SwiftUI result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "swiftui-command-12",
+      "technologyId": "swiftui",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful SwiftUI result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "react-native-command-1",
+      "technologyId": "react-native",
+      "title": "Run the primary health check",
+      "command": "npx react-native doctor",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful React Native result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "react-native-command-2",
+      "technologyId": "react-native",
+      "title": "Inspect built-in help",
+      "command": "npx --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful React Native result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "react-native-command-3",
+      "technologyId": "react-native",
+      "title": "Capture version",
+      "command": "npx --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful React Native result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "react-native-command-4",
+      "technologyId": "react-native",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful React Native result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "react-native-command-5",
+      "technologyId": "react-native",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful React Native result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "react-native-command-6",
+      "technologyId": "react-native",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful React Native result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "react-native-command-7",
+      "technologyId": "react-native",
+      "title": "Time the operation",
+      "command": "time npx react-native doctor",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful React Native result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "react-native-command-8",
+      "technologyId": "react-native",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful React Native result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "react-native-command-9",
+      "technologyId": "react-native",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful React Native result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "react-native-command-10",
+      "technologyId": "react-native",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful React Native result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "react-native-command-11",
+      "technologyId": "react-native",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful React Native result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "react-native-command-12",
+      "technologyId": "react-native",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful React Native result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "flutter-command-1",
+      "technologyId": "flutter",
+      "title": "Run the primary health check",
+      "command": "flutter doctor",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Flutter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "flutter-command-2",
+      "technologyId": "flutter",
+      "title": "Inspect built-in help",
+      "command": "flutter --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Flutter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "flutter-command-3",
+      "technologyId": "flutter",
+      "title": "Capture version",
+      "command": "flutter --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Flutter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "flutter-command-4",
+      "technologyId": "flutter",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Flutter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "flutter-command-5",
+      "technologyId": "flutter",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Flutter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "flutter-command-6",
+      "technologyId": "flutter",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Flutter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "flutter-command-7",
+      "technologyId": "flutter",
+      "title": "Time the operation",
+      "command": "time flutter doctor",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Flutter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "flutter-command-8",
+      "technologyId": "flutter",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Flutter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "flutter-command-9",
+      "technologyId": "flutter",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Flutter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "flutter-command-10",
+      "technologyId": "flutter",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Flutter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "flutter-command-11",
+      "technologyId": "flutter",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Flutter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "flutter-command-12",
+      "technologyId": "flutter",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Flutter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "numpy-command-1",
+      "technologyId": "numpy",
+      "title": "Run the primary health check",
+      "command": "python -m pip install numpy",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful NumPy result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "numpy-command-2",
+      "technologyId": "numpy",
+      "title": "Inspect built-in help",
+      "command": "python --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful NumPy result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "numpy-command-3",
+      "technologyId": "numpy",
+      "title": "Capture version",
+      "command": "python --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful NumPy result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "numpy-command-4",
+      "technologyId": "numpy",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful NumPy result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "numpy-command-5",
+      "technologyId": "numpy",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful NumPy result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "numpy-command-6",
+      "technologyId": "numpy",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful NumPy result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "numpy-command-7",
+      "technologyId": "numpy",
+      "title": "Time the operation",
+      "command": "time python -m pip install numpy",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful NumPy result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "numpy-command-8",
+      "technologyId": "numpy",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful NumPy result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "numpy-command-9",
+      "technologyId": "numpy",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful NumPy result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "numpy-command-10",
+      "technologyId": "numpy",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful NumPy result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "numpy-command-11",
+      "technologyId": "numpy",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful NumPy result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "numpy-command-12",
+      "technologyId": "numpy",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful NumPy result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pandas-command-1",
+      "technologyId": "pandas",
+      "title": "Run the primary health check",
+      "command": "python -m pip install pandas",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful pandas result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "pandas-command-2",
+      "technologyId": "pandas",
+      "title": "Inspect built-in help",
+      "command": "python --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful pandas result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pandas-command-3",
+      "technologyId": "pandas",
+      "title": "Capture version",
+      "command": "python --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful pandas result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pandas-command-4",
+      "technologyId": "pandas",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful pandas result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pandas-command-5",
+      "technologyId": "pandas",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful pandas result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pandas-command-6",
+      "technologyId": "pandas",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful pandas result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pandas-command-7",
+      "technologyId": "pandas",
+      "title": "Time the operation",
+      "command": "time python -m pip install pandas",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful pandas result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "pandas-command-8",
+      "technologyId": "pandas",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful pandas result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pandas-command-9",
+      "technologyId": "pandas",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful pandas result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pandas-command-10",
+      "technologyId": "pandas",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful pandas result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pandas-command-11",
+      "technologyId": "pandas",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful pandas result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pandas-command-12",
+      "technologyId": "pandas",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful pandas result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scikit-learn-command-1",
+      "technologyId": "scikit-learn",
+      "title": "Run the primary health check",
+      "command": "python -m pip install scikit-learn",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful scikit-learn result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "scikit-learn-command-2",
+      "technologyId": "scikit-learn",
+      "title": "Inspect built-in help",
+      "command": "python --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful scikit-learn result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scikit-learn-command-3",
+      "technologyId": "scikit-learn",
+      "title": "Capture version",
+      "command": "python --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful scikit-learn result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scikit-learn-command-4",
+      "technologyId": "scikit-learn",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful scikit-learn result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scikit-learn-command-5",
+      "technologyId": "scikit-learn",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful scikit-learn result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scikit-learn-command-6",
+      "technologyId": "scikit-learn",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful scikit-learn result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scikit-learn-command-7",
+      "technologyId": "scikit-learn",
+      "title": "Time the operation",
+      "command": "time python -m pip install scikit-learn",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful scikit-learn result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "scikit-learn-command-8",
+      "technologyId": "scikit-learn",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful scikit-learn result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scikit-learn-command-9",
+      "technologyId": "scikit-learn",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful scikit-learn result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scikit-learn-command-10",
+      "technologyId": "scikit-learn",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful scikit-learn result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scikit-learn-command-11",
+      "technologyId": "scikit-learn",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful scikit-learn result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "scikit-learn-command-12",
+      "technologyId": "scikit-learn",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful scikit-learn result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pytorch-command-1",
+      "technologyId": "pytorch",
+      "title": "Run the primary health check",
+      "command": "python -m pip install torch",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful PyTorch result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "pytorch-command-2",
+      "technologyId": "pytorch",
+      "title": "Inspect built-in help",
+      "command": "python --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful PyTorch result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pytorch-command-3",
+      "technologyId": "pytorch",
+      "title": "Capture version",
+      "command": "python --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful PyTorch result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pytorch-command-4",
+      "technologyId": "pytorch",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful PyTorch result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pytorch-command-5",
+      "technologyId": "pytorch",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful PyTorch result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pytorch-command-6",
+      "technologyId": "pytorch",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful PyTorch result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pytorch-command-7",
+      "technologyId": "pytorch",
+      "title": "Time the operation",
+      "command": "time python -m pip install torch",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful PyTorch result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "pytorch-command-8",
+      "technologyId": "pytorch",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful PyTorch result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pytorch-command-9",
+      "technologyId": "pytorch",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful PyTorch result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pytorch-command-10",
+      "technologyId": "pytorch",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful PyTorch result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pytorch-command-11",
+      "technologyId": "pytorch",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful PyTorch result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "pytorch-command-12",
+      "technologyId": "pytorch",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful PyTorch result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "tensorflow-keras-command-1",
+      "technologyId": "tensorflow-keras",
+      "title": "Run the primary health check",
+      "command": "python -m pip install tensorflow",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful TensorFlow and Keras result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "tensorflow-keras-command-2",
+      "technologyId": "tensorflow-keras",
+      "title": "Inspect built-in help",
+      "command": "python --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful TensorFlow and Keras result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "tensorflow-keras-command-3",
+      "technologyId": "tensorflow-keras",
+      "title": "Capture version",
+      "command": "python --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful TensorFlow and Keras result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "tensorflow-keras-command-4",
+      "technologyId": "tensorflow-keras",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful TensorFlow and Keras result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "tensorflow-keras-command-5",
+      "technologyId": "tensorflow-keras",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful TensorFlow and Keras result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "tensorflow-keras-command-6",
+      "technologyId": "tensorflow-keras",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful TensorFlow and Keras result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "tensorflow-keras-command-7",
+      "technologyId": "tensorflow-keras",
+      "title": "Time the operation",
+      "command": "time python -m pip install tensorflow",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful TensorFlow and Keras result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "tensorflow-keras-command-8",
+      "technologyId": "tensorflow-keras",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful TensorFlow and Keras result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "tensorflow-keras-command-9",
+      "technologyId": "tensorflow-keras",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful TensorFlow and Keras result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "tensorflow-keras-command-10",
+      "technologyId": "tensorflow-keras",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful TensorFlow and Keras result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "tensorflow-keras-command-11",
+      "technologyId": "tensorflow-keras",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful TensorFlow and Keras result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "tensorflow-keras-command-12",
+      "technologyId": "tensorflow-keras",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful TensorFlow and Keras result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "hugging-face-command-1",
+      "technologyId": "hugging-face",
+      "title": "Run the primary health check",
+      "command": "python -m pip install transformers",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Hugging Face result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "hugging-face-command-2",
+      "technologyId": "hugging-face",
+      "title": "Inspect built-in help",
+      "command": "python --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Hugging Face result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "hugging-face-command-3",
+      "technologyId": "hugging-face",
+      "title": "Capture version",
+      "command": "python --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Hugging Face result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "hugging-face-command-4",
+      "technologyId": "hugging-face",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Hugging Face result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "hugging-face-command-5",
+      "technologyId": "hugging-face",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Hugging Face result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "hugging-face-command-6",
+      "technologyId": "hugging-face",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Hugging Face result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "hugging-face-command-7",
+      "technologyId": "hugging-face",
+      "title": "Time the operation",
+      "command": "time python -m pip install transformers",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Hugging Face result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "hugging-face-command-8",
+      "technologyId": "hugging-face",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Hugging Face result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "hugging-face-command-9",
+      "technologyId": "hugging-face",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Hugging Face result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "hugging-face-command-10",
+      "technologyId": "hugging-face",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Hugging Face result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "hugging-face-command-11",
+      "technologyId": "hugging-face",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Hugging Face result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "hugging-face-command-12",
+      "technologyId": "hugging-face",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Hugging Face result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "langchain-command-1",
+      "technologyId": "langchain",
+      "title": "Run the primary health check",
+      "command": "python -m pip install langchain",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful LangChain result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "langchain-command-2",
+      "technologyId": "langchain",
+      "title": "Inspect built-in help",
+      "command": "python --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful LangChain result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "langchain-command-3",
+      "technologyId": "langchain",
+      "title": "Capture version",
+      "command": "python --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful LangChain result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "langchain-command-4",
+      "technologyId": "langchain",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful LangChain result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "langchain-command-5",
+      "technologyId": "langchain",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful LangChain result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "langchain-command-6",
+      "technologyId": "langchain",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful LangChain result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "langchain-command-7",
+      "technologyId": "langchain",
+      "title": "Time the operation",
+      "command": "time python -m pip install langchain",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful LangChain result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "langchain-command-8",
+      "technologyId": "langchain",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful LangChain result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "langchain-command-9",
+      "technologyId": "langchain",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful LangChain result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "langchain-command-10",
+      "technologyId": "langchain",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful LangChain result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "langchain-command-11",
+      "technologyId": "langchain",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful LangChain result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "langchain-command-12",
+      "technologyId": "langchain",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful LangChain result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "llamaindex-command-1",
+      "technologyId": "llamaindex",
+      "title": "Run the primary health check",
+      "command": "python -m pip install llama-index",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful LlamaIndex result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "llamaindex-command-2",
+      "technologyId": "llamaindex",
+      "title": "Inspect built-in help",
+      "command": "python --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful LlamaIndex result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "llamaindex-command-3",
+      "technologyId": "llamaindex",
+      "title": "Capture version",
+      "command": "python --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful LlamaIndex result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "llamaindex-command-4",
+      "technologyId": "llamaindex",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful LlamaIndex result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "llamaindex-command-5",
+      "technologyId": "llamaindex",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful LlamaIndex result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "llamaindex-command-6",
+      "technologyId": "llamaindex",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful LlamaIndex result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "llamaindex-command-7",
+      "technologyId": "llamaindex",
+      "title": "Time the operation",
+      "command": "time python -m pip install llama-index",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful LlamaIndex result with no fatal diagnostics.",
+      "safety": "caution"
+    },
+    {
+      "id": "llamaindex-command-8",
+      "technologyId": "llamaindex",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful LlamaIndex result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "llamaindex-command-9",
+      "technologyId": "llamaindex",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful LlamaIndex result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "llamaindex-command-10",
+      "technologyId": "llamaindex",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful LlamaIndex result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "llamaindex-command-11",
+      "technologyId": "llamaindex",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful LlamaIndex result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "llamaindex-command-12",
+      "technologyId": "llamaindex",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful LlamaIndex result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "spark-pyspark-command-1",
+      "technologyId": "spark-pyspark",
+      "title": "Run the primary health check",
+      "command": "spark-submit job.py",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Spark and PySpark result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "spark-pyspark-command-2",
+      "technologyId": "spark-pyspark",
+      "title": "Inspect built-in help",
+      "command": "spark-submit --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Spark and PySpark result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "spark-pyspark-command-3",
+      "technologyId": "spark-pyspark",
+      "title": "Capture version",
+      "command": "spark-submit --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Spark and PySpark result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "spark-pyspark-command-4",
+      "technologyId": "spark-pyspark",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Spark and PySpark result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "spark-pyspark-command-5",
+      "technologyId": "spark-pyspark",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Spark and PySpark result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "spark-pyspark-command-6",
+      "technologyId": "spark-pyspark",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Spark and PySpark result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "spark-pyspark-command-7",
+      "technologyId": "spark-pyspark",
+      "title": "Time the operation",
+      "command": "time spark-submit job.py",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Spark and PySpark result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "spark-pyspark-command-8",
+      "technologyId": "spark-pyspark",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Spark and PySpark result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "spark-pyspark-command-9",
+      "technologyId": "spark-pyspark",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Spark and PySpark result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "spark-pyspark-command-10",
+      "technologyId": "spark-pyspark",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Spark and PySpark result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "spark-pyspark-command-11",
+      "technologyId": "spark-pyspark",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Spark and PySpark result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "spark-pyspark-command-12",
+      "technologyId": "spark-pyspark",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Spark and PySpark result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kafka-command-1",
+      "technologyId": "kafka",
+      "title": "Run the primary health check",
+      "command": "bin/kafka-topics.sh --bootstrap-server localhost:9092 --list",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Kafka result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kafka-command-2",
+      "technologyId": "kafka",
+      "title": "Inspect built-in help",
+      "command": "bin/kafka-topics.sh --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Kafka result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kafka-command-3",
+      "technologyId": "kafka",
+      "title": "Capture version",
+      "command": "bin/kafka-topics.sh --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Kafka result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kafka-command-4",
+      "technologyId": "kafka",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Kafka result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kafka-command-5",
+      "technologyId": "kafka",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Kafka result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kafka-command-6",
+      "technologyId": "kafka",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Kafka result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kafka-command-7",
+      "technologyId": "kafka",
+      "title": "Time the operation",
+      "command": "time bin/kafka-topics.sh --bootstrap-server localhost:9092 --list",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Kafka result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kafka-command-8",
+      "technologyId": "kafka",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Kafka result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kafka-command-9",
+      "technologyId": "kafka",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Kafka result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kafka-command-10",
+      "technologyId": "kafka",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Kafka result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kafka-command-11",
+      "technologyId": "kafka",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Kafka result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kafka-command-12",
+      "technologyId": "kafka",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Kafka result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "airflow-command-1",
+      "technologyId": "airflow",
+      "title": "Run the primary health check",
+      "command": "airflow dags list",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Airflow result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "airflow-command-2",
+      "technologyId": "airflow",
+      "title": "Inspect built-in help",
+      "command": "airflow --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Airflow result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "airflow-command-3",
+      "technologyId": "airflow",
+      "title": "Capture version",
+      "command": "airflow --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Airflow result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "airflow-command-4",
+      "technologyId": "airflow",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Airflow result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "airflow-command-5",
+      "technologyId": "airflow",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Airflow result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "airflow-command-6",
+      "technologyId": "airflow",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Airflow result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "airflow-command-7",
+      "technologyId": "airflow",
+      "title": "Time the operation",
+      "command": "time airflow dags list",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Airflow result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "airflow-command-8",
+      "technologyId": "airflow",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Airflow result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "airflow-command-9",
+      "technologyId": "airflow",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Airflow result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "airflow-command-10",
+      "technologyId": "airflow",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Airflow result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "airflow-command-11",
+      "technologyId": "airflow",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Airflow result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "airflow-command-12",
+      "technologyId": "airflow",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Apache Airflow result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbt-command-1",
+      "technologyId": "dbt",
+      "title": "Run the primary health check",
+      "command": "dbt build",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful dbt result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbt-command-2",
+      "technologyId": "dbt",
+      "title": "Inspect built-in help",
+      "command": "dbt --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful dbt result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbt-command-3",
+      "technologyId": "dbt",
+      "title": "Capture version",
+      "command": "dbt --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful dbt result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbt-command-4",
+      "technologyId": "dbt",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful dbt result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbt-command-5",
+      "technologyId": "dbt",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful dbt result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbt-command-6",
+      "technologyId": "dbt",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful dbt result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbt-command-7",
+      "technologyId": "dbt",
+      "title": "Time the operation",
+      "command": "time dbt build",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful dbt result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbt-command-8",
+      "technologyId": "dbt",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful dbt result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbt-command-9",
+      "technologyId": "dbt",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful dbt result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbt-command-10",
+      "technologyId": "dbt",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful dbt result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbt-command-11",
+      "technologyId": "dbt",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful dbt result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dbt-command-12",
+      "technologyId": "dbt",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful dbt result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jupyter-command-1",
+      "technologyId": "jupyter",
+      "title": "Run the primary health check",
+      "command": "jupyter lab",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Jupyter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jupyter-command-2",
+      "technologyId": "jupyter",
+      "title": "Inspect built-in help",
+      "command": "jupyter --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Jupyter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jupyter-command-3",
+      "technologyId": "jupyter",
+      "title": "Capture version",
+      "command": "jupyter --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Jupyter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jupyter-command-4",
+      "technologyId": "jupyter",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Jupyter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jupyter-command-5",
+      "technologyId": "jupyter",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Jupyter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jupyter-command-6",
+      "technologyId": "jupyter",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Jupyter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jupyter-command-7",
+      "technologyId": "jupyter",
+      "title": "Time the operation",
+      "command": "time jupyter lab",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Jupyter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jupyter-command-8",
+      "technologyId": "jupyter",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Jupyter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jupyter-command-9",
+      "technologyId": "jupyter",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Jupyter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jupyter-command-10",
+      "technologyId": "jupyter",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Jupyter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jupyter-command-11",
+      "technologyId": "jupyter",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Jupyter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "jupyter-command-12",
+      "technologyId": "jupyter",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Jupyter result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "git-command-1",
+      "technologyId": "git",
+      "title": "Run the primary health check",
+      "command": "git status --short",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Git result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "git-command-2",
+      "technologyId": "git",
+      "title": "Inspect built-in help",
+      "command": "git --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Git result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "git-command-3",
+      "technologyId": "git",
+      "title": "Capture version",
+      "command": "git --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Git result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "git-command-4",
+      "technologyId": "git",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Git result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "git-command-5",
+      "technologyId": "git",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Git result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "git-command-6",
+      "technologyId": "git",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Git result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "git-command-7",
+      "technologyId": "git",
+      "title": "Time the operation",
+      "command": "time git status --short",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Git result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "git-command-8",
+      "technologyId": "git",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Git result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "git-command-9",
+      "technologyId": "git",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Git result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "git-command-10",
+      "technologyId": "git",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Git result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "git-command-11",
+      "technologyId": "git",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Git result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "git-command-12",
+      "technologyId": "git",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Git result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "linux-command-1",
+      "technologyId": "linux",
+      "title": "Run the primary health check",
+      "command": "uname -a",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Linux Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "linux-command-2",
+      "technologyId": "linux",
+      "title": "Inspect built-in help",
+      "command": "uname --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Linux Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "linux-command-3",
+      "technologyId": "linux",
+      "title": "Capture version",
+      "command": "uname --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Linux Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "linux-command-4",
+      "technologyId": "linux",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Linux Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "linux-command-5",
+      "technologyId": "linux",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Linux Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "linux-command-6",
+      "technologyId": "linux",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Linux Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "linux-command-7",
+      "technologyId": "linux",
+      "title": "Time the operation",
+      "command": "time uname -a",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Linux Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "linux-command-8",
+      "technologyId": "linux",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Linux Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "linux-command-9",
+      "technologyId": "linux",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Linux Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "linux-command-10",
+      "technologyId": "linux",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Linux Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "linux-command-11",
+      "technologyId": "linux",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Linux Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "linux-command-12",
+      "technologyId": "linux",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Linux Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "docker-command-1",
+      "technologyId": "docker",
+      "title": "Run the primary health check",
+      "command": "docker system info",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Docker result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "docker-command-2",
+      "technologyId": "docker",
+      "title": "Inspect built-in help",
+      "command": "docker --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Docker result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "docker-command-3",
+      "technologyId": "docker",
+      "title": "Capture version",
+      "command": "docker --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Docker result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "docker-command-4",
+      "technologyId": "docker",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Docker result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "docker-command-5",
+      "technologyId": "docker",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Docker result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "docker-command-6",
+      "technologyId": "docker",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Docker result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "docker-command-7",
+      "technologyId": "docker",
+      "title": "Time the operation",
+      "command": "time docker system info",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Docker result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "docker-command-8",
+      "technologyId": "docker",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Docker result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "docker-command-9",
+      "technologyId": "docker",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Docker result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "docker-command-10",
+      "technologyId": "docker",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Docker result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "docker-command-11",
+      "technologyId": "docker",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Docker result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "docker-command-12",
+      "technologyId": "docker",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Docker result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kubernetes-command-1",
+      "technologyId": "kubernetes",
+      "title": "Run the primary health check",
+      "command": "kubectl cluster-info",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Kubernetes result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kubernetes-command-2",
+      "technologyId": "kubernetes",
+      "title": "Inspect built-in help",
+      "command": "kubectl --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Kubernetes result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kubernetes-command-3",
+      "technologyId": "kubernetes",
+      "title": "Capture version",
+      "command": "kubectl --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Kubernetes result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kubernetes-command-4",
+      "technologyId": "kubernetes",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Kubernetes result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kubernetes-command-5",
+      "technologyId": "kubernetes",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Kubernetes result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kubernetes-command-6",
+      "technologyId": "kubernetes",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Kubernetes result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kubernetes-command-7",
+      "technologyId": "kubernetes",
+      "title": "Time the operation",
+      "command": "time kubectl cluster-info",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Kubernetes result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kubernetes-command-8",
+      "technologyId": "kubernetes",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Kubernetes result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kubernetes-command-9",
+      "technologyId": "kubernetes",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Kubernetes result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kubernetes-command-10",
+      "technologyId": "kubernetes",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Kubernetes result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kubernetes-command-11",
+      "technologyId": "kubernetes",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Kubernetes result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "kubernetes-command-12",
+      "technologyId": "kubernetes",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Kubernetes result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "helm-command-1",
+      "technologyId": "helm",
+      "title": "Run the primary health check",
+      "command": "helm lint ./chart",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Helm result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "helm-command-2",
+      "technologyId": "helm",
+      "title": "Inspect built-in help",
+      "command": "helm --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Helm result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "helm-command-3",
+      "technologyId": "helm",
+      "title": "Capture version",
+      "command": "helm --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Helm result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "helm-command-4",
+      "technologyId": "helm",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Helm result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "helm-command-5",
+      "technologyId": "helm",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Helm result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "helm-command-6",
+      "technologyId": "helm",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Helm result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "helm-command-7",
+      "technologyId": "helm",
+      "title": "Time the operation",
+      "command": "time helm lint ./chart",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Helm result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "helm-command-8",
+      "technologyId": "helm",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Helm result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "helm-command-9",
+      "technologyId": "helm",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Helm result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "helm-command-10",
+      "technologyId": "helm",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Helm result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "helm-command-11",
+      "technologyId": "helm",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Helm result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "helm-command-12",
+      "technologyId": "helm",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Helm result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "terraform-command-1",
+      "technologyId": "terraform",
+      "title": "Run the primary health check",
+      "command": "terraform plan",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Terraform result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "terraform-command-2",
+      "technologyId": "terraform",
+      "title": "Inspect built-in help",
+      "command": "terraform --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Terraform result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "terraform-command-3",
+      "technologyId": "terraform",
+      "title": "Capture version",
+      "command": "terraform --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Terraform result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "terraform-command-4",
+      "technologyId": "terraform",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Terraform result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "terraform-command-5",
+      "technologyId": "terraform",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Terraform result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "terraform-command-6",
+      "technologyId": "terraform",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Terraform result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "terraform-command-7",
+      "technologyId": "terraform",
+      "title": "Time the operation",
+      "command": "time terraform plan",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Terraform result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "terraform-command-8",
+      "technologyId": "terraform",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Terraform result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "terraform-command-9",
+      "technologyId": "terraform",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Terraform result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "terraform-command-10",
+      "technologyId": "terraform",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Terraform result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "terraform-command-11",
+      "technologyId": "terraform",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Terraform result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "terraform-command-12",
+      "technologyId": "terraform",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Terraform result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ansible-command-1",
+      "technologyId": "ansible",
+      "title": "Run the primary health check",
+      "command": "ansible-playbook --check playbook.yml",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Ansible result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ansible-command-2",
+      "technologyId": "ansible",
+      "title": "Inspect built-in help",
+      "command": "ansible-playbook --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Ansible result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ansible-command-3",
+      "technologyId": "ansible",
+      "title": "Capture version",
+      "command": "ansible-playbook --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Ansible result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ansible-command-4",
+      "technologyId": "ansible",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Ansible result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ansible-command-5",
+      "technologyId": "ansible",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Ansible result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ansible-command-6",
+      "technologyId": "ansible",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Ansible result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ansible-command-7",
+      "technologyId": "ansible",
+      "title": "Time the operation",
+      "command": "time ansible-playbook --check playbook.yml",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Ansible result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ansible-command-8",
+      "technologyId": "ansible",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Ansible result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ansible-command-9",
+      "technologyId": "ansible",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Ansible result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ansible-command-10",
+      "technologyId": "ansible",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Ansible result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ansible-command-11",
+      "technologyId": "ansible",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Ansible result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "ansible-command-12",
+      "technologyId": "ansible",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Ansible result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cicd-command-1",
+      "technologyId": "cicd",
+      "title": "Run the primary health check",
+      "command": "act --list",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful CI/CD Pipelines result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cicd-command-2",
+      "technologyId": "cicd",
+      "title": "Inspect built-in help",
+      "command": "act --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful CI/CD Pipelines result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cicd-command-3",
+      "technologyId": "cicd",
+      "title": "Capture version",
+      "command": "act --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful CI/CD Pipelines result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cicd-command-4",
+      "technologyId": "cicd",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful CI/CD Pipelines result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cicd-command-5",
+      "technologyId": "cicd",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful CI/CD Pipelines result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cicd-command-6",
+      "technologyId": "cicd",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful CI/CD Pipelines result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cicd-command-7",
+      "technologyId": "cicd",
+      "title": "Time the operation",
+      "command": "time act --list",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful CI/CD Pipelines result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cicd-command-8",
+      "technologyId": "cicd",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful CI/CD Pipelines result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cicd-command-9",
+      "technologyId": "cicd",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful CI/CD Pipelines result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cicd-command-10",
+      "technologyId": "cicd",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful CI/CD Pipelines result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cicd-command-11",
+      "technologyId": "cicd",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful CI/CD Pipelines result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cicd-command-12",
+      "technologyId": "cicd",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful CI/CD Pipelines result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "observability-command-1",
+      "technologyId": "observability",
+      "title": "Run the primary health check",
+      "command": "otelcol --config config.yaml",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Observability result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "observability-command-2",
+      "technologyId": "observability",
+      "title": "Inspect built-in help",
+      "command": "otelcol --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Observability result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "observability-command-3",
+      "technologyId": "observability",
+      "title": "Capture version",
+      "command": "otelcol --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Observability result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "observability-command-4",
+      "technologyId": "observability",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Observability result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "observability-command-5",
+      "technologyId": "observability",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Observability result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "observability-command-6",
+      "technologyId": "observability",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Observability result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "observability-command-7",
+      "technologyId": "observability",
+      "title": "Time the operation",
+      "command": "time otelcol --config config.yaml",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Observability result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "observability-command-8",
+      "technologyId": "observability",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Observability result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "observability-command-9",
+      "technologyId": "observability",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Observability result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "observability-command-10",
+      "technologyId": "observability",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Observability result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "observability-command-11",
+      "technologyId": "observability",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Observability result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "observability-command-12",
+      "technologyId": "observability",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Observability result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "aws-command-1",
+      "technologyId": "aws",
+      "title": "Run the primary health check",
+      "command": "aws sts get-caller-identity",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Amazon Web Services result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "aws-command-2",
+      "technologyId": "aws",
+      "title": "Inspect built-in help",
+      "command": "aws --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Amazon Web Services result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "aws-command-3",
+      "technologyId": "aws",
+      "title": "Capture version",
+      "command": "aws --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Amazon Web Services result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "aws-command-4",
+      "technologyId": "aws",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Amazon Web Services result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "aws-command-5",
+      "technologyId": "aws",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Amazon Web Services result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "aws-command-6",
+      "technologyId": "aws",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Amazon Web Services result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "aws-command-7",
+      "technologyId": "aws",
+      "title": "Time the operation",
+      "command": "time aws sts get-caller-identity",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Amazon Web Services result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "aws-command-8",
+      "technologyId": "aws",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Amazon Web Services result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "aws-command-9",
+      "technologyId": "aws",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Amazon Web Services result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "aws-command-10",
+      "technologyId": "aws",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Amazon Web Services result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "aws-command-11",
+      "technologyId": "aws",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Amazon Web Services result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "aws-command-12",
+      "technologyId": "aws",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Amazon Web Services result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "azure-command-1",
+      "technologyId": "azure",
+      "title": "Run the primary health check",
+      "command": "az account show",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Microsoft Azure result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "azure-command-2",
+      "technologyId": "azure",
+      "title": "Inspect built-in help",
+      "command": "az --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Microsoft Azure result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "azure-command-3",
+      "technologyId": "azure",
+      "title": "Capture version",
+      "command": "az --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Microsoft Azure result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "azure-command-4",
+      "technologyId": "azure",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Microsoft Azure result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "azure-command-5",
+      "technologyId": "azure",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Microsoft Azure result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "azure-command-6",
+      "technologyId": "azure",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Microsoft Azure result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "azure-command-7",
+      "technologyId": "azure",
+      "title": "Time the operation",
+      "command": "time az account show",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Microsoft Azure result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "azure-command-8",
+      "technologyId": "azure",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Microsoft Azure result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "azure-command-9",
+      "technologyId": "azure",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Microsoft Azure result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "azure-command-10",
+      "technologyId": "azure",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Microsoft Azure result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "azure-command-11",
+      "technologyId": "azure",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Microsoft Azure result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "azure-command-12",
+      "technologyId": "azure",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Microsoft Azure result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "gcp-command-1",
+      "technologyId": "gcp",
+      "title": "Run the primary health check",
+      "command": "gcloud config list",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Google Cloud result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "gcp-command-2",
+      "technologyId": "gcp",
+      "title": "Inspect built-in help",
+      "command": "gcloud --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Google Cloud result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "gcp-command-3",
+      "technologyId": "gcp",
+      "title": "Capture version",
+      "command": "gcloud --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Google Cloud result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "gcp-command-4",
+      "technologyId": "gcp",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Google Cloud result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "gcp-command-5",
+      "technologyId": "gcp",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Google Cloud result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "gcp-command-6",
+      "technologyId": "gcp",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Google Cloud result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "gcp-command-7",
+      "technologyId": "gcp",
+      "title": "Time the operation",
+      "command": "time gcloud config list",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Google Cloud result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "gcp-command-8",
+      "technologyId": "gcp",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Google Cloud result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "gcp-command-9",
+      "technologyId": "gcp",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Google Cloud result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "gcp-command-10",
+      "technologyId": "gcp",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Google Cloud result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "gcp-command-11",
+      "technologyId": "gcp",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Google Cloud result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "gcp-command-12",
+      "technologyId": "gcp",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Google Cloud result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cloud-security-command-1",
+      "technologyId": "cloud-security",
+      "title": "Run the primary health check",
+      "command": "cosign verify <image>",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful Cloud and Supply-Chain Security result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cloud-security-command-2",
+      "technologyId": "cloud-security",
+      "title": "Inspect built-in help",
+      "command": "cosign --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful Cloud and Supply-Chain Security result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cloud-security-command-3",
+      "technologyId": "cloud-security",
+      "title": "Capture version",
+      "command": "cosign --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful Cloud and Supply-Chain Security result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cloud-security-command-4",
+      "technologyId": "cloud-security",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful Cloud and Supply-Chain Security result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cloud-security-command-5",
+      "technologyId": "cloud-security",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful Cloud and Supply-Chain Security result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cloud-security-command-6",
+      "technologyId": "cloud-security",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful Cloud and Supply-Chain Security result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cloud-security-command-7",
+      "technologyId": "cloud-security",
+      "title": "Time the operation",
+      "command": "time cosign verify <image>",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful Cloud and Supply-Chain Security result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cloud-security-command-8",
+      "technologyId": "cloud-security",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful Cloud and Supply-Chain Security result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cloud-security-command-9",
+      "technologyId": "cloud-security",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful Cloud and Supply-Chain Security result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cloud-security-command-10",
+      "technologyId": "cloud-security",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful Cloud and Supply-Chain Security result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cloud-security-command-11",
+      "technologyId": "cloud-security",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful Cloud and Supply-Chain Security result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "cloud-security-command-12",
+      "technologyId": "cloud-security",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful Cloud and Supply-Chain Security result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dns-tls-command-1",
+      "technologyId": "dns-tls",
+      "title": "Run the primary health check",
+      "command": "openssl s_client -connect example.com:443 -servername example.com",
+      "purpose": "Verify the toolchain or service boundary before deeper work.",
+      "platform": "all",
+      "expectedResult": "A successful DNS and TLS Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dns-tls-command-2",
+      "technologyId": "dns-tls",
+      "title": "Inspect built-in help",
+      "command": "openssl --help",
+      "purpose": "Discover supported commands and flags locally.",
+      "platform": "all",
+      "expectedResult": "A successful DNS and TLS Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dns-tls-command-3",
+      "technologyId": "dns-tls",
+      "title": "Capture version",
+      "command": "openssl --version",
+      "purpose": "Record the tool version in diagnostic evidence.",
+      "platform": "all",
+      "expectedResult": "A successful DNS and TLS Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dns-tls-command-4",
+      "technologyId": "dns-tls",
+      "title": "Inspect configuration",
+      "command": "rg \"version|image|endpoint|region\" .",
+      "purpose": "Locate runtime and deployment configuration.",
+      "platform": "all",
+      "expectedResult": "A successful DNS and TLS Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dns-tls-command-5",
+      "technologyId": "dns-tls",
+      "title": "Review recent changes",
+      "command": "git diff --stat",
+      "purpose": "Bound the likely source of a regression.",
+      "platform": "all",
+      "expectedResult": "A successful DNS and TLS Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dns-tls-command-6",
+      "technologyId": "dns-tls",
+      "title": "Run focused verification",
+      "command": "<test-command> --filter <name>",
+      "purpose": "Shorten the feedback loop around one behavior.",
+      "platform": "all",
+      "expectedResult": "A successful DNS and TLS Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dns-tls-command-7",
+      "technologyId": "dns-tls",
+      "title": "Time the operation",
+      "command": "time openssl s_client -connect example.com:443 -servername example.com",
+      "purpose": "Measure wall-clock behavior rather than estimating.",
+      "platform": "all",
+      "expectedResult": "A successful DNS and TLS Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dns-tls-command-8",
+      "technologyId": "dns-tls",
+      "title": "Capture logs",
+      "command": "<tool> logs --since 10m",
+      "purpose": "Collect a bounded diagnostic window.",
+      "platform": "all",
+      "expectedResult": "A successful DNS and TLS Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dns-tls-command-9",
+      "technologyId": "dns-tls",
+      "title": "Inspect resource use",
+      "command": "ps -eo pid,pcpu,pmem,comm",
+      "purpose": "Identify CPU or memory pressure.",
+      "platform": "all",
+      "expectedResult": "A successful DNS and TLS Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dns-tls-command-10",
+      "technologyId": "dns-tls",
+      "title": "Inspect network listeners",
+      "command": "ss -tulpn",
+      "purpose": "Confirm service bindings and port ownership.",
+      "platform": "all",
+      "expectedResult": "A successful DNS and TLS Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dns-tls-command-11",
+      "technologyId": "dns-tls",
+      "title": "Validate before applying",
+      "command": "<tool> validate",
+      "purpose": "Catch configuration errors before mutation.",
+      "platform": "all",
+      "expectedResult": "A successful DNS and TLS Operations result with no fatal diagnostics.",
+      "safety": "safe"
+    },
+    {
+      "id": "dns-tls-command-12",
+      "technologyId": "dns-tls",
+      "title": "Show the planned change",
+      "command": "<tool> diff",
+      "purpose": "Review intended state transitions before applying them.",
+      "platform": "all",
+      "expectedResult": "A successful DNS and TLS Operations result with no fatal diagnostics.",
       "safety": "safe"
     }
   ]

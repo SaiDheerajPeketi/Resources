@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r10",
+  "version": "2026.09.18-r11",
   "crosswalks": [
     {
       "id": "atlas-001-striver-a2z",
@@ -5758,6 +5758,3846 @@
       "atlasProblemId": "atlas-180",
       "source": "gfg",
       "topicLabel": "Randomized algorithms — Random Set Operations",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-181-striver-a2z",
+      "atlasProblemId": "atlas-181",
+      "source": "striver-a2z",
+      "topicLabel": "Binary lifting — Kth Ancestor Queries",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-181-codehelp-babbar",
+      "atlasProblemId": "atlas-181",
+      "source": "codehelp-babbar",
+      "topicLabel": "Binary lifting — Kth Ancestor Queries",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-181-neetcode",
+      "atlasProblemId": "atlas-181",
+      "source": "neetcode",
+      "topicLabel": "Binary lifting — Kth Ancestor Queries",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-181-gfg",
+      "atlasProblemId": "atlas-181",
+      "source": "gfg",
+      "topicLabel": "Binary lifting — Kth Ancestor Queries",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-182-striver-a2z",
+      "atlasProblemId": "atlas-182",
+      "source": "striver-a2z",
+      "topicLabel": "Binary lifting — Jump Along a Functional Graph",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-182-codehelp-babbar",
+      "atlasProblemId": "atlas-182",
+      "source": "codehelp-babbar",
+      "topicLabel": "Binary lifting — Jump Along a Functional Graph",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-182-neetcode",
+      "atlasProblemId": "atlas-182",
+      "source": "neetcode",
+      "topicLabel": "Binary lifting — Jump Along a Functional Graph",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-182-gfg",
+      "atlasProblemId": "atlas-182",
+      "source": "gfg",
+      "topicLabel": "Binary lifting — Jump Along a Functional Graph",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-183-striver-a2z",
+      "atlasProblemId": "atlas-183",
+      "source": "striver-a2z",
+      "topicLabel": "Binary lifting — Distance After K Jumps",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-183-codehelp-babbar",
+      "atlasProblemId": "atlas-183",
+      "source": "codehelp-babbar",
+      "topicLabel": "Binary lifting — Distance After K Jumps",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-183-neetcode",
+      "atlasProblemId": "atlas-183",
+      "source": "neetcode",
+      "topicLabel": "Binary lifting — Distance After K Jumps",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-183-gfg",
+      "atlasProblemId": "atlas-183",
+      "source": "gfg",
+      "topicLabel": "Binary lifting — Distance After K Jumps",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-184-striver-a2z",
+      "atlasProblemId": "atlas-184",
+      "source": "striver-a2z",
+      "topicLabel": "Binary lifting — Cycle Entry by Doubling",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-184-codehelp-babbar",
+      "atlasProblemId": "atlas-184",
+      "source": "codehelp-babbar",
+      "topicLabel": "Binary lifting — Cycle Entry by Doubling",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-184-neetcode",
+      "atlasProblemId": "atlas-184",
+      "source": "neetcode",
+      "topicLabel": "Binary lifting — Cycle Entry by Doubling",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-184-gfg",
+      "atlasProblemId": "atlas-184",
+      "source": "gfg",
+      "topicLabel": "Binary lifting — Cycle Entry by Doubling",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-185-striver-a2z",
+      "atlasProblemId": "atlas-185",
+      "source": "striver-a2z",
+      "topicLabel": "Binary lifting — Aggregate Values Along Jumps",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-185-codehelp-babbar",
+      "atlasProblemId": "atlas-185",
+      "source": "codehelp-babbar",
+      "topicLabel": "Binary lifting — Aggregate Values Along Jumps",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-185-neetcode",
+      "atlasProblemId": "atlas-185",
+      "source": "neetcode",
+      "topicLabel": "Binary lifting — Aggregate Values Along Jumps",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-185-gfg",
+      "atlasProblemId": "atlas-185",
+      "source": "gfg",
+      "topicLabel": "Binary lifting — Aggregate Values Along Jumps",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-186-striver-a2z",
+      "atlasProblemId": "atlas-186",
+      "source": "striver-a2z",
+      "topicLabel": "Lowest common ancestors — Lowest Common Ancestor Queries",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-186-codehelp-babbar",
+      "atlasProblemId": "atlas-186",
+      "source": "codehelp-babbar",
+      "topicLabel": "Lowest common ancestors — Lowest Common Ancestor Queries",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-186-neetcode",
+      "atlasProblemId": "atlas-186",
+      "source": "neetcode",
+      "topicLabel": "Lowest common ancestors — Lowest Common Ancestor Queries",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-186-gfg",
+      "atlasProblemId": "atlas-186",
+      "source": "gfg",
+      "topicLabel": "Lowest common ancestors — Lowest Common Ancestor Queries",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-187-striver-a2z",
+      "atlasProblemId": "atlas-187",
+      "source": "striver-a2z",
+      "topicLabel": "Lowest common ancestors — Distance Between Tree Nodes",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-187-codehelp-babbar",
+      "atlasProblemId": "atlas-187",
+      "source": "codehelp-babbar",
+      "topicLabel": "Lowest common ancestors — Distance Between Tree Nodes",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-187-neetcode",
+      "atlasProblemId": "atlas-187",
+      "source": "neetcode",
+      "topicLabel": "Lowest common ancestors — Distance Between Tree Nodes",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-187-gfg",
+      "atlasProblemId": "atlas-187",
+      "source": "gfg",
+      "topicLabel": "Lowest common ancestors — Distance Between Tree Nodes",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-188-striver-a2z",
+      "atlasProblemId": "atlas-188",
+      "source": "striver-a2z",
+      "topicLabel": "Lowest common ancestors — Three-Node Meeting Point",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-188-codehelp-babbar",
+      "atlasProblemId": "atlas-188",
+      "source": "codehelp-babbar",
+      "topicLabel": "Lowest common ancestors — Three-Node Meeting Point",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-188-neetcode",
+      "atlasProblemId": "atlas-188",
+      "source": "neetcode",
+      "topicLabel": "Lowest common ancestors — Three-Node Meeting Point",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-188-gfg",
+      "atlasProblemId": "atlas-188",
+      "source": "gfg",
+      "topicLabel": "Lowest common ancestors — Three-Node Meeting Point",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-189-striver-a2z",
+      "atlasProblemId": "atlas-189",
+      "source": "striver-a2z",
+      "topicLabel": "Lowest common ancestors — Ancestor Range Minimum",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-189-codehelp-babbar",
+      "atlasProblemId": "atlas-189",
+      "source": "codehelp-babbar",
+      "topicLabel": "Lowest common ancestors — Ancestor Range Minimum",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-189-neetcode",
+      "atlasProblemId": "atlas-189",
+      "source": "neetcode",
+      "topicLabel": "Lowest common ancestors — Ancestor Range Minimum",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-189-gfg",
+      "atlasProblemId": "atlas-189",
+      "source": "gfg",
+      "topicLabel": "Lowest common ancestors — Ancestor Range Minimum",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-190-striver-a2z",
+      "atlasProblemId": "atlas-190",
+      "source": "striver-a2z",
+      "topicLabel": "Lowest common ancestors — Offline Ancestor Queries",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-190-codehelp-babbar",
+      "atlasProblemId": "atlas-190",
+      "source": "codehelp-babbar",
+      "topicLabel": "Lowest common ancestors — Offline Ancestor Queries",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-190-neetcode",
+      "atlasProblemId": "atlas-190",
+      "source": "neetcode",
+      "topicLabel": "Lowest common ancestors — Offline Ancestor Queries",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-190-gfg",
+      "atlasProblemId": "atlas-190",
+      "source": "gfg",
+      "topicLabel": "Lowest common ancestors — Offline Ancestor Queries",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-191-striver-a2z",
+      "atlasProblemId": "atlas-191",
+      "source": "striver-a2z",
+      "topicLabel": "Strongly connected components — Condense a Directed Graph",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-191-codehelp-babbar",
+      "atlasProblemId": "atlas-191",
+      "source": "codehelp-babbar",
+      "topicLabel": "Strongly connected components — Condense a Directed Graph",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-191-neetcode",
+      "atlasProblemId": "atlas-191",
+      "source": "neetcode",
+      "topicLabel": "Strongly connected components — Condense a Directed Graph",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-191-gfg",
+      "atlasProblemId": "atlas-191",
+      "source": "gfg",
+      "topicLabel": "Strongly connected components — Condense a Directed Graph",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-192-striver-a2z",
+      "atlasProblemId": "atlas-192",
+      "source": "striver-a2z",
+      "topicLabel": "Strongly connected components — Minimum Source Components",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-192-codehelp-babbar",
+      "atlasProblemId": "atlas-192",
+      "source": "codehelp-babbar",
+      "topicLabel": "Strongly connected components — Minimum Source Components",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-192-neetcode",
+      "atlasProblemId": "atlas-192",
+      "source": "neetcode",
+      "topicLabel": "Strongly connected components — Minimum Source Components",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-192-gfg",
+      "atlasProblemId": "atlas-192",
+      "source": "gfg",
+      "topicLabel": "Strongly connected components — Minimum Source Components",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-193-striver-a2z",
+      "atlasProblemId": "atlas-193",
+      "source": "striver-a2z",
+      "topicLabel": "Strongly connected components — Reachability After Condensation",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-193-codehelp-babbar",
+      "atlasProblemId": "atlas-193",
+      "source": "codehelp-babbar",
+      "topicLabel": "Strongly connected components — Reachability After Condensation",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-193-neetcode",
+      "atlasProblemId": "atlas-193",
+      "source": "neetcode",
+      "topicLabel": "Strongly connected components — Reachability After Condensation",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-193-gfg",
+      "atlasProblemId": "atlas-193",
+      "source": "gfg",
+      "topicLabel": "Strongly connected components — Reachability After Condensation",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-194-striver-a2z",
+      "atlasProblemId": "atlas-194",
+      "source": "striver-a2z",
+      "topicLabel": "Strongly connected components — Two-SAT Components",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-194-codehelp-babbar",
+      "atlasProblemId": "atlas-194",
+      "source": "codehelp-babbar",
+      "topicLabel": "Strongly connected components — Two-SAT Components",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-194-neetcode",
+      "atlasProblemId": "atlas-194",
+      "source": "neetcode",
+      "topicLabel": "Strongly connected components — Two-SAT Components",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-194-gfg",
+      "atlasProblemId": "atlas-194",
+      "source": "gfg",
+      "topicLabel": "Strongly connected components — Two-SAT Components",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-195-striver-a2z",
+      "atlasProblemId": "atlas-195",
+      "source": "striver-a2z",
+      "topicLabel": "Strongly connected components — Strongly Connected Pairs",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-195-codehelp-babbar",
+      "atlasProblemId": "atlas-195",
+      "source": "codehelp-babbar",
+      "topicLabel": "Strongly connected components — Strongly Connected Pairs",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-195-neetcode",
+      "atlasProblemId": "atlas-195",
+      "source": "neetcode",
+      "topicLabel": "Strongly connected components — Strongly Connected Pairs",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-195-gfg",
+      "atlasProblemId": "atlas-195",
+      "source": "gfg",
+      "topicLabel": "Strongly connected components — Strongly Connected Pairs",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-196-striver-a2z",
+      "atlasProblemId": "atlas-196",
+      "source": "striver-a2z",
+      "topicLabel": "Maximum flow — Maximum Network Throughput",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-196-codehelp-babbar",
+      "atlasProblemId": "atlas-196",
+      "source": "codehelp-babbar",
+      "topicLabel": "Maximum flow — Maximum Network Throughput",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-196-neetcode",
+      "atlasProblemId": "atlas-196",
+      "source": "neetcode",
+      "topicLabel": "Maximum flow — Maximum Network Throughput",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-196-gfg",
+      "atlasProblemId": "atlas-196",
+      "source": "gfg",
+      "topicLabel": "Maximum flow — Maximum Network Throughput",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-197-striver-a2z",
+      "atlasProblemId": "atlas-197",
+      "source": "striver-a2z",
+      "topicLabel": "Maximum flow — Minimum Capacity Cut",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-197-codehelp-babbar",
+      "atlasProblemId": "atlas-197",
+      "source": "codehelp-babbar",
+      "topicLabel": "Maximum flow — Minimum Capacity Cut",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-197-neetcode",
+      "atlasProblemId": "atlas-197",
+      "source": "neetcode",
+      "topicLabel": "Maximum flow — Minimum Capacity Cut",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-197-gfg",
+      "atlasProblemId": "atlas-197",
+      "source": "gfg",
+      "topicLabel": "Maximum flow — Minimum Capacity Cut",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-198-striver-a2z",
+      "atlasProblemId": "atlas-198",
+      "source": "striver-a2z",
+      "topicLabel": "Maximum flow — Vertex-Capacitated Flow",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-198-codehelp-babbar",
+      "atlasProblemId": "atlas-198",
+      "source": "codehelp-babbar",
+      "topicLabel": "Maximum flow — Vertex-Capacitated Flow",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-198-neetcode",
+      "atlasProblemId": "atlas-198",
+      "source": "neetcode",
+      "topicLabel": "Maximum flow — Vertex-Capacitated Flow",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-198-gfg",
+      "atlasProblemId": "atlas-198",
+      "source": "gfg",
+      "topicLabel": "Maximum flow — Vertex-Capacitated Flow",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-199-striver-a2z",
+      "atlasProblemId": "atlas-199",
+      "source": "striver-a2z",
+      "topicLabel": "Maximum flow — Edge-Disjoint Routes",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-199-codehelp-babbar",
+      "atlasProblemId": "atlas-199",
+      "source": "codehelp-babbar",
+      "topicLabel": "Maximum flow — Edge-Disjoint Routes",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-199-neetcode",
+      "atlasProblemId": "atlas-199",
+      "source": "neetcode",
+      "topicLabel": "Maximum flow — Edge-Disjoint Routes",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-199-gfg",
+      "atlasProblemId": "atlas-199",
+      "source": "gfg",
+      "topicLabel": "Maximum flow — Edge-Disjoint Routes",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-200-striver-a2z",
+      "atlasProblemId": "atlas-200",
+      "source": "striver-a2z",
+      "topicLabel": "Maximum flow — Circulation with Demands",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-200-codehelp-babbar",
+      "atlasProblemId": "atlas-200",
+      "source": "codehelp-babbar",
+      "topicLabel": "Maximum flow — Circulation with Demands",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-200-neetcode",
+      "atlasProblemId": "atlas-200",
+      "source": "neetcode",
+      "topicLabel": "Maximum flow — Circulation with Demands",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-200-gfg",
+      "atlasProblemId": "atlas-200",
+      "source": "gfg",
+      "topicLabel": "Maximum flow — Circulation with Demands",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-201-striver-a2z",
+      "atlasProblemId": "atlas-201",
+      "source": "striver-a2z",
+      "topicLabel": "Bipartite matching — Maximum Worker Assignment",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-201-codehelp-babbar",
+      "atlasProblemId": "atlas-201",
+      "source": "codehelp-babbar",
+      "topicLabel": "Bipartite matching — Maximum Worker Assignment",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-201-neetcode",
+      "atlasProblemId": "atlas-201",
+      "source": "neetcode",
+      "topicLabel": "Bipartite matching — Maximum Worker Assignment",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-201-gfg",
+      "atlasProblemId": "atlas-201",
+      "source": "gfg",
+      "topicLabel": "Bipartite matching — Maximum Worker Assignment",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-202-striver-a2z",
+      "atlasProblemId": "atlas-202",
+      "source": "striver-a2z",
+      "topicLabel": "Bipartite matching — Minimum Path Cover in a DAG",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-202-codehelp-babbar",
+      "atlasProblemId": "atlas-202",
+      "source": "codehelp-babbar",
+      "topicLabel": "Bipartite matching — Minimum Path Cover in a DAG",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-202-neetcode",
+      "atlasProblemId": "atlas-202",
+      "source": "neetcode",
+      "topicLabel": "Bipartite matching — Minimum Path Cover in a DAG",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-202-gfg",
+      "atlasProblemId": "atlas-202",
+      "source": "gfg",
+      "topicLabel": "Bipartite matching — Minimum Path Cover in a DAG",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-203-striver-a2z",
+      "atlasProblemId": "atlas-203",
+      "source": "striver-a2z",
+      "topicLabel": "Bipartite matching — Domino Grid Matching",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-203-codehelp-babbar",
+      "atlasProblemId": "atlas-203",
+      "source": "codehelp-babbar",
+      "topicLabel": "Bipartite matching — Domino Grid Matching",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-203-neetcode",
+      "atlasProblemId": "atlas-203",
+      "source": "neetcode",
+      "topicLabel": "Bipartite matching — Domino Grid Matching",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-203-gfg",
+      "atlasProblemId": "atlas-203",
+      "source": "gfg",
+      "topicLabel": "Bipartite matching — Domino Grid Matching",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-204-striver-a2z",
+      "atlasProblemId": "atlas-204",
+      "source": "striver-a2z",
+      "topicLabel": "Bipartite matching — Stable Capacity Assignment",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-204-codehelp-babbar",
+      "atlasProblemId": "atlas-204",
+      "source": "codehelp-babbar",
+      "topicLabel": "Bipartite matching — Stable Capacity Assignment",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-204-neetcode",
+      "atlasProblemId": "atlas-204",
+      "source": "neetcode",
+      "topicLabel": "Bipartite matching — Stable Capacity Assignment",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-204-gfg",
+      "atlasProblemId": "atlas-204",
+      "source": "gfg",
+      "topicLabel": "Bipartite matching — Stable Capacity Assignment",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-205-striver-a2z",
+      "atlasProblemId": "atlas-205",
+      "source": "striver-a2z",
+      "topicLabel": "Bipartite matching — Minimum Vertex Cover from Matching",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-205-codehelp-babbar",
+      "atlasProblemId": "atlas-205",
+      "source": "codehelp-babbar",
+      "topicLabel": "Bipartite matching — Minimum Vertex Cover from Matching",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-205-neetcode",
+      "atlasProblemId": "atlas-205",
+      "source": "neetcode",
+      "topicLabel": "Bipartite matching — Minimum Vertex Cover from Matching",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-205-gfg",
+      "atlasProblemId": "atlas-205",
+      "source": "gfg",
+      "topicLabel": "Bipartite matching — Minimum Vertex Cover from Matching",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-206-striver-a2z",
+      "atlasProblemId": "atlas-206",
+      "source": "striver-a2z",
+      "topicLabel": "A* search — Heuristic Grid Route",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-206-codehelp-babbar",
+      "atlasProblemId": "atlas-206",
+      "source": "codehelp-babbar",
+      "topicLabel": "A* search — Heuristic Grid Route",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-206-neetcode",
+      "atlasProblemId": "atlas-206",
+      "source": "neetcode",
+      "topicLabel": "A* search — Heuristic Grid Route",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-206-gfg",
+      "atlasProblemId": "atlas-206",
+      "source": "gfg",
+      "topicLabel": "A* search — Heuristic Grid Route",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-207-striver-a2z",
+      "atlasProblemId": "atlas-207",
+      "source": "striver-a2z",
+      "topicLabel": "A* search — Weighted Puzzle Search",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-207-codehelp-babbar",
+      "atlasProblemId": "atlas-207",
+      "source": "codehelp-babbar",
+      "topicLabel": "A* search — Weighted Puzzle Search",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-207-neetcode",
+      "atlasProblemId": "atlas-207",
+      "source": "neetcode",
+      "topicLabel": "A* search — Weighted Puzzle Search",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-207-gfg",
+      "atlasProblemId": "atlas-207",
+      "source": "gfg",
+      "topicLabel": "A* search — Weighted Puzzle Search",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-208-striver-a2z",
+      "atlasProblemId": "atlas-208",
+      "source": "striver-a2z",
+      "topicLabel": "A* search — Goal-Directed Road Path",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-208-codehelp-babbar",
+      "atlasProblemId": "atlas-208",
+      "source": "codehelp-babbar",
+      "topicLabel": "A* search — Goal-Directed Road Path",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-208-neetcode",
+      "atlasProblemId": "atlas-208",
+      "source": "neetcode",
+      "topicLabel": "A* search — Goal-Directed Road Path",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-208-gfg",
+      "atlasProblemId": "atlas-208",
+      "source": "gfg",
+      "topicLabel": "A* search — Goal-Directed Road Path",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-209-striver-a2z",
+      "atlasProblemId": "atlas-209",
+      "source": "striver-a2z",
+      "topicLabel": "A* search — Multi-Goal A*",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-209-codehelp-babbar",
+      "atlasProblemId": "atlas-209",
+      "source": "codehelp-babbar",
+      "topicLabel": "A* search — Multi-Goal A*",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-209-neetcode",
+      "atlasProblemId": "atlas-209",
+      "source": "neetcode",
+      "topicLabel": "A* search — Multi-Goal A*",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-209-gfg",
+      "atlasProblemId": "atlas-209",
+      "source": "gfg",
+      "topicLabel": "A* search — Multi-Goal A*",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-210-striver-a2z",
+      "atlasProblemId": "atlas-210",
+      "source": "striver-a2z",
+      "topicLabel": "A* search — Bidirectional Heuristic Search",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-210-codehelp-babbar",
+      "atlasProblemId": "atlas-210",
+      "source": "codehelp-babbar",
+      "topicLabel": "A* search — Bidirectional Heuristic Search",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-210-neetcode",
+      "atlasProblemId": "atlas-210",
+      "source": "neetcode",
+      "topicLabel": "A* search — Bidirectional Heuristic Search",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-210-gfg",
+      "atlasProblemId": "atlas-210",
+      "source": "gfg",
+      "topicLabel": "A* search — Bidirectional Heuristic Search",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-211-striver-a2z",
+      "atlasProblemId": "atlas-211",
+      "source": "striver-a2z",
+      "topicLabel": "All-pairs shortest paths — Floyd–Warshall Distances",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-211-codehelp-babbar",
+      "atlasProblemId": "atlas-211",
+      "source": "codehelp-babbar",
+      "topicLabel": "All-pairs shortest paths — Floyd–Warshall Distances",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-211-neetcode",
+      "atlasProblemId": "atlas-211",
+      "source": "neetcode",
+      "topicLabel": "All-pairs shortest paths — Floyd–Warshall Distances",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-211-gfg",
+      "atlasProblemId": "atlas-211",
+      "source": "gfg",
+      "topicLabel": "All-pairs shortest paths — Floyd–Warshall Distances",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-212-striver-a2z",
+      "atlasProblemId": "atlas-212",
+      "source": "striver-a2z",
+      "topicLabel": "All-pairs shortest paths — Transitive Closure",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-212-codehelp-babbar",
+      "atlasProblemId": "atlas-212",
+      "source": "codehelp-babbar",
+      "topicLabel": "All-pairs shortest paths — Transitive Closure",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-212-neetcode",
+      "atlasProblemId": "atlas-212",
+      "source": "neetcode",
+      "topicLabel": "All-pairs shortest paths — Transitive Closure",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-212-gfg",
+      "atlasProblemId": "atlas-212",
+      "source": "gfg",
+      "topicLabel": "All-pairs shortest paths — Transitive Closure",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-213-striver-a2z",
+      "atlasProblemId": "atlas-213",
+      "source": "striver-a2z",
+      "topicLabel": "All-pairs shortest paths — Minimum Directed Cycle",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-213-codehelp-babbar",
+      "atlasProblemId": "atlas-213",
+      "source": "codehelp-babbar",
+      "topicLabel": "All-pairs shortest paths — Minimum Directed Cycle",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-213-neetcode",
+      "atlasProblemId": "atlas-213",
+      "source": "neetcode",
+      "topicLabel": "All-pairs shortest paths — Minimum Directed Cycle",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-213-gfg",
+      "atlasProblemId": "atlas-213",
+      "source": "gfg",
+      "topicLabel": "All-pairs shortest paths — Minimum Directed Cycle",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-214-striver-a2z",
+      "atlasProblemId": "atlas-214",
+      "source": "striver-a2z",
+      "topicLabel": "All-pairs shortest paths — Arbitrage Cycle Detection",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-214-codehelp-babbar",
+      "atlasProblemId": "atlas-214",
+      "source": "codehelp-babbar",
+      "topicLabel": "All-pairs shortest paths — Arbitrage Cycle Detection",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-214-neetcode",
+      "atlasProblemId": "atlas-214",
+      "source": "neetcode",
+      "topicLabel": "All-pairs shortest paths — Arbitrage Cycle Detection",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-214-gfg",
+      "atlasProblemId": "atlas-214",
+      "source": "gfg",
+      "topicLabel": "All-pairs shortest paths — Arbitrage Cycle Detection",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-215-striver-a2z",
+      "atlasProblemId": "atlas-215",
+      "source": "striver-a2z",
+      "topicLabel": "All-pairs shortest paths — Dynamic Intermediate Vertices",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-215-codehelp-babbar",
+      "atlasProblemId": "atlas-215",
+      "source": "codehelp-babbar",
+      "topicLabel": "All-pairs shortest paths — Dynamic Intermediate Vertices",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-215-neetcode",
+      "atlasProblemId": "atlas-215",
+      "source": "neetcode",
+      "topicLabel": "All-pairs shortest paths — Dynamic Intermediate Vertices",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-215-gfg",
+      "atlasProblemId": "atlas-215",
+      "source": "gfg",
+      "topicLabel": "All-pairs shortest paths — Dynamic Intermediate Vertices",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-216-striver-a2z",
+      "atlasProblemId": "atlas-216",
+      "source": "striver-a2z",
+      "topicLabel": "0–1 BFS — Minimum Direction Changes",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-216-codehelp-babbar",
+      "atlasProblemId": "atlas-216",
+      "source": "codehelp-babbar",
+      "topicLabel": "0–1 BFS — Minimum Direction Changes",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-216-neetcode",
+      "atlasProblemId": "atlas-216",
+      "source": "neetcode",
+      "topicLabel": "0–1 BFS — Minimum Direction Changes",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-216-gfg",
+      "atlasProblemId": "atlas-216",
+      "source": "gfg",
+      "topicLabel": "0–1 BFS — Minimum Direction Changes",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-217-striver-a2z",
+      "atlasProblemId": "atlas-217",
+      "source": "striver-a2z",
+      "topicLabel": "0–1 BFS — Free and Paid Roads",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-217-codehelp-babbar",
+      "atlasProblemId": "atlas-217",
+      "source": "codehelp-babbar",
+      "topicLabel": "0–1 BFS — Free and Paid Roads",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-217-neetcode",
+      "atlasProblemId": "atlas-217",
+      "source": "neetcode",
+      "topicLabel": "0–1 BFS — Free and Paid Roads",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-217-gfg",
+      "atlasProblemId": "atlas-217",
+      "source": "gfg",
+      "topicLabel": "0–1 BFS — Free and Paid Roads",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-218-striver-a2z",
+      "atlasProblemId": "atlas-218",
+      "source": "striver-a2z",
+      "topicLabel": "0–1 BFS — Binary Grid Cost",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-218-codehelp-babbar",
+      "atlasProblemId": "atlas-218",
+      "source": "codehelp-babbar",
+      "topicLabel": "0–1 BFS — Binary Grid Cost",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-218-neetcode",
+      "atlasProblemId": "atlas-218",
+      "source": "neetcode",
+      "topicLabel": "0–1 BFS — Binary Grid Cost",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-218-gfg",
+      "atlasProblemId": "atlas-218",
+      "source": "gfg",
+      "topicLabel": "0–1 BFS — Binary Grid Cost",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-219-striver-a2z",
+      "atlasProblemId": "atlas-219",
+      "source": "striver-a2z",
+      "topicLabel": "0–1 BFS — Minimum Edge Reversals",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-219-codehelp-babbar",
+      "atlasProblemId": "atlas-219",
+      "source": "codehelp-babbar",
+      "topicLabel": "0–1 BFS — Minimum Edge Reversals",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-219-neetcode",
+      "atlasProblemId": "atlas-219",
+      "source": "neetcode",
+      "topicLabel": "0–1 BFS — Minimum Edge Reversals",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-219-gfg",
+      "atlasProblemId": "atlas-219",
+      "source": "gfg",
+      "topicLabel": "0–1 BFS — Minimum Edge Reversals",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-220-striver-a2z",
+      "atlasProblemId": "atlas-220",
+      "source": "striver-a2z",
+      "topicLabel": "0–1 BFS — Alternating Zero-One Layers",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-220-codehelp-babbar",
+      "atlasProblemId": "atlas-220",
+      "source": "codehelp-babbar",
+      "topicLabel": "0–1 BFS — Alternating Zero-One Layers",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-220-neetcode",
+      "atlasProblemId": "atlas-220",
+      "source": "neetcode",
+      "topicLabel": "0–1 BFS — Alternating Zero-One Layers",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-220-gfg",
+      "atlasProblemId": "atlas-220",
+      "source": "gfg",
+      "topicLabel": "0–1 BFS — Alternating Zero-One Layers",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-221-striver-a2z",
+      "atlasProblemId": "atlas-221",
+      "source": "striver-a2z",
+      "topicLabel": "Euler tours — Flatten Subtree Values",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-221-codehelp-babbar",
+      "atlasProblemId": "atlas-221",
+      "source": "codehelp-babbar",
+      "topicLabel": "Euler tours — Flatten Subtree Values",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-221-neetcode",
+      "atlasProblemId": "atlas-221",
+      "source": "neetcode",
+      "topicLabel": "Euler tours — Flatten Subtree Values",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-221-gfg",
+      "atlasProblemId": "atlas-221",
+      "source": "gfg",
+      "topicLabel": "Euler tours — Flatten Subtree Values",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-222-striver-a2z",
+      "atlasProblemId": "atlas-222",
+      "source": "striver-a2z",
+      "topicLabel": "Euler tours — Subtree Sum Updates",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-222-codehelp-babbar",
+      "atlasProblemId": "atlas-222",
+      "source": "codehelp-babbar",
+      "topicLabel": "Euler tours — Subtree Sum Updates",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-222-neetcode",
+      "atlasProblemId": "atlas-222",
+      "source": "neetcode",
+      "topicLabel": "Euler tours — Subtree Sum Updates",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-222-gfg",
+      "atlasProblemId": "atlas-222",
+      "source": "gfg",
+      "topicLabel": "Euler tours — Subtree Sum Updates",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-223-striver-a2z",
+      "atlasProblemId": "atlas-223",
+      "source": "striver-a2z",
+      "topicLabel": "Euler tours — Ancestor by Entry Times",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-223-codehelp-babbar",
+      "atlasProblemId": "atlas-223",
+      "source": "codehelp-babbar",
+      "topicLabel": "Euler tours — Ancestor by Entry Times",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-223-neetcode",
+      "atlasProblemId": "atlas-223",
+      "source": "neetcode",
+      "topicLabel": "Euler tours — Ancestor by Entry Times",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-223-gfg",
+      "atlasProblemId": "atlas-223",
+      "source": "gfg",
+      "topicLabel": "Euler tours — Ancestor by Entry Times",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-224-striver-a2z",
+      "atlasProblemId": "atlas-224",
+      "source": "striver-a2z",
+      "topicLabel": "Euler tours — Euler Tour Path Difference",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-224-codehelp-babbar",
+      "atlasProblemId": "atlas-224",
+      "source": "codehelp-babbar",
+      "topicLabel": "Euler tours — Euler Tour Path Difference",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-224-neetcode",
+      "atlasProblemId": "atlas-224",
+      "source": "neetcode",
+      "topicLabel": "Euler tours — Euler Tour Path Difference",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-224-gfg",
+      "atlasProblemId": "atlas-224",
+      "source": "gfg",
+      "topicLabel": "Euler tours — Euler Tour Path Difference",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-225-striver-a2z",
+      "atlasProblemId": "atlas-225",
+      "source": "striver-a2z",
+      "topicLabel": "Euler tours — Offline Tree Queries",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-225-codehelp-babbar",
+      "atlasProblemId": "atlas-225",
+      "source": "codehelp-babbar",
+      "topicLabel": "Euler tours — Offline Tree Queries",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-225-neetcode",
+      "atlasProblemId": "atlas-225",
+      "source": "neetcode",
+      "topicLabel": "Euler tours — Offline Tree Queries",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-225-gfg",
+      "atlasProblemId": "atlas-225",
+      "source": "gfg",
+      "topicLabel": "Euler tours — Offline Tree Queries",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-226-striver-a2z",
+      "atlasProblemId": "atlas-226",
+      "source": "striver-a2z",
+      "topicLabel": "Heavy-light decomposition — Path Sum Updates",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-226-codehelp-babbar",
+      "atlasProblemId": "atlas-226",
+      "source": "codehelp-babbar",
+      "topicLabel": "Heavy-light decomposition — Path Sum Updates",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-226-neetcode",
+      "atlasProblemId": "atlas-226",
+      "source": "neetcode",
+      "topicLabel": "Heavy-light decomposition — Path Sum Updates",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-226-gfg",
+      "atlasProblemId": "atlas-226",
+      "source": "gfg",
+      "topicLabel": "Heavy-light decomposition — Path Sum Updates",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-227-striver-a2z",
+      "atlasProblemId": "atlas-227",
+      "source": "striver-a2z",
+      "topicLabel": "Heavy-light decomposition — Path Maximum Queries",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-227-codehelp-babbar",
+      "atlasProblemId": "atlas-227",
+      "source": "codehelp-babbar",
+      "topicLabel": "Heavy-light decomposition — Path Maximum Queries",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-227-neetcode",
+      "atlasProblemId": "atlas-227",
+      "source": "neetcode",
+      "topicLabel": "Heavy-light decomposition — Path Maximum Queries",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-227-gfg",
+      "atlasProblemId": "atlas-227",
+      "source": "gfg",
+      "topicLabel": "Heavy-light decomposition — Path Maximum Queries",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-228-striver-a2z",
+      "atlasProblemId": "atlas-228",
+      "source": "striver-a2z",
+      "topicLabel": "Heavy-light decomposition — First Marked Ancestor",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-228-codehelp-babbar",
+      "atlasProblemId": "atlas-228",
+      "source": "codehelp-babbar",
+      "topicLabel": "Heavy-light decomposition — First Marked Ancestor",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-228-neetcode",
+      "atlasProblemId": "atlas-228",
+      "source": "neetcode",
+      "topicLabel": "Heavy-light decomposition — First Marked Ancestor",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-228-gfg",
+      "atlasProblemId": "atlas-228",
+      "source": "gfg",
+      "topicLabel": "Heavy-light decomposition — First Marked Ancestor",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-229-striver-a2z",
+      "atlasProblemId": "atlas-229",
+      "source": "striver-a2z",
+      "topicLabel": "Heavy-light decomposition — Dynamic Tree Colors",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-229-codehelp-babbar",
+      "atlasProblemId": "atlas-229",
+      "source": "codehelp-babbar",
+      "topicLabel": "Heavy-light decomposition — Dynamic Tree Colors",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-229-neetcode",
+      "atlasProblemId": "atlas-229",
+      "source": "neetcode",
+      "topicLabel": "Heavy-light decomposition — Dynamic Tree Colors",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-229-gfg",
+      "atlasProblemId": "atlas-229",
+      "source": "gfg",
+      "topicLabel": "Heavy-light decomposition — Dynamic Tree Colors",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-230-striver-a2z",
+      "atlasProblemId": "atlas-230",
+      "source": "striver-a2z",
+      "topicLabel": "Heavy-light decomposition — Edge Values on Tree Paths",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-230-codehelp-babbar",
+      "atlasProblemId": "atlas-230",
+      "source": "codehelp-babbar",
+      "topicLabel": "Heavy-light decomposition — Edge Values on Tree Paths",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-230-neetcode",
+      "atlasProblemId": "atlas-230",
+      "source": "neetcode",
+      "topicLabel": "Heavy-light decomposition — Edge Values on Tree Paths",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-230-gfg",
+      "atlasProblemId": "atlas-230",
+      "source": "gfg",
+      "topicLabel": "Heavy-light decomposition — Edge Values on Tree Paths",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-231-striver-a2z",
+      "atlasProblemId": "atlas-231",
+      "source": "striver-a2z",
+      "topicLabel": "Persistent data structures — Versioned Array Updates",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-231-codehelp-babbar",
+      "atlasProblemId": "atlas-231",
+      "source": "codehelp-babbar",
+      "topicLabel": "Persistent data structures — Versioned Array Updates",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-231-neetcode",
+      "atlasProblemId": "atlas-231",
+      "source": "neetcode",
+      "topicLabel": "Persistent data structures — Versioned Array Updates",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-231-gfg",
+      "atlasProblemId": "atlas-231",
+      "source": "gfg",
+      "topicLabel": "Persistent data structures — Versioned Array Updates",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-232-striver-a2z",
+      "atlasProblemId": "atlas-232",
+      "source": "striver-a2z",
+      "topicLabel": "Persistent data structures — Kth Value in a Subarray",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-232-codehelp-babbar",
+      "atlasProblemId": "atlas-232",
+      "source": "codehelp-babbar",
+      "topicLabel": "Persistent data structures — Kth Value in a Subarray",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-232-neetcode",
+      "atlasProblemId": "atlas-232",
+      "source": "neetcode",
+      "topicLabel": "Persistent data structures — Kth Value in a Subarray",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-232-gfg",
+      "atlasProblemId": "atlas-232",
+      "source": "gfg",
+      "topicLabel": "Persistent data structures — Kth Value in a Subarray",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-233-striver-a2z",
+      "atlasProblemId": "atlas-233",
+      "source": "striver-a2z",
+      "topicLabel": "Persistent data structures — Persistent Frequency Tree",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-233-codehelp-babbar",
+      "atlasProblemId": "atlas-233",
+      "source": "codehelp-babbar",
+      "topicLabel": "Persistent data structures — Persistent Frequency Tree",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-233-neetcode",
+      "atlasProblemId": "atlas-233",
+      "source": "neetcode",
+      "topicLabel": "Persistent data structures — Persistent Frequency Tree",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-233-gfg",
+      "atlasProblemId": "atlas-233",
+      "source": "gfg",
+      "topicLabel": "Persistent data structures — Persistent Frequency Tree",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-234-striver-a2z",
+      "atlasProblemId": "atlas-234",
+      "source": "striver-a2z",
+      "topicLabel": "Persistent data structures — Time-Travel Connectivity",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-234-codehelp-babbar",
+      "atlasProblemId": "atlas-234",
+      "source": "codehelp-babbar",
+      "topicLabel": "Persistent data structures — Time-Travel Connectivity",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-234-neetcode",
+      "atlasProblemId": "atlas-234",
+      "source": "neetcode",
+      "topicLabel": "Persistent data structures — Time-Travel Connectivity",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-234-gfg",
+      "atlasProblemId": "atlas-234",
+      "source": "gfg",
+      "topicLabel": "Persistent data structures — Time-Travel Connectivity",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-235-striver-a2z",
+      "atlasProblemId": "atlas-235",
+      "source": "striver-a2z",
+      "topicLabel": "Persistent data structures — Versioned Text Edits",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-235-codehelp-babbar",
+      "atlasProblemId": "atlas-235",
+      "source": "codehelp-babbar",
+      "topicLabel": "Persistent data structures — Versioned Text Edits",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-235-neetcode",
+      "atlasProblemId": "atlas-235",
+      "source": "neetcode",
+      "topicLabel": "Persistent data structures — Versioned Text Edits",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-235-gfg",
+      "atlasProblemId": "atlas-235",
+      "source": "gfg",
+      "topicLabel": "Persistent data structures — Versioned Text Edits",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-236-striver-a2z",
+      "atlasProblemId": "atlas-236",
+      "source": "striver-a2z",
+      "topicLabel": "Sparse tables — Static Range Minimum",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-236-codehelp-babbar",
+      "atlasProblemId": "atlas-236",
+      "source": "codehelp-babbar",
+      "topicLabel": "Sparse tables — Static Range Minimum",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-236-neetcode",
+      "atlasProblemId": "atlas-236",
+      "source": "neetcode",
+      "topicLabel": "Sparse tables — Static Range Minimum",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-236-gfg",
+      "atlasProblemId": "atlas-236",
+      "source": "gfg",
+      "topicLabel": "Sparse tables — Static Range Minimum",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-237-striver-a2z",
+      "atlasProblemId": "atlas-237",
+      "source": "striver-a2z",
+      "topicLabel": "Sparse tables — Range GCD Queries",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-237-codehelp-babbar",
+      "atlasProblemId": "atlas-237",
+      "source": "codehelp-babbar",
+      "topicLabel": "Sparse tables — Range GCD Queries",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-237-neetcode",
+      "atlasProblemId": "atlas-237",
+      "source": "neetcode",
+      "topicLabel": "Sparse tables — Range GCD Queries",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-237-gfg",
+      "atlasProblemId": "atlas-237",
+      "source": "gfg",
+      "topicLabel": "Sparse tables — Range GCD Queries",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-238-striver-a2z",
+      "atlasProblemId": "atlas-238",
+      "source": "striver-a2z",
+      "topicLabel": "Sparse tables — Idempotent Range Maximum",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-238-codehelp-babbar",
+      "atlasProblemId": "atlas-238",
+      "source": "codehelp-babbar",
+      "topicLabel": "Sparse tables — Idempotent Range Maximum",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-238-neetcode",
+      "atlasProblemId": "atlas-238",
+      "source": "neetcode",
+      "topicLabel": "Sparse tables — Idempotent Range Maximum",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-238-gfg",
+      "atlasProblemId": "atlas-238",
+      "source": "gfg",
+      "topicLabel": "Sparse tables — Idempotent Range Maximum",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-239-striver-a2z",
+      "atlasProblemId": "atlas-239",
+      "source": "striver-a2z",
+      "topicLabel": "Sparse tables — Lowest Common Ancestor RMQ",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-239-codehelp-babbar",
+      "atlasProblemId": "atlas-239",
+      "source": "codehelp-babbar",
+      "topicLabel": "Sparse tables — Lowest Common Ancestor RMQ",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-239-neetcode",
+      "atlasProblemId": "atlas-239",
+      "source": "neetcode",
+      "topicLabel": "Sparse tables — Lowest Common Ancestor RMQ",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-239-gfg",
+      "atlasProblemId": "atlas-239",
+      "source": "gfg",
+      "topicLabel": "Sparse tables — Lowest Common Ancestor RMQ",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-240-striver-a2z",
+      "atlasProblemId": "atlas-240",
+      "source": "striver-a2z",
+      "topicLabel": "Sparse tables — Disjoint Sparse Aggregates",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-240-codehelp-babbar",
+      "atlasProblemId": "atlas-240",
+      "source": "codehelp-babbar",
+      "topicLabel": "Sparse tables — Disjoint Sparse Aggregates",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-240-neetcode",
+      "atlasProblemId": "atlas-240",
+      "source": "neetcode",
+      "topicLabel": "Sparse tables — Disjoint Sparse Aggregates",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-240-gfg",
+      "atlasProblemId": "atlas-240",
+      "source": "gfg",
+      "topicLabel": "Sparse tables — Disjoint Sparse Aggregates",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-241-striver-a2z",
+      "atlasProblemId": "atlas-241",
+      "source": "striver-a2z",
+      "topicLabel": "Suffix arrays — Build a Suffix Array",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-241-codehelp-babbar",
+      "atlasProblemId": "atlas-241",
+      "source": "codehelp-babbar",
+      "topicLabel": "Suffix arrays — Build a Suffix Array",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-241-neetcode",
+      "atlasProblemId": "atlas-241",
+      "source": "neetcode",
+      "topicLabel": "Suffix arrays — Build a Suffix Array",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-241-gfg",
+      "atlasProblemId": "atlas-241",
+      "source": "gfg",
+      "topicLabel": "Suffix arrays — Build a Suffix Array",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-242-striver-a2z",
+      "atlasProblemId": "atlas-242",
+      "source": "striver-a2z",
+      "topicLabel": "Suffix arrays — Longest Repeated Substring",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-242-codehelp-babbar",
+      "atlasProblemId": "atlas-242",
+      "source": "codehelp-babbar",
+      "topicLabel": "Suffix arrays — Longest Repeated Substring",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-242-neetcode",
+      "atlasProblemId": "atlas-242",
+      "source": "neetcode",
+      "topicLabel": "Suffix arrays — Longest Repeated Substring",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-242-gfg",
+      "atlasProblemId": "atlas-242",
+      "source": "gfg",
+      "topicLabel": "Suffix arrays — Longest Repeated Substring",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-243-striver-a2z",
+      "atlasProblemId": "atlas-243",
+      "source": "striver-a2z",
+      "topicLabel": "Suffix arrays — Count Distinct Substrings",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-243-codehelp-babbar",
+      "atlasProblemId": "atlas-243",
+      "source": "codehelp-babbar",
+      "topicLabel": "Suffix arrays — Count Distinct Substrings",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-243-neetcode",
+      "atlasProblemId": "atlas-243",
+      "source": "neetcode",
+      "topicLabel": "Suffix arrays — Count Distinct Substrings",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-243-gfg",
+      "atlasProblemId": "atlas-243",
+      "source": "gfg",
+      "topicLabel": "Suffix arrays — Count Distinct Substrings",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-244-striver-a2z",
+      "atlasProblemId": "atlas-244",
+      "source": "striver-a2z",
+      "topicLabel": "Suffix arrays — Pattern Range in Suffix Order",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-244-codehelp-babbar",
+      "atlasProblemId": "atlas-244",
+      "source": "codehelp-babbar",
+      "topicLabel": "Suffix arrays — Pattern Range in Suffix Order",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-244-neetcode",
+      "atlasProblemId": "atlas-244",
+      "source": "neetcode",
+      "topicLabel": "Suffix arrays — Pattern Range in Suffix Order",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-244-gfg",
+      "atlasProblemId": "atlas-244",
+      "source": "gfg",
+      "topicLabel": "Suffix arrays — Pattern Range in Suffix Order",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-245-striver-a2z",
+      "atlasProblemId": "atlas-245",
+      "source": "striver-a2z",
+      "topicLabel": "Suffix arrays — Longest Common Substring by Suffixes",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-245-codehelp-babbar",
+      "atlasProblemId": "atlas-245",
+      "source": "codehelp-babbar",
+      "topicLabel": "Suffix arrays — Longest Common Substring by Suffixes",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-245-neetcode",
+      "atlasProblemId": "atlas-245",
+      "source": "neetcode",
+      "topicLabel": "Suffix arrays — Longest Common Substring by Suffixes",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-245-gfg",
+      "atlasProblemId": "atlas-245",
+      "source": "gfg",
+      "topicLabel": "Suffix arrays — Longest Common Substring by Suffixes",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-246-striver-a2z",
+      "atlasProblemId": "atlas-246",
+      "source": "striver-a2z",
+      "topicLabel": "Suffix automata — Count Distinct Substrings Online",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-246-codehelp-babbar",
+      "atlasProblemId": "atlas-246",
+      "source": "codehelp-babbar",
+      "topicLabel": "Suffix automata — Count Distinct Substrings Online",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-246-neetcode",
+      "atlasProblemId": "atlas-246",
+      "source": "neetcode",
+      "topicLabel": "Suffix automata — Count Distinct Substrings Online",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-246-gfg",
+      "atlasProblemId": "atlas-246",
+      "source": "gfg",
+      "topicLabel": "Suffix automata — Count Distinct Substrings Online",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-247-striver-a2z",
+      "atlasProblemId": "atlas-247",
+      "source": "striver-a2z",
+      "topicLabel": "Suffix automata — Longest Common Substring Automaton",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-247-codehelp-babbar",
+      "atlasProblemId": "atlas-247",
+      "source": "codehelp-babbar",
+      "topicLabel": "Suffix automata — Longest Common Substring Automaton",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-247-neetcode",
+      "atlasProblemId": "atlas-247",
+      "source": "neetcode",
+      "topicLabel": "Suffix automata — Longest Common Substring Automaton",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-247-gfg",
+      "atlasProblemId": "atlas-247",
+      "source": "gfg",
+      "topicLabel": "Suffix automata — Longest Common Substring Automaton",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-248-striver-a2z",
+      "atlasProblemId": "atlas-248",
+      "source": "striver-a2z",
+      "topicLabel": "Suffix automata — Substring Occurrence Counts",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-248-codehelp-babbar",
+      "atlasProblemId": "atlas-248",
+      "source": "codehelp-babbar",
+      "topicLabel": "Suffix automata — Substring Occurrence Counts",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-248-neetcode",
+      "atlasProblemId": "atlas-248",
+      "source": "neetcode",
+      "topicLabel": "Suffix automata — Substring Occurrence Counts",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-248-gfg",
+      "atlasProblemId": "atlas-248",
+      "source": "gfg",
+      "topicLabel": "Suffix automata — Substring Occurrence Counts",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-249-striver-a2z",
+      "atlasProblemId": "atlas-249",
+      "source": "striver-a2z",
+      "topicLabel": "Suffix automata — Kth Lexicographic Substring",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-249-codehelp-babbar",
+      "atlasProblemId": "atlas-249",
+      "source": "codehelp-babbar",
+      "topicLabel": "Suffix automata — Kth Lexicographic Substring",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-249-neetcode",
+      "atlasProblemId": "atlas-249",
+      "source": "neetcode",
+      "topicLabel": "Suffix automata — Kth Lexicographic Substring",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-249-gfg",
+      "atlasProblemId": "atlas-249",
+      "source": "gfg",
+      "topicLabel": "Suffix automata — Kth Lexicographic Substring",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-250-striver-a2z",
+      "atlasProblemId": "atlas-250",
+      "source": "striver-a2z",
+      "topicLabel": "Suffix automata — Minimal Cyclic Shift States",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-250-codehelp-babbar",
+      "atlasProblemId": "atlas-250",
+      "source": "codehelp-babbar",
+      "topicLabel": "Suffix automata — Minimal Cyclic Shift States",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-250-neetcode",
+      "atlasProblemId": "atlas-250",
+      "source": "neetcode",
+      "topicLabel": "Suffix automata — Minimal Cyclic Shift States",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-250-gfg",
+      "atlasProblemId": "atlas-250",
+      "source": "gfg",
+      "topicLabel": "Suffix automata — Minimal Cyclic Shift States",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-251-striver-a2z",
+      "atlasProblemId": "atlas-251",
+      "source": "striver-a2z",
+      "topicLabel": "Aho–Corasick — Multi-Pattern Search",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-251-codehelp-babbar",
+      "atlasProblemId": "atlas-251",
+      "source": "codehelp-babbar",
+      "topicLabel": "Aho–Corasick — Multi-Pattern Search",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-251-neetcode",
+      "atlasProblemId": "atlas-251",
+      "source": "neetcode",
+      "topicLabel": "Aho–Corasick — Multi-Pattern Search",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-251-gfg",
+      "atlasProblemId": "atlas-251",
+      "source": "gfg",
+      "topicLabel": "Aho–Corasick — Multi-Pattern Search",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-252-striver-a2z",
+      "atlasProblemId": "atlas-252",
+      "source": "striver-a2z",
+      "topicLabel": "Aho–Corasick — Forbidden Pattern Automaton",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-252-codehelp-babbar",
+      "atlasProblemId": "atlas-252",
+      "source": "codehelp-babbar",
+      "topicLabel": "Aho–Corasick — Forbidden Pattern Automaton",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-252-neetcode",
+      "atlasProblemId": "atlas-252",
+      "source": "neetcode",
+      "topicLabel": "Aho–Corasick — Forbidden Pattern Automaton",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-252-gfg",
+      "atlasProblemId": "atlas-252",
+      "source": "gfg",
+      "topicLabel": "Aho–Corasick — Forbidden Pattern Automaton",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-253-striver-a2z",
+      "atlasProblemId": "atlas-253",
+      "source": "striver-a2z",
+      "topicLabel": "Aho–Corasick — Dictionary Occurrence Counts",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-253-codehelp-babbar",
+      "atlasProblemId": "atlas-253",
+      "source": "codehelp-babbar",
+      "topicLabel": "Aho–Corasick — Dictionary Occurrence Counts",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-253-neetcode",
+      "atlasProblemId": "atlas-253",
+      "source": "neetcode",
+      "topicLabel": "Aho–Corasick — Dictionary Occurrence Counts",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-253-gfg",
+      "atlasProblemId": "atlas-253",
+      "source": "gfg",
+      "topicLabel": "Aho–Corasick — Dictionary Occurrence Counts",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-254-striver-a2z",
+      "atlasProblemId": "atlas-254",
+      "source": "striver-a2z",
+      "topicLabel": "Aho–Corasick — Streaming Alert Matcher",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-254-codehelp-babbar",
+      "atlasProblemId": "atlas-254",
+      "source": "codehelp-babbar",
+      "topicLabel": "Aho–Corasick — Streaming Alert Matcher",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-254-neetcode",
+      "atlasProblemId": "atlas-254",
+      "source": "neetcode",
+      "topicLabel": "Aho–Corasick — Streaming Alert Matcher",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-254-gfg",
+      "atlasProblemId": "atlas-254",
+      "source": "gfg",
+      "topicLabel": "Aho–Corasick — Streaming Alert Matcher",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-255-striver-a2z",
+      "atlasProblemId": "atlas-255",
+      "source": "striver-a2z",
+      "topicLabel": "Aho–Corasick — Shortest String Covering Patterns",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-255-codehelp-babbar",
+      "atlasProblemId": "atlas-255",
+      "source": "codehelp-babbar",
+      "topicLabel": "Aho–Corasick — Shortest String Covering Patterns",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-255-neetcode",
+      "atlasProblemId": "atlas-255",
+      "source": "neetcode",
+      "topicLabel": "Aho–Corasick — Shortest String Covering Patterns",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-255-gfg",
+      "atlasProblemId": "atlas-255",
+      "source": "gfg",
+      "topicLabel": "Aho–Corasick — Shortest String Covering Patterns",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-256-striver-a2z",
+      "atlasProblemId": "atlas-256",
+      "source": "striver-a2z",
+      "topicLabel": "Advanced rolling hashes — Double-Hash Substring Equality",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-256-codehelp-babbar",
+      "atlasProblemId": "atlas-256",
+      "source": "codehelp-babbar",
+      "topicLabel": "Advanced rolling hashes — Double-Hash Substring Equality",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-256-neetcode",
+      "atlasProblemId": "atlas-256",
+      "source": "neetcode",
+      "topicLabel": "Advanced rolling hashes — Double-Hash Substring Equality",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-256-gfg",
+      "atlasProblemId": "atlas-256",
+      "source": "gfg",
+      "topicLabel": "Advanced rolling hashes — Double-Hash Substring Equality",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-257-striver-a2z",
+      "atlasProblemId": "atlas-257",
+      "source": "striver-a2z",
+      "topicLabel": "Advanced rolling hashes — Palindrome Query Hash",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-257-codehelp-babbar",
+      "atlasProblemId": "atlas-257",
+      "source": "codehelp-babbar",
+      "topicLabel": "Advanced rolling hashes — Palindrome Query Hash",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-257-neetcode",
+      "atlasProblemId": "atlas-257",
+      "source": "neetcode",
+      "topicLabel": "Advanced rolling hashes — Palindrome Query Hash",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-257-gfg",
+      "atlasProblemId": "atlas-257",
+      "source": "gfg",
+      "topicLabel": "Advanced rolling hashes — Palindrome Query Hash",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-258-striver-a2z",
+      "atlasProblemId": "atlas-258",
+      "source": "striver-a2z",
+      "topicLabel": "Advanced rolling hashes — Longest Duplicate Segment",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-258-codehelp-babbar",
+      "atlasProblemId": "atlas-258",
+      "source": "codehelp-babbar",
+      "topicLabel": "Advanced rolling hashes — Longest Duplicate Segment",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-258-neetcode",
+      "atlasProblemId": "atlas-258",
+      "source": "neetcode",
+      "topicLabel": "Advanced rolling hashes — Longest Duplicate Segment",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-258-gfg",
+      "atlasProblemId": "atlas-258",
+      "source": "gfg",
+      "topicLabel": "Advanced rolling hashes — Longest Duplicate Segment",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-259-striver-a2z",
+      "atlasProblemId": "atlas-259",
+      "source": "striver-a2z",
+      "topicLabel": "Advanced rolling hashes — Cyclic Rotation Match",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-259-codehelp-babbar",
+      "atlasProblemId": "atlas-259",
+      "source": "codehelp-babbar",
+      "topicLabel": "Advanced rolling hashes — Cyclic Rotation Match",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-259-neetcode",
+      "atlasProblemId": "atlas-259",
+      "source": "neetcode",
+      "topicLabel": "Advanced rolling hashes — Cyclic Rotation Match",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-259-gfg",
+      "atlasProblemId": "atlas-259",
+      "source": "gfg",
+      "topicLabel": "Advanced rolling hashes — Cyclic Rotation Match",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-260-striver-a2z",
+      "atlasProblemId": "atlas-260",
+      "source": "striver-a2z",
+      "topicLabel": "Advanced rolling hashes — Two-Dimensional Rolling Hash",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-260-codehelp-babbar",
+      "atlasProblemId": "atlas-260",
+      "source": "codehelp-babbar",
+      "topicLabel": "Advanced rolling hashes — Two-Dimensional Rolling Hash",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-260-neetcode",
+      "atlasProblemId": "atlas-260",
+      "source": "neetcode",
+      "topicLabel": "Advanced rolling hashes — Two-Dimensional Rolling Hash",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-260-gfg",
+      "atlasProblemId": "atlas-260",
+      "source": "gfg",
+      "topicLabel": "Advanced rolling hashes — Two-Dimensional Rolling Hash",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-261-striver-a2z",
+      "atlasProblemId": "atlas-261",
+      "source": "striver-a2z",
+      "topicLabel": "Digit dynamic programming — Count Numbers Without Repeated Digits",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-261-codehelp-babbar",
+      "atlasProblemId": "atlas-261",
+      "source": "codehelp-babbar",
+      "topicLabel": "Digit dynamic programming — Count Numbers Without Repeated Digits",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-261-neetcode",
+      "atlasProblemId": "atlas-261",
+      "source": "neetcode",
+      "topicLabel": "Digit dynamic programming — Count Numbers Without Repeated Digits",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-261-gfg",
+      "atlasProblemId": "atlas-261",
+      "source": "gfg",
+      "topicLabel": "Digit dynamic programming — Count Numbers Without Repeated Digits",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-262-striver-a2z",
+      "atlasProblemId": "atlas-262",
+      "source": "striver-a2z",
+      "topicLabel": "Digit dynamic programming — Digit Sum in a Range",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-262-codehelp-babbar",
+      "atlasProblemId": "atlas-262",
+      "source": "codehelp-babbar",
+      "topicLabel": "Digit dynamic programming — Digit Sum in a Range",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-262-neetcode",
+      "atlasProblemId": "atlas-262",
+      "source": "neetcode",
+      "topicLabel": "Digit dynamic programming — Digit Sum in a Range",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-262-gfg",
+      "atlasProblemId": "atlas-262",
+      "source": "gfg",
+      "topicLabel": "Digit dynamic programming — Digit Sum in a Range",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-263-striver-a2z",
+      "atlasProblemId": "atlas-263",
+      "source": "striver-a2z",
+      "topicLabel": "Digit dynamic programming — Numbers Avoiding a Pattern",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-263-codehelp-babbar",
+      "atlasProblemId": "atlas-263",
+      "source": "codehelp-babbar",
+      "topicLabel": "Digit dynamic programming — Numbers Avoiding a Pattern",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-263-neetcode",
+      "atlasProblemId": "atlas-263",
+      "source": "neetcode",
+      "topicLabel": "Digit dynamic programming — Numbers Avoiding a Pattern",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-263-gfg",
+      "atlasProblemId": "atlas-263",
+      "source": "gfg",
+      "topicLabel": "Digit dynamic programming — Numbers Avoiding a Pattern",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-264-striver-a2z",
+      "atlasProblemId": "atlas-264",
+      "source": "striver-a2z",
+      "topicLabel": "Digit dynamic programming — Count Divisible Digit Sequences",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-264-codehelp-babbar",
+      "atlasProblemId": "atlas-264",
+      "source": "codehelp-babbar",
+      "topicLabel": "Digit dynamic programming — Count Divisible Digit Sequences",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-264-neetcode",
+      "atlasProblemId": "atlas-264",
+      "source": "neetcode",
+      "topicLabel": "Digit dynamic programming — Count Divisible Digit Sequences",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-264-gfg",
+      "atlasProblemId": "atlas-264",
+      "source": "gfg",
+      "topicLabel": "Digit dynamic programming — Count Divisible Digit Sequences",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-265-striver-a2z",
+      "atlasProblemId": "atlas-265",
+      "source": "striver-a2z",
+      "topicLabel": "Digit dynamic programming — Kth Number with a Digit Property",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-265-codehelp-babbar",
+      "atlasProblemId": "atlas-265",
+      "source": "codehelp-babbar",
+      "topicLabel": "Digit dynamic programming — Kth Number with a Digit Property",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-265-neetcode",
+      "atlasProblemId": "atlas-265",
+      "source": "neetcode",
+      "topicLabel": "Digit dynamic programming — Kth Number with a Digit Property",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-265-gfg",
+      "atlasProblemId": "atlas-265",
+      "source": "gfg",
+      "topicLabel": "Digit dynamic programming — Kth Number with a Digit Property",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-266-striver-a2z",
+      "atlasProblemId": "atlas-266",
+      "source": "striver-a2z",
+      "topicLabel": "Tree dynamic programming — Maximum Independent Tree Set",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-266-codehelp-babbar",
+      "atlasProblemId": "atlas-266",
+      "source": "codehelp-babbar",
+      "topicLabel": "Tree dynamic programming — Maximum Independent Tree Set",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-266-neetcode",
+      "atlasProblemId": "atlas-266",
+      "source": "neetcode",
+      "topicLabel": "Tree dynamic programming — Maximum Independent Tree Set",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-266-gfg",
+      "atlasProblemId": "atlas-266",
+      "source": "gfg",
+      "topicLabel": "Tree dynamic programming — Maximum Independent Tree Set",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-267-striver-a2z",
+      "atlasProblemId": "atlas-267",
+      "source": "striver-a2z",
+      "topicLabel": "Tree dynamic programming — Tree Diameter States",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-267-codehelp-babbar",
+      "atlasProblemId": "atlas-267",
+      "source": "codehelp-babbar",
+      "topicLabel": "Tree dynamic programming — Tree Diameter States",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-267-neetcode",
+      "atlasProblemId": "atlas-267",
+      "source": "neetcode",
+      "topicLabel": "Tree dynamic programming — Tree Diameter States",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-267-gfg",
+      "atlasProblemId": "atlas-267",
+      "source": "gfg",
+      "topicLabel": "Tree dynamic programming — Tree Diameter States",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-268-striver-a2z",
+      "atlasProblemId": "atlas-268",
+      "source": "striver-a2z",
+      "topicLabel": "Tree dynamic programming — Minimum Tree Cameras",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-268-codehelp-babbar",
+      "atlasProblemId": "atlas-268",
+      "source": "codehelp-babbar",
+      "topicLabel": "Tree dynamic programming — Minimum Tree Cameras",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-268-neetcode",
+      "atlasProblemId": "atlas-268",
+      "source": "neetcode",
+      "topicLabel": "Tree dynamic programming — Minimum Tree Cameras",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-268-gfg",
+      "atlasProblemId": "atlas-268",
+      "source": "gfg",
+      "topicLabel": "Tree dynamic programming — Minimum Tree Cameras",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-269-striver-a2z",
+      "atlasProblemId": "atlas-269",
+      "source": "striver-a2z",
+      "topicLabel": "Tree dynamic programming — Rerooted Distance Sums",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-269-codehelp-babbar",
+      "atlasProblemId": "atlas-269",
+      "source": "codehelp-babbar",
+      "topicLabel": "Tree dynamic programming — Rerooted Distance Sums",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-269-neetcode",
+      "atlasProblemId": "atlas-269",
+      "source": "neetcode",
+      "topicLabel": "Tree dynamic programming — Rerooted Distance Sums",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-269-gfg",
+      "atlasProblemId": "atlas-269",
+      "source": "gfg",
+      "topicLabel": "Tree dynamic programming — Rerooted Distance Sums",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-270-striver-a2z",
+      "atlasProblemId": "atlas-270",
+      "source": "striver-a2z",
+      "topicLabel": "Tree dynamic programming — Tree Matching",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-270-codehelp-babbar",
+      "atlasProblemId": "atlas-270",
+      "source": "codehelp-babbar",
+      "topicLabel": "Tree dynamic programming — Tree Matching",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-270-neetcode",
+      "atlasProblemId": "atlas-270",
+      "source": "neetcode",
+      "topicLabel": "Tree dynamic programming — Tree Matching",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-270-gfg",
+      "atlasProblemId": "atlas-270",
+      "source": "gfg",
+      "topicLabel": "Tree dynamic programming — Tree Matching",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-271-striver-a2z",
+      "atlasProblemId": "atlas-271",
+      "source": "striver-a2z",
+      "topicLabel": "Bitmask dynamic programming — Travelling Salesperson",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-271-codehelp-babbar",
+      "atlasProblemId": "atlas-271",
+      "source": "codehelp-babbar",
+      "topicLabel": "Bitmask dynamic programming — Travelling Salesperson",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-271-neetcode",
+      "atlasProblemId": "atlas-271",
+      "source": "neetcode",
+      "topicLabel": "Bitmask dynamic programming — Travelling Salesperson",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-271-gfg",
+      "atlasProblemId": "atlas-271",
+      "source": "gfg",
+      "topicLabel": "Bitmask dynamic programming — Travelling Salesperson",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-272-striver-a2z",
+      "atlasProblemId": "atlas-272",
+      "source": "striver-a2z",
+      "topicLabel": "Bitmask dynamic programming — Minimum Assignment Cost",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-272-codehelp-babbar",
+      "atlasProblemId": "atlas-272",
+      "source": "codehelp-babbar",
+      "topicLabel": "Bitmask dynamic programming — Minimum Assignment Cost",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-272-neetcode",
+      "atlasProblemId": "atlas-272",
+      "source": "neetcode",
+      "topicLabel": "Bitmask dynamic programming — Minimum Assignment Cost",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-272-gfg",
+      "atlasProblemId": "atlas-272",
+      "source": "gfg",
+      "topicLabel": "Bitmask dynamic programming — Minimum Assignment Cost",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-273-striver-a2z",
+      "atlasProblemId": "atlas-273",
+      "source": "striver-a2z",
+      "topicLabel": "Bitmask dynamic programming — Hamiltonian Path Count",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-273-codehelp-babbar",
+      "atlasProblemId": "atlas-273",
+      "source": "codehelp-babbar",
+      "topicLabel": "Bitmask dynamic programming — Hamiltonian Path Count",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-273-neetcode",
+      "atlasProblemId": "atlas-273",
+      "source": "neetcode",
+      "topicLabel": "Bitmask dynamic programming — Hamiltonian Path Count",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-273-gfg",
+      "atlasProblemId": "atlas-273",
+      "source": "gfg",
+      "topicLabel": "Bitmask dynamic programming — Hamiltonian Path Count",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-274-striver-a2z",
+      "atlasProblemId": "atlas-274",
+      "source": "striver-a2z",
+      "topicLabel": "Bitmask dynamic programming — Pairing by Compatibility",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-274-codehelp-babbar",
+      "atlasProblemId": "atlas-274",
+      "source": "codehelp-babbar",
+      "topicLabel": "Bitmask dynamic programming — Pairing by Compatibility",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-274-neetcode",
+      "atlasProblemId": "atlas-274",
+      "source": "neetcode",
+      "topicLabel": "Bitmask dynamic programming — Pairing by Compatibility",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-274-gfg",
+      "atlasProblemId": "atlas-274",
+      "source": "gfg",
+      "topicLabel": "Bitmask dynamic programming — Pairing by Compatibility",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-275-striver-a2z",
+      "atlasProblemId": "atlas-275",
+      "source": "striver-a2z",
+      "topicLabel": "Bitmask dynamic programming — Subset Partition Optimization",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-275-codehelp-babbar",
+      "atlasProblemId": "atlas-275",
+      "source": "codehelp-babbar",
+      "topicLabel": "Bitmask dynamic programming — Subset Partition Optimization",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-275-neetcode",
+      "atlasProblemId": "atlas-275",
+      "source": "neetcode",
+      "topicLabel": "Bitmask dynamic programming — Subset Partition Optimization",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-275-gfg",
+      "atlasProblemId": "atlas-275",
+      "source": "gfg",
+      "topicLabel": "Bitmask dynamic programming — Subset Partition Optimization",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-276-striver-a2z",
+      "atlasProblemId": "atlas-276",
+      "source": "striver-a2z",
+      "topicLabel": "Meet in the middle — Subset Sum Near Target",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-276-codehelp-babbar",
+      "atlasProblemId": "atlas-276",
+      "source": "codehelp-babbar",
+      "topicLabel": "Meet in the middle — Subset Sum Near Target",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-276-neetcode",
+      "atlasProblemId": "atlas-276",
+      "source": "neetcode",
+      "topicLabel": "Meet in the middle — Subset Sum Near Target",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-276-gfg",
+      "atlasProblemId": "atlas-276",
+      "source": "gfg",
+      "topicLabel": "Meet in the middle — Subset Sum Near Target",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-277-striver-a2z",
+      "atlasProblemId": "atlas-277",
+      "source": "striver-a2z",
+      "topicLabel": "Meet in the middle — Count Bounded Subset Sums",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-277-codehelp-babbar",
+      "atlasProblemId": "atlas-277",
+      "source": "codehelp-babbar",
+      "topicLabel": "Meet in the middle — Count Bounded Subset Sums",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-277-neetcode",
+      "atlasProblemId": "atlas-277",
+      "source": "neetcode",
+      "topicLabel": "Meet in the middle — Count Bounded Subset Sums",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-277-gfg",
+      "atlasProblemId": "atlas-277",
+      "source": "gfg",
+      "topicLabel": "Meet in the middle — Count Bounded Subset Sums",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-278-striver-a2z",
+      "atlasProblemId": "atlas-278",
+      "source": "striver-a2z",
+      "topicLabel": "Meet in the middle — Four-List Zero Sum",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-278-codehelp-babbar",
+      "atlasProblemId": "atlas-278",
+      "source": "codehelp-babbar",
+      "topicLabel": "Meet in the middle — Four-List Zero Sum",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-278-neetcode",
+      "atlasProblemId": "atlas-278",
+      "source": "neetcode",
+      "topicLabel": "Meet in the middle — Four-List Zero Sum",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-278-gfg",
+      "atlasProblemId": "atlas-278",
+      "source": "gfg",
+      "topicLabel": "Meet in the middle — Four-List Zero Sum",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-279-striver-a2z",
+      "atlasProblemId": "atlas-279",
+      "source": "striver-a2z",
+      "topicLabel": "Meet in the middle — Minimum Partition Difference",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-279-codehelp-babbar",
+      "atlasProblemId": "atlas-279",
+      "source": "codehelp-babbar",
+      "topicLabel": "Meet in the middle — Minimum Partition Difference",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-279-neetcode",
+      "atlasProblemId": "atlas-279",
+      "source": "neetcode",
+      "topicLabel": "Meet in the middle — Minimum Partition Difference",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-279-gfg",
+      "atlasProblemId": "atlas-279",
+      "source": "gfg",
+      "topicLabel": "Meet in the middle — Minimum Partition Difference",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-280-striver-a2z",
+      "atlasProblemId": "atlas-280",
+      "source": "striver-a2z",
+      "topicLabel": "Meet in the middle — Maximum Compatible Split",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-280-codehelp-babbar",
+      "atlasProblemId": "atlas-280",
+      "source": "codehelp-babbar",
+      "topicLabel": "Meet in the middle — Maximum Compatible Split",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-280-neetcode",
+      "atlasProblemId": "atlas-280",
+      "source": "neetcode",
+      "topicLabel": "Meet in the middle — Maximum Compatible Split",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-280-gfg",
+      "atlasProblemId": "atlas-280",
+      "source": "gfg",
+      "topicLabel": "Meet in the middle — Maximum Compatible Split",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-281-striver-a2z",
+      "atlasProblemId": "atlas-281",
+      "source": "striver-a2z",
+      "topicLabel": "Convex hull — Outer Fence Points",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-281-codehelp-babbar",
+      "atlasProblemId": "atlas-281",
+      "source": "codehelp-babbar",
+      "topicLabel": "Convex hull — Outer Fence Points",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-281-neetcode",
+      "atlasProblemId": "atlas-281",
+      "source": "neetcode",
+      "topicLabel": "Convex hull — Outer Fence Points",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-281-gfg",
+      "atlasProblemId": "atlas-281",
+      "source": "gfg",
+      "topicLabel": "Convex hull — Outer Fence Points",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-282-striver-a2z",
+      "atlasProblemId": "atlas-282",
+      "source": "striver-a2z",
+      "topicLabel": "Convex hull — Hull Perimeter",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-282-codehelp-babbar",
+      "atlasProblemId": "atlas-282",
+      "source": "codehelp-babbar",
+      "topicLabel": "Convex hull — Hull Perimeter",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-282-neetcode",
+      "atlasProblemId": "atlas-282",
+      "source": "neetcode",
+      "topicLabel": "Convex hull — Hull Perimeter",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-282-gfg",
+      "atlasProblemId": "atlas-282",
+      "source": "gfg",
+      "topicLabel": "Convex hull — Hull Perimeter",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-283-striver-a2z",
+      "atlasProblemId": "atlas-283",
+      "source": "striver-a2z",
+      "topicLabel": "Convex hull — Maximum Hull Diameter",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-283-codehelp-babbar",
+      "atlasProblemId": "atlas-283",
+      "source": "codehelp-babbar",
+      "topicLabel": "Convex hull — Maximum Hull Diameter",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-283-neetcode",
+      "atlasProblemId": "atlas-283",
+      "source": "neetcode",
+      "topicLabel": "Convex hull — Maximum Hull Diameter",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-283-gfg",
+      "atlasProblemId": "atlas-283",
+      "source": "gfg",
+      "topicLabel": "Convex hull — Maximum Hull Diameter",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-284-striver-a2z",
+      "atlasProblemId": "atlas-284",
+      "source": "striver-a2z",
+      "topicLabel": "Convex hull — Point Inside Convex Polygon",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-284-codehelp-babbar",
+      "atlasProblemId": "atlas-284",
+      "source": "codehelp-babbar",
+      "topicLabel": "Convex hull — Point Inside Convex Polygon",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-284-neetcode",
+      "atlasProblemId": "atlas-284",
+      "source": "neetcode",
+      "topicLabel": "Convex hull — Point Inside Convex Polygon",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-284-gfg",
+      "atlasProblemId": "atlas-284",
+      "source": "gfg",
+      "topicLabel": "Convex hull — Point Inside Convex Polygon",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-285-striver-a2z",
+      "atlasProblemId": "atlas-285",
+      "source": "striver-a2z",
+      "topicLabel": "Convex hull — Dynamic Upper Hull",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-285-codehelp-babbar",
+      "atlasProblemId": "atlas-285",
+      "source": "codehelp-babbar",
+      "topicLabel": "Convex hull — Dynamic Upper Hull",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-285-neetcode",
+      "atlasProblemId": "atlas-285",
+      "source": "neetcode",
+      "topicLabel": "Convex hull — Dynamic Upper Hull",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-285-gfg",
+      "atlasProblemId": "atlas-285",
+      "source": "gfg",
+      "topicLabel": "Convex hull — Dynamic Upper Hull",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-286-striver-a2z",
+      "atlasProblemId": "atlas-286",
+      "source": "striver-a2z",
+      "topicLabel": "Geometric sweep — Segment Intersection Events",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-286-codehelp-babbar",
+      "atlasProblemId": "atlas-286",
+      "source": "codehelp-babbar",
+      "topicLabel": "Geometric sweep — Segment Intersection Events",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-286-neetcode",
+      "atlasProblemId": "atlas-286",
+      "source": "neetcode",
+      "topicLabel": "Geometric sweep — Segment Intersection Events",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-286-gfg",
+      "atlasProblemId": "atlas-286",
+      "source": "gfg",
+      "topicLabel": "Geometric sweep — Segment Intersection Events",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-287-striver-a2z",
+      "atlasProblemId": "atlas-287",
+      "source": "striver-a2z",
+      "topicLabel": "Geometric sweep — Rectangle Union Perimeter",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-287-codehelp-babbar",
+      "atlasProblemId": "atlas-287",
+      "source": "codehelp-babbar",
+      "topicLabel": "Geometric sweep — Rectangle Union Perimeter",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-287-neetcode",
+      "atlasProblemId": "atlas-287",
+      "source": "neetcode",
+      "topicLabel": "Geometric sweep — Rectangle Union Perimeter",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-287-gfg",
+      "atlasProblemId": "atlas-287",
+      "source": "gfg",
+      "topicLabel": "Geometric sweep — Rectangle Union Perimeter",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-288-striver-a2z",
+      "atlasProblemId": "atlas-288",
+      "source": "striver-a2z",
+      "topicLabel": "Geometric sweep — Closest Pair Sweep",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-288-codehelp-babbar",
+      "atlasProblemId": "atlas-288",
+      "source": "codehelp-babbar",
+      "topicLabel": "Geometric sweep — Closest Pair Sweep",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-288-neetcode",
+      "atlasProblemId": "atlas-288",
+      "source": "neetcode",
+      "topicLabel": "Geometric sweep — Closest Pair Sweep",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-288-gfg",
+      "atlasProblemId": "atlas-288",
+      "source": "gfg",
+      "topicLabel": "Geometric sweep — Closest Pair Sweep",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-289-striver-a2z",
+      "atlasProblemId": "atlas-289",
+      "source": "striver-a2z",
+      "topicLabel": "Geometric sweep — Visible Interval Coverage",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-289-codehelp-babbar",
+      "atlasProblemId": "atlas-289",
+      "source": "codehelp-babbar",
+      "topicLabel": "Geometric sweep — Visible Interval Coverage",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-289-neetcode",
+      "atlasProblemId": "atlas-289",
+      "source": "neetcode",
+      "topicLabel": "Geometric sweep — Visible Interval Coverage",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-289-gfg",
+      "atlasProblemId": "atlas-289",
+      "source": "gfg",
+      "topicLabel": "Geometric sweep — Visible Interval Coverage",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-290-striver-a2z",
+      "atlasProblemId": "atlas-290",
+      "source": "striver-a2z",
+      "topicLabel": "Geometric sweep — Orthogonal Line Intersections",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-290-codehelp-babbar",
+      "atlasProblemId": "atlas-290",
+      "source": "codehelp-babbar",
+      "topicLabel": "Geometric sweep — Orthogonal Line Intersections",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-290-neetcode",
+      "atlasProblemId": "atlas-290",
+      "source": "neetcode",
+      "topicLabel": "Geometric sweep — Orthogonal Line Intersections",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-290-gfg",
+      "atlasProblemId": "atlas-290",
+      "source": "gfg",
+      "topicLabel": "Geometric sweep — Orthogonal Line Intersections",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-291-striver-a2z",
+      "atlasProblemId": "atlas-291",
+      "source": "striver-a2z",
+      "topicLabel": "Computational geometry — Robust Orientation",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-291-codehelp-babbar",
+      "atlasProblemId": "atlas-291",
+      "source": "codehelp-babbar",
+      "topicLabel": "Computational geometry — Robust Orientation",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-291-neetcode",
+      "atlasProblemId": "atlas-291",
+      "source": "neetcode",
+      "topicLabel": "Computational geometry — Robust Orientation",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-291-gfg",
+      "atlasProblemId": "atlas-291",
+      "source": "gfg",
+      "topicLabel": "Computational geometry — Robust Orientation",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-292-striver-a2z",
+      "atlasProblemId": "atlas-292",
+      "source": "striver-a2z",
+      "topicLabel": "Computational geometry — Segment Intersection",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-292-codehelp-babbar",
+      "atlasProblemId": "atlas-292",
+      "source": "codehelp-babbar",
+      "topicLabel": "Computational geometry — Segment Intersection",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-292-neetcode",
+      "atlasProblemId": "atlas-292",
+      "source": "neetcode",
+      "topicLabel": "Computational geometry — Segment Intersection",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-292-gfg",
+      "atlasProblemId": "atlas-292",
+      "source": "gfg",
+      "topicLabel": "Computational geometry — Segment Intersection",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-293-striver-a2z",
+      "atlasProblemId": "atlas-293",
+      "source": "striver-a2z",
+      "topicLabel": "Computational geometry — Point-to-Segment Distance",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-293-codehelp-babbar",
+      "atlasProblemId": "atlas-293",
+      "source": "codehelp-babbar",
+      "topicLabel": "Computational geometry — Point-to-Segment Distance",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-293-neetcode",
+      "atlasProblemId": "atlas-293",
+      "source": "neetcode",
+      "topicLabel": "Computational geometry — Point-to-Segment Distance",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-293-gfg",
+      "atlasProblemId": "atlas-293",
+      "source": "gfg",
+      "topicLabel": "Computational geometry — Point-to-Segment Distance",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-294-striver-a2z",
+      "atlasProblemId": "atlas-294",
+      "source": "striver-a2z",
+      "topicLabel": "Computational geometry — Polygon Area and Centroid",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-294-codehelp-babbar",
+      "atlasProblemId": "atlas-294",
+      "source": "codehelp-babbar",
+      "topicLabel": "Computational geometry — Polygon Area and Centroid",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-294-neetcode",
+      "atlasProblemId": "atlas-294",
+      "source": "neetcode",
+      "topicLabel": "Computational geometry — Polygon Area and Centroid",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-294-gfg",
+      "atlasProblemId": "atlas-294",
+      "source": "gfg",
+      "topicLabel": "Computational geometry — Polygon Area and Centroid",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-295-striver-a2z",
+      "atlasProblemId": "atlas-295",
+      "source": "striver-a2z",
+      "topicLabel": "Computational geometry — Circle Intersection Count",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-295-codehelp-babbar",
+      "atlasProblemId": "atlas-295",
+      "source": "codehelp-babbar",
+      "topicLabel": "Computational geometry — Circle Intersection Count",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-295-neetcode",
+      "atlasProblemId": "atlas-295",
+      "source": "neetcode",
+      "topicLabel": "Computational geometry — Circle Intersection Count",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-295-gfg",
+      "atlasProblemId": "atlas-295",
+      "source": "gfg",
+      "topicLabel": "Computational geometry — Circle Intersection Count",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-296-striver-a2z",
+      "atlasProblemId": "atlas-296",
+      "source": "striver-a2z",
+      "topicLabel": "Advanced number theory — Chinese Remainder System",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-296-codehelp-babbar",
+      "atlasProblemId": "atlas-296",
+      "source": "codehelp-babbar",
+      "topicLabel": "Advanced number theory — Chinese Remainder System",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-296-neetcode",
+      "atlasProblemId": "atlas-296",
+      "source": "neetcode",
+      "topicLabel": "Advanced number theory — Chinese Remainder System",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-296-gfg",
+      "atlasProblemId": "atlas-296",
+      "source": "gfg",
+      "topicLabel": "Advanced number theory — Chinese Remainder System",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-297-striver-a2z",
+      "atlasProblemId": "atlas-297",
+      "source": "striver-a2z",
+      "topicLabel": "Advanced number theory — Euler Totient Queries",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-297-codehelp-babbar",
+      "atlasProblemId": "atlas-297",
+      "source": "codehelp-babbar",
+      "topicLabel": "Advanced number theory — Euler Totient Queries",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-297-neetcode",
+      "atlasProblemId": "atlas-297",
+      "source": "neetcode",
+      "topicLabel": "Advanced number theory — Euler Totient Queries",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-297-gfg",
+      "atlasProblemId": "atlas-297",
+      "source": "gfg",
+      "topicLabel": "Advanced number theory — Euler Totient Queries",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-298-striver-a2z",
+      "atlasProblemId": "atlas-298",
+      "source": "striver-a2z",
+      "topicLabel": "Advanced number theory — Miller–Rabin Primality",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-298-codehelp-babbar",
+      "atlasProblemId": "atlas-298",
+      "source": "codehelp-babbar",
+      "topicLabel": "Advanced number theory — Miller–Rabin Primality",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-298-neetcode",
+      "atlasProblemId": "atlas-298",
+      "source": "neetcode",
+      "topicLabel": "Advanced number theory — Miller–Rabin Primality",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-298-gfg",
+      "atlasProblemId": "atlas-298",
+      "source": "gfg",
+      "topicLabel": "Advanced number theory — Miller–Rabin Primality",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-299-striver-a2z",
+      "atlasProblemId": "atlas-299",
+      "source": "striver-a2z",
+      "topicLabel": "Advanced number theory — Pollard Rho Factorization",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-299-codehelp-babbar",
+      "atlasProblemId": "atlas-299",
+      "source": "codehelp-babbar",
+      "topicLabel": "Advanced number theory — Pollard Rho Factorization",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-299-neetcode",
+      "atlasProblemId": "atlas-299",
+      "source": "neetcode",
+      "topicLabel": "Advanced number theory — Pollard Rho Factorization",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-299-gfg",
+      "atlasProblemId": "atlas-299",
+      "source": "gfg",
+      "topicLabel": "Advanced number theory — Pollard Rho Factorization",
+      "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
+      "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-300-striver-a2z",
+      "atlasProblemId": "atlas-300",
+      "source": "striver-a2z",
+      "topicLabel": "Advanced number theory — Number-Theoretic Transform",
+      "url": "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/",
+      "note": "Topic-level mapping to Striver A2Z; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-300-codehelp-babbar",
+      "atlasProblemId": "atlas-300",
+      "source": "codehelp-babbar",
+      "topicLabel": "Advanced number theory — Number-Theoretic Transform",
+      "url": "https://www.codehelp.in/",
+      "note": "Topic-level mapping to CodeHelp / Babbar; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-300-neetcode",
+      "atlasProblemId": "atlas-300",
+      "source": "neetcode",
+      "topicLabel": "Advanced number theory — Number-Theoretic Transform",
+      "url": "https://neetcode.io/roadmap",
+      "note": "Topic-level mapping to NeetCode; Interview Atlas wording and solution artifacts are original."
+    },
+    {
+      "id": "atlas-300-gfg",
+      "atlasProblemId": "atlas-300",
+      "source": "gfg",
+      "topicLabel": "Advanced number theory — Number-Theoretic Transform",
       "url": "https://www.geeksforgeeks.org/dsa/dsa-sheet-by-love-babbar/",
       "note": "Topic-level mapping to GeeksforGeeks; Interview Atlas wording and solution artifacts are original."
     }
