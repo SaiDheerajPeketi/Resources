@@ -68,6 +68,10 @@ export const LearningStageSchema = z.object({
 export const TechnologyTheorySectionSchema = z.object({
   title: z.string().min(1),
   explanation: z.string().min(80),
+  plainEnglish: z.string().min(40),
+  analogy: z.string().min(40),
+  analogyLimit: z.string().min(30),
+  concreteExample: z.string().min(40),
   keyPoints: z.array(z.string().min(1)).min(3)
 });
 export const MisconceptionSchema = z.object({

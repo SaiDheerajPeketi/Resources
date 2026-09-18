@@ -16,6 +16,7 @@ describe("universal interview corpus", () => {
       expect(technology.workedExamples.length).toBeGreaterThanOrEqual(3);
       expect(technology.learningPath).toHaveLength(4);
       expect(technology.theorySections.length).toBeGreaterThanOrEqual(4);
+      expect(technology.theorySections.every((section) => section.plainEnglish && section.analogy && section.analogyLimit && section.concreteExample)).toBe(true);
       expect(technology.misconceptions.length).toBeGreaterThanOrEqual(4);
       expect(technology.revisionChecklist.length).toBeGreaterThanOrEqual(8);
       expect(technology.questions.length).toBeGreaterThanOrEqual(8);
@@ -27,7 +28,7 @@ describe("universal interview corpus", () => {
       expect(technology.sourceIds.every((id) => sourceIds.has(id))).toBe(true);
     }
     const fullDepthIds = technologies.filter((technology) => technology.depthStatus === "complete").map((technology) => technology.id);
-    expect(fullDepthIds).toEqual(expect.arrayContaining(["java", "oop-and-lld", "dbms", "operating-systems", "computer-networks"]));
+    expect(fullDepthIds).toEqual(expect.arrayContaining(["java", "cpp", "python", "oop-and-lld", "dbms", "operating-systems", "computer-networks"]));
     expect(technologies.filter((technology) => technology.depthStatus === "overview").length).toBeGreaterThan(0);
   });
 

@@ -12,7 +12,15 @@ export type TechnologyDepth = {
   performance: string[];
   security: string[];
   failureModes: string[];
-  theorySections: Array<{ title: string; explanation: string; keyPoints: string[] }>;
+  theorySections: Array<{
+    title: string;
+    explanation: string;
+    keyPoints: string[];
+    plainEnglish?: string;
+    analogy?: string;
+    analogyLimit?: string;
+    concreteExample?: string;
+  }>;
   workedExamples: Array<{ title: string; language: string; code: string; explanation: string }>;
   misconceptions: Array<{ claim: string; correction: string; whyItHappens: string }>;
   revisionChecklist: string[];

@@ -227,7 +227,7 @@ Commands are displayed in ruled rows with purpose, platform, expected result, sa
 
 ### Full-Depth Manual
 
-Full-depth manuals use a visible basic-to-expert learning ladder, numbered theory ledger, ruled misconception corrections, tricky-question explanations with strong-answer rubrics, rapid-recall rows, and a printable self-check sheet. An amber editorial notice marks overview material; a teal labelled status marks independently authored full-depth material. Never let the common page structure imply equal editorial depth.
+Full-depth manuals use a visible basic-to-expert learning ladder, numbered theory ledger, ruled misconception corrections, tricky-question explanations with strong-answer rubrics, rapid-recall rows, and a printable self-check sheet. Every theory entry begins with a plain-English translation, then pairs a bounded analogy (including where it stops matching) with a concrete example. An amber editorial notice marks overview material; a teal labelled status marks independently authored full-depth material. Never let the common page structure imply equal editorial depth.
 
 ### DSA Ledger
 
@@ -248,6 +248,7 @@ Sheets and problem inventories use dense ruled rows with stable problem numbers,
 - **Do** give every command a stated purpose, platform, expected result, and safety classification.
 - **Do** use ruled ledgers for large problem, command, company, and technology inventories.
 - **Do** label technology depth explicitly and reserve “full depth” for subject-specific theory, misconceptions, question rubrics, and revision material.
+- **Do** use analogies to establish intuition, state their limits, and follow them with a technically exact example.
 
 ### Don't:
 

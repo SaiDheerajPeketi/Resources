@@ -130,11 +130,21 @@ test("Stack Workbench opens a complete technology manual", async ({ page }) => {
   await expect(page.getByText("full-depth manual")).toBeVisible();
   await expect(page.getByRole("heading", { name: "Basic → advanced learning path" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Deep theory and trade-offs" })).toBeVisible();
+  await expect(page.getByText("In plain English:").first()).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Analogy" }).first()).toBeVisible();
+  await expect(page.getByText("Where it stops matching:").first()).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Concrete example" }).first()).toBeVisible();
   await expect(page.getByRole("heading", { name: "Misconceptions and confused distinctions" })).toBeVisible();
   await expect(page.getByRole("heading", { name: /Command cookbook/ })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Tricky interview questions" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Rapid-recall flashcards" })).toBeVisible();
   await page.goto("/technologies/python/");
+  await expect(page.getByText("full-depth manual")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Names, objects, identity, and mutability" })).toBeVisible();
+  await page.goto("/technologies/cpp/");
+  await expect(page.getByText("full-depth manual")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "RAII and deterministic resource management" })).toBeVisible();
+  await page.goto("/technologies/javascript/");
   await expect(page.getByText("Editorial expansion in progress")).toBeVisible();
 });
 

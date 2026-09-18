@@ -90,7 +90,16 @@ export default async function TechnologyPage({ params }: { params: Promise<{ slu
             {item.theorySections.map((section, index) => (
               <article key={section.title}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
-                <div><h3>{section.title}</h3><p>{section.explanation}</p><ul>{section.keyPoints.map((point) => <li key={point}>{point}</li>)}</ul></div>
+                <div>
+                  <h3>{section.title}</h3>
+                  <p className="plain-english"><strong>In plain English:</strong> {section.plainEnglish}</p>
+                  <p>{section.explanation}</p>
+                  <div className="teaching-aids">
+                    <div><h4>Analogy</h4><p>{section.analogy}</p><small><strong>Where it stops matching:</strong> {section.analogyLimit}</small></div>
+                    <div><h4>Concrete example</h4><p>{section.concreteExample}</p></div>
+                  </div>
+                  <ul>{section.keyPoints.map((point) => <li key={point}>{point}</li>)}</ul>
+                </div>
               </article>
             ))}
           </div>

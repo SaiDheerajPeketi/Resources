@@ -2600,7 +2600,7 @@
     "ecosystem": "systems",
     "level": "foundation",
     "publicationStatus": "published",
-    "depthStatus": "overview",
+    "depthStatus": "complete",
     "roleIds": [
       "sde",
       "backend",
@@ -2617,7 +2617,7 @@
     "ecosystem": "python",
     "level": "foundation",
     "publicationStatus": "published",
-    "depthStatus": "overview",
+    "depthStatus": "complete",
     "roleIds": [
       "sde",
       "backend",

@@ -39,7 +39,7 @@ The product's distinctive mechanism is a paired navigation model: the cross-role
 - Static, searchable topic library with role, level, interview-style, and status filters.
 - Interactive prerequisite maps with an accessible outline equivalent.
 - Stack Workbench technology discovery with ecosystem index, layered map, and contextual inspector.
-- Depth-labelled technology manuals. A full-depth manual must progress from basic to expert, teach internals and trade-offs, correct common misconceptions, include subject-specific tricky questions with scoring rubrics, and provide flashcards plus a printable revision checklist. Overview material remains usable but is visibly labelled until it receives that editorial pass.
+- Depth-labelled technology manuals. A full-depth manual must progress from basic to expert, teach internals and trade-offs, and pair every theory section with a plain-English explanation, bounded analogy, and concrete example. It must also correct common misconceptions, include subject-specific tricky questions with scoring rubrics, and provide flashcards plus a printable revision checklist. Overview material remains usable but is visibly labelled until it receives that editorial pass.
 - Nested Atlas 75, Atlas 180, and Atlas 300 DSA sheets with filters, stable progress, language-switchable artifacts, and attributed topic-only crosswalks to external sheets.
 - Optional diagnostics, prerequisite-aware role plans, and explainable local FSRS-style review. Topic confidence remains explicitly controlled by the learner.
 - Date-stamped public-process company guides and fifteen role-path maps; no proprietary interview dumps.

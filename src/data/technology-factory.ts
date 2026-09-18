@@ -9,6 +9,10 @@ import {
   type TechnologyMeta
 } from "@/lib/schema";
 import { completeTechnologyDepth } from "@/data/technology-depth";
+import { languageTechnologyDepth } from "@/data/technology-depth-languages";
+import { technologyTeachingAids } from "@/data/technology-teaching-aids";
+
+const fullDepthTechnology = { ...completeTechnologyDepth, ...languageTechnologyDepth };
 
 export type TechnologySpec = {
   id: string;
@@ -81,10 +85,10 @@ function overviewDepth(spec: TechnologySpec) {
       { level: "expert" as const, title: "Production judgment", objective: `Defend ${spec.title} design choices and diagnose realistic failures.`, topics: ["security boundaries and threat model", "compatibility and version upgrades", "scaling and operational constraints", "architecture trade-offs and interview cases"] }
     ],
     theorySections: [
-      { title: "Core abstraction", explanation: `${spec.mentalModel} This overview establishes the nouns, lifecycle, and invariants that later examples must make concrete. It is not yet the complete editorial treatment for every subtopic in this technology.`, keyPoints: ["Name the execution unit and its lifecycle.", "Identify the state and invariant owned by each abstraction.", "Separate specification guarantees from common implementation behavior."] },
-      { title: "Data, memory, and lifetime", explanation: `${spec.title} programs move data through values, references, resources, or persisted representations. A strong explanation follows ownership and lifetime from creation through sharing, mutation, cleanup, and failure instead of relying on syntax alone.`, keyPoints: ["Trace allocation and cleanup.", "Make aliasing and mutation explicit.", "Treat resource lifetime separately from garbage-collected memory where applicable."] },
-      { title: "Concurrency and I/O", explanation: `Concurrency in ${spec.title} must be derived from its runtime and host platform. Explain what can execute independently, how work waits, how cancellation and backpressure propagate, and which synchronization rule protects shared invariants.`, keyPoints: ["Distinguish concurrency from parallelism.", "State the ordering or synchronization guarantee.", "Bound queues, retries, and resource use."] },
-      { title: "Production behavior", explanation: `A production ${spec.title} system is evaluated through tests, diagnostics, performance evidence, security boundaries, compatible changes, and recovery. Convenient abstractions are useful only when their hidden cost and failure signals remain observable.`, keyPoints: ["Measure before optimizing.", "Validate untrusted boundaries and use least privilege.", "Design rollback, migration, and failure diagnosis with the feature."] }
+      { title: "Core abstraction", explanation: `${spec.mentalModel} This overview establishes the nouns, lifecycle, and invariants that later examples must make concrete. It is not yet the complete editorial treatment for every subtopic in this technology.`, plainEnglish: `Start by naming what ${spec.title} executes, what state it owns, and when that state begins and ends.`, analogy: `Treat the runtime like a workshop: inputs arrive, named tools transform them, and an owner must clean up each resource.`, analogyLimit: "Software can copy, share, or schedule state in ways a physical workshop cannot, so derive the actual guarantees from the runtime.", concreteExample: `Trace one ${spec.title} request from input validation through execution, output, failure, and cleanup.`, keyPoints: ["Name the execution unit and its lifecycle.", "Identify the state and invariant owned by each abstraction.", "Separate specification guarantees from common implementation behavior."] },
+      { title: "Data, memory, and lifetime", explanation: `${spec.title} programs move data through values, references, resources, or persisted representations. A strong explanation follows ownership and lifetime from creation through sharing, mutation, cleanup, and failure instead of relying on syntax alone.`, plainEnglish: "Know who owns each value, who may change it, who can still see it, and who must release associated resources.", analogy: "Think of a library book: several people may know its catalogue number, but one policy controls loans, returns, and replacement.", analogyLimit: "Memory aliases can be copied instantly and may outlive lexical scopes, unlike a single physical book.", concreteExample: "Follow a database connection from pool checkout through query, exception, rollback, and guaranteed return to the pool.", keyPoints: ["Trace allocation and cleanup.", "Make aliasing and mutation explicit.", "Treat resource lifetime separately from garbage-collected memory where applicable."] },
+      { title: "Concurrency and I/O", explanation: `Concurrency in ${spec.title} must be derived from its runtime and host platform. Explain what can execute independently, how work waits, how cancellation and backpressure propagate, and which synchronization rule protects shared invariants.`, plainEnglish: "Multiple tasks may make progress together, but shared state and limited downstream capacity still need explicit coordination.", analogy: "A restaurant can prepare several orders at once, yet it needs ticket ordering, limited ovens, and a rule for cancelled orders.", analogyLimit: "Computer scheduling and memory visibility have formal rules that human coordination analogies do not capture.", concreteExample: "Bound a worker queue, cancel work after the caller deadline, and protect the one invariant updated by competing tasks.", keyPoints: ["Distinguish concurrency from parallelism.", "State the ordering or synchronization guarantee.", "Bound queues, retries, and resource use."] },
+      { title: "Production behavior", explanation: `A production ${spec.title} system is evaluated through tests, diagnostics, performance evidence, security boundaries, compatible changes, and recovery. Convenient abstractions are useful only when their hidden cost and failure signals remain observable.`, plainEnglish: "A feature is not finished when it works once; it must remain explainable, safe, measurable, and recoverable under failure.", analogy: "A bridge needs load limits, inspections, warning signs, and repair plans in addition to a successful first crossing.", analogyLimit: "Software can be rolled back or replicated quickly, but data compatibility and external effects may make recovery irreversible.", concreteExample: "Release to a small cohort, watch latency and error budgets, verify data compatibility, and keep a tested rollback trigger.", keyPoints: ["Measure before optimizing.", "Validate untrusted boundaries and use least privilege.", "Design rollback, migration, and failure diagnosis with the feature."] }
     ],
     misconceptions: [
       { claim: `${spec.title} best practices are universal rules.`, correction: "Practices are responses to constraints; state the workload, invariant, and trade-off before applying one.", whyItHappens: "Interview summaries often omit the forces that justify a recommendation." },
@@ -133,7 +137,22 @@ function overviewDepth(spec: TechnologySpec) {
 export function buildTechnology(spec: TechnologySpec) {
   const commands = commandBook(spec);
   const sourceIds = spec.sources.map((_, index) => `${spec.id}-source-${index + 1}`);
-  const depth = completeTechnologyDepth[spec.id] ?? overviewDepth(spec);
+  const depth = fullDepthTechnology[spec.id] ?? overviewDepth(spec);
+  const teachingAids = technologyTeachingAids[spec.id] ?? {};
+  const isComplete = Boolean(fullDepthTechnology[spec.id]);
+  const theorySections = depth.theorySections.map((section) => {
+    const aid = teachingAids[section.title];
+    if (isComplete && !aid && !(section.plainEnglish && section.analogy && section.analogyLimit && section.concreteExample)) {
+      throw new Error(`Full-depth technology ${spec.id} is missing teaching aids for ${section.title}.`);
+    }
+    return {
+      ...section,
+      plainEnglish: section.plainEnglish ?? aid?.plainEnglish,
+      analogy: section.analogy ?? aid?.analogy,
+      analogyLimit: section.analogyLimit ?? aid?.analogyLimit,
+      concreteExample: section.concreteExample ?? aid?.concreteExample
+    };
+  });
   const technology: TechnologyMeta = TechnologyMetaSchema.parse({
     id: spec.id,
     title: spec.title,
@@ -145,10 +164,10 @@ export function buildTechnology(spec: TechnologySpec) {
     prerequisites: spec.prerequisites ?? [],
     roleIds: spec.roles ?? ["sde", "backend", "full-stack"],
     version: { policy: "Use a supported stable release; verify the project lockfile before an interview exercise.", current: spec.version ?? "stable", ...(spec.lts ? { lts: spec.lts } : {}) },
-    depthStatus: completeTechnologyDepth[spec.id] ? "complete" : "overview",
+    depthStatus: isComplete ? "complete" : "overview",
     mentalModel: spec.mentalModel,
     learningPath: depth.learningPath,
-    theorySections: depth.theorySections,
+    theorySections,
     misconceptions: depth.misconceptions,
     revisionChecklist: depth.revisionChecklist,
     setup: depth.setup,

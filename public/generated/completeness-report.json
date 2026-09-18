@@ -1,6 +1,6 @@
 {
-  "version": "2026.09.18-r13",
-  "generatedAt": "2026-09-18T08:19:11.710Z",
+  "version": "2026.09.18-r14",
+  "generatedAt": "2026-09-18T09:32:07.735Z",
   "manifest": {
     "topics": 146,
     "published": 146,
@@ -33,8 +33,6 @@
       "theory-of-computation",
       "software-engineering",
       "c",
-      "cpp",
-      "python",
       "javascript",
       "typescript",
       "go",
