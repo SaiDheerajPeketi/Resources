@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r23",
+  "version": "2026.09.19-r24",
   "technologies": [
     {
       "id": "java",
@@ -22,6 +22,26 @@
         "lts": "25"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Java is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Java like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check the runtime using `java --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "Java source becomes verified bytecode; the JVM profiles hot paths, manages memory, and gives threads a precisely specified shared-memory model.",
       "learningPath": [
         {
@@ -521,6 +541,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "OOP, SOLID, UML, and LLD is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of OOP, SOLID, UML, and LLD like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run focused tests using `./gradlew test --tests '*ParkingLot*'`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "An object owns an invariant and offers behavior that preserves it; a good design keeps reasons to change narrow and dependencies explicit.",
       "learningPath": [
         {
@@ -1015,6 +1055,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Database Management Systems is a database system: software that stores data, finds it again, and protects correctness when many operations happen together.",
+        "whyItMatters": "Learn it so you can design reliable data models, write efficient queries, and keep important information correct through failures and concurrent updates. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Database Management Systems like a carefully run library: data has an address, indexes speed up discovery, and borrowing rules prevent conflicting changes. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: connect safely using `psql \"$DATABASE_URL\"`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "query",
+            "meaning": "a request to read or change stored data"
+          },
+          {
+            "term": "index",
+            "meaning": "an extra structure that makes selected lookups faster"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a group of changes treated as one logical operation"
+          }
+        ]
+      },
       "mentalModel": "A DBMS turns logical relations into durable pages while coordinating concurrent histories that must still satisfy declared invariants.",
       "learningPath": [
         {
@@ -1509,6 +1569,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Operating Systems is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Operating Systems like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect processes using `ps -eo pid,ppid,stat,pcpu,pmem,comm`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "The kernel multiplexes processors, memory, and devices while presenting isolated processes with stable abstractions and enforceable protection boundaries.",
       "learningPath": [
         {
@@ -2003,6 +2083,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Computer Networks is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Computer Networks like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect addresses using `ip address`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "Networks move best-effort packets across independently managed hops; reliability, naming, security, and application semantics are layered on top.",
       "learningPath": [
         {
@@ -2497,6 +2597,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Computer Architecture is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Computer Architecture like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: locate the build entry using `rg \"main|build|test\" .`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "Computer Architecture turns informal behavior into explicit models whose assumptions, invariants, and costs can be tested.",
       "learningPath": [
         {
@@ -3134,6 +3254,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Compilers is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Compilers like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: locate the build entry using `rg \"main|build|test\" .`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "Compilers turns informal behavior into explicit models whose assumptions, invariants, and costs can be tested.",
       "learningPath": [
         {
@@ -3771,6 +3911,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Theory of Computation is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Theory of Computation like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: locate the build entry using `rg \"main|build|test\" .`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "Theory of Computation turns informal behavior into explicit models whose assumptions, invariants, and costs can be tested.",
       "learningPath": [
         {
@@ -4408,6 +4568,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Software Engineering is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Software Engineering like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: locate the build entry using `rg \"main|build|test\" .`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "Software Engineering turns informal behavior into explicit models whose assumptions, invariants, and costs can be tested.",
       "learningPath": [
         {
@@ -5046,6 +5226,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "C is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of C like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check compiler using `cc --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "C maps source closely to machine-level storage and calls; every object has a lifetime, representation, and ownership convention the programmer must enforce.",
       "learningPath": [
         {
@@ -5684,6 +5884,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "C++ is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of C++ like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check compiler using `c++ --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "C++ is a zero-overhead abstraction language: deterministic lifetimes and value semantics let high-level types compile to explicit machine work.",
       "learningPath": [
         {
@@ -6184,6 +6404,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Python is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Python like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check python using `python --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "Python executes a dynamic object model through an implementation runtime; names reference objects, protocols define behavior, and the event loop coordinates cooperative I/O.",
       "learningPath": [
         {
@@ -6684,6 +6924,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "JavaScript is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of JavaScript like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check node.js using `node --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "JavaScript is a single-threaded run-to-completion language per agent; host event loops schedule jobs and I/O callbacks around the ECMAScript execution model.",
       "learningPath": [
         {
@@ -7184,6 +7444,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "TypeScript is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of TypeScript like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check compiler using `tsc --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "TypeScript statically checks a structural model of JavaScript and erases its types before runtime; soundness is traded for compatibility at explicit boundaries.",
       "learningPath": [
         {
@@ -7684,6 +7964,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Go is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Go like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check go using `go version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "Go compiles simple value-oriented code into native programs; goroutines are multiplexed by the runtime and communicate through synchronization or channels.",
       "learningPath": [
         {
@@ -8322,6 +8622,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "C# is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of C# like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check .net using `dotnet --info`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "C# compiles to managed IL executed by .NET; the CLR supplies type safety, garbage collection, async tasks, and a shared base-class library.",
       "learningPath": [
         {
@@ -8960,6 +9280,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Rust is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Rust like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check rust using `rustc --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "Rust proves aliasing and lifetime rules at compile time; ownership turns many memory and data-race failures into type errors without a garbage collector.",
       "learningPath": [
         {
@@ -9598,6 +9938,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Kotlin is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Kotlin like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check compiler using `kotlinc -version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "Kotlin adds null-safety, expression-oriented syntax, and coroutines while targeting JVM bytecode and interoperating with Java types and libraries.",
       "learningPath": [
         {
@@ -10236,6 +10596,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Swift is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Swift like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check swift using `swift --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "Swift combines value semantics, reference types, ARC, protocol-oriented design, and structured concurrency for Apple and server runtimes.",
       "learningPath": [
         {
@@ -10874,6 +11254,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "PHP is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of PHP like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check php using `php --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "PHP evaluates request-scoped scripts in a server runtime, combining dynamic values, a broad standard library, and process-managed concurrency.",
       "learningPath": [
         {
@@ -11512,6 +11912,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Ruby is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Ruby like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check ruby using `ruby --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "Ruby sends messages to dynamic objects; blocks, modules, and metaprogramming shape behavior while implementations manage memory and native execution details.",
       "learningPath": [
         {
@@ -12150,6 +12570,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Scala is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Scala like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check scala using `scala -version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "Scala combines JVM objects with algebraic data types and functional composition; its type system encodes relationships while the JVM supplies execution.",
       "learningPath": [
         {
@@ -12788,6 +13228,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Dart is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Dart like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check dart using `dart --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "Dart executes in isolates with separate heaps and message passing; ahead-of-time and just-in-time modes serve production and development respectively.",
       "learningPath": [
         {
@@ -13426,6 +13886,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "R is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of R like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check r using `R --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "R evaluates vectorized expressions over data-centric objects; lexical scoping, copy-on-modify semantics, and packages support statistical workflows.",
       "learningPath": [
         {
@@ -14064,6 +14544,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "SQL is a programming language: a precise way to describe data and the steps a computer should perform.",
+        "whyItMatters": "Learn it so you can write programs, reason about their behavior, and explain why one implementation is safer or faster than another. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of SQL like a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: open postgresql using `psql \"$DATABASE_URL\"`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "syntax",
+            "meaning": "the grammar used to write valid code"
+          },
+          {
+            "term": "runtime",
+            "meaning": "the system that executes the program"
+          },
+          {
+            "term": "library",
+            "meaning": "reusable code that your program can call"
+          }
+        ]
+      },
       "mentalModel": "SQL declares a result over relations; the optimizer chooses a physical plan while constraints and transactions protect data invariants.",
       "learningPath": [
         {
@@ -14702,6 +15202,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Bash is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Bash like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check bash using `bash --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Bash composes processes through text streams, exit statuses, file descriptors, expansion rules, and a mutable shell environment.",
       "learningPath": [
         {
@@ -15340,6 +15860,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "PowerShell is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of PowerShell like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: check powershell using `pwsh --version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "PowerShell passes typed .NET objects through pipelines and separates commands into discoverable verb-noun operations with common parameter semantics.",
       "learningPath": [
         {
@@ -15978,6 +16518,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "HTML, CSS, and Web APIs is a web platform or API technology: a set of browser or network rules that lets software exchange information and create interactive experiences.",
+        "whyItMatters": "Learn it so you can connect users and services through clear requests, responses, state changes, security boundaries, and failure behavior. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of HTML, CSS, and Web APIs like a staffed service counter: each request follows a known format, receives a response, and may be accepted, rejected, delayed, or retried. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: serve locally using `python -m http.server 8000`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "request",
+            "meaning": "a message asking another component to do something"
+          },
+          {
+            "term": "response",
+            "meaning": "the result returned for a request"
+          },
+          {
+            "term": "protocol",
+            "meaning": "the shared rules used by both sides of a conversation"
+          }
+        ]
+      },
       "mentalModel": "The browser parses HTML into structure, CSS into presentation rules, and JavaScript into behavior while the event loop, rendering pipeline, and security model coordinate the page.",
       "learningPath": [
         {
@@ -16617,6 +17177,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "React is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of React like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view react version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "React is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -17256,6 +17836,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Next.js is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Next.js like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view next version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Next.js is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -17895,6 +18495,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Angular is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Angular like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view @angular/cli version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Angular is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -18534,6 +19154,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Vue is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Vue like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view vue version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Vue is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -19173,6 +19813,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Nuxt is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Nuxt like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view nuxt version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Nuxt is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -19812,6 +20472,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Svelte is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Svelte like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view svelte version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Svelte is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -20451,6 +21131,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "SvelteKit is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of SvelteKit like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view @sveltejs/kit version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "SvelteKit is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -21090,6 +21790,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Redux Toolkit is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Redux Toolkit like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view @reduxjs/toolkit version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Redux Toolkit is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -21729,6 +22449,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "TanStack Query is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of TanStack Query like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view @tanstack/react-query version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "TanStack Query is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -22368,6 +23108,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Tailwind CSS is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Tailwind CSS like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view tailwindcss version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Tailwind CSS is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -23007,6 +23767,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Node.js is a runtime: the layer that loads code, schedules work, manages resources, and connects a program to the operating system.",
+        "whyItMatters": "Learn it so you can understand what actually happens after code starts, especially around memory, concurrency, input and output, and failures. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Node.js like a stage crew behind a performance: the script is visible, but the crew controls timing, equipment, cleanup, and what happens when something breaks. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view node version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "process",
+            "meaning": "a running program with its own resources"
+          },
+          {
+            "term": "scheduler",
+            "meaning": "the mechanism that decides when work may run"
+          },
+          {
+            "term": "resource",
+            "meaning": "a limited item such as memory, a file, or a connection"
+          }
+        ]
+      },
       "mentalModel": "Node.js is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -23646,6 +24426,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Express is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Express like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view express version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Express is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -24285,6 +25085,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "NestJS is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of NestJS like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view @nestjs/core version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "NestJS is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -24924,6 +25744,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Spring Framework is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Spring Framework like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run maven tests using `./mvnw test`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Spring Framework is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -25563,6 +26403,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Spring Boot is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Spring Boot like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run maven tests using `./mvnw test`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Spring Boot is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -26202,6 +27062,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Hibernate ORM is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Hibernate ORM like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run maven tests using `./mvnw test`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Hibernate ORM is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -26841,6 +27721,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Django is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Django like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `python -m pip index versions django`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Django is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -27480,6 +28380,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Django REST Framework is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Django REST Framework like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `python -m pip index versions djangorestframework`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Django REST Framework is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -28119,6 +29039,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Flask is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Flask like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `python -m pip index versions flask`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Flask is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -28758,6 +29698,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "FastAPI is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of FastAPI like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `python -m pip index versions fastapi`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "FastAPI is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -29397,6 +30357,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "ASP.NET Core is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of ASP.NET Core like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `dotnet package search Microsoft.AspNetCore.App`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "ASP.NET Core is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -30036,6 +31016,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Entity Framework Core is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Entity Framework Core like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `dotnet package search Microsoft.EntityFrameworkCore`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Entity Framework Core is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -30675,6 +31675,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Go net/http is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Go net/http like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: add module using `go get net/http`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Go net/http is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -31314,6 +32334,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Gin is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Gin like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: add module using `go get github.com/gin-gonic/gin`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Gin is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -31953,6 +32993,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Tokio is a runtime: the layer that loads code, schedules work, manages resources, and connects a program to the operating system.",
+        "whyItMatters": "Learn it so you can understand what actually happens after code starts, especially around memory, concurrency, input and output, and failures. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Tokio like a stage crew behind a performance: the script is visible, but the crew controls timing, equipment, cleanup, and what happens when something breaks. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect crate using `cargo search tokio`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "process",
+            "meaning": "a running program with its own resources"
+          },
+          {
+            "term": "scheduler",
+            "meaning": "the mechanism that decides when work may run"
+          },
+          {
+            "term": "resource",
+            "meaning": "a limited item such as memory, a file, or a connection"
+          }
+        ]
+      },
       "mentalModel": "Tokio is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -32592,6 +33652,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Axum is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Axum like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect crate using `cargo search axum`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Axum is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -33231,6 +34311,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Ktor is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Ktor like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run maven tests using `./mvnw test`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Ktor is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -33870,6 +34970,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Laravel is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Laravel like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view laravel/framework version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Laravel is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -34509,6 +35629,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Ruby on Rails is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Ruby on Rails like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view rails version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Ruby on Rails is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -35148,6 +36288,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Akka is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Akka like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run maven tests using `./mvnw test`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Akka is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -35787,6 +36947,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Play Framework is a framework: a ready-made structure that calls your code at the right points while providing common application features.",
+        "whyItMatters": "Learn it so you can build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Play Framework like a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run maven tests using `./mvnw test`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the order in which framework-managed work starts and ends"
+          },
+          {
+            "term": "component",
+            "meaning": "a focused piece of the application with one responsibility"
+          },
+          {
+            "term": "dependency",
+            "meaning": "another service or module this code needs"
+          }
+        ]
+      },
       "mentalModel": "Play Framework is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -36426,6 +37606,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "PostgreSQL is a database system: software that stores data, finds it again, and protects correctness when many operations happen together.",
+        "whyItMatters": "Learn it so you can design reliable data models, write efficient queries, and keep important information correct through failures and concurrent updates. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of PostgreSQL like a carefully run library: data has an address, indexes speed up discovery, and borrowing rules prevent conflicting changes. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect image using `docker image inspect postgres:latest`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "query",
+            "meaning": "a request to read or change stored data"
+          },
+          {
+            "term": "index",
+            "meaning": "an extra structure that makes selected lookups faster"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a group of changes treated as one logical operation"
+          }
+        ]
+      },
       "mentalModel": "PostgreSQL is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -37065,6 +38265,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "MySQL is a database system: software that stores data, finds it again, and protects correctness when many operations happen together.",
+        "whyItMatters": "Learn it so you can design reliable data models, write efficient queries, and keep important information correct through failures and concurrent updates. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of MySQL like a carefully run library: data has an address, indexes speed up discovery, and borrowing rules prevent conflicting changes. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect image using `docker image inspect mysql:latest`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "query",
+            "meaning": "a request to read or change stored data"
+          },
+          {
+            "term": "index",
+            "meaning": "an extra structure that makes selected lookups faster"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a group of changes treated as one logical operation"
+          }
+        ]
+      },
       "mentalModel": "MySQL is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -37704,6 +38924,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "SQLite is a database system: software that stores data, finds it again, and protects correctness when many operations happen together.",
+        "whyItMatters": "Learn it so you can design reliable data models, write efficient queries, and keep important information correct through failures and concurrent updates. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of SQLite like a carefully run library: data has an address, indexes speed up discovery, and borrowing rules prevent conflicting changes. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect image using `docker image inspect sqlite:latest`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "query",
+            "meaning": "a request to read or change stored data"
+          },
+          {
+            "term": "index",
+            "meaning": "an extra structure that makes selected lookups faster"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a group of changes treated as one logical operation"
+          }
+        ]
+      },
       "mentalModel": "SQLite is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -38343,6 +39583,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "SQL Server is a database system: software that stores data, finds it again, and protects correctness when many operations happen together.",
+        "whyItMatters": "Learn it so you can design reliable data models, write efficient queries, and keep important information correct through failures and concurrent updates. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of SQL Server like a carefully run library: data has an address, indexes speed up discovery, and borrowing rules prevent conflicting changes. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect image using `docker image inspect mcr.microsoft.com/mssql/server:latest`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "query",
+            "meaning": "a request to read or change stored data"
+          },
+          {
+            "term": "index",
+            "meaning": "an extra structure that makes selected lookups faster"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a group of changes treated as one logical operation"
+          }
+        ]
+      },
       "mentalModel": "SQL Server is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -38982,6 +40242,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "MongoDB is a database system: software that stores data, finds it again, and protects correctness when many operations happen together.",
+        "whyItMatters": "Learn it so you can design reliable data models, write efficient queries, and keep important information correct through failures and concurrent updates. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of MongoDB like a carefully run library: data has an address, indexes speed up discovery, and borrowing rules prevent conflicting changes. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect image using `docker image inspect mongo:latest`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "query",
+            "meaning": "a request to read or change stored data"
+          },
+          {
+            "term": "index",
+            "meaning": "an extra structure that makes selected lookups faster"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a group of changes treated as one logical operation"
+          }
+        ]
+      },
       "mentalModel": "MongoDB is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -39621,6 +40901,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Redis is a database system: software that stores data, finds it again, and protects correctness when many operations happen together.",
+        "whyItMatters": "Learn it so you can design reliable data models, write efficient queries, and keep important information correct through failures and concurrent updates. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Redis like a carefully run library: data has an address, indexes speed up discovery, and borrowing rules prevent conflicting changes. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect image using `docker image inspect redis:latest`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "query",
+            "meaning": "a request to read or change stored data"
+          },
+          {
+            "term": "index",
+            "meaning": "an extra structure that makes selected lookups faster"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a group of changes treated as one logical operation"
+          }
+        ]
+      },
       "mentalModel": "Redis is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -40260,6 +41560,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Elasticsearch and OpenSearch is a database system: software that stores data, finds it again, and protects correctness when many operations happen together.",
+        "whyItMatters": "Learn it so you can design reliable data models, write efficient queries, and keep important information correct through failures and concurrent updates. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Elasticsearch and OpenSearch like a carefully run library: data has an address, indexes speed up discovery, and borrowing rules prevent conflicting changes. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect image using `docker image inspect opensearchproject/opensearch:latest`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "query",
+            "meaning": "a request to read or change stored data"
+          },
+          {
+            "term": "index",
+            "meaning": "an extra structure that makes selected lookups faster"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a group of changes treated as one logical operation"
+          }
+        ]
+      },
       "mentalModel": "Elasticsearch and OpenSearch is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -40899,6 +42219,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Apache Cassandra is a database system: software that stores data, finds it again, and protects correctness when many operations happen together.",
+        "whyItMatters": "Learn it so you can design reliable data models, write efficient queries, and keep important information correct through failures and concurrent updates. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Apache Cassandra like a carefully run library: data has an address, indexes speed up discovery, and borrowing rules prevent conflicting changes. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect image using `docker image inspect cassandra:latest`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "query",
+            "meaning": "a request to read or change stored data"
+          },
+          {
+            "term": "index",
+            "meaning": "an extra structure that makes selected lookups faster"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a group of changes treated as one logical operation"
+          }
+        ]
+      },
       "mentalModel": "Apache Cassandra is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -41538,6 +42878,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Amazon DynamoDB is a database system: software that stores data, finds it again, and protects correctness when many operations happen together.",
+        "whyItMatters": "Learn it so you can design reliable data models, write efficient queries, and keep important information correct through failures and concurrent updates. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Amazon DynamoDB like a carefully run library: data has an address, indexes speed up discovery, and borrowing rules prevent conflicting changes. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect image using `docker image inspect amazon/dynamodb-local:latest`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "query",
+            "meaning": "a request to read or change stored data"
+          },
+          {
+            "term": "index",
+            "meaning": "an extra structure that makes selected lookups faster"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a group of changes treated as one logical operation"
+          }
+        ]
+      },
       "mentalModel": "Amazon DynamoDB is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -42177,6 +43537,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Neo4j is a database system: software that stores data, finds it again, and protects correctness when many operations happen together.",
+        "whyItMatters": "Learn it so you can design reliable data models, write efficient queries, and keep important information correct through failures and concurrent updates. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Neo4j like a carefully run library: data has an address, indexes speed up discovery, and borrowing rules prevent conflicting changes. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect image using `docker image inspect neo4j:latest`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "query",
+            "meaning": "a request to read or change stored data"
+          },
+          {
+            "term": "index",
+            "meaning": "an extra structure that makes selected lookups faster"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a group of changes treated as one logical operation"
+          }
+        ]
+      },
       "mentalModel": "Neo4j is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -42816,6 +44196,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "JUnit and Mockito is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of JUnit and Mockito like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run maven tests using `./mvnw test`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "JUnit and Mockito is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -43455,6 +44855,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "pytest is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of pytest like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `python -m pip index versions pytest`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "pytest is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -44094,6 +45514,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Jest and Vitest is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Jest and Vitest like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view vitest version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Jest and Vitest is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -44733,6 +46173,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Playwright is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Playwright like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view @playwright/test version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Playwright is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -45372,6 +46832,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Cypress is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Cypress like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view cypress version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Cypress is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -46011,6 +47491,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Selenium is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Selenium like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view selenium version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Selenium is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -46650,6 +48150,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Maven is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Maven like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run maven tests using `./mvnw test`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Maven is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -47289,6 +48809,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Gradle is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Gradle like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run maven tests using `./mvnw test`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Gradle is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -47928,6 +49468,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "npm and pnpm is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of npm and pnpm like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `npm view pnpm version`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "npm and pnpm is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -48567,6 +50127,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "uv and Poetry is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of uv and Poetry like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `python -m pip index versions uv`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "uv and Poetry is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -49206,6 +50786,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Cargo is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Cargo like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect crate using `cargo search cargo`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Cargo is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -49845,6 +51445,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Go Modules is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Go Modules like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: add module using `go get go`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Go Modules is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -50484,6 +52104,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "NuGet is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of NuGet like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: inspect package using `dotnet package search NuGet.CommandLine`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "NuGet is best understood as a set of boundaries, lifecycle rules, and failure modes—not a list of APIs. Trace one request or unit of work through those boundaries.",
       "learningPath": [
         {
@@ -51122,6 +52762,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Android is a mobile development technology: a way to build applications that run within phone and tablet operating-system rules.",
+        "whyItMatters": "Learn it so you can create responsive applications that handle lifecycle changes, limited resources, unreliable networks, local data, and device security. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Android like a shop inside a busy station: it serves users directly but must follow the building's schedules, space limits, permissions, and shutdown rules. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `./gradlew assembleDebug`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the states an app or screen moves through"
+          },
+          {
+            "term": "state",
+            "meaning": "the data that determines what the user sees"
+          },
+          {
+            "term": "native API",
+            "meaning": "a capability supplied by the device operating system"
+          }
+        ]
+      },
       "mentalModel": "Android is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -51760,6 +53420,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Jetpack Compose is a mobile development technology: a way to build applications that run within phone and tablet operating-system rules.",
+        "whyItMatters": "Learn it so you can create responsive applications that handle lifecycle changes, limited resources, unreliable networks, local data, and device security. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Jetpack Compose like a shop inside a busy station: it serves users directly but must follow the building's schedules, space limits, permissions, and shutdown rules. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `./gradlew testDebugUnitTest`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the states an app or screen moves through"
+          },
+          {
+            "term": "state",
+            "meaning": "the data that determines what the user sees"
+          },
+          {
+            "term": "native API",
+            "meaning": "a capability supplied by the device operating system"
+          }
+        ]
+      },
       "mentalModel": "Jetpack Compose is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -52398,6 +54078,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "iOS is a mobile development technology: a way to build applications that run within phone and tablet operating-system rules.",
+        "whyItMatters": "Learn it so you can create responsive applications that handle lifecycle changes, limited resources, unreliable networks, local data, and device security. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of iOS like a shop inside a busy station: it serves users directly but must follow the building's schedules, space limits, permissions, and shutdown rules. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `xcodebuild -scheme App build`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the states an app or screen moves through"
+          },
+          {
+            "term": "state",
+            "meaning": "the data that determines what the user sees"
+          },
+          {
+            "term": "native API",
+            "meaning": "a capability supplied by the device operating system"
+          }
+        ]
+      },
       "mentalModel": "iOS is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -53036,6 +54736,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "SwiftUI is a mobile development technology: a way to build applications that run within phone and tablet operating-system rules.",
+        "whyItMatters": "Learn it so you can create responsive applications that handle lifecycle changes, limited resources, unreliable networks, local data, and device security. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of SwiftUI like a shop inside a busy station: it serves users directly but must follow the building's schedules, space limits, permissions, and shutdown rules. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `xcodebuild test -scheme App`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the states an app or screen moves through"
+          },
+          {
+            "term": "state",
+            "meaning": "the data that determines what the user sees"
+          },
+          {
+            "term": "native API",
+            "meaning": "a capability supplied by the device operating system"
+          }
+        ]
+      },
       "mentalModel": "SwiftUI is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -53674,6 +55394,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "React Native is a mobile development technology: a way to build applications that run within phone and tablet operating-system rules.",
+        "whyItMatters": "Learn it so you can create responsive applications that handle lifecycle changes, limited resources, unreliable networks, local data, and device security. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of React Native like a shop inside a busy station: it serves users directly but must follow the building's schedules, space limits, permissions, and shutdown rules. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `npx react-native doctor`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the states an app or screen moves through"
+          },
+          {
+            "term": "state",
+            "meaning": "the data that determines what the user sees"
+          },
+          {
+            "term": "native API",
+            "meaning": "a capability supplied by the device operating system"
+          }
+        ]
+      },
       "mentalModel": "React Native is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -54312,6 +56052,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Flutter is a mobile development technology: a way to build applications that run within phone and tablet operating-system rules.",
+        "whyItMatters": "Learn it so you can create responsive applications that handle lifecycle changes, limited resources, unreliable networks, local data, and device security. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Flutter like a shop inside a busy station: it serves users directly but must follow the building's schedules, space limits, permissions, and shutdown rules. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `flutter doctor`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "lifecycle",
+            "meaning": "the states an app or screen moves through"
+          },
+          {
+            "term": "state",
+            "meaning": "the data that determines what the user sees"
+          },
+          {
+            "term": "native API",
+            "meaning": "a capability supplied by the device operating system"
+          }
+        ]
+      },
       "mentalModel": "Flutter is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -54950,6 +56710,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "NumPy is a data or AI technology: a tool for preparing data, learning patterns, evaluating results, or running a data-driven system.",
+        "whyItMatters": "Learn it so you can turn raw data into a tested result while keeping assumptions, errors, quality, cost, and reproducibility visible. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of NumPy like a scientific workbench: the tool helps run an experiment, but the result is trustworthy only when the inputs and measurements are controlled. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `python -m pip install numpy`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "dataset",
+            "meaning": "the collection of examples used for analysis or learning"
+          },
+          {
+            "term": "model",
+            "meaning": "a learned or defined rule that maps inputs to outputs"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a controlled check of how well the result meets its goal"
+          }
+        ]
+      },
       "mentalModel": "NumPy is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -55588,6 +57368,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "pandas is a data or AI technology: a tool for preparing data, learning patterns, evaluating results, or running a data-driven system.",
+        "whyItMatters": "Learn it so you can turn raw data into a tested result while keeping assumptions, errors, quality, cost, and reproducibility visible. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of pandas like a scientific workbench: the tool helps run an experiment, but the result is trustworthy only when the inputs and measurements are controlled. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `python -m pip install pandas`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "dataset",
+            "meaning": "the collection of examples used for analysis or learning"
+          },
+          {
+            "term": "model",
+            "meaning": "a learned or defined rule that maps inputs to outputs"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a controlled check of how well the result meets its goal"
+          }
+        ]
+      },
       "mentalModel": "pandas is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -56226,6 +58026,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "scikit-learn is a data or AI technology: a tool for preparing data, learning patterns, evaluating results, or running a data-driven system.",
+        "whyItMatters": "Learn it so you can turn raw data into a tested result while keeping assumptions, errors, quality, cost, and reproducibility visible. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of scikit-learn like a scientific workbench: the tool helps run an experiment, but the result is trustworthy only when the inputs and measurements are controlled. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `python -m pip install scikit-learn`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "dataset",
+            "meaning": "the collection of examples used for analysis or learning"
+          },
+          {
+            "term": "model",
+            "meaning": "a learned or defined rule that maps inputs to outputs"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a controlled check of how well the result meets its goal"
+          }
+        ]
+      },
       "mentalModel": "scikit-learn is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -56864,6 +58684,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "PyTorch is a data or AI technology: a tool for preparing data, learning patterns, evaluating results, or running a data-driven system.",
+        "whyItMatters": "Learn it so you can turn raw data into a tested result while keeping assumptions, errors, quality, cost, and reproducibility visible. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of PyTorch like a scientific workbench: the tool helps run an experiment, but the result is trustworthy only when the inputs and measurements are controlled. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `python -m pip install torch`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "dataset",
+            "meaning": "the collection of examples used for analysis or learning"
+          },
+          {
+            "term": "model",
+            "meaning": "a learned or defined rule that maps inputs to outputs"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a controlled check of how well the result meets its goal"
+          }
+        ]
+      },
       "mentalModel": "PyTorch is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -57502,6 +59342,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "TensorFlow and Keras is a data or AI technology: a tool for preparing data, learning patterns, evaluating results, or running a data-driven system.",
+        "whyItMatters": "Learn it so you can turn raw data into a tested result while keeping assumptions, errors, quality, cost, and reproducibility visible. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of TensorFlow and Keras like a scientific workbench: the tool helps run an experiment, but the result is trustworthy only when the inputs and measurements are controlled. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `python -m pip install tensorflow`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "dataset",
+            "meaning": "the collection of examples used for analysis or learning"
+          },
+          {
+            "term": "model",
+            "meaning": "a learned or defined rule that maps inputs to outputs"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a controlled check of how well the result meets its goal"
+          }
+        ]
+      },
       "mentalModel": "TensorFlow and Keras is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -58140,6 +60000,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Hugging Face is a data or AI technology: a tool for preparing data, learning patterns, evaluating results, or running a data-driven system.",
+        "whyItMatters": "Learn it so you can turn raw data into a tested result while keeping assumptions, errors, quality, cost, and reproducibility visible. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Hugging Face like a scientific workbench: the tool helps run an experiment, but the result is trustworthy only when the inputs and measurements are controlled. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `python -m pip install transformers`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "dataset",
+            "meaning": "the collection of examples used for analysis or learning"
+          },
+          {
+            "term": "model",
+            "meaning": "a learned or defined rule that maps inputs to outputs"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a controlled check of how well the result meets its goal"
+          }
+        ]
+      },
       "mentalModel": "Hugging Face is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -58778,6 +60658,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "LangChain is a data or AI technology: a tool for preparing data, learning patterns, evaluating results, or running a data-driven system.",
+        "whyItMatters": "Learn it so you can turn raw data into a tested result while keeping assumptions, errors, quality, cost, and reproducibility visible. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of LangChain like a scientific workbench: the tool helps run an experiment, but the result is trustworthy only when the inputs and measurements are controlled. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `python -m pip install langchain`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "dataset",
+            "meaning": "the collection of examples used for analysis or learning"
+          },
+          {
+            "term": "model",
+            "meaning": "a learned or defined rule that maps inputs to outputs"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a controlled check of how well the result meets its goal"
+          }
+        ]
+      },
       "mentalModel": "LangChain is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -59416,6 +61316,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "LlamaIndex is a data or AI technology: a tool for preparing data, learning patterns, evaluating results, or running a data-driven system.",
+        "whyItMatters": "Learn it so you can turn raw data into a tested result while keeping assumptions, errors, quality, cost, and reproducibility visible. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of LlamaIndex like a scientific workbench: the tool helps run an experiment, but the result is trustworthy only when the inputs and measurements are controlled. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `python -m pip install llama-index`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "dataset",
+            "meaning": "the collection of examples used for analysis or learning"
+          },
+          {
+            "term": "model",
+            "meaning": "a learned or defined rule that maps inputs to outputs"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a controlled check of how well the result meets its goal"
+          }
+        ]
+      },
       "mentalModel": "LlamaIndex is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -60054,6 +61974,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Spark and PySpark is a data or AI technology: a tool for preparing data, learning patterns, evaluating results, or running a data-driven system.",
+        "whyItMatters": "Learn it so you can turn raw data into a tested result while keeping assumptions, errors, quality, cost, and reproducibility visible. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Spark and PySpark like a scientific workbench: the tool helps run an experiment, but the result is trustworthy only when the inputs and measurements are controlled. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `spark-submit job.py`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "dataset",
+            "meaning": "the collection of examples used for analysis or learning"
+          },
+          {
+            "term": "model",
+            "meaning": "a learned or defined rule that maps inputs to outputs"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a controlled check of how well the result meets its goal"
+          }
+        ]
+      },
       "mentalModel": "Spark and PySpark is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -60692,6 +62632,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Apache Kafka is a data or AI technology: a tool for preparing data, learning patterns, evaluating results, or running a data-driven system.",
+        "whyItMatters": "Learn it so you can turn raw data into a tested result while keeping assumptions, errors, quality, cost, and reproducibility visible. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Apache Kafka like a scientific workbench: the tool helps run an experiment, but the result is trustworthy only when the inputs and measurements are controlled. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `bin/kafka-topics.sh --bootstrap-server localhost:9092 --list`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "dataset",
+            "meaning": "the collection of examples used for analysis or learning"
+          },
+          {
+            "term": "model",
+            "meaning": "a learned or defined rule that maps inputs to outputs"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a controlled check of how well the result meets its goal"
+          }
+        ]
+      },
       "mentalModel": "Apache Kafka is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -61330,6 +63290,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Apache Airflow is a data or AI technology: a tool for preparing data, learning patterns, evaluating results, or running a data-driven system.",
+        "whyItMatters": "Learn it so you can turn raw data into a tested result while keeping assumptions, errors, quality, cost, and reproducibility visible. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Apache Airflow like a scientific workbench: the tool helps run an experiment, but the result is trustworthy only when the inputs and measurements are controlled. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `airflow dags list`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "dataset",
+            "meaning": "the collection of examples used for analysis or learning"
+          },
+          {
+            "term": "model",
+            "meaning": "a learned or defined rule that maps inputs to outputs"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a controlled check of how well the result meets its goal"
+          }
+        ]
+      },
       "mentalModel": "Apache Airflow is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -61968,6 +63948,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "dbt is a data or AI technology: a tool for preparing data, learning patterns, evaluating results, or running a data-driven system.",
+        "whyItMatters": "Learn it so you can turn raw data into a tested result while keeping assumptions, errors, quality, cost, and reproducibility visible. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of dbt like a scientific workbench: the tool helps run an experiment, but the result is trustworthy only when the inputs and measurements are controlled. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `dbt build`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "dataset",
+            "meaning": "the collection of examples used for analysis or learning"
+          },
+          {
+            "term": "model",
+            "meaning": "a learned or defined rule that maps inputs to outputs"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a controlled check of how well the result meets its goal"
+          }
+        ]
+      },
       "mentalModel": "dbt is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -62606,6 +64606,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Jupyter is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Jupyter like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `jupyter lab`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Jupyter is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -63244,6 +65264,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Git is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Git like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `git status --short`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Git is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -63882,6 +65922,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Linux Operations is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Linux Operations like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `uname -a`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "Linux Operations is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -64520,6 +66580,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Docker is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Docker like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `docker system info`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "Docker is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -65158,6 +67238,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Kubernetes is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Kubernetes like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `kubectl cluster-info`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "Kubernetes is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -65796,6 +67896,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Helm is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Helm like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `helm lint ./chart`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Helm is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -66434,6 +68554,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Terraform is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Terraform like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `terraform plan`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Terraform is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -67072,6 +69212,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Ansible is a development tool: software that helps you build, test, inspect, package, or operate another piece of software.",
+        "whyItMatters": "Learn it so you can perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Ansible like a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `ansible-playbook --check playbook.yml`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "command",
+            "meaning": "an instruction typed into a terminal"
+          },
+          {
+            "term": "configuration",
+            "meaning": "settings that change how the tool behaves"
+          },
+          {
+            "term": "artifact",
+            "meaning": "a file or package produced by a build or tool"
+          }
+        ]
+      },
       "mentalModel": "Ansible is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -67710,6 +69870,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "CI/CD Pipelines is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of CI/CD Pipelines like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `act --list`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "CI/CD Pipelines is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -68348,6 +70528,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Observability is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Observability like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `otelcol --config config.yaml`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "Observability is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -68986,6 +71186,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Amazon Web Services is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Amazon Web Services like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `aws sts get-caller-identity`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "Amazon Web Services is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -69624,6 +71844,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Microsoft Azure is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Microsoft Azure like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `az account show`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "Microsoft Azure is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -70262,6 +72502,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Google Cloud is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Google Cloud like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `gcloud config list`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "Google Cloud is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -70900,6 +73160,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "Cloud and Supply-Chain Security is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of Cloud and Supply-Chain Security like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `cosign verify <image>`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "Cloud and Supply-Chain Security is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {
@@ -71538,6 +73818,26 @@
         "current": "stable"
       },
       "depthStatus": "complete",
+      "beginnerGuide": {
+        "whatItIs": "DNS and TLS Operations is a platform: a collection of lower-level services and rules on which applications are built or operated.",
+        "whyItMatters": "Learn it so you can understand the boundaries underneath an application so you can design, debug, and explain behavior across layers. In interviews, the important part is explaining what happens and why, not reciting names.",
+        "analogy": "Think of DNS and TLS Operations like a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above. The analogy is only a starting point; the precise rules come later in this manual.",
+        "firstStep": "Begin with one tiny win: run the primary health check using `openssl s_client -connect example.com:443 -servername example.com`, observe the result, and explain what changed.",
+        "keyTerms": [
+          {
+            "term": "abstraction",
+            "meaning": "a simpler interface that hides lower-level details"
+          },
+          {
+            "term": "boundary",
+            "meaning": "the point where responsibility moves between parts"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while the system changes"
+          }
+        ]
+      },
       "mentalModel": "DNS and TLS Operations is an operational system with inputs, state, lifecycle, resource limits, and observable failure signals. Trace those five things before memorizing APIs.",
       "learningPath": [
         {

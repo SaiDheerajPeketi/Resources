@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.18-r23",
+  "version": "2026.09.19-r24",
   "diagnostics": [
     {
       "id": "universal-baseline",
@@ -36,6 +36,26 @@
       "id": "foundations",
       "title": "Foundations: reasoning before memorization",
       "summary": "Build the shared language used in coding, data, systems, and behavioral interviews: complexity, data structures, algorithmic invariants, mathematics, SQL, Linux, networking, testing, and clear communication. The route starts with execution models and ends with timed interview synthesis.",
+      "beginnerGuide": {
+        "whatItIs": "This track teaches the shared basics behind almost every technical interview: programming, problem solving, data, operating systems, networks, databases, and clear communication.",
+        "whyItMatters": "These basics stop advanced topics from feeling like disconnected facts. They help you work out an answer even when you have never seen the exact interview question before.",
+        "analogy": "Think of this track as learning the alphabet, grammar, and basic arithmetic of software. Every specialist subject builds sentences and calculations from these pieces.",
+        "firstStep": "Start with one small program and one array problem. Trace each line by hand, write down its time cost, and test an empty input before reading the advanced sections.",
+        "keyTerms": [
+          {
+            "term": "complexity",
+            "meaning": "how the work or memory grows as the input grows"
+          },
+          {
+            "term": "data structure",
+            "meaning": "a way of arranging data for particular operations"
+          },
+          {
+            "term": "invariant",
+            "meaning": "a rule that must remain true while an algorithm runs"
+          }
+        ]
+      },
       "audience": "Use this route if fundamentals feel fragmented, if you are changing domains, or if solutions work but are difficult to explain, analyze, debug, or generalize under interview pressure.",
       "outcomes": [
         "Analyze time and space costs from code rather than memorized labels.",
@@ -49,6 +69,7 @@
           "id": "foundations-language-reasoning",
           "title": "Programming and complexity",
           "level": "foundation",
+          "plainEnglish": "Learn what a program does one line at a time, how much work it performs, and how to find a bug using evidence instead of guesswork.",
           "objective": "Develop a precise execution model for C++17, the STL, asymptotic analysis, testing, and debugging so every later solution can be explained in terms of operations, ownership, and evidence rather than syntax alone.",
           "prerequisites": [
             "Basic programming syntax and a local C++17 toolchain"
@@ -85,6 +106,7 @@
           "id": "foundations-linear-patterns",
           "title": "Linear structures and search patterns",
           "level": "foundation",
+          "plainEnglish": "Learn the most common containers and search patterns, then practise spotting which one fits a problem before you start coding.",
           "objective": "Learn how contiguous storage, hashing, stacks, queues, linked structures, sorting, and binary search encode different invariants; practice recognizing signals before selecting a technique.",
           "prerequisites": [
             "Programming and complexity stage completed"
@@ -122,6 +144,7 @@
           "id": "foundations-nonlinear-algorithms",
           "title": "Trees, graphs, recursion, greedy, and DP",
           "level": "interview",
+          "plainEnglish": "Learn how to explore choices and connections using trees, graphs, recursion, greedy reasoning, and dynamic programming.",
           "objective": "Move from local operations to state spaces: represent hierarchical and network data, control recursive search, justify greedy choices, and derive dynamic programs from state and transition definitions.",
           "prerequisites": [
             "Linear patterns and complexity fluency"
@@ -161,6 +184,7 @@
           "id": "foundations-math-data-systems",
           "title": "Mathematics, SQL, Linux, and networking",
           "level": "interview",
+          "plainEnglish": "Connect maths and SQL to the machine underneath so you can reason about data, processes, files, connections, and network delays.",
           "objective": "Connect interview mathematics and data reasoning to the machines that execute queries and programs; build enough operational literacy to move between formula, query, process, file, socket, and packet.",
           "prerequisites": [
             "Comfort with algebra, functions, and the command line"
@@ -200,6 +224,7 @@
           "id": "foundations-interview-execution",
           "title": "Interview execution and revision",
           "level": "interview",
+          "plainEnglish": "Turn your knowledge into a repeatable interview routine: clarify, plan, code, test, explain the cost, and communicate past experience clearly.",
           "objective": "Convert knowledge into repeatable interview behavior: clarify the problem, communicate a plan, implement safely, test deliberately, discuss complexity, and tell concise behavioral stories with verifiable impact.",
           "prerequisites": [
             "At least one completed problem and one systems investigation from each prior stage"
@@ -283,6 +308,26 @@
       "id": "ai-data",
       "title": "AI + Data: from evidence to production decisions",
       "summary": "Progress from data quality and statistical reasoning through classical machine learning, deep learning, transformers, retrieval, evaluation, and production ML systems. Every model choice is tied to a measurable objective, leakage-safe evaluation, operational constraints, and responsible failure handling.",
+      "beginnerGuide": {
+        "whatItIs": "This track teaches you how to turn data into useful, tested decisions or AI features—from cleaning a table to training models and building LLM applications.",
+        "whyItMatters": "AI interviews test more than model names. You must show that the data is trustworthy, the evaluation matches the goal, and the system still works outside a demo.",
+        "analogy": "Think of AI work like scientific cooking: ingredients are the data, a recipe is the model, and a blind taste test is the evaluation. A fancy recipe cannot rescue spoiled ingredients.",
+        "firstStep": "Start with a small messy dataset. Describe every column, find missing or suspicious values, choose one simple question, and build the simplest baseline that can answer it.",
+        "keyTerms": [
+          {
+            "term": "feature",
+            "meaning": "an input value a model uses to make a prediction"
+          },
+          {
+            "term": "model",
+            "meaning": "a learned rule that maps inputs to an output"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a controlled test of whether the result meets its goal"
+          }
+        ]
+      },
       "audience": "Use this route for AI engineering, ML engineering, data science, data engineering, MLOps, recommender, forecasting, computer-vision, NLP, and LLM-focused interview preparation.",
       "outcomes": [
         "Turn a product question into measurable targets and valid experimental evidence.",
@@ -296,6 +341,7 @@
           "id": "ai-data-evidence",
           "title": "Data quality, EDA, and experiments",
           "level": "foundation",
+          "plainEnglish": "Before training anything, learn whether the data is trustworthy, what it can prove, and how a bad experiment can create a convincing wrong answer.",
           "objective": "Learn to treat data as measured evidence with lineage, missingness, sampling, uncertainty, and causal limits before any model is selected or trained.",
           "prerequisites": [
             "Foundational probability, statistics, SQL, and Python"
@@ -332,6 +378,7 @@
           "id": "ai-data-classical-ml",
           "title": "Classical ML and evaluation",
           "level": "interview",
+          "plainEnglish": "Build simple models first, compare them fairly, and choose measurements that match the real cost of a wrong prediction.",
           "objective": "Build a strong baseline culture around linear, tree, and unsupervised models; connect objective functions, regularization, validation, calibration, thresholds, and business costs.",
           "prerequisites": [
             "Evidence stage and foundational linear algebra"
@@ -370,6 +417,7 @@
           "id": "ai-data-deep-learning",
           "title": "Deep learning and modalities",
           "level": "interview",
+          "plainEnglish": "Learn how neural networks update themselves, then see how the same ideas are adapted for images, text, sequences, recommendations, and forecasts.",
           "objective": "Understand backpropagation, representation learning, optimization, CNNs, sequence models, transformers, NLP, vision, recommenders, and forecasting as related architectures with modality-specific inductive biases.",
           "prerequisites": [
             "Classical ML, optimization, calculus, and matrix operations"
@@ -410,6 +458,7 @@
           "id": "ai-data-llm-systems",
           "title": "Embeddings, RAG, fine-tuning, and agents",
           "level": "advanced",
+          "plainEnglish": "Build an LLM feature as a complete system: find information, construct context, generate an answer, use tools safely, and measure when it fails.",
           "objective": "Design LLM applications as probabilistic systems with retrieval, context construction, tool boundaries, evaluation, security, latency, cost, and explicit abstention rather than prompt-only demos.",
           "prerequisites": [
             "Transformers, information retrieval, APIs, and security basics"
@@ -449,6 +498,7 @@
           "id": "ai-data-production",
           "title": "MLOps and ML system design",
           "level": "advanced",
+          "plainEnglish": "Learn how a model is versioned, deployed, watched, and rolled back so it remains useful after it leaves the notebook.",
           "objective": "Join data, training, registry, deployment, inference, monitoring, governance, rollback, and human feedback into an evolvable system whose statistical and operational failures are observable.",
           "prerequisites": [
             "One evaluated model or LLM application and basic distributed-systems knowledge"
@@ -533,6 +583,26 @@
       "id": "sde-systems",
       "title": "SDE + Systems: code, runtime, and distributed trade-offs",
       "summary": "Move from maintainable code and runtime internals through operating systems, databases, networks, backend engineering, distributed systems, reliability, and complete system-design cases. The route emphasizes invariants, failure boundaries, concurrency, data semantics, and explicit capacity assumptions.",
+      "beginnerGuide": {
+        "whatItIs": "This track teaches how software is designed and how it behaves underneath: code structure, memory, concurrency, databases, networks, APIs, distributed systems, and system design.",
+        "whyItMatters": "Software-engineering interviews ask you to connect code to real behavior. You need to explain what happens when users, data, traffic, or failures increase—not only draw boxes.",
+        "analogy": "Think of a software system as a city. Code defines individual buildings, APIs are entrances, networks are roads, databases are records offices, and operations keep the city usable.",
+        "firstStep": "Start by building one small API with one database table. Trace a request from the client to the server, through the query, and back to the response—including one failure.",
+        "keyTerms": [
+          {
+            "term": "API",
+            "meaning": "a defined way for two software components to communicate"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a group of data changes treated as one operation"
+          },
+          {
+            "term": "distributed system",
+            "meaning": "a system whose parts run on multiple machines"
+          }
+        ]
+      },
       "audience": "Use this route for software, backend, full-stack, infrastructure, systems, fintech, data-platform, and architecture interviews that require both implementation fluency and design reasoning.",
       "outcomes": [
         "Design testable modules and object models without mistaking patterns for goals.",
@@ -546,6 +616,7 @@
           "id": "sde-code-design",
           "title": "Code design, testing, and runtime",
           "level": "foundation",
+          "plainEnglish": "Learn to divide code into understandable parts, protect each part's rules, test behavior, and measure performance before changing the design.",
           "objective": "Build reliable implementation instincts with OOP, SOLID, design patterns, modern C++ internals, ownership, testing strategy, and performance measurement.",
           "prerequisites": [
             "Programming fundamentals and DSA basics"
@@ -584,6 +655,7 @@
           "id": "sde-core-runtime",
           "title": "Concurrency, OS, databases, and networks",
           "level": "interview",
+          "plainEnglish": "Follow one request through threads, memory, the operating system, the network, and the database so hidden behavior becomes easier to debug.",
           "objective": "Understand the runtime substrate beneath applications: scheduling, synchronization, virtual memory, files, transactions, indexes, query plans, sockets, HTTP, and the ways concurrency and partial failure violate intuition.",
           "prerequisites": [
             "Code design stage and foundational networking/SQL"
@@ -621,6 +693,7 @@
           "id": "sde-backend",
           "title": "APIs, backend architecture, and low-level design",
           "level": "interview",
+          "plainEnglish": "Turn a product action into a clear API, business rule, database change, permission check, error response, and test.",
           "objective": "Translate product behavior into contracts, domain models, persistence, authorization, idempotency, error semantics, deployment boundaries, and evolvable low-level designs.",
           "prerequisites": [
             "Core runtime stage and one production language"
@@ -658,6 +731,7 @@
           "id": "sde-distributed",
           "title": "Distributed data and reliability",
           "level": "advanced",
+          "plainEnglish": "Learn what changes when one program becomes many machines: messages can be late, duplicated, lost, stale, or handled by a failed component.",
           "objective": "Design systems that remain understandable under scale and failure using partitioning, consistency, caching, queues, storage, capacity planning, reliability, and observability.",
           "prerequisites": [
             "Backend stage and core database/networking fluency"
@@ -699,6 +773,7 @@
           "id": "sde-system-design",
           "title": "System-design synthesis",
           "level": "advanced",
+          "plainEnglish": "Practise a complete design interview from requirements and estimates to data, APIs, failures, security, monitoring, and trade-offs.",
           "objective": "Practice a repeatable interview method that starts with user and business requirements, quantifies load, establishes data semantics, draws critical paths, tests failures, and evolves the design without premature complexity.",
           "prerequisites": [
             "At least one deliverable from every prior SDE stage"
@@ -783,6 +858,26 @@
       "id": "devops-cloud",
       "title": "DevOps + Cloud: repeatable delivery and reliable operation",
       "summary": "Build from Linux and network diagnosis through CI/CD, containers, infrastructure as code, Kubernetes, observability, SRE, incident response, platform engineering, cloud architecture, and cost control. Commands are treated as evidence-producing tools, not incantations.",
+      "beginnerGuide": {
+        "whatItIs": "This track teaches how software moves from a developer's machine into a reliable production environment using Linux, networks, pipelines, containers, cloud services, and operations.",
+        "whyItMatters": "DevOps interviews test whether you can ship safely and recover calmly. Commands matter, but understanding what changed, how to observe it, and how to undo it matters more.",
+        "analogy": "Think of DevOps as running a railway. Code is the passenger, pipelines are the route, infrastructure is the track, monitoring is the signal system, and rollback is the safe return path.",
+        "firstStep": "Start with one tiny web service. Run it locally, package it in a container, record its logs, deliberately break its configuration, and restore the last working version.",
+        "keyTerms": [
+          {
+            "term": "deployment",
+            "meaning": "the process of releasing software into an environment"
+          },
+          {
+            "term": "SLO",
+            "meaning": "a measurable reliability target for a user-facing service"
+          },
+          {
+            "term": "rollback",
+            "meaning": "returning to a previously working version or state"
+          }
+        ]
+      },
       "audience": "Use this route for DevOps, platform, SRE, cloud, infrastructure, release, production engineering, and MLOps interviews across AWS, Azure, GCP, and OCI terminology.",
       "outcomes": [
         "Diagnose Linux, DNS, TLS, routing, process, and resource failures systematically.",
@@ -796,6 +891,7 @@
           "id": "devops-runtime",
           "title": "Linux, shell, DNS, TLS, and networks",
           "level": "foundation",
+          "plainEnglish": "Learn the Linux and network path beneath a service so you can locate whether a failure is in the process, name lookup, connection, certificate, or application.",
           "objective": "Develop a layer-by-layer operational model from process and filesystem through sockets, DNS, TLS, routing, load balancing, and production network paths.",
           "prerequisites": [
             "Foundational Linux CLI and networking concepts"
@@ -832,6 +928,7 @@
           "id": "devops-delivery",
           "title": "GitOps, CI/CD, releases, config, and secrets",
           "level": "interview",
+          "plainEnglish": "Build a safe path from a code change to production with tests, one versioned artifact, protected secrets, gradual release, and rollback.",
           "objective": "Design a software supply path that converts reviewed source into immutable artifacts and controlled deployments with provenance, least privilege, rollback, and environment-safe configuration.",
           "prerequisites": [
             "Runtime stage and Git/testing fundamentals"
@@ -868,6 +965,7 @@
           "id": "devops-platform",
           "title": "Containers, Kubernetes, and infrastructure as code",
           "level": "interview",
+          "plainEnglish": "Learn how containers, Kubernetes, and infrastructure code describe the desired system and how to diagnose why reality differs from that description.",
           "objective": "Understand images, namespaces, cgroups, reconciliation, scheduling, networking, storage, Terraform state, drift, and safe infrastructure change as converging desired-state systems.",
           "prerequisites": [
             "Delivery stage and Linux/networking fluency"
@@ -906,6 +1004,7 @@
           "id": "devops-reliability",
           "title": "Observability, SLOs, incidents, and disaster recovery",
           "level": "advanced",
+          "plainEnglish": "Learn to measure what users experience, create useful alerts, respond to incidents, and prove that backups and recovery actually work.",
           "objective": "Turn telemetry into decisions using service objectives, symptom-based alerts, structured incident response, capacity and dependency awareness, and tested recovery objectives.",
           "prerequisites": [
             "A deployed service and its delivery path"
@@ -944,6 +1043,7 @@
           "id": "devops-cloud-architecture",
           "title": "Cloud architecture and platform synthesis",
           "level": "advanced",
+          "plainEnglish": "Learn to choose and combine cloud services by the guarantees you need, then design a secure and affordable path that teams can operate.",
           "objective": "Compare AWS, Azure, GCP, and OCI by primitives and responsibility boundaries, then design secure, reliable, observable, and cost-aware landing zones and developer platforms.",
           "prerequisites": [
             "Platform and reliability stages plus IAM/security foundations"
@@ -1030,6 +1130,26 @@
       "id": "cybersecurity",
       "title": "Cybersecurity: model threats, enforce boundaries, prove response",
       "summary": "Progress from risk, assets, trust boundaries, identity, cryptography, and secure design through web, API, network, cloud, container, Kubernetes, supply-chain, detection, incident response, and forensics. Security claims must be tied to an attacker model and verifiable control.",
+      "beginnerGuide": {
+        "whatItIs": "This track teaches how systems are attacked and defended: threats, identity, cryptography, web and cloud security, secure development, detection, and incident response.",
+        "whyItMatters": "Security interviews reward clear reasoning about assets, attackers, boundaries, and evidence. Memorizing vulnerability names is not enough to choose or verify the right defense.",
+        "analogy": "Think of security as protecting a building. First decide what matters, who may enter, where the doors are, how misuse is detected, and what happens after a break-in.",
+        "firstStep": "Start with a familiar login flow. Draw the user, browser, server, and database; mark where trust changes; then list one attack and one testable defense at each boundary.",
+        "keyTerms": [
+          {
+            "term": "threat",
+            "meaning": "a possible harmful action by an attacker or event"
+          },
+          {
+            "term": "vulnerability",
+            "meaning": "a weakness that can allow harm to occur"
+          },
+          {
+            "term": "control",
+            "meaning": "a safeguard that prevents, detects, or limits harm"
+          }
+        ]
+      },
       "audience": "Use this route for security engineering, AppSec, cloud security, DevSecOps, product security, detection, incident response, and security-aware software or infrastructure interviews.",
       "outcomes": [
         "Turn an architecture into assets, trust boundaries, abuse cases, and prioritized controls.",
@@ -1043,6 +1163,7 @@
           "id": "security-risk-model",
           "title": "Foundations and threat modeling",
           "level": "foundation",
+          "plainEnglish": "Start by deciding what needs protection, who might attack it, where trust changes, and which defenses reduce the most meaningful risk.",
           "objective": "Learn to reason from assets, actors, trust boundaries, attack paths, likelihood, impact, and verifiable mitigations instead of applying security checklists without context.",
           "prerequisites": [
             "Foundational networking, operating systems, and software architecture"
@@ -1078,6 +1199,7 @@
           "id": "security-identity-crypto",
           "title": "Identity, authorization, cryptography, and PKI",
           "level": "interview",
+          "plainEnglish": "Learn the difference between proving identity, granting permission, protecting data, verifying messages, and managing keys over time.",
           "objective": "Build exact mental models for authentication, sessions, federation, authorization, keys, hashes, signatures, encryption, certificates, TLS, rotation, revocation, and failure recovery.",
           "prerequisites": [
             "Risk modeling and network protocol fundamentals"
@@ -1113,6 +1235,7 @@
           "id": "security-app-network",
           "title": "Web, API, network, and secure coding",
           "level": "interview",
+          "plainEnglish": "Learn how common web, API, and network attacks cross a boundary, then fix the correct boundary and prove the weakness stays closed.",
           "objective": "Apply threat models to parsers, browsers, APIs, networks, code, dependencies, and business workflows; focus on input boundaries, output contexts, authorization, state, and safe failure.",
           "prerequisites": [
             "Identity and cryptography stage plus backend and network basics"
@@ -1151,6 +1274,7 @@
           "id": "security-cloud-supply-chain",
           "title": "Cloud, containers, Kubernetes, and supply chain",
           "level": "advanced",
+          "plainEnglish": "Protect the path from source code to a running cloud workload, including build systems, dependencies, images, identities, secrets, and policies.",
           "objective": "Secure identities, control planes, workloads, images, clusters, build systems, artifacts, dependencies, secrets, and provenance across shared-responsibility boundaries.",
           "prerequisites": [
             "Application security plus cloud/container fundamentals"
@@ -1190,6 +1314,7 @@
           "id": "security-detection-response",
           "title": "Detection, incident response, and forensics",
           "level": "advanced",
+          "plainEnglish": "Learn how to notice a likely attack, collect reliable evidence, limit the damage, restore service, and improve the system afterward.",
           "objective": "Design evidence collection, high-signal detections, triage, containment, eradication, recovery, and learning while preserving timelines and forensic integrity.",
           "prerequisites": [
             "Threat models and telemetry from at least one application or cloud system"
@@ -1274,6 +1399,26 @@
       "id": "fintech-quant",
       "title": "Fintech + Quant: preserve money and model uncertainty",
       "summary": "Learn exact monetary representation, double-entry ledgers, idempotent payment workflows, reconciliation, settlement, fraud, compliance, resilience, market microstructure, stochastic models, derivatives, portfolios, backtesting, and low-latency engineering. Financial invariants and auditability lead every design.",
+      "beginnerGuide": {
+        "whatItIs": "This track has two connected sides: building software that moves and records money safely, and using mathematics and data to reason about markets, pricing, and risk.",
+        "whyItMatters": "Financial interviews care about exactness. A duplicated payment, an unbalanced ledger, or a biased backtest can look successful while producing a serious real-world loss.",
+        "analogy": "Think of fintech as a chain of signed receipts and quant work as testing a measuring instrument. Every amount needs a traceable history, and every model needs known limits.",
+        "firstStep": "Start with a tiny double-entry ledger that transfers ₹100 between two accounts. Repeat the same request twice and prove the money moves only once while the history remains visible.",
+        "keyTerms": [
+          {
+            "term": "ledger",
+            "meaning": "the authoritative history of financial entries and balances"
+          },
+          {
+            "term": "idempotency",
+            "meaning": "making repeated identical requests produce one lasting effect"
+          },
+          {
+            "term": "settlement",
+            "meaning": "the final transfer of value between participating institutions"
+          }
+        ]
+      },
       "audience": "Use this route for fintech engineering, payments, banking, lending, risk, fraud, trading systems, quant development, and quantitative research interviews, with India-first regulatory context.",
       "outcomes": [
         "Represent money and accounting events without losing value or audit history.",
@@ -1287,6 +1432,7 @@
           "id": "fintech-money-ledgers",
           "title": "Money, ledgers, and idempotency",
           "level": "foundation",
+          "plainEnglish": "Learn how to represent money exactly, record every movement with balanced entries, and make retries safe without erasing history.",
           "objective": "Establish the invariants beneath financial systems: exact value representation, currencies and rounding, balanced postings, immutable history, account states, retries, reversals, and audit trails.",
           "prerequisites": [
             "SQL, transactions, integer arithmetic, and API basics"
@@ -1323,6 +1469,7 @@
           "id": "fintech-payment-rails",
           "title": "Payments, cards, UPI, banking, and lending",
           "level": "interview",
+          "plainEnglish": "Follow a payment across users, banks, card or UPI networks, callbacks, timeouts, refunds, and the final movement of money.",
           "objective": "Model multi-party workflows as explicit state machines with authorization, capture, clearing, settlement, mandates, refunds, disputes, timeouts, callbacks, and compensating actions.",
           "prerequisites": [
             "Money and ledger stage plus networking and API design"
@@ -1360,6 +1507,7 @@
           "id": "fintech-operations-risk",
           "title": "Reconciliation, settlement, fraud, compliance, and resilience",
           "level": "interview",
+          "plainEnglish": "Learn how teams find missing money, handle settlement breaks, reduce fraud, meet compliance duties, and recover without losing the audit trail.",
           "objective": "Operate financial workflows safely by comparing independent records, explaining breaks, controlling fraud, meeting KYC/AML and PCI obligations, and recovering without losing auditability.",
           "prerequisites": [
             "Payment rails stage and security/reliability fundamentals"
@@ -1398,6 +1546,7 @@
           "id": "fintech-markets-models",
           "title": "Markets, probability, pricing, portfolios, and risk",
           "level": "advanced",
+          "plainEnglish": "Learn how orders create markets and how probability, time series, pricing, portfolios, and risk models describe uncertain financial outcomes.",
           "objective": "Build quantitative reasoning from order-book mechanics and stochastic processes through time-series assumptions, derivative pricing, portfolios, and risk measures without hiding model limits.",
           "prerequisites": [
             "Probability, statistics, calculus, linear algebra, and programming"
@@ -1437,6 +1586,7 @@
           "id": "fintech-quant-production",
           "title": "Backtesting, low latency, security, and regulation",
           "level": "advanced",
+          "plainEnglish": "Learn how to test a strategy without using future information and how to build fast financial software without sacrificing correctness or recovery.",
           "objective": "Turn strategies and financial services into defensible production systems by eliminating look-ahead and survivorship bias, modeling costs, measuring latency, securing data, and labeling jurisdiction-specific obligations.",
           "prerequisites": [
             "Markets/models or payment operations stage plus performance and security engineering"
@@ -1524,6 +1674,26 @@
       "id": "frontend",
       "title": "Frontend Engineer",
       "summary": "Master the browser platform, accessible interface engineering, typed component design, state and data flow, performance, security, testing, and delivery rather than preparing as a framework-only developer.",
+      "beginnerGuide": {
+        "whatItIs": "A frontend engineer builds the part of a website or web application that people see, click, type into, and use.",
+        "whyItMatters": "You need browser, accessibility, state, performance, and testing knowledge so the interface works for real people—not only in a perfect demo.",
+        "analogy": "Think of frontend work as designing and operating a shop floor: users need clear signs, fast service, accessible paths, and useful recovery when something goes wrong.",
+        "firstStep": "Build one accessible form with validation, loading, success, and error states before adding a large framework architecture.",
+        "keyTerms": [
+          {
+            "term": "component",
+            "meaning": "a reusable piece of an interface"
+          },
+          {
+            "term": "state",
+            "meaning": "data that determines what the interface currently shows"
+          },
+          {
+            "term": "accessibility",
+            "meaning": "making the interface usable across abilities and input methods"
+          }
+        ]
+      },
       "reason": "Frontend Engineer interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "web-platform",
@@ -1552,6 +1722,7 @@
           "id": "frontend-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why Frontend Engineer systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for Frontend Engineer interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -1587,6 +1758,7 @@
           "id": "frontend-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how WEB Platform and JavaScript work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in WEB Platform and JavaScript while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete frontend foundations stage"
@@ -1621,6 +1793,7 @@
           "id": "frontend-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect TypeScript and React to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine TypeScript and React into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete frontend runtime stage"
@@ -1655,6 +1828,7 @@
           "id": "frontend-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use Next.js and Playwright to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use Next.js and Playwright to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete frontend implementation stage"
@@ -1689,6 +1863,7 @@
           "id": "frontend-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the Frontend Engineer loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -1756,6 +1931,26 @@
       "id": "backend",
       "title": "Backend Engineer",
       "summary": "Develop strong API, data, concurrency, reliability, and distributed-systems judgment around a production language and observable service stack, with explicit semantics for retries and failure.",
+      "beginnerGuide": {
+        "whatItIs": "A backend engineer builds the server-side rules, APIs, data access, and background work that power an application.",
+        "whyItMatters": "You must keep data correct and requests reliable while handling concurrent users, retries, slow dependencies, failures, and changing requirements.",
+        "analogy": "Think of the backend as the kitchen behind a restaurant: orders arrive through a clear counter, work follows rules, ingredients are tracked, and mistakes need recovery.",
+        "firstStep": "Build one create-and-read API backed by a database, then send the same write twice and prove it does not create duplicate results.",
+        "keyTerms": [
+          {
+            "term": "API",
+            "meaning": "a defined way for software components to communicate"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a group of data changes treated as one operation"
+          },
+          {
+            "term": "idempotency",
+            "meaning": "making a repeated request leave only one lasting effect"
+          }
+        ]
+      },
       "reason": "Backend Engineer interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "java",
@@ -1784,6 +1979,7 @@
           "id": "backend-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why Backend Engineer systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for Backend Engineer interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -1819,6 +2015,7 @@
           "id": "backend-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how Java and Spring Boot work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in Java and Spring Boot while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete backend foundations stage"
@@ -1853,6 +2050,7 @@
           "id": "backend-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect PostgreSQL and Redis to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine PostgreSQL and Redis into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete backend runtime stage"
@@ -1887,6 +2085,7 @@
           "id": "backend-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use Kafka and Docker to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use Kafka and Docker to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete backend implementation stage"
@@ -1921,6 +2120,7 @@
           "id": "backend-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the Backend Engineer loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -1988,6 +2188,26 @@
       "id": "full-stack",
       "title": "Full-Stack Engineer",
       "summary": "Connect browser behavior, typed UI state, server contracts, domain logic, SQL data, testing, security, and deployment into one coherent vertical slice without becoming shallow at every layer.",
+      "beginnerGuide": {
+        "whatItIs": "A full-stack engineer connects the user interface, server logic, APIs, and database into one complete feature.",
+        "whyItMatters": "The role requires enough depth to trace a problem across layers instead of assuming the bug belongs to somebody else.",
+        "analogy": "Think of full-stack work as following a parcel from the order screen through the warehouse, delivery network, status updates, and final receipt.",
+        "firstStep": "Build one small feature end to end: a form, validated API, database write, visible result, and tests for one failure at every boundary.",
+        "keyTerms": [
+          {
+            "term": "client",
+            "meaning": "the application that directly interacts with the user"
+          },
+          {
+            "term": "server",
+            "meaning": "the component that applies shared rules and accesses protected data"
+          },
+          {
+            "term": "contract",
+            "meaning": "the agreed shape and behavior at a boundary"
+          }
+        ]
+      },
       "reason": "Full-Stack Engineer interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "typescript",
@@ -2016,6 +2236,7 @@
           "id": "full-stack-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why Full-Stack Engineer systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for Full-Stack Engineer interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -2051,6 +2272,7 @@
           "id": "full-stack-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how TypeScript and React work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in TypeScript and React while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete full-stack foundations stage"
@@ -2085,6 +2307,7 @@
           "id": "full-stack-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect Next.js and Node.js to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine Next.js and Node.js into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete full-stack runtime stage"
@@ -2119,6 +2342,7 @@
           "id": "full-stack-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use PostgreSQL and Playwright to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use PostgreSQL and Playwright to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete full-stack implementation stage"
@@ -2153,6 +2377,7 @@
           "id": "full-stack-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the Full-Stack Engineer loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -2220,6 +2445,26 @@
       "id": "java",
       "title": "Java Engineer",
       "summary": "Prepare from language semantics and object design through the JVM, collections, concurrency, Spring, persistence, testing, build systems, and production service trade-offs expected in Java interviews.",
+      "beginnerGuide": {
+        "whatItIs": "A Java engineer writes applications in Java and understands how the JVM loads, runs, optimizes, and manages that code.",
+        "whyItMatters": "Java interviews connect language rules, object design, collections, memory, concurrency, Spring services, persistence, testing, and production diagnosis.",
+        "analogy": "Think of Java source as a portable script handed to the JVM, which acts as both translator and stage manager for memory, threads, and optimized execution.",
+        "firstStep": "Write one small Java program with a collection, an immutable value, an exception, and a test; then inspect the compiled bytecode.",
+        "keyTerms": [
+          {
+            "term": "JVM",
+            "meaning": "the virtual machine that executes Java bytecode"
+          },
+          {
+            "term": "bytecode",
+            "meaning": "the portable instructions produced by the Java compiler"
+          },
+          {
+            "term": "garbage collection",
+            "meaning": "automatic recovery of memory no longer reachable by the program"
+          }
+        ]
+      },
       "reason": "Java Engineer interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "java",
@@ -2248,6 +2493,7 @@
           "id": "java-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why Java Engineer systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for Java Engineer interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -2283,6 +2529,7 @@
           "id": "java-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how Java and Spring work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in Java and Spring while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete java foundations stage"
@@ -2317,6 +2564,7 @@
           "id": "java-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect Spring Boot and Hibernate to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine Spring Boot and Hibernate into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete java runtime stage"
@@ -2351,6 +2599,7 @@
           "id": "java-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use Junit Mockito and Maven to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use Junit Mockito and Maven to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete java implementation stage"
@@ -2385,6 +2634,7 @@
           "id": "java-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the Java Engineer loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -2452,6 +2702,26 @@
       "id": "python",
       "title": "Python Engineer",
       "summary": "Build interview fluency in Python's object and execution models, typing, iterators, concurrency, web frameworks, data access, testing, packaging, performance, and secure production delivery.",
+      "beginnerGuide": {
+        "whatItIs": "A Python engineer builds software with Python while understanding its object model, packages, typing, concurrency choices, testing, and production behavior.",
+        "whyItMatters": "Python is easy to start but interviews test the behavior hidden behind convenient syntax, especially mutability, imports, async work, performance, and runtime validation.",
+        "analogy": "Think of Python as a helpful interpreter sitting beside you: it removes ceremony, but you still need to know which objects are shared and what work happens at runtime.",
+        "firstStep": "Create a virtual environment, write one typed function and pytest, then deliberately pass bad input and observe where validation does or does not happen.",
+        "keyTerms": [
+          {
+            "term": "interpreter",
+            "meaning": "the runtime that reads and executes Python code"
+          },
+          {
+            "term": "package",
+            "meaning": "a distributable collection of Python modules"
+          },
+          {
+            "term": "virtual environment",
+            "meaning": "an isolated location for one project's Python dependencies"
+          }
+        ]
+      },
       "reason": "Python Engineer interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "python",
@@ -2480,6 +2750,7 @@
           "id": "python-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why Python Engineer systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for Python Engineer interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -2515,6 +2786,7 @@
           "id": "python-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how Python and Fastapi work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in Python and Fastapi while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete python foundations stage"
@@ -2549,6 +2821,7 @@
           "id": "python-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect Django and pytest to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine Django and pytest into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete python runtime stage"
@@ -2583,6 +2856,7 @@
           "id": "python-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use PostgreSQL and Docker to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use PostgreSQL and Docker to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete python implementation stage"
@@ -2617,6 +2891,7 @@
           "id": "python-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the Python Engineer loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -2684,6 +2959,26 @@
       "id": "go",
       "title": "Go Engineer",
       "summary": "Prepare around Go's type system, interfaces, errors, goroutines, channels, context, HTTP services, data access, profiling, Kubernetes delivery, and production concurrency failure modes.",
+      "beginnerGuide": {
+        "whatItIs": "A Go engineer builds simple, compiled services and tools using Go's small type system and explicit concurrency model.",
+        "whyItMatters": "Go interviews focus on interfaces, errors, slices, goroutines, channels, cancellation, HTTP services, profiling, and avoiding leaked or unbounded work.",
+        "analogy": "Think of Go as a workshop with a small set of sturdy tools: there is less machinery to learn, so ownership and coordination choices are easy to see.",
+        "firstStep": "Build one HTTP endpoint, start one bounded background task, cancel it through context, and run the race detector before adding a framework.",
+        "keyTerms": [
+          {
+            "term": "goroutine",
+            "meaning": "a lightweight function scheduled concurrently by the Go runtime"
+          },
+          {
+            "term": "interface",
+            "meaning": "a set of methods a value must provide"
+          },
+          {
+            "term": "context",
+            "meaning": "a standard way to carry deadlines and cancellation through a call chain"
+          }
+        ]
+      },
       "reason": "Go Engineer interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "go",
@@ -2712,6 +3007,7 @@
           "id": "go-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why Go Engineer systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for Go Engineer interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -2747,6 +3043,7 @@
           "id": "go-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how Go and Go HTTP work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in Go and Go HTTP while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete go foundations stage"
@@ -2781,6 +3078,7 @@
           "id": "go-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect Gin and PostgreSQL to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine Gin and PostgreSQL into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete go runtime stage"
@@ -2815,6 +3113,7 @@
           "id": "go-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use Kubernetes and Observability to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use Kubernetes and Observability to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete go implementation stage"
@@ -2849,6 +3148,7 @@
           "id": "go-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the Go Engineer loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -2916,6 +3216,26 @@
       "id": "android",
       "title": "Android Engineer",
       "summary": "Develop from Kotlin/Java and Android lifecycle fundamentals through Compose state, architecture, persistence, testing, performance, security, build tooling, and device-specific failure handling.",
+      "beginnerGuide": {
+        "whatItIs": "An Android engineer builds applications for Android devices using Kotlin or Java and the Android platform lifecycle.",
+        "whyItMatters": "Mobile apps must survive screen changes, background limits, process death, unreliable networks, limited battery, and many device configurations.",
+        "analogy": "Think of an Android screen as a shop that the operating system may pause, rebuild, or close; important state must not depend on the shop staying open forever.",
+        "firstStep": "Build one Compose screen whose state survives rotation, loads local data, shows an error, and remains usable with keyboard and screen-reader navigation.",
+        "keyTerms": [
+          {
+            "term": "activity",
+            "meaning": "an Android component that hosts a user-facing screen"
+          },
+          {
+            "term": "lifecycle",
+            "meaning": "the states an Android component moves through"
+          },
+          {
+            "term": "recomposition",
+            "meaning": "Compose recalculating interface output after relevant state changes"
+          }
+        ]
+      },
       "reason": "Android Engineer interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "java",
@@ -2944,6 +3264,7 @@
           "id": "android-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why Android Engineer systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for Android Engineer interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -2979,6 +3300,7 @@
           "id": "android-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how Java and Kotlin work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in Java and Kotlin while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete android foundations stage"
@@ -3013,6 +3335,7 @@
           "id": "android-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect Android and Jetpack Compose to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine Android and Jetpack Compose into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete android runtime stage"
@@ -3047,6 +3370,7 @@
           "id": "android-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use Gradle and SQLite to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use Gradle and SQLite to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete android implementation stage"
@@ -3081,6 +3405,7 @@
           "id": "android-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the Android Engineer loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -3148,6 +3473,26 @@
       "id": "ios",
       "title": "iOS Engineer",
       "summary": "Prepare across Swift semantics, iOS lifecycle, SwiftUI state and identity, concurrency, persistence, networking, testing, performance, security, build and release behavior.",
+      "beginnerGuide": {
+        "whatItIs": "An iOS engineer builds applications for Apple devices using Swift, platform APIs, and lifecycle-aware user interfaces.",
+        "whyItMatters": "The role requires clear reasoning about value and reference types, memory ownership, Swift concurrency, SwiftUI state, storage, performance, and release constraints.",
+        "analogy": "Think of an iOS view as a fresh description of what the screen should look like, while longer-lived state and tasks must have clear owners behind it.",
+        "firstStep": "Build one SwiftUI screen with explicit state ownership, an async request that can be cancelled, local persistence, and an error recovery path.",
+        "keyTerms": [
+          {
+            "term": "ARC",
+            "meaning": "automatic reference counting used to manage object lifetimes"
+          },
+          {
+            "term": "SwiftUI state",
+            "meaning": "data whose changes cause a view description to update"
+          },
+          {
+            "term": "structured concurrency",
+            "meaning": "tasks arranged so lifetime, cancellation, and errors follow clear parent-child rules"
+          }
+        ]
+      },
       "reason": "iOS Engineer interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "swift",
@@ -3176,6 +3521,7 @@
           "id": "ios-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why iOS Engineer systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for iOS Engineer interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -3211,6 +3557,7 @@
           "id": "ios-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how Swift and iOS work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in Swift and iOS while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete ios foundations stage"
@@ -3245,6 +3592,7 @@
           "id": "ios-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect SwiftUI and SQLite to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine SwiftUI and SQLite into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete ios runtime stage"
@@ -3279,6 +3627,7 @@
           "id": "ios-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use GIT and CI/CD to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use GIT and CI/CD to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete ios implementation stage"
@@ -3313,6 +3662,7 @@
           "id": "ios-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the iOS Engineer loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -3380,6 +3730,26 @@
       "id": "mobile",
       "title": "Cross-Platform Mobile Engineer",
       "summary": "Master the shared mobile product constraints plus React Native and Flutter runtime boundaries, state, navigation, native integration, offline data, testing, performance, and delivery.",
+      "beginnerGuide": {
+        "whatItIs": "A cross-platform mobile engineer shares application code across Android and iOS while still respecting each device platform's behavior.",
+        "whyItMatters": "You need to understand the shared framework and the native boundary so performance, permissions, lifecycle, and device integrations do not become mysterious.",
+        "analogy": "Think of cross-platform code as a common control room connected to two different machines; most controls are shared, but each machine still has unique switches and limits.",
+        "firstStep": "Build the same small offline screen in the chosen framework, then add one native capability and measure what crosses the framework-to-native boundary.",
+        "keyTerms": [
+          {
+            "term": "bridge",
+            "meaning": "the boundary across which shared and native code communicate"
+          },
+          {
+            "term": "offline-first",
+            "meaning": "designing useful behavior even when the network is unavailable"
+          },
+          {
+            "term": "native module",
+            "meaning": "platform-specific code exposed to the shared application"
+          }
+        ]
+      },
       "reason": "Cross-Platform Mobile Engineer interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "typescript",
@@ -3408,6 +3778,7 @@
           "id": "mobile-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why Cross-Platform Mobile Engineer systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for Cross-Platform Mobile Engineer interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -3443,6 +3814,7 @@
           "id": "mobile-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how TypeScript and React Native work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in TypeScript and React Native while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete mobile foundations stage"
@@ -3477,6 +3849,7 @@
           "id": "mobile-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect Dart and Flutter to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine Dart and Flutter into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete mobile runtime stage"
@@ -3511,6 +3884,7 @@
           "id": "mobile-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use CI/CD and Observability to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use CI/CD and Observability to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete mobile implementation stage"
@@ -3545,6 +3919,7 @@
           "id": "mobile-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the Cross-Platform Mobile Engineer loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -3612,6 +3987,26 @@
       "id": "qa-sdet",
       "title": "QA / SDET",
       "summary": "Prepare as a software engineer focused on quality: risk analysis, test design, automation architecture, browser and API behavior, data, performance, CI, observability, and diagnostic evidence.",
+      "beginnerGuide": {
+        "whatItIs": "A QA or SDET engineer designs tests and tools that reveal product risk quickly, repeatably, and at the right layer.",
+        "whyItMatters": "The job is not clicking every screen. It is choosing valuable checks, controlling test data, automating stable behavior, diagnosing failures, and improving release confidence.",
+        "analogy": "Think of testing as a safety net with different mesh sizes: small unit checks catch local mistakes, while fewer broad tests catch broken journeys between parts.",
+        "firstStep": "Choose one user journey, list its risks, automate the stable core at the lowest useful layer, and keep one browser test for the complete journey.",
+        "keyTerms": [
+          {
+            "term": "test pyramid",
+            "meaning": "a strategy using many small tests and fewer broad tests"
+          },
+          {
+            "term": "fixture",
+            "meaning": "controlled data or setup required by a test"
+          },
+          {
+            "term": "flakiness",
+            "meaning": "a test producing different results without a relevant product change"
+          }
+        ]
+      },
       "reason": "QA / SDET interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "java",
@@ -3640,6 +4035,7 @@
           "id": "qa-sdet-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why QA / SDET systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for QA / SDET interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -3675,6 +4071,7 @@
           "id": "qa-sdet-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how Java and TypeScript work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in Java and TypeScript while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete qa-sdet foundations stage"
@@ -3709,6 +4106,7 @@
           "id": "qa-sdet-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect Selenium and Playwright to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine Selenium and Playwright into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete qa-sdet runtime stage"
@@ -3743,6 +4141,7 @@
           "id": "qa-sdet-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use Cypress and CI/CD to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use Cypress and CI/CD to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete qa-sdet implementation stage"
@@ -3777,6 +4176,7 @@
           "id": "qa-sdet-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the QA / SDET loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -3844,6 +4244,26 @@
       "id": "data-analyst",
       "title": "Data Analyst",
       "summary": "Build from business questions through SQL, Python, pandas, notebooks, data quality, metrics, experimentation, visualization reasoning, dbt models, and clear decision communication.",
+      "beginnerGuide": {
+        "whatItIs": "A data analyst turns business questions into clear metric definitions, trustworthy queries, careful analysis, and decisions people can act on.",
+        "whyItMatters": "A polished chart is useless when the denominator, time window, population, or data quality is wrong. Interviews test those choices as much as SQL syntax.",
+        "analogy": "Think of analysis as investigating a case: define the question, preserve the evidence, rule out misleading explanations, and state what remains uncertain.",
+        "firstStep": "Take one funnel question, define every metric and its row-level grain, write the SQL, validate edge cases, and explain one conclusion the data cannot support.",
+        "keyTerms": [
+          {
+            "term": "grain",
+            "meaning": "what one row in a dataset represents"
+          },
+          {
+            "term": "metric",
+            "meaning": "a precisely defined measurement used for a decision"
+          },
+          {
+            "term": "confidence interval",
+            "meaning": "a range expressing uncertainty around an estimate"
+          }
+        ]
+      },
       "reason": "Data Analyst interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "sql",
@@ -3872,6 +4292,7 @@
           "id": "data-analyst-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why Data Analyst systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for Data Analyst interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -3907,6 +4328,7 @@
           "id": "data-analyst-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how SQL and Python work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in SQL and Python while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete data-analyst foundations stage"
@@ -3941,6 +4363,7 @@
           "id": "data-analyst-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect Pandas and Jupyter to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine Pandas and Jupyter into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete data-analyst runtime stage"
@@ -3975,6 +4398,7 @@
           "id": "data-analyst-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use PostgreSQL and DBT to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use PostgreSQL and DBT to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete data-analyst implementation stage"
@@ -4009,6 +4433,7 @@
           "id": "data-analyst-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the Data Analyst loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -4076,6 +4501,26 @@
       "id": "dba",
       "title": "Database Administrator",
       "summary": "Prepare across relational theory, SQL, PostgreSQL and MySQL internals, indexes, plans, transactions, locks, replication, backup, recovery, security, capacity, and operational automation.",
+      "beginnerGuide": {
+        "whatItIs": "A database administrator keeps databases correct, available, fast, secure, backed up, and recoverable as workloads change.",
+        "whyItMatters": "DBA interviews test whether you can connect query behavior to storage, indexes, locks, transactions, replication, capacity, and safe operational recovery.",
+        "analogy": "Think of a database as a busy records office: indexes locate files, transactions coordinate changes, replicas provide copies, and backups must be proven restorable.",
+        "firstStep": "Create a small table, run a slow query, inspect its plan, add an appropriate index, then back up and restore the data into a separate database.",
+        "keyTerms": [
+          {
+            "term": "index",
+            "meaning": "an extra data structure that speeds selected lookups"
+          },
+          {
+            "term": "transaction",
+            "meaning": "a logical unit of database work with defined guarantees"
+          },
+          {
+            "term": "replication",
+            "meaning": "maintaining additional copies of database changes"
+          }
+        ]
+      },
       "reason": "Database Administrator interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "dbms",
@@ -4104,6 +4549,7 @@
           "id": "dba-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why Database Administrator systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for Database Administrator interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -4139,6 +4585,7 @@
           "id": "dba-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how DBMS and SQL work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in DBMS and SQL while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete dba foundations stage"
@@ -4173,6 +4620,7 @@
           "id": "dba-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect PostgreSQL and Mysql to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine PostgreSQL and Mysql into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete dba runtime stage"
@@ -4207,6 +4655,7 @@
           "id": "dba-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use Redis and Linux to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use Redis and Linux to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete dba implementation stage"
@@ -4241,6 +4690,7 @@
           "id": "dba-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the Database Administrator loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -4308,6 +4758,26 @@
       "id": "cloud-architect",
       "title": "Cloud Architect",
       "summary": "Design cloud systems from requirements through identity, networking, compute, data, resilience, security, observability, governance, migration, cost, and multi-cloud terminology.",
+      "beginnerGuide": {
+        "whatItIs": "A cloud architect turns business and technical requirements into a secure, reliable, operable, and cost-aware cloud design.",
+        "whyItMatters": "The role is about choosing guarantees and responsibilities, not drawing as many managed services as possible. Every choice affects failure, security, ownership, and cost.",
+        "analogy": "Think of cloud architecture as planning a city district: identity controls access, networks define roads, services are buildings, and resilience plans for utility failures.",
+        "firstStep": "Design one small service across two availability zones. Draw identity, network, compute, data, monitoring, backup, failure behavior, and a monthly cost estimate.",
+        "keyTerms": [
+          {
+            "term": "region",
+            "meaning": "a geographic cloud area containing multiple failure zones"
+          },
+          {
+            "term": "IAM",
+            "meaning": "identity and access management for users and workloads"
+          },
+          {
+            "term": "resilience",
+            "meaning": "the ability to continue or recover when components fail"
+          }
+        ]
+      },
       "reason": "Cloud Architect interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "aws",
@@ -4336,6 +4806,7 @@
           "id": "cloud-architect-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why Cloud Architect systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for Cloud Architect interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -4371,6 +4842,7 @@
           "id": "cloud-architect-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how AWS and Azure work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in AWS and Azure while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete cloud-architect foundations stage"
@@ -4405,6 +4877,7 @@
           "id": "cloud-architect-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect GCP and Terraform to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine GCP and Terraform into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete cloud-architect runtime stage"
@@ -4439,6 +4912,7 @@
           "id": "cloud-architect-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use Kubernetes and Cloud Security to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use Kubernetes and Cloud Security to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete cloud-architect implementation stage"
@@ -4473,6 +4947,7 @@
           "id": "cloud-architect-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the Cloud Architect loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -4540,6 +5015,26 @@
       "id": "solutions-architect",
       "title": "Solutions Architect",
       "summary": "Prepare to connect customer goals, constraints, integrations, data, networks, security, reliability, cloud services, observability, delivery sequencing, and stakeholder communication.",
+      "beginnerGuide": {
+        "whatItIs": "A solutions architect discovers a customer's real problem and designs a feasible path connecting applications, data, networks, security, cloud services, and people.",
+        "whyItMatters": "Strong solutions balance technical fit, migration risk, existing skills, operations, cost, and measurable outcomes instead of presenting one fashionable architecture.",
+        "analogy": "Think of the role as both translator and route planner: understand where the customer is, where they need to go, and which safe route fits their constraints.",
+        "firstStep": "Choose a familiar system, interview yourself for requirements and constraints, then draw current, transition, and target designs with risks and ownership.",
+        "keyTerms": [
+          {
+            "term": "constraint",
+            "meaning": "a limit or requirement the design must respect"
+          },
+          {
+            "term": "integration",
+            "meaning": "a connection through which separate systems exchange data or work"
+          },
+          {
+            "term": "trade-off",
+            "meaning": "a choice that improves one quality while costing another"
+          }
+        ]
+      },
       "reason": "Solutions Architect interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "computer-networks",
@@ -4568,6 +5063,7 @@
           "id": "solutions-architect-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why Solutions Architect systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for Solutions Architect interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -4603,6 +5099,7 @@
           "id": "solutions-architect-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how Computer Networks and DBMS work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in Computer Networks and DBMS while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete solutions-architect foundations stage"
@@ -4637,6 +5134,7 @@
           "id": "solutions-architect-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect AWS and Kubernetes to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine AWS and Kubernetes into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete solutions-architect runtime stage"
@@ -4671,6 +5169,7 @@
           "id": "solutions-architect-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use Observability and Cloud Security to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use Observability and Cloud Security to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete solutions-architect implementation stage"
@@ -4705,6 +5204,7 @@
           "id": "solutions-architect-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the Solutions Architect loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",
@@ -4772,6 +5272,26 @@
       "id": "ai-engineer",
       "title": "AI Engineer",
       "summary": "Prepare to build evaluated AI products around Python, models, embeddings, retrieval, orchestration, safety, serving, Kubernetes, observability, and product-quality decisions rather than prompt demos.",
+      "beginnerGuide": {
+        "whatItIs": "An AI engineer builds product features around models, retrieval, tools, evaluation, safety, serving, and user feedback.",
+        "whyItMatters": "The role turns a model demo into a dependable product. You must know which part failed, measure quality, control tool access, and manage latency and cost.",
+        "analogy": "Think of an AI application as a junior researcher with a library and tools: it can be useful, but needs good sources, clear permissions, checking, and a safe way to say 'I don't know.'",
+        "firstStep": "Build a tiny question-answering feature over five documents. Create ten labelled questions, require citations, record failures, and fix retrieval before changing the model.",
+        "keyTerms": [
+          {
+            "term": "embedding",
+            "meaning": "a numeric representation used to compare meaning or similarity"
+          },
+          {
+            "term": "RAG",
+            "meaning": "retrieving external information before generating an answer"
+          },
+          {
+            "term": "evaluation",
+            "meaning": "a repeatable test of product quality, safety, latency, and cost"
+          }
+        ]
+      },
       "reason": "AI Engineer interviews combine shared computer-science reasoning, stack-specific implementation, production trade-offs, debugging evidence, design communication, and a project that proves the candidate can connect those layers.",
       "technologyIds": [
         "python",
@@ -4800,6 +5320,7 @@
           "id": "ai-engineer-foundations",
           "title": "Shared foundations and role map",
           "level": "foundation",
+          "plainEnglish": "Start with the shared basics that explain why AI Engineer systems work. You are building a map of the role before learning individual tools.",
           "objective": "Build the shared reasoning required for AI Engineer interviews before specializing: connect algorithms, data, networks, runtime behavior, testing, and the role's most important system boundaries.",
           "prerequisites": [
             "Comfort writing and running a small program"
@@ -4835,6 +5356,7 @@
           "id": "ai-engineer-runtime",
           "title": "Language, runtime, and primary platform",
           "level": "foundation",
+          "plainEnglish": "Learn how Python and Pytorch work by building one small feature. Focus on what happens when the code runs, not on memorizing syntax.",
           "objective": "Develop implementation fluency in Python and Pytorch while learning their runtime, lifecycle, memory, concurrency, testing, debugging, performance, security, and compatibility boundaries.",
           "prerequisites": [
             "Complete ai-engineer foundations stage"
@@ -4869,6 +5391,7 @@
           "id": "ai-engineer-implementation",
           "title": "Implementation and data workflow",
           "level": "interview",
+          "plainEnglish": "Connect Hugging Face and Langchain to build one complete feature. Follow the data from input to result and handle one realistic failure.",
           "objective": "Combine Hugging Face and Langchain into a realistic workflow while making state, data contracts, error semantics, testing seams, and change boundaries explicit.",
           "prerequisites": [
             "Complete ai-engineer runtime stage"
@@ -4903,6 +5426,7 @@
           "id": "ai-engineer-production",
           "title": "Delivery, operations, and hardening",
           "level": "advanced",
+          "plainEnglish": "Use Llamaindex and Kubernetes to ship the feature safely, observe what users experience, and recover when something breaks.",
           "objective": "Use Llamaindex and Kubernetes to make the role's work reproducible, observable, secure, performant, and recoverable under production constraints rather than only correct on a developer machine.",
           "prerequisites": [
             "Complete ai-engineer implementation stage"
@@ -4937,6 +5461,7 @@
           "id": "ai-engineer-interview",
           "title": "Interview loop and proof",
           "level": "interview",
+          "plainEnglish": "Practise explaining and building under a time limit. Your goal is to show clear reasoning, tested code, honest trade-offs, and evidence from your project.",
           "objective": "Convert the roadmap into interview performance through timed coding, technical explanation, design, debugging, project defense, and behavioral practice aligned to the AI Engineer loop.",
           "prerequisites": [
             "Complete the portfolio project's critical path",

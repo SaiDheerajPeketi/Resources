@@ -230,9 +230,11 @@ Commands are displayed in ruled rows with purpose, platform, expected result, sa
 
 Full-depth manuals use a visible basic-to-expert learning ladder, numbered theory ledger, ruled misconception corrections, tricky-question explanations with strong-answer rubrics, rapid-recall rows, and a printable self-check sheet. Every theory entry begins with a plain-English translation, then pairs a bounded analogy (including where it stops matching) with a concrete example. A teal labelled status marks a manual that passed the full content contract. Future incomplete material must remain planned and outside published packs rather than appearing as a shallow overview.
 
+Every manual opens with a **Start Here** teaching strip before the formal mental model: what the technology is, why someone learns it, a familiar analogy, one tiny exercise, and three defined terms. Dense scope statements and exact objectives remain available in labelled disclosure rows. Beginner copy leads; engineering precision follows.
+
 ### Roadmap Ledger
 
-Domain and role roadmaps are sequential field ledgers, not course cards. Every stage exposes its prerequisite, linked notes or technologies, exact concepts, deliberate practice, proof artifact, readiness gate, and interview checks in the same reading path. Capstones, mock loops, misconception corrections, and final revision checks close the ledger. Desktop uses three ruled columns for understand/practice/gate; narrow screens preserve the order as one semantic document.
+Domain and role roadmaps are sequential field ledgers, not course cards. Every roadmap begins with a beginner explanation, analogy, first step, and three-term glossary. Every stage leads with one plain-English sentence, while its exact technical objective sits behind an explicit disclosure. The visible action grammar is “learn these ideas → do this yourself → move on when.” Capstones, mock loops, misconception corrections, and final revision checks close the ledger. Desktop uses three ruled columns for learn/do/move-on; narrow screens preserve the order as one semantic document.
 
 ### DSA Ledger
 

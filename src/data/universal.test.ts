@@ -26,6 +26,8 @@ describe("universal interview corpus", () => {
     const commandIds = new Set(commands.map((item) => item.id));
     const sourceIds = new Set(technologySources.map((item) => item.id));
     for (const technology of technologies) {
+      expect(technology.beginnerGuide.whatItIs).toContain(technology.title);
+      expect(technology.beginnerGuide.keyTerms).toHaveLength(3);
       expect(technology.commandIds).toHaveLength(12);
       expect(technology.workedExamples.length).toBeGreaterThanOrEqual(3);
       expect(technology.learningPath).toHaveLength(4);
@@ -136,10 +138,13 @@ describe("universal interview corpus", () => {
     expect(domainRoadmaps).toHaveLength(6);
     expect(rolePathRecords).toHaveLength(15);
     for (const roadmap of [...domainRoadmaps, ...rolePathRecords]) {
+      expect(roadmap.beginnerGuide.whatItIs.length).toBeGreaterThanOrEqual(40);
+      expect(roadmap.beginnerGuide.keyTerms).toHaveLength(3);
       expect(roadmap.stages.length).toBeGreaterThanOrEqual(5);
       expect(roadmap.outcomes.length).toBeGreaterThanOrEqual(5);
       expect(roadmap.interviewLoop.length).toBeGreaterThanOrEqual(4);
       for (const stage of roadmap.stages) {
+        expect(stage.plainEnglish.length).toBeGreaterThanOrEqual(40);
         expect(stage.objective.length).toBeGreaterThanOrEqual(80);
         expect(stage.concepts.length).toBeGreaterThanOrEqual(3);
         expect(stage.practice.length).toBeGreaterThanOrEqual(2);

@@ -319,10 +319,25 @@ button { color: inherit; }
 .mobile-field-label { display: none; }
 .domain-roadmap { max-width: 1280px; margin: 0 auto 64px; border-top: 2px solid var(--ink); }
 .domain-roadmap > header { display: grid; grid-template-columns: minmax(300px, 0.8fr) minmax(420px, 1.2fr); gap: 44px; align-items: start; padding: 24px 0; border-bottom: 1px solid var(--rule-strong); }
-.domain-roadmap > header > div, .role-roadmap > header > div { display: flex; align-items: flex-start; gap: 10px; }
+.domain-roadmap > header > div:first-child, .role-roadmap > header > div { display: flex; align-items: flex-start; gap: 10px; }
 .domain-roadmap > header svg, .role-roadmap > header svg { flex: none; margin-top: 3px; color: var(--blue-deep); }
 .domain-roadmap h2 { margin: 0; font-size: clamp(1.45rem, 2.5vw, 2.35rem); line-height: 1.04; letter-spacing: -0.025em; }
 .domain-roadmap > header p { max-width: 72ch; margin: 0; color: var(--muted); line-height: 1.6; }
+.roadmap-intro-copy { display: block; }
+.roadmap-intro-copy details, .manual-scope, .plan-role-scope { margin-top: 10px; color: var(--muted); }
+.roadmap-intro-copy summary, .manual-scope summary, .plan-role-scope summary, .technical-goal summary { width: fit-content; color: var(--blue-deep); font-weight: 700; cursor: pointer; }
+.roadmap-intro-copy details p, .manual-scope p, .plan-role-scope p, .technical-goal p { margin-top: 9px; color: var(--muted); }
+.roadmap-beginner-guide { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--rule-strong); }
+.roadmap-beginner-guide > section { padding: 22px 22px 22px 0; }
+.roadmap-beginner-guide > section + section { padding-left: 22px; border-left: 1px solid var(--rule); }
+.roadmap-beginner-guide h3 { margin: 0 0 7px; font-size: 0.96rem; }
+.roadmap-beginner-guide p { margin: 0; color: var(--muted); line-height: 1.55; }
+.roadmap-key-terms { grid-column: 1 / -1; display: grid; grid-template-columns: 220px 1fr; padding-left: 0 !important; border-top: 1px solid var(--rule); border-left: 0 !important; }
+.roadmap-key-terms dl, .beginner-terms dl, .role-key-terms dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin: 0; }
+.roadmap-key-terms dl div, .beginner-terms dl div, .role-key-terms dl div { padding: 0 17px; }
+.roadmap-key-terms dl div + div, .beginner-terms dl div + div, .role-key-terms dl div + div { border-left: 1px solid var(--rule); }
+.roadmap-key-terms dt, .beginner-terms dt, .role-key-terms dt { font-weight: 750; }
+.roadmap-key-terms dd, .beginner-terms dd, .role-key-terms dd { margin: 4px 0 0; color: var(--muted); line-height: 1.4; }
 .roadmap-orientation { display: grid; grid-template-columns: minmax(280px, 0.8fr) minmax(420px, 1.2fr); gap: 44px; padding: 22px 0; border-bottom: 1px solid var(--rule); }
 .roadmap-orientation h3, .roadmap-stage-grid h4, .roadmap-closeout h3, .roadmap-closeout h4 { margin: 0 0 8px; }
 .roadmap-orientation p, .roadmap-orientation ul { margin-block: 0; color: var(--muted); }
@@ -334,6 +349,10 @@ button { color: inherit; }
 .roadmap-stages small, .role-roadmap-stages small { color: var(--faint); font: 0.64rem/1.4 "JetBrains Mono Variable", monospace; text-transform: uppercase; letter-spacing: 0.07em; }
 .roadmap-stages h3 { margin: 4px 0 7px; font-size: 1.22rem; }
 .roadmap-stages header p { margin: 0; color: var(--muted); line-height: 1.55; }
+.roadmap-stages header .stage-plain-english, .role-roadmap-stages header > div > p { max-width: 76ch; color: var(--ink); font-size: 1rem; }
+.technical-goal { margin-top: 9px; }
+.technical-goal summary { font-size: 0.78rem; }
+.technical-goal p { max-width: 78ch; font-size: 0.88rem !important; }
 .roadmap-prerequisites { display: grid; grid-template-columns: 115px 1fr; gap: 14px; margin: 18px 0 0 60px; padding: 10px 0; border-block: 1px solid var(--rule); color: var(--muted); font-size: 0.8rem; }
 .roadmap-prerequisites strong, .roadmap-deliverable > strong, .roadmap-prompts > strong, .plan-aside-label { color: var(--blue-deep); font: 0.65rem/1.4 "JetBrains Mono Variable", monospace; text-transform: uppercase; letter-spacing: 0.07em; }
 .roadmap-stages nav, .role-stage-resources { display: flex; flex-wrap: wrap; gap: 7px; margin: 14px 0 0 60px; }
@@ -490,6 +509,18 @@ button { color: inherit; }
 .manual-article h3 { margin: 0 0 8px; }
 .lead-copy { max-width: 70ch; font-size: 1.12rem; }
 .section-intro { max-width: 70ch; color: var(--muted); }
+.manual-scope { max-width: 68ch; font-size: 0.85rem; }
+.beginner-guide { border-bottom-color: var(--rule-strong) !important; }
+.beginner-guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-block: 1px solid var(--rule-strong); }
+.beginner-guide-grid article { padding: 18px 20px 18px 0; }
+.beginner-guide-grid article:nth-child(2) { padding-left: 20px; border-left: 1px solid var(--rule); }
+.beginner-guide-grid .beginner-first-step { grid-column: 1 / -1; padding-left: 0; border-top: 1px solid var(--rule); }
+.beginner-guide-grid h3, .beginner-terms h3 { font-size: 0.98rem; }
+.beginner-guide-grid p { margin: 0; color: var(--muted); line-height: 1.58; }
+.beginner-first-step p { color: var(--ink); font-size: 1rem; }
+.beginner-terms { display: grid; grid-template-columns: 190px 1fr; gap: 24px; padding-top: 20px; }
+.beginner-terms h3 { margin: 0; }
+.beginner-terms dl div { padding-top: 2px; }
 .depth-notice { display: flex; align-items: start; gap: 11px; margin-top: 26px; padding: 14px 16px; border: 1px solid #d7b879; border-radius: 7px; background: var(--amber-soft); color: #75460b; }
 .depth-notice svg { flex: 0 0 auto; margin-top: 2px; }.depth-notice p { margin: 4px 0 0; }
 .manual-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-top: 26px; }
@@ -513,7 +544,7 @@ button { color: inherit; }
 .learning-ladder > li { display: grid; grid-template-columns: 42px 1fr; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
 .learning-ladder > li > span, .theory-ledger article > span, .flashcard-ledger article > span { color: var(--blue-deep); font: 0.72rem/1.6 "JetBrains Mono Variable", monospace; }
 .learning-ladder small { color: var(--muted); font: 0.65rem/1.3 "JetBrains Mono Variable", monospace; letter-spacing: 0.07em; text-transform: uppercase; }
-.learning-ladder h3 { margin-top: 4px; font-size: 1.12rem; }.learning-ladder p { margin: 0; color: var(--muted); }.learning-ladder ul { columns: 2; margin: 12px 0 0; padding-left: 18px; }.learning-ladder ul li { margin: 5px 18px 5px 0; break-inside: avoid; }
+.learning-ladder h3 { margin-top: 4px; font-size: 1.12rem; }.learning-ladder h4 { margin: 15px 0 0; font-size: 0.86rem; }.learning-ladder p { margin: 0; color: var(--muted); }.learning-ladder ul { columns: 2; margin: 8px 0 0; padding-left: 18px; }.learning-ladder ul li { margin: 5px 18px 5px 0; break-inside: avoid; }
 .technology-stage-gate { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--rule); }
 .technology-stage-gate > div + div { padding-left: 16px; border-left: 1px solid var(--rule); }
 .technology-stage-gate h4 { margin: 0 0 6px; font-size: 0.82rem; }
@@ -565,10 +596,18 @@ button { color: inherit; }
 .plan-workbench aside p { color: var(--muted); line-height: 1.48; }
 .plan-workbench aside .primary-action { width: 100%; }
 .plan-workbench aside small { display: block; margin-top: 15px; color: var(--muted); }
+.plan-role-scope { padding-bottom: 16px; border-bottom: 1px solid var(--rule-strong); font-size: 0.82rem; }
 .plan-aside-label { display: block; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--rule-strong); }
 .role-roadmap > header { display: flex; justify-content: space-between; gap: 28px; padding-bottom: 17px; border-bottom: 2px solid var(--ink); }
 .role-roadmap > header h2 { margin: 0; font-size: clamp(1.35rem, 2.2vw, 2rem); }
 .role-roadmap > header p { max-width: 35ch; margin: 0; color: var(--muted); text-align: right; }
+.role-beginner-guide { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid var(--rule-strong); }
+.role-beginner-guide > section { padding: 20px 22px 20px 0; }
+.role-beginner-guide > section:nth-child(2) { padding-left: 22px; border-left: 1px solid var(--rule); }
+.role-beginner-guide h3 { margin: 0 0 7px; font-size: 0.96rem; }
+.role-beginner-guide p { margin: 0; color: var(--muted); line-height: 1.5; }
+.role-beginner-guide .role-key-terms { grid-column: 1 / -1; display: grid; grid-template-columns: 175px 1fr; border-top: 1px solid var(--rule); }
+.role-key-terms dl { align-self: start; }
 .role-outcomes { display: grid; grid-template-columns: 190px 1fr; gap: 28px; padding: 20px 0; border-bottom: 1px solid var(--rule-strong); }
 .role-outcomes h3 { margin: 0; font-size: 1rem; }
 .role-outcomes ul { columns: 2; margin: 0; padding-left: 18px; color: var(--muted); }
@@ -582,6 +621,7 @@ button { color: inherit; }
 .role-stage-proof strong { color: var(--blue-deep); font: 0.65rem/1.4 "JetBrains Mono Variable", monospace; text-transform: uppercase; letter-spacing: 0.07em; }
 .role-stage-proof p { margin: 0; color: var(--muted); }
 .role-roadmap-stages details { margin: 10px 0 0 56px; }
+.role-roadmap-stages .technical-goal { margin: 9px 0 0; }
 .role-roadmap-stages summary { color: var(--blue-deep); font-size: 0.82rem; font-weight: 700; cursor: pointer; }
 .role-roadmap-stages details ul { margin-bottom: 0; color: var(--muted); }
 .role-roadmap-closeout { padding-top: 28px; }
@@ -632,8 +672,16 @@ select option { background: var(--paper-raised); color: var(--ink); }
 @media (max-width: 720px) {
   .workbench-shell { display: block; }.workbench-index { border-right: 0; border-bottom: 1px solid var(--rule); }.ecosystem-tabs { grid-template-columns: repeat(2, 1fr); }.workbench-map > header { display: block; }.workbench-map header > span { margin-top: 12px; }.stack-layers { padding: 28px 18px; }.workbench-inspector { border-top: 1px solid var(--rule); }
   .manual-shell { display: block; }.manual-index { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--rule); }.manual-index nav { grid-template-columns: repeat(2, 1fr); }.manual-article { padding: 38px 21px 70px; }.manual-article > header > div { flex-wrap: wrap; }.manual-columns { grid-template-columns: 1fr; }.learning-ladder ul, .revision-checklist ul { columns: 1; }.technology-stage-gate { grid-template-columns: 1fr; gap: 14px; }.technology-stage-gate > div + div { padding: 14px 0 0; border-left: 0; border-top: 1px solid var(--rule); }.command-book article > div { align-items: start; }.copy-command span { display: none; }
+  .manual-index { padding: 12px 16px; }
+  .manual-index h2, .manual-index > p { display: none; }
+  .manual-index nav { display: flex; gap: 0; min-width: 0; margin-top: 10px; overflow-x: auto; border-block: 1px solid var(--rule); scrollbar-width: thin; }
+  .manual-index nav a { flex: 0 0 auto; padding: 9px 12px; border-right: 1px solid var(--rule); border-bottom: 0; white-space: nowrap; }
+  .beginner-guide-grid, .beginner-terms, .beginner-terms dl { grid-template-columns: 1fr; }
+  .beginner-guide-grid article, .beginner-guide-grid article:nth-child(2), .beginner-guide-grid .beginner-first-step { grid-column: auto; padding: 16px 0; border-left: 0; border-top: 1px solid var(--rule); }
+  .beginner-guide-grid article:first-child { border-top: 0; }
+  .beginner-terms { gap: 10px; }.beginner-terms dl div { padding: 11px 0; }.beginner-terms dl div + div { border-left: 0; border-top: 1px solid var(--rule); }
   .sheet-ledger a { display: block; }.sheet-ledger h2 { margin-top: 6px; }.sheet-ledger p { margin: 7px 0; }.sheet-filters { display: grid; }.sheet-filters > span { margin-left: 0; }.sheet-filters select { width: 100%; }.problem-solution header { display: block; }.problem-solution header > div { margin-top: 10px; flex-wrap: wrap; }
-  .company-directory > section > div, .diagnostic-results > div { grid-template-columns: 1fr; }.company-directory a { grid-template-columns: 110px 1fr; }.company-directory a:nth-child(odd), .diagnostic-results article:nth-child(odd) { border-right: 0; }.company-directory a small { grid-column: 2; }.plan-workbench { grid-template-columns: 1fr; }.plan-workbench > aside { position: static; }.role-roadmap > header { display: grid; }.role-roadmap > header p { max-width: none; text-align: left; }.role-outcomes { grid-template-columns: 1fr; gap: 10px; }.role-outcomes ul, .role-readiness ul { columns: 1; }.role-stage-grid, .role-roadmap-closeout { grid-template-columns: 1fr; }.role-stage-grid section + section, .role-roadmap-closeout > section + section { padding: 15px 0 0; border-left: 0; border-top: 1px solid var(--rule); }.review-ledger > article { grid-template-columns: 1fr; }.review-ledger article > div:last-child { flex-wrap: wrap; }
+  .company-directory > section > div, .diagnostic-results > div { grid-template-columns: 1fr; }.company-directory a { grid-template-columns: 110px 1fr; }.company-directory a:nth-child(odd), .diagnostic-results article:nth-child(odd) { border-right: 0; }.company-directory a small { grid-column: 2; }.plan-workbench { grid-template-columns: 1fr; }.plan-workbench > aside { position: static; }.role-roadmap > header { display: grid; }.role-roadmap > header p { max-width: none; text-align: left; }.role-beginner-guide, .role-beginner-guide .role-key-terms, .role-key-terms dl { grid-template-columns: 1fr; }.role-beginner-guide > section, .role-beginner-guide > section:nth-child(2), .role-beginner-guide .role-key-terms { grid-column: auto; padding: 16px 0; border-left: 0; border-top: 1px solid var(--rule); }.role-beginner-guide > section:first-child { border-top: 0; }.role-key-terms dl div { padding: 10px 0; }.role-key-terms dl div + div { border-left: 0; border-top: 1px solid var(--rule); }.role-outcomes { grid-template-columns: 1fr; gap: 10px; }.role-outcomes ul, .role-readiness ul { columns: 1; }.role-stage-grid, .role-roadmap-closeout { grid-template-columns: 1fr; }.role-stage-grid section + section, .role-roadmap-closeout > section + section { padding: 15px 0 0; border-left: 0; border-top: 1px solid var(--rule); }.review-ledger > article { grid-template-columns: 1fr; }.review-ledger article > div:last-child { flex-wrap: wrap; }
   .teaching-aids { grid-template-columns: 1fr; }
   .lesson-depth-path > header { grid-template-columns: 1fr; gap: 7px; }.lesson-depth-path li, .lesson-theory-field article { grid-template-columns: 1fr; gap: 5px; }
 }
@@ -764,6 +812,11 @@ select option { background: var(--paper-raised); color: var(--ink); }
   .role-map-table .topic-table-row > span:nth-child(2), .role-map-table .topic-table-row > span:nth-child(5) { display: block; }
   .mobile-field-label { display: block; margin-bottom: 5px; color: var(--faint); font: 0.6rem/1.3 "JetBrains Mono Variable", monospace; text-transform: uppercase; letter-spacing: 0.06em; }
   .domain-roadmap > header, .roadmap-orientation { grid-template-columns: 1fr; gap: 12px; }
+  .roadmap-beginner-guide { grid-template-columns: 1fr; }
+  .roadmap-beginner-guide > section, .roadmap-beginner-guide > section + section { padding: 17px 0; border-left: 0; border-top: 1px solid var(--rule); }
+  .roadmap-beginner-guide > section:first-child { border-top: 0; }
+  .roadmap-key-terms { grid-column: auto; grid-template-columns: 1fr; }
+  .roadmap-key-terms dl { margin-top: 10px; }
   .roadmap-stage-grid { grid-template-columns: 1fr; gap: 15px; }
   .roadmap-stage-grid section + section { padding: 15px 0 0; border-left: 0; border-top: 1px solid var(--rule); }
   .roadmap-closeout { grid-template-columns: 1fr; gap: 20px; }
@@ -804,6 +857,9 @@ select option { background: var(--paper-raised); color: var(--ink); }
   .prompt-head { display: block; }
   .prompt-head > span { display: block; margin-top: 9px; }
   .index-page, .tool-page { padding-inline: 15px; }
+  .roadmap-key-terms dl { grid-template-columns: 1fr; }
+  .roadmap-key-terms dl div { padding: 10px 0; }
+  .roadmap-key-terms dl div + div { border-left: 0; border-top: 1px solid var(--rule); }
   .index-title { grid-template-columns: 44px 1fr; }
   .index-title .text-action { grid-column: 2; }
   .track-title-icon { width: 42px; height: 42px; }

@@ -29,10 +29,11 @@ export default async function TechnologyPage({ params }: { params: Promise<{ slu
         <Link className="back-link" href="/library/"><ArrowLeft size={16} /> Technology library</Link>
         <h2>{item.title}</h2>
         <nav aria-label="Field manual sections">
-          <a href="#mental-model">Mental model</a>
-          <a href="#learning-path">Basic → advanced</a>
-          <a href="#deep-theory">Deep theory</a>
-          <a href="#commands">Command cookbook</a>
+          <a href="#start-here">Start here</a>
+          <a href="#mental-model">How it works</a>
+          <a href="#learning-path">Learning path</a>
+          <a href="#deep-theory">Learn in depth</a>
+          <a href="#commands">Useful commands</a>
           <a href="#examples">Worked examples</a>
           <a href="#misconceptions">Misconceptions</a>
           <a href="#interview-questions">Tricky questions</a>
@@ -52,7 +53,8 @@ export default async function TechnologyPage({ params }: { params: Promise<{ slu
             <span className={`depth-state ${item.depthStatus}`}>{item.depthStatus === "complete" ? "full-depth manual" : "overview"}</span>
           </div>
           <h1>{item.title}</h1>
-          <p>{item.summary}</p>
+          <p>{item.beginnerGuide.whatItIs}</p>
+          <details className="manual-scope"><summary>See everything covered in this manual</summary><p>{item.summary}</p></details>
         </header>
 
         {item.depthStatus === "overview" && (
@@ -62,8 +64,20 @@ export default async function TechnologyPage({ params }: { params: Promise<{ slu
           </aside>
         )}
 
+        <section id="start-here" className="beginner-guide">
+          <h2>Start here</h2>
+          <p className="section-intro">New to {item.title}? Read this short section first. The exact terminology and advanced details come afterward.</p>
+          <div className="beginner-guide-grid">
+            <article><h3>Why you would learn it</h3><p>{item.beginnerGuide.whyItMatters}</p></article>
+            <article><h3>Think of it like this</h3><p>{item.beginnerGuide.analogy}</p></article>
+            <article className="beginner-first-step"><h3>Your first small exercise</h3><p>{item.beginnerGuide.firstStep}</p></article>
+          </div>
+          <div className="beginner-terms"><h3>Three words to know now</h3><dl>{item.beginnerGuide.keyTerms.map((entry) => <div key={entry.term}><dt>{entry.term}</dt><dd>{entry.meaning}</dd></div>)}</dl></div>
+        </section>
+
         <section id="mental-model">
-          <h2>Mental model</h2>
+          <h2>How it works: the precise version</h2>
+          <p className="section-intro">The beginner explanation gives you the shape. This section gives you the language used by engineers and interviewers.</p>
           <p className="lead-copy">{item.mentalModel}</p>
           <div className="manual-columns">
             <div><h3>Runtime</h3><ul>{item.runtime.map((line) => <li key={line}>{line}</li>)}</ul></div>
@@ -72,18 +86,18 @@ export default async function TechnologyPage({ params }: { params: Promise<{ slu
         </section>
 
         <section id="learning-path">
-          <h2>Basic → advanced learning path</h2>
-          <p className="section-intro">Follow the stages in order. Each stage states the understanding you should be able to demonstrate before moving on.</p>
+          <h2>Your path from beginner to interview-ready</h2>
+          <p className="section-intro">Follow these stages in order. Do the small exercise and pass the self-check before moving to the next stage.</p>
           <ol className="learning-ladder">
             {item.learningPath.map((stage, index) => (
               <li key={stage.level}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <div>
-                  <small>{stage.level}</small><h3>{stage.title}</h3><p>{stage.objective}</p><ul>{stage.topics.map((topic) => <li key={topic}>{topic}</li>)}</ul>
+                  <small>{stage.level}</small><h3>{stage.title}</h3><p><strong>Goal:</strong> {stage.objective}</p><h4>What you will learn</h4><ul>{stage.topics.map((topic) => <li key={topic}>{topic}</li>)}</ul>
                   <div className="technology-stage-gate">
-                    <div><h4>Practice this stage</h4><p>Rebuild <strong>{item.workedExamples[index % item.workedExamples.length].title}</strong> without copying, then change one requirement and explain which mechanism or trade-off changes.</p></div>
-                    <div><h4>Pass before continuing</h4><ul>{item.revisionChecklist.slice(index * 2, index * 2 + 2).map((checkpoint) => <li key={checkpoint}>{checkpoint}</li>)}</ul></div>
-                    <div><h4>Interview proof</h4><p>{item.questions[index % item.questions.length].prompt}</p><small>{item.questions[index % item.questions.length].difficulty} · answer aloud, then score with the rubric below</small></div>
+                    <div><h4>Try it yourself</h4><p>Rebuild <strong>{item.workedExamples[index % item.workedExamples.length].title}</strong> without copying. Change one requirement and explain what else must change.</p></div>
+                    <div><h4>Move on when</h4><ul>{item.revisionChecklist.slice(index * 2, index * 2 + 2).map((checkpoint) => <li key={checkpoint}>{checkpoint}</li>)}</ul></div>
+                    <div><h4>Practise saying this aloud</h4><p>{item.questions[index % item.questions.length].prompt}</p><small>{item.questions[index % item.questions.length].difficulty} · answer in your own words, then use the rubric below</small></div>
                   </div>
                 </div>
               </li>
@@ -92,7 +106,8 @@ export default async function TechnologyPage({ params }: { params: Promise<{ slu
         </section>
 
         <section id="deep-theory">
-          <h2>Deep theory and trade-offs</h2>
+          <h2>Learn the ideas in depth</h2>
+          <p className="section-intro">Each topic starts in plain English, uses an analogy, then shows the exact mechanism and where the analogy stops being accurate.</p>
           <div className="theory-ledger">
             {item.theorySections.map((section, index) => (
               <article key={section.title}>
@@ -113,7 +128,7 @@ export default async function TechnologyPage({ params }: { params: Promise<{ slu
         </section>
 
         <section id="commands">
-          <h2><TerminalSquare size={22} /> Command cookbook</h2>
+          <h2><TerminalSquare size={22} /> Useful commands and what they do</h2>
           <div className="command-book">
             {commands.map((command) => command && (
               <article key={command.id}>
@@ -139,7 +154,7 @@ export default async function TechnologyPage({ params }: { params: Promise<{ slu
         </section>
 
         <section id="misconceptions">
-          <h2>Misconceptions and confused distinctions</h2>
+          <h2>Common mix-ups</h2>
           <div className="misconception-ledger">
             {item.misconceptions.map((entry) => (
               <article key={entry.claim}>
@@ -152,7 +167,7 @@ export default async function TechnologyPage({ params }: { params: Promise<{ slu
         </section>
 
         <section id="interview-questions">
-          <h2>Tricky interview questions</h2>
+          <h2>Interview questions that reveal confusion</h2>
           <ol className="question-ledger">
             {item.questions.map((question, index) => (
               <li key={question.prompt}>

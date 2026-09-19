@@ -75,6 +75,13 @@ export const TechnologyTheorySectionSchema = z.object({
   concreteExample: z.string().min(40),
   keyPoints: z.array(z.string().min(1)).min(3)
 });
+export const BeginnerGuideSchema = z.object({
+  whatItIs: z.string().min(40),
+  whyItMatters: z.string().min(40),
+  analogy: z.string().min(40),
+  firstStep: z.string().min(30),
+  keyTerms: z.array(z.object({ term: z.string().min(1), meaning: z.string().min(20) })).min(3)
+});
 export const MisconceptionSchema = z.object({
   claim: z.string().min(1),
   correction: z.string().min(1),
@@ -92,6 +99,7 @@ export const TechnologyMetaSchema = z.object({
   roleIds: z.array(z.string()).min(1),
   version: VersionSupportSchema,
   depthStatus: z.enum(["overview", "complete"]),
+  beginnerGuide: BeginnerGuideSchema,
   mentalModel: z.string().min(1),
   learningPath: z.array(LearningStageSchema).min(4),
   theorySections: z.array(TechnologyTheorySectionSchema).min(4),
@@ -185,6 +193,7 @@ export const RoadmapStageSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
   title: z.string().min(1),
   level: z.enum(["foundation", "interview", "advanced"]),
+  plainEnglish: z.string().min(40),
   objective: z.string().min(80),
   prerequisites: z.array(z.string().min(1)).min(1),
   topicIds: z.array(z.string()).default([]),
@@ -200,6 +209,7 @@ export const DomainRoadmapSchema = z.object({
   id: TrackIdSchema,
   title: z.string().min(1),
   summary: z.string().min(100),
+  beginnerGuide: BeginnerGuideSchema,
   audience: z.string().min(60),
   outcomes: z.array(z.string().min(20)).min(5),
   stages: z.array(RoadmapStageSchema).min(5),
@@ -214,6 +224,7 @@ export const RoleRoadmapSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
   title: z.string().min(1),
   summary: z.string().min(100),
+  beginnerGuide: BeginnerGuideSchema,
   reason: z.string().min(80),
   technologyIds: z.array(z.string()).min(6),
   foundationTopicIds: z.array(z.string()).min(3),
@@ -447,6 +458,7 @@ export type TopicMeta = z.infer<typeof TopicMetaSchema>;
 export type ConceptEdge = z.infer<typeof ConceptEdgeSchema>;
 export type Question = z.infer<typeof QuestionSchema>;
 export type TechnologyKind = z.infer<typeof TechnologyKindSchema>;
+export type BeginnerGuide = z.infer<typeof BeginnerGuideSchema>;
 export type Ecosystem = z.infer<typeof EcosystemSchema>;
 export type VersionSupport = z.infer<typeof VersionSupportSchema>;
 export type CommandExample = z.infer<typeof CommandExampleSchema>;

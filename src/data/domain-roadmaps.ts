@@ -1,4 +1,5 @@
 import { DomainRoadmapSchema, RoadmapStageSchema, type DomainRoadmap, type RoadmapStage, type TopicLevel } from "@/lib/schema";
+import { domainBeginnerGuides, domainStagePlainEnglish } from "@/data/beginner-guides";
 
 const ids = (track: string, values: string[]) => values.map((value) => `${track}/${value}`);
 const stage = (
@@ -14,7 +15,7 @@ const stage = (
   readinessGate: string[],
   interviewPrompts: string[],
   estimatedHours: number
-): RoadmapStage => RoadmapStageSchema.parse({ id, title, level, objective, topicIds, technologyIds: [], prerequisites, concepts, practice, deliverable, readinessGate, interviewPrompts, estimatedHours });
+): RoadmapStage => RoadmapStageSchema.parse({ id, title, level, plainEnglish: domainStagePlainEnglish[id], objective, topicIds, technologyIds: [], prerequisites, concepts, practice, deliverable, readinessGate, interviewPrompts, estimatedHours });
 
 const sharedRevision = [
   "Draw the domain map from memory and explain every dependency arrow.",
@@ -30,6 +31,7 @@ const sharedRevision = [
 export const domainRoadmaps: DomainRoadmap[] = DomainRoadmapSchema.array().parse([
   {
     id: "foundations",
+    beginnerGuide: domainBeginnerGuides.foundations,
     title: "Foundations: reasoning before memorization",
     summary: "Build the shared language used in coding, data, systems, and behavioral interviews: complexity, data structures, algorithmic invariants, mathematics, SQL, Linux, networking, testing, and clear communication. The route starts with execution models and ends with timed interview synthesis.",
     audience: "Use this route if fundamentals feel fragmented, if you are changing domains, or if solutions work but are difficult to explain, analyze, debug, or generalize under interview pressure.",
@@ -48,7 +50,7 @@ export const domainRoadmaps: DomainRoadmap[] = DomainRoadmapSchema.array().parse
     lastReviewed: "2026-09-18", asOf: "2026-09-18"
   },
   {
-    id: "ai-data", title: "AI + Data: from evidence to production decisions",
+    id: "ai-data", title: "AI + Data: from evidence to production decisions", beginnerGuide: domainBeginnerGuides["ai-data"],
     summary: "Progress from data quality and statistical reasoning through classical machine learning, deep learning, transformers, retrieval, evaluation, and production ML systems. Every model choice is tied to a measurable objective, leakage-safe evaluation, operational constraints, and responsible failure handling.",
     audience: "Use this route for AI engineering, ML engineering, data science, data engineering, MLOps, recommender, forecasting, computer-vision, NLP, and LLM-focused interview preparation.",
     outcomes: ["Turn a product question into measurable targets and valid experimental evidence.", "Build and diagnose classical and deep-learning models from first principles.", "Explain transformers, embeddings, retrieval, fine-tuning, and agent tool use precisely.", "Design data, training, serving, evaluation, and monitoring systems together.", "Identify leakage, bias, hallucination, drift, security, cost, and reliability risks."],
@@ -65,7 +67,7 @@ export const domainRoadmaps: DomainRoadmap[] = DomainRoadmapSchema.array().parse
     revisionChecklist: sharedRevision, lastReviewed: "2026-09-18", asOf: "2026-09-18"
   },
   {
-    id: "sde-systems", title: "SDE + Systems: code, runtime, and distributed trade-offs",
+    id: "sde-systems", title: "SDE + Systems: code, runtime, and distributed trade-offs", beginnerGuide: domainBeginnerGuides["sde-systems"],
     summary: "Move from maintainable code and runtime internals through operating systems, databases, networks, backend engineering, distributed systems, reliability, and complete system-design cases. The route emphasizes invariants, failure boundaries, concurrency, data semantics, and explicit capacity assumptions.",
     audience: "Use this route for software, backend, full-stack, infrastructure, systems, fintech, data-platform, and architecture interviews that require both implementation fluency and design reasoning.",
     outcomes: ["Design testable modules and object models without mistaking patterns for goals.", "Explain memory, concurrency, OS, database, and network behavior from first principles.", "Build and evaluate APIs, backends, storage, caching, and event-driven systems.", "Reason about consistency, partitioning, capacity, failure, and recovery.", "Lead a system-design interview from requirements to bottlenecks and evolution."],
@@ -82,7 +84,7 @@ export const domainRoadmaps: DomainRoadmap[] = DomainRoadmapSchema.array().parse
     revisionChecklist: sharedRevision, lastReviewed: "2026-09-18", asOf: "2026-09-18"
   },
   {
-    id: "devops-cloud", title: "DevOps + Cloud: repeatable delivery and reliable operation",
+    id: "devops-cloud", title: "DevOps + Cloud: repeatable delivery and reliable operation", beginnerGuide: domainBeginnerGuides["devops-cloud"],
     summary: "Build from Linux and network diagnosis through CI/CD, containers, infrastructure as code, Kubernetes, observability, SRE, incident response, platform engineering, cloud architecture, and cost control. Commands are treated as evidence-producing tools, not incantations.",
     audience: "Use this route for DevOps, platform, SRE, cloud, infrastructure, release, production engineering, and MLOps interviews across AWS, Azure, GCP, and OCI terminology.",
     outcomes: ["Diagnose Linux, DNS, TLS, routing, process, and resource failures systematically.", "Design safe build, test, artifact, release, configuration, and secret flows.", "Operate containers, Kubernetes, and infrastructure as code with recovery plans.", "Define SLOs, observability, incidents, disaster recovery, and capacity controls.", "Compare cloud services by responsibility, failure domain, security, and cost."],
@@ -99,7 +101,7 @@ export const domainRoadmaps: DomainRoadmap[] = DomainRoadmapSchema.array().parse
     revisionChecklist: sharedRevision, lastReviewed: "2026-09-18", asOf: "2026-09-18"
   },
   {
-    id: "cybersecurity", title: "Cybersecurity: model threats, enforce boundaries, prove response",
+    id: "cybersecurity", title: "Cybersecurity: model threats, enforce boundaries, prove response", beginnerGuide: domainBeginnerGuides.cybersecurity,
     summary: "Progress from risk, assets, trust boundaries, identity, cryptography, and secure design through web, API, network, cloud, container, Kubernetes, supply-chain, detection, incident response, and forensics. Security claims must be tied to an attacker model and verifiable control.",
     audience: "Use this route for security engineering, AppSec, cloud security, DevSecOps, product security, detection, incident response, and security-aware software or infrastructure interviews.",
     outcomes: ["Turn an architecture into assets, trust boundaries, abuse cases, and prioritized controls.", "Explain identity, authorization, cryptography, PKI, and protocol guarantees precisely.", "Find and prevent web, API, network, code, cloud, and supply-chain weaknesses.", "Design detection and response around evidence, containment, and recovery.", "Communicate residual risk, assumptions, control coverage, and validation plans."],
@@ -116,7 +118,7 @@ export const domainRoadmaps: DomainRoadmap[] = DomainRoadmapSchema.array().parse
     revisionChecklist: sharedRevision, lastReviewed: "2026-09-18", asOf: "2026-09-18"
   },
   {
-    id: "fintech-quant", title: "Fintech + Quant: preserve money and model uncertainty",
+    id: "fintech-quant", title: "Fintech + Quant: preserve money and model uncertainty", beginnerGuide: domainBeginnerGuides["fintech-quant"],
     summary: "Learn exact monetary representation, double-entry ledgers, idempotent payment workflows, reconciliation, settlement, fraud, compliance, resilience, market microstructure, stochastic models, derivatives, portfolios, backtesting, and low-latency engineering. Financial invariants and auditability lead every design.",
     audience: "Use this route for fintech engineering, payments, banking, lending, risk, fraud, trading systems, quant development, and quantitative research interviews, with India-first regulatory context.",
     outcomes: ["Represent money and accounting events without losing value or audit history.", "Design retry-safe payments, cards, UPI, banking, lending, settlement, and reconciliation flows.", "Explain compliance, fraud, security, resilience, and regulatory boundaries.", "Reason about markets, time series, stochastic processes, pricing, portfolios, and risk.", "Avoid backtesting bias and design measurable low-latency systems."],

@@ -15,6 +15,82 @@ import { buildGeneratedTechnologyDepth } from "@/data/technology-depth-generated
 
 const fullDepthTechnology = { ...completeTechnologyDepth, ...languageTechnologyDepth };
 
+const beginnerFrames: Record<TechnologyKind, {
+  noun: string;
+  purpose: string;
+  analogy: string;
+  terms: Array<[string, string]>;
+}> = {
+  language: {
+    noun: "a programming language: a precise way to describe data and the steps a computer should perform",
+    purpose: "write programs, reason about their behavior, and explain why one implementation is safer or faster than another",
+    analogy: "a written language for a very literal teammate: grammar matters, every instruction has a meaning, and missing details become bugs",
+    terms: [["syntax", "the grammar used to write valid code"], ["runtime", "the system that executes the program"], ["library", "reusable code that your program can call"]]
+  },
+  framework: {
+    noun: "a framework: a ready-made structure that calls your code at the right points while providing common application features",
+    purpose: "build a working application without recreating routing, lifecycle, configuration, and integration plumbing from scratch",
+    analogy: "a furnished workshop: the benches and tools are already placed, but you still need to understand their rules to build safely",
+    terms: [["lifecycle", "the order in which framework-managed work starts and ends"], ["component", "a focused piece of the application with one responsibility"], ["dependency", "another service or module this code needs"]]
+  },
+  database: {
+    noun: "a database system: software that stores data, finds it again, and protects correctness when many operations happen together",
+    purpose: "design reliable data models, write efficient queries, and keep important information correct through failures and concurrent updates",
+    analogy: "a carefully run library: data has an address, indexes speed up discovery, and borrowing rules prevent conflicting changes",
+    terms: [["query", "a request to read or change stored data"], ["index", "an extra structure that makes selected lookups faster"], ["transaction", "a group of changes treated as one logical operation"]]
+  },
+  runtime: {
+    noun: "a runtime: the layer that loads code, schedules work, manages resources, and connects a program to the operating system",
+    purpose: "understand what actually happens after code starts, especially around memory, concurrency, input and output, and failures",
+    analogy: "a stage crew behind a performance: the script is visible, but the crew controls timing, equipment, cleanup, and what happens when something breaks",
+    terms: [["process", "a running program with its own resources"], ["scheduler", "the mechanism that decides when work may run"], ["resource", "a limited item such as memory, a file, or a connection"]]
+  },
+  tool: {
+    noun: "a development tool: software that helps you build, test, inspect, package, or operate another piece of software",
+    purpose: "perform a repeatable engineering task and understand the output well enough to diagnose problems instead of copying commands blindly",
+    analogy: "a measuring instrument in a workshop: it is useful only when you know what it measures, how to read it, and when its reading can mislead you",
+    terms: [["command", "an instruction typed into a terminal"], ["configuration", "settings that change how the tool behaves"], ["artifact", "a file or package produced by a build or tool"]]
+  },
+  platform: {
+    noun: "a platform: a collection of lower-level services and rules on which applications are built or operated",
+    purpose: "understand the boundaries underneath an application so you can design, debug, and explain behavior across layers",
+    analogy: "a city's infrastructure: roads, power, rules, and utilities make buildings possible, while failures underneath affect everything above",
+    terms: [["abstraction", "a simpler interface that hides lower-level details"], ["boundary", "the point where responsibility moves between parts"], ["invariant", "a rule that must remain true while the system changes"]]
+  },
+  mobile: {
+    noun: "a mobile development technology: a way to build applications that run within phone and tablet operating-system rules",
+    purpose: "create responsive applications that handle lifecycle changes, limited resources, unreliable networks, local data, and device security",
+    analogy: "a shop inside a busy station: it serves users directly but must follow the building's schedules, space limits, permissions, and shutdown rules",
+    terms: [["lifecycle", "the states an app or screen moves through"], ["state", "the data that determines what the user sees"], ["native API", "a capability supplied by the device operating system"]]
+  },
+  "data-ai": {
+    noun: "a data or AI technology: a tool for preparing data, learning patterns, evaluating results, or running a data-driven system",
+    purpose: "turn raw data into a tested result while keeping assumptions, errors, quality, cost, and reproducibility visible",
+    analogy: "a scientific workbench: the tool helps run an experiment, but the result is trustworthy only when the inputs and measurements are controlled",
+    terms: [["dataset", "the collection of examples used for analysis or learning"], ["model", "a learned or defined rule that maps inputs to outputs"], ["evaluation", "a controlled check of how well the result meets its goal"]]
+  },
+  "web-api": {
+    noun: "a web platform or API technology: a set of browser or network rules that lets software exchange information and create interactive experiences",
+    purpose: "connect users and services through clear requests, responses, state changes, security boundaries, and failure behavior",
+    analogy: "a staffed service counter: each request follows a known format, receives a response, and may be accepted, rejected, delayed, or retried",
+    terms: [["request", "a message asking another component to do something"], ["response", "the result returned for a request"], ["protocol", "the shared rules used by both sides of a conversation"]]
+  }
+};
+
+function beginnerGuide(spec: TechnologySpec) {
+  const frame = beginnerFrames[spec.kind];
+  const firstCommand = spec.commands[0];
+  return {
+    whatItIs: `${spec.title} is ${frame.noun}.`,
+    whyItMatters: `Learn it so you can ${frame.purpose}. In interviews, the important part is explaining what happens and why, not reciting names.`,
+    analogy: `Think of ${spec.title} like ${frame.analogy}. The analogy is only a starting point; the precise rules come later in this manual.`,
+    firstStep: firstCommand
+      ? `Begin with one tiny win: ${firstCommand[0].toLowerCase()} using \`${firstCommand[1]}\`, observe the result, and explain what changed.`
+      : `Begin with the smallest working ${spec.title} example, change one input, and explain why the output changes.`,
+    keyTerms: frame.terms.map(([term, meaning]) => ({ term, meaning }))
+  };
+}
+
 export type TechnologySpec = {
   id: string;
   title: string;
@@ -171,6 +247,7 @@ export function buildTechnology(spec: TechnologySpec) {
     roleIds: spec.roles ?? ["sde", "backend", "full-stack"],
     version: { policy: "Use a supported stable release; verify the project lockfile before an interview exercise.", current: spec.version ?? "stable", ...(spec.lts ? { lts: spec.lts } : {}) },
     depthStatus: isComplete ? "complete" : "overview",
+    beginnerGuide: beginnerGuide(spec),
     mentalModel: spec.mentalModel,
     learningPath: depth.learningPath,
     theorySections,
