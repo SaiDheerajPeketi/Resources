@@ -149,6 +149,17 @@ test("keyboard search opens a published field note", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Threat Modeling", level: 1 })).toBeVisible();
 });
 
+test("clearing global search closes the results panel", async ({ page }) => {
+  await page.goto("/atlas/");
+  const search = page.getByRole("textbox", { name: "Search the interview atlas" });
+  await search.fill("threat modeling");
+  await expect(page.getByRole("region", { name: "Search results" })).toBeVisible();
+  await search.fill("");
+  await expect(page.getByRole("region", { name: "Search results" })).toBeHidden();
+  await page.waitForTimeout(250);
+  await expect(page.getByRole("region", { name: "Search results" })).toBeHidden();
+});
+
 test("Stack Workbench opens a complete technology manual", async ({ page }) => {
   await page.goto("/library/");
   await expect(page.getByRole("heading", { name: "Technology library" })).toBeVisible();

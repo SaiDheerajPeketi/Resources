@@ -37,19 +37,34 @@ export function AppHeader() {
 
   useEffect(() => {
     const normalized = query.trim();
-    if (!normalized) { setResults([]); return; }
+    let cancelled = false;
+    if (!normalized) {
+      setResults([]);
+      setSearching(false);
+      return;
+    }
+    setResults([]);
     const timer = window.setTimeout(async () => {
       setSearching(true);
       try {
         const pagefind = await import(/* webpackIgnore: true */ withBasePath("/pagefind/pagefind.js")) as PagefindModule;
         await pagefind.init();
         const response = await pagefind.search(normalized);
-        setResults(await Promise.all(response.results.slice(0, 8).map((result) => result.data())));
-      } catch { setResults([]); }
-      finally { setSearching(false); }
+        const nextResults = await Promise.all(response.results.slice(0, 8).map((result) => result.data()));
+        if (!cancelled) setResults(nextResults);
+      } catch {
+        if (!cancelled) setResults([]);
+      } finally {
+        if (!cancelled) setSearching(false);
+      }
     }, 160);
-    return () => window.clearTimeout(timer);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
   }, [query]);
+
+  const hasQuery = query.trim().length > 0;
 
   return (
     <header className="app-header">
@@ -67,7 +82,7 @@ export function AppHeader() {
           aria-label="Search the interview atlas"
         />
         <kbd>⌘ K</kbd>
-        {(results.length > 0 || (query && searching)) && (
+        {hasQuery && (results.length > 0 || searching) && (
           <div className="search-results" id="global-search-results" role="region" aria-label="Search results" aria-live="polite">
             {searching && <div className="search-result-planned"><span>Searching the full library…</span></div>}
             {results.map((result) => <Link key={result.url} href={BASE_PATH && result.url.startsWith(BASE_PATH) ? result.url.slice(BASE_PATH.length) : result.url} onClick={() => setQuery("")}><span>{result.meta.title || result.title}</span><small dangerouslySetInnerHTML={{ __html: result.excerpt }} /></Link>)}
