@@ -1,4 +1,9 @@
 import { FiveMinuteMap, LearningOutcomes, Analogy, KeyIdea, Pitfalls, InterviewPrompt, Hint, Solution, Flashcards, RevisionSheet, Sources, Flow } from "@/components/lesson-components"
+import { FieldNoteSections } from "@/components/field-note-sections"
+
+<FieldNoteSections>
+<section className="note-section" aria-labelledby="consistent-full-notes-title">
+<header className="note-section-intro"><h2 id="consistent-full-notes-title">Full Notes</h2><p>Build the ring model, derive key movement, and connect lookup math to safe cluster operations.</p></header>
 
 <FiveMinuteMap items={[
   "Modulo partitioning remaps most keys when the node count changes.",
@@ -66,6 +71,28 @@ This is a data-movement protocol, not just a lookup formula.
 
 </Pitfalls>
 
+</section>
+<section className="note-section" aria-labelledby="consistent-cheat-sheet-title">
+<header className="note-section-intro"><h2 id="consistent-cheat-sheet-title">Cheat Sheet</h2><p>The ownership rules, movement estimates, and operational caveats to remember.</p></header>
+
+### Core rules
+
+- Hash nodes and keys into the same circular space.
+- A key belongs to the first eligible node clockwise from its position.
+- Adding one equal node to a balanced `N`-node ring moves about `1/(N+1)` of keys.
+- Virtual nodes reduce ownership variance and can represent unequal capacity.
+- Replicas must use distinct physical failure domains, not merely distinct tokens.
+
+### Do not confuse
+
+- consistent hashing limits remapping; it does not solve hot keys
+- ring lookup is not the same as safe range transfer during concurrent writes
+- balanced tokens do not guarantee balanced load when keys or requests are skewed
+
+</section>
+<section className="note-section" aria-labelledby="consistent-interview-title">
+<header className="note-section-intro"><h2 id="consistent-interview-title">Interview Questions</h2><p>Derive the movement first, then discuss membership convergence and transfer safety.</p></header>
+
 ## Interview case
 
 <InterviewPrompt title="Cache-cluster expansion" difficulty="Medium" timebox="15 min">
@@ -81,6 +108,10 @@ Modulo hashing remaps most keys because `hash(key) mod 20` and `mod 21` usually 
 </Solution>
 
 </InterviewPrompt>
+
+</section>
+<section className="note-section" aria-labelledby="consistent-revision-title">
+<header className="note-section-intro"><h2 id="consistent-revision-title">Revision Material</h2><p>Test the ownership rule, movement estimate, and system-level caveats from memory.</p></header>
 
 <Flashcards cards={[
   { front: "Ring ownership rule?", back: "A key belongs to the first eligible node clockwise from the key’s hash position." },
@@ -112,3 +143,6 @@ Modulo hashing remaps most keys because `hash(key) mod 20` and `mod 21` usually 
 Reviewed 2026-09-18.
 
 </Sources>
+
+</section>
+</FieldNoteSections>

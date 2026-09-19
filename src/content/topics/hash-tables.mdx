@@ -1,4 +1,9 @@
 import { FiveMinuteMap, LearningOutcomes, Analogy, KeyIdea, Pitfalls, InterviewPrompt, Hint, Solution, Flashcards, RevisionSheet, Sources, Flow, Checklist } from "@/components/lesson-components"
+import { FieldNoteSections } from "@/components/field-note-sections"
+
+<FieldNoteSections>
+<section className="note-section" aria-labelledby="hash-full-notes-title">
+<header className="note-section-intro"><h2 id="hash-full-notes-title">Full Notes</h2><p>Learn hashing from its first principle through collision handling, resizing, implementation, and adversarial failure.</p></header>
 
 <FiveMinuteMap items={[
   "A hash function turns a key into a bucket index.",
@@ -147,6 +152,37 @@ public:
 
 </Pitfalls>
 
+</section>
+<section className="note-section" aria-labelledby="hash-cheat-sheet-title">
+<header className="note-section-intro"><h2 id="hash-cheat-sheet-title">Cheat Sheet</h2><p>The formulas, comparisons, and traps to scan immediately before an interview.</p></header>
+
+### Core facts
+
+- Load factor: `α = entries / buckets`.
+- Expected lookup is `O(1 + α)` for uniform chaining; worst case remains `O(n)`.
+- Geometric growth makes insertion amortized `O(1)` despite occasional `O(n)` rehashes.
+- Chaining simplifies deletion; open addressing improves locality but needs empty and tombstone states.
+- Rehashing changes bucket placement and can invalidate iterators or references according to the container contract.
+
+### Fast comparison
+
+| Separate chaining | Open addressing |
+| --- | --- |
+| bucket stores a collection | every entry stays in the bucket array |
+| tolerates load factor above 1 | requires unused slots |
+| pointer chasing and allocation | stronger cache locality |
+| direct deletion | tombstone or backward-shift deletion |
+
+### Tricky reminders
+
+- “O(1)” is expected or amortized, not a universal guarantee.
+- Equality and hashing must agree: equal keys must produce equal hashes.
+- Mutable key fields, attacker-chosen keys, and concurrent rehashing all change the correctness or threat model.
+
+</section>
+<section className="note-section" aria-labelledby="hash-interview-title">
+<header className="note-section-intro"><h2 id="hash-interview-title">Interview Questions</h2><p>Answer aloud before revealing the hint or solution.</p></header>
+
 ## Interview checks
 
 <InterviewPrompt title="Load-factor reasoning" difficulty="Medium" timebox="5 min">
@@ -178,6 +214,10 @@ Attackers can attempt collision floods that turn request parsing into quadratic 
 </Solution>
 
 </InterviewPrompt>
+
+</section>
+<section className="note-section" aria-labelledby="hash-revision-title">
+<header className="note-section-intro"><h2 id="hash-revision-title">Revision Material</h2><p>Use active recall first, then close the gaps with the one-page review.</p></header>
 
 <Flashcards cards={[
   { front: "What does load factor measure?", back: "Stored entries divided by bucket count: α = n/m." },
@@ -220,3 +260,6 @@ Attackers can attempt collision floods that turn request parsing into quadratic 
 Reviewed 2026-09-18.
 
 </Sources>
+
+</section>
+</FieldNoteSections>

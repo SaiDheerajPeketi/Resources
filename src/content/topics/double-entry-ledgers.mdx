@@ -1,4 +1,9 @@
 import { FiveMinuteMap, LearningOutcomes, Analogy, KeyIdea, Pitfalls, InterviewPrompt, Hint, Solution, Flashcards, RevisionSheet, Sources, Flow } from "@/components/lesson-components"
+import { FieldNoteSections } from "@/components/field-note-sections"
+
+<FieldNoteSections>
+<section className="note-section" aria-labelledby="ledger-full-notes-title">
+<header className="note-section-intro"><h2 id="ledger-full-notes-title">Full Notes</h2><p>Learn the entities, conservation rules, immutable corrections, exact money, and external reconciliation.</p></header>
 
 <FiveMinuteMap items={[
   "A business event becomes one or more immutable balanced ledger transactions.",
@@ -101,6 +106,30 @@ Ledger balance proves internal arithmetic, not external truth. Reconciliation co
 
 </Pitfalls>
 
+</section>
+<section className="note-section" aria-labelledby="ledger-cheat-sheet-title">
+<header className="note-section-intro"><h2 id="ledger-cheat-sheet-title">Cheat Sheet</h2><p>The invariants and event model to check in every ledger design.</p></header>
+
+### Non-negotiable invariants
+
+- debits equal credits within each currency and accounting scope
+- all postings in one ledger transaction commit atomically
+- settled history is immutable; corrections append reversal or compensating transactions
+- money uses exact representation and explicit currency
+- retries create one economic effect through stable idempotency identity
+- every posting remains traceable to its business and external references
+
+### Do not confuse
+
+- a business event is not the same object as its ledger transaction
+- balance is a projection of postings, not the source of truth
+- internal balance proves arithmetic, not agreement with a bank or processor
+- recorded-at time and economic effective time serve different audit purposes
+
+</section>
+<section className="note-section" aria-labelledby="ledger-interview-title">
+<header className="note-section-intro"><h2 id="ledger-interview-title">Interview Questions</h2><p>Model each economic event as a separate balanced transaction and preserve the audit trail.</p></header>
+
 ## Interview case
 
 <InterviewPrompt title="Partial refund" difficulty="Hard" timebox="20 min">
@@ -118,6 +147,10 @@ Record the settled purchase and partial refund as separate immutable transaction
 </Solution>
 
 </InterviewPrompt>
+
+</section>
+<section className="note-section" aria-labelledby="ledger-revision-title">
+<header className="note-section-intro"><h2 id="ledger-revision-title">Revision Material</h2><p>Recall the invariants first, then rehearse corrections and reconciliation.</p></header>
 
 <Flashcards cards={[
   { front: "Ledger transaction versus business event?", back: "The event is the domain fact; the ledger transaction is its immutable balanced accounting representation." },
@@ -152,3 +185,6 @@ Record the settled purchase and partial refund as separate immutable transaction
 Reviewed 2026-09-18. Educational architecture material, not accounting, legal, or financial advice.
 
 </Sources>
+
+</section>
+</FieldNoteSections>

@@ -17,21 +17,26 @@ test("atlas opens a published field note", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Hash Tables" })).toBeVisible();
   await page.getByRole("link", { name: /Open field note/ }).click();
   await expect(page.getByRole("heading", { name: "Hash Tables", level: 1 })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Full Notes", level: 2 })).toBeVisible();
   await expect(page.getByText("Five-minute map")).toBeVisible();
 });
 
-test("shared foundations expose complete theory and interview practice", async ({ page }) => {
+test("field notes expose four clean study sections", async ({ page }) => {
   await page.goto("/topics/foundations/sql-fundamentals/");
   await expect(page.getByRole("heading", { name: "SQL Fundamentals", level: 1 })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Start from zero: understand the words before the mechanism" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Vocabulary, examples, and boundaries" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Database transaction" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Complete subtopic syllabus" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Full Notes" })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.getByRole("heading", { name: "Start from zero" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Vocabulary you must understand" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Relational correctness" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Applied scenario lab" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Interview question ladder" })).toBeVisible();
+  await page.getByRole("button", { name: "Cheat Sheet" }).click();
+  await expect(page.getByRole("heading", { name: "Cheat Sheet", level: 2 })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Core definitions" })).toBeVisible();
+  await page.getByRole("button", { name: "Interview Questions" }).click();
+  await expect(page.getByRole("heading", { name: "Interview Questions", level: 2 })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Graded interview case" })).toBeVisible();
-  expect(await page.locator(".flashcards details").count()).toBeGreaterThanOrEqual(8);
+  await page.getByRole("button", { name: "Revision Material" }).click();
+  await expect(page.getByRole("heading", { name: "Revision Material", level: 2 })).toBeVisible();
+  expect(await page.locator("#revision-material-panel details").count()).toBeGreaterThanOrEqual(8);
   await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
 });
 
@@ -47,13 +52,14 @@ test("AI and data pack exposes role maps and a complete specialist lesson", asyn
   await expect(page.getByRole("table", { name: "AI and data role maps" }).getByRole("link", { name: "Retrieval-Augmented Generation" })).toBeVisible();
   await page.goto("/topics/ai-data/retrieval-augmented-generation/");
   await expect(page.getByRole("heading", { name: "Retrieval-Augmented Generation", level: 1 })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Basic → advanced study path" })).toBeVisible();
-  await expect(page.getByText("Where the analogy stops matching:")).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Complete subtopic syllabus" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Theory, mechanisms, and trade-offs" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Full Notes", level: 2 })).toBeVisible();
+  await expect(page.getByText("Where the analogy stops:")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Start from zero" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "In-depth explanation" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Grounded generation" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Applied scenario lab" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Interview question ladder" })).toBeVisible();
+  await page.getByRole("button", { name: "Interview Questions" }).click();
+  await expect(page.getByRole("heading", { name: "Interview Questions", level: 2 })).toBeVisible();
+  await page.getByRole("button", { name: "Revision Material" }).click();
   await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
 });
 
@@ -65,7 +71,9 @@ test("SDE and systems pack exposes a complete design lesson", async ({ page }) =
   await page.goto("/topics/sde-systems/system-design-interview-method/");
   await expect(page.getByRole("heading", { name: "System Design Interview Method", level: 1 })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Frame the problem" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Interview question ladder" })).toBeVisible();
+  await page.getByRole("button", { name: "Interview Questions" }).click();
+  await expect(page.getByRole("heading", { name: "Interview Questions", level: 2 })).toBeVisible();
+  await page.getByRole("button", { name: "Revision Material" }).click();
   await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
 });
 
@@ -76,7 +84,8 @@ test("DevOps and cloud pack exposes provider translation and SRE depth", async (
   await page.goto("/topics/devops-cloud/oci-translation-matrix/");
   await expect(page.getByRole("heading", { name: "OCI Translation Matrix", level: 1 })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Core matrix" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Interview question ladder" })).toBeVisible();
+  await page.getByRole("button", { name: "Interview Questions" }).click();
+  await expect(page.getByRole("heading", { name: "Interview Questions", level: 2 })).toBeVisible();
 });
 
 test("cybersecurity pack exposes current defensive engineering depth", async ({ page }) => {
@@ -86,6 +95,7 @@ test("cybersecurity pack exposes current defensive engineering depth", async ({ 
   await page.goto("/topics/cybersecurity/ai-security/");
   await expect(page.getByRole("heading", { name: "AI Security", level: 1 })).toBeVisible();
   await expect(page.getByRole("heading", { name: "LLM and agent controls" })).toBeVisible();
+  await page.getByRole("button", { name: "Revision Material" }).click();
   await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
 });
 
@@ -96,8 +106,9 @@ test("Fintech and quant pack exposes payment and quantitative depth", async ({ p
   await page.goto("/topics/fintech-quant/backtesting/");
   await expect(page.getByRole("heading", { name: "Backtesting", level: 1 })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Data integrity" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Interview question ladder" })).toBeVisible();
   await expect(page.getByText(/not legal, investment, trading, or financial advice/i)).toBeVisible();
+  await page.getByRole("button", { name: "Interview Questions" }).click();
+  await expect(page.getByRole("heading", { name: "Interview Questions", level: 2 })).toBeVisible();
 });
 
 test("interview workspace includes career artifacts and a timed mock", async ({ page }) => {

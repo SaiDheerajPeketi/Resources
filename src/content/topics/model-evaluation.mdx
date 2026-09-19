@@ -1,4 +1,9 @@
 import { FiveMinuteMap, LearningOutcomes, Analogy, KeyIdea, Pitfalls, InterviewPrompt, Hint, Solution, Flashcards, RevisionSheet, Sources, Flow } from "@/components/lesson-components"
+import { FieldNoteSections } from "@/components/field-note-sections"
+
+<FieldNoteSections>
+<section className="note-section" aria-labelledby="evaluation-full-notes-title">
+<header className="note-section-intro"><h2 id="evaluation-full-notes-title">Full Notes</h2><p>Learn how the decision, validation design, metrics, calibration, and production drift fit together.</p></header>
 
 <FiveMinuteMap items={[
   "Begin with the decision and error costs, not a favorite metric.",
@@ -89,6 +94,30 @@ Calibration asks whether predictions near 0.7 are positive about 70% of the time
 
 </Pitfalls>
 
+</section>
+<section className="note-section" aria-labelledby="evaluation-cheat-sheet-title">
+<header className="note-section-intro"><h2 id="evaluation-cheat-sheet-title">Cheat Sheet</h2><p>A decision-first checklist for choosing trustworthy evaluation methods.</p></header>
+
+### Choose in this order
+
+1. Define the decision and the cost of each error.
+2. Choose a future-like, leakage-safe split.
+3. Select a metric family for ranking, probability quality, or point prediction.
+4. Choose calibration and threshold policy on validation data.
+5. Report slices, uncertainty, capacity constraints, and drift monitoring.
+
+### Fast warnings
+
+- rare positives → inspect precision, recall, PR-AUC, and operating cost; do not lead with accuracy
+- repeated entities → use a group split
+- time changes the problem → use temporal or rolling validation
+- probabilities drive decisions → test calibration
+- repeated model selection → keep a genuinely untouched final test set
+
+</section>
+<section className="note-section" aria-labelledby="evaluation-interview-title">
+<header className="note-section-intro"><h2 id="evaluation-interview-title">Interview Questions</h2><p>Turn the business costs and data boundary into a defensible evaluation plan.</p></header>
+
 ## Interview case
 
 <InterviewPrompt title="Fraud threshold" difficulty="Medium" timebox="12 min">
@@ -106,6 +135,10 @@ Use temporal and entity-aware splits, keeping all events for an account or instr
 </Solution>
 
 </InterviewPrompt>
+
+</section>
+<section className="note-section" aria-labelledby="evaluation-revision-title">
+<header className="note-section-intro"><h2 id="evaluation-revision-title">Revision Material</h2><p>Recall the distinctions and then rehearse the complete evaluation order.</p></header>
 
 <Flashcards cards={[
   { front: "Ranking versus calibration?", back: "Ranking orders examples; calibration makes probability values match observed frequencies." },
@@ -143,3 +176,6 @@ Use temporal and entity-aware splits, keeping all events for an account or instr
 Reviewed 2026-09-18.
 
 </Sources>
+
+</section>
+</FieldNoteSections>

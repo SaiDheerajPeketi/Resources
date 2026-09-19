@@ -238,7 +238,7 @@ Domain and role roadmaps are sequential field ledgers, not course cards. Every r
 
 ### Field-Note Reading Ledger
 
-Every generated note starts with a compact in-page manual, then moves through complete syllabus → deep chapters → worked example → scenario lab → misconception clinic → question ladder → recall sheet. Each chapter uses the same learning grammar: plain-English idea, exact explanation, mechanism trace, why it matters, example connection, common wrong turn, and mastery check. Dense material remains a ruled linear document rather than becoming a wall of interchangeable cards.
+Every generated note uses one small sticky text index with exactly four choices: Full Notes, Cheat Sheet, Interview Questions, and Revision Material. Only the chosen section is visible on screen. Inside Full Notes, the document moves linearly from first principles through vocabulary, complete coverage, deep chapters, worked examples, debugging, misconceptions, and sources. Each chapter uses the same learning grammar: plain-English idea, exact explanation, mechanism trace, why it matters, example connection, common wrong turn, and mastery check. The other sections are focused linear documents for scanning, practice, and recall—not dashboards or card grids. Printing includes all four sections in order.
 
 ### DSA Ledger
 

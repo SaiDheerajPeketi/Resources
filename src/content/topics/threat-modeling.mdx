@@ -1,4 +1,9 @@
 import { FiveMinuteMap, LearningOutcomes, Analogy, KeyIdea, Pitfalls, InterviewPrompt, Hint, Solution, Flashcards, RevisionSheet, Sources, Flow } from "@/components/lesson-components"
+import { FieldNoteSections } from "@/components/field-note-sections"
+
+<FieldNoteSections>
+<section className="note-section" aria-labelledby="threat-full-notes-title">
+<header className="note-section-intro"><h2 id="threat-full-notes-title">Full Notes</h2><p>Move from scope and trust boundaries to abuse cases, decisions, owners, and verification evidence.</p></header>
 
 <FiveMinuteMap items={[
   "Define scope, security objectives, assets, and assumptions.",
@@ -74,6 +79,30 @@ Each material threat needs an owner and one disposition: mitigate, avoid, transf
 
 </Pitfalls>
 
+</section>
+<section className="note-section" aria-labelledby="threat-cheat-sheet-title">
+<header className="note-section-intro"><h2 id="threat-cheat-sheet-title">Cheat Sheet</h2><p>A compact workshop sequence with the questions that expose missing assumptions.</p></header>
+
+### Workshop sequence
+
+Scope → objectives and assets → data-flow diagram → trust boundaries → abuse cases → risk → decisions → verification
+
+### Ask at every boundary
+
+- Who controls this input, identity, or dependency?
+- What sensitive data crosses the boundary and where can it be copied?
+- What happens if the dependency lies, delays, repeats, or disappears?
+- Which control blocks the exact abuse path, and what test proves it?
+- Who owns the remaining risk and when will the decision be reviewed?
+
+### Remember
+
+STRIDE helps generate threat candidates; it does not prioritize them or prove a mitigation works.
+
+</section>
+<section className="note-section" aria-labelledby="threat-interview-title">
+<header className="note-section-intro"><h2 id="threat-interview-title">Interview Questions</h2><p>Follow data and identity through the system, then map each abuse case to a verifiable control.</p></header>
+
 ## Interview case
 
 <InterviewPrompt title="Password-reset flow" difficulty="Medium" timebox="15 min">
@@ -91,6 +120,10 @@ Boundaries include the public client/API, identity store, reset-token store or s
 </Solution>
 
 </InterviewPrompt>
+
+</section>
+<section className="note-section" aria-labelledby="threat-revision-title">
+<header className="note-section-intro"><h2 id="threat-revision-title">Revision Material</h2><p>Use active recall to rehearse boundaries, threats, decisions, and verification.</p></header>
 
 <Flashcards cards={[
   { front: "What makes a useful trust boundary?", back: "A change in trust level, control owner, identity authority, or security policy." },
@@ -124,3 +157,6 @@ Scope → objectives/assets → diagram → boundaries → abuse cases → risk 
 Reviewed 2026-09-18. Educational material, not a substitute for a system-specific security review.
 
 </Sources>
+
+</section>
+</FieldNoteSections>

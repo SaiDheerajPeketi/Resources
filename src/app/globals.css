@@ -296,6 +296,52 @@ button { color: inherit; }
 .confusion-clinic > div { padding: 13px 0; border-top: 1px solid #dfbd82; }
 .confusion-clinic dt { font-weight: 750; }
 .confusion-clinic dd { margin: 5px 0 0; line-height: 1.6; }
+
+/* Field notes use four plain reading sections: notes, cheat sheet, questions, and revision. */
+.field-note-sections { scroll-margin-top: calc(var(--header-height) + 12px); }
+.field-note-section-nav { position: sticky; top: var(--header-height); z-index: 8; display: flex; overflow-x: auto; border-bottom: 1px solid var(--rule-strong); background: var(--paper); scrollbar-width: thin; }
+.field-note-section-nav button { flex: 0 0 auto; appearance: none; padding: 15px 18px 12px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--muted); font: inherit; font-size: 0.92rem; font-weight: 700; cursor: pointer; }
+.field-note-section-nav button:hover { color: var(--ink); }
+.field-note-section-nav button[aria-pressed="true"] { border-bottom-color: var(--blue); color: var(--blue-deep); }
+.field-note-section-nav button:focus-visible { outline: 2px solid var(--focus); outline-offset: -4px; }
+.field-note-panel[hidden] { display: none; }
+.note-section { padding-top: 38px; }
+.note-section-intro { padding-bottom: 22px; border-bottom: 2px solid var(--ink); }
+.note-section-intro h2, .note-section-intro p { margin: 0; }
+.note-section-intro h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -0.025em; }
+.note-section-intro p { max-width: 68ch; margin-top: 8px; color: var(--muted); }
+.note-subsection { padding: 30px 0; border-bottom: 1px solid var(--rule); }
+.note-subsection > :first-child { margin-top: 0; }
+.note-subsection > :last-child { margin-bottom: 0; }
+.note-subsection h3 { margin: 32px 0 10px; font-size: 1.35rem; letter-spacing: -0.015em; }
+.note-subsection h4 { margin: 25px 0 8px; font-size: 1rem; }
+.note-subsection h5 { margin: 20px 0 7px; font-size: 0.9rem; }
+.note-subsection p, .note-subsection li, .note-outline p, .note-outline li { max-width: 72ch; line-height: 1.68; }
+.note-outline { margin: 30px 0 0; border-bottom: 1px solid var(--rule); }
+.note-outline > summary { padding: 15px 0; cursor: pointer; font-weight: 750; }
+.note-outline > div { padding: 0 0 24px; }
+.note-outline section + section { margin-top: 24px; }
+.note-outline h3 { margin: 0 0 5px; font-size: 1rem; }
+.note-outline p { margin-bottom: 8px; color: var(--muted); }
+.note-definition-list, .note-compact-list, .note-facts { margin: 20px 0 0; }
+.note-definition-list > div, .note-compact-list > div, .note-facts > div { padding: 16px 0; border-top: 1px solid var(--rule); }
+.note-definition-list dt, .note-compact-list dt, .note-facts dt { font-weight: 780; }
+.note-definition-list dd, .note-compact-list dd, .note-facts dd { margin: 6px 0 0; }
+.note-definition-list dd p { margin: 7px 0 0; }
+.note-compact-list dd, .note-facts dd { max-width: 72ch; line-height: 1.62; }
+.note-chapters > article { padding: 32px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: calc(var(--header-height) + 70px); }
+.note-chapters > article > h4 { margin: 0 0 12px; font-size: 1.22rem; }
+.note-chapters > article > p { max-width: 72ch; }
+.note-cheat-group { padding: 18px 0; border-top: 1px solid var(--rule); }
+.note-cheat-group h4 { margin-top: 0; }
+.note-disclosures { border-top: 1px solid var(--rule-strong); }
+.note-disclosures details, .note-reveal { border-bottom: 1px solid var(--rule); }
+.note-disclosures summary, .note-reveal summary { padding: 15px 0; cursor: pointer; font-weight: 740; }
+.note-disclosures details > p, .note-disclosures details > ul, .note-reveal > p, .note-reveal > ul, .note-reveal > h4 { margin-left: 0; margin-right: 0; }
+.note-disclosures details[open], .note-reveal[open] { padding-bottom: 12px; }
+.note-question-list { margin-top: 28px; }
+.note-sources { color: var(--muted); }
+.note-sources a { color: var(--blue-deep); }
 .inline-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin: 20px 0; padding: 16px; border-block: 1px solid var(--rule); }
 .inline-flow div { display: flex; align-items: center; gap: 7px; }
 .inline-flow span { padding: 6px 9px; border: 1px solid #9db1cb; border-radius: 5px; background: white; font: 0.76rem/1.3 "JetBrains Mono Variable", monospace; }
@@ -848,6 +894,7 @@ select option { background: var(--paper-raised); color: var(--ink); }
   .lesson-title { padding: 32px 19px 25px; }
   .lesson-title h1 { font-size: clamp(2.7rem, 14vw, 4.5rem); }
   .lesson-content { padding: 34px 19px 70px; }
+  .field-note-section-nav { top: 0; }
   .field-note-guide > div:first-child { grid-template-columns: 1fr; gap: 8px; }
   .complete-syllabus > div > section { grid-template-columns: 145px minmax(0, 1fr); }
   .complete-syllabus > div > section ul { grid-column: 2; }
@@ -900,6 +947,10 @@ select option { background: var(--paper-raised); color: var(--ink); }
   .map-footer { font-size: 0.58rem; gap: 9px; }
   .map-footer span + span::before { margin-right: 9px; }
   .lesson-meta { display: grid; gap: 6px; }
+  .field-note-section-nav { margin-inline: -19px; padding-inline: 7px; }
+  .field-note-section-nav button { padding-inline: 12px; font-size: 0.84rem; }
+  .note-section { padding-top: 28px; }
+  .note-subsection { padding-block: 24px; }
   .complete-syllabus > div > section { grid-template-columns: 1fr; gap: 8px; }
   .complete-syllabus > div > section ul { grid-column: auto; }
   .chapter-lenses { grid-template-columns: 1fr; }
@@ -935,9 +986,12 @@ select option { background: var(--paper-raised); color: var(--ink); }
 }
 
 @media print {
-  .app-header, .track-rail, .topic-inspector, .lesson-sidebar, .lesson-tools, .practice-toolbar, .settings-actions, .field-note-guide, .sources { display: none !important; }
+  .app-header, .track-rail, .topic-inspector, .lesson-sidebar, .lesson-tools, .practice-toolbar, .settings-actions, .field-note-guide, .field-note-section-nav, .sources { display: none !important; }
   body { background: white; font-size: 11pt; }
   .atlas-shell, .lesson-shell { display: block !important; }
   .map-pane, .lesson-article { border: 0 !important; max-width: none !important; }
+  .field-note-panel[hidden] { display: block !important; }
+  .field-note-panel + .field-note-panel { break-before: page; }
+  .note-section { padding-top: 0; }
   a { color: black; text-decoration: none; }
 }

@@ -1,4 +1,9 @@
 import { FiveMinuteMap, LearningOutcomes, Analogy, KeyIdea, Pitfalls, InterviewPrompt, Hint, Solution, Flashcards, RevisionSheet, Sources, Flow } from "@/components/lesson-components"
+import { FieldNoteSections } from "@/components/field-note-sections"
+
+<FieldNoteSections>
+<section className="note-section" aria-labelledby="reconciliation-full-notes-title">
+<header className="note-section-intro"><h2 id="reconciliation-full-notes-title">Full Notes</h2><p>Trace desired state through controllers, queues, scheduling, kubelets, status, and failure recovery.</p></header>
 
 <FiveMinuteMap items={[
   "The API stores desired and observed resource state.",
@@ -88,6 +93,29 @@ The managed service changes responsibility boundaries around upgrades, identity,
 
 </Pitfalls>
 
+</section>
+<section className="note-section" aria-labelledby="reconciliation-cheat-sheet-title">
+<header className="note-section-intro"><h2 id="reconciliation-cheat-sheet-title">Cheat Sheet</h2><p>The control-loop sequence and debugging order to remember.</p></header>
+
+### Reconcile loop
+
+`watch → queue key → read current state → compare → act idempotently → update status → requeue`
+
+### Object responsibilities
+
+- `spec` expresses desired intent; `status` reports observation
+- events trigger work, but the latest stored state is authoritative
+- `observedGeneration` ties status to a particular spec generation
+- a finalizer delays deletion until external cleanup is complete
+
+### Debug order
+
+Deployment conditions → ReplicaSet desired/current → Pod events → scheduling and volumes → kubelet/container state → readiness → Service endpoints
+
+</section>
+<section className="note-section" aria-labelledby="reconciliation-interview-title">
+<header className="note-section-intro"><h2 id="reconciliation-interview-title">Interview Questions</h2><p>Name every control layer and the evidence you would inspect at that layer.</p></header>
+
 ## Interview check
 
 <InterviewPrompt title="Five desired, three ready" difficulty="Medium" timebox="8 min">
@@ -103,6 +131,10 @@ The Deployment controller ensures the correct ReplicaSet; the ReplicaSet control
 </Solution>
 
 </InterviewPrompt>
+
+</section>
+<section className="note-section" aria-labelledby="reconciliation-revision-title">
+<header className="note-section-intro"><h2 id="reconciliation-revision-title">Revision Material</h2><p>Recall the loop, object semantics, and convergence failures without notes.</p></header>
 
 <Flashcards cards={[
   { front: "Why must reconcile be idempotent?", back: "Retries and duplicate events are normal; the same desired/observed state must not create duplicate side effects." },
@@ -136,3 +168,6 @@ Never say “Kubernetes notices and fixes it” without naming the controller, o
 Reviewed 2026-09-18; cloud service names are time-sensitive.
 
 </Sources>
+
+</section>
+</FieldNoteSections>

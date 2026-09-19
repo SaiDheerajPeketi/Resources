@@ -11,12 +11,13 @@ import {
   Solution,
   Sources
 } from "@/components/lesson-components";
+import { FieldNoteSections } from "@/components/field-note-sections";
 import type { FoundationLessonData } from "@/data/foundations/types";
 import { buildLessonDepth } from "@/lib/lesson-depth";
 
 const levelLabels = ["Foundation", "Working depth", "Advanced trade-offs"];
 
-export function CurriculumLesson({ lesson, reviewNote, topicId }: { lesson: FoundationLessonData; reviewNote: string; topicId: string }) {
+export function LegacyCurriculumLesson({ lesson, reviewNote, topicId }: { lesson: FoundationLessonData; reviewNote: string; topicId: string }) {
   const depth = buildLessonDepth(lesson, topicId);
   return <>
     <FiveMinuteMap items={lesson.conceptMap} />
@@ -147,4 +148,137 @@ export function CurriculumLesson({ lesson, reviewNote, topicId }: { lesson: Foun
     </RevisionSheet></div>
     <Sources><ul>{lesson.sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.label}</a></li>)}</ul><p><small>{reviewNote}</small></p></Sources>
   </>;
+}
+
+export function CurriculumLesson({ lesson, reviewNote, topicId }: { lesson: FoundationLessonData; reviewNote: string; topicId: string }) {
+  const depth = buildLessonDepth(lesson, topicId);
+
+  const notes = <section className="note-section" aria-labelledby="full-notes-title">
+    <header className="note-section-intro">
+      <h2 id="full-notes-title">Full Notes</h2>
+      <p>Learn from first principles, then move through mechanisms, trade-offs, examples, and failure cases.</p>
+    </header>
+
+    <section className="note-subsection">
+      <h3>What you will understand</h3>
+      <ul>{lesson.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}</ul>
+      <h3>Topic map</h3>
+      <ol>{lesson.conceptMap.map((item) => <li key={item}>{item}</li>)}</ol>
+    </section>
+
+    <section className="note-subsection">
+      <h3>Mental model</h3>
+      <p><strong>{lesson.analogy.title}:</strong> {lesson.analogy.body}</p>
+      <p><strong>Where the analogy stops:</strong> {lesson.analogy.limit ?? "The analogy builds intuition only. Exact guarantees come from the mechanisms, constraints, and failure modes below."}</p>
+      <p><strong>Key idea:</strong> {lesson.keyIdea}</p>
+    </section>
+
+    <section className="note-subsection">
+      <h3>Start from zero</h3>
+      <p>{depth.foundation.whatItIs}</p>
+      <p><strong>Central idea:</strong> {depth.foundation.centralIdea}</p>
+      <p><strong>First concrete anchor:</strong> {depth.foundation.firstConcreteExample}</p>
+      <h4>Build the idea in this order</h4>
+      <ol>{depth.foundation.learningOrder.map((item) => <li key={item.concept}><strong>{item.concept}.</strong> {item.explanation}</li>)}</ol>
+    </section>
+
+    <details className="note-outline">
+      <summary>View the complete topic coverage checklist</summary>
+      <div>{depth.coverage.map((group) => <section key={group.title}>
+        <h3>{group.title}</h3>
+        <p>{group.purpose}</p>
+        <ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul>
+      </section>)}</div>
+    </details>
+
+    <section className="note-subsection">
+      <h3>Vocabulary you must understand</h3>
+      <p>For each term, learn the definition, recognize the example, and know the closest confusion or boundary.</p>
+      <dl className="note-definition-list">{depth.vocabulary.map((definition) => <div key={definition.term}>
+        <dt>{definition.term}</dt>
+        <dd><p>{definition.meaning}</p><p><strong>Example:</strong> {definition.example}</p><p><strong>Common confusion or boundary:</strong> {definition.doNotConfuse}</p></dd>
+      </div>)}</dl>
+    </section>
+
+    <section className="note-subsection">
+      <h3>In-depth explanation</h3>
+      <div className="note-chapters">{depth.chapters.map((chapter) => <article id={chapter.id} key={chapter.title}>
+        <h4>{chapter.title}</h4>
+        <p><strong>In plain English:</strong> {chapter.plainEnglish}</p>
+        <p>{chapter.explanation}</p>
+        <h5>How it works</h5>
+        <ol>{chapter.mechanismSteps.map((step, index) => <li key={`${chapter.id}-${index}`}>{step}</li>)}</ol>
+        <dl className="note-facts">
+          <div><dt>Why it matters</dt><dd>{chapter.whyItMatters}</dd></div>
+          <div><dt>Example connection</dt><dd>{chapter.exampleConnection}</dd></div>
+          <div><dt>Common wrong turn</dt><dd>{chapter.commonWrongTurn}</dd></div>
+          <div><dt>Mastery check</dt><dd>{chapter.masteryCheck}</dd></div>
+        </dl>
+      </article>)}</div>
+    </section>
+
+    <section className="note-subsection">
+      <h3>Worked example: {lesson.example.title}</h3>
+      <p>Predict the input, output, owned state, invariant, and first likely failure before reading the implementation.</p>
+      <pre tabIndex={0}><code className={`language-${lesson.example.language}`}>{lesson.example.code}</code></pre>
+      <p><strong>What it demonstrates:</strong> {lesson.example.explanation}</p>
+      <ol>
+        <li><strong>Contract:</strong> {lesson.outcomes[0]}</li>
+        <li><strong>Mechanism:</strong> Start with {lesson.theory[0].heading.toLowerCase()} and account for every state change.</li>
+        <li><strong>Invariant:</strong> {lesson.keyIdea}</li>
+        <li><strong>Boundary:</strong> Test for {lesson.failureModes[0].toLowerCase()}.</li>
+      </ol>
+    </section>
+
+    <section className="note-subsection">
+      <h3>Application and debugging</h3>
+      <div className="note-disclosures">{depth.scenarios.map((scenario) => <details key={scenario.title}>
+        <summary>{scenario.title}</summary><p>{scenario.prompt}</p><p><strong>Model reasoning:</strong> {scenario.answer}</p>
+      </details>)}</div>
+      <h3>Failure modes and misconceptions</h3>
+      <dl className="note-definition-list">{depth.misconceptions.map((item) => <div key={item.mistake}>
+        <dt>{item.mistake}</dt>
+        <dd><p><strong>Re-check {item.chapter}:</strong> {item.explanation}</p><p><strong>Recovery check:</strong> {item.recovery}</p></dd>
+      </div>)}</dl>
+    </section>
+
+    <section className="note-subsection note-sources">
+      <h3>Sources and further study</h3>
+      <ul>{lesson.sources.map((source) => <li key={source.url}><a href={source.url} rel="noreferrer">{source.label}</a></li>)}</ul>
+      <p><small>{reviewNote}</small></p>
+    </section>
+  </section>;
+
+  const cheatSheet = <section className="note-section" aria-labelledby="cheat-sheet-title">
+    <header className="note-section-intro"><h2 id="cheat-sheet-title">Cheat Sheet</h2><p>The definitions, mechanisms, example, and traps to scan immediately before an interview.</p></header>
+    <section className="note-subsection"><h3>Thirty-second explanation</h3><p>{lesson.keyIdea}</p></section>
+    <section className="note-subsection"><h3>Core definitions</h3><dl className="note-compact-list">{depth.vocabulary.map((definition) => <div key={definition.term}><dt>{definition.term}</dt><dd>{definition.meaning}</dd></div>)}</dl></section>
+    <section className="note-subsection"><h3>Mechanisms to remember</h3>{depth.chapters.map((chapter) => <div className="note-cheat-group" key={chapter.title}><h4>{chapter.title}</h4><ol>{chapter.mechanismSteps.map((step, index) => <li key={`${chapter.id}-cheat-${index}`}>{step}</li>)}</ol></div>)}</section>
+    <section className="note-subsection"><h3>Reference example</h3><pre tabIndex={0}><code className={`language-${lesson.example.language}`}>{lesson.example.code}</code></pre><p>{lesson.example.explanation}</p></section>
+    <section className="note-subsection"><h3>Traps to avoid</h3><ul>{lesson.failureModes.map((mode) => <li key={mode}>{mode}</li>)}</ul></section>
+  </section>;
+
+  const questions = <section className="note-section" aria-labelledby="interview-questions-title">
+    <header className="note-section-intro"><h2 id="interview-questions-title">Interview Questions</h2><p>Answer aloud before opening the model answer. The sequence moves from fundamentals to debugging and advanced trade-offs.</p></header>
+    <div className="note-disclosures note-question-list">{depth.questionLadder.map((item) => <details key={item.level}><summary><strong>{item.level}:</strong> {item.prompt}</summary><p>{item.answer}</p><p><strong>What proves depth:</strong> {item.proof}</p></details>)}</div>
+    <section className="note-subsection">
+      <h3>Graded interview case</h3><p><strong>{lesson.question.difficulty} · {lesson.question.timeboxMinutes} minutes</strong></p><p>{lesson.question.prompt}</p><p>State assumptions, trace one example, and name the failure mode that would change your answer.</p>
+      <details className="note-reveal"><summary>Reveal hints</summary><ul>{lesson.question.hints.map((hint) => <li key={hint}>{hint}</li>)}</ul></details>
+      <details className="note-reveal"><summary>Reveal solution and scoring rubric</summary><p>{lesson.question.answer}</p><h4>Strong-answer rubric</h4><ul>{lesson.question.rubric.map((item) => <li key={item}>{item}</li>)}</ul></details>
+    </section>
+  </section>;
+
+  const revision = <section className="note-section" aria-labelledby="revision-material-title">
+    <header className="note-section-intro"><h2 id="revision-material-title">Revision Material</h2><p>Use active recall: answer first, reveal second, then finish with the closed-book checklist.</p></header>
+    <section className="note-subsection"><h3>Flashcards</h3><div className="note-disclosures">{depth.flashcards.map((card) => <details key={card.front}><summary>{card.front}</summary><p>{card.back}</p></details>)}</div></section>
+    <section className="note-subsection">
+      <h3>One-page revision sheet</h3><p><strong>Thirty-second answer:</strong> {lesson.keyIdea}</p>
+      <h4>Explain without notes</h4><ul>{lesson.conceptMap.map((item) => <li key={item}>{item}</li>)}</ul>
+      <h4>Trace or derive</h4><ul>{lesson.theory.map((section) => <li key={section.heading}>{section.heading}</li>)}</ul>
+      <h4>Apply and debug</h4><ul>{lesson.outcomes.map((item) => <li key={item}>{item}</li>)}{lesson.failureModes.map((item) => <li key={item}>Diagnose: {item}</li>)}</ul>
+      <h4>Final closed-book checklist</h4><ul>{depth.revisionChecklist.map((item) => <li key={item}>{item}</li>)}</ul>
+    </section>
+  </section>;
+
+  return <FieldNoteSections notes={notes} cheatSheet={cheatSheet} questions={questions} revision={revision} />;
 }

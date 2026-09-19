@@ -1,12 +1,12 @@
 {
-  "version": "2026.09.19-r26",
+  "version": "2026.09.19-r27",
   "packs": [
     {
       "id": "track-foundations",
       "kind": "track",
       "targetId": "foundations",
       "title": "Foundations track",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-90b9f87b9d3ef3dd8177b968654c95e9f1e7c869a05e1844ed3f70eb986380ac",
       "routes": [
         "/",
@@ -54,7 +54,7 @@
       "kind": "track",
       "targetId": "ai-data",
       "title": "AI + Data track",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-0bc28d77a09d5756e663d6bf940bfd1d200b749db361d4f3b26121610de19593",
       "routes": [
         "/",
@@ -104,7 +104,7 @@
       "kind": "track",
       "targetId": "sde-systems",
       "title": "SDE + Systems track",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-43c9c10687158d6cdcb7e8411402eeb5825d84d6fca4e8d0085f122828a53cbc",
       "routes": [
         "/",
@@ -153,7 +153,7 @@
       "kind": "track",
       "targetId": "devops-cloud",
       "title": "DevOps + Cloud track",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-ce8f936714027a93412189610ed77d62b205139f926cbc7b0b8054471146ff79",
       "routes": [
         "/",
@@ -201,7 +201,7 @@
       "kind": "track",
       "targetId": "cybersecurity",
       "title": "Cybersecurity track",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-bbfba3e1b838563dcf2348d8911f2f66cf50527b934bde2999ab14bc017fdf90",
       "routes": [
         "/",
@@ -247,7 +247,7 @@
       "kind": "track",
       "targetId": "fintech-quant",
       "title": "Fintech + Quant track",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-141b1b504fb36dc76e16185cfa06804193ba772dc28de8fd9b7f6503683a6906",
       "routes": [
         "/",
@@ -296,7 +296,7 @@
       "kind": "ecosystem",
       "targetId": "java",
       "title": "java ecosystem",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-2242430e78877e78396d54402bdbd80a2b1e75cedfe014e52870dc8bffc7085f",
       "routes": [
         "/",
@@ -331,7 +331,7 @@
       "kind": "ecosystem",
       "targetId": "systems",
       "title": "systems ecosystem",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-84e3498c30601484ff09c36478fb4d07d230671e426d8135ae60bdd62dbbc91b",
       "routes": [
         "/",
@@ -363,7 +363,7 @@
       "kind": "ecosystem",
       "targetId": "database",
       "title": "database ecosystem",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-8f0f5205f3cf43d1aafa3529522e01d41e9667a8050437a75ebfb6f6f5877e68",
       "routes": [
         "/",
@@ -398,7 +398,7 @@
       "kind": "ecosystem",
       "targetId": "python",
       "title": "python ecosystem",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-0dcaa66297f1389be80c54d1a85ee22d0ba48193caa23eb7c504c79e7b8064ad",
       "routes": [
         "/",
@@ -428,7 +428,7 @@
       "kind": "ecosystem",
       "targetId": "javascript",
       "title": "javascript ecosystem",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-39346467f6781f5aa397ef83edcb8ebaf46ce2fa62be8dc77fa85f8e4aa87aed",
       "routes": [
         "/",
@@ -469,7 +469,7 @@
       "kind": "ecosystem",
       "targetId": "go",
       "title": "go ecosystem",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-3dcd398eb6dabab2615c96466072760dc515cc226a72f15c832e67820c163c66",
       "routes": [
         "/",
@@ -496,7 +496,7 @@
       "kind": "ecosystem",
       "targetId": "dotnet",
       "title": "dotnet ecosystem",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-9d5abe3659b393adace168e17635f04283bc91578b4546898abdd5c096d9ab16",
       "routes": [
         "/",
@@ -524,7 +524,7 @@
       "kind": "ecosystem",
       "targetId": "rust",
       "title": "rust ecosystem",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-c220445497109eec838b70cb8be134cff5c283989140e000a4055a975c44e421",
       "routes": [
         "/",
@@ -551,7 +551,7 @@
       "kind": "ecosystem",
       "targetId": "mobile",
       "title": "mobile ecosystem",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-e5ee60f207ae8b6fc4912eb08ed47d7c3f594462c92ebb0e5ee0cbbd03d27153",
       "routes": [
         "/",
@@ -582,7 +582,7 @@
       "kind": "ecosystem",
       "targetId": "web",
       "title": "web ecosystem",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-5317b85bff9e936097600965f07b42415ef9d68454afdc0a6c523e199a2fc251",
       "routes": [
         "/",
@@ -612,7 +612,7 @@
       "kind": "ecosystem",
       "targetId": "data-ai",
       "title": "data + ai ecosystem",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-09f245ee8338cc06f8995920b5e31ae41f696dea05590afc2cbbcca74b5d82cd",
       "routes": [
         "/",
@@ -649,7 +649,7 @@
       "kind": "ecosystem",
       "targetId": "devops",
       "title": "devops ecosystem",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-cb867a5d686095256aed1fa11cdaafeca26d992b9fb60771a665b318726f27bf",
       "routes": [
         "/",
@@ -687,7 +687,7 @@
       "kind": "sheet",
       "targetId": "atlas-75",
       "title": "Atlas 75 sheet",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-25a4e4b0d755684c7e03ebc78c87bca9bed62dcc3aff4417fc7751a948ef43b3",
       "routes": [
         "/",
@@ -786,7 +786,7 @@
       "kind": "sheet",
       "targetId": "atlas-180",
       "title": "Atlas 180 sheet",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-f4b1d66a689cf838e655d1c8945b80123bb8f7b69b91671edc53932d34a69663",
       "routes": [
         "/",
@@ -990,7 +990,7 @@
       "kind": "sheet",
       "targetId": "atlas-300",
       "title": "Atlas 300 sheet",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-95654a0a82ef373cc0b031a249f263acccb38120a1f9acf685064f5d1e34faa7",
       "routes": [
         "/",
@@ -1314,7 +1314,7 @@
       "kind": "role",
       "targetId": "frontend",
       "title": "Frontend Engineer role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-233dd4f3707cf6b4b64d5ae29d547b27ba8423bcf12e4ba6e2750147e518639a",
       "routes": [
         "/",
@@ -1344,7 +1344,7 @@
       "kind": "role",
       "targetId": "backend",
       "title": "Backend Engineer role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-d4d3fed9a8e7b9045f02f6970864bc6f44d9c2afa85a1d337977b0bd8a931ac9",
       "routes": [
         "/",
@@ -1374,7 +1374,7 @@
       "kind": "role",
       "targetId": "full-stack",
       "title": "Full-Stack Engineer role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-0c3fe7f7e391c949493c0163a570704541123d4a2d106284b877c76ee6ac4276",
       "routes": [
         "/",
@@ -1404,7 +1404,7 @@
       "kind": "role",
       "targetId": "java",
       "title": "Java Engineer role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-d9b0f01c29f073d14cdda25c8221f71c4c8aeed89cc64f073f62a577f75732ba",
       "routes": [
         "/",
@@ -1434,7 +1434,7 @@
       "kind": "role",
       "targetId": "python",
       "title": "Python Engineer role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-3c30dc202992fea059896a8a4b01dac681bb7c8b40a4107565e2498d3ce48b32",
       "routes": [
         "/",
@@ -1464,7 +1464,7 @@
       "kind": "role",
       "targetId": "go",
       "title": "Go Engineer role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-12c3f73bb37aef04dc8f9a13acac9d08cb211b903169234b300049037c587def",
       "routes": [
         "/",
@@ -1494,7 +1494,7 @@
       "kind": "role",
       "targetId": "android",
       "title": "Android Engineer role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-a155fa85db909c8a2ad94546c3909aa693abafd19db88240e9001e9e0439ee2c",
       "routes": [
         "/",
@@ -1524,7 +1524,7 @@
       "kind": "role",
       "targetId": "ios",
       "title": "iOS Engineer role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-f0a43068b3401ae18b0741aa01ca8ef715d24284be38812ab08b892f9158c62c",
       "routes": [
         "/",
@@ -1554,7 +1554,7 @@
       "kind": "role",
       "targetId": "mobile",
       "title": "Cross-Platform Mobile Engineer role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-f41e99bf4f349e0a248022e78c544005b0618650e3fe29f699ad4e6e7953a71c",
       "routes": [
         "/",
@@ -1584,7 +1584,7 @@
       "kind": "role",
       "targetId": "qa-sdet",
       "title": "QA / SDET role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-5e8ef961764335350335f8d590d61a79219254be07cbc2ef530b8590d3bb63e4",
       "routes": [
         "/",
@@ -1614,7 +1614,7 @@
       "kind": "role",
       "targetId": "data-analyst",
       "title": "Data Analyst role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-95ca5dd37410aa7cc69a29331adefd260a6e4b91eaa141b355485fc830636974",
       "routes": [
         "/",
@@ -1644,7 +1644,7 @@
       "kind": "role",
       "targetId": "dba",
       "title": "Database Administrator role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-837734a1a9c42e480636b59d1871b090cd2f54a42565146ab92c9ced83040d74",
       "routes": [
         "/",
@@ -1674,7 +1674,7 @@
       "kind": "role",
       "targetId": "cloud-architect",
       "title": "Cloud Architect role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-3fe24e03cc096e70008f0bb40877ad2936d5bcb8682b8c146da4c5fee3b0f96a",
       "routes": [
         "/",
@@ -1704,7 +1704,7 @@
       "kind": "role",
       "targetId": "solutions-architect",
       "title": "Solutions Architect role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-661e14a60dc173e83624ddc6b44c54af22bcfd08a291903c9de069d9671f5b4e",
       "routes": [
         "/",
@@ -1734,7 +1734,7 @@
       "kind": "role",
       "targetId": "ai-engineer",
       "title": "AI Engineer role path",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-06e599df9a4cc42d89638f9f9ec7fc1b84cedb3c25040b5b9762e81a27880291",
       "routes": [
         "/",
@@ -1764,7 +1764,7 @@
       "kind": "full",
       "targetId": "all",
       "title": "Complete Interview Atlas",
-      "version": "2026.09.19-r26",
+      "version": "2026.09.19-r27",
       "integrity": "sha256-d73e3dfd72ec3023b002b204fdc6bad4918f465981627b2d34812b00d1cab7f4",
       "routes": [
         "/",
