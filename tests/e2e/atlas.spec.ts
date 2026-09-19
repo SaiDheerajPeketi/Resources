@@ -23,8 +23,12 @@ test("atlas opens a published field note", async ({ page }) => {
 test("shared foundations expose complete theory and interview practice", async ({ page }) => {
   await page.goto("/topics/foundations/sql-fundamentals/");
   await expect(page.getByRole("heading", { name: "SQL Fundamentals", level: 1 })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Complete subtopic syllabus" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Relational correctness" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Interview practice" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Applied scenario lab" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Interview question ladder" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Graded interview case" })).toBeVisible();
+  expect(await page.locator(".flashcards details").count()).toBeGreaterThanOrEqual(8);
   await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
 });
 
@@ -42,9 +46,11 @@ test("AI and data pack exposes role maps and a complete specialist lesson", asyn
   await expect(page.getByRole("heading", { name: "Retrieval-Augmented Generation", level: 1 })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Basic → advanced study path" })).toBeVisible();
   await expect(page.getByText("Where the analogy stops matching:")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Complete subtopic syllabus" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Theory, mechanisms, and trade-offs" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Grounded generation" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Interview practice" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Applied scenario lab" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Interview question ladder" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
 });
 
@@ -56,7 +62,7 @@ test("SDE and systems pack exposes a complete design lesson", async ({ page }) =
   await page.goto("/topics/sde-systems/system-design-interview-method/");
   await expect(page.getByRole("heading", { name: "System Design Interview Method", level: 1 })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Frame the problem" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Interview practice" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Interview question ladder" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "One-page revision sheet" })).toBeVisible();
 });
 
@@ -67,7 +73,7 @@ test("DevOps and cloud pack exposes provider translation and SRE depth", async (
   await page.goto("/topics/devops-cloud/oci-translation-matrix/");
   await expect(page.getByRole("heading", { name: "OCI Translation Matrix", level: 1 })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Core matrix" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Interview practice" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Interview question ladder" })).toBeVisible();
 });
 
 test("cybersecurity pack exposes current defensive engineering depth", async ({ page }) => {
@@ -87,7 +93,7 @@ test("Fintech and quant pack exposes payment and quantitative depth", async ({ p
   await page.goto("/topics/fintech-quant/backtesting/");
   await expect(page.getByRole("heading", { name: "Backtesting", level: 1 })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Data integrity" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Interview practice" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Interview question ladder" })).toBeVisible();
   await expect(page.getByText(/not legal, investment, trading, or financial advice/i)).toBeVisible();
 });
 

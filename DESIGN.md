@@ -236,6 +236,10 @@ Every manual opens with a **Start Here** teaching strip before the formal mental
 
 Domain and role roadmaps are sequential field ledgers, not course cards. Every roadmap begins with a beginner explanation, analogy, first step, and three-term glossary. Every stage leads with one plain-English sentence, while its exact technical objective sits behind an explicit disclosure. The visible action grammar is “learn these ideas → do this yourself → move on when.” Capstones, mock loops, misconception corrections, and final revision checks close the ledger. Desktop uses three ruled columns for learn/do/move-on; narrow screens preserve the order as one semantic document.
 
+### Field-Note Reading Ledger
+
+Every generated note starts with a compact in-page manual, then moves through complete syllabus → deep chapters → worked example → scenario lab → misconception clinic → question ladder → recall sheet. Each chapter uses the same learning grammar: plain-English idea, exact explanation, mechanism trace, why it matters, example connection, common wrong turn, and mastery check. Dense material remains a ruled linear document rather than becoming a wall of interchangeable cards.
+
 ### DSA Ledger
 
 Sheets and problem inventories use dense ruled rows with stable problem numbers, pattern, difficulty, estimated time, solution-language availability, a non-color progress label, and an explicit external practice destination. The Atlas title remains the internal explanation link; a separate restrained control opens the verified LeetCode match or labelled GFG fallback. Filters sit above the ledger and do not detach results from their sheet context.

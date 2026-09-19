@@ -1,6 +1,6 @@
 {
-  "version": "2026.09.19-r24",
-  "generatedAt": "2026-09-18T23:55:37.652Z",
+  "version": "2026.09.19-r25",
+  "generatedAt": "2026-09-19T00:27:08.735Z",
   "reviewPolicy": {
     "staleBefore": "2025-09-18",
     "maximumAgeDays": 365
@@ -27,37 +27,37 @@
       "trackId": "foundations",
       "title": "Foundations",
       "topics": 24,
-      "oldestReview": "2026-09-18"
+      "oldestReview": "2026-09-19"
     },
     {
       "trackId": "ai-data",
       "title": "AI + Data",
       "topics": 26,
-      "oldestReview": "2026-09-18"
+      "oldestReview": "2026-09-19"
     },
     {
       "trackId": "sde-systems",
       "title": "SDE + Systems",
       "topics": 25,
-      "oldestReview": "2026-09-18"
+      "oldestReview": "2026-09-19"
     },
     {
       "trackId": "devops-cloud",
       "title": "DevOps + Cloud",
       "topics": 24,
-      "oldestReview": "2026-09-18"
+      "oldestReview": "2026-09-19"
     },
     {
       "trackId": "cybersecurity",
       "title": "Cybersecurity",
       "topics": 22,
-      "oldestReview": "2026-09-18"
+      "oldestReview": "2026-09-19"
     },
     {
       "trackId": "fintech-quant",
       "title": "Fintech + Quant",
       "topics": 25,
-      "oldestReview": "2026-09-18"
+      "oldestReview": "2026-09-19"
     }
   ]
 }

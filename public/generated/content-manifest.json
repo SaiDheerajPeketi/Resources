@@ -1,6 +1,6 @@
 {
-  "version": "2026.09.19-r24",
-  "generatedAt": "2026-09-18T23:55:37.612Z",
+  "version": "2026.09.19-r25",
+  "generatedAt": "2026-09-19T00:27:08.701Z",
   "roles": [
     {
       "id": "sde",
@@ -243,7 +243,7 @@
         "Use references, const, and RAII deliberately",
         "Write a portable C++17 interview harness"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/complexity-analysis",
@@ -272,7 +272,7 @@
         "Distinguish worst, expected, and amortized cost",
         "Expose hidden input dimensions and space costs"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/stl-and-iterators",
@@ -301,7 +301,7 @@
         "Apply algorithms over valid ranges",
         "Explain iterator invalidation"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/arrays-and-strings",
@@ -331,7 +331,7 @@
         "State a loop invariant",
         "Handle encoding and boundaries deliberately"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/hash-tables",
@@ -361,7 +361,7 @@
         "Compare collision strategies",
         "Implement a robust C++ hash map sketch"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/stacks-and-queues",
@@ -388,7 +388,7 @@
         "Build monotonic structures",
         "Explain amortized deque operations"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/linked-lists",
@@ -414,7 +414,7 @@
         "Use sentinels at boundaries",
         "Derive fast/slow algorithms"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/trees-and-bsts",
@@ -442,7 +442,7 @@
         "Write subtree contracts",
         "Validate BSTs with global bounds"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/heaps-and-priority-queues",
@@ -471,7 +471,7 @@
         "Choose heap direction for top-k",
         "State build, push, and pop costs"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/graphs",
@@ -501,7 +501,7 @@
         "Select BFS, DFS, topological sort, or Dijkstra",
         "Prove visitation and relaxation invariants"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/recursion-and-backtracking",
@@ -527,7 +527,7 @@
         "Trace call-stack state",
         "Build choose-explore-unchoose searches"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/sorting-and-binary-search",
@@ -556,7 +556,7 @@
         "Implement lower bound safely",
         "Search a monotone answer space"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/greedy-algorithms",
@@ -582,7 +582,7 @@
         "Prove rules by exchange or staying ahead",
         "Find counterexamples and switch to DP"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/dynamic-programming",
@@ -610,7 +610,7 @@
         "Derive transitions and order",
         "Optimize space safely"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/bit-manipulation",
@@ -637,7 +637,7 @@
         "Apply XOR and power-of-two identities",
         "Use unsigned operations safely"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/discrete-mathematics",
@@ -665,7 +665,7 @@
         "Apply counting and recurrence reasoning",
         "Construct contradiction, induction, and invariant proofs"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/linear-algebra",
@@ -692,7 +692,7 @@
         "Reason about rank, basis, and projections",
         "Connect decompositions to ML"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/probability",
@@ -721,7 +721,7 @@
         "Apply Bayes with base rates",
         "Use expectation, variance, and distribution assumptions correctly"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/statistics",
@@ -750,7 +750,7 @@
         "Design and critique tests",
         "Detect bias, leakage, and causal overclaiming"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/sql-fundamentals",
@@ -779,7 +779,7 @@
         "Use windows without collapsing rows",
         "Explain transactions, constraints, and index trade-offs"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/linux-and-the-cli",
@@ -805,7 +805,7 @@
         "Compose observable pipelines safely",
         "Diagnose CPU, memory, disk, and network symptoms"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/networking-fundamentals",
@@ -835,7 +835,7 @@
         "Compare TCP, UDP, HTTP, DNS, and TLS",
         "Debug failures layer by layer"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/git-testing-and-debugging",
@@ -866,7 +866,7 @@
         "Choose unit, integration, and end-to-end tests",
         "Run a hypothesis-driven debugging loop"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "foundations/behavioral-interview-basics",
@@ -897,7 +897,7 @@
         "Lead project deep dives",
         "Handle recruiter and negotiation conversations accurately"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/data-cleaning",
@@ -925,7 +925,7 @@
         "Choose defensible repair strategies",
         "Build reproducible train/serve-safe cleaning pipelines"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/exploratory-data-analysis",
@@ -953,7 +953,7 @@
         "Separate discovery from confirmation",
         "Find leakage, imbalance, drift, and collection artifacts"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/experiment-design",
@@ -981,7 +981,7 @@
         "Calculate and reason about power",
         "Diagnose interference, novelty, peeking, and instrumentation failures"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/feature-engineering",
@@ -1009,7 +1009,7 @@
         "Prevent target and time leakage",
         "Design train/serve-consistent transformations"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/linear-models",
@@ -1037,7 +1037,7 @@
         "Compare L1 and L2 regularization",
         "Diagnose residual, collinearity, and extrapolation failures"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/logistic-regression",
@@ -1064,7 +1064,7 @@
         "Interpret coefficients and odds ratios",
         "Separate probability estimation from threshold policy"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/tree-ensembles",
@@ -1091,7 +1091,7 @@
         "Contrast bagging and boosting",
         "Interpret features without trusting biased importance blindly"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/unsupervised-learning",
@@ -1118,7 +1118,7 @@
         "Explain PCA and embedding limits",
         "Validate stability and downstream usefulness without ground-truth labels"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/model-evaluation",
@@ -1145,7 +1145,7 @@
         "Design leakage-safe validation",
         "Explain threshold and calibration trade-offs"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/optimization-for-ml",
@@ -1173,7 +1173,7 @@
         "Diagnose learning-rate and conditioning problems",
         "Distinguish optimization error from generalization error"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/neural-network-foundations",
@@ -1200,7 +1200,7 @@
         "Choose activations, initialization, normalization, and losses",
         "Diagnose vanishing, exploding, and overfitting behavior"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/cnns",
@@ -1225,7 +1225,7 @@
         "Explain equivariance, pooling, and residual blocks",
         "Design leakage-safe image training and evaluation"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/sequence-models",
@@ -1251,7 +1251,7 @@
         "Handle variable lengths and causal masking",
         "Diagnose long-range dependency and train/inference mismatch"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/transformers",
@@ -1278,7 +1278,7 @@
         "Compare encoder, decoder, and encoder-decoder models",
         "Reason about context length, KV cache, and quadratic cost"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/natural-language-processing",
@@ -1304,7 +1304,7 @@
         "Choose encoder, decoder, or encoder-decoder architectures",
         "Evaluate language systems for meaning, safety, and distribution shift"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/computer-vision",
@@ -1330,7 +1330,7 @@
         "Design augmentation and transfer-learning pipelines",
         "Diagnose shortcut learning and acquisition shift"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/recommender-systems",
@@ -1358,7 +1358,7 @@
         "Handle implicit feedback and cold start",
         "Evaluate offline, online, and long-term ecosystem effects"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/forecasting",
@@ -1386,7 +1386,7 @@
         "Design rolling-origin validation",
         "Produce and evaluate probabilistic forecasts"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/embeddings",
@@ -1413,7 +1413,7 @@
         "Choose pooling, similarity, and normalization",
         "Evaluate embedding quality on a real retrieval or clustering task"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/vector-search",
@@ -1440,7 +1440,7 @@
         "Tune recall-latency-memory trade-offs",
         "Handle metadata filters, deletes, sharding, and embedding migration"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/retrieval-augmented-generation",
@@ -1468,7 +1468,7 @@
         "Evaluate retrieval separately from answer quality",
         "Control freshness, permissions, prompt injection, and citation fidelity"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/fine-tuning",
@@ -1495,7 +1495,7 @@
         "Build high-signal train/eval datasets",
         "Reason about LoRA, catastrophic forgetting, cost, and deployment"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/agents-and-tool-use",
@@ -1522,7 +1522,7 @@
         "Design typed tool boundaries and state",
         "Control permissions, side effects, prompt injection, and runaway execution"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/llm-evaluation",
@@ -1549,7 +1549,7 @@
         "Combine deterministic, model-graded, and human judgments",
         "Measure quality, safety, latency, cost, and regressions"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/responsible-ai",
@@ -1578,7 +1578,7 @@
         "Measure fairness and safety with contextual limits",
         "Design governance, documentation, appeal, and monitoring controls"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "ai-data/mlops-and-ml-system-design",
@@ -1608,7 +1608,7 @@
         "Design batch, online, and streaming inference paths",
         "Define release, monitoring, rollback, lineage, and cost controls"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/object-oriented-design",
@@ -1635,7 +1635,7 @@
         "Assign behavior by responsibility and invariant ownership",
         "Explain composition, inheritance, coupling, and test seams"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/modern-c-plus-plus-internals",
@@ -1662,7 +1662,7 @@
         "Reason about virtual dispatch, templates, and object representation",
         "Apply C++20/23 features without weakening lifetime safety"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/memory-management",
@@ -1689,7 +1689,7 @@
         "Use RAII and smart pointers correctly",
         "Diagnose leaks, dangling access, fragmentation, and locality"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/concurrency",
@@ -1717,7 +1717,7 @@
         "Use mutexes, condition variables, and atomics correctly",
         "Choose threads, tasks, actors, or message passing from workload constraints"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/operating-systems",
@@ -1745,7 +1745,7 @@
         "Trace virtual memory and page faults",
         "Reason about file descriptors, buffering, I/O, and crash behavior"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/database-systems",
@@ -1773,7 +1773,7 @@
         "Reason about ACID, isolation anomalies, MVCC, and locking",
         "Choose schema, partitioning, and replication strategies from access patterns"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/api-design",
@@ -1801,7 +1801,7 @@
         "Use HTTP semantics, idempotency, pagination, and errors precisely",
         "Evolve and secure APIs without surprising consumers"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/backend-architecture",
@@ -1829,7 +1829,7 @@
         "Choose modular monolith or services from organizational and operational needs",
         "Design transaction, messaging, backpressure, and failure boundaries"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/browser-and-web-foundations",
@@ -1855,7 +1855,7 @@
         "Reason about the event loop, tasks, microtasks, and rendering",
         "Apply origin, storage, caching, and web security fundamentals"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/mobile-foundations",
@@ -1881,7 +1881,7 @@
         "Design offline-capable synchronization and lifecycle-safe work",
         "Reason about battery, network, storage, security, and release constraints"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/testing-strategy",
@@ -1909,7 +1909,7 @@
         "Create deterministic seams without testing implementation trivia",
         "Design contract, migration, concurrency, and resilience tests"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/performance-engineering",
@@ -1938,7 +1938,7 @@
         "Use profiling, tracing, benchmarks, and load tests correctly",
         "Connect queueing, contention, locality, and resource saturation to tail latency"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/solid-and-design-patterns",
@@ -1963,7 +1963,7 @@
         "Select common patterns from a concrete design problem",
         "Recognize when abstraction costs exceed its value"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/low-level-design",
@@ -1989,7 +1989,7 @@
         "Specify APIs, object relationships, and state transitions",
         "Evaluate concurrency, persistence, errors, and extensibility"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/distributed-systems-foundations",
@@ -2018,7 +2018,7 @@
         "Compare replication, quorum, consensus, and partitioning choices",
         "Design retry, idempotency, membership, and recovery protocols"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/consistent-hashing",
@@ -2046,7 +2046,7 @@
         "Explain virtual nodes",
         "Recognize hot-key and heterogeneity limits"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/consistency-models",
@@ -2073,7 +2073,7 @@
         "Separate distributed consistency from transaction isolation",
         "Select guarantees per invariant, latency, and failure requirement"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/caching",
@@ -2101,7 +2101,7 @@
         "Define freshness and invalidation semantics",
         "Control hot keys, stampedes, eviction, and cache failure"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/queues-and-event-streams",
@@ -2129,7 +2129,7 @@
         "Design at-least-once consumers with ordering and deduplication",
         "Operate lag, replay, poison messages, schemas, and retention"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/storage-systems",
@@ -2157,7 +2157,7 @@
         "Trace write-ahead logging, compaction, replication, and recovery",
         "Select partition, index, durability, and backup strategies from workload"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/capacity-planning",
@@ -2185,7 +2185,7 @@
         "Estimate QPS, concurrency, storage, bandwidth, and fleet size",
         "Plan peaks, growth, redundancy, bottlenecks, and validation"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/reliability-engineering",
@@ -2213,7 +2213,7 @@
         "Apply timeouts, retries, circuit breakers, bulkheads, and load shedding",
         "Design redundancy, recovery, rollout, and incident learning"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/observability",
@@ -2241,7 +2241,7 @@
         "Connect metrics, logs, traces, and profiles with shared context",
         "Control cardinality, sampling, retention, privacy, and alert quality"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/system-design-interview-method",
@@ -2270,7 +2270,7 @@
         "Derive APIs, data model, scale, and architecture from requirements",
         "Communicate bottlenecks, failure modes, and alternatives clearly"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "sde-systems/system-design-case-studies",
@@ -2299,7 +2299,7 @@
         "Compare case studies by workload, invariants, and failure semantics",
         "Adapt a design when scale or product requirements change"
       ],
-      "lastReviewed": "2026-09-18"
+      "lastReviewed": "2026-09-19"
     },
     {
       "id": "devops-cloud/shell-scripting",
@@ -2325,7 +2325,7 @@
         "Build idempotent scripts with validation and cleanup",
         "Choose when Bash is appropriate and when to move to a general-purpose language"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2353,7 +2353,7 @@
         "Explain namespaces, cgroups, capabilities, and service supervision",
         "Diagnose saturation using kernel-visible evidence"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2380,7 +2380,7 @@
         "Explain modern TLS authentication and key establishment",
         "Diagnose expiry, name, chain, DNSSEC, and propagation failures"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2408,7 +2408,7 @@
         "Compare load-balancing, routing, NAT, and segmentation choices",
         "Diagnose loss, latency, MTU, asymmetric path, and exhaustion"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2435,7 +2435,7 @@
         "Design promotion, policy, secrets, and rollback workflows",
         "Distinguish safe emergency change from unmanaged drift"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2464,7 +2464,7 @@
         "Harden pipeline identity, dependencies, artifacts, and provenance",
         "Choose deployment gates, rollout verification, rollback, and recovery"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2492,7 +2492,7 @@
         "Explain namespace, cgroup, capability, filesystem, and network isolation",
         "Build minimal, reproducible, non-root, operable images"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2520,7 +2520,7 @@
         "Separate spec from observed state",
         "Debug stuck resources systematically"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2550,7 +2550,7 @@
         "Debug pending, crashing, unavailable, and throttled workloads",
         "Plan capacity, autoscaling, disruption, upgrade, and disaster recovery"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2578,7 +2578,7 @@
         "Design reusable modules, environments, state, and promotion",
         "Control drift, destructive change, secrets, policy, and recovery"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2605,7 +2605,7 @@
         "Design maintainable modules and environment boundaries",
         "Perform safe imports, moves, replacement, and provider upgrades"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2634,7 +2634,7 @@
         "Design secret issuance, delivery, rotation, and revocation",
         "Roll configuration changes safely across versions and failure domains"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2663,7 +2663,7 @@
         "Design automated guardrails and progressive exposure",
         "Plan data, API, queue, and rollback compatibility"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2691,7 +2691,7 @@
         "Control schema, cardinality, sampling, tenancy, and retention",
         "Keep ingestion available while isolating expensive queries"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2720,7 +2720,7 @@
         "Select SLO windows and targets from user/business needs",
         "Use error budgets and multi-window burn rates to guide action"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2749,7 +2749,7 @@
         "Prioritize mitigation while preserving evidence and communication",
         "Write systemic post-incident actions that reduce recurrence or impact"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2778,7 +2778,7 @@
         "Compare backup/restore, pilot-light, warm-standby, and active-active",
         "Plan dependency, identity, data, DNS, and control-plane recovery"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2808,7 +2808,7 @@
         "Design self-service interfaces with safe defaults and escape hatches",
         "Measure adoption, lead time, reliability, cognitive load, and platform SLOs"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2837,7 +2837,7 @@
         "Use unit economics, forecasts, commitments, and anomaly response",
         "Balance cost with performance, reliability, sustainability, and delivery speed"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2866,7 +2866,7 @@
         "Design workload identity, mTLS, routing, policy, and telemetry",
         "Recognize when a mesh adds more complexity than value"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2895,7 +2895,7 @@
         "Choose core compute, storage, database, and messaging services",
         "Apply Well-Architected reliability, security, performance, cost, and operations trade-offs"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2924,7 +2924,7 @@
         "Choose core compute, network, storage, data, and integration services",
         "Apply Azure Well-Architected and landing-zone design"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2953,7 +2953,7 @@
         "Choose core compute, storage, database, analytics, and messaging services",
         "Apply Google Cloud Well-Architected and landing-zone principles"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -2983,7 +2983,7 @@
         "Identify semantic gaps hidden by service-name equivalence",
         "Run a structured cross-cloud architecture translation"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3012,7 +3012,7 @@
         "Model assets, threats, vulnerabilities, likelihood, impact, and residual risk",
         "Layer preventive, detective, responsive, and recovery controls"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3041,7 +3041,7 @@
         "Apply STRIDE without checklist theater",
         "Prioritize mitigations by risk and evidence"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3070,7 +3070,7 @@
         "Explain nonce, randomness, key separation, and password hashing",
         "Design key generation, storage, rotation, revocation, and crypto agility"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3099,7 +3099,7 @@
         "Design public and private CA hierarchy and issuance",
         "Automate certificate lifecycle and respond to key compromise"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3128,7 +3128,7 @@
         "Compare RBAC, ABAC, ReBAC, and policy enforcement",
         "Design joiner-mover-leaver and privileged-access lifecycle"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3156,7 +3156,7 @@
         "Prevent XSS, CSRF, injection, session, and navigation attacks",
         "Design layered browser-facing defenses and verification"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3186,7 +3186,7 @@
         "Control schemas, resources, rate, outbound requests, and sensitive data",
         "Inventory, test, observe, and retire API versions safely"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3214,7 +3214,7 @@
         "Apply deny-default segmentation, secure access, egress control, and DDoS layers",
         "Use network telemetry without treating the network as sufficient identity"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3242,7 +3242,7 @@
         "Recognize injection, traversal, deserialization, integer, and memory-safety risks",
         "Use review, static/dynamic analysis, fuzzing, and sanitizers effectively"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3271,7 +3271,7 @@
         "Combine review, SAST, DAST, SCA, fuzzing, and penetration testing",
         "Triage findings by reachability, exploitability, impact, and compensating controls"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3302,7 +3302,7 @@
         "Design landing-zone guardrails and workload isolation",
         "Detect and respond to identity, data, network, and control-plane compromise"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3331,7 +3331,7 @@
         "Reduce runtime privilege and host attack surface",
         "Triage image vulnerabilities by deployed reachability and containment"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3360,7 +3360,7 @@
         "Apply Pod Security, network policy, secrets, and node isolation",
         "Investigate and contain Kubernetes compromise"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3389,7 +3389,7 @@
         "Use SBOM, signatures, provenance, isolation, and policy correctly",
         "Respond to compromised dependency, builder, artifact, or signing identity"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3417,7 +3417,7 @@
         "Design policy-as-code and exception workflows",
         "Share security ownership without shifting all work to developers"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3446,7 +3446,7 @@
         "Prioritize beyond severity using exposure, reachability, exploitation, and impact",
         "Run patch, mitigation, exception, verification, and disclosure workflows"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3475,7 +3475,7 @@
         "Engineer telemetry, normalization, correlation, and enrichment",
         "Test and measure detections through versioned lifecycle"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3503,7 +3503,7 @@
         "Preserve evidence while containing identities, hosts, network, and data paths",
         "Recover trusted state and meet legal, regulatory, customer, and learning needs"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3531,7 +3531,7 @@
         "Prioritize volatile and durable evidence sources",
         "Build defensible timelines while distinguishing fact, interpretation, and uncertainty"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3561,7 +3561,7 @@
         "Control prompt injection, tool authority, data leakage, poisoning, and model supply chain",
         "Evaluate security with adversarial tests, monitoring, and incident response"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3591,7 +3591,7 @@
         "Protect transaction intent, idempotency, ledger integrity, sensitive data, and privileged operations",
         "Design fraud detection, reconciliation, incident response, and regulatory evidence"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3620,7 +3620,7 @@
         "Map application findings to organizational security outcomes without claiming equivalence",
         "Build evidence-backed profiles and improvement plans"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3648,7 +3648,7 @@
         "Model currency, scale, rounding, and exchange rates explicitly",
         "Preserve conservation and auditability across calculations"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3676,7 +3676,7 @@
         "Separate business events from ledger entries",
         "Design safe corrections and reconciliation"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3705,7 +3705,7 @@
         "Commit result and effect atomically",
         "Handle in-flight, conflicting, failed, and downstream retries"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3733,7 +3733,7 @@
         "Handle asynchronous and out-of-order events",
         "Design refunds, reversals, disputes, unknown outcomes, and reconciliation"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3761,7 +3761,7 @@
         "Separate authorization, capture, clearing, settlement, and chargeback",
         "Design secure handling, tokenization, retries, and reconciliation"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3789,7 +3789,7 @@
         "Design safe transaction identity, status, callback, and reconciliation",
         "Recognize mandate, fraud, PIN, device, and operational concerns"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3818,7 +3818,7 @@
         "Design OAuth/OIDC/FAPI-style authorization and consent",
         "Handle revocation, refresh, webhook, data, and third-party risk"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3847,7 +3847,7 @@
         "Generate exact schedules and payment-allocation rules",
         "Separate model decisioning, policy, ledger, collections, and regulatory evidence"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3875,7 +3875,7 @@
         "Classify timing, fee, duplicate, missing, and amount exceptions",
         "Operate safe correction, audit, aging, and proof of completeness"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3903,7 +3903,7 @@
         "Compare gross/net settlement and principal/liquidity/credit risk",
         "Design operations for cutoffs, failures, default, and reconciliation"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3933,7 +3933,7 @@
         "Evaluate cost, latency, calibration, drift, and delayed labels",
         "Operate review, step-up, block, appeal, and adversarial feedback loops"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3961,7 +3961,7 @@
         "Design explainable matching, cases, audit, and data governance",
         "Label India-first obligations with review date and compare jurisdictional differences"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -3990,7 +3990,7 @@
         "Reduce scope through architecture and validated segmentation",
         "Relate PCI control/evidence responsibilities to engineering operations"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -4018,7 +4018,7 @@
         "Protect audit integrity, access, retention, and time",
         "Reconstruct financial and administrative decisions reproducibly"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -4048,7 +4048,7 @@
         "Design correctness-preserving degradation and recovery",
         "Test provider, liquidity, data, control-plane, and cyber scenarios"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -4076,7 +4076,7 @@
         "Compare order types and venue structures",
         "Measure execution cost and reason about market integrity"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -4104,7 +4104,7 @@
         "Choose data structures for add/cancel/match/best-price operations",
         "Handle sequence gaps, snapshots, replay, and deterministic recovery"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -4132,7 +4132,7 @@
         "Explain Markov chains, Poisson processes, Brownian motion, and martingales",
         "Interpret basic SDEs and Itô's lemma for pricing models"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -4161,7 +4161,7 @@
         "Fit/evaluate ARIMA, state-space, and volatility models",
         "Design walk-forward validation without leakage"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -4188,7 +4188,7 @@
         "Explain Black-Scholes assumptions, Greeks, trees, and Monte Carlo",
         "Separate price, model calibration, hedge, and model risk"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -4217,7 +4217,7 @@
         "Explain constrained optimization and estimation risk",
         "Use VaR, expected shortfall, stress, factor, liquidity, and concentration measures"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -4245,7 +4245,7 @@
         "Simulate orders, fills, costs, capacity, funding, and corporate actions",
         "Control overfitting/multiple testing and run reproducible walk-forward evaluation"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -4274,7 +4274,7 @@
         "Optimize memory layout, allocation, synchronization, and I/O",
         "Reason about affinity, NUMA, kernel bypass, and correctness trade-offs"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -4302,7 +4302,7 @@
         "Communicate assumptions and derive rather than guess",
         "Validate answers with bounds, special cases, and simulation sketches"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     },
     {
@@ -4332,7 +4332,7 @@
         "Compare India, US, and EU regulatory domains without false equivalence",
         "Engineer versioned obligation, control, evidence, and change-management mappings"
       ],
-      "lastReviewed": "2026-09-18",
+      "lastReviewed": "2026-09-19",
       "asOf": "2026-09-18"
     }
   ]
