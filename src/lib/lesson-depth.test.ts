@@ -22,8 +22,11 @@ describe("full-depth field-note contract", () => {
   });
 
   it("turns every authored lesson into a complete study and interview resource", () => {
-    for (const lesson of Object.values(lessons)) {
-      const depth = buildLessonDepth(lesson);
+    for (const [topicId, lesson] of Object.entries(lessons)) {
+      const depth = buildLessonDepth(lesson, topicId);
+      expect(depth.foundation.whatItIs.length).toBeGreaterThan(50);
+      expect(depth.foundation.learningOrder).toHaveLength(lesson.conceptMap.length);
+      expect(depth.vocabulary.length).toBeGreaterThanOrEqual(8);
       expect(depth.coverage).toHaveLength(4);
       expect(depth.coverage.flatMap((group) => group.items).length).toBeGreaterThanOrEqual(16);
       expect(depth.chapters).toHaveLength(lesson.theory.length);
@@ -34,6 +37,12 @@ describe("full-depth field-note contract", () => {
       expect(depth.flashcards.length).toBeGreaterThanOrEqual(8);
       expect(depth.revisionChecklist.length).toBeGreaterThanOrEqual(12);
 
+      for (const definition of depth.vocabulary) {
+        expect(definition.meaning.length).toBeGreaterThan(10);
+        expect(definition.example.length).toBeGreaterThan(10);
+        expect(definition.doNotConfuse.length).toBeGreaterThan(5);
+      }
+
       for (const chapter of depth.chapters) {
         expect(chapter.explanation.length).toBeGreaterThanOrEqual(100);
         expect(chapter.mechanismSteps.length).toBeGreaterThanOrEqual(2);
@@ -41,6 +50,7 @@ describe("full-depth field-note contract", () => {
         expect(chapter.exampleConnection.length).toBeGreaterThan(60);
         expect(chapter.commonWrongTurn.length).toBeGreaterThan(20);
         expect(chapter.masteryCheck.length).toBeGreaterThan(15);
+        expect(chapter.keyTerms.length).toBeGreaterThan(0);
       }
     }
   });

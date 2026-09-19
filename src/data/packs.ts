@@ -7,7 +7,7 @@ import { withBasePath } from "@/lib/base-path";
 import { CONTENT_PACK_CACHE } from "@/lib/offline";
 import { OfflinePackSchema } from "@/lib/schema";
 
-export const PACK_VERSION = "2026.09.19-r25";
+export const PACK_VERSION = "2026.09.19-r26";
 const shellRoutes = ["/", "/atlas/", "/library/", "/sheets/", "/practice/", "/revision/", "/review/", "/diagnostic/", "/plan/", "/interview/", "/companies/", "/settings/"];
 const technologyRoutes = technologies.map((item) => `/technologies/${item.id}/`);
 const problemRoutes = dsaProblems.map((item) => `/problems/${item.id}/`);

@@ -16,8 +16,8 @@ import { buildLessonDepth } from "@/lib/lesson-depth";
 
 const levelLabels = ["Foundation", "Working depth", "Advanced trade-offs"];
 
-export function CurriculumLesson({ lesson, reviewNote }: { lesson: FoundationLessonData; reviewNote: string }) {
-  const depth = buildLessonDepth(lesson);
+export function CurriculumLesson({ lesson, reviewNote, topicId }: { lesson: FoundationLessonData; reviewNote: string; topicId: string }) {
+  const depth = buildLessonDepth(lesson, topicId);
   return <>
     <FiveMinuteMap items={lesson.conceptMap} />
     <LearningOutcomes><ul>{lesson.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}</ul></LearningOutcomes>
@@ -46,6 +46,43 @@ export function CurriculumLesson({ lesson, reviewNote }: { lesson: FoundationLes
 
     <Analogy title={lesson.analogy.title} limit={lesson.analogy.limit}><p>{lesson.analogy.body}</p></Analogy>
     <KeyIdea><p>{lesson.keyIdea}</p></KeyIdea>
+
+    <section className="complete-syllabus" aria-labelledby="start-from-zero-title">
+      <header>
+        <h2 id="start-from-zero-title">Start from zero: understand the words before the mechanism</h2>
+        <p>This section assumes no hidden vocabulary. Read it first if the main explanation feels compressed; experienced readers can use it to check that familiar words still have precise meanings.</p>
+      </header>
+      <div>
+        <section>
+          <h3>What this topic is</h3>
+          <p>{depth.foundation.whatItIs}</p>
+          <h3>The central idea</h3>
+          <p>{depth.foundation.centralIdea}</p>
+          <h3>First concrete anchor</h3>
+          <p>{depth.foundation.firstConcreteExample}</p>
+        </section>
+        <section>
+          <h3>Build the idea in this order</h3>
+          <ol>{depth.foundation.learningOrder.map((item) => <li key={item.concept}><strong>{item.concept}.</strong> {item.explanation}</li>)}</ol>
+        </section>
+      </div>
+    </section>
+
+    <section className="lesson-theory-field" aria-labelledby="vocabulary-title">
+      <header>
+        <h2 id="vocabulary-title">Vocabulary, examples, and boundaries</h2>
+        <p>Do not memorize the label alone. For each term, learn what it means, recognize one concrete example, and know the nearby idea it is commonly confused with.</p>
+      </header>
+      <div>{depth.vocabulary.map((definition, index) => <article key={definition.term}>
+        <span>{String(index + 1).padStart(2, "0")} · Definition</span>
+        <div>
+          <h3>{definition.term}</h3>
+          <p>{definition.meaning}</p>
+          <p><strong>Example:</strong> {definition.example}</p>
+          <p><strong>Common confusion or boundary:</strong> {definition.doNotConfuse}</p>
+        </div>
+      </article>)}</div>
+    </section>
 
     <section id="complete-syllabus" className="complete-syllabus" aria-labelledby="complete-syllabus-title">
       <header><h2 id="complete-syllabus-title">Complete subtopic syllabus</h2><p>This is the boundary of the note. Use it as a checklist: every item is taught, applied, debugged, or tested below.</p></header>

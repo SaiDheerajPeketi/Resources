@@ -23,6 +23,9 @@ test("atlas opens a published field note", async ({ page }) => {
 test("shared foundations expose complete theory and interview practice", async ({ page }) => {
   await page.goto("/topics/foundations/sql-fundamentals/");
   await expect(page.getByRole("heading", { name: "SQL Fundamentals", level: 1 })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Start from zero: understand the words before the mechanism" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Vocabulary, examples, and boundaries" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Database transaction" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Complete subtopic syllabus" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Relational correctness" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Applied scenario lab" })).toBeVisible();
